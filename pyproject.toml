@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mathhint-preprocess"
+version = "0.1.0"
+description = "Traceable HWPX math equation conversion and per-problem text extraction"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+mathhint-preprocess = "mathhint_preprocess.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["mathhint_preprocess*"]
