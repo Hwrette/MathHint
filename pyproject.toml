@@ -1,16 +1,24 @@
+# Python 프로젝트의 이름, 설치 조건, 실행 명령을 정의하는 설정 파일이다.
+# 이 파일은 수식 변환 규칙이나 연구의 실험 조건을 정의하지 않는다.
 [build-system]
+# pip 등으로 설치할 때 패키지를 묶는 데 사용하는 도구다.
 requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
+# 배포용 프로젝트 이름. Python 코드에서 import할 이름은 mathhint_preprocess다.
 name = "mathhint-preprocess"
 version = "0.1.0"
 description = "Traceable HWPX math equation conversion and per-problem text extraction"
 requires-python = ">=3.10"
+# 기본 전처리 실행에는 Python 표준 라이브러리만 사용한다.
 dependencies = []
 
 [project.scripts]
+# 설치 후 mathhint-preprocess 명령을 치면 __main__.py의 main()을 호출한다.
+# 설치하지 않고 python -m mathhint_preprocess로 실행하는 방법도 있다.
 mathhint-preprocess = "mathhint_preprocess.__main__:main"
 
 [tool.setuptools.packages.find]
+# 배포 패키지에 포함할 Python 폴더. 원본 데이터·생성 결과는 여기에 포함하지 않는다.
 include = ["mathhint_preprocess*"]

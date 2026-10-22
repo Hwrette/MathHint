@@ -1,4 +1,11 @@
-"""Traceable HWPX math problem preprocessing."""
+"""HWPX 수학 문제 전처리 패키지의 이름과 버전 정보를 제공한다.
 
+패키지는 여러 Python 파일을 하나의 도구로 묶은 단위다. 이 파일은 다른
+모듈이 ``from . import __version__``처럼 공통 버전을 읽을 수 있게 한다.
+실제 명령행 실행의 출발점은 같은 폴더의 __main__.py에 있다.
+"""
+
+# 프로그램 자체의 버전. 변환 결과에 어떤 프로그램 버전을 썼는지 남긴다.
 __version__ = "0.1.0"
+# JSON 저장 구조의 버전. 프로그램 버전과 저장 형식의 버전은 구별한다.
 SCHEMA_VERSION = 1
