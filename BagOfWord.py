@@ -94,8 +94,9 @@ def count_tokens(text: str, kiwi: Kiwi | None = None) -> Counter[str]:
     """문자열을 분석해 한국어와 수식의 토큰별 등장 횟수를 합칩니다.
 
     Counter는 {'kiwi:값': 1, 'latex:\\log': 3, ...}처럼 저장됩니다.
-    이 '토큰 -> 횟수'가 현재 단계의 희소 빈도벡터입니다. 전체 데이터에서
-    공통 단어 목록을 정하거나 숫자 배열로 바꾸는 작업은 아직 하지 않습니다.
+    이 '토큰 -> 횟수'가 현재 단계의 희소 빈도벡터입니다.
+    이 함수는 공통 단어 목록을 정하거나 숫자 배열로 바꾸지는 않습니다.
+    폴더 단위의 공통 목록과 배열은 BuildFrequencyVectors.py에서 만듭니다.
     """
     bow = Counter()
     for source, content in split_math(text):
