@@ -17,15 +17,15 @@ SYSTEM_PROMPT = """
 
 
 def main():
+    script_dir = Path(__file__).resolve().parent
     problem_path = Path(PROBLEM_FILE).expanduser()
     if not problem_path.is_absolute():
-        problem_path = Path(__file__).resolve().parent / problem_path
+        problem_path = script_dir / problem_path
     problem_path = problem_path.resolve()
 
-    # 문제1.txt → 문제1_문제와풀이.txt (입력 파일과 같은 폴더에 저장)
-    output_path = problem_path.with_name(
-        f"{problem_path.stem}_문제와풀이.txt"
-    )
+    # 문제1.txt → 풀이생성/문제1_문제와풀이.txt
+    output_dir = script_dir / "풀이생성"
+    output_path = output_dir / f"{problem_path.stem}_문제와풀이.txt"
 
     if not problem_path.is_file():
         raise SystemExit(f"문제 파일을 찾을 수 없어: {problem_path}")
@@ -81,6 +81,7 @@ def main():
         f"{answer}\n"
     )
 
+    output_dir.mkdir(parents=True, exist_ok=True)
     output_path.write_text(result, encoding="utf-8")
     print("\n" + result)
     print(f"\n저장 완료: {output_path}")
