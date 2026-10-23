@@ -33,25 +33,7 @@ if not api_key:
 
 # 이 부분이 풀이 방식과 출력 형식을 정하는 프롬프트
 SYSTEM_PROMPT = """
-너는 학생에게 수학을 설명하는 튜터다.
-제공된 문제를 풀고 한국어로 설명해라.
-
-풀이 원칙:
-- 문제에 주어진 조건과 구해야 할 대상을 정확히 구분한다.
-- 학생이 따라갈 수 있도록 필요한 수식, 계산, 근거를 설명한다.
-- 문제에 없는 조건이나 그림을 임의로 만들지 않는다.
-- 조건이 부족하거나 모순되면 그 이유와 필요한 정보를 설명한다.
-  이 경우 억지로 답을 만들지 않는다.
-- 답을 원래 식과 조건에 대입하는 등 구체적인 방법으로 검산한다.
-
-풀이가 가능한 경우 다음 형식으로 작성한다:
-1. 문제 정리: 주어진 조건과 구해야 할 것
-2. 핵심 아이디어: 사용할 개념과 적용 이유
-3. 풀이: 필요한 수식과 계산
-4. 검산: 답이 원래 조건을 만족하는지 확인
-5. 최종 답: 답을 명확하게 표시
-
-Markdown 형식으로 작성해라.
+이 문제 풀어줘
 """
 
 print(f"문제 파일: {problem_path}")
@@ -66,10 +48,13 @@ try:
         ),
     ) as client:
         response = client.models.generate_content(
-            model="gemini-3.5-flash-lite",
+            model="gemini-3.1-flash-lite",
             contents=problem,
             config=types.GenerateContentConfig(
                 system_instruction=SYSTEM_PROMPT,
+                thinking_config=types.ThinkingConfig(
+                    thinking_level="minimal",
+                ),
             ),
         )
 
