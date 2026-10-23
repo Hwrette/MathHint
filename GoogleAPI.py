@@ -1,4 +1,5 @@
 import os
+import re
 from pathlib import Path
 
 from google import genai
@@ -22,6 +23,28 @@ def format_token_count(usage, field):
     return "미제공" if count is None else f"{count:,}"
 
 
+def to_math_markdown(text):
+    """보기용 복사본에서 LaTeX 수식 구분자를 VS Code 형식으로 맞춘다."""
+    pattern = re.compile(
+        r"(?P<code>```[\s\S]*?```|~~~[\s\S]*?~~~|(?P<ticks>`+)[^\n]*?(?P=ticks))"
+        r"|(?P<existing_math>\$\$[\s\S]*?\$\$|(?<!\\)\$(?!\$)(?:\\.|[^$\\\n])+\$)"
+        r"|(?<!\\)\\\[(?P<display>[\s\S]*?)\\\]"
+        r"|(?<!\\)\\\((?P<inline>[\s\S]*?)\\\)"
+    )
+
+    def replace(match):
+        display = match.group("display")
+        if display is not None and display.strip():
+            return "\n\n$$\n" + display.strip() + "\n$$\n\n"
+        inline = match.group("inline")
+        if inline is not None and inline.strip():
+            return "$" + inline.strip() + "$"
+        # 코드와 이미 $...$ 또는 $$...$$로 감싼 수식은 그대로 둔다.
+        return match.group(0)
+
+    return pattern.sub(replace, text)
+
+
 def main():
     script_dir = Path(__file__).resolve().parent
     problem_path = Path(PROBLEM_FILE).expanduser()
@@ -29,9 +52,10 @@ def main():
         problem_path = script_dir / problem_path
     problem_path = problem_path.resolve()
 
-    # 문제1.txt → 풀이생성/문제1_문제와풀이.txt
+    # 원본 텍스트와 수식 미리보기용 Markdown을 나란히 저장한다.
     output_dir = script_dir / "풀이생성"
     output_path = output_dir / f"{problem_path.stem}_문제와풀이.txt"
+    markdown_path = output_path.with_suffix(".md")
 
     if not problem_path.is_file():
         raise SystemExit(f"문제 파일을 찾을 수 없어: {problem_path}")
@@ -80,23 +104,38 @@ def main():
     # API가 반환한 실제 사용량을 기록한다. 누락된 값은 0으로 추정하지 않는다.
     usage = getattr(response, "usage_metadata", None)
     separator = "=" * 60
-    result = (
+    metadata = (
         f"모델: {MODEL} | 추론 수준: {THINKING_LEVEL}\n"
         f"입력 파일: {problem_path.name}\n"
         f"입력 토큰: {format_token_count(usage, 'prompt_token_count')}\n"
         f"추론 토큰: {format_token_count(usage, 'thoughts_token_count')}\n"
         f"생성 토큰(답변): {format_token_count(usage, 'candidates_token_count')}\n"
-        f"전체 토큰: {format_token_count(usage, 'total_token_count')}\n\n"
+        f"전체 토큰: {format_token_count(usage, 'total_token_count')}\n"
+    )
+    result = (
+        f"{metadata}\n"
         f"{separator}\n입력 문제\n{separator}\n"
         f"{problem}\n\n"
         f"{separator}\n출력 풀이\n{separator}\n"
         f"{answer}\n"
     )
 
+    markdown_metadata = "\n".join(f"- {line}" for line in metadata.splitlines())
+    markdown_result = (
+        f"{markdown_metadata}\n\n"
+        "---\n\n"
+        "## 입력 문제\n\n"
+        f"{to_math_markdown(problem).strip()}\n\n"
+        "## 출력 풀이\n\n"
+        f"{to_math_markdown(answer).strip()}\n"
+    )
+
     output_dir.mkdir(parents=True, exist_ok=True)
     output_path.write_text(result, encoding="utf-8")
+    markdown_path.write_text(markdown_result, encoding="utf-8")
     print("\n" + result)
     print(f"\n저장 완료: {output_path}")
+    print(f"수식 미리보기: {markdown_path}")
 
 
 if __name__ == "__main__":
