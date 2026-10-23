@@ -9,11 +9,17 @@ from google.genai import errors, types
 # 예: "problem.txt", "outputs/문제1.txt", "/Users/hwrette/Desktop/문제1.txt"
 PROBLEM_FILE = "outputs/run01/로그계산_삼각함수각변환/problems/001.txt"
 MODEL = "gemini-3.1-flash-lite"
+THINKING_LEVEL = "minimal"
 
 # 이 부분이 풀이 방식과 출력 형식을 정하는 프롬프트
 SYSTEM_PROMPT = """
 이 문제 풀어줘
 """
+
+
+def format_token_count(usage, field):
+    count = getattr(usage, field, None)
+    return "미제공" if count is None else f"{count:,}"
 
 
 def main():
@@ -59,7 +65,7 @@ def main():
                 config=types.GenerateContentConfig(
                     system_instruction=SYSTEM_PROMPT,
                     thinking_config=types.ThinkingConfig(
-                        thinking_level="minimal",
+                        thinking_level=THINKING_LEVEL,
                     ),
                 ),
             )
@@ -71,10 +77,16 @@ def main():
     if not answer or not answer.strip():
         raise SystemExit("텍스트 응답이 없어. 풀이를 저장하지 않았어.")
 
+    # API가 반환한 실제 사용량을 기록한다. 누락된 값은 0으로 추정하지 않는다.
+    usage = getattr(response, "usage_metadata", None)
     separator = "=" * 60
     result = (
+        f"모델: {MODEL} | 추론 수준: {THINKING_LEVEL}\n"
         f"입력 파일: {problem_path.name}\n"
-        f"모델: {MODEL}\n\n"
+        f"입력 토큰: {format_token_count(usage, 'prompt_token_count')}\n"
+        f"추론 토큰: {format_token_count(usage, 'thoughts_token_count')}\n"
+        f"생성 토큰(답변): {format_token_count(usage, 'candidates_token_count')}\n"
+        f"전체 토큰: {format_token_count(usage, 'total_token_count')}\n\n"
         f"{separator}\n입력 문제\n{separator}\n"
         f"{problem}\n\n"
         f"{separator}\n출력 풀이\n{separator}\n"
