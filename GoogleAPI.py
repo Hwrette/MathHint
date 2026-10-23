@@ -7,7 +7,7 @@ from google.genai import errors, types
 # 풀고 싶은 텍스트 파일명을 여기에서 지정한다.
 # 상대 경로는 GoogleAPI.py가 있는 폴더를 기준으로 찾는다.
 # 예: "problem.txt", "outputs/문제1.txt", "/Users/hwrette/Desktop/문제1.txt"
-PROBLEM_FILE = "problem.txt"
+PROBLEM_FILE = "outputs/run01/로그계산_삼각함수각변환/problems/001.txt"
 MODEL = "gemini-3.1-flash-lite"
 
 # 이 부분이 풀이 방식과 출력 형식을 정하는 프롬프트
