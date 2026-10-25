@@ -2,7 +2,7 @@
 
 한글 문서의 **문제 본문과 한글 수식을 읽어, 수식이 LaTeX로 표현된 문제별 UTF-8 `.txt` 파일을 만드는 프로그램**입니다. 정답·해설은 별도 파일에 저장합니다. 외부 API 호출이나 LLM 보정은 하지 않습니다.
 
-이번 구현은 2026년 연구의 전처리 단계입니다. 별도 스크립트 `BagOfWord.py`로 한국어 형태소와 LaTeX 토큰의 빈도를 세어 볼 수 있습니다. TF-IDF, 군집화, 2027년 Llama·Lean 시스템은 아직 구현하지 않았습니다. 아래 출력 형식과 CLI는 실제 첨부 자료를 조사한 뒤 정한 전처리 구현 선택이며, 미정인 연구 과목이나 실험 조건을 확정하지 않습니다.
+이번 구현은 2026년 연구의 전처리 단계입니다. 텍스트의 빈도벡터 생성과, 저장된 벡터를 사용하는 PyTorch 회귀·K-means의 기본 코드를 포함합니다. TF-IDF, 2027년 Llama·Lean 시스템은 아직 구현하지 않았습니다. 아래 출력 형식과 CLI는 실제 첨부 자료를 조사한 뒤 정한 전처리 구현 선택이며, 미정인 연구 과목이나 실험 조건을 확정하지 않습니다.
 
 ## 한국어·LaTeX 토큰 개수 분석
 
@@ -58,6 +58,51 @@ python BuildFrequencyVectors.py "문제텍스트폴더" -o outputs/bow
 ```bash
 python BuildFrequencyVectors.py "새문제폴더" --vocabulary outputs/bow/vocabulary.json -o outputs/bow_new
 ```
+
+## 저장된 JSON으로 PyTorch 회귀·K-means 실행하기
+
+두 모델은 **서로 다른 파이썬 파일**입니다. 텍스트를 분석하거나 빈도벡터를 새로 만들지 않으며, 이미 저장한 JSON만 읽습니다. 공통 로더 `TorchData.py`가 리스트를 `torch.float32` 행렬로 바꿉니다. 별도 GPU 설정 없이 CPU에서 실행하고, 현재는 원시 빈도를 그대로 사용합니다.
+
+```bash
+python -m pip install -r requirements-learning.txt
+```
+
+### 문제 벡터 → 해설 벡터 회귀
+
+`TorchRegression.py`는 문제의 빈도벡터 `X`를 받아 **대응하는 해설의 빈도벡터 `Y` 전체**를 예측합니다. 숫자 하나를 예측하는 회귀가 아닙니다. 문제 토큰이 300개, 해설 토큰이 500개이면 입력 행렬은 `[문항 수, 300]`, 정답 행렬은 `[문항 수, 500]`입니다. 모델은 `nn.Linear(300, 500)`입니다.
+
+입력으로 준비할 파일은 다음과 같습니다. 각 빈도벡터 JSON 옆에는 그 JSON의 `vocabulary_file`이 가리키는 토큰 목록 파일도 있어야 합니다.
+
+```text
+outputs/problem_vectors/frequency_vectors.json
+outputs/problem_vectors/vocabulary.json
+outputs/solution_vectors/frequency_vectors.json
+outputs/solution_vectors/vocabulary.json
+```
+
+문제와 해설의 `documents[].file`을 기준으로 짝을 맞춥니다. 예를 들어 문제 폴더의 `001.txt`와 해설 폴더의 `001.txt`를 연결합니다. JSON의 행 순서가 달라도 파일명으로 다시 맞추며, 짝이 없는 파일이나 중복 파일명은 오류로 알립니다. 문제와 해설의 어휘 목록은 달라도 되며 두 목록의 인덱스를 각각 보존합니다.
+
+파일 위쪽의 경로 설정을 바꾸고 ▶ 버튼으로 실행하거나, 다음처럼 경로를 지정할 수 있습니다.
+
+```bash
+python TorchRegression.py outputs/problem_vectors/frequency_vectors.json --solutions outputs/solution_vectors/frequency_vectors.json
+```
+
+학습용·평가용 행을 난수 시드에 따라 나누고, 학습용 행에서만 MSE를 줄이도록 Adam으로 가중치를 갱신합니다. 기본값은 학습 500회, 평가 비율 20%입니다. `--epochs`, `--learning-rate`, `--test-fraction`, `--seed`로 바꿀 수 있습니다. 최소 두 쌍이 필요하지만, 소수 예제로 실행되는 것과 예측 성능이 확인되는 것은 별개입니다.
+
+결과는 `outputs/regression/`의 `model.pt`(가중치·입출력 어휘)와 `results.json`(학습·평가 오차, 파일별 정답·예측 벡터)에 저장합니다. 선형 회귀의 출력은 실수이며 음수가 나올 수도 있습니다. 예측값을 반올림하거나 잘라서 개수로 바꾸지 않습니다. 실제 일반화 성능을 평가할 때는 학습 데이터로 어휘 목록도 먼저 고정하고, 평가 데이터에는 그 목록을 적용해야 합니다.
+
+### 문제 빈도벡터의 K-means 군집화
+
+`TorchKMeans.py`는 문제 행렬만 사용합니다. **초기 K는 3**이며, 로그·삼각함수·미분처럼 비슷한 유형의 문제가 같은 군집에 모이는지 살펴보기 위한 실험 코드입니다. 출력한 0·1·2번은 군집 번호이고, 특정 번호에 문제유형 이름을 미리 부여하지 않습니다. 군집별 파일 목록을 실제 문제유형과 대조해서 실험 결과를 해석해야 합니다.
+
+```bash
+python TorchKMeans.py --vectors outputs/problem_vectors/frequency_vectors.json --clusters 3
+```
+
+가장 가까운 중심에 배정하고 각 군집의 평균으로 중심을 갱신하는 과정을 반복합니다. 현재 거리는 유클리드 거리이고 정규화나 TF-IDF는 하지 않으므로 문항 길이와 토큰 횟수도 결과에 영향을 줍니다. `N_CLUSTERS` 또는 `--clusters`로 K를 바꿀 수 있고, 서로 다른 문제 벡터가 K개 이상 필요합니다.
+
+결과는 `outputs/kmeans/`의 `clusters.json`(파일별 군집 번호·군집 크기·거리 합)과 `kmeans_model.pt`(중심 벡터·어휘 목록)에 저장합니다. 두 모델 모두 `-o`로 출력 폴더를 바꿀 수 있습니다. 빈도벡터 생성 및 실제 데이터 학습은 자동으로 실행하지 않습니다.
 
 ## 코드를 처음 읽는다면
 
