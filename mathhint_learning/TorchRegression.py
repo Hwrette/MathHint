@@ -1,8 +1,9 @@
 """문제 빈도벡터로 해설 빈도벡터 전체를 예측하는 PyTorch 회귀 예제입니다.
 
 설치: python -m pip install torch
-실행: python TorchRegression.py
-직접 지정: python TorchRegression.py 문제/frequency_vectors.json --solutions 해설/frequency_vectors.json
+실행: python mathhint_learning/TorchRegression.py
+모듈 실행: python -m mathhint_learning.TorchRegression
+직접 지정: python mathhint_learning/TorchRegression.py 문제/frequency_vectors.json --solutions 해설/frequency_vectors.json
 
 텍스트 분석이나 빈도벡터 생성은 하지 않고, 기존 JSON만 읽습니다.
 같은 파일명의 문제·해설 벡터를 짝지어 학습합니다. 해설 벡터를 임의로 만들지 않습니다.
@@ -16,11 +17,15 @@ from pathlib import Path
 import torch
 from torch import nn
 
-from TorchData import load_paired_matrices
+if __package__:
+    from .TorchData import load_paired_matrices
+else:
+    # VS Code의 ▶ 버튼으로 이 파일을 직접 실행할 때 사용합니다.
+    from TorchData import load_paired_matrices
 
 
 # ▶ 버튼으로 실행할 때는 이 경로들을 실제 파일 위치로 바꾸면 됩니다.
-# 상대 경로는 이 파이썬 파일이 있는 폴더를 기준으로 찾습니다.
+# 설정한 상대 경로는 MathHint 프로젝트 폴더를 기준으로 찾습니다.
 PROBLEM_VECTORS_FILE = "outputs/problem_vectors/frequency_vectors.json"
 SOLUTION_VECTORS_FILE = "outputs/solution_vectors/frequency_vectors.json"
 OUTPUT_FOLDER = "outputs/regression"
@@ -113,7 +118,7 @@ def train_regression(
 
 def main() -> None:
     """문제·해설 행렬을 읽어 학습하고, 모델 및 파일별 예측 벡터를 저장합니다."""
-    script_folder = Path(__file__).resolve().parent
+    script_folder = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(description="문제 빈도벡터에서 해설 빈도벡터를 예측하는 회귀")
     parser.add_argument("problems", nargs="?", type=Path, help="문제 frequency_vectors.json 경로")
     parser.add_argument("--solutions", "--answers", dest="solutions", type=Path, help="해설 frequency_vectors.json 경로")

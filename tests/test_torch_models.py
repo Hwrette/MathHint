@@ -14,9 +14,9 @@ except ModuleNotFoundError as error:
     torch = None
 
 if torch is not None:
-    from TorchData import load_frequency_matrix, load_paired_matrices
-    from TorchKMeans import assign_clusters, fit_kmeans
-    from TorchRegression import train_regression
+    from mathhint_learning.TorchData import load_frequency_matrix, load_paired_matrices
+    from mathhint_learning.TorchKMeans import assign_clusters, fit_kmeans
+    from mathhint_learning.TorchRegression import train_regression
 
 
 def write_vectors(root, name, documents, vocabulary, shape=None):

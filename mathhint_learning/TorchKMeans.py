@@ -1,8 +1,9 @@
 """저장된 빈도벡터 JSON을 읽어 PyTorch로 K-means 군집화를 합니다.
 
 설치: python -m pip install torch
-실행: python TorchKMeans.py
-옵션 예: python TorchKMeans.py --vectors outputs/bow/frequency_vectors.json --clusters 3
+실행: python mathhint_learning/TorchKMeans.py
+모듈 실행: python -m mathhint_learning.TorchKMeans
+옵션 예: python mathhint_learning/TorchKMeans.py --vectors outputs/bow/frequency_vectors.json --clusters 3
 
 텍스트를 다시 분석하거나 빈도벡터를 생성하지 않습니다.
 현재는 저장된 원시 횟수와 유클리드 거리를 그대로 사용합니다.
@@ -15,10 +16,14 @@ from pathlib import Path
 
 import torch
 
-from TorchData import load_frequency_matrix
+if __package__:
+    from .TorchData import load_frequency_matrix
+else:
+    # VS Code의 ▶ 버튼으로 이 파일을 직접 실행할 때 사용합니다.
+    from TorchData import load_frequency_matrix
 
 
-# ▶ 버튼으로 실행할 때 사용할 설정입니다. 상대 경로는 이 파일 위치를 기준으로 찾습니다.
+# ▶ 버튼으로 실행할 때 사용할 설정입니다. 상대 경로는 MathHint 프로젝트 폴더를 기준으로 찾습니다.
 VECTORS_FILE = "outputs/problem_vectors/frequency_vectors.json"
 OUTPUT_FOLDER = "outputs/kmeans"
 N_CLUSTERS = 3  # 로그·삼각함수·미분 문제가 비슷한 유형끼리 모이는지 보는 실험의 초기값입니다.
@@ -117,7 +122,7 @@ def fit_kmeans(
 
 def main() -> None:
     """JSON을 행렬로 읽고 군집 번호와 중심을 파일로 저장합니다."""
-    script_folder = Path(__file__).resolve().parent
+    script_folder = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(description="PyTorch K-means 빈도벡터 군집화")
     parser.add_argument("--vectors", type=Path, help="기존 frequency_vectors.json 경로")
     parser.add_argument("-o", "--output", type=Path, help="결과 폴더")

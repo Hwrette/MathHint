@@ -1,16 +1,140 @@
-# 수학 힌트 AI — HWPX 전처리
+# 수학 힌트 AI — 문제 추출·분석·풀이 실험
 
-한글 문서의 **문제 본문과 한글 수식을 읽어, 수식이 LaTeX로 표현된 문제별 UTF-8 `.txt` 파일을 만드는 프로그램**입니다. 정답·해설은 별도 파일에 저장합니다. 외부 API 호출이나 LLM 보정은 하지 않습니다.
+한글 문서에서 문제를 추출하고, 문제의 토큰을 분석하고, Gemini 풀이와 PyTorch 실험을 실행하는 프로젝트입니다. **처음에는 아래 표에서 하고 싶은 작업의 실행 파일만 찾으면 됩니다.**
 
-이번 구현은 2026년 연구의 전처리 단계입니다. 텍스트의 빈도벡터 생성과, 저장된 벡터를 사용하는 PyTorch 회귀·K-means의 기본 코드를 포함합니다. TF-IDF, 2027년 Llama·Lean 시스템은 아직 구현하지 않았습니다. 아래 출력 형식과 CLI는 실제 첨부 자료를 조사한 뒤 정한 전처리 구현 선택이며, 미정인 연구 과목이나 실험 조건을 확정하지 않습니다.
+| 하고 싶은 일 | 열거나 실행할 파일 | 결과 위치 |
+|---|---|---|
+| HWPX를 문제·원본 해설로 분리하기 | `python -m mathhint_preprocess` | `outputs/preprocess/` 아래 지정한 폴더 |
+| 문제 하나의 토큰 횟수 보기 | [mathhint_analysis/BagOfWord.py](mathhint_analysis/BagOfWord.py) | 터미널 |
+| 폴더의 공통 어휘·빈도벡터 만들기 | [mathhint_analysis/BuildFrequencyVectors.py](mathhint_analysis/BuildFrequencyVectors.py) | `outputs/frequency_vectors/` |
+| 문제를 Gemini로 풀고 수식으로 보기 | [mathhint_solver/GoogleAPI.py](mathhint_solver/GoogleAPI.py) | `outputs/solutions/` |
+| 문제 벡터에서 해설 벡터 예측하기 | [mathhint_learning/TorchRegression.py](mathhint_learning/TorchRegression.py) | `outputs/regression/` |
+| 비슷한 문제 벡터끼리 묶기 | [mathhint_learning/TorchKMeans.py](mathhint_learning/TorchKMeans.py) | `outputs/kmeans/` |
+
+각 작업은 필요한 입력이 준비됐을 때 따로 실행합니다. Gemini로 풀이를 생성하기 위해 빈도벡터나 학습을 먼저 실행할 필요는 없습니다.
+
+```text
+원본 HWPX → 전처리 → 문항별 문제·원본 해설 텍스트
+                         ├─ 토큰 분석 → 빈도벡터 → 회귀·군집화
+                         └─ Gemini 요청 → 생성 풀이 TXT·Markdown
+```
+
+## 폴더 지도
+
+```text
+MathHint/
+├── README.md                  # 실행 방법을 찾는 시작점
+├── mathhint_preprocess/        # HWPX 읽기·문항 분리·수식 변환
+├── mathhint_analysis/          # 한국어·LaTeX 토큰 분석과 빈도벡터
+├── mathhint_solver/            # Gemini 풀이 요청과 읽기용 결과 저장
+├── mathhint_learning/          # 저장한 벡터를 사용하는 PyTorch 실험
+├── data/
+│   ├── raw/                   # 원본 HWPX
+│   └── legacy_results/        # 정리 이전에 만든 풀이 결과 보관
+├── outputs/                   # 앞으로 생성하는 결과
+│   ├── preprocess/
+│   ├── frequency_vectors/
+│   ├── solutions/
+│   ├── regression/
+│   └── kmeans/
+├── examples/                  # 바로 읽어 볼 수 있는 문제 텍스트
+├── tests/                     # 코드의 동작을 확인하는 검사
+├── scripts/                   # 선택적인 LaTeX 검사 도구
+├── docs/                      # 코드 읽는 방법과 상세 설명
+├── pyproject.toml             # 설치 조건과 선택 기능 설정
+└── requirements-learning.txt  # PyTorch만 설치하는 기존 방법
+```
+
+`outputs/`의 하위 폴더는 해당 작업을 실행하면 만들어집니다. 소스 코드, 원본, 생성 결과를 각각 다른 위치에서 찾도록 나눴습니다. 이전의 `한글파일/` 원본은 `data/raw/`, `풀이생성/`의 기존 결과는 `data/legacy_results/`로 옮겼습니다.
+
+## 설치와 실행 준비
+
+Python **3.10 이상**이 필요합니다. VS Code 터미널에서 이 README가 있는 프로젝트 폴더로 이동한 다음, 사용할 기능만 설치하세요. 설치와 실행에 같은 Python을 쓰도록 `python -m pip`를 사용합니다.
+
+| 사용할 기능 | 설치 명령 |
+|---|---|
+| HWPX 전처리 | `python -m pip install -e .` |
+| 한국어·LaTeX 토큰 분석 | `python -m pip install -e '.[analysis]'` |
+| Gemini 풀이 생성 | `python -m pip install -e '.[solver]'` |
+| PyTorch 회귀·군집화 | `python -m pip install -e '.[learning]'` |
+| 위 기능 전체 | `python -m pip install -e '.[all]'` |
+
+전처리 자체는 Python 표준 라이브러리만 사용합니다. 분석의 Kiwi, 풀이 생성의 Google SDK, 학습의 PyTorch는 선택 기능입니다.
+
+`BuildFrequencyVectors.py`, `GoogleAPI.py`, `TorchRegression.py`, `TorchKMeans.py`는 **파일 위쪽의 경로·설정값을 수정하고 저장한 뒤 VS Code의 ▶ 버튼으로 실행**할 수 있습니다. 코드 상단에 지정한 상대 경로는 모두 프로젝트 폴더를 기준으로 찾습니다. 터미널 명령에서 직접 전달한 상대 경로는 터미널의 현재 폴더를 기준으로 찾습니다.
+
+이전 루트 실행 파일은 기능별 폴더로 이동했습니다. 예를 들어 `python GoogleAPI.py` 대신 다음 명령을 사용합니다.
+
+```bash
+python mathhint_solver/GoogleAPI.py
+# 같은 작업을 모듈로 실행할 수도 있습니다.
+python -m mathhint_solver.GoogleAPI
+```
+
+## 어떤 순서로 시작할까
+
+1. **이미 `.txt` 문제가 있다면** 전처리는 건너뛰고 토큰 분석이나 Gemini 풀이부터 실행합니다. `examples/bow_sample.txt`가 연습용 입력입니다.
+2. **HWPX 원본부터 시작한다면** 아래 전처리로 `problems/`와 `solutions/`를 만듭니다.
+3. **분석하려면** 문제 폴더의 빈도벡터를 만들고, 회귀 실험에는 원본 해설 폴더의 빈도벡터도 따로 만듭니다.
+4. **풀이를 보고 싶다면** `GoogleAPI.py`에서 `PROBLEM_FILE`을 정하고 실행한 뒤, 생성된 `.md`를 미리보기로 엽니다.
+
+## HWPX에서 문제·원본 해설 추출
+
+원본은 `data/raw/`에 두거나 입력 경로를 직접 지정합니다. 다음 명령은 문제 본문과 원본의 정답·해설을 서로 다른 텍스트로 추출합니다. 이 단계는 외부 API나 LLM을 호출하지 않습니다.
+
+```bash
+python -m mathhint_preprocess "data/raw/로그계산, 삼각함수 각변환.hwpx" -o outputs/preprocess/run01 --strict
+```
+
+여러 문서도 한 번에 처리합니다.
+
+```bash
+python -m mathhint_preprocess "파일1.hwpx" "파일2.hwpx" -o outputs/preprocess/run02 --strict
+```
+
+제공된 두 원본은 `data/raw/`에서 찾을 수 있습니다. 아래 명령은 Bash에서 이 폴더의 HWPX들을 처리하는 예시입니다. 추가 원본과 생성 결과의 Git 추적 규칙은 `.gitignore`에서 관리합니다.
+
+```bash
+python -m mathhint_preprocess data/raw/*.hwpx -o outputs/preprocess/run03 --strict
+```
+
+종료 코드는 다음과 같습니다.
+
+- `0`: 실행 완료. `--strict`가 없으면 검토 항목이 있어도 보고서를 남기고 `0`을 반환합니다.
+- `1`: 문항 경계를 정할 수 없거나 파일 읽기·쓰기 실패. 여러 입력 중 실패한 파일이 있으면 `1`입니다.
+- `2`: `--strict`에서 본문 수식·시각 자료·문서 경계의 검토가 필요함. **문제 파일과 보고서는 저장됩니다.** 해설에만 있는 오류나 그림은 본문 검토 상태와 구별합니다.
+
+같은 원본을 같은 출력 폴더에 다시 실행하면 기존 결과를 덮어쓰지 않고 오류를 냅니다. 재실험에는 새로운 `-o` 경로를 사용하세요.
+
+## 전처리 결과 파일 읽기
+
+입력마다 정규화된 파일명과 원본 SHA-256 일부로 구분한 하위 폴더를 생성합니다.
+
+```text
+outputs/preprocess/run01/문서이름_원본해시/
+├── problems/
+│   ├── 001.txt             # 문제 본문·조건·선택지, 수식은 $LaTeX$
+│   └── 002.txt
+├── solutions/
+│   ├── 001.txt             # 연결된 미주의 정답·해설
+│   └── 002.txt
+├── records.jsonl           # 문항별 원시 표현·출처·변환 결과·상태
+├── document.json           # 전체 순서 정보, 미주, 머리말, 빠른 정답 등 부록
+├── report.json             # 영역별 개수와 검토 대상 수식/문항
+└── source.hwpx             # 바이트를 바꾸지 않은 원본 사본
+```
+
+`problems/001.txt`는 문서에서 추출한 첫 번째 문제입니다. 원본 문제 번호는 JSON의 `number` 필드에 별도로 기록합니다. 문제 파일에는 제목·출처 표·미주 해설·빠른 정답을 넣지 않습니다. 표 안 조건과 선택지 번호는 보존합니다. 표의 행·셀 위치와 속성은 순서 있는 중간 레코드에도 남습니다. `.txt`는 표를 줄바꿈과 탭으로 표현하므로 원본의 페이지 배치나 병합 셀 모양을 재현하지 않습니다.
+
+규칙으로 변환할 수 없는 수식은 `.txt`에 `[수식 변환 검토 필요: eq번호]`로 표시합니다. **해당 문제도 삭제하지 않고 파일로 저장합니다.** 수식 원문과 경고, XML 경로는 `records.jsonl`과 `report.json`에서 확인할 수 있습니다. 후속 실험에서는 검토 상태를 확인한 뒤 사용할 문항을 결정해야 합니다.
 
 ## 한국어·LaTeX 토큰 개수 분석
 
-`BagOfWord.py`는 문제 텍스트 하나를 읽고, 수식은 정규식(`re`), 나머지 문장은 Kiwi로 나눈 뒤 토큰별 횟수를 합칩니다. 저장소 폴더에서 다음과 같이 실행합니다. 설치와 실행에 같은 파이썬을 쓰도록 `python -m pip`를 사용합니다.
+`mathhint_analysis/BagOfWord.py`는 문제 텍스트 하나를 읽고, 수식은 정규식(`re`), 나머지 문장은 Kiwi로 나눈 뒤 토큰별 횟수를 합칩니다. 저장소 폴더에서 다음과 같이 실행합니다. 설치와 실행에 같은 파이썬을 쓰도록 `python -m pip`를 사용합니다.
 
 ```bash
-python -m pip install kiwipiepy
-python BagOfWord.py examples/bow_sample.txt
+python -m pip install -e '.[analysis]'
+python mathhint_analysis/BagOfWord.py examples/bow_sample.txt
 # 실제 파일을 분석할 때는 examples/bow_sample.txt를 해당 파일 경로로 바꿉니다.
 ```
 
@@ -29,18 +153,18 @@ kiwi:값       1
 - 수식 구간은 `$...$`, `$$...$$`, `\(...\)`, `\[...\]`로 표시합니다. 수식 경계 표시 자체는 세지 않으며, `\$`는 경계로 취급하지 않습니다. 닫는 표시가 빠지면 오류를 알려 줍니다. 표시 없는 LaTeX를 자동 추측하지는 않습니다.
 - LaTeX는 명령어(`\log`, `\left` 등), 숫자(`25`, `3.14` 등), 변수 한 글자, 연산자, 중괄호를 셉니다. 중첩 괄호도 각각 남기지만 분자·분모나 로그의 밑 같은 의미 구조를 해석하지는 않습니다. 공백과 줄바꿈은 세지 않습니다.
 - 한국어는 Kiwi가 반환한 모든 형태소를 셉니다. 명사만 고르는 품사 필터, 불용어 제거, 숫자 치환, 명령어 통합 같은 처리는 하지 않습니다. 품사가 달라도 표기(`token.form`)가 같으면 같은 출처 안에서 횟수를 합칩니다.
-- 함수가 돌려주는 `Counter`는 각 토큰을 횟수에 대응시키는 희소 빈도벡터입니다. 이 스크립트는 터미널에 빈도만 출력하며, 폴더 단위의 공통 어휘 목록과 벡터는 아래의 `BuildFrequencyVectors.py`에서 만듭니다. TF-IDF는 적용하지 않습니다.
+- 함수가 돌려주는 `Counter`는 각 토큰을 횟수에 대응시키는 희소 빈도벡터입니다. 이 스크립트는 터미널에 빈도만 출력하며, 폴더 단위의 공통 어휘 목록과 벡터는 아래의 `mathhint_analysis/BuildFrequencyVectors.py`에서 만듭니다. TF-IDF는 적용하지 않습니다.
 
-오래된 한글 텍스트 파일의 인코딩이 CP949라면 `python BagOfWord.py 파일.txt --encoding cp949`로 실행합니다.
+오래된 한글 텍스트 파일의 인코딩이 CP949라면 `python mathhint_analysis/BagOfWord.py 파일.txt --encoding cp949`로 실행합니다.
 
 ## 폴더에서 공통 토큰 목록과 빈도벡터 만들기
 
-`BuildFrequencyVectors.py` 위쪽의 `INPUT_FOLDER`를 분석할 텍스트 폴더로 바꾼 뒤 ▶ 버튼으로 실행할 수 있습니다. 기본값은 예제가 있는 `examples`입니다. `OUTPUT_FOLDER`에서 저장 위치를 바꿀 수 있으며, 두 설정의 상대 경로는 파이썬 파일이 있는 폴더를 기준으로 찾습니다.
+`mathhint_analysis/BuildFrequencyVectors.py` 위쪽의 `INPUT_FOLDER`를 분석할 텍스트 폴더로 바꾼 뒤 ▶ 버튼으로 실행할 수 있습니다. 기본값은 예제가 있는 `examples`입니다. `OUTPUT_FOLDER`에서 저장 위치를 바꿀 수 있으며, 두 설정의 상대 경로는 프로젝트 폴더를 기준으로 찾습니다.
 
 터미널에서 직접 폴더를 지정하는 방법도 있습니다.
 
 ```bash
-python BuildFrequencyVectors.py "문제텍스트폴더" -o outputs/bow
+python mathhint_analysis/BuildFrequencyVectors.py "문제텍스트폴더" -o outputs/bow
 # 하위 폴더까지 읽으려면 --recursive를 붙입니다.
 ```
 
@@ -56,20 +180,66 @@ python BuildFrequencyVectors.py "문제텍스트폴더" -o outputs/bow
 새 문제에는 저장한 목록을 지정하면 됩니다. **목록 순서를 유지하고 새 토큰은 무시**합니다. 아래처럼 결과 폴더를 따로 지정하면 기존 데이터의 벡터도 보관할 수 있습니다.
 
 ```bash
-python BuildFrequencyVectors.py "새문제폴더" --vocabulary outputs/bow/vocabulary.json -o outputs/bow_new
+python mathhint_analysis/BuildFrequencyVectors.py "새문제폴더" --vocabulary outputs/bow/vocabulary.json -o outputs/bow_new
 ```
+
+## Gemini로 풀이 생성하고 수식으로 보기
+
+[mathhint_solver/GoogleAPI.py](mathhint_solver/GoogleAPI.py)는 지정한 문제 파일을 Gemini에 보내고, 문제 원문·풀이·토큰 사용량을 저장합니다. 원본 문서에서 추출한 해설과 Gemini가 생성한 풀이는 별도의 자료입니다.
+
+먼저 Google SDK를 설치하고 키를 설정합니다. 다음은 Mac의 VS Code 터미널 예시입니다.
+
+```bash
+python -m pip install -e '.[solver]'
+export GEMINI_API_KEY="발급받은_실제_API_키"
+```
+
+새 터미널에서도 키를 유지하려면 `nano ~/.zshrc`로 설정 파일을 열어 위의 `export GEMINI_API_KEY=...` 줄을 추가합니다. **Control + O → Enter → Control + X**로 저장하고 나온 다음 `source ~/.zshrc`로 현재 터미널에도 적용합니다.
+
+파일 위쪽의 설정을 확인합니다. 기존에 선택한 입력 경로·모델·프롬프트는 보존되어 있으므로, 처음 예제로 실행할 때는 `PROBLEM_FILE`을 다음처럼 직접 바꾸고 저장하세요.
+
+```python
+PROBLEM_FILE = "examples/bow_sample.txt"
+MODEL = "gemini-3.1-flash-lite"
+THINKING_LEVEL = "minimal"
+
+SYSTEM_PROMPT = """
+이 문제 풀어줘
+"""
+```
+
+```bash
+python mathhint_solver/GoogleAPI.py
+```
+
+실행마다 문서·문항·실행 식별자를 나누므로 다른 문서의 `001.txt`나 다른 프롬프트 실험 결과가 같은 파일에 덮어써지지 않습니다.
+
+```text
+outputs/solutions/입력문서식별자/문항파일명/날짜시간_고유값/
+├── input.txt       # 실제 요청에 사용한 문제 원문
+├── solution.txt    # 모델·사용량·문제·풀이를 함께 보관
+├── solution.md     # 같은 결과를 수식 미리보기로 보기
+└── run.json        # 입력 경로·해시, 모델·추론 수준, 프롬프트, 사용량 기록
+```
+
+`solution.txt`와 `solution.md`는 **한 번 받은 응답**으로 함께 만듭니다. 맨 위에는 모델과 추론 수준, 입력·추론·생성(답변)·전체 토큰 사용량을 기록합니다. API가 반환하지 않은 토큰값은 `미제공`으로 표시하며 0으로 추정하지 않습니다.
+
+생성된 **`solution.md`를 열고 Mac에서 `⌘ + Shift + V`**를 누르면 VS Code의 기본 Markdown 미리보기에서 수식을 볼 수 있습니다. `⌘K`를 누른 다음 `V`를 누르면 옆에 미리보기를 엽니다. 수식의 `$...$`, `$$...$$`는 유지하고 `\(...\)`, `\[...\]`는 보기용 Markdown에서 변환합니다. 원본 TXT와 API에 보내는 문제·프롬프트에는 이 변환을 적용하지 않습니다.
+
+모델이나 프롬프트를 바꿔 비교할 때는 같은 문제를 사용하고, 생성된 각 실행 폴더의 `run.json`과 풀이를 함께 확인하세요.
 
 ## 저장된 JSON으로 PyTorch 회귀·K-means 실행하기
 
-두 모델은 **서로 다른 파이썬 파일**입니다. 텍스트를 분석하거나 빈도벡터를 새로 만들지 않으며, 이미 저장한 JSON만 읽습니다. 공통 로더 `TorchData.py`가 리스트를 `torch.float32` 행렬로 바꿉니다. 별도 GPU 설정 없이 CPU에서 실행하고, 현재는 원시 빈도를 그대로 사용합니다.
+두 모델은 **서로 다른 파이썬 파일**입니다. 텍스트를 분석하거나 빈도벡터를 새로 만들지 않으며, 이미 저장한 JSON만 읽습니다. 공통 로더 `mathhint_learning/TorchData.py`가 리스트를 `torch.float32` 행렬로 바꿉니다. 별도 GPU 설정 없이 CPU에서 실행하고, 현재는 원시 빈도를 그대로 사용합니다.
 
 ```bash
-python -m pip install -r requirements-learning.txt
+python -m pip install -e '.[learning]'
+# 기존 방식인 python -m pip install -r requirements-learning.txt도 사용할 수 있습니다.
 ```
 
 ### 문제 벡터 → 해설 벡터 회귀
 
-`TorchRegression.py`는 문제의 빈도벡터 `X`를 받아 **대응하는 해설의 빈도벡터 `Y` 전체**를 예측합니다. 숫자 하나를 예측하는 회귀가 아닙니다. 문제 토큰이 300개, 해설 토큰이 500개이면 입력 행렬은 `[문항 수, 300]`, 정답 행렬은 `[문항 수, 500]`입니다. 모델은 `nn.Linear(300, 500)`입니다.
+`mathhint_learning/TorchRegression.py`는 문제의 빈도벡터 `X`를 받아 **대응하는 해설의 빈도벡터 `Y` 전체**를 예측합니다. 숫자 하나를 예측하는 회귀가 아닙니다. 문제 토큰이 300개, 해설 토큰이 500개이면 입력 행렬은 `[문항 수, 300]`, 정답 행렬은 `[문항 수, 500]`입니다. 모델은 `nn.Linear(300, 500)`입니다.
 
 입력으로 준비할 파일은 다음과 같습니다. 각 빈도벡터 JSON 옆에는 그 JSON의 `vocabulary_file`이 가리키는 토큰 목록 파일도 있어야 합니다.
 
@@ -85,7 +255,7 @@ outputs/solution_vectors/vocabulary.json
 파일 위쪽의 경로 설정을 바꾸고 ▶ 버튼으로 실행하거나, 다음처럼 경로를 지정할 수 있습니다.
 
 ```bash
-python TorchRegression.py outputs/problem_vectors/frequency_vectors.json --solutions outputs/solution_vectors/frequency_vectors.json
+python mathhint_learning/TorchRegression.py outputs/problem_vectors/frequency_vectors.json --solutions outputs/solution_vectors/frequency_vectors.json
 ```
 
 학습용·평가용 행을 난수 시드에 따라 나누고, 학습용 행에서만 MSE를 줄이도록 Adam으로 가중치를 갱신합니다. 기본값은 학습 500회, 평가 비율 20%입니다. `--epochs`, `--learning-rate`, `--test-fraction`, `--seed`로 바꿀 수 있습니다. 최소 두 쌍이 필요하지만, 소수 예제로 실행되는 것과 예측 성능이 확인되는 것은 별개입니다.
@@ -94,10 +264,10 @@ python TorchRegression.py outputs/problem_vectors/frequency_vectors.json --solut
 
 ### 문제 빈도벡터의 K-means 군집화
 
-`TorchKMeans.py`는 문제 행렬만 사용합니다. **초기 K는 3**이며, 로그·삼각함수·미분처럼 비슷한 유형의 문제가 같은 군집에 모이는지 살펴보기 위한 실험 코드입니다. 출력한 0·1·2번은 군집 번호이고, 특정 번호에 문제유형 이름을 미리 부여하지 않습니다. 군집별 파일 목록을 실제 문제유형과 대조해서 실험 결과를 해석해야 합니다.
+`mathhint_learning/TorchKMeans.py`는 문제 행렬만 사용합니다. **초기 K는 3**이며, 로그·삼각함수·미분처럼 비슷한 유형의 문제가 같은 군집에 모이는지 살펴보기 위한 실험 코드입니다. 출력한 0·1·2번은 군집 번호이고, 특정 번호에 문제유형 이름을 미리 부여하지 않습니다. 군집별 파일 목록을 실제 문제유형과 대조해서 실험 결과를 해석해야 합니다.
 
 ```bash
-python TorchKMeans.py --vectors outputs/problem_vectors/frequency_vectors.json --clusters 3
+python mathhint_learning/TorchKMeans.py --vectors outputs/problem_vectors/frequency_vectors.json --clusters 3
 ```
 
 가장 가까운 중심에 배정하고 각 군집의 평균으로 중심을 갱신하는 과정을 반복합니다. 현재 거리는 유클리드 거리이고 정규화나 TF-IDF는 하지 않으므로 문항 길이와 토큰 횟수도 결과에 영향을 줍니다. `N_CLUSTERS` 또는 `--clusters`로 K를 바꿀 수 있고, 서로 다른 문제 벡터가 K개 이상 필요합니다.
@@ -107,56 +277,6 @@ python TorchKMeans.py --vectors outputs/problem_vectors/frequency_vectors.json -
 ## 코드를 처음 읽는다면
 
 [처음 읽는 사람을 위한 한글 코드 안내](docs/code_guide_ko.md)에 파일을 읽는 순서, Python 기본 표기, 함수 호출 흐름, 자료 구조와 수식 변환 예시를 정리했습니다. 각 Python 파일에도 함수의 입력·출력과 주요 처리 이유를 한글 주석·설명 문자열로 적었습니다. 먼저 안내서를 읽고 궁금한 함수로 이동하면 됩니다.
-
-## 실행
-
-Python **3.10 이상**이 필요하며, 기본 실행에는 외부 패키지가 필요 없습니다. 터미널에서 이 README가 있는 폴더로 이동하세요.
-
-```bash
-python -m mathhint_preprocess "원본.hwpx" -o outputs/run01 --strict
-```
-
-여러 문서도 한 번에 처리합니다.
-
-```bash
-python -m mathhint_preprocess "파일1.hwpx" "파일2.hwpx" -o outputs/run02 --strict
-```
-
-클라우드 Codex 작업 폴더에서는 제공된 원본의 사본을 `data/raw/`에 보관했습니다. 원본 데이터와 생성 결과(`data/raw/`, `outputs/`, `artifacts/`)는 Git 관리 대상에서 제외합니다. GitHub에서 코드를 새로 내려받았다면 처리할 HWPX를 직접 지정하거나 `data/raw/`에 넣으세요. 아래 명령은 Bash에서 해당 폴더의 두 첨부 자료를 다시 처리하는 예시입니다.
-
-```bash
-python -m mathhint_preprocess data/raw/*.hwpx -o outputs/run03 --strict
-```
-
-종료 코드는 다음과 같습니다.
-
-- `0`: 실행 완료. `--strict`가 없으면 검토 항목이 있어도 보고서를 남기고 `0`을 반환합니다.
-- `1`: 문항 경계를 정할 수 없거나 파일 읽기·쓰기 실패. 여러 입력 중 실패한 파일이 있으면 `1`입니다.
-- `2`: `--strict`에서 본문 수식·시각 자료·문서 경계의 검토가 필요함. **문제 파일과 보고서는 저장됩니다.** 해설에만 있는 오류나 그림은 본문 검토 상태와 구별합니다.
-
-같은 원본을 같은 출력 폴더에 다시 실행하면 기존 결과를 덮어쓰지 않고 오류를 냅니다. 재실험에는 새로운 `-o` 경로를 사용하세요.
-
-## 출력
-
-입력마다 정규화된 파일명과 원본 SHA-256 일부로 구분한 하위 폴더를 생성합니다.
-
-```text
-outputs/run01/문서이름_원본해시/
-├── problems/
-│   ├── 001.txt             # 문제 본문·조건·선택지, 수식은 $LaTeX$
-│   └── 002.txt
-├── solutions/
-│   ├── 001.txt             # 연결된 미주의 정답·해설
-│   └── 002.txt
-├── records.jsonl           # 문항별 원시 표현·출처·변환 결과·상태
-├── document.json           # 전체 순서 정보, 미주, 머리말, 빠른 정답 등 부록
-├── report.json             # 영역별 개수와 검토 대상 수식/문항
-└── source.hwpx             # 바이트를 바꾸지 않은 원본 사본
-```
-
-`problems/001.txt`는 문서에서 추출한 첫 번째 문제입니다. 원본 문제 번호는 JSON의 `number` 필드에 별도로 기록합니다. 문제 파일에는 제목·출처 표·미주 해설·빠른 정답을 넣지 않습니다. 표 안 조건과 선택지 번호는 보존합니다. 표의 행·셀 위치와 속성은 순서 있는 중간 레코드에도 남습니다. `.txt`는 표를 줄바꿈과 탭으로 표현하므로 원본의 페이지 배치나 병합 셀 모양을 재현하지 않습니다.
-
-규칙으로 변환할 수 없는 수식은 `.txt`에 `[수식 변환 검토 필요: eq번호]`로 표시합니다. **해당 문제도 삭제하지 않고 파일로 저장합니다.** 수식 원문과 경고, XML 경로는 `records.jsonl`과 `report.json`에서 확인할 수 있습니다. 후속 실험에서는 검토 상태를 확인한 뒤 사용할 문항을 결정해야 합니다.
 
 ## 정확성과 현재 지원 범위
 
@@ -197,7 +317,7 @@ LaTeX:    \log_{2} x^{2}
 
 ## 첨부 자료 실행 결과
 
-클라우드 작업 폴더의 실제 결과는 `outputs/sample/`에 있습니다. 이 생성물은 GitHub 코드 저장소에는 포함하지 않습니다.
+아래는 제공된 원본 두 개에 대해 기록한 대조 기준값입니다. 결과를 다시 생성하려면 전처리를 실행하고 새 결과 폴더의 `report.json`을 확인하세요. 생성 결과는 `outputs/preprocess/` 아래에 보관합니다.
 
 | 자료 | 분리 문항 | 본문 수식 | 규칙 변환 | 본문 검토 문항 |
 |---|---:|---:|---:|---:|
@@ -222,10 +342,10 @@ python -m unittest discover -s tests -v
 선택적으로 `pdflatex`와 `amsmath`·`amssymb`가 설치된 환경에서는 변환된 전체 수식의 LaTeX 컴파일을 확인할 수 있습니다.
 
 ```bash
-python scripts/validate_latex.py outputs/sample --output artifacts/latex-validation-new
+python scripts/validate_latex.py outputs/preprocess/sample --output artifacts/latex-validation-new
 ```
 
-이번 실행의 검사 산출물은 `artifacts/latex-validation/`에 보관합니다. 컴파일 통과는 LaTeX 문법·명령 확인이며 원본과의 의미 동등성 증명은 아닙니다.
+검사 산출물은 명령의 `--output`으로 지정한 폴더에 보관합니다. 컴파일 통과는 LaTeX 문법·명령 확인이며 원본과의 의미 동등성 증명은 아닙니다.
 
 | 모듈 | 역할 |
 |---|---|
@@ -237,3 +357,6 @@ python scripts/validate_latex.py outputs/sample --output artifacts/latex-validat
 | `__main__.py` | 명령행 실행 |
 
 원본 HWPX는 수정하지 않습니다. 버전·스키마·변환 정책·원본 해시를 저장하며, 전략 라벨은 빈 목록으로 남깁니다. 풀이 전략 라벨링과 실험 결과 해석은 이후 연구자가 수행할 단계입니다.
+## 연구 범위
+
+현재는 2026년 연구의 전처리·빈도벡터·Gemini 풀이 실험과 PyTorch 회귀·K-means 기본 코드를 포함합니다. TF-IDF와 2027년 Llama·Lean 시스템은 아직 구현하지 않았습니다. 출력 형식과 실행 인터페이스는 구현 선택이며, 미정인 연구 과목이나 실험 조건을 확정하지 않습니다.

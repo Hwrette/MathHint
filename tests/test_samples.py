@@ -30,10 +30,17 @@ class SuppliedSampleTests(unittest.TestCase):
         """이 클래스의 테스트들이 공통으로 쓸 두 문서를 한 번 읽고 변환한다."""
         # @classmethod의 cls는 이 테스트 클래스를 가리킨다. cls.documents에
         # 준비 결과를 저장하면 각각의 test_ 함수가 같은 준비 자료를 읽을 수 있다.
-        paths = sorted(SAMPLE_ROOT.glob('*.hwpx'))
-        if len(paths) != 2 or not paths[0].name.startswith('1-') or not paths[1].name.startswith('2-'):
-            # 데이터 미제공은 프로그램 실패가 아니므로 SkipTest로 건너뛴 이유를 알린다.
-            raise unittest.SkipTest('두 첨부 HWPX 원본이 data/raw에 있을 때 실행하는 검사입니다.')
+        # 저장소에 보관한 원본 두 개는 조사 기준값의 순서대로 명시한다.
+        paths = [
+            SAMPLE_ROOT / '로그계산, 삼각함수 각변환.hwpx',
+            SAMPLE_ROOT / '로그함수, 삼각함수, 미분.hwpx',
+        ]
+        if not all(path.is_file() for path in paths):
+            # 이전 작업 폴더의 1-/2- 접두사 원본도 계속 검사할 수 있다.
+            paths = sorted(SAMPLE_ROOT.glob('*.hwpx'))
+            if len(paths) != 2 or not paths[0].name.startswith('1-') or not paths[1].name.startswith('2-'):
+                # 데이터 미제공은 프로그램 실패가 아니므로 건너뛴 이유를 알린다.
+                raise unittest.SkipTest('두 첨부 HWPX 원본이 data/raw에 있을 때 실행하는 검사입니다.')
         cls.documents = [split_problems(read_hwpx(p)) for p in paths]
         for document in cls.documents:
             convert_document_equations(document)

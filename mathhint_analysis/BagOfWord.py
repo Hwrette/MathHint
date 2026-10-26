@@ -1,7 +1,7 @@
 r"""한국어 형태소와 LaTeX 토큰을 합쳐 단어별 등장 횟수를 셉니다.
 
 설치: python -m pip install kiwipiepy
-실행: python BagOfWord.py examples/bow_sample.txt
+실행: python mathhint_analysis/BagOfWord.py examples/bow_sample.txt
 
 한국어는 Kiwi로, $...$ 같은 수식 구간은 정규식으로 나눕니다.
 명사만 고르거나 불용어를 제거하지 않고, 나온 토큰을 모두 셉니다.
@@ -142,13 +142,13 @@ def main() -> None:
 
     -> None은 이 함수가 별도의 결과값을 돌려주지 않는다는 뜻입니다.
     """
-    # 입력 규칙을 정합니다. python BagOfWord.py --help로 사용법을 볼 수 있습니다.
+    # 입력 규칙을 정합니다. python mathhint_analysis/BagOfWord.py --help로 사용법을 볼 수 있습니다.
     parser = argparse.ArgumentParser(description="한국어 형태소 + LaTeX 토큰 빈도 계산")
-    # file은 필수 입력입니다. 예: python BagOfWord.py sample.txt
+    # file은 필수 입력입니다. 예: python mathhint_analysis/BagOfWord.py sample.txt
     # 상대 경로(sample.txt)는 터미널의 현재 작업 폴더를 기준으로 찾습니다.
     parser.add_argument("file", help="분석할 텍스트 파일 경로")
     # --encoding은 선택 사항입니다. 생략하면 utf-8을 사용합니다.
-    # 예: python BagOfWord.py sample.txt --encoding cp949
+    # 예: python mathhint_analysis/BagOfWord.py sample.txt --encoding cp949
     parser.add_argument("--encoding", default="utf-8", help="파일 인코딩")
     # 입력을 해석한 결과를 args에 담습니다.
     args = parser.parse_args()
@@ -166,7 +166,7 @@ def main() -> None:
         print(f"{word}\t{count}")
 
 
-# 이 파일을 python BagOfWord.py ...로 직접 실행했을 때만 main()을 호출합니다.
-# 다른 파이썬 파일에서 import BagOfWord로 불러올 때는 자동 실행하지 않습니다.
+# 이 파일을 python mathhint_analysis/BagOfWord.py ...로 직접 실행했을 때만 main()을 호출합니다.
+# 다른 파일에서 mathhint_analysis.BagOfWord를 불러올 때는 자동 실행하지 않습니다.
 if __name__ == "__main__":
     main()

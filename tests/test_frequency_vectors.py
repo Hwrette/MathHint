@@ -8,7 +8,7 @@ from unittest.mock import patch
 
 # HWPX 전처리만 사용하는 환경에서는 Kiwi 관련 검사만 건너뜁니다.
 try:
-    import BuildFrequencyVectors as vectors
+    from mathhint_analysis import BuildFrequencyVectors as vectors
 except ModuleNotFoundError as error:
     if error.name != "kiwipiepy":
         raise

@@ -1,8 +1,8 @@
 """폴더 안의 텍스트에서 공통 토큰 목록과 파일별 빈도벡터를 만듭니다.
 
 설치: python -m pip install kiwipiepy
-실행: python BuildFrequencyVectors.py
-폴더 지정: python BuildFrequencyVectors.py "문제텍스트폴더"
+실행: python mathhint_analysis/BuildFrequencyVectors.py
+폴더 지정: python mathhint_analysis/BuildFrequencyVectors.py "문제텍스트폴더"
 
 한국어는 Kiwi, LaTeX는 기존 BagOfWord.py의 정규식으로 분석합니다.
 불용어 제거·품사 필터·숫자 치환 없이 나온 토큰을 모두 사용합니다.
@@ -13,7 +13,11 @@ import json  # 파이썬 리스트와 딕셔너리를 JSON 파일로 저장하�
 from pathlib import Path  # 파일·폴더 경로를 다룹니다.
 
 # 이미 만든 분석 함수를 가져옵니다. 이 파일에서 토큰화 규칙을 다시 만들지 않습니다.
-from BagOfWord import Kiwi, count_tokens
+# 파일 직접 실행과 python -m 실행에서 모두 같은 분석 함수를 사용합니다.
+if __package__:
+    from .BagOfWord import Kiwi, count_tokens
+else:
+    from BagOfWord import Kiwi, count_tokens
 
 
 # ▶ 버튼으로 실행할 때는 여기만 원하는 폴더 경로로 바꾸면 됩니다.
@@ -146,7 +150,7 @@ def save_results(result: dict, output_folder: str | Path) -> tuple[Path, Path]:
 
 def main() -> None:
     """설정한 폴더를 분석하고, 저장 위치와 벡터 크기를 터미널에 출력합니다."""
-    script_folder = Path(__file__).resolve().parent
+    project_root = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(description="폴더의 한국어·LaTeX 토큰 목록과 빈도벡터 생성")
     # nargs='?'이므로 폴더 입력을 생략해도 됩니다. ▶ 실행 시 위의 설정을 사용합니다.
     parser.add_argument("folder", nargs="?", type=Path, help="분석할 텍스트 폴더")
@@ -156,10 +160,10 @@ def main() -> None:
     parser.add_argument("--vocabulary", type=Path, help="새 문제에 사용할 기존 vocabulary.json")
     args = parser.parse_args()
 
-    # 코드 위의 설정값은 이 파이썬 파일을 기준으로 찾습니다. ~는 먼저 사용자 폴더로 바꿉니다.
+    # 코드 위의 설정값은 프로젝트 루트를 기준으로 찾습니다. ~는 먼저 사용자 폴더로 바꿉니다.
     # 터미널에서 직접 지정한 상대 경로는 터미널의 현재 폴더를 기준으로 찾습니다.
-    input_folder = args.folder if args.folder is not None else script_folder / Path(INPUT_FOLDER).expanduser()
-    output_folder = args.output if args.output is not None else script_folder / Path(OUTPUT_FOLDER).expanduser()
+    input_folder = args.folder if args.folder is not None else project_root / Path(INPUT_FOLDER).expanduser()
+    output_folder = args.output if args.output is not None else project_root / Path(OUTPUT_FOLDER).expanduser()
     try:
         vocabulary = None
         if args.vocabulary is not None:

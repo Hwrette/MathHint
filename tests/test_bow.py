@@ -7,7 +7,7 @@ import unittest
 
 # 문서 전처리만 사용하는 사람은 Kiwi를 설치하지 않아도 기존 검사를 실행할 수 있습니다.
 try:
-    import BagOfWord as bow
+    from mathhint_analysis import BagOfWord as bow
 except ModuleNotFoundError as error:
     if error.name != "kiwipiepy":
         raise

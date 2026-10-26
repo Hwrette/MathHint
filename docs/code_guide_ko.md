@@ -1,19 +1,38 @@
 # 처음 읽는 사람을 위한 코드 안내
 
-이 프로그램은 HWPX에서 문제를 읽고, 한글 수식 구문을 LaTeX로 바꾸고, 문제별 텍스트 파일을 저장합니다. 각 Python 파일 맨 위에는 파일 전체의 역할을, 함수 바로 아래에는 입력과 처리 목적을 한글로 설명했습니다. 함수 안의 주석은 특별히 주의할 순서나 분기 이유를 설명합니다.
+이 프로젝트는 **전처리, 토큰 분석, Gemini 풀이, 학습 실험**의 네 부분으로 나뉩니다. 하고 싶은 작업의 실행 파일부터 읽고, 그 파일이 호출하는 함수로 이동하면 됩니다. 각 Python 파일 맨 위에는 파일 전체의 역할을, 함수 바로 아래에는 입력과 처리 목적을 한글로 설명했습니다.
 
-문서 전처리로 만든 텍스트는 별도 스크립트 `BagOfWord.py`에서 분석할 수 있습니다. 수식 구간은 정규식으로 나누고, 나머지 문장은 Kiwi로 분석해서 토큰별 횟수를 합칩니다. 품사 필터나 불용어 제거 없이 개수만 셉니다. `BuildFrequencyVectors.py`는 이 함수를 재사용해 폴더의 토큰 합집합을 공통 목록으로 저장하고, 각 파일의 빈도벡터를 만듭니다. 실행 예시는 [README](../README.md#한국어latex-토큰-개수-분석)를 참고하세요. `equations.py`에서 말하는 토큰은 **한글 수식을 LaTeX로 변환하기 위한 문법 단위**입니다. 완성된 LaTeX를 다시 나누어 세는 토큰과는 용도가 다릅니다.
+| 하고 싶은 작업 | 먼저 열 파일 | 찾을 설정·내용 |
+|---|---|---|
+| HWPX에서 문제를 추출하기 | [mathhint_preprocess/__main__.py](../mathhint_preprocess/__main__.py) | 읽기·문항 분리·저장을 연결하는 `main()` |
+| 텍스트 하나의 토큰 횟수 보기 | [BagOfWord.py](../mathhint_analysis/BagOfWord.py) | 수식 분리와 `count_tokens()` |
+| 폴더의 빈도벡터 만들기 | [BuildFrequencyVectors.py](../mathhint_analysis/BuildFrequencyVectors.py) | `INPUT_FOLDER`, `OUTPUT_FOLDER` |
+| Gemini로 문제를 풀기 | [GoogleAPI.py](../mathhint_solver/GoogleAPI.py) | `PROBLEM_FILE`, `MODEL`, `THINKING_LEVEL`, `SYSTEM_PROMPT` |
+| 문제 벡터에서 해설 벡터 예측하기 | [TorchRegression.py](../mathhint_learning/TorchRegression.py) | 입력 JSON 경로와 학습 설정 |
+| 비슷한 문제 벡터끼리 묶기 | [TorchKMeans.py](../mathhint_learning/TorchKMeans.py) | `VECTORS_FILE`, `N_CLUSTERS` |
+
+경로를 코드 상단의 설정값으로 지정하면 프로젝트 폴더를 기준으로 읽습니다. 파일을 기능 폴더로 옮겨도 이 기준은 같습니다. 터미널 명령에 직접 전달한 상대 경로는 터미널의 현재 폴더를 기준으로 읽습니다. 실행 명령과 설치는 [README](../README.md)에 모았습니다.
+
+문서 전처리로 만든 텍스트는 `mathhint_analysis/BagOfWord.py`에서 분석할 수 있습니다. 수식 구간은 정규식으로 나누고, 나머지 문장은 Kiwi로 분석해서 토큰별 횟수를 합칩니다. 품사 필터나 불용어 제거 없이 개수만 셉니다. 같은 폴더의 `BuildFrequencyVectors.py`는 이 함수를 재사용해 폴더의 토큰 합집합을 공통 목록으로 저장하고, 각 파일의 빈도벡터를 만듭니다. 실행 예시는 [README](../README.md#한국어latex-토큰-개수-분석)를 참고하세요.
+
+이 프로젝트에서 **토큰**은 문맥에 따라 다른 대상을 뜻합니다.
+
+- `equations.py`: 한글 수식을 LaTeX로 변환하기 위해 읽는 문법 단위.
+- `BagOfWord.py`: Kiwi 형태소 또는 LaTeX 명령·숫자·기호의 빈도를 세는 분석 단위.
+- Gemini 사용량: Google API가 입력·추론·답변 생성에 사용했다고 반환하는 토큰 수.
+
+분석용 빈도벡터의 토큰 횟수와 Gemini의 사용량은 같은 값이 아닙니다.
 
 ## 어디부터 읽으면 되는가
 
-저장한 빈도벡터로 학습하는 코드는 별도 파일입니다. `TorchData.py`는 JSON을 행렬로 읽고 문제·해설의 파일명을 맞춥니다. `TorchRegression.py`는 문제 벡터에서 해설 벡터 전체를 예측하고, `TorchKMeans.py`는 문제 벡터를 비슷한 것끼리 묶습니다. K의 초기값은 3입니다. 이 파일들은 텍스트 분석이나 빈도벡터 생성을 다시 실행하지 않습니다.
+저장한 빈도벡터로 학습하는 코드는 `mathhint_learning/`에 모았습니다. [TorchData.py](../mathhint_learning/TorchData.py)는 JSON을 행렬로 읽고 문제·해설의 파일명을 맞춥니다. `TorchRegression.py`는 문제 벡터에서 해설 벡터 전체를 예측하고, `TorchKMeans.py`는 문제 벡터를 비슷한 것끼리 묶습니다. K의 초기값은 3입니다. 이 파일들은 텍스트 분석이나 빈도벡터 생성을 다시 실행하지 않습니다.
 
 한 번에 모든 파일을 이해할 필요는 없습니다. 먼저 아래 순서로 각 파일 맨 위의 설명과 주요 함수만 읽고, 이후 궁금한 함수 내부로 들어가면 됩니다.
 
 | 순서 | 파일 | 먼저 이해할 내용 |
 |---|---|---|
 | 1 | [README](../README.md) | 실행법, 입력과 출력 파일, 지원 범위 |
-| 2 | [models.py](../mathhint_preprocess/models.py) | 문장·수식·문항을 어떤 자료 구조로 보관하는가 |
+| 2 | [models.py](../mathhint_preprocess/models.py) | 문장·수식·문항을 어떤 자료 구조로 보관하는가. AI 모델을 선택하는 파일이 아닙니다. |
 | 3 | [__main__.py](../mathhint_preprocess/__main__.py) | 실행할 때 어떤 함수를 어떤 순서로 부르는가 |
 | 4 | [hwpx.py](../mathhint_preprocess/hwpx.py) | ZIP/XML에서 문장과 수식을 어떻게 꺼내는가 |
 | 5 | [segment.py](../mathhint_preprocess/segment.py) | 문제와 해설·빠른 정답의 경계를 어떻게 정하는가 |
@@ -22,6 +41,20 @@
 | 8 | [tests 폴더](../tests/) | 어떤 상황에서 맞게 동작해야 하는지 확인하는 예시 |
 
 [validate_latex.py](../scripts/validate_latex.py)는 나중에 읽어도 됩니다. 이미 저장한 LaTeX를 외부 프로그램인 `pdflatex`로 컴파일해 보는 선택적 검사 도구입니다. 기본 전처리 실행에 꼭 필요한 단계는 아닙니다.
+
+## 원본·코드·결과를 어디서 찾는가
+
+- `data/raw/`: 원본 HWPX입니다. 전처리가 읽는 입력입니다.
+- `mathhint_preprocess/`, `mathhint_analysis/`, `mathhint_solver/`, `mathhint_learning/`: 실행 코드입니다.
+- `outputs/preprocess/`: 추출한 문제와 원본 해설, 변환 보고서입니다.
+- `outputs/frequency_vectors/`: 예제의 공통 어휘와 문서별 빈도벡터입니다. 명령의 출력 경로를 지정하면 다른 `outputs/` 하위 폴더에도 저장할 수 있습니다.
+- `outputs/solutions/`: Gemini가 생성한 풀이입니다. 문서·문항·실행별로 폴더를 나눕니다.
+- `outputs/regression/`, `outputs/kmeans/`: 학습·군집화 결과입니다.
+- `data/legacy_results/`: 폴더 정리 전에 생성했던 기존 풀이의 보관 위치입니다.
+
+Gemini 실행 폴더의 `input.txt`에는 요청에 사용한 문제가, `run.json`에는 입력 경로·해시·프롬프트·모델·추론 수준·사용량이 남습니다. `solution.txt`는 문제와 풀이를 함께 보관하고, `solution.md`는 같은 응답을 수식 미리보기로 읽는 파일입니다. `.md`를 열고 Mac에서 **⌘ + Shift + V**를 누르면 VS Code의 기본 미리보기가 열립니다. 보기용 수식 구분자 변환은 `.md`에만 적용하고, 문제 원문이나 실제 API 요청을 바꾸지 않습니다.
+
+`__init__.py`는 해당 폴더를 Python 패키지로 사용할 수 있게 하는 파일입니다. 명령을 `python -m mathhint_analysis.BuildFrequencyVectors`처럼 쓰면 폴더 안의 모듈을 실행한다는 뜻입니다. `__main__.py`는 `python -m mathhint_preprocess`처럼 패키지 자체를 실행할 때 시작하는 파일입니다.
 
 ## 코드에서 자주 나오는 표기
 
@@ -128,5 +161,8 @@ python -m unittest discover -s tests -v
 - `test_hwpx.py`: 코드로 만든 작은 HWPX에서 선택지·미주·표·출처의 분리를 확인하는 사례.
 - `test_export.py`: 텍스트/JSON 저장, 원본 보존, 덮어쓰기 방지, 명령행 종료 상태 등의 사례.
 - `test_samples.py`: 원본 두 개가 있을 때 실제 50문항의 정보 보존 상태를 대조하는 사례.
+- `test_bow.py`: 한국어·수식 경계, 토큰 횟수, 인코딩 등의 사례.
+- `test_frequency_vectors.py`: 공통 어휘의 인덱스, 파일별 벡터, 고정 어휘 재사용 등의 사례.
+- `test_torch_models.py`: JSON 행렬 읽기, 문제·해설 짝 맞추기, 회귀와 군집화의 작은 사례.
 
 테스트 통과는 이 사례들에 대해 기대한 동작을 한다는 뜻입니다. 모든 HWPX와 모든 수식 구문을 지원한다는 증명은 아닙니다. `pdflatex` 컴파일 통과 역시 문법 확인이며, 원본과의 수학적 의미 대조는 별도로 필요합니다.
