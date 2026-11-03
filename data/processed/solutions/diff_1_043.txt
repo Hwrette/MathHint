@@ -1,0 +1,21 @@
+[정답] $15$
+
+[해설]
+$f \left( x \right) = 2 x^{3} + 3 x^{2} - 12 x - 8$이라 하면
+$f' \left( x \right) = 6 x^{2} + 6 x - 12 = 6 \left( x - 1 \right) \left( x + 2 \right)$
+$f' \left( x \right) = 0$에서    $x = - 2$ 또는 $x = 1$
+$- 2 \le x \le 2$에서 함수 $f \left( x \right)$의 증가와 감소를 표로 나타내면 다음과 같다.
+
+$x$	$- 2$	$\cdots$	$1$	$\cdots$	$2$
+$f' \left( x \right)$		$-$	$0$	$+$
+$f \left( x \right)$	$12$	$\searrow$	$- 15$	$\nearrow$	$- 4$
+
+$f \left( - 2 \right) = 12$, $f \left( 1 \right) = - 15$, $f \left( 2 \right) = - 4$이므로 함수 $y = f \left( x \right)$의 그래프는 다음 그림과 같다.
+
+함수 $y = f \left( x \right)$는 $- 2 \leq x \leq 2$인 모든 실수 $x$에 대하여 최댓값은 $12$이고 최솟값은 $- 15$이다.
+$f \left( x \right) \leq k$이므로
+$12 \leq k$,    $k \geq 12$			$\cdots$$\cdots$ ㉠
+$- k \leq f \left( x \right)$이므로
+$- k \leq - 15$,    $k \geq 15$			$\cdots$$\cdots$ ㉡
+㉠, ㉡에서    $k \geq 15$
+따라서 양수 $k$의 최솟값은 $15$이다.

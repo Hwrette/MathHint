@@ -1,0 +1,4 @@
+[정답] ⑤
+
+[해설]
+$\cos \left( \theta + \frac{\pi}{2} \right)$$= - \sin \theta$$= - \frac{1}{3}$

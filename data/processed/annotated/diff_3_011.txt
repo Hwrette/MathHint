@@ -1,0 +1,31 @@
+[문항 ID] diff_3_011
+[자료군] 미분
+[파일 번호] 3
+[원래 문제 번호] 11
+[현재 문제 번호] 11
+[과목] 10 미적분1
+[단원] 02 함수의 연속성
+[세부 단원] 01 함수의 연속성
+[유형] 05 연속성5 (구간정의함수)
+[출처] 2021년 교육청 고3공통 4월 > 공통범위 > 8 [3점]
+
+[문제]
+함수
+$f \left( x \right)$$= {\left\{\begin{array}{ll}\begin{aligned}\frac{x^{2} + 3 x + a}{x - 2} \\ {}\end{aligned} & \begin{aligned}\quad \quad \quad \left( x < 2 \right) \\ {}\end{aligned} \\ - x^{2} + b & \quad \quad \quad \left( x \geq 2 \right)\end{array}\right.}$
+가 $x$$= 2$에서 연속일 때, $a + b$의 값은? (단, $a , \quad b$는 상수이다.)
+① $1$		② $2$		③ $3$
+④ $4$		⑤ $5$
+
+[원본 정답·해설]
+[정답] ①
+
+[해설]
+함수 $f (x)$가 $x = 2$에서 연속이므로
+$f (2)$$= \lim_{x \rightarrow 2 +} f (x)$$= \lim_{x \rightarrow 2 -} f (x)$
+$f (2)$$= \lim_{x \rightarrow 2 +} f (x)$$= b - 4$이므로
+$\lim_{x \rightarrow 2 -} f (x)$$= \lim_{x \rightarrow 2 -} \frac{x^{2} + 3 x + a}{x - 2}$$= b - 4$
+$\lim_{x \rightarrow 2 -} (x - 2) = 0$이므로 $\lim_{x \rightarrow 2 -} (x^{2} + 3 x + a) = 0$
+$a + 10 = 0$에서 $a = - 10$
+$\lim_{x \rightarrow 2 -} \frac{x^{2} + 3 x - 10}{x - 2}$$= \lim_{x \rightarrow 2 -} \frac{(x - 2) (x + 5)}{x - 2}$$= 7$이므로
+$b - 4 = 7 , \quad b = 11$
+따라서 $a + b = - 10 + 11 = 1$

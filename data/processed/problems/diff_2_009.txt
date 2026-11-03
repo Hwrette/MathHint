@@ -1,0 +1,5 @@
+함수
+$f \left( x \right) = {\left\{\begin{array}{lll}x^{2} - a x + 1 &  & \left( x < 2 \right) \\ - x + 1 &  & \left( x \geq 2 \right)\end{array}\right.}$
+에 대하여 함수 $\left\{ f (x) \right\}^{2}$이 실수 전체의 집합에서 연속이 되도록 하는 모든 상수 $a$의 값의 합은?
+① $\mathrm{5}$		② $\mathrm{6}$		③ $\mathrm{7}$
+④ $\mathrm{8}$		⑤ $\mathrm{9}$

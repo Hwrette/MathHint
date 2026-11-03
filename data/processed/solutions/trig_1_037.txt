@@ -1,0 +1,15 @@
+[정답] ③
+
+[해설]
+$\cos^{2} x = 1 - \sin^{2} x$이므로
+$f \left( x \right)$$= 2 \cos^{2} x + 2 \sin x + k$
+$= 2 \left( 1 - \sin^{2} x \right) + 2 \sin x + k$
+$= - 2 \sin^{2} x + 2 \sin x + 2 + k$
+$\sin x = t$라 하면 $- 1 \leq t \leq 1$이고
+$y$$= - 2 t^{2} + 2 t + 2 + k$
+$= - 2 \left( t^{2} - t + \frac{1}{4} \right) + \frac{5}{2} + k$
+$= - 2 \left( t - \frac{1}{2} \right)^{2} + \frac{5}{2} + k$
+함수 $y = - 2 \left( t - \frac{1}{2} \right)^{2} + \frac{5}{2} + k$는 $t = \frac{1}{2}$에서 최댓값 $\frac{5}{2} + k$를 갖는다.
+따라서 $\frac{5}{2} + k = \frac{15}{2}$, 즉 $k = 5$
+그러므로 함수 $y = - 2 t^{2} + 2 t + 7$은 $t = - 1$에서 최솟값 $- 2 \times \left( - 1 \right)^{2} + 2 \times \left( - 1 \right) + 7 = 3$을 갖는다.
+즉 $f \left( x \right)$의 최솟값은 $\mathrm{3}$이다.

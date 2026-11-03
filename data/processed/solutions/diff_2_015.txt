@@ -1,0 +1,10 @@
+[정답] ②
+
+[해설]
+$\left( x + 1 \right) f \left( x \right) + \left( 1 - x \right) g \left( x \right) = x^{3} + 9 x + 1$ 		$\cdots \cdots$ ㉠
+㉠에 $x = 0$을 대입하면 $f \left( 0 \right) + g \left( 0 \right) = 1$
+$f \left( 0 \right) = 4$이므로 $g \left( 0 \right) = - 3$이다.
+㉠의 양변을 미분하면
+$f \left( x \right) + \left( x + 1 \right) f' \left( x \right) - g \left( x \right) + \left( 1 - x \right) g' \left( x \right) = 3 x^{2} + 9$ 	$\cdots \cdots$ ㉡
+㉡에 $x = 0$을 대입하면 $f \left( 0 \right) + f' \left( 0 \right) - g \left( 0 \right) + g' \left( 0 \right) = 9$
+따라서 $f' \left( 0 \right) + g' \left( 0 \right) = 9 - f \left( 0 \right) + g \left( 0 \right) = 9 - 4 + \left( - 3 \right) = 2$

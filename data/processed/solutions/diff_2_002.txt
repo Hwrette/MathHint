@@ -1,0 +1,14 @@
+[정답] $8$
+
+[해설]
+$f \left( x \right)$가 다항함수이고
+$\lim_{x \rightarrow \infty} \frac{x f \left( x \right) - 2 x^{3} + 1}{x^{2}} = 5$이므로
+$x f \left( x \right) = 2 x^{3} + 5 x^{2} + a x \left( a \right.$는 실수$)$
+$x \ne 0$일 때
+$f \left( x \right) = 2 x^{2} + 5 x + a$이고
+함수 $f \left( x \right)$는 $x = 0$에서 연속이므로
+$f \left( 0 \right)$$= \lim_{x \rightarrow 0} f \left( x \right)$
+$= a$
+$= 1$
+따라서 $f \left( 1 \right)$$= 2 + 5 + 1$
+$= 8$

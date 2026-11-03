@@ -1,0 +1,3 @@
+좌표평면에서 원 $x^{2} + y^{2} = r^{2} \quad \left( r > 2 \right)$와 직선 $x = - 2$가 만나는 두 점 중 $y$좌표가 양수인 점을 ${\mathrm{{A}}}$, $y$좌표가 음수인 점을 ${\mathrm{{B}}}$라 하고, 두 동경 ${\mathrm{{O A}}}$, ${\mathrm{{O B}}}$가 나타내는 각의 크기를 각각 $\alpha$, $\beta$라 하자. $2 \cos \alpha = 3 \sin \beta$일 때, $r \left( \sin \alpha + \cos \beta \right)$의 값은? (단, $\mathrm{O}$는 원점이고, $x$축의 양의 방향을 시초선으로 한다.)
+① $- \frac{8}{3}$	② $- \frac{5}{3}$		③ $- \frac{2}{3}$
+④ $\frac{1}{3}$		⑤ $\frac{4}{3}$

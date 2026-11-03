@@ -1,0 +1,5 @@
+함수
+$f \left( x \right)$$= {\left\{\begin{array}{ll}\begin{aligned}\frac{x^{2} + 3 x + a}{x - 2} \\ {}\end{aligned} & \begin{aligned}\quad \quad \quad \left( x < 2 \right) \\ {}\end{aligned} \\ - x^{2} + b & \quad \quad \quad \left( x \geq 2 \right)\end{array}\right.}$
+가 $x$$= 2$에서 연속일 때, $a + b$의 값은? (단, $a , \quad b$는 상수이다.)
+① $1$		② $2$		③ $3$
+④ $4$		⑤ $5$

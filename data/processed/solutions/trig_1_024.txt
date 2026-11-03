@@ -1,0 +1,4 @@
+[정답] ⑤
+
+[해설]
+$\cos \left( \frac{\pi}{2} + \theta \right) = - \sin \theta = \frac{4}{5}$

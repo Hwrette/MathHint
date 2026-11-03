@@ -1,0 +1,16 @@
+[정답] ⑤
+
+[해설]
+$f \left( x \right) \leq g \left( x \right)$에서 $g \left( x \right) - f \left( x \right) \geq 0$
+즉 $x^{4} + \frac{4}{3} x^{3} - 4 x^{2} + a \geq 0$
+$h \left( x \right) = x^{4} + \frac{4}{3} x^{3} - 4 x^{2} + a$라 하면 $h \left( x \right) \geq 0$
+$h' \left( x \right) = 4 x^{3} + 4 x^{2} - 8 x = 4 x \left( x - 1 \right) \left( x + 2 \right)$
+$h' \left( x \right) = 0$에서 $x = - 2$ 또는 $x = 0$ 또는 $x = 1$
+함수 $h \left( x \right)$의 증가와 감소를 나타내면 다음과 같다.
+
+$x$	$\cdots$	$\mathrm{- 2}$	$\cdots$	$\mathrm{0}$	$\cdots$	$\mathrm{1}$	$\cdots$
+$h' (x)$	-	$\mathrm{0}$	+	$\mathrm{0}$	-	$\mathrm{0}$	+
+$h (x)$	$\searrow$	$a - \frac{32}{3}$	$\nearrow$	$a$	$\searrow$	$a - \frac{5}{3}$	$\nearrow$
+
+함수 $h (x)$는 $x = - 2$에서 최솟값 $a - \frac{32}{3}$를 갖는다. $a - \frac{32}{3} \geq 0$에서 $a \geq \frac{32}{3}$
+따라서 실수 $a$의 최솟값은 $\frac{32}{3}$이다.

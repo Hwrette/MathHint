@@ -1,0 +1,15 @@
+[정답] ④
+
+[해설]
+$\lim_{x \rightarrow 3} \frac{f (x) - g (x)}{x - 3} = 1$이고 $\lim_{x \rightarrow 3} (x - 3) = 0$이므로
+$\lim_{x \rightarrow 3} \left\{ f (x) - g (x) \right\} = 0$
+$f (x)$, $g (x)$가 모두 다항함수이므로 $f (3) = g (3)$이고
+$f (3) = 2$이므로 $g (3) = 2$
+$\lim_{x \rightarrow 3} \frac{f (x) - g (x)}{x - 3}$$= \lim_{x \rightarrow 3} \frac{\left\{ f (x) - f (3) \right\} - \left\{ g (x) - g (3) \right\}}{x - 3}$
+$= f' (3) - g' (3) = 1$
+$f' (3) = 1$이므로 $g' (3) = 0$
+$g(x)=x^2+ax+b\quad(a,b$는 상수$)$라 하면
+$g' (x) = 2 x + a$
+$g (3) = 9 + 3 a + b = 2$, $g' (3) = 6 + a = 0$에서
+$a = - 6$, $b = 11$
+따라서 $g (1) = 1 - 6 + 11 = 6$

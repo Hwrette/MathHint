@@ -1,0 +1,16 @@
+[정답] ③
+
+[해설]
+함수 $f \left( x \right)$가 $x = 2$에서 미분가능하므로
+함수 $f \left( x \right)$는 $x = 2$에서 연속이다.
+$\lim_{x \rightarrow 2 -} f \left( x \right) = \lim_{x \rightarrow 2 +} f \left( x \right) = f \left( 2 \right)$에서
+$2 - a = 4 + 2 b + a$, $b = - a - 1$
+$\lim_{x \rightarrow 2 -} \frac{f \left( x \right) - f \left( 2 \right)}{x - 2}$$= \lim_{x \rightarrow 2 -} \frac{\left( x - a \right) - \left( 2 - a \right)}{x - 2}$
+$= \lim_{x \rightarrow 2 -} \frac{x - 2}{x - 2} = 1$
+$\lim_{x \rightarrow 2 +} \frac{f \left( x \right) - f \left( 2 \right)}{x - 2}$$= \lim_{x \rightarrow 2 +} \frac{\left( x^{2} + b x + a \right) - \left( 2 - a \right)}{x - 2}$
+$= \lim_{x \rightarrow 2 +} \frac{x^{2} - \left( a + 1 \right) x + 2 \left( a - 1 \right)}{x - 2}$
+$= \lim_{x \rightarrow 2 +} \frac{\left( x - 2 \right) \left( x - a + 1 \right)}{x - 2}$
+$= \lim_{x \rightarrow 2 +} \left( x - a + 1 \right) = 3 - a$
+함수 $f \left( x \right)$가 $x = 2$에서 미분가능하므로
+$1 = 3 - a$에서 $a = 2$, $b = - 3$
+따라서 $f \left( 2 \right) = 0$

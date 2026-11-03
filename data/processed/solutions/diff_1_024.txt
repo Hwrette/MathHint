@@ -1,0 +1,6 @@
+[정답] ⑤
+
+[해설]
+$f \left( x \right) = x^{3} - 6 x + 7$이라 하자. $f' \left( x \right) = 3 x^{2} - 6$이므로 곡선 $y = f \left( x \right)$ 위의 점 $\left( 1 , 2 \right)$에서의 접선의 기울기는 $f' \left( 1 \right) = - 3$
+접선의 방정식은 $y = - 3 \left( x - 1 \right) + 2$, $y = - 3 x + 5$
+따라서 접선의 $y$절편은 $5$

@@ -1,0 +1,7 @@
+[정답] ⑤
+
+[해설]
+$f \left( x \right)$가 $x = a$에서 연속이므로 $\lim_{x \rightarrow a -} f \left( x \right) = f \left( a \right)$
+$\lim_{x \rightarrow a -} f \left( x \right) = \lim_{x \rightarrow a -} \left( x^{2} - 3 x \right) = a^{2} - 3 a$, $f \left( a \right) = a - 4$
+이므로 $a^{2} - 3 a = a - 4$, $\left( a - 2 \right)^{2} = 0$
+따라서 $a = 2$

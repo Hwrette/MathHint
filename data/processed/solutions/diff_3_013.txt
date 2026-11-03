@@ -1,0 +1,9 @@
+[정답] ④
+
+[해설]
+실수 전체의 집합에서 연속이 되려면 $\lim_{x \rightarrow a -} \left\{ f \left( x \right) \right\}^{2} = \lim_{x \rightarrow a +} \left\{ f \left( x \right) \right\}^{2}$이어야 하고
+(ⅰ) $\lim_{x \rightarrow a -} \left\{ f \left( x \right) \right\}^{2} = \left( - 2 \alpha + 6 \right)^{2}$$= 4 a^{2} - 24 a + 36$
+(ⅱ) $\lim_{x \rightarrow a +} \left\{ f \left( x \right) \right\}^{2} = a = a^{2}$
+$4 a^{2} - 24 a + 36 = a^{2}$에서
+$a = 2$, $6$
+따라서 모든 상수 $a$의 값의 합은 $\mathrm{8}$

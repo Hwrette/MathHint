@@ -1,0 +1,16 @@
+[정답] ④
+
+[해설]
+$\cos^{2} x = 1 - \sin^{2} x$이므로
+방정식 $\cos^{2} x = \sin^{2} x - \sin x$에서
+$1 - \sin^{2} x = \sin^{2} x - \sin x$
+$2 \sin^{2} x - \sin x - 1 = 0$
+$\left( 2 \sin x + 1 \right) \left( \sin x - 1 \right) = 0$
+$\sin x = - \frac{1}{2}$ 또는 $\sin x = 1$
+이때, $0 \leq x < 2 \pi$이므로
+(ⅰ) $\sin x = - \frac{1}{2}$에서
+$x = \frac{7}{6} \pi$ 또는 $x = \frac{11}{6} \pi$
+(ⅱ) $\sin x = 1$에서
+$x = \frac{\pi}{2}$
+(ⅰ), (ⅱ)에서 주어진 방정식의 모든 해의 합은
+$\frac{7}{6} \pi + \frac{11}{6} \pi + \frac{\pi}{2} = \frac{7}{2} \pi$

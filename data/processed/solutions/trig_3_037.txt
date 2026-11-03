@@ -1,0 +1,11 @@
+[정답] ①
+
+[해설]
+$\sin^{2} x$$= \cos^{2} x + \cos x$, $1 - \cos^{2} x = \cos^{2} x + \cos x$
+$2 \cos^{2} x + \cos x - 1 = 0$
+$\left( 2 \cos x - 1 \right) \left( \cos x + 1 \right) = 0$에서
+$\cos x = \frac{1}{2}$ 또는 $\cos x = - 1$
+$0 < x \leq 2 \pi$이므로
+$\cos x = \frac{1}{2}$에서 $x = \frac{\pi}{3}$ 또는 $x = \frac{5}{3} \pi$
+$\cos x = - 1$에서 $x = \pi$
+$\sin \frac{\pi}{3} > \cos \frac{\pi}{3}$, $\sin \frac{5}{3} \pi < \cos \frac{5}{3} \pi$, $\sin \pi > \cos \pi$이므로 구하는 모든 $x$의 값의 합은 $\frac{\pi}{3} + \pi = \frac{4}{3} \pi$

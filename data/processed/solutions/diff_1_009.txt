@@ -1,0 +1,9 @@
+[정답] ①
+
+[해설]
+$\lim_{x \rightarrow 3 -} f \left( x \right) = \lim_{x \rightarrow 3 -} \left( x^{2} + a \right) = 9 + a$
+$\lim_{x \rightarrow 3 +} f \left( x \right) = \lim_{x \rightarrow 3 +} \left( x + 2 a \right) = 3 + 2 a$
+$f \left( 3 \right) = 3 + 2 a$
+함수 $f \left( x \right)$가 $x = 3$에서 연속이므로
+$\lim_{x \rightarrow 3 -} f \left( x \right) = \lim_{x \rightarrow 3 +} f \left( x \right) = f \left( 3 \right)$
+$9 + a = 3 + 2 a$, $a = 6$

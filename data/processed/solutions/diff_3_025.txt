@@ -1,0 +1,12 @@
+[정답] $\mathbf{24}$
+
+[해설]
+$\lim_{x \rightarrow 2} \frac{f \left( x \right) - 4}{x^{2} - 4}$$= 2$에서 (분모)$\rightarrow$$0$이고 극한값이 존재하므로 (분자)$\rightarrow$$0$이다.
+$\lim_{x \rightarrow 2} \left\{ f \left( x \right) - 4 \right\}$$= 0$이므로 $f \left( 2 \right)$$= 4$
+$\lim_{x \rightarrow 2} \frac{f \left( x \right) - 4}{x^{2} - 4}$$= \lim_{x \rightarrow 2} \left\{ \frac{1}{x + 2} \times \frac{f \left( x \right) - f \left( 2 \right)}{x - 2} \right\}$
+$= \frac{1}{4} f' \left( 2 \right)$$= 2$
+따라서 $f' \left( 2 \right)$$= 8$이므로 $\lim_{x \rightarrow 2} \frac{g \left( x \right) + 1}{x - 2}$$= 8$에서 (분모)$\rightarrow$$0$이고 극한값이 존재하므로 (분자)$\rightarrow$$0$이다.
+$\lim_{x \rightarrow 2} \left\{ g \left( x \right) + 1 \right\}$$= 0$이므로 $g \left( 2 \right)$$= - 1$
+$\lim_{x \rightarrow 2} \frac{g \left( x \right) + 1}{x - 2}$$= \lim_{x \rightarrow 2} \frac{g \left( x \right) - g \left( 2 \right)}{x - 2}$$= g' \left( 2 \right)$$= 8$
+$h' \left( x \right)$$= f' \left( x \right) g \left( x \right) + f \left( x \right) g' \left( x \right)$
+따라서 $h' \left( 2 \right)$$= f' \left( 2 \right) g \left( 2 \right) + f \left( 2 \right) g' \left( 2 \right)$$= 24$

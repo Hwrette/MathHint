@@ -1,0 +1,11 @@
+[정답] ①
+
+[해설]
+$\frac{t + 2}{x} = \frac{x}{t - 1}$에서 $x^{2} = \left( t - 1 \right) \left( t + 2 \right)$
+$x > 0$이므로 $x = \sqrt{\left( t - 1 \right) \left( t + 2 \right)}$
+$f \left( t \right) = \sqrt{\left( t - 1 \right) \left( t + 2 \right)}$, $g \left( t \right) = \frac{\sqrt{\left( t - 1 \right) \left( t + 2 \right)}}{t - 1}$
+$f \left( t \right) + g \left( t \right) = \frac{t \sqrt{\left( t - 1 \right) \left( t + 2 \right)}}{t - 1}$
+따라서
+$\lim_{t \rightarrow 1 +} \left( t - 1 \right) \left( f \left( t \right) + g \left( t \right) \right)^{2}$
+$= \lim_{t \rightarrow 1 +} \left\{ \left( t - 1 \right) \times \frac{t^{2} \left( t - 1 \right) \left( t + 2 \right)}{\left( t - 1 \right)^{2}} \right\}$
+$= \lim_{t \rightarrow 1 +} t^{2} \left( t + 2 \right) = 3$

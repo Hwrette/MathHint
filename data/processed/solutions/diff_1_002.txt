@@ -1,0 +1,6 @@
+[정답] ④
+
+[해설]
+$\lim_{x \rightarrow \infty} \frac{\left( x^{2} - 1 \right) f \left( x \right)}{3 x + 1}$$= \lim_{x \rightarrow \infty} \left\{ \frac{x + 1}{3 x + 1} \times \left( x - 1 \right) f \left( x \right) \right\}$
+$= \lim_{x \rightarrow \infty} \left\{ \frac{1 + \frac{1}{x}}{3 + \frac{1}{x}} \times \left( x - 1 \right) f \left( x \right) \right\}$
+$= \frac{1}{3} \times 12 = 4$

@@ -1,0 +1,3 @@
+방정식 $\sin \left( x - \frac{\pi}{6} \right) = \frac{1}{2}$의 해는? $\bigl($단, $0\le x\le\frac{\pi}{2}\bigr)$
+① $0$		② $\frac{\pi}{6}$		③ $\frac{\pi}{4}$
+④ $\frac{\pi}{3}$		⑤ $\frac{\pi}{2}$

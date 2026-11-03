@@ -1,0 +1,26 @@
+[문항 ID] trig_1_028
+[자료군] 삼각함수
+[파일 번호] 1
+[원래 문제 번호] 28
+[현재 문제 번호] 28
+[과목] 09 대수
+[단원] 06 삼각함수의 그래프
+[세부 단원] 02 삼각함수의 그래프 활용
+[유형] 01 각 변형1 (각 변형 규칙)
+[출처] 2025년(2026학년도) 평가원 고3공통 6월 > 공통범위 > 8 [3점]
+
+[문제]
+$\sin \left( \pi - \theta \right) > 0$이고 $2 \cos \theta = \sin \theta$일 때, $\cos \theta$의 값은?
+① $- \frac{\sqrt{5}}{5}$	② $- \frac{\sqrt{5}}{10}$	③ $0$
+④ $\frac{\sqrt{5}}{10}$	⑤ $\frac{\sqrt{5}}{5}$
+
+[원본 정답·해설]
+[정답] ⑤
+
+[해설]
+$2 \cos \theta = \sin \theta$에서    $\tan \theta = 2$
+$\frac{1}{\cos^{2} \theta} = \frac{\sin^{2} \theta + \cos^{2} \theta}{\cos^{2} \theta} = \tan^{2} \theta + 1 = 5$
+$\cos \theta = \frac{1}{\sqrt{5}}$ 또는 $\cos \theta = - \frac{1}{\sqrt{5}}$
+$\sin \left( \pi - \theta \right) = \sin \theta > 0$, $\tan \theta > 0$이므로 $\theta$가 제$1$사분면의 각이다.
+따라서 $\cos \theta > 0$이므로
+$\cos \theta = \frac{1}{\sqrt{5}}$$= \frac{\sqrt{5}}{5}$

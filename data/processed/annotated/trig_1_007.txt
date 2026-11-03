@@ -1,0 +1,28 @@
+[문항 ID] trig_1_007
+[자료군] 삼각함수
+[파일 번호] 1
+[원래 문제 번호] 7
+[현재 문제 번호] 7
+[과목] 09 대수
+[단원] 05 삼각함수의 정의
+[세부 단원] 02 삼각함수의 정의 및 활용
+[유형] 06 정의6 (삼각함수 사이의 관계. 값 구하기)
+[출처] 2025년 교육청 고2공통 6월 > 7 [3점]
+
+[문제]
+$\frac{\pi}{2} < \theta < \pi$인 $\theta$에 대하여 $\frac{\cos \theta}{\tan \theta} + \sin \theta = \sqrt{3}$일 때, $\cos \theta$의 값은?
+① $- \frac{\sqrt{6}}{3}$	② $- \frac{\sqrt{3}}{3}$	③ $- \frac{1}{3}$
+④ $\frac{\sqrt{3}}{3}$	⑤ $\frac{\sqrt{6}}{3}$
+
+[원본 정답·해설]
+[정답] ①
+
+[해설]
+$\frac{\cos \theta}{\tan \theta} + \sin \theta = \sqrt{3}$에서
+$\frac{\cos^{2} \theta}{\sin \theta} + \sin \theta$$= \frac{\cos^{2} \theta + \sin^{2} \theta}{\sin \theta}$
+$= \frac{1}{\sin \theta} = \sqrt{3}$
+$\sin \theta = \frac{1}{\sqrt{3}}$이다.
+$\sin^{2} \theta + \cos^{2} \theta = 1$이므로
+$\frac{1}{3} + \cos^{2} \theta = 1$, $\cos^{2} \theta = \frac{2}{3}$
+$\frac{\pi}{2} < \theta < \pi$에서 $\cos \theta < 0$이다.
+따라서 $\cos \theta = - \frac{\sqrt{6}}{3}$

@@ -1,0 +1,36 @@
+[문항 ID] diff_1_005
+[자료군] 미분
+[파일 번호] 1
+[원래 문제 번호] 5
+[현재 문제 번호] 5
+[과목] 10 미적분1
+[단원] 01 함수의 극한
+[세부 단원] 03 극한식의 해석
+[유형] 04 해석4 (함수 구하기. 인수정리)
+[출처] 2026년 교육청 고3공통 10월 > 9 [4점]
+
+[문제]
+$\lim_{x \rightarrow a} \frac{f \left( x \right) \left( x - 3 \right)}{\left( x - a \right)^{2}} = 5$를 만족시키는 최고차항의 계수가 $1$인 이차함수 $f \left( x \right)$가 존재하도록 하는 모든 실수 $a$의 값의 합은?
+① $7$		② $8$		③ $9$
+④ $10$		⑤ $11$
+
+[원본 정답·해설]
+[정답] ⑤
+
+[해설]
+$\lim_{x \rightarrow a} \frac{f \left( x \right) \left( x - 3 \right)}{\left( x - a \right)^{2}} = 5$				$\cdots$$\cdots$ ㉠
+이므로 $\lim_{x \rightarrow a} \left\{ f \left( x \right) \left( x - 3 \right) \right\} = 0$에서 $f \left( a \right) \left( a - 3 \right) = 0$
+(ⅰ) $a = 3$인 경우
+㉠에서 $\lim_{x \rightarrow 3} \frac{f \left( x \right)}{x - 3} = 5$이므로 $\lim_{x \rightarrow 3} f \left( x \right) = f \left( 3 \right) = 0$
+그러므로 $f \left( x \right) = \left( x - 3 \right) \left( x - b \right)$ ($b$는 실수)이다.
+$\lim_{x \rightarrow a} \frac{f \left( x \right) \left( x - 3 \right)}{\left( x - a \right)^{2}} = \lim_{x \rightarrow 3} \left( x - b \right) = 3 - b = 5$, $b = - 2$
+이므로 $f \left( x \right) = \left( x - 3 \right) \left( x + 2 \right)$
+(ⅱ) $a \ne 3$이고 $f \left( a \right) = 0$인 경우
+$f \left( x \right) = \left( x - a \right) \left( x - c \right)$ ($c$는 실수)이다.
+㉠에서 $\lim_{x \rightarrow a} \frac{\left( x - c \right) \left( x - 3 \right)}{x - a} = 5$이므로
+$\lim_{x \rightarrow a} \left\{ \left( x - c \right) \left( x - 3 \right) \right\} = \left( a - c \right) \left( a - 3 \right) = 0$, $a = c$
+이다. 그러므로 $f \left( x \right) = \left( x - a \right)^{2}$이고 ㉠에서
+$\lim_{x \rightarrow a} \left( x - 3 \right) = a - 3 = 5$, $a = 8$
+그러므로 $f \left( x \right) = \left( x - 8 \right)^{2}$
+(ⅰ), (ⅱ)에서 구하는 모든 실수 $a$의 값은 $3$, $8$
+따라서 $3 + 8 = 11$

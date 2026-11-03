@@ -1,0 +1,5 @@
+$0 \leq x \leq 2 \pi$일 때, 부등식
+$\cos x \leq \sin \frac{\pi}{7}$
+를 만족시키는 모든 $x$의 값의 범위는 $\alpha \leq x \leq \beta$이다. $\beta - \alpha$의 값은?
+① $\frac{8}{7} \pi$		② $\frac{17}{14} \pi$		③ $\frac{9}{7} \pi$
+④ $\frac{19}{14} \pi$	⑤ $\frac{10}{7} \pi$

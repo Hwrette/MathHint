@@ -1,0 +1,7 @@
+[정답] ③
+
+[해설]
+$8 \theta - \theta = 2 n \pi$ ($n$은 정수), $\theta = \frac{2 n}{7} \pi$
+$0 < \theta < \frac{\pi}{2}$이므로 $0 < \frac{2 n}{7} \pi < \frac{\pi}{2}$, $0 < n < \frac{7}{4}$
+$n$은 정수이므로 $n = 1$, $\theta = \frac{2}{7} \pi$
+따라서 부채꼴의 넓이는 $\frac{1}{2} \times 2^{2} \times \frac{2}{7} \pi = \frac{4}{7} \pi$

@@ -1,0 +1,5 @@
+$0$이 아닌 모든 실수 $x$에 대하여 함수 $f \left( x \right)$가
+$\frac{1}{2} x^{2} + 2 x < f \left( x \right) < x^{2} + 2 x$
+를 만족시킬 때, $\lim_{x \rightarrow 0} \frac{x f \left( x \right) + 5 x}{2 f \left( x \right) - x}$의 값은?
+① $\frac{5}{3}$		② $2$		③ $\frac{7}{3}$
+④ $\frac{8}{3}$		⑤ $3$

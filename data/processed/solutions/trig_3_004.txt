@@ -1,0 +1,9 @@
+[정답] ②
+
+[해설]
+함수 $g \left( x \right)$$= \left| \sin 3 x \right|$의 그래프는 다음과 같다.
+
+함수 $g \left( x \right)$의 주기는 $\frac{\pi}{3}$
+함수 $f \left( x \right)$의 주기는 $\frac{2 \pi}{\left| a \right|}$
+두 함수 $f \left( x \right)$, $g \left( x \right)$의 주기가 서로 같으므로 $\frac{2 \pi}{\left| a \right|}$$= \frac{\pi}{3}$
+$a$는 양수이므로 $a = 6$

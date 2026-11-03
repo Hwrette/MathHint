@@ -1,0 +1,1 @@
+함수 $f \left( x \right) = \sin^{2} x + \sin \left( x + \frac{\pi}{2} \right) \begin{array}{c}{} \\ {}\end{array} + 1$의 최댓값을 $M$이라 할 때, $4 M$의 값을 구하시오.

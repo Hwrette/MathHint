@@ -1,0 +1,3 @@
+상수 ${k}$($0 < k < 1$)에 대하여 $0 \leq x < 2 \pi$일 때, 방정식 $\sin x = k$의 두 근을 $\alpha , \beta$($\alpha < \beta$)라 하자. $\sin \frac{\beta - \alpha}{2}$$= \frac{5}{7}$일 때, $k$의 값은?
+① $\frac{2 \sqrt{6}}{7}$	② $\frac{\sqrt{26}}{7}$	③ $\frac{2 \sqrt{7}}{7}$
+④ $\frac{\sqrt{30}}{7}$	⑤ $\frac{4 \sqrt{2}}{7}$

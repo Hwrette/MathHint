@@ -1,0 +1,11 @@
+[정답] ①
+
+[해설]
+이차방정식 $5 x^{2} - x + a = 0$의 두 근이 $\sin \theta$, $\cos \theta$이므로 이차방정식의 근과 계수의 관계에서
+$\sin \theta + \cos \theta = \frac{1}{5}$				$\cdots \cdots$ ㉠
+$\sin \theta \cos \theta = \frac{a}{5}$					$\cdots \cdots$ ㉡
+㉠의 양변을 제곱하면
+$1 + 2 \sin \theta \cos \theta = \frac{1}{25}$				$\cdots \cdots$ ㉢
+㉡을 ㉢에 대입하면
+$1 + 2 \frac{a}{5} = \frac{1}{25}$
+$\therefore$$a = - \frac{12}{5}$

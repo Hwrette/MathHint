@@ -1,0 +1,39 @@
+[문항 ID] diff_2_041
+[자료군] 미분
+[파일 번호] 2
+[원래 문제 번호] 41
+[현재 문제 번호] 41
+[과목] 10 미적분1
+[단원] 06 방부등식과 직선운동
+[세부 단원] 03 속도, 가속도와 미분
+[유형] 05 속도와 가속도의 해석4 (운동방향)
+[출처] 2023년 교육청 고3공통 4월(5_10시행) > 공통범위 > 19 [3점]
+
+[문제]
+수직선 위를 움직이는 점 $\mathrm{P}$의 시각 $t \quad \left( t > 0 \right)$에서의 위치 $x \left( t \right)$가
+$x \left( t \right) = \frac{3}{2} t^{4} - 8 t^{3} + 15 t^{2} - 12 t$
+이다. 점 ${\mathrm{{P}}}$의 운동 방향이 바뀌는 순간 점 ${\mathrm{{P}}}$의 가속도를 구하시오.
+
+[원본 정답·해설]
+[정답] $6$
+
+[해설]
+점 ${\mathrm{{P}}}$의 시각 $t \quad \left( t > 0 \right)$에서의 속도를 $v \left( t \right)$라 하면
+$v \left( t \right)$$= 6 t^{3} - 24 t^{2} + 30 t - 12$
+$= 6 \left( t - 1 \right)^{2} \left( t - 2 \right)$
+$v \left( t \right) = 0$에서 $t = 1$ 또는 $t = 2$
+함수 $x (t)$의 증가와 감소를 표로 나타내면
+
+$t$	$\mathrm{0}$	$\cdots$	$\mathrm{1}$	$\cdots$	$\mathrm{2}$	$\cdots$
+$v \left( t \right)$		-	$\mathrm{0}$	-	$\mathrm{0}$	+
+$x \left( t \right)$		$\searrow$	$- \frac{7}{2}$	$\searrow$	$\mathrm{- 4}$	$\nearrow$
+
+점 ${\mathrm{{P}}}$는 $0 < t < 2$에서 운동 방향이 음의 방향이고
+$t > 2$에서 운동 방향이 양의 방향이므로
+점 ${\mathrm{{P}}}$는 시각 $t = 2$에서 운동 방향이 바뀐다.
+점 ${\mathrm{{P}}}$의 시각 $t \quad \left( t > 0 \right)$에서의 가속도를 $a \left( t \right)$라 하면 $a \left( t \right) = v' \left( t \right) = 18 t^{2} - 48 t + 30$
+따라서
+점 ${\mathrm{{P}}}$의 운동 방향이 바뀌는 순간
+점 ${\mathrm{{P}}}$의 가속도는
+$a (2)$$= 18 \times 2^{2} - 48 \times 2 + 30$
+$= 6$

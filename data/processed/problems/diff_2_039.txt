@@ -1,0 +1,3 @@
+최고차항의 계수가 $\mathrm{1}$인 삼차함수 $f (x)$가 모든 정수 $k$에 대하여
+$2 k - 8 \leq \frac{f \left( k + 2 \right) - f \left( k \right)}{2} \leq 4 k^{2} + 14 k$
+를 만족시킬 때, $f' (3)$의 값을 구하시오.

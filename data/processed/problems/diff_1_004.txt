@@ -1,0 +1,5 @@
+일차함수 $f \left( x \right)$에 대하여
+$\lim_{x \rightarrow a} \frac{f \left( x + 2 \right)}{x \left( f \left( x \right) - 3 \right)}$
+의 값이 $a = 0$일 때 존재하고 $a = 3$일 때 존재하지 않는다. $f \left( 4 \right)$의 값은?
+① $6$		② $7$		③ $8$
+④ $9$		⑤ $10$

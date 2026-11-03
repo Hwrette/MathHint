@@ -1,0 +1,9 @@
+[정답] ①
+
+[해설]
+함수 $f \left( x \right)$의 최댓값과 최솟값이 각각
+$a + 1$, $- a + 1$이므로
+$\left( a + 1 \right) - \left( - a + 1 \right) = 2 a = 6$에서 $a = 3$
+함수 $f \left( x \right)$의 주기가 $\frac{2 \pi}{b}$이므로
+$\frac{2 \pi}{b} = 3 \pi$에서 $b = \frac{2}{3}$
+따라서 $a + b = \frac{11}{3}$

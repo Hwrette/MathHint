@@ -1,0 +1,32 @@
+[문항 ID] diff_2_010
+[자료군] 미분
+[파일 번호] 2
+[원래 문제 번호] 10
+[현재 문제 번호] 10
+[과목] 10 미적분1
+[단원] 02 함수의 연속성
+[세부 단원] 01 함수의 연속성
+[유형] 05 연속성5 (구간정의함수)
+[출처] 2024년(2025학년도) 평가원 고3공통 6월 > 공통범위 > 9 [4점]
+
+[문제]
+함수
+$f \left( x \right) = {\left\{\begin{array}{lll}x - \frac{1}{2} &  & \left( x < 0 \right) \\ - x^{2} + 3 &  & \left( x \geq 0 \right)\end{array}\right.}$
+에 대하여 함수 $(f (x) + a)^{2}$이 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?
+① $- \frac{9}{4}$	② $- \frac{7}{4}$		③ $- \frac{5}{4}$
+④ $- \frac{3}{4}$	⑤ $- \frac{1}{4}$
+
+[원본 정답·해설]
+[정답] ③
+
+[해설]
+함수 $\left( f (x) + a \right)^{2}$이 실수 전체의 집합에서 연속이려면 $x = 0$에서 연속이어야 하므로
+$\lim_{x \rightarrow 0 +} \left( f (x) + a \right)^{2} = \lim_{x \rightarrow 0 -} \left( f (x) + a \right)^{2} = \left( f (0) + a \right)^{2}$
+이때 $\left( f (0) + a \right)^{2} = \left( 3 + a \right)^{2}$이고
+$\lim_{x \rightarrow 0 +} \left( f (x) + a \right)^{2}$$= \lim_{x \rightarrow 0 +} \left( - x^{2} + 3 + a \right)^{2}$
+$= \left( 3 + a \right)^{2}$
+$\lim_{x \rightarrow 0 -} \left( f (x) + a \right)^{2}$$= \lim_{x \rightarrow 0 -} \left( x - \frac{1}{2} + a \right)^{2}$
+$= \left( - \frac{1}{2} + a \right)^{2}$
+이므로    $\left( 3 + a \right)^{2} = \left( - \frac{1}{2} + a \right)^{2}$
+$9 + 6 a + a^{2} = \frac{1}{4} - a + a^{2}$,    $7 a = \frac{1}{4} - 9$
+$\therefore$ $a = - \frac{5}{4}$

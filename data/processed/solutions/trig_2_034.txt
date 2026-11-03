@@ -1,0 +1,9 @@
+[정답] ①
+
+[해설]
+$3 \sin x - 2 > 0$에서 $\sin x > \frac{2}{3}$이다.
+$0 \leq x < 2 \pi$에서 함수 $y = \sin x$의 그래프와 직선 $y = \frac{2}{3}$는 그림과 같다.
+
+$0 \leq x < 2 \pi$일 때, 부등식 $3 \sin x - 2 > 0$의 해가 $\alpha < x < \beta$이므로 함수 $y = \sin x$의 그래프와 직선 $y = \frac{2}{3}$가 만나는 두 점의 $x$좌표는 각각 $\alpha$, $\beta \left( 0 < \alpha < \beta < \pi \right)$이다.
+$\frac{\pi}{2} - \alpha = \beta - \frac{\pi}{2}$이므로 $\alpha + \beta = \pi$이다.
+따라서 $\cos \left( \alpha + \beta \right) = \cos {\pi} = - 1$

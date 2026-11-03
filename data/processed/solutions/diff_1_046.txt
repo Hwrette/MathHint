@@ -1,0 +1,15 @@
+[정답] ①
+
+[해설]
+두 점 ${\mathrm{{P}}}$, ${\mathrm{{Q}}}$의 시각 $t$에서의 속도를 각각 $v_{1}$, $v_{2}$라 하면
+$v_{1} = \frac{d x_{1}}{d t} = 12 t^{2} - 2 t - 11$
+$v_{2} = \frac{d x_{2}}{d t} = 4 t + 7$
+두 점 ${\mathrm{{P , Q}}}$의 속도가 같을 때 $v_{1} = v_{2}$이므로
+$12 t^{2} - 2 t - 11 = 4 t + 7$,    $12 t^{2} - 6 t - 18 = 0$
+$2 t^{2} - t - 3 = 0$,    $\left( 2 t - 3 \right) \left( t + 1 \right) = 0$
+$\therefore$ $t = \frac{3}{2}$ $\left( \because \quad t \geq 0 \right)$
+두 점 ${\mathrm{{P}}}$, ${\mathrm{{Q}}}$의 시각 $t$에서의 가속도를 각각 $a_{1}$, $a_{2}$라 하면
+$a_{1} = \frac{d v_{1}}{d t} = 24 t - 2$, $a_{2} = \frac{d v_{2}}{d t} = 4$
+이므로 $t = \frac{3}{2}$일 때 두 점 ${\mathrm{{P}}}$, ${\mathrm{{Q}}}$의 가속도 $p$, $q$는
+$p = 24 \times \frac{3}{2} - 2 = 34$, $q = 4$
+$\therefore$ $p - q = 34 - 4 = 30$

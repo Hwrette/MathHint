@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "question_count": 265,
+  "tokenizer": {
+    "package": "kiwipiepy",
+    "version": "0.24.1",
+    "model_package_version": "0.24.0",
+    "num_workers": 2
+  },
+  "train_count": 185,
+  "test_count": 80,
+  "test_fraction_actual": 0.3018867924528302,
+  "type_count": 70,
+  "seed": 42,
+  "conversion_warning_ids": [],
+  "source_files": [
+    {
+      "file": "모의고사_미분_문제_1.hml",
+      "sha256": "02487629c158a7d2ad3e0f0701b391a6efa7f5d517ab48c044f978924365270f",
+      "questions": 49
+    },
+    {
+      "file": "모의고사_미분_문제_2.hml",
+      "sha256": "bdf632f0269bd027f72fcf686c276a8040aa5cb2b985b26c7a2fe65391d878af",
+      "questions": 43
+    },
+    {
+      "file": "모의고사_미분_문제_3.hml",
+      "sha256": "9c5d864f886ff6f2c93f9125549a8bce3fad8f18a790a887380963d1652adf8d",
+      "questions": 48
+    },
+    {
+      "file": "모의고사_삼각함수_문제_1.hml",
+      "sha256": "40e5d3256beca74c23225ea16d79b402d009340fbb175e827264f20535bad869",
+      "questions": 48
+    },
+    {
+      "file": "모의고사_삼각함수_문제_2.hml",
+      "sha256": "2a36b54c30c9b890ee90fe84dc6c2b62847494cb5830bd51de8b1fb6877d7cc2",
+      "questions": 37
+    },
+    {
+      "file": "모의고사_삼각함수_문제_3.hml",
+      "sha256": "4853842eca14740e8bbc1083fae38beb51f1c6cde8e78fe6d3c398eca800b30b",
+      "questions": 40
+    }
+  ],
+  "vector_dimensions": {
+    "problems": 346,
+    "solutions": 431
+  },
+  "test_ignored_token_counts": {
+    "problems": 29,
+    "solutions": 48
+  },
+  "checks": {
+    "all_ids_unique": true,
+    "train_test_disjoint": true,
+    "paired_problem_solution_ids_and_row_order": true,
+    "duplicate_groups_do_not_cross_splits": true,
+    "vocabulary_fitted_on_train_only": true,
+    "metadata_excluded_from_vector_inputs": true
+  }
+}

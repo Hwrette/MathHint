@@ -1,0 +1,12 @@
+[정답] $110$
+
+[해설]
+$0 < k < \frac{2}{t}$에서 $0 < t k \pi < 2 \pi$
+$f \left( k \right) = 3 k$에서 $\sin \left( t k \pi \right) = \sqrt{3} k > 0$이고
+$g \left( k \right) = 3 k$에서 $\cos \left( t k \pi \right) = - k < 0$이므로
+$\frac{\pi}{2} < t k \pi < \pi$
+$f \left( k \right) = g \left( k \right)$에서 $\tan \left( t k \pi \right) = - \sqrt{3}$이므로
+$t k \pi = \frac{2}{3} \pi$, $t k = \frac{2}{3}$
+$f \left( k \right) = 3 k$에서 $\sqrt{3} \sin \frac{2}{3} \pi = \frac{3}{2} = 3 k$이므로
+$k = \frac{1}{2}$, $t = \frac{4}{3}$
+따라서 $60 \left( t + k \right) = 60 \left( \frac{4}{3} + \frac{1}{2} \right) = 110$

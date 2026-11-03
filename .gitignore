@@ -7,13 +7,19 @@ __pycache__/
 *.py[cod]
 # 가상환경과 패키지 설치·빌드 과정의 생성물.
 .venv/
+.env
+.env.*
+!.env.example
+.upstream_tree.json
+.missing_blobs.json
 *.egg-info/
 build/
 dist/
 # 전처리 결과, 검사 산출물, 원본 자료. 코드 저장소와 데이터 보관을 구별한다.
 outputs/
 artifacts/
-data/raw/
+data/raw/*
+!data/raw/*.hml
 # 예전에 쓰던 결과 폴더에 남아 있는 로컬 생성물도 새로 추가하지 않는다.
 풀이생성/
 # 테스트 실행 범위를 측정하는 도구가 만드는 파일들.

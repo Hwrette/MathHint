@@ -1,0 +1,28 @@
+[문항 ID] trig_2_020
+[자료군] 삼각함수
+[파일 번호] 2
+[원래 문제 번호] 20
+[현재 문제 번호] 20
+[과목] 09 대수
+[단원] 06 삼각함수의 그래프
+[세부 단원] 02 삼각함수의 그래프 활용
+[유형] 05 활용2 (그래프의 활용)
+[출처] 2022년 교육청 고2공통 6월 > 18 [4점]
+
+[문제]
+자연수 $n$에 대하여 $- \frac{\pi}{2 n} < x < \frac{\pi}{2 n}$에서 정의된 함수 $f (x) = 3 \sin 2 n x$가 있다. 원점 ${\mathrm{{O}}}$를 지나고 기울기가 양수인 직선과 함수 $y = f (x)$의 그래프가 서로 다른 세 점 ${\mathrm{{O}}}$, ${\mathrm{{A}}}$, ${\mathrm{{B}}}$에서 만날 때, 점 ${\mathrm{{C}}} \left( \frac{\pi}{2 n} , 0 \right)$에 대하여 넓이가 $\frac{\pi}{12}$인 삼각형 ${\mathrm{{A B C}}}$가 존재하도록 하는 $n$의 최댓값은?
+① $\mathrm{12}$		② $\mathrm{14}$		③ $\mathrm{16}$
+④ $\mathrm{18}$		⑤ $\mathrm{20}$
+
+[원본 정답·해설]
+[정답] ④
+
+[해설]
+
+함수 $y = 3 \sin 2 n x$의 주기는 $\frac{2 \pi}{2 n} = \frac{\pi}{n}$이다.
+원점을 지나고 기울기가 양수인 직선이 $- \frac{\pi}{2 n} < x < \frac{\pi}{2 n}$에서 함수 $y = 3 \sin 2 n x$의 그래프와 만나는 원점이 아닌 두 점 ${\mathrm{{A}}}$와 ${\mathrm{{B}}}$는 원점에 대하여 대칭이다. 따라서 실수 $t \left( - \frac{\pi}{2 n} < t < \frac{\pi}{2 n} , t \ne 0 \right)$에 대하여 점 ${\mathrm{{A}}}$의 좌표를 $\left( t , 3 \sin 2 n t \right)$라 하면 점 ${\mathrm{{B}}}$의 좌표는 $\left( - t , - 3 \sin 2 n t \right)$이다.
+삼각형 ${\mathrm{{A O C}}}$의 넓이와 삼각형 ${\mathrm{{B O C}}}$의 넓이가 같으므로 삼각형 ${\mathrm{{A B C}}}$의 넓이는
+$2\times\frac12\times\frac{\pi}{2n}\times3\left|\sin 2nt\right|=\frac{\pi}{12}$
+이고 $\left|\sin 2nt\right|=\frac{n}{18}$이다.
+$0<\left|\sin 2nt\right|\le1$이므로 $0 < \frac{n}{18} \le 1$이다.
+따라서 $n$의 최댓값은 $18$이다.

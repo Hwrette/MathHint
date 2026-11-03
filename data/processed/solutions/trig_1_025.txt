@@ -1,0 +1,7 @@
+[정답] ①
+
+[해설]
+$\sin \left( \theta - \frac{\pi}{2} \right)$$= - \sin \left( \frac{\pi}{2} - \theta \right)$$= - \cos \theta$
+$- \cos \theta$$= \frac{3}{5}$에서    $\cos \theta = - \frac{3}{5}$
+$\sin^{2} \theta$$= 1 - \cos^{2} \theta$$= 1 - \left( - \frac{3}{5} \right)^{2}$$= \frac{16}{25}$
+이때 $\pi < \theta < \frac{3}{2} \pi$이므로    $\sin \theta = - \frac{4}{5}$

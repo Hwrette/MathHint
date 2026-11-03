@@ -1,0 +1,9 @@
+[정답] ⑤
+
+[해설]
+$g \left( x \right) = 5 x^{2} + x f \left( x \right)$에서
+$g' \left( x \right)$$= 10 x + f \left( x \right) + x f' \left( x \right)$
+이므로 양변에 $x = 3$을 대입하면
+$g' \left( 3 \right)$$= 30 + f \left( 3 \right) + 3 f' \left( 3 \right)$
+$= 30 + 2 + 3$
+$= 35$

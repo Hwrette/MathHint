@@ -1,0 +1,10 @@
+[정답] ①
+
+[해설]
+함수 $f (x)$가 $x = 1$에서 극값을 가지므로
+$f' (1) = 0$
+$f' \left( x \right) = 3 x^{2} + 2 a x - 9$에서
+$f' \left( 1 \right) = 3 + 2 a - 9 = 0$이므로 $a = 3$
+$f' \left( x \right) = 3 x^{2} + 6 x - 9 = 3 \left( x - 1 \right) \left( x + 3 \right)$
+함수 $f \left( x \right)$는 $x = - 3$에서 극댓값을 갖는다.
+따라서 $f \left( - 3 \right) = - 27 + 27 + 27 + 4 = 31$

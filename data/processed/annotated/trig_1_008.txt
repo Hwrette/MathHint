@@ -1,0 +1,25 @@
+[문항 ID] trig_1_008
+[자료군] 삼각함수
+[파일 번호] 1
+[원래 문제 번호] 8
+[현재 문제 번호] 8
+[과목] 09 대수
+[단원] 05 삼각함수의 정의
+[세부 단원] 02 삼각함수의 정의 및 활용
+[유형] 06 정의6 (삼각함수 사이의 관계. 값 구하기)
+[출처] 2026년(2027학년도) 평가원 고3 공통 6월 > 6 [3점]
+
+[문제]
+$\frac{3 \pi}{2} < \theta < 2 \pi$인 $\theta$에 대하여 $\cos^{2} \theta = \frac{1}{10}$일 때, $\tan \theta$의 값은?
+① $- 3$		② $- 2$		③ $- 1$
+④ $2$		⑤ $3$
+
+[원본 정답·해설]
+[정답] ①
+
+[해설]
+$\frac{3 \pi}{2} < \theta < 2 \pi$이므로 $\cos^{2} \theta = \frac{1}{10}$에서
+$\cos \theta = \frac{\sqrt{10}}{10}$
+$\sin^{2} \theta = 1 - \cos^{2} \theta = 1 - \frac{1}{10} = \frac{9}{10}$이므로
+$\sin \theta = - \frac{3 \sqrt{10}}{10}$ $\left( \because \quad \frac{3 \pi}{2} < \theta < 2 \pi \right)$
+$\therefore$ $\tan \theta = \frac{\sin \theta}{\cos \theta} = \frac{- \frac{3 \sqrt{10}}{10}}{\frac{\sqrt{10}}{10}} = - 3$

@@ -1,0 +1,3 @@
+$\cos \theta > 0$이고 $\sin \theta + \cos \theta \tan \theta = - 1$일 때, $\tan \theta$의 값은?
+① $- \sqrt{3}$	② $- \frac{\sqrt{3}}{3}$	③ $\frac{\sqrt{3}}{3}$
+④ $\mathrm{1}$		⑤ $\sqrt{3}$

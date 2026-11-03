@@ -1,0 +1,3 @@
+$0 \le x < 2 \pi$일 때, 부등식 $2 \cos x - \sqrt{2} \le 0$을 만족시키는 모든 $x$의 값의 범위는 $\alpha \le x \le \beta$이다. $\beta - \alpha$의 값은?
+① $\pi$		② $\frac{7}{6} \pi$		③ $\frac{4}{3} \pi$
+④ $\frac{3}{2} \pi$		⑤ $\frac{5}{3} \pi$

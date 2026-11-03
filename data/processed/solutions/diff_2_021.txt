@@ -1,0 +1,10 @@
+[정답] ①
+
+[해설]
+곡선 $y = f \left( x \right)$ 위의 점 $\left( 0 , f \left( 0 \right) \right)$에서의
+접선의 방정식이 $y - f \left( 0 \right) = f' \left( 0 \right) \left( x - 0 \right)$이므로
+$f' \left( 0 \right) = 3$, $f \left( 0 \right) = - 1$
+$g' \left( x \right) = f \left( x \right) + \left( x + 2 \right) f' \left( x \right)$
+따라서 $g' \left( 0 \right)$$= f \left( 0 \right) + 2 f' \left( 0 \right)$
+$= - 1 + 2 \times 3$
+$= 5$

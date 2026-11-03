@@ -1,0 +1,9 @@
+[정답] ②
+
+[해설]
+$\tan \theta = \frac{\sin \theta}{\cos \theta}$, $\sin^{2} \theta + \cos^{2} \theta = 1$이므로
+$\frac{\sin \theta \cos \theta}{1 - \cos \theta} + \frac{1 - \cos \theta}{\tan \theta}$$= 1$
+$\frac{\sin^{2} \theta \cos \theta + \left( 1 - \cos \theta \right)^{2} \cos \theta}{\left( 1 - \cos \theta \right) \sin \theta}$$= 1$
+$\frac{\left( \sin^{2} \theta + \cos^{2} \theta - 2 \cos \theta + 1 \right) \cos \theta}{\left( 1 - \cos \theta \right) \sin \theta}$$= 1$
+$\frac{2 \left( 1 - \cos \theta \right) \cos \theta}{\left( 1 - \cos \theta \right) \sin \theta}$$= 1$, $\sin \theta = 2 \cos \theta$
+$\pi < \theta < \frac{3}{2} \pi$이고 $\cos^{2} \theta = \frac{1}{5}$이므로 $\cos \theta = - \frac{\sqrt{5}}{5}$

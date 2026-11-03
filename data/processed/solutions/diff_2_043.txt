@@ -1,0 +1,12 @@
+[정답] $12$
+
+[해설]
+두 점 ${\mathrm{{P}}}$, ${\mathrm{{Q}}}$의 시각 $t \quad \left( t > 0 \right)$에서의 속도를 각각
+$v_{1} (t)$, $v_{2} (t)$라 하면
+$v_{1} \left( t \right) = 3 t^{2} - 6 t - 24$, $v_{2} \left( t \right) = 2 t - a$
+$v_{1} \left( t \right) = 3 \left( t + 2 \right) \left( t - 4 \right) = 0$에서 $t = 4$
+$0 < t < 4$에서 $v_{1} \left( t \right) < 0$, $t > 4$에서 $v_{1} \left( t \right) > 0$
+이므로 점 $\mathrm{P}$의 운동 방향은 시각 $t = 4$에서만 바뀐다.
+또한 두 점 ${\mathrm{{P}}}$, ${\mathrm{{Q}}}$의 운동 방향이 동시에 바뀌므로
+점 ${\mathrm{{Q}}}$의 운동 방향도 시각 $t = 4$에서 바뀌어야 한다. $v_{2} (4) = 8 - a = 0$에서 $a = 8$
+따라서 $a + k = 8 + 4 = 12$

@@ -1,0 +1,6 @@
+함수
+$f \left( x \right) = {\left\{\begin{array}{lll}x - a &  & \left( x \leq 2 \right) \\ x^{2} + b x + a &  & \left( x > 2 \right)\end{array}\right.}$
+가 $x = 2$에서 미분가능할 때, $f \left( 2 \right)$의 값은?
+(단, $a$와 $b$는 상수이다.)
+① $\mathrm{- 2}$		② $\mathrm{- 1}$		③ $\mathrm{0}$
+④ $\mathrm{1}$		⑤ $\mathrm{2}$

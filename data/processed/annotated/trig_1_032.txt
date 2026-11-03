@@ -1,0 +1,26 @@
+[문항 ID] trig_1_032
+[자료군] 삼각함수
+[파일 번호] 1
+[원래 문제 번호] 32
+[현재 문제 번호] 32
+[과목] 09 대수
+[단원] 06 삼각함수의 그래프
+[세부 단원] 02 삼각함수의 그래프 활용
+[유형] 01 각 변형1 (각 변형 규칙)
+[출처] 2025년(2026학년도) 평가원 고3공통 11월 > 공통범위 > 8 [3점]
+
+[문제]
+$\sin \theta + 3 \cos \theta = 0$이고 $\cos \left( \pi - \theta \right) > 0$일 때, $\sin \theta$의 값은?
+① $\frac{3 \sqrt{10}}{10}$	② $\frac{\sqrt{10}}{5}$	③ $0$
+④ $- \frac{\sqrt{10}}{5}$	⑤ $- \frac{3 \sqrt{10}}{10}$
+
+[원본 정답·해설]
+[정답] ①
+
+[해설]
+$\cos \left( \pi - \theta \right) > 0$에서 $\cos \left( \pi - \theta \right) = - \cos \theta$이므로
+$\cos \theta < 0$
+$\sin \theta = - 3 \cos \theta$이므로 $\sin^{2} \theta + \cos^{2} \theta = 1$에서
+$9 \cos^{2} \theta + \cos^{2} \theta = 1$,    $10 \cos^{2} \theta = 1$
+$\cos^{2} \theta = \frac{1}{10}$    $\therefore$ $\cos \theta = - \frac{\sqrt{10}}{10} \quad \left( \because \quad \cos \theta < 0 \right)$
+$\therefore$ $\sin \theta = - 3 \times \left( - \frac{\sqrt{10}}{10} \right) = \frac{3 \sqrt{10}}{10}$

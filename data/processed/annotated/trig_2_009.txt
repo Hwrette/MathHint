@@ -1,0 +1,23 @@
+[문항 ID] trig_2_009
+[자료군] 삼각함수
+[파일 번호] 2
+[원래 문제 번호] 9
+[현재 문제 번호] 9
+[과목] 09 대수
+[단원] 05 삼각함수의 정의
+[세부 단원] 02 삼각함수의 정의 및 활용
+[유형] 06 정의6 (삼각함수 사이의 관계. 값 구하기)
+[출처] 2022년 교육청 고3공통 3월 > 공통범위 > 5 [3점]
+
+[문제]
+$\frac{\pi}{2} < \theta < \pi$인 $\theta$에 대하여 $\cos \theta \tan \theta = \frac{1}{2}$일 때, $\cos \theta + \tan \theta$의 값은?
+① $- \frac{5 \sqrt{3}}{6}$	② $- \frac{2 \sqrt{3}}{3}$	③ $- \frac{\sqrt{3}}{2}$
+④ $- \frac{\sqrt{3}}{3}$	⑤ $- \frac{\sqrt{3}}{6}$
+
+[원본 정답·해설]
+[정답] ①
+
+[해설]
+$\cos \theta \tan \theta = \cos \theta \times \frac{\sin \theta}{\cos \theta} = \sin \theta = \frac{1}{2}$
+$\frac{\pi}{2} < \theta < \pi$이므로 $\theta = \frac{5}{6} \pi$
+따라서 $\cos \theta + \tan \theta = - \frac{\sqrt{3}}{2} + \left( - \frac{\sqrt{3}}{3} \right) = - \frac{5 \sqrt{3}}{6}$

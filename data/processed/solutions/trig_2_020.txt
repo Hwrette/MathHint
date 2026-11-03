@@ -1,0 +1,11 @@
+[정답] ④
+
+[해설]
+
+함수 $y = 3 \sin 2 n x$의 주기는 $\frac{2 \pi}{2 n} = \frac{\pi}{n}$이다.
+원점을 지나고 기울기가 양수인 직선이 $- \frac{\pi}{2 n} < x < \frac{\pi}{2 n}$에서 함수 $y = 3 \sin 2 n x$의 그래프와 만나는 원점이 아닌 두 점 ${\mathrm{{A}}}$와 ${\mathrm{{B}}}$는 원점에 대하여 대칭이다. 따라서 실수 $t \left( - \frac{\pi}{2 n} < t < \frac{\pi}{2 n} , t \ne 0 \right)$에 대하여 점 ${\mathrm{{A}}}$의 좌표를 $\left( t , 3 \sin 2 n t \right)$라 하면 점 ${\mathrm{{B}}}$의 좌표는 $\left( - t , - 3 \sin 2 n t \right)$이다.
+삼각형 ${\mathrm{{A O C}}}$의 넓이와 삼각형 ${\mathrm{{B O C}}}$의 넓이가 같으므로 삼각형 ${\mathrm{{A B C}}}$의 넓이는
+$2\times\frac12\times\frac{\pi}{2n}\times3\left|\sin 2nt\right|=\frac{\pi}{12}$
+이고 $\left|\sin 2nt\right|=\frac{n}{18}$이다.
+$0<\left|\sin 2nt\right|\le1$이므로 $0 < \frac{n}{18} \le 1$이다.
+따라서 $n$의 최댓값은 $18$이다.

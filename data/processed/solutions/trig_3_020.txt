@@ -1,0 +1,8 @@
+[정답] ⑤
+
+[해설]
+$\sin x = \sqrt{3} \left( 1 + \cos x \right)$, $\sin^{2} x$$= 1 - \cos^{2} x$이므로
+$1 - \cos^{2} x$$= 3 \left( 1 + \cos x \right)^{2}$, $2 \left( 1 + \cos x \right) \left( 2 \cos x + 1 \right)$$= 0$
+(ⅰ) $\cos x$$= - 1$일 때, $\sin x$$= 0$이고 $x$$= \pi$
+(ⅱ) $\cos x$$= - \frac{1}{2}$일 때, $\sin x$$= \frac{\sqrt{3}}{2}$이고 $x$$= \frac{2}{3} \pi$
+(ⅰ), (ⅱ)에서 방정식의 모든 해의 합은 $\frac{5}{3} \pi$이다.

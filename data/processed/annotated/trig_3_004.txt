@@ -1,0 +1,28 @@
+[문항 ID] trig_3_004
+[자료군] 삼각함수
+[파일 번호] 3
+[원래 문제 번호] 4
+[현재 문제 번호] 4
+[과목] 09 대수
+[단원] 06 삼각함수의 그래프
+[세부 단원] 01 삼각함수의 그래프
+[유형] 01 그래프1 (주기)
+[출처] 2020년 교육청 고3문과 4월 > 15 [4점]
+
+[문제]
+두 함수
+$f \left( x \right) = \cos \left( a x \right) + 1$,  $g \left( x \right) = \left| \sin 3 x \right|$
+의 주기가 서로 같을 때, 양수 $a$의 값은?
+① $5$		② $6$		③ $7$
+④ $8$		⑤ $9$
+
+[원본 정답·해설]
+[정답] ②
+
+[해설]
+함수 $g \left( x \right)$$= \left| \sin 3 x \right|$의 그래프는 다음과 같다.
+
+함수 $g \left( x \right)$의 주기는 $\frac{\pi}{3}$
+함수 $f \left( x \right)$의 주기는 $\frac{2 \pi}{\left| a \right|}$
+두 함수 $f \left( x \right)$, $g \left( x \right)$의 주기가 서로 같으므로 $\frac{2 \pi}{\left| a \right|}$$= \frac{\pi}{3}$
+$a$는 양수이므로 $a = 6$

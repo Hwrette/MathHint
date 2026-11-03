@@ -1,0 +1,27 @@
+[문항 ID] trig_2_007
+[자료군] 삼각함수
+[파일 번호] 2
+[원래 문제 번호] 7
+[현재 문제 번호] 7
+[과목] 09 대수
+[단원] 05 삼각함수의 정의
+[세부 단원] 02 삼각함수의 정의 및 활용
+[유형] 06 정의6 (삼각함수 사이의 관계. 값 구하기)
+[출처] 2021년 교육청 고2공통 11월 > 16 [4점]
+
+[문제]
+$\frac{\pi}{2} < \theta < \pi$인 $\theta$에 대하여 $\sin^{4} \theta + \cos^{4} \theta = \frac{23}{32}$일 때, $\sin \theta - \cos \theta$의 값은?
+① $\frac{\sqrt{3}}{2}$	② $1$		③ $\frac{\sqrt{5}}{2}$
+④ $\frac{\sqrt{6}}{2}$	⑤ $\frac{\sqrt{7}}{2}$
+
+[원본 정답·해설]
+[정답] ⑤
+
+[해설]
+$\sin^{4} \theta + \cos^{4} \theta$$= \left( \sin^{2} \theta + \cos^{2} \theta \right)^{2} - 2 \sin^{2} \theta \cos^{2} \theta$
+$= 1 - 2 \sin^{2} \theta \cos^{2} \theta$$= \frac{23}{32}$
+에서 $\sin^{2} \theta \cos^{2} \theta = \frac{9}{64}$
+$\frac{\pi}{2} < \theta < \pi$에서 $\sin \theta > 0$, $\cos \theta < 0$이므로
+$\sin \theta \cos \theta = - \frac{3}{8}$
+$\left( \sin \theta - \cos \theta \right)^{2} = 1 - 2 \sin \theta \cos \theta = \frac{7}{4}$
+따라서 $\sin \theta - \cos \theta = \frac{\sqrt{7}}{2}$

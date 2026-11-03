@@ -1,0 +1,3 @@
+다항함수 $f \left( x \right)$가
+$\lim_{x \rightarrow \infty} \frac{x f \left( x \right) - 2 x^{3} + 1}{x^{2}} = 5$, $f \left( 0 \right) = 1$
+을 만족시킬 때, $f \left( 1 \right)$의 값을 구하시오.

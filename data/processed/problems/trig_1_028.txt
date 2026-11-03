@@ -1,0 +1,3 @@
+$\sin \left( \pi - \theta \right) > 0$이고 $2 \cos \theta = \sin \theta$일 때, $\cos \theta$의 값은?
+① $- \frac{\sqrt{5}}{5}$	② $- \frac{\sqrt{5}}{10}$	③ $0$
+④ $\frac{\sqrt{5}}{10}$	⑤ $\frac{\sqrt{5}}{5}$

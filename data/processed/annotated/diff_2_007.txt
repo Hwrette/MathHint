@@ -1,0 +1,29 @@
+[문항 ID] diff_2_007
+[자료군] 미분
+[파일 번호] 2
+[원래 문제 번호] 7
+[현재 문제 번호] 7
+[과목] 10 미적분1
+[단원] 02 함수의 연속성
+[세부 단원] 01 함수의 연속성
+[유형] 05 연속성5 (구간정의함수)
+[출처] 2024년(2025학년도) 평가원 고3공통 9월 > 공통범위 > 7 [3점]
+
+[문제]
+함수
+$f \left( x \right) = {\left\{\begin{array}{lll}\left( x - a \right)^{2} &  & \left( x < 4 \right) \\ 2 x - 4 &  & \left( x \geq 4 \right)\end{array}\right.}$
+가 실수 전체의 집합에서 연속이 되도록 하는 모든 상수 $a$의 값의 곱은?
+① $\mathrm{6}$		② $\mathrm{9}$		③ $\mathrm{12}$
+④ $\mathrm{15}$		⑤ $\mathrm{18}$
+
+[원본 정답·해설]
+[정답] ③
+
+[해설]
+함수 $f \left( x \right)$가 실수 전체의 집합에서 연속이므로 $x = 4$에서 연속이다. 이때 $f \left( 4 \right) = 4$이고
+$\lim_{x \rightarrow 4 -} f \left( x \right)$$= \lim_{x \rightarrow 4 -} \left( x - a \right)^{2}$$= \left( 4 - a \right)^{2}$
+$\lim_{x \rightarrow 4 +} f \left( x \right)$$= \lim_{x \rightarrow 4 +} \left( 2 x - 4 \right)$$= 4$
+이므로
+$\left( 4 - a \right)^{2} = 4$,    $a^{2} - 8 a + 12 = 0$
+$\left( a - 2 \right) \left( a - 6 \right) = 0$,    $a = 2$ 또는 $a = 6$
+따라서 모든 상수 $a$의 값의 곱은 $12$이다.

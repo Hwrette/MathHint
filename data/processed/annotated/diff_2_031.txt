@@ -1,0 +1,31 @@
+[문항 ID] diff_2_031
+[자료군] 미분
+[파일 번호] 2
+[원래 문제 번호] 31
+[현재 문제 번호] 31
+[과목] 10 미적분1
+[단원] 05 함수의 증가와 감소
+[세부 단원] 02 함수의 극대와 극소
+[유형] 02 극대와 극소2 (삼차함수의 극대와 극소)
+[출처] 2024년 교육청 고3공통 7월 > 공통범위 > 7 [3점]
+
+[문제]
+함수 $f \left( x \right) = x^{3} - 3 x + 2 a$의 극솟값이 $a + 3$일 때, 함수 $f \left( x \right)$의 극댓값은? (단, $a$는 상수이다.)
+① $\mathrm{11}$		② $\mathrm{12}$		③ $\mathrm{13}$
+④ $\mathrm{14}$		⑤ $\mathrm{15}$
+
+[원본 정답·해설]
+[정답] ②
+
+[해설]
+$f' \left( x \right) = 3 x^{2} - 3 = 3 \left( x + 1 \right) \left( x - 1 \right)$
+함수 $f \left( x \right)$의 증가와 감소를 표로 나타내면 다음과 같다.
+
+$x$	$\cdots$	$\mathrm{- 1}$	$\cdots$	$\mathrm{1}$	$\cdots$
+$f' \left( x \right)$	$+$	$\mathrm{0}$	$-$	$\mathrm{0}$	$+$
+$f \left( x \right)$	$\nearrow$	극대	$\searrow$	극소	$\nearrow$
+
+함수 $f \left( x \right)$는 $x = - 1$에서 극댓값을 갖고, $x = 1$에서 극솟값을 갖는다.
+$f \left( 1 \right) = 1 - 3 + 2 a = a + 3$이므로 $a = 5$
+$f \left( x \right) = x^{3} - 3 x + 10$
+따라서 $f \left( - 1 \right) = \left( - 1 \right)^{3} - 3 \times \left( - 1 \right) + 10 = 12$

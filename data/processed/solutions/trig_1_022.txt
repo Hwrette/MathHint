@@ -1,0 +1,5 @@
+[정답] ②
+
+[해설]
+함수 $y = f \left( x \right)$의 그래프는 $y = 3 \sin \frac{\pi x}{a}$의 그래프를 $y$축의 방향으로 $b \left( b > 0 \right)$만큼 평행이동한 것이고 함수 $y = f \left( x \right)$의 그래프가 $x$축과 오직 한 점에서 만나므로 함수 $f \left( x \right)$의 최솟값은 $0$이다. 함수 $f \left( x \right)$는 $x = \frac{3 a}{2}$일 때, 최솟값 $0$을 가지므로 $\frac{3 a}{2} = 2$, $a = \frac{4}{3}$이고 $f \left( \frac{3 a}{2} \right) = - 3 + b = 0$, $b = 3$
+따라서 $a + b = \frac{4}{3} + 3 = \frac{13}{3}$

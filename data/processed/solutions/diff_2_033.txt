@@ -1,0 +1,14 @@
+[정답] ⑤
+
+[해설]
+$f' \left( x \right) = 3 x^{2} - 6 x - 9 = 3 \left( x + 1 \right) \left( x - 3 \right)$
+이므로 $f' \left( x \right) = 0$에서 $x = - 1$ 또는 $x = 3$
+함수 $f \left( x \right)$의 증가와 감소를 표로 나타내면
+
+$x$	$\cdots$	$\mathrm{- 1}$	$\cdots$	$\mathrm{3}$	$\cdots$
+$f' \left( x \right)$	$+$	$\mathrm{0}$	$-$	$\mathrm{0}$	$+$
+$f \left( x \right)$	$\nearrow$	극대	$\searrow$	극소	$\nearrow$
+
+함수 $f \left( x \right)$의 극솟값은 $f \left( 3 \right) = k - 27 = - 17$이므로
+$k = 10$, $f \left( x \right) = x^{3} - 3 x^{2} - 9 x + 10$
+함수 $f \left( x \right)$의 극댓값은 $f \left( - 1 \right) = 15$

@@ -1,0 +1,9 @@
+[정답] ③
+
+[해설]
+함수 $\left( f \left( x \right) \right)^{2}$이 실수 전체의 집합에서 연속이므로 $x = 4$에서 연속이다.
+$\left( f \left( 4 \right) \right)^{2}$$= \lim_{x \rightarrow 4 -} \left( f \left( x \right) \right)^{2}$
+$= \lim_{x \rightarrow 4 -} \left( x + k \right)^{2} = k^{2} + 8 k + 16$,
+$\lim_{x \rightarrow 4 +} \left( f \left( x \right) \right)^{2} = \lim_{x \rightarrow 4 +} \left( 2 x + k \right)^{2} = k^{2} + 16 k + 64$이므로
+$k^{2} + 8 k + 16 = k^{2} + 16 k + 64$, $8 k = - 48$
+따라서 $k = - 6$

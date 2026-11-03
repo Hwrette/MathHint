@@ -1,0 +1,17 @@
+[정답] ②
+
+[해설]
+$g \left( x \right) = x^{3} - 3 x^{2} + p$라 하면 $f \left( x \right) = \left| g \left( x \right) \right|$
+$g' \left( x \right) = 3 x^{2} - 6 x = 3 x \left( x - 2 \right)$
+$g' (x) = 0$에서 $x = 0$ 또는 $x = 2$
+$g (x)$의 증가와 감소를 표로 나타내면 다음과 같다.
+
+$x$	$\cdots$	$\mathrm{0}$	$\cdots$	$\mathrm{2}$	$\cdots$
+$g' (x)$	+	$\mathrm{0}$	-	$\mathrm{0}$	+
+$g (x)$	$\nearrow$	극대	$\searrow$	극소	$\nearrow$
+
+따라서 함수 $f \left( x \right) = \left| g \left( x \right) \right|$가 극대가 되는 $x$가
+$\mathrm{2}$개가 되려면
+$g \left( 0 \right) = p > 0$, $g \left( 2 \right) = p - 4 < 0$ 즉, $0 < p < 4$
+$f \left( 0 \right) = \left| p \right| = p$, $f \left( 2 \right) = \left| p - 4 \right| = 4 - p$
+$f \left( 0 \right) = f \left( 2 \right)$이므로 $p = 4 - p$ 즉, $p = 2$

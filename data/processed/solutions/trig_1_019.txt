@@ -1,0 +1,8 @@
+[정답] ⑤
+
+[해설]
+$f \left( x \right) = a \sin \frac{x}{b} + 2$의 최댓값이 $5$이고 $a > 0$이므로
+$a + 2 = 5$    $\therefore$ $a = 3$
+또 주기가 $8 \pi$이고 $b > 0$이므로
+$\frac{2 \pi}{\frac{1}{b}} = 8 \pi$    $\therefore$ $b = 4$
+$\therefore$ $a + b = 7$

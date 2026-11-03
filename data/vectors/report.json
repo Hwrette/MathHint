@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "counts_method": "raw_token_counts",
+  "tokenizer": {
+    "package": "kiwipiepy",
+    "version": "0.24.1",
+    "model_package_version": "0.24.0",
+    "num_workers": 2
+  },
+  "metadata_excluded": true,
+  "train_only_vocabulary": true,
+  "dimensions": {
+    "problems": 346,
+    "solutions": 431
+  }
+}

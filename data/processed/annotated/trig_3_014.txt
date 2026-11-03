@@ -1,0 +1,29 @@
+[문항 ID] trig_3_014
+[자료군] 삼각함수
+[파일 번호] 3
+[원래 문제 번호] 14
+[현재 문제 번호] 14
+[과목] 09 대수
+[단원] 06 삼각함수의 그래프
+[세부 단원] 02 삼각함수의 그래프 활용
+[유형] 06 활용3 (치환을 이용한 Mm)
+[출처] 2019년 교육청 고2문과 6월 > 27 [4점]
+
+[문제]
+두 함수
+$f(x)=\log_3 x+2$, $\left. g \left( x \right) \right. = 3 \tan \left( x + \frac{\pi}{6} \right)$
+가 있다. $0 \leq x \leq \frac{\pi}{6}$에서 정의된 합성함수 $\left( f \circ g \right) \left( x \right)$의 최댓값과 최솟값을 각각 $M$, $m$이라 할 때, $M + m$의 값을 구하시오.
+
+[원본 정답·해설]
+[정답] $\mathbf{6}$
+
+[해설]
+$0 \leq x \leq \frac{\pi}{6}$에서 $\frac{\pi}{6} \leq x + \frac{\pi}{6} \leq \frac{\pi}{3}$이고 함수 $g \left( x \right) = 3 \tan \left( x + \frac{\pi}{6} \right)$는 증가하므로
+$3 \tan \frac{\pi}{6} \leq 3 \tan \left( x + \frac{\pi}{6} \right) \leq 3 \tan \frac{\pi}{3}$
+$\sqrt{3} \leq 3 \tan \left( x + \frac{\pi}{6} \right) \leq 3 \sqrt{3}$
+$\therefore$$\sqrt{3} \leq g \left( x \right) \leq 3 \sqrt{3}$
+이다. $g \left( x \right) = t$로 놓으면 $\sqrt{3} \leq t \leq 3 \sqrt{3}$이다.
+$\left( f \circ g \right) \left( x \right) = f \left( g \left( x \right) \right) = f \left( t \right) = \log_{3} t + 2$이고 함수 $f \left( t \right) = \log_{3} t + 2$도 증가하므로
+$\frac{1}{2} + 2 \leq \log_{3} t + 2 \leq \frac{3}{2} + 2$, $\frac{5}{2} \leq \left( f \circ g \right) \left( x \right) \leq \frac{7}{2}$
+이다. 따라서 $M = \frac{7}{2}$, $m = \frac{5}{2}$이다.
+그러므로 $M + m = \frac{7}{2} + \frac{5}{2} = 6$이다.

@@ -1,0 +1,28 @@
+[문항 ID] diff_3_003
+[자료군] 미분
+[파일 번호] 3
+[원래 문제 번호] 3
+[현재 문제 번호] 3
+[과목] 10 미적분1
+[단원] 01 함수의 극한
+[세부 단원] 02 극한의 성질과 계산
+[유형] 08 부정형7 (부정형과 극한의 성질)
+[출처] 2021년 교육청 고3공통 4월 > 공통범위 > 9 [4점]
+
+[문제]
+두 함수 $f \left( x \right)$, $g \left( x \right)$가
+$\lim_{x \rightarrow \infty} \left\{ 2 f \left( x \right) - 3 g \left( x \right) \right\}$$= 1$, $\lim_{x \rightarrow \infty} g \left( x \right)$$= \infty$
+를 만족시킬 때, $\lim_{x \rightarrow \infty} \frac{4 f \left( x \right) + g \left( x \right)}{3 f \left( x \right) - g \left( x \right)}$의 값은?
+① $1$		② $2$		③ $3$
+④ $4$		⑤ $5$
+
+[원본 정답·해설]
+[정답] ②
+
+[해설]
+$h (x) = 2 f (x) - 3 g (x)$라 하면 $f (x) = \frac{3 g (x) + h (x)}{2}$
+$\lim_{x \rightarrow \infty} g (x) = \infty , \quad \lim_{x \rightarrow \infty} h (x) = 1$이므로 $\lim_{x \rightarrow \infty} \frac{h (x)}{g (x)} = 0$
+$\lim_{x \rightarrow \infty} \frac{4 f (x) + g (x)}{3 f (x) - g (x)}$$= \lim_{x \rightarrow \infty} \frac{4 \left\{ \frac{3 g (x) + h (x)}{2} \right\} + g (x)}{3 \left\{ \frac{3 g (x) + h (x)}{2} \right\} - g (x)}$
+$= \lim_{x \rightarrow \infty} \frac{14 g (x) + 4 h (x)}{7 g (x) + 3 h (x)}$
+$= \lim_{x \rightarrow \infty} \frac{14 + 4 \times \frac{h (x)}{g (x)}}{7 + 3 \times \frac{h (x)}{g (x)}}$
+$= 2$

@@ -1,0 +1,29 @@
+[문항 ID] trig_2_023
+[자료군] 삼각함수
+[파일 번호] 2
+[원래 문제 번호] 23
+[현재 문제 번호] 23
+[과목] 09 대수
+[단원] 06 삼각함수의 그래프
+[세부 단원] 03 삼각방정식과 부등식
+[유형] 02 삼각방정식2 (이차식꼴)
+[출처] 2022년 교육청 고2공통 11월 > 16 [4점]
+
+[문제]
+$3 \sin^{2} \left( \theta + \frac{2}{3} \pi \right) = 8 \sin \left( \theta + \frac{\pi}{6} \right)$일 때, $\cos \left( \theta - \frac{\pi}{3} \right)$의 값은?
+① $\frac{1}{6}$		② $\frac{1}{5}$		③ $\frac{1}{4}$
+④ $\frac{1}{3}$		⑤ $\frac{1}{2}$
+
+[원본 정답·해설]
+[정답] ④
+
+[해설]
+$\theta - \frac{\pi}{3} = \alpha$라 하면
+$3 \sin^{2} \left( \theta + \frac{2}{3} \pi \right)$$= 3 \sin^{2} (\pi + \alpha)$
+$= 3 \sin^{2} \alpha = 3 - 3 \cos^{2} \alpha$
+$8 \sin \left( \theta + \frac{\pi}{6} \right) = 8 \sin \left( \frac{\pi}{2} + \alpha \right) = 8 \cos \alpha$
+이므로 $3 - 3 \cos^{2} \alpha = 8 \cos \alpha$에서
+$3 \cos^{2} \alpha + 8 \cos \alpha - 3 = 0$
+$\left( 3 \cos \alpha - 1 \right) (\cos \alpha + 3) = 0$
+$- 1 \leq \cos \alpha \leq 1$이므로    $\cos \alpha = \frac{1}{3}$
+따라서    $\cos \left( \theta - \frac{\pi}{3} \right) = \cos \alpha = \frac{1}{3}$

@@ -1,0 +1,23 @@
+[문항 ID] trig_1_033
+[자료군] 삼각함수
+[파일 번호] 1
+[원래 문제 번호] 33
+[현재 문제 번호] 33
+[과목] 09 대수
+[단원] 06 삼각함수의 그래프
+[세부 단원] 02 삼각함수의 그래프 활용
+[유형] 01 각 변형1 (각 변형 규칙)
+[출처] 2026년 교육청 고3공통 3월 > 공통범위 > 8 [3점]
+
+[문제]
+$\cos \theta = 4 \sin \theta$이고 $\sin \left( \frac{\pi}{2} + \theta \right) < 0$일 때, $\cos \theta$의 값은?
+① $- \frac{4 \sqrt{17}}{17}$	② $- \frac{\sqrt{17}}{17}$	③ $0$
+④ $\frac{\sqrt{17}}{17}$	⑤ $\frac{4 \sqrt{17}}{17}$
+
+[원본 정답·해설]
+[정답] ①
+
+[해설]
+$\sin^{2} \theta + \cos^{2} \theta = \left( \frac{\cos \theta}{4} \right)^{2} + \cos^{2} \theta = \frac{17}{16} \cos^{2} \theta = 1$
+$\cos^{2} \theta = \frac{16}{17}$
+$\sin \left( \frac{\pi}{2} + \theta \right) = \cos \theta < 0$이므로 $\cos \theta = - \frac{4 \sqrt{17}}{17}$

@@ -1,0 +1,6 @@
+[정답] ①
+
+[해설]
+$\cos \theta \tan \theta = \cos \theta \times \frac{\sin \theta}{\cos \theta} = \sin \theta = \frac{1}{2}$
+$\frac{\pi}{2} < \theta < \pi$이므로 $\theta = \frac{5}{6} \pi$
+따라서 $\cos \theta + \tan \theta = - \frac{\sqrt{3}}{2} + \left( - \frac{\sqrt{3}}{3} \right) = - \frac{5 \sqrt{3}}{6}$

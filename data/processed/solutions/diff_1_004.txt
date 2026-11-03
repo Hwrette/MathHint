@@ -1,0 +1,32 @@
+[정답] ①
+
+[해설]
+일차함수 $f \left( x \right)$에 대하여
+$\lim_{x \rightarrow 0} \frac{f \left( x + 2 \right)}{x \left( f \left( x \right) - 3 \right)}$				$\cdots$$\cdots$ ㉠
+의 값이 존재한다.
+(ⅰ) $f \left( 0 \right) - 3 = 0$, 즉 $f \left( 0 \right) = 3$일 때
+$f \left( x \right) = p x + 3$ ($p \ne 0$)이라 하면
+$\lim_{x \rightarrow 0} \frac{f \left( x + 2 \right)}{x \left( f \left( x \right) - 3 \right)} = \lim_{x \rightarrow 0} \frac{p \left( x + 2 \right) + 3}{p x^{2}}$	$\cdots$$\cdots$ ㉡
+에서 $x \rightarrow 0$일 때 (분모)$\rightarrow 0$이고 극한값이 존재하므로 (분자)$\rightarrow 0$이어야 한다.
+즉 $\lim_{x \rightarrow 0} {\left\{ p \left( x + 2 \right) + 3 \right\}} = 0$이므로
+$2 p + 3 = 0$    $\therefore$ $p = - \frac{3}{2}$
+이때 ㉡에서
+$\lim_{x \rightarrow 0} \frac{- \frac{3}{2} x}{- \frac{3}{2} x^{2}} = \lim_{x \rightarrow 0} \frac{1}{x}$
+이 되어 극한값이 존재하지 않는다.
+(ⅱ) $f \left( 0 \right) - 3 \ne 0$, 즉 $f \left( 0 \right) \ne 3$일 때
+㉠에서 $x \rightarrow 0$일 때 (분모)$\rightarrow 0$이고 극한값이 존재하므로 (분자)$\rightarrow 0$이다.
+즉, $\lim_{x \rightarrow 0} f \left( x + 2 \right) = 0$이므로    $f \left( 2 \right) = 0$
+$f \left( x \right)$는 일차함수이므로 상수 $p$ ($p \ne 0$)에 대하여
+$f \left( x \right) = p \left( x - 2 \right)$
+라 할 수 있다. 이때 $a = 3$일 때 극한값
+$\lim_{x \rightarrow 3} \frac{f \left( x + 2 \right)}{x \left( f \left( x \right) - 3 \right)}$
+가 존재하지 않는다. $x \rightarrow 3$일 때 분자는
+$\lim_{x \rightarrow 3} f \left( x + 2 \right) = f \left( 5 \right) = 3 p \ne 0$
+이므로, 극한값이 존재하지 않기 위해서는 (분모)$\rightarrow 0$이어야 한다. 즉,
+$\lim_{x \rightarrow 3} x \left( f \left( x \right) - 3 \right) = 3 \left( f \left( 3 \right) - 3 \right) = 0$
+에서 $f \left( 3 \right) = 3$이므로
+$p \left( 3 - 2 \right) = 3$    $\therefore$ $p = 3$
+(ⅰ), (ⅱ)에 의하여
+$f \left( x \right) = 3 \left( x - 2 \right)$
+이므로
+$f \left( 4 \right) = 3 \times \left( 4 - 2 \right) = 6$

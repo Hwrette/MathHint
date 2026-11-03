@@ -1,0 +1,13 @@
+[정답] ⑤
+
+[해설]
+$f' \left( x \right) = 6 x^{2} - 14 x$
+함수 $y = f \left( x \right)$의 그래프 위의
+점 $\left( t , f \left( t \right) \right) \quad \left( t > 0 \right)$에서의 접선의 방정식은
+$y = f' \left( t \right) \left( x - t \right) + f \left( t \right)$
+$y = \left( 6 t^{2} - 14 t \right) \left( x - t \right) + 2 t^{3} - 7 t^{2} + 1$
+접선이 점 $\left( 0 , 1 \right)$을 지나므로
+$1 = \left( 6 t^{2} - 14 t \right) \left( 0 - t \right) + 2 t^{3} - 7 t^{2} + 1$
+$1 = - 4 t^{3} + 7 t^{2} + 1$
+$4 t^{3} - 7 t^{2} = t^{2} \left( 4 t - 7 \right) = 0$
+따라서 $t = \frac{7}{4}$

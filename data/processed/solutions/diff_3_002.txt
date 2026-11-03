@@ -1,0 +1,16 @@
+[정답] ①
+
+[해설]
+(ⅰ) 부등식 $\frac{1}{2} x^{2} + 2 x < f \left( x \right) < x^{2} + 2 x$에서
+$\lim_{x \rightarrow 0} \left( \frac{1}{2} x^{2} + 2 x \right) = \lim_{x \rightarrow 0} \left( x^{2} + 2 x \right) = 0$이므로
+함수의 극한의 대소 관계에 의해 $\lim_{x \rightarrow 0} f \left( x \right) = 0$
+(ⅱ) $x > 0$일 때, $\frac{1}{2} x + 2 < \frac{f \left( x \right)}{x} < x + 2$이고
+$\lim_{x \rightarrow 0 +} \left( \frac{1}{2} x + 2 \right) = \lim_{x \rightarrow 0 +} \left( x + 2 \right) = 2$이므로
+함수의 극한의 대소 관계에 의해 $\lim_{x \rightarrow 0 +} \frac{f \left( x \right)}{x} = 2$
+$x < 0$일 때, $x + 2 < \frac{f \left( x \right)}{x} < \frac{1}{2} x + 2$이고
+$\lim_{x \rightarrow 0 -} \left( x + 2 \right) = \lim_{x \rightarrow 0 -} \left( \frac{1}{2} x + 2 \right) = 2$이므로
+함수의 극한의 대소 관계에 의해 $\lim_{x \rightarrow 0 -} \frac{f \left( x \right)}{x} = 2$
+$\lim_{x \rightarrow 0 +} \frac{f \left( x \right)}{x} = \lim_{x \rightarrow 0 -} \frac{f \left( x \right)}{x} = 2$이므로 $\lim_{x \rightarrow 0} \frac{f \left( x \right)}{x} = 2$
+(ⅰ), (ⅱ)에 의해
+$\lim_{x \rightarrow 0} \frac{x f \left( x \right) + 5 x}{2 f \left( x \right) - x}$$= \lim_{x \rightarrow 0} \frac{f \left( x \right) + 5}{2 \times \frac{f \left( x \right)}{x} - 1}$
+$= \frac{0 + 5}{2 \times 2 - 1} = \frac{5}{3}$

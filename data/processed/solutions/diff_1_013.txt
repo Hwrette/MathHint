@@ -1,0 +1,10 @@
+[정답] ⑤
+
+[해설]
+함수 $f \left( x \right)$가 실수 전체의 집합에서 연속이므로 $x = 1$에서 연속이다.
+$\lim_{x \rightarrow 1 -} f \left( x \right) = \lim_{x \rightarrow 1 +} f \left( x \right) = f \left( 1 \right)$
+$\lim_{x \rightarrow 1 -} f \left( x \right) = \lim_{x \rightarrow 1 -} \left( 2 x + a \right) = 2 + a$
+$\lim_{x \rightarrow 1 +} f \left( x \right) = \lim_{x \rightarrow 1 +} \left( x^{2} - a x + 11 \right) = 12 - a$
+$f \left( 1 \right) = 12 - a$
+$2 + a = 12 - a$, $2 a = 10$
+따라서 $a = 5$

@@ -1,0 +1,29 @@
+[문항 ID] diff_3_025
+[자료군] 미분
+[파일 번호] 3
+[원래 문제 번호] 25
+[현재 문제 번호] 24
+[과목] 10 미적분1
+[단원] 03 미분계수와 도함수
+[세부 단원] 02 도함수의 정의와 미분법 공식
+[유형] 06 미분법 공식5 (곱의 미분법, 극한식의 해석)
+[출처] 2021년 교육청 고3공통 7월 > 공통범위 > 19 [3점]
+
+[문제]
+두 다항함수 ${f \left( x \right)}$, $g \left( x \right)$가
+$\lim_{x \rightarrow 2} \frac{f \left( x \right) - 4}{x^{2} - 4}$$= 2$, $\lim_{x \rightarrow 2} \frac{g \left( x \right) + 1}{x - 2}$$= 8$
+을 만족시킨다. 함수 $h \left( x \right)$$= f \left( x \right) g \left( x \right)$에 대하여 $h' \left( 2 \right)$의 값을 구하시오.
+
+[원본 정답·해설]
+[정답] $\mathbf{24}$
+
+[해설]
+$\lim_{x \rightarrow 2} \frac{f \left( x \right) - 4}{x^{2} - 4}$$= 2$에서 (분모)$\rightarrow$$0$이고 극한값이 존재하므로 (분자)$\rightarrow$$0$이다.
+$\lim_{x \rightarrow 2} \left\{ f \left( x \right) - 4 \right\}$$= 0$이므로 $f \left( 2 \right)$$= 4$
+$\lim_{x \rightarrow 2} \frac{f \left( x \right) - 4}{x^{2} - 4}$$= \lim_{x \rightarrow 2} \left\{ \frac{1}{x + 2} \times \frac{f \left( x \right) - f \left( 2 \right)}{x - 2} \right\}$
+$= \frac{1}{4} f' \left( 2 \right)$$= 2$
+따라서 $f' \left( 2 \right)$$= 8$이므로 $\lim_{x \rightarrow 2} \frac{g \left( x \right) + 1}{x - 2}$$= 8$에서 (분모)$\rightarrow$$0$이고 극한값이 존재하므로 (분자)$\rightarrow$$0$이다.
+$\lim_{x \rightarrow 2} \left\{ g \left( x \right) + 1 \right\}$$= 0$이므로 $g \left( 2 \right)$$= - 1$
+$\lim_{x \rightarrow 2} \frac{g \left( x \right) + 1}{x - 2}$$= \lim_{x \rightarrow 2} \frac{g \left( x \right) - g \left( 2 \right)}{x - 2}$$= g' \left( 2 \right)$$= 8$
+$h' \left( x \right)$$= f' \left( x \right) g \left( x \right) + f \left( x \right) g' \left( x \right)$
+따라서 $h' \left( 2 \right)$$= f' \left( 2 \right) g \left( 2 \right) + f \left( 2 \right) g' \left( 2 \right)$$= 24$

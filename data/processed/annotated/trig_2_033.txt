@@ -1,0 +1,35 @@
+[문항 ID] trig_2_033
+[자료군] 삼각함수
+[파일 번호] 2
+[원래 문제 번호] 33
+[현재 문제 번호] 33
+[과목] 09 대수
+[단원] 06 삼각함수의 그래프
+[세부 단원] 03 삼각방정식과 부등식
+[유형] 06 삼각부등식1 (일차식꼴)
+[출처] 2023년(2024학년도) 평가원 고3공통 9월 > 공통범위 > 9 [4점]
+
+[문제]
+$0 \leq x \leq 2 \pi$일 때, 부등식
+$\cos x \leq \sin \frac{\pi}{7}$
+를 만족시키는 모든 $x$의 값의 범위는 $\alpha \leq x \leq \beta$이다. $\beta - \alpha$의 값은?
+① $\frac{8}{7} \pi$		② $\frac{17}{14} \pi$		③ $\frac{9}{7} \pi$
+④ $\frac{19}{14} \pi$	⑤ $\frac{10}{7} \pi$
+
+[원본 정답·해설]
+[정답] ③
+
+[해설]
+$0 \le x \le 2 \pi$일 때 주어진 부등식 $\cos x \le \sin \frac{\pi}{7}$을 만족시키는 모든 $x$의 값의 범위는 다음 그림에서와 같이 $\alpha \le x \le \beta$이다.
+
+이때 $\sin \frac{\pi}{7} > 0$이고 함수 $y = \cos x$의 그래프는 직선 $x = \pi$에 대하여 대칭이므로
+$\frac{\pi}{2} - \alpha = \beta - \frac{3}{2} \pi = t$
+로 놓으면
+$\sin \frac{\pi}{7} = \cos \alpha = \cos \left( \frac{\pi}{2} - t \right) = \sin t$$\therefore \quad$$t = \frac{\pi}{7}$
+$\therefore \quad$$\beta - \alpha = \left( \frac{3}{2} \pi + t \right) - \left( \frac{\pi}{2} - t \right) = \frac{9}{7} \pi$
+[다른 풀이]
+$\sin \frac{\pi}{7} = \cos \left( \frac{\pi}{2} - \frac{\pi}{7} \right) = \cos \frac{5}{14} \pi$이므로 부등식 $\cos x \le \sin \frac{\pi}{7}$에서
+$\cos x \le \cos \frac{5}{14} \pi$
+$\therefore \quad$$\frac{5}{14} \pi \le x \le 2 \pi - \frac{5}{14} \pi$
+$\alpha = \frac{5}{14} \pi$, $\beta = \frac{23}{14} \pi$이므로
+$\beta - \alpha = \frac{9}{7} \pi$

@@ -1,0 +1,5 @@
+다항함수 $f \left( x \right)$에 대하여 함수 $g \left( x \right)$를
+$g \left( x \right) = \left( x^{2} + 2 x \right) f \left( x \right)$
+라 하자. $f \left( 1 \right) = 2$, $f' \left( 1 \right) = 1$일 때, $g' \left( 1 \right)$의 값은?
+① $5$		② $7$		③ $9$
+④ $11$		⑤ $13$

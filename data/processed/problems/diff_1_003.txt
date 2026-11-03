@@ -1,0 +1,7 @@
+최고차항의 계수가 $2$인 삼차다항식 $f \left( x \right)$를 $x^{2}$으로 나눈 몫을 $Q \left( x \right)$, 나머지를 $R \left( x \right)$라 하자. 세 함수 $f \left( x \right)$, $Q \left( x \right)$, $R \left( x \right)$가 다음 조건을 만족시킬 때, $f \left( 1 \right)$의 값은?
+
+(가) $\lim_{x \rightarrow \infty} \frac{R \left( x \right)}{Q \left( x \right)} = - 2$
+(나) $\lim_{x \rightarrow 0} \frac{f \left( x \right) R \left( x \right)}{x^{2}} = Q \left( 0 \right)$
+
+① $10$		② $12$		③ $14$
+④ $16$		⑤ $18$

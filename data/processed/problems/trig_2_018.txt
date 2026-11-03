@@ -1,0 +1,3 @@
+$2 \sin \left( \frac{\pi}{2} - \theta \right) = \sin \theta \times \tan \left( \pi + \theta \right)$일 때, $\sin^{2} \theta$의 값은?
+① $\frac{1}{3}$		② $\frac{4}{9}$		③ $\frac{5}{9}$
+④ $\frac{2}{3}$		⑤ $\frac{7}{9}$

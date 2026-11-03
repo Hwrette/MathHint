@@ -1,0 +1,23 @@
+[정답] ②
+
+[해설]
+$2 \left( 1 - \cos^{2} x \right) - 3 \cos x = k$
+$2 \cos^{2} x + 3 \cos x + k - 2 = 0$
+$0 \le x \le 2 \pi$에서 함수 $y = \cos x$의 그래프는 다음 그림과 같다.
+
+상수 $a$에 대하여
+$0 \le x \le 2 \pi$에서 곡선 $y = \cos x$와 직선 $y = a$가 만나는 서로 다른 점의 개수는
+$a = - 1$일 때 $1$이고, $- 1 < a \le 1$일 때 $2$이므로
+$0 \le x \le 2 \pi$일 때,
+방정식 $2 \cos^{2} x + 3 \cos x + k - 2 = 0$의
+서로 다른 실근의 개수가 $3$이려면
+$x = \pi$가 이 방정식의 실근이어야 한다.
+$2 \times \left( - 1 \right)^{2} + 3 \times \left( - 1 \right) + k - 2 = 0$에서 $k = 3$
+$2 \cos^{2} x + 3 \cos x + 1$$= \left( 2 \cos x + 1 \right) \left( \cos x + 1 \right)$
+$= 0$에서
+$\cos x = - \frac{1}{2}$ 또는 $\cos x = - 1$
+$x = \frac{2}{3} \pi$
+또는 $x = \frac{4}{3} \pi$
+또는 $x = \pi$
+따라서$k \times \alpha$$= 3 \times \frac{4}{3} \pi$
+$= 4 \pi$

@@ -1,0 +1,3 @@
+$\frac{\pi}{2} < \theta < \pi$인 $\theta$에 대하여 $\sin^{4} \theta + \cos^{4} \theta = \frac{23}{32}$일 때, $\sin \theta - \cos \theta$의 값은?
+① $\frac{\sqrt{3}}{2}$	② $1$		③ $\frac{\sqrt{5}}{2}$
+④ $\frac{\sqrt{6}}{2}$	⑤ $\frac{\sqrt{7}}{2}$

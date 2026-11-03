@@ -1,0 +1,30 @@
+[문항 ID] trig_1_035
+[자료군] 삼각함수
+[파일 번호] 1
+[원래 문제 번호] 35
+[현재 문제 번호] 35
+[과목] 09 대수
+[단원] 06 삼각함수의 그래프
+[세부 단원] 02 삼각함수의 그래프 활용
+[유형] 01 각 변형1 (각 변형 규칙)
+[출처] 2026년 교육청 고3 공통 07월 > 8 [3점]
+
+[문제]
+$2 \cos \theta + \cos \left( \frac{\pi}{2} - \theta \right) = 0$이고 $\sin \theta < 0$일 때, $\cos \theta$의 값은?
+① $- \frac{2 \sqrt{5}}{5}$	② $- \frac{\sqrt{5}}{5}$	③ $0$
+④ $\frac{\sqrt{5}}{5}$	⑤ $\frac{2 \sqrt{5}}{5}$
+
+[원본 정답·해설]
+[정답] ④
+
+[해설]
+$\cos \left( \frac{\pi}{2} - \theta \right) = \sin \theta$이므로
+$2 \cos \theta + \sin \theta = 0$
+$2 \cos \theta = - \sin \theta$				$\cdots$$\cdots$ ㉠
+$4 \cos^{2} \theta = \sin^{2} \theta$
+$\sin^{2} \theta + \cos^{2} \theta = 1$이므로
+$4 \cos^{2} \theta = 1 - \cos^{2} \theta$
+$\cos^{2} \theta = \frac{1}{5}$
+$\sin \theta < 0$이므로
+㉠에 의하여 $\cos \theta > 0$
+따라서 $\cos \theta = \frac{\sqrt{5}}{5}$

@@ -1,0 +1,16 @@
+[정답] ⑤
+
+[해설]
+함수 $f (x)$가 실수 전체의 집합에서 연속이므로
+$x = 3$에서도 연속이다.
+즉, $\lim_{x \rightarrow 3 -} {f (x)}$$= \lim_{x \rightarrow 3 +} {f (x)}$$= f (3)$
+$\lim_{x \rightarrow 3 -} {\frac{x^{2} + a x + b}{x - 3}}$의 값이 존재하고, $x \rightarrow 3 -$일 때
+(분모)$\rightarrow 0$이므로 (분자)$\rightarrow 0$이다.
+즉, $\lim_{x \rightarrow 3 -} {(x^{2} + a x + b)}$$= 0$이므로
+$9 + 3 a + b$$= 0$, $b$$= - 3 a - 9$
+$\lim_{x \rightarrow 3 -} {\frac{x^{2} + a x - 3 a - 9}{x - 3}}$$= \lim_{x \rightarrow 3 -} {\frac{(x - 3) (x + 3 + a)}{x - 3}}$
+$= \lim_{x \rightarrow 3 -} {(x + 3 + a)}$
+$= 6 + a$
+한편, $\lim_{x \rightarrow 3 +} {f (x)}$$= f (3)$$= 7$
+그러므로 $6 + a$$= 7$
+따라서 $a$$= 1$, $b$$= - 12$이므로 $a - b$$= 13$

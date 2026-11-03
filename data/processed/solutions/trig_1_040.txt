@@ -1,0 +1,18 @@
+[정답] ④
+
+[해설]
+$\left| \cos \left( x + \frac{\pi}{3} \right) + \frac{1}{6} \right| = \frac{5}{6}$에서
+$\cos \left( x + \frac{\pi}{3} \right) + \frac{1}{6} = \frac{5}{6}$ 또는 $\cos \left( x + \frac{\pi}{3} \right) + \frac{1}{6} = - \frac{5}{6}$
+$\therefore$ $\cos \left( x + \frac{\pi}{3} \right) = \frac{2}{3}$ 또는 $\cos \left( x + \frac{\pi}{3} \right) = - 1$
+$x + \frac{\pi}{3} = t$로 놓으면
+$\cos t = \frac{2}{3}$ 또는 $\cos t = - 1$
+
+$0 \le x < 2 \pi$일 때 $\frac{\pi}{3} \leq t < \frac{7}{3} \pi$이므로
+(ⅰ) $\cos t = - 1$일 때
+$t = \pi$이므로    $x + \frac{\pi}{3} = \pi$    $\therefore$ $x = \frac{2}{3} \pi$
+(ⅱ) $\cos t = \frac{2}{3}$일 때
+방정식 $\cos t = \frac{2}{3}$의 두 근을 $t_{1}$, $t_{2}$라 하면 두 근은 직선 $t = 2 \pi$에 대하여 대칭이므로    $t_{1} + t_{2} = 4 \pi$
+$t_{1} = x_{1} + \frac{\pi}{3}$, $t_{2} = x_{2} + \frac{\pi}{3}$이므로
+$\left( x_{1} + \frac{\pi}{3} \right) + \left( x_{2} + \frac{\pi}{3} \right) = 4 \pi$    $\therefore$ $x_{1} + x_{2} = \frac{10}{3} \pi$
+(ⅰ), (ⅱ)에서 모든 실수 $x$의 값의 합은
+$\frac{2}{3} \pi + \frac{10}{3} \pi = 4 \pi$

@@ -1,0 +1,15 @@
+[정답] $24$
+
+[해설]
+$f' \left( x \right) = 3 x^{2} - 12 = 3 \left( x + 2 \right) \left( x - 2 \right)$
+닫힌구간 $\left[ 0 , 3 \right]$에서 함수 $f \left( x \right)$의 증가와 감소를 표로 나타내면 다음과 같다.
+
+$x$	$0$	$\cdots$	$2$	$\cdots$	$3$
+$f' \left( x \right)$		$-$	$0$	$+$
+$f \left( x \right)$	$k$	$\searrow$	$k - 16$	$\nearrow$	$k - 9$
+
+함수 $f \left( x \right)$는 $x = 0$에서 최댓값 $k$를 갖고,
+$x = 2$에서 극소이면서 최솟값 $k - 16$을 갖는다.
+$f \left( 0 \right) = k = 40$이므로
+$k = 40$
+따라서 닫힌구간 $\left[ 0 , 3 \right]$에서 함수 $f \left( x \right)$의 최솟값은 $f \left( 2 \right) = k - 16 = 24$

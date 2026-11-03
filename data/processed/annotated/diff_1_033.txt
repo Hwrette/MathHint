@@ -1,0 +1,33 @@
+[문항 ID] diff_1_033
+[자료군] 미분
+[파일 번호] 1
+[원래 문제 번호] 33
+[현재 문제 번호] 33
+[과목] 10 미적분1
+[단원] 05 함수의 증가와 감소
+[세부 단원] 02 함수의 극대와 극소
+[유형] 02 극대와 극소2 (삼차함수의 극대와 극소)
+[출처] 2027년(2028학년도) 평가원 고3공통 수능 예시 문항 > 25 [3점]
+
+[문제]
+함수 $f \left( x \right) = x^{3} + a x^{2} + b$는 $x = - 2$에서 극대이다. 함수 $f \left( x \right)$의 극솟값이 $5$일 때, $f \left( 3 \right)$의 값을 구하시오. (단, $a$와 $b$는 상수이다.)
+
+[원본 정답·해설]
+[정답] $59$
+
+[해설]
+$f \left( x \right) = x^{3} + a x^{2} + b$에서    $f' \left( x \right) = 3 x^{2} + 2 a x$
+함수 $f \left( x \right)$가 $x = - 2$에서 극댓값을 가지므로    $f' \left( - 2 \right) = 0$
+$f' \left( - 2 \right) = 12 - 4 a$이므로    $a = 3$
+$f \left( x \right) = x^{3} + 3 x^{2} + b$, $f' \left( x \right) = 3 x^{2} + 6 x$
+$f' \left( x \right) = 0$에서    $x = - 2$ 또는 $x = 0$
+함수 $f \left( x \right)$의 증가와 감소를 표로 나타내면 다음과 같다.
+
+$x$	$\cdots$	$- 2$	$\cdots$	$0$	$\cdots$
+$f' \left( x \right)$	$+$	$0$	$-$	$0$	$+$
+$f \left( x \right)$	$\nearrow$		$\searrow$		$\nearrow$
+
+함수 $f \left( x \right)$가 $x = 0$에서 극솟값을 가지고, 함수 $f \left( x \right)$의 극솟값이 $5$이므로
+$f \left( 0 \right) = 5$,    $b = 5$
+따라서 $f \left( x \right) = x^{3} + 3 x^{2} + 5$이므로
+$f \left( 3 \right) = 27 + 27 + 5 = 59$

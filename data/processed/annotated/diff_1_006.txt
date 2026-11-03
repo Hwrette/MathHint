@@ -1,0 +1,28 @@
+[문항 ID] diff_1_006
+[자료군] 미분
+[파일 번호] 1
+[원래 문제 번호] 6
+[현재 문제 번호] 6
+[과목] 10 미적분1
+[단원] 01 함수의 극한
+[세부 단원] 04 극한의 활용
+[유형] 01 활용1 (좌표와 길이, 넓이)
+[출처] 2026년 교육청 고2공통 9월 > 17 [4점]
+
+[문제]
+$1$보다 큰 실수 $t$에 대하여 곡선 $y = \frac{t + 2}{x} \quad \left( x > 0 \right)$과 직선 $y = \frac{x}{t - 1}$가 만나는 점의 $x$좌표를 $f \left( t \right)$, $y$좌표를 $g \left( t \right)$라 할 때, $\lim_{t \rightarrow 1 +} \left( t - 1 \right) \left( f \left( t \right) + g \left( t \right) \right)^{2}$의 값은?
+① $3$		② $\frac{7}{2}$		③ $4$
+④ $\frac{9}{2}$		⑤ $5$
+
+[원본 정답·해설]
+[정답] ①
+
+[해설]
+$\frac{t + 2}{x} = \frac{x}{t - 1}$에서 $x^{2} = \left( t - 1 \right) \left( t + 2 \right)$
+$x > 0$이므로 $x = \sqrt{\left( t - 1 \right) \left( t + 2 \right)}$
+$f \left( t \right) = \sqrt{\left( t - 1 \right) \left( t + 2 \right)}$, $g \left( t \right) = \frac{\sqrt{\left( t - 1 \right) \left( t + 2 \right)}}{t - 1}$
+$f \left( t \right) + g \left( t \right) = \frac{t \sqrt{\left( t - 1 \right) \left( t + 2 \right)}}{t - 1}$
+따라서
+$\lim_{t \rightarrow 1 +} \left( t - 1 \right) \left( f \left( t \right) + g \left( t \right) \right)^{2}$
+$= \lim_{t \rightarrow 1 +} \left\{ \left( t - 1 \right) \times \frac{t^{2} \left( t - 1 \right) \left( t + 2 \right)}{\left( t - 1 \right)^{2}} \right\}$
+$= \lim_{t \rightarrow 1 +} t^{2} \left( t + 2 \right) = 3$

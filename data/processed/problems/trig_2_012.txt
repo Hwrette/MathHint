@@ -1,0 +1,10 @@
+<보기>에서 옳은 것만을 있는 대로 고른 것은?
+
+<보 기>
+
+ㄱ. 함수 $y = \tan \frac{3 \pi}{2} x - \sin 2 \pi x$의 주기는 $\mathrm{2}$이다.
+ㄴ. 함수 $y = 2 \pi + \cos 2 \pi x \sin \frac{4 \pi}{3} x$의 주기는 $\mathrm{3}$이다.
+ㄷ. 함수 $y = \sin \pi x - \left| \cos \frac{3 \pi}{2} x \right|$의 주기는 $\mathrm{2}$이다.
+
+① ㄱ		② ㄷ		③ ㄱ, ㄴ
+④ ㄴ, ㄷ	⑤ ㄱ, ㄴ, ㄷ

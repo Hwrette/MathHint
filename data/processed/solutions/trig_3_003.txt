@@ -1,0 +1,8 @@
+[정답] ①
+
+[해설]
+근과 계수의 관계에 의하여
+$\sin \theta + \cos \theta = - \frac{1}{5}$, $\sin \theta \cos \theta = - \frac{a}{5}$
+$\sin \theta + \cos \theta = - \frac{1}{5}$의 양변을 제곱하면
+$1 + 2 \sin \theta \cos \theta = \frac{1}{25}$이므로 $1 + 2 \times \left( - \frac{a}{5} \right) = \frac{1}{25}$
+따라서 $a = \frac{12}{5}$

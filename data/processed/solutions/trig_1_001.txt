@@ -1,0 +1,13 @@
+[정답] ⑤
+
+[해설]
+점 $\mathrm{P}$의 $x$좌표를 $a \quad \left( a > 0 \right)$이라 하면 점 $\mathrm{P}$의 좌표는
+${\mathrm{{P}}} \left( a , a + 1 \right)$
+각의 크기 $\theta$를 나타내는 동경과 각의 크기 $7 \theta$를
+나타내는 동경이 일치하므로
+$7 \theta = \theta + 2 n \pi \quad \left( n \right.$은 정수$)$
+$\theta = \frac{n}{3} \pi$
+이때 점 $\mathrm{P}$는 제$\mathrm{1}$사분면 위의 점이고
+$0 < \theta < 2 \pi$이므로 $n = 1$, $\theta = \frac{\pi}{3}$
+$\tan \frac{\pi}{3} = \frac{a + 1}{a}$에서 $\sqrt{3} a = a + 1$, $\left( \sqrt{3} - 1 \right) a = 1$
+따라서 $a = \frac{1}{\sqrt{3} - 1} = \frac{\sqrt{3} + 1}{2}$

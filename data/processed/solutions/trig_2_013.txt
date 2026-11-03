@@ -1,0 +1,15 @@
+[정답] ④
+
+[해설]
+함수 $f \left( x \right) = - \sin 2 x$의 주기는 $\frac{2 \pi}{2} = \pi$이
+므로 함수 $y = f \left( x \right)$의 그래프는 다음과 같다.
+
+함수 $f \left( x \right)$는 $x = \frac{\pi}{4}$일 때 최솟값
+$f \left( \frac{\pi}{4} \right) = - \sin \frac{\pi}{2} = - 1$
+을 갖고, $x = \frac{3}{4} \pi$일 때 최댓값
+$f \left( \frac{3}{4} \pi \right) = - \sin \frac{3}{2} \pi = 1$
+을 갖는다.
+따라서 $a = \frac{3 \pi}{4}$, $b = \frac{\pi}{4}$이므로 두 점
+$\left( \frac{3}{4} \pi , 1 \right)$, $\left( \frac{\pi}{4} , - 1 \right)$을 지나는 직선의
+기울기는
+$\frac{1 - \left( - 1 \right)}{\frac{3}{4} \pi - \frac{\pi}{4}} = \frac{2}{\frac{\pi}{2}} = \frac{4}{\pi}$

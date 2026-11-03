@@ -1,0 +1,6 @@
+[정답] ⑤
+
+[해설]
+$\cos \left( \frac{\pi}{2} + \theta \right) = - \sin \theta = - \frac{1}{5}$에서    $\sin \theta = \frac{1}{5}$
+$1 - \cos^{2} \theta = \sin^{2} \theta = \frac{1}{25}$
+$\therefore$ $\frac{\sin \theta}{1 - \cos^{2} \theta}$$= 5$

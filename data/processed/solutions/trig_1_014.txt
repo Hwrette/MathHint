@@ -1,0 +1,8 @@
+[정답] ⑤
+
+[해설]
+$y = a \sin a x + b$의 주기가 $\pi$이고 $a > 0$이므로
+$\frac{2 \pi}{a} = \pi$    $\therefore$ $a = 2$
+최솟값이 $5$이므로
+$- a + b = 5$    $\therefore$ $b = 7$
+$\therefore$ $a + b = 9$

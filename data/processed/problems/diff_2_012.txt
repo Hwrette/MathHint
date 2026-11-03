@@ -1,0 +1,3 @@
+$\mathrm{0}$이 아닌 모든 실수 $h$에 대하여 다항함수 $f \left( x \right)$에서 $x$의 값이 $\mathrm{1}$에서 $1 + h$까지 변할 때의 평균변화율이 $h^{2} + 2 h + 3$일 때, $f' \left( 1 \right)$의 값은?
+① $\mathrm{1}$		② $\frac{3}{2}$		③ $\mathrm{2}$
+④ $\frac{5}{2}$		⑤ $\mathrm{3}$

@@ -137,6 +137,52 @@ class EquationConversionTests(unittest.TestCase):
         """실제 입력에 있는 GEQ, TIMES, CDOT 같은 대문자 명령의 명시적 대응을 확인한다."""
         self.assertConversion('A GEQ 0 TIMES 2 CDOT 3', r'A \geq 0 \times 2 \cdot 3')
 
+    def test_hml_limit_spacing_and_infinity_are_not_infimum(self):
+        """HWP INF and ASCII arrows must retain the actual limit condition."""
+        self.assertConversion(
+            'lim _{x->INF} {} {3x} over {2x+1}',
+            r'\lim_{x \rightarrow \infty} \frac{3 x}{2 x + 1}',
+        )
+        self.assertConversion('lim {} _{x->0} x', r'\lim_{x \rightarrow 0} x')
+        self.assertConversion('inf A', r'\inf A')
+        self.assertUnsupported('x {} + 1')
+        self.assertUnsupported('sqrt{}')
+
+    def test_numeric_root_shorthand_retains_fraction_scope(self):
+        """Numeric ROOT shorthand differs from an explicit indexed root."""
+        self.assertConversion('root7 over 2', r'\frac{\sqrt{7}}{2}')
+        self.assertConversion('1 over root 10', r'\frac{1}{\sqrt{10}}')
+        self.assertConversion('root3 of {x+1}', r'\sqrt[3]{x + 1}')
+        self.assertUnsupported('root{3}')
+
+    def test_hml_styles_relations_and_direction_arrows(self):
+        self.assertConversion('bold{9}', r'\mathbf{9}')
+        self.assertConversion('BOLD12', r'\mathbf{12}')
+        self.assertConversion('overline{rm{OA}}=r', r'\overline{\mathrm{{O A}}} = r')
+        self.assertConversion('NEARROW', r'\nearrow')
+        self.assertConversion('SEARROW', r'\searrow')
+        self.assertConversion('0 ≤ x ≤ 2 pi', r'0 \leq x \leq 2 \pi')
+        self.assertConversion('2pi DIVIDE {pi} over {4}', r'2 \pi \div \frac{\pi}{4}')
+        self.assertConversion('vert f(x)vert', r'\vert f (x) \vert')
+        self.assertUnsupported('bold x+1')
+        self.assertConversion('f CIRC g', r'f \circ g')
+
+    def test_empty_layout_scripts_do_not_change_fraction_scope(self):
+        self.assertConversion(
+            '{x+1 ^{`}} over {x-3 _{`}}',
+            r'\frac{x + 1^{}}{x - 3_{}}',
+        )
+        self.assertUnsupported('{} over {}')
+        self.assertUnsupported('sqrt{}')
+
+    def test_hml_alignment_preserves_rows_columns_and_empty_struts(self):
+        self.assertConversion(
+            'rpile{x=1&&CDOTS ㉠#y=2&&CDOTS ㉡}',
+            r'\begin{array}{rrr}x = 1 & {} & \cdots \text{㉠} \\ y = 2 & {} & \cdots \text{㉡}\end{array}',
+        )
+        self.assertConversion('eqalign{x+1#}', r'\begin{aligned}x + 1 \\ {}\end{aligned}')
+        self.assertConversion('pile{#}', r'\begin{array}{c}{} \\ {}\end{array}')
+
     def test_unsupported_words_do_not_become_invented_commands(self):
         """모르는 명령이나 이미 LaTeX인 입력을 한글 수식인 것처럼 임의로 통과시키지 않는지 확인한다."""
         for source in ('foobar{x}', 'matrix {1&2#3&4}', 'unknown(x)', r'\sqrt{x}'):

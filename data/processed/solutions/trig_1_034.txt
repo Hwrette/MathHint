@@ -1,0 +1,11 @@
+[정답] ⑤
+
+[해설]
+$\sin \left( \pi + \theta \right) = - \sin \theta = - \frac{1}{3}$이므로 $\sin \theta = \frac{1}{3}$이고,
+$1 - \cos^{2} \theta = \sin^{2} \theta$이므로
+$\frac{\sin \theta}{1 - \cos \theta} + \frac{\sin \theta}{1 + \cos \theta}$
+$= \frac{\sin \theta \left( 1 + \cos \theta \right) + \sin \theta \left( 1 - \cos \theta \right)}{\left( 1 - \cos \theta \right) \left( 1 + \cos \theta \right)}$
+$= \frac{2 \sin \theta}{1 - \cos^{2} \theta}$
+$= \frac{2}{\sin \theta}$
+$= 6$
+이다.

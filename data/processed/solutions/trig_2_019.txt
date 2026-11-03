@@ -1,0 +1,9 @@
+[정답] ③
+
+[해설]
+점 $\mathrm{P} \left( t , \sqrt{t} \right) \quad \left( t > 0 \right)$에 대하여 ${\bar{\mathrm{O P}}} = \sqrt{t^{2} + t}$이므로
+$\sin \theta = \frac{\sqrt{t}}{\sqrt{t^{2} + t}}$, $\cos \theta = \frac{t}{\sqrt{t^{2} + t}}$이다.
+$\cos^{2} \theta - 2 \sin^{2} \theta = \frac{t^{2}}{t^{2} + t} - \frac{2 t}{t^{2} + t} = - 1$에서
+$t^{2} - 2 t = - t^{2} - t$, $t \left( 2 t - 1 \right) = 0$
+$t > 0$이므로 $t = \frac{1}{2}$이고 점 ${\mathrm{{P}}}$는 $\mathrm{P} \left( \frac{1}{2} , \frac{\sqrt{2}}{2} \right)$이다.
+따라서 ${\bar{\mathrm{O P}}} = \sqrt{\left( \frac{1}{2} \right)^{2} + \left( \frac{\sqrt{2}}{2} \right)^{2}} = \frac{\sqrt{3}}{2}$

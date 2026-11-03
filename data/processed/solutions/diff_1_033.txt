@@ -1,0 +1,18 @@
+[정답] $59$
+
+[해설]
+$f \left( x \right) = x^{3} + a x^{2} + b$에서    $f' \left( x \right) = 3 x^{2} + 2 a x$
+함수 $f \left( x \right)$가 $x = - 2$에서 극댓값을 가지므로    $f' \left( - 2 \right) = 0$
+$f' \left( - 2 \right) = 12 - 4 a$이므로    $a = 3$
+$f \left( x \right) = x^{3} + 3 x^{2} + b$, $f' \left( x \right) = 3 x^{2} + 6 x$
+$f' \left( x \right) = 0$에서    $x = - 2$ 또는 $x = 0$
+함수 $f \left( x \right)$의 증가와 감소를 표로 나타내면 다음과 같다.
+
+$x$	$\cdots$	$- 2$	$\cdots$	$0$	$\cdots$
+$f' \left( x \right)$	$+$	$0$	$-$	$0$	$+$
+$f \left( x \right)$	$\nearrow$		$\searrow$		$\nearrow$
+
+함수 $f \left( x \right)$가 $x = 0$에서 극솟값을 가지고, 함수 $f \left( x \right)$의 극솟값이 $5$이므로
+$f \left( 0 \right) = 5$,    $b = 5$
+따라서 $f \left( x \right) = x^{3} + 3 x^{2} + 5$이므로
+$f \left( 3 \right) = 27 + 27 + 5 = 59$

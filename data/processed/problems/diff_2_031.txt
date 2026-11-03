@@ -1,0 +1,3 @@
+함수 $f \left( x \right) = x^{3} - 3 x + 2 a$의 극솟값이 $a + 3$일 때, 함수 $f \left( x \right)$의 극댓값은? (단, $a$는 상수이다.)
+① $\mathrm{11}$		② $\mathrm{12}$		③ $\mathrm{13}$
+④ $\mathrm{14}$		⑤ $\mathrm{15}$

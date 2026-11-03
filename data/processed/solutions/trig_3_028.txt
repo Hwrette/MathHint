@@ -1,0 +1,9 @@
+[정답] ⑤
+
+[해설]
+방정식 $\cos^{2} 3 x - \sin 3 x + 1 = 0$을 풀면
+$\left( 1 - \sin^{2} 3 x \right) - \sin 3 x + 1 = 0$
+$\sin^{2} 3 x + \sin 3 x - 2 = 0$, $\left( \sin 3 x + 2 \right) \left( \sin 3 x - 1 \right) = 0$
+$\sin 3 x = 1$ ($\because$$-1\le\sin 3x\le1)$
+$0 \leq x < 2 \pi$에서 $0 \leq 3 x < 6 \pi$이므로 이 범위에서 만족하는 $3 x$의 값은 $3 x = \frac{\pi}{2} , \frac{5}{2} \pi , \frac{9}{2} \pi$
+즉, $x = \frac{1}{6} \pi , \frac{5}{6} \pi , \frac{9}{6} \pi$이므로 모든 $x$의 값의 합은 $\frac{5}{2} \pi$

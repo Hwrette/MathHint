@@ -6,6 +6,7 @@ from datetime import datetime
 from pathlib import Path
 from uuid import uuid4
 
+from dotenv import load_dotenv
 from google import genai
 from google.genai import errors, types
 
@@ -51,6 +52,7 @@ def to_math_markdown(text):
 
 def main():
     project_dir = Path(__file__).resolve().parents[1]
+    load_dotenv(project_dir / ".env", override=False)
     problem_path = Path(PROBLEM_FILE).expanduser()
     if not problem_path.is_absolute():
         problem_path = project_dir / problem_path
@@ -70,7 +72,7 @@ def main():
 
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
-        raise SystemExit("GEMINI_API_KEY 환경변수를 설정해 줘.")
+        raise SystemExit(".env 또는 환경변수에 GEMINI_API_KEY를 설정해 줘.")
 
     print(f"문제 파일: {problem_path}")
     print("풀이 요청 중...", flush=True)

@@ -1,0 +1,5 @@
+양수 $a$에 대하여 함수
+$f (x) = \left| 4 \sin \left( a x - \frac{\pi}{3} \right) + 2 \right| \left( 0 \leq x < \frac{4 \pi}{a} \right)$
+의 그래프가 직선 $y = 2$와 만나는 서로 다른 점의 개수는 $n$이다. 이 $n$개의 점의 $x$좌표의 합이 $\mathrm{39}$일 때, $n \times a$의 값은?
+① $\frac{\pi}{2}$		② $\pi$		③ $\frac{3 \pi}{2}$
+④ $2 \pi$		⑤ $\frac{5 \pi}{2}$

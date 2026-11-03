@@ -1,0 +1,16 @@
+[정답] ③
+
+[해설]
+$f' \left( 0 \right) = 1$이므로 다항함수 $f \left( x \right)$는 상수함수가 아니다.
+함수 $f \left( x \right)$의 차수가 $1$이면 함수 $\left( f' \left( x \right) + 2 \right) \left( f' \left( x \right) - 2 \right)$는 상수함수이므로 조건을 만족시키지 않는다.
+함수 $f \left( x \right)$의 차수를 $n \quad \left( n \ge 2 \right)$라 하면
+함수 $\left( f' \left( x \right) + 2 \right) \left( f' \left( x \right) - 2 \right)$의 차수는 $2 n - 2$이므로
+$n = 2 n - 2$, $n = 2$
+실수 $a \quad \left( a \ne 0 \right)$, $b$, $c$에 대하여
+$f \left( x \right) = a x^{2} + b x + c$라 하면
+$f' \left( x \right) = 2 a x + b$이고 $f' \left( 0 \right) = 1$이므로 $b = 1$
+$\left( f' \left( x \right) + 2 \right) \left( f' \left( x \right) - 2 \right)$$= \left( 2 a x + 3 \right) \left( 2 a x - 1 \right)$
+$= 4 a^{2} x^{2} + 4 a x - 3$
+모든 실수 $x$에 대하여
+$a x^{2} + x + c = 4 a^{2} x^{2} + 4 a x - 3$이므로 $a = \frac{1}{4}$, $c = - 3$
+따라서 $f \left( x \right) = \frac{1}{4} x^{2} + x - 3$이므로 $f \left( 4 \right) = 5$

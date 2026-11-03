@@ -1,0 +1,5 @@
+두 함수 $f \left( x \right)$, $g \left( x \right)$가
+$\lim_{x \rightarrow \infty} \left\{ 2 f \left( x \right) - 3 g \left( x \right) \right\}$$= 1$, $\lim_{x \rightarrow \infty} g \left( x \right)$$= \infty$
+를 만족시킬 때, $\lim_{x \rightarrow \infty} \frac{4 f \left( x \right) + g \left( x \right)}{3 f \left( x \right) - g \left( x \right)}$의 값은?
+① $1$		② $2$		③ $3$
+④ $4$		⑤ $5$

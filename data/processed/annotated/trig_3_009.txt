@@ -1,0 +1,23 @@
+[문항 ID] trig_3_009
+[자료군] 삼각함수
+[파일 번호] 3
+[원래 문제 번호] 9
+[현재 문제 번호] 9
+[과목] 09 대수
+[단원] 06 삼각함수의 그래프
+[세부 단원] 02 삼각함수의 그래프 활용
+[유형] 01 각 변형1 (각 변형 규칙)
+[출처] 2020년 교육청 고2공통 9월 > 25 [3점]
+
+[문제]
+$\frac{\pi}{2} < \theta < \pi$인 $\theta$에 대하여 $\tan \theta = - \frac{4}{3}$일 때, $5 \sin \left( \pi + \theta \right) + 10 \cos \left( \frac{\pi}{2} - \theta \right)$의 값을 구하시오.
+
+[원본 정답·해설]
+[정답] $4$
+
+[해설]
+$\frac{\pi}{2} < \theta < \pi$인 $\theta$에 대하여 $\tan \theta = - \frac{4}{3}$이므로 $\sin \theta = \frac{4}{5}$
+$5 \sin \left( \pi + \theta \right) + 10 \cos \left( \frac{\pi}{2} - \theta \right)$
+$= - 5 \sin \theta + 10 \sin \theta$
+$= 5 \sin \theta$
+$= 4$

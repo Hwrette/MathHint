@@ -1,0 +1,10 @@
+[정답] ④
+
+[해설]
+$\cos^{2} x = 1 - \sin^{2} x$이므로
+$2 (1 - \sin^{2} x) + (2 + \sqrt{3}) \sin x - (2 + \sqrt{3}) = 0$
+$2 \sin^{2} x - (2 + \sqrt{3}) \sin x + \sqrt{3} = 0$
+$(2 \sin x - \sqrt{3}) (\sin x - 1) = 0$
+$\sin x = \frac{\sqrt{3}}{2}$ 또는 $\sin x = 1$이므로 $0 \le x \le \pi$에서
+$x = \frac{\pi}{3}$ 또는 $x = \frac{2}{3} \pi$ 또는 $x = \frac{\pi}{2}$
+따라서 모든 해의 합은 $\frac{3}{2} \pi$

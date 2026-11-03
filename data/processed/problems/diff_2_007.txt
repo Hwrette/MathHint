@@ -1,0 +1,5 @@
+함수
+$f \left( x \right) = {\left\{\begin{array}{lll}\left( x - a \right)^{2} &  & \left( x < 4 \right) \\ 2 x - 4 &  & \left( x \geq 4 \right)\end{array}\right.}$
+가 실수 전체의 집합에서 연속이 되도록 하는 모든 상수 $a$의 값의 곱은?
+① $\mathrm{6}$		② $\mathrm{9}$		③ $\mathrm{12}$
+④ $\mathrm{15}$		⑤ $\mathrm{18}$

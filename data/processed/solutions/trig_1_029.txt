@@ -1,0 +1,8 @@
+[정답] ①
+
+[해설]
+$\sin \left( \frac{\pi}{2} + \theta \right) = \cos \theta$, $\cos \left( \frac{\pi}{2} - \theta \right) = \sin \theta$이므로
+$\cos \theta + \sin \theta = \frac{\sqrt{5}}{5}$
+$\left( \cos \theta + \sin \theta \right)^{2}$$= \cos^{2} \theta + 2 \cos \theta \sin \theta + \sin^{2} \theta$
+$= 1 + 2 \sin \theta \cos \theta = \frac{1}{5}$
+따라서 $\sin \theta \cos \theta = - \frac{2}{5}$

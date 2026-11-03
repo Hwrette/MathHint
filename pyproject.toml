@@ -17,14 +17,15 @@ dependencies = []
 # 필요한 기능만 골라 설치한다. 예: python -m pip install -e '.[solver]'
 [project.optional-dependencies]
 analysis = ["kiwipiepy>=0.20"]
-solver = ["google-genai>=1.0"]
+solver = ["google-genai>=1.0", "python-dotenv>=1.0"]
 learning = ["torch>=2.0"]
-all = ["kiwipiepy>=0.20", "google-genai>=1.0", "torch>=2.0"]
+all = ["kiwipiepy>=0.20", "google-genai>=1.0", "python-dotenv>=1.0", "torch>=2.0"]
 
 [project.scripts]
 # 설치 후 mathhint-preprocess 명령을 치면 __main__.py의 main()을 호출한다.
 # 설치하지 않고 python -m mathhint_preprocess로 실행하는 방법도 있다.
 mathhint-preprocess = "mathhint_preprocess.__main__:main"
+mathhint-prepare-dataset = "mathhint_analysis.PrepareDataset:main"
 
 [tool.setuptools.packages.find]
 # 배포 패키지에 포함할 Python 폴더. 원본 데이터·생성 결과는 여기에 포함하지 않는다.

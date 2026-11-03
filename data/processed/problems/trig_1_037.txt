@@ -1,0 +1,5 @@
+실수 $k$에 대하여 함수
+$f \left( x \right) = 2 \cos^{2} x + 2 \sin x + k$
+의 최댓값이 $\frac{15}{2}$일 때, 함수 $f (x)$의 최솟값은?
+① $\mathrm{1}$		② $\mathrm{2}$		③ $\mathrm{3}$
+④ $\mathrm{4}$		⑤ $\mathrm{5}$

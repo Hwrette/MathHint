@@ -1,0 +1,10 @@
+[정답] ③
+
+[해설]
+함수 $f \left( x \right)$는 실수 전체의 집합에서 연속이므로 $x = 3$에서 연속이다.
+$\lim_{x \rightarrow 3 -} {f (x)}$$= \lim_{x \rightarrow 3 +} {f \left( x \right)}$$= f \left( 3 \right)$
+$\lim_{x \rightarrow 3 -} {f (x)}$$= \lim_{x \rightarrow 3 -} {(- x^{2} + a)}$$= - 9 + a$
+$\lim_{x \rightarrow 3 +} {f (x)}$$= \lim_{x \rightarrow 3 +} {(5 x - a)}$$= 15 - a$
+$f \left( 3 \right) = 15 - a$
+따라서 $- 9 + a = 15 - a$에서    $2 a = 24$
+$\therefore$ $a = 12$

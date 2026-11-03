@@ -1,0 +1,3 @@
+자연수 $n$에 대하여 $- \frac{\pi}{2 n} < x < \frac{\pi}{2 n}$에서 정의된 함수 $f (x) = 3 \sin 2 n x$가 있다. 원점 ${\mathrm{{O}}}$를 지나고 기울기가 양수인 직선과 함수 $y = f (x)$의 그래프가 서로 다른 세 점 ${\mathrm{{O}}}$, ${\mathrm{{A}}}$, ${\mathrm{{B}}}$에서 만날 때, 점 ${\mathrm{{C}}} \left( \frac{\pi}{2 n} , 0 \right)$에 대하여 넓이가 $\frac{\pi}{12}$인 삼각형 ${\mathrm{{A B C}}}$가 존재하도록 하는 $n$의 최댓값은?
+① $\mathrm{12}$		② $\mathrm{14}$		③ $\mathrm{16}$
+④ $\mathrm{18}$		⑤ $\mathrm{20}$

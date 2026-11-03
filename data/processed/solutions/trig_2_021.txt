@@ -1,0 +1,8 @@
+[정답] ③
+
+[해설]
+$2 \sin^{2} x + 3 \sin x - 2 = 0$
+$\left( 2 \sin x - 1 \right) \left( \sin x + 2 \right) = 0$
+$- 1 \leq \sin x \leq 1$이므로 $\sin x = \frac{1}{2}$
+$0 \leq x \leq 2 \pi$에서 $x = \frac{\pi}{6}$ 또는 $x = \frac{5}{6} \pi$
+따라서 모든 해의 합은 $\pi$

@@ -1,0 +1,24 @@
+[문항 ID] diff_2_016
+[자료군] 미분
+[파일 번호] 2
+[원래 문제 번호] 16
+[현재 문제 번호] 16
+[과목] 10 미적분1
+[단원] 03 미분계수와 도함수
+[세부 단원] 02 도함수의 정의와 미분법 공식
+[유형] 05 미분법 공식4 (곱의 미분법)
+[출처] 2023년 교육청 고3공통 10월 > 공통범위 > 17 [3점]
+
+[문제]
+삼차함수 $f \left( x \right)$에 대하여 함수 $g \left( x \right)$를
+$g \left( x \right) = \left( x + 2 \right) f \left( x \right)$
+라 하자. 곡선 $y = f \left( x \right)$ 위의 점 $\left( 3 , 2 \right)$에서의 접선의 기울기가 $\mathrm{4}$일 때, $g' \left( 3 \right)$의 값을 구하시오.
+
+[원본 정답·해설]
+[정답] $22$
+
+[해설]
+곡선 $y = f \left( x \right)$ 위의 점 $\left( 3 , 2 \right)$에서의 접선의 기울기가 $\mathrm{4}$이므로 $f \left( 3 \right) = 2$, $f' \left( 3 \right) = 4$
+$g \left( x \right) = \left( x + 2 \right) f \left( x \right)$에서
+$g' \left( x \right) = f \left( x \right) + \left( x + 2 \right) f' \left( x \right)$이므로
+$g' \left( 3 \right) = f \left( 3 \right) + 5 f' \left( 3 \right) = 2 + 5 \times 4 = 22$

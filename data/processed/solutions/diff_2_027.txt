@@ -1,0 +1,15 @@
+[정답] ⑤
+
+[해설]
+$f \left( x \right) = x^{3} + a x^{2} + 3 a$에서 $f' \left( x \right) = 3 x^{2} + 2 a x$
+함수 $f \left( x \right)$가 $x = - 2$에서 극대이므로
+$f' \left( - 2 \right) = 12 - 4 a = 0$, $a = 3$
+$f' \left( x \right) = 3 x^{2} + 6 x = 3 x \left( x + 2 \right)$
+$f' \left( x \right) = 0$에서 $x = - 2$ 또는 $x = 0$
+함수 $f (x)$의 증가와 감소를 표로 나타내면
+
+$x$	$\cdots$	$\mathrm{- 2}$	$\cdots$	$\mathrm{0}$	$\cdots$
+$f' (x)$	$+$	$\mathrm{0}$	$-$	$\mathrm{0}$	$+$
+$f (x)$	$\nearrow$	극대	$\searrow$	극소	$\nearrow$
+
+따라서 함수 $f (x)$의 극솟값은 $f (0) = 3 a = 9$

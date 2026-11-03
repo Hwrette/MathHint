@@ -1,0 +1,5 @@
+$0 \le x < 2 \pi$일 때, 방정식
+$\left| \cos \left( x + \frac{\pi}{3} \right) + \frac{1}{6} \right| = \frac{5}{6}$
+를 만족시키는 모든 실수 $x$의 값의 합은?
+① $3 \pi$		② $\frac{10}{3} \pi$		③ $\frac{11}{3} \pi$
+④ $4 \pi$		⑤ $\frac{13}{3} \pi$

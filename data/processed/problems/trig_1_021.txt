@@ -1,0 +1,1 @@
+함수 $f \left( x \right) = 4 \sin \left( x - \frac{\pi}{3} \right) + a$의 최솟값이 $1$이다. $f \left( \frac{\pi}{2} \right)$의 값을 구하시오. (단, $a$는 상수이다.)

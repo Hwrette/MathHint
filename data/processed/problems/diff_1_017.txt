@@ -1,0 +1,5 @@
+실수 전체의 집합에서 연속인 함수 $f \left( x \right)$가
+$f \left( 1 \right) \times f \left( 3 \right) < 0$, $f \left( 5 \right) \times f \left( 7 \right) < 0$
+을 만족시키고, 방정식 $f \left( x \right) = 0$의 실근은 서로 다른 두 정수 $m$, $n$뿐이다. $m \times n$의 값은?
+① $4$		② $6$		③ $8$
+④ $10$		⑤ $12$

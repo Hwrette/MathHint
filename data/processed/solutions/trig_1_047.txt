@@ -1,0 +1,16 @@
+[정답] $69$
+
+[해설]
+$2 \sin^{2} \frac{\pi}{6} x - \cos \frac{\pi}{6} x \le 1$
+$2 \left( 1 - \cos^{2} \frac{\pi}{6} x \right) - \cos \frac{\pi}{6} x \le 1$
+$2 \cos^{2} \frac{\pi}{6} x + \cos \frac{\pi}{6} x - 1 \ge 0$
+$\left( 2 \cos \frac{\pi}{6} x - 1 \right) \left( \cos \frac{\pi}{6} x + 1 \right) \ge 0$
+$\cos \frac{\pi}{6} x \leq - 1$ 또는 $\cos \frac{\pi}{6} x \ge \frac{1}{2}$
+$\left| \cos \frac{\pi}{6} x \right| \le 1$이므로
+$0 < x < 15$에서 부등식 $\cos \frac{\pi}{6} x \leq - 1$의 해는 $6$	$\cdots$$\cdots$ ㉠
+$0 < x < 15$에서 방정식 $\cos \frac{\pi}{6} x = \frac{1}{2}$의 해가
+$2$, $10$, $14$이므로 $0 < x < 15$에서 함수 $y = \cos \frac{\pi}{6} x$의 그래프와 직선 $y = \frac{1}{2}$은 그림과 같다.
+
+$0 < x < 15$에서 부등식 $\cos \frac{\pi}{6} x \ge \frac{1}{2}$을 만족시키는 모든 실수 $x$의 값의 범위는 그림에서 함수 $y = \cos \frac{\pi}{6} x$의 그래프가 직선 $y = \frac{1}{2}$과 만나거나 직선 $y = \frac{1}{2}$보다 위쪽에 있는 $x$의 값의 범위와 같으므로
+$0 < x \le 2$ 또는 $10 \le x \le 14$			$\cdots$$\cdots$ ㉡
+㉠, ㉡에 의하여 구하는 모든 자연수 $x$의 값의 합은 $6 + \left( 1 + 2 + 10 + 11 + 12 + 13 + 14 \right) = 69$

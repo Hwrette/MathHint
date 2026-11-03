@@ -1,0 +1,30 @@
+[문항 ID] diff_2_004
+[자료군] 미분
+[파일 번호] 2
+[원래 문제 번호] 4
+[현재 문제 번호] 4
+[과목] 10 미적분1
+[단원] 01 함수의 극한
+[세부 단원] 03 극한식의 해석
+[유형] 03 해석3 (함수 구하기. 차수 결정)
+[출처] 2023년 교육청 고2공통 9월 > 26 [4점]
+
+[문제]
+두 이차함수 $f (x)$, $g (x)$가
+$\lim_{x \rightarrow \infty} \frac{f \left( x \right)}{g \left( x \right) - x^{2}} = 1$, $\lim_{x \rightarrow 3} \frac{g \left( x \right) - f \left( x \right)}{x - 3} = 8$
+을 만족시킬 때, $g (5) - f (5)$의 값을 구하시오.
+
+[원본 정답·해설]
+[정답] $20$
+
+[해설]
+두 이차함수 $f (x)$, $g (x)$의 $x^{2}$의 계수를 각각 $a$, $b \quad \left( a \ne 0 , b \ne 0 \right)$이라 하자.
+$\lim_{x \rightarrow \infty} \frac{f \left( x \right)}{g \left( x \right) - x^{2}} = 1$이므로
+두 다항식 $f (x)$와 $g (x) - x^{2}$의 차수는 $\mathrm{2}$이고
+$\frac{a}{b - 1} = 1$, $a = b - 1$, $b - a = 1$이므로 $g \left( x \right) - f \left( x \right)$는 최고차항의 계수가 $\mathrm{1}$인 이차함수이다. $\lim_{x \rightarrow 3} \frac{g (x) - f (x)}{x - 3}$의 값이 존재하므로
+다항식 $g \left( x \right) - f \left( x \right)$는 $x - 3$을 인수로 갖는다.
+$g(x)-f(x)=(x-3)(x+k)\quad(k$는 실수$)$
+$\lim_{x \rightarrow 3} \frac{g \left( x \right) - f \left( x \right)}{x - 3}$$= \lim_{x \rightarrow 3} \frac{\left( x - 3 \right) \left( x + k \right)}{x - 3}$
+$= \lim_{x \rightarrow 3} \left( x + k \right) = 3 + k = 8$
+$k = 5$이므로 $g \left( x \right) - f \left( x \right) = \left( x - 3 \right) \left( x + 5 \right)$
+따라서 $g \left( 5 \right) - f \left( 5 \right) = 20$

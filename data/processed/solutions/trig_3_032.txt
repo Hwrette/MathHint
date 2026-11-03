@@ -1,0 +1,10 @@
+[정답] ④
+
+[해설]
+$\left| \sin 2 x \right| = \frac{1}{2}$에서
+$\sin 2 x = \frac{1}{2}$ 또는 $\sin 2 x = {-} \frac{1}{2}$
+ⅰ) $\sin 2 x = \frac{1}{2}$
+$x = \frac{\pi}{12}$ 또는 $\frac{5}{12} \pi$ 또는 $\frac{13}{12} \pi$ 또는 $\frac{17}{12} \pi$
+ⅱ) $\sin 2 x = {-} \frac{1}{2}$
+$x = \frac{7}{12} \pi$ 또는 $\frac{11}{12} \pi$ 또는 $\frac{19}{12} \pi$ 또는 $\frac{23}{12} \pi$
+따라서 실근의 개수는 $8$

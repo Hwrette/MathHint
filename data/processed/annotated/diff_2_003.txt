@@ -1,0 +1,29 @@
+[문항 ID] diff_2_003
+[자료군] 미분
+[파일 번호] 2
+[원래 문제 번호] 3
+[현재 문제 번호] 3
+[과목] 10 미적분1
+[단원] 01 함수의 극한
+[세부 단원] 03 극한식의 해석
+[유형] 03 해석3 (함수 구하기. 차수 결정)
+[출처] 2024년 교육청 고2공통 10월 > 24 [3점]
+
+[문제]
+다항함수 $f \left( x \right)$에 대하여
+$\lim_{x \rightarrow \infty} \frac{f \left( x \right) - 2 x^{3}}{x^{2}} = \lim_{x \rightarrow 0} \frac{f \left( x \right)}{x} = 3$
+일 때, $f \left( 2 \right)$의 값을 구하시오.
+
+[원본 정답·해설]
+[정답] $34$
+
+[해설]
+$f \left( x \right)$가 다항함수이고 $\lim_{x \rightarrow \infty} \frac{f \left( x \right) - 2 x^{3}}{x^{2}} = 3$이므로
+$f \left( x \right) = 2 x^{3} + 3 x^{2} + a x + b \quad \left( a , b \right.$는 상수$)$
+$\lim_{x \rightarrow 0} \frac{f \left( x \right)}{x} = 3$이고 $\lim_{x \rightarrow 0} x = 0$이므로 $\lim_{x \rightarrow 0} f \left( x \right) = 0$
+그러므로 $b = 0$
+$\lim_{x \rightarrow 0} \frac{f \left( x \right)}{x}$$= \lim_{x \rightarrow 0} \frac{2 x^{3} + 3 x^{2} + a x}{x}$
+$= \lim_{x \rightarrow 0} \left( 2 x^{2} + 3 x + a \right)$
+$= a = 3$
+그러므로 $f \left( x \right) = 2 x^{3} + 3 x^{2} + 3 x$
+따라서 $f \left( 2 \right) = 34$

@@ -1,0 +1,7 @@
+[정답] ②
+
+[해설]
+$\cos \left( \pi + \theta \right) = - \cos \theta = \frac{2 \sqrt{5}}{5}$에서    $\cos \theta = - \frac{2 \sqrt{5}}{5}$
+$\frac{\pi}{2} < \theta < \pi$이므로
+$\sin \theta$$= \sqrt{1 - \cos^{2} \theta}$$= \sqrt{1 - \left( - \frac{2 \sqrt{5}}{5} \right)^{2}}$$= \frac{\sqrt{5}}{5}$
+$\therefore$ $\sin \theta + \cos \theta$$= \frac{\sqrt{5}}{5} - \frac{2 \sqrt{5}}{5}$$= - \frac{\sqrt{5}}{5}$

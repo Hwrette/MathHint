@@ -1,0 +1,5 @@
+함수
+$f \left( x \right) = a - \sqrt{3} \tan 2 x$
+가 닫힌구간 $\left[ - \frac{\pi}{6} , b \right]$에서 최댓값 $\mathrm{7}$, 최솟값 $\mathrm{3}$을 가질 때, $a \times b$의 값은? (단, $a$, $b$는 상수이다.)
+① $\frac{\pi}{2}$		② $\frac{5 \pi}{12}$		③ $\frac{\pi}{3}$
+④ $\frac{\pi}{4}$		⑤ $\frac{\pi}{6}$

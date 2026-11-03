@@ -1,0 +1,36 @@
+[문항 ID] trig_2_015
+[자료군] 삼각함수
+[파일 번호] 2
+[원래 문제 번호] 15
+[현재 문제 번호] 15
+[과목] 09 대수
+[단원] 06 삼각함수의 그래프
+[세부 단원] 01 삼각함수의 그래프
+[유형] 04 그래프4 (표준형 그래프에서 Mm)
+[출처] 2022년(2023학년도) 평가원 고3공통 11월 > 공통범위 > 9 [4점]
+
+[문제]
+함수
+$f \left( x \right) = a - \sqrt{3} \tan 2 x$
+가 닫힌구간 $\left[ - \frac{\pi}{6} , b \right]$에서 최댓값 $\mathrm{7}$, 최솟값 $\mathrm{3}$을 가질 때, $a \times b$의 값은? (단, $a$, $b$는 상수이다.)
+① $\frac{\pi}{2}$		② $\frac{5 \pi}{12}$		③ $\frac{\pi}{3}$
+④ $\frac{\pi}{4}$		⑤ $\frac{\pi}{6}$
+
+[원본 정답·해설]
+[정답] ③
+
+[해설]
+함수 $f (x) = a - \sqrt{3} \tan 2 x$의 그래프의 주기는 $\frac{\pi}{2}$이다.
+함수 $f (x)$가 닫힌구간 $\left[ - \frac{\pi}{6} , b \right]$에서 최댓값과 최솟값을 가지므로
+$- \frac{\pi}{6} < b < \frac{\pi}{4}$
+한편, 함수 $y = f (x)$의 그래프는 구간 $\left[ - \frac{\pi}{6} , b \right]$에서 $x$의 값이 증가할 때, $y$의 값은 감소한다.
+함수 $f (x)$는 $x = - \frac{\pi}{6}$에서 최댓값 $\mathrm{7}$을 가지므로
+$f \left( - \frac{\pi}{6} \right) = a - \sqrt{3} \tan \left( - \frac{\pi}{3} \right) = 7$에서
+$a + \sqrt{3} \tan \frac{\pi}{3} = 7$
+$a + 3 = 7$,    $a = 4$
+함수 $f (x)$는 $x = b$에서 최솟값 $\mathrm{3}$을 가지므로
+$f (b) = 4 - \sqrt{3} \tan 2 b = 3$에서
+$\tan 2 b = \frac{\sqrt{3}}{3}$
+이때, $- \frac{\pi}{3} < 2 b < \frac{\pi}{2}$이므로
+$2 b = \frac{\pi}{6}$,    $b = \frac{\pi}{12}$
+$\therefore$ $a \times b = 4 \times \frac{\pi}{12} = \frac{\pi}{3}$

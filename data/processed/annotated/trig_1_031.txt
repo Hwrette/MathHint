@@ -1,0 +1,27 @@
+[문항 ID] trig_1_031
+[자료군] 삼각함수
+[파일 번호] 1
+[원래 문제 번호] 31
+[현재 문제 번호] 31
+[과목] 09 대수
+[단원] 06 삼각함수의 그래프
+[세부 단원] 02 삼각함수의 그래프 활용
+[유형] 01 각 변형1 (각 변형 규칙)
+[출처] 2025년 교육청 고2공통 10월 > 9 [3점]
+
+[문제]
+$3 \tan \left( \pi + \theta \right) = 2 \sin \left( \frac{\pi}{2} + \theta \right)$일 때, $\sin \theta$의 값은?
+① $\frac{1}{6}$		② $\frac{1}{3}$		③ $\frac{1}{2}$
+④ $\frac{2}{3}$		⑤ $\frac{5}{6}$
+
+[원본 정답·해설]
+[정답] ③
+
+[해설]
+$3 \tan \left( \pi + \theta \right) = 2 \sin \left( \frac{\pi}{2} + \theta \right)$에서
+$3 \tan \theta = 2 \cos \theta$
+$\frac{3 \sin \theta}{\cos \theta} = 2 \cos \theta$
+$3 \sin \theta = 2 \cos^{2} \theta$
+$3 \sin \theta = 2 - 2 \sin^{2} \theta$
+$2 \sin^{2} \theta + 3 \sin \theta - 2 = \left( 2 \sin \theta - 1 \right) \left( \sin \theta + 2 \right) = 0$
+$- 1 \le \sin \theta \le 1$이므로 $\sin \theta = \frac{1}{2}$

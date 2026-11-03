@@ -1,0 +1,3 @@
+두 함수 $f \left( x \right)$$= \left| x + 3 \right|$, $g \left( x \right)$$= 2 x + a$에 대하여 함수 $f \left( x \right) g \left( x \right)$가 실수 전체의 집합에서 미분가능할 때, 상수 $a$의 값은?
+① $2$		② $4$		③ $6$
+④ $8$		⑤ $10$

@@ -1,0 +1,5 @@
+[정답] ④
+
+[해설]
+$\left| a - 4 \right| = \left| a + 3 \right|$, $a^{2} - 8 a + 16 = a^{2} + 6 a + 9$
+$14 a = 7$, $\therefore$$a = \frac{1}{2}$

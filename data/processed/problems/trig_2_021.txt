@@ -1,0 +1,3 @@
+$0 \leq x \leq 2 \pi$일 때, 방정식 $2 \sin^{2} x + 3 \sin x - 2 = 0$의 모든 해의 합은?
+① $\frac{\pi}{2}$		② $\frac{3}{4} \pi$		③ $\pi$
+④ $\frac{5}{4} \pi$		⑤ $\frac{3}{2} \pi$

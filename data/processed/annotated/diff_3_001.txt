@@ -1,0 +1,26 @@
+[문항 ID] diff_3_001
+[자료군] 미분
+[파일 번호] 3
+[원래 문제 번호] 1
+[현재 문제 번호] 1
+[과목] 10 미적분1
+[단원] 01 함수의 극한
+[세부 단원] 02 극한의 성질과 계산
+[유형] 07 부정형6 (함수의 극한의 대소 관계)
+[출처] 2022년 교육청 고2공통 11월 > 4 [3점]
+
+[문제]
+함수 $f (x)$가 모든 실수 $x$에 대하여
+$2 x + 1 \leq f (x) \leq (x + 1)^{2}$
+을 만족시킬 때, $\lim_{x \rightarrow 0} (x + 5) f (x)$의 값은?
+① $\mathrm{1}$		② $\mathrm{2}$		③ $\mathrm{3}$
+④ $\mathrm{4}$		⑤ $\mathrm{5}$
+
+[원본 정답·해설]
+[정답] ⑤
+
+[해설]
+$2 x + 1 \leq f (x) \leq (x + 1)^{2}$에서
+$\lim_{x \rightarrow 0} (2 x + 1) = \lim_{x \rightarrow 0} (x + 1)^{2} = 1$이므로
+함수의 극한의 대소 관계에 의하여 $\lim_{x \rightarrow 0} f (x) = 1$
+$\lim_{x \rightarrow 0} (x + 5) f (x) = \lim_{x \rightarrow 0} (x + 5) \times \lim_{x \rightarrow 0} f (x) = 5 \times 1 = 5$

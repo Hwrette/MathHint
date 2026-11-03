@@ -1,0 +1,9 @@
+[정답] ①
+
+[해설]
+$\theta$가 제$\mathrm{3}$사분면의 각이고 $\tan \theta = \frac{12}{5}$이므로 ${\mathrm{{P}}} (- 5 , - 12)$라 하면 점 ${\mathrm{{O}}}$에서 점 ${\mathrm{{P}}}$까지의 거리
+$r = \overline{{\mathrm{{O P}}}} = \sqrt{(- 5)^{2} + (- 12)^{2}} = 13$
+
+$\sin \theta < 0$, $\cos \theta < 0$이므로
+$\therefore \quad \sin \theta = - \frac{12}{13}$, $\cos \theta = - \frac{5}{13}$
+따라서 $\sin \theta + \cos \theta = - \frac{17}{13}$

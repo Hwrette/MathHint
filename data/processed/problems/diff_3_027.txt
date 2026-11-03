@@ -1,0 +1,5 @@
+$f (3) = 2$, $f' (3) = 1$인 다항함수 $f (x)$와 최고차항의 계수가 $\mathrm{1}$인 이차함수 $g (x)$가
+$\lim_{x \rightarrow 3} \frac{f (x) - g (x)}{x - 3} = 1$
+을 만족시킬 때, $g (1)$의 값은?
+① $\mathrm{3}$		② $\mathrm{4}$		③ $\mathrm{5}$
+④ $\mathrm{6}$		⑤ $\mathrm{7}$

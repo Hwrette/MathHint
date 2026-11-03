@@ -1,0 +1,8 @@
+[정답] ②
+
+[해설]
+함수 $f \left( x \right)$가 실수 전체의 집합에서 연속이므로 $x = - 2$에서 연속이다. 이때 $f \left( - 2 \right) = 4 - a$이고
+$\lim_{x \rightarrow - 2 -} f \left( x \right)$$= \lim_{x \rightarrow - 2 -} \left( 5 x + a \right)$$= - 10 + a$
+$\lim_{x \rightarrow - 2 +} f \left( x \right)$$= \lim_{x \rightarrow - 2 +} \left( x^{2} - a \right)$$= 4 - a$
+이므로
+$- 10 + a = 4 - a$    $\therefore$ $a = 7$

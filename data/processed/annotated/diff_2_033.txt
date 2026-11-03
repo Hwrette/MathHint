@@ -1,0 +1,31 @@
+[문항 ID] diff_2_033
+[자료군] 미분
+[파일 번호] 2
+[원래 문제 번호] 33
+[현재 문제 번호] 33
+[과목] 10 미적분1
+[단원] 05 함수의 증가와 감소
+[세부 단원] 02 함수의 극대와 극소
+[유형] 02 극대와 극소2 (삼차함수의 극대와 극소)
+[출처] 2024년 교육청 고3공통 10월 > 공통범위 > 7 [3점]
+
+[문제]
+상수 $k$에 대하여 함수 $f \left( x \right) = x^{3} - 3 x^{2} - 9 x + k$의 극솟값이 $\mathrm{- 17}$일 때, 함수 $f \left( x \right)$의 극댓값은?
+① $\mathrm{11}$		② $\mathrm{12}$		③ $\mathrm{13}$
+④ $\mathrm{14}$		⑤ $\mathrm{15}$
+
+[원본 정답·해설]
+[정답] ⑤
+
+[해설]
+$f' \left( x \right) = 3 x^{2} - 6 x - 9 = 3 \left( x + 1 \right) \left( x - 3 \right)$
+이므로 $f' \left( x \right) = 0$에서 $x = - 1$ 또는 $x = 3$
+함수 $f \left( x \right)$의 증가와 감소를 표로 나타내면
+
+$x$	$\cdots$	$\mathrm{- 1}$	$\cdots$	$\mathrm{3}$	$\cdots$
+$f' \left( x \right)$	$+$	$\mathrm{0}$	$-$	$\mathrm{0}$	$+$
+$f \left( x \right)$	$\nearrow$	극대	$\searrow$	극소	$\nearrow$
+
+함수 $f \left( x \right)$의 극솟값은 $f \left( 3 \right) = k - 27 = - 17$이므로
+$k = 10$, $f \left( x \right) = x^{3} - 3 x^{2} - 9 x + 10$
+함수 $f \left( x \right)$의 극댓값은 $f \left( - 1 \right) = 15$

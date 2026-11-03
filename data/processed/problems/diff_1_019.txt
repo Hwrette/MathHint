@@ -1,0 +1,5 @@
+다항함수 $f \left( x \right)$에 대하여 함수 $g \left( x \right)$를
+$g \left( x \right) = 5 x^{2} + x f \left( x \right)$
+라 하자. $f \left( 3 \right) = 2$, $f' \left( 3 \right) = 1$일 때, $g' \left( 3 \right)$의 값은?
+① $31$		② $32$		③ $33$
+④ $34$		⑤ $35$

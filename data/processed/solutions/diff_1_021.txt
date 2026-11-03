@@ -1,0 +1,5 @@
+[정답] ④
+
+[해설]
+$g' \left( x \right) = \left( 2 x + 2 \right) f \left( x \right) + \left( x^{2} + 2 x \right) f' \left( x \right)$
+$g' \left( 1 \right) = 4 f \left( 1 \right) + 3 f' \left( 1 \right) = 4 \times 2 + 3 \times 1 = 11$

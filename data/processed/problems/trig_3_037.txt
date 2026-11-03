@@ -1,0 +1,3 @@
+$0 < x \leq 2 \pi$일 때, 방정식 $\sin^{2} x$$= \cos^{2} x + \cos x$와 부등식 $\sin x > \cos x$를 동시에 만족시키는 모든 $x$의 값의 합은?
+① $\frac{4}{3} \pi$		② $\frac{5}{3} \pi$		③ $2 \pi$
+④ $\frac{7}{3} \pi$		⑤ $\frac{8}{3} \pi$

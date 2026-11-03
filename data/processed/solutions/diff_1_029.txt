@@ -1,0 +1,22 @@
+[정답] ⑤
+
+[해설]
+$f \left( x \right) = x^{2} - 4 x - 3$에서    $f' \left( x \right) = 2 x - 4$
+곡선 $y = f \left( x \right)$ 위의 점 $\left( 1 , - 6 \right)$에서의 접선 $l$의 기울기는
+$f' \left( 1 \right) = 2 \cdot 1 - 4 = - 2$
+이므로 직선 $l$의 방정식은    $y - \left( - 6 \right) = - 2 \left( x - 1 \right)$
+$\therefore$ $y = - 2 x - 4$
+$g \left( x \right) = \left( x^{3} - 2 x \right) f \left( x \right)$에서
+$g' \left( x \right) = \left( 3 x^{2} - 2 \right) f \left( x \right) + \left( x^{3} - 2 x \right) f' \left( x \right)$
+$f \left( 1 \right) = - 6$, $f' \left( 1 \right) = - 2$이므로 곡선 $y = g \left( x \right)$ 위의 점 $\left( 1 , 6 \right)$에서의 접선 $m$의 기울기는
+$g' \left( 1 \right)$$= \left( 3 - 2 \right) f \left( 1 \right) + \left( 1 - 2 \right) f' \left( 1 \right)$
+$= f \left( 1 \right) - f' \left( 1 \right)$
+$= - 6 - \left( - 2 \right)$
+$= - 4$
+즉 직선 $m$의 방정식은    $y - 6 = - 4 \left( x - 1 \right)$
+$\therefore$ $y = - 4 x + 10$
+두 직선 $l$, $m$과 $y$축으로 둘러싸인 도형은 $y$축 위의 두 점 $\left( 0 , 10 \right)$, $\left( 0 , - 4 \right)$를 잇는 선분을 밑변으로 하고, 두 직선의 교점을 꼭짓점으로 하는 삼각형이다.
+두 직선 $l$, $m$의 교점의 $x$좌표는 $- 2 x - 4 = - 4 x + 10$에서
+$2 x = 14$    $\therefore$ $x = 7$
+따라서 구하는 도형의 넓이는
+$\frac{1}{2} \times \left\{ 10 - \left( - 4 \right) \right\} \times 7 = 49$

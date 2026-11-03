@@ -12,7 +12,8 @@ LLM에 식을 다시 해석시키거나, 식을 계산해서 다른 모양으로
 
 현재 지원하는 규칙은 중첩 중괄호, 양옆 한 덩어리에 적용되는 ``over``, 위·아래
 첨자, ``LEFT``/``RIGHT`` 괄호, 제곱근, ``root <지수> of <대상>`` 꼴의 근호,
-글꼴 선언, 일부 장식 기호·함수·그리스 문자·연산자·프라임·조건별 식이다.
+숫자 대상의 ``ROOT7`` 제곱근 표기, 글꼴 선언, 일부 장식 기호·함수·그리스
+문자·연산자·프라임·조건별 식·행렬식이 아닌 행별 정렬 구문이다.
 한글 수식의 백틱(``)은 배치용 간격으로 취급하고, ``~``는 LaTeX의 넓은 간격
 ``\quad``로 바꾼다. 한글 수식 전체 문법이나 일반적인 수학 의미 분석기는 아니다.
 
@@ -95,13 +96,15 @@ _SYMBOLS = {name: "\\" + name for name in (
     "cdots", "ldots", "vdots", "ddots", "pm", "mp", "le", "ge", "ne",
     "approx", "equiv", "sim", "cup", "cap", "subset", "supset", "subseteq",
     "supseteq", "in", "notin", "forall", "exists", "partial", "nabla",
-    "sum", "prod", "int", "infty", "emptyset", "therefore", "because",
+    "sum", "prod", "int", "infty", "emptyset", "therefore", "because", "circ",
 )}
 # 한글 명령과 LaTeX 명령의 이름이 다르면 별도의 대응표를 덧붙인다.
 # r"..."는 백슬래시를 일반 문자로 읽는 raw 문자열이라 LaTeX 표기에 편리하다.
 _SYMBOLS.update({"rarrow": r"\rightarrow", "larrow": r"\leftarrow",
                  "lrarrow": r"\leftrightarrow", "bot": r"\perp",
-                 "leq": r"\leq", "geq": r"\geq", "neq": r"\neq"})
+                 "leq": r"\leq", "geq": r"\geq", "neq": r"\neq",
+                 "nearrow": r"\nearrow", "searrow": r"\searrow",
+                 "vert": r"\vert", "divide": r"\div"})
 # 중괄호로 값을 나열한 set은 '이름이 포함되는가?'를 확인할 때 사용한다.
 # 그리스 문자는 대소문자가 바뀌면 다른 기호가 될 수 있어 별도로 분류한다.
 _GREEK = {"alpha", "beta", "gamma", "delta", "epsilon", "zeta", "eta", "theta",
@@ -113,9 +116,9 @@ _CAPITAL_GREEK = {name: name.title() for name in
                    "upsilon", "phi", "psi", "omega")}
 _SYMBOLS.update({capital: "\\" + capital for capital in _CAPITAL_GREEK.values()})
 # 아래 명령은 단순 치환으로 끝나지 않고 괄호나 다음 대상을 더 읽어야 한다.
-_SPECIAL = {"over", "left", "right", "sqrt", "root", "of", "rm", "it",
-            "bar", "vec", "hat", "dot", "ddot", "tilde", "underline",
-            "cases", "prime"}
+_SPECIAL = {"over", "left", "right", "sqrt", "root", "of", "rm", "it", "bold",
+            "bar", "overline", "vec", "hat", "dot", "ddot", "tilde", "underline",
+            "cases", "prime", "eqalign", "pile", "rpile", "lpile"}
 # 후보 이름의 합집합(|)을 만든 뒤 긴 이름부터 검사한다. 예를 들어 subseteq를
 # subset과 나머지 글자로 잘못 나누지 않기 위해서다. lambda는 짧은 익명 함수이고,
 # -len(v)를 정렬 기준으로 쓰면 긴 단어가 앞에 온다.
@@ -143,6 +146,17 @@ def _tokenize(script: str) -> list[_Token]:
         if char.isspace() or char == "`":
             i += 1
             continue
+        # These are explicit HWP character aliases, not guessed punctuation fixes.
+        unicode_symbols = {"≤": "leq", "≥": "geq", "≠": "neq", "∞": "infty",
+                           "→": "rarrow", "←": "larrow", "↔": "lrarrow"}
+        if char in unicode_symbols:
+            tokens.append(_Token(unicode_symbols[char], i))
+            i += 1
+            continue
+        if char in "㉠㉡㉢㉣㉤㉥㉦㉧㉨㉩":
+            tokens.append(_Token(char, i))
+            i += 1
+            continue
         # match는 현재 커서에서 패턴이 시작하는지 확인한다. 숫자가 잡히면 여러
         # 글자로 된 12나 3.14도 하나의 토큰으로 보관하고 마지막 위치로 이동한다.
         number = _NUMBER.match(script, i)
@@ -157,6 +171,10 @@ def _tokenize(script: str) -> list[_Token]:
                             if script[i:i + len(word)].lower() == word), None)
             if command:
                 original = script[i:i + len(command)]
+                # Uppercase INF is the HWP infinity glyph. Lowercase inf keeps
+                # its separate infimum-function meaning.
+                if original == "INF":
+                    command = "infty"
                 # 연산자 명령의 대소문자는 같은 것으로 읽더라도 그리스 기호는
                 # 실제 대문자 표기를 따로 확인한다. 모르는 대응을 소문자로 바꾸지 않는다.
                 if command in _GREEK and original != original.lower():
@@ -164,7 +182,7 @@ def _tokenize(script: str) -> list[_Token]:
                         raise _ConversionError(f"unsupported uppercase Greek name {original!r} at offset {i}")
                     command = _CAPITAL_GREEK[command]
                 tokens.append(_Token(command, i))
-                i += len(command)
+                i += len(original)
                 continue
             word = re.match(r"[A-Za-z]+", script[i:]).group()
             # 짧은 글자 나열 ab, ax나 짧은 대문자 점 이름은 글자별로 나눈다.
@@ -178,6 +196,14 @@ def _tokenize(script: str) -> list[_Token]:
             continue
         # [i:i + 2]는 현재 위치부터 두 글자를 자르는 슬라이스다. !=는 부등호지만
         # x! =0의 !는 팩토리얼이므로, 붙어 있는 원본 두 글자만 하나로 묶는다.
+        if script[i:i + 3] == "<->":
+            tokens.append(_Token("lrarrow", i))
+            i += 3
+            continue
+        if script[i:i + 2] in {"->", "<-"}:
+            tokens.append(_Token({"->": "rarrow", "<-": "larrow"}[script[i:i + 2]], i))
+            i += 2
+            continue
         if script[i:i + 2] in {"!=", "<=", ">="}:
             tokens.append(_Token(script[i:i + 2], i))
             i += 2
@@ -253,6 +279,15 @@ class _Parser:
         nodes: list[_Node] = []
         while self.peek() is not None and self.peek() not in stops:
             token = self.peek()
+            # HWP emits a layout-only empty group immediately after a limit
+            # and its subscript. Do not allow empty operands elsewhere.
+            if (token == "{" and self.i + 1 < len(self.tokens)
+                    and self.tokens[self.i + 1].value == "}"
+                    and nodes and nodes[-1].latex.startswith(r"\lim")
+                    and nodes[-1].kind in {"atom", "scripted"}):
+                self.take()
+                self.take()
+                continue
             if token == "it":
                 # 기본 수학 이탤릭체로 복귀한다. rm 그룹이 이미 끝난 뒤에도
                 # 나타날 수 있다. 글꼴만 복귀하며 이전 조각의 첨자 정보는 유지한다.
@@ -326,7 +361,7 @@ class _Parser:
             # 저장하여 나중에 분자·분모·첨자의 인자로 넣어도 안쪽 구조를 유지한다.
             content = _join(self.sequence({"}"}))
             self.expect("}")
-            if not content:
+            if not content and not script_argument:
                 raise _ConversionError("empty group requires source review")
             return _Node("{" + content + "}", "group", content)
         # 일반 소괄호·대괄호는 보이는 기호이므로 결과에도 그대로 남긴다.
@@ -361,6 +396,13 @@ class _Parser:
             if not content:
                 raise _ConversionError("rm has no following content")
             return _Node(r"\mathrm{" + content + "}")
+        if token == "bold":
+            # Explicit groups and the HWP BOLD12 numeric shorthand have an
+            # unambiguous extent. Do not invent the scope of a bare variable.
+            if self.peek() != "{" and not (self.peek() and _NUMBER.fullmatch(self.peek())):
+                raise _ConversionError("bold requires a grouped or numeric argument")
+            arg = self.atom()
+            return _Node(r"\mathbf{" + _argument(arg) + "}")
         if token == "sqrt":
             # sqrt 뒤의 한 조각을 근호 안에 넣는다. 여러 항이면 {x+1}처럼 묶어야 한다.
             radicand = self.atom()
@@ -370,20 +412,30 @@ class _Parser:
         if token == "root":
             # root 3 of {x+1}는 세제곱근이다. of가 빠진 root{3}을 보고
             # 제곱근인지 다른 근호인지 추측해서 고치지 않는다.
+            numeric_shorthand = self.peek() is not None and _NUMBER.fullmatch(self.peek())
             index = self.atom()
             if self.peek() != "of":
+                # HWP also spells an ordinary square root as ROOT7 / ROOT 10.
+                # Limit the shorthand to an ungrouped numeric radicand so the
+                # historically ambiguous root{3} is still sent for review.
+                if numeric_shorthand:
+                    return _Node(r"\sqrt{" + _argument(index) + "}")
                 raise _ConversionError("indexed root requires 'root <index> of <radicand>'; no implicit repair")
             self.take()
             radicand = self.atom()
             return _Node(r"\sqrt[" + _argument(index) + "]{" + _argument(radicand) + "}")
         # 장식 명령도 바로 다음 한 조각에만 적용한다. 예: bar{AB}는 AB 위의 선이다.
-        if token in {"bar", "vec", "hat", "dot", "ddot", "tilde", "underline"}:
+        if token in {"bar", "overline", "vec", "hat", "dot", "ddot", "tilde", "underline"}:
             arg = self.atom()
             if arg.kind in {"operator", "space"}:
                 raise _ConversionError(f"{token} requires an argument")
             return _Node("\\" + token + "{" + _argument(arg) + "}")
         if token == "cases":
             return self.cases()
+        if token in {"eqalign", "pile", "rpile", "lpile"}:
+            return self.alignment(token)
+        if token in "㉠㉡㉢㉣㉤㉥㉦㉧㉨㉩":
+            return _Node(r"\text{" + token + "}")
         # 다음 명령들은 뒤의 범위를 직접 소비하지 않고 대응하는 LaTeX 조각을 준다.
         # 예를 들어 log 뒤의 _{2}는 postfix가 처리한다.
         if token in _FUNCTIONS:
@@ -408,6 +460,27 @@ class _Parser:
         if token in {"&", "#"}:
             raise _ConversionError("alignment separators require cases")
         return _Node(token)
+
+    def alignment(self, command: str) -> _Node:
+        """Preserve HWP alignment rows, including layout-only empty rows."""
+        self.expect("{")
+        rows: list[list[str]] = [[]]
+        while True:
+            rows[-1].append(_join(self.sequence({"&", "#", "}"})))
+            separator = self.take()
+            if separator == "}":
+                break
+            if separator == "#":
+                rows.append([])
+        columns = max(map(len, rows))
+        content = r" \\ ".join(
+            " & ".join((cell or "{}") for cell in row + [""] * (columns - len(row)))
+            for row in rows
+        )
+        if command == "eqalign":
+            return _Node(r"\begin{aligned}" + content + r"\end{aligned}")
+        align = {"pile": "c", "lpile": "l", "rpile": "r"}[command]
+        return _Node(r"\begin{array}{" + align * columns + "}" + content + r"\end{array}")
 
     def cases(self) -> _Node:
         """조건별 식의 행·열 구분을 보존하여 LaTeX array로 옮긴다.

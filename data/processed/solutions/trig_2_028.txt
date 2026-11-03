@@ -1,0 +1,14 @@
+[정답] ④
+
+[해설]
+함수 $y = f (x)$의 그래프가 직선 $y = 2$와 만나는 점의 $x$좌표는 $0 \leq x < \frac{4 \pi}{a}$일 때 방정식 $\left| 4 \sin \left( a x - \frac{\pi}{3} \right) + 2 \right| = 2 \quad$	$\cdots \cdots$ ㉠
+의 실근과 같다.
+$a x - \frac{\pi}{3} = t$라 하면 $- \frac{\pi}{3} \leq t < \frac{11 \pi}{3}$이고
+$| 4 \sin t + 2 | = 2 \quad$					$\cdots \cdots$ ㉡
+에서 $\sin t = 0$ 또는 $\sin t = - 1$
+$- \frac{\pi}{3} \leq t < \frac{11 \pi}{3}$일 때, 방정식 ㉡의 실근은
+$0$, $\pi$, $\frac{3 \pi}{2}$, $2 \pi$, $3 \pi$, $\frac{7 \pi}{2}$
+의 $\mathrm{6}$개이고 이 $\mathrm{6}$개의 실근의 합은 $11 \pi$이다.
+따라서 $n = 6$이고 방정식 ㉠의 $\mathrm{6}$개의 실근의 합이 $\mathrm{39}$이므로
+$39 a - \frac{\pi}{3} \times 6 = 11 \pi$, $a = \frac{\pi}{3}$
+따라서 $n \times a = 6 \times \frac{\pi}{3} = 2 \pi$

@@ -1,0 +1,3 @@
+$3 \tan \left( \pi + \theta \right) = 2 \sin \left( \frac{\pi}{2} + \theta \right)$일 때, $\sin \theta$의 값은?
+① $\frac{1}{6}$		② $\frac{1}{3}$		③ $\frac{1}{2}$
+④ $\frac{2}{3}$		⑤ $\frac{5}{6}$

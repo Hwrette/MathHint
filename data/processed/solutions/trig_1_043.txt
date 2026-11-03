@@ -1,0 +1,11 @@
+[정답] $4$
+
+[해설]
+함수 $y = 8 \sin a x$의 주기가 $\frac{2 \pi}{a}$ ($a$는 자연수)
+이므로
+$f \left( \frac{2 \pi}{a} \right) = f \left( \frac{4 \pi}{a} \right) = \cdots = f \left( \frac{2 \pi}{a} \times 4 a \right) = 0$
+함수 $y = f \left( x \right)$의 그래프가 직선 $y = 5$와 만나는 점의 $x$좌표 중 가장 작은 값을 $\theta$라 하면,
+가장 큰 값은 $8 \pi - \frac{\pi}{a} - \theta$이다.
+
+$\theta + \left( 8 \pi - \frac{\pi}{a} - \theta \right) = 8 \pi - \frac{\pi}{a} = \frac{31}{4} \pi$, $\frac{\pi}{4} = \frac{\pi}{a}$
+따라서 $a = 4$

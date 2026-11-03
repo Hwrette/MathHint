@@ -1,0 +1,5 @@
+[정답] ④
+
+[해설]
+$0 \leq x \leq \frac{\pi}{2}$이므로 $- \frac{\pi}{6} \leq x - \frac{\pi}{6} \leq \frac{\pi}{3}$이다.
+$\sin \left( x - \frac{\pi}{6} \right) = \frac{1}{2}$에서 $x - \frac{\pi}{6} = \frac{\pi}{6}$이므로 $x = \frac{\pi}{3}$이다.

@@ -1,0 +1,10 @@
+[정답] ③
+
+[해설]
+$3 \tan \left( \pi + \theta \right) = 2 \sin \left( \frac{\pi}{2} + \theta \right)$에서
+$3 \tan \theta = 2 \cos \theta$
+$\frac{3 \sin \theta}{\cos \theta} = 2 \cos \theta$
+$3 \sin \theta = 2 \cos^{2} \theta$
+$3 \sin \theta = 2 - 2 \sin^{2} \theta$
+$2 \sin^{2} \theta + 3 \sin \theta - 2 = \left( 2 \sin \theta - 1 \right) \left( \sin \theta + 2 \right) = 0$
+$- 1 \le \sin \theta \le 1$이므로 $\sin \theta = \frac{1}{2}$

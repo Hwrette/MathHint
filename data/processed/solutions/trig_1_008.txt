@@ -1,0 +1,8 @@
+[정답] ①
+
+[해설]
+$\frac{3 \pi}{2} < \theta < 2 \pi$이므로 $\cos^{2} \theta = \frac{1}{10}$에서
+$\cos \theta = \frac{\sqrt{10}}{10}$
+$\sin^{2} \theta = 1 - \cos^{2} \theta = 1 - \frac{1}{10} = \frac{9}{10}$이므로
+$\sin \theta = - \frac{3 \sqrt{10}}{10}$ $\left( \because \quad \frac{3 \pi}{2} < \theta < 2 \pi \right)$
+$\therefore$ $\tan \theta = \frac{\sin \theta}{\cos \theta} = \frac{- \frac{3 \sqrt{10}}{10}}{\frac{\sqrt{10}}{10}} = - 3$

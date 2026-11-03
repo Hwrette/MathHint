@@ -1,0 +1,16 @@
+[정답] $\mathbf{10}$
+
+[해설]
+$\frac{2}{\sqrt{3}} \sin \left( x + \frac{\pi}{3} \right) - \frac{7}{8} = 0$에서
+$\sin \left( x + \frac{\pi}{3} \right) = \frac{7 \sqrt{3}}{16}$
+$t = x + \frac{\pi}{3}$라 하면 $\frac{\pi}{3} \leq t \leq \frac{7}{3} \pi$
+$\frac{7 \sqrt{3}}{16} < \frac{\sqrt{3}}{2}$이므로
+방정식 $\sin t = \frac{7 \sqrt{3}}{16}$$\left( \frac{\pi}{3} \leq t \leq \frac{7}{3} \pi \right)$는 두 실근
+$t_{1}$, $t_{2}$$\left( t_{1} < t_{2} \right)$를 갖는다.
+$t_{1} = x_{1} + \frac{\pi}{3}$, $t_{2} = x_{2} + \frac{\pi}{3}$ ($x_{1}$, $x_{2}$는 실수)라
+하면
+$t_{2} = 2 \pi + \left( \pi - t_{1} \right)$이므로
+$t_{1} + t_{2} = \left( x_{1} + \frac{\pi}{3} \right) + \left( x_{2} + \frac{\pi}{3} \right) = 3 \pi$
+방정식 $\sin \left( x + \frac{\pi}{3} \right) = \frac{7 \sqrt{3}}{16}$의 모든 실근의 합은
+$x_{1} + x_{2} = 3 \pi - \frac{2}{3} \pi = \frac{7}{3} \pi$
+따라서 $p + q = 10$

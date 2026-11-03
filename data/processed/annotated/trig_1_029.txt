@@ -1,0 +1,25 @@
+[문항 ID] trig_1_029
+[자료군] 삼각함수
+[파일 번호] 1
+[원래 문제 번호] 29
+[현재 문제 번호] 29
+[과목] 09 대수
+[단원] 06 삼각함수의 그래프
+[세부 단원] 02 삼각함수의 그래프 활용
+[유형] 01 각 변형1 (각 변형 규칙)
+[출처] 2025년 교육청 고3공통 7월 > 공통범위 > 6 [3점]
+
+[문제]
+$\sin \left( \frac{\pi}{2} + \theta \right) + \cos \left( \frac{\pi}{2} - \theta \right) = \frac{\sqrt{5}}{5}$일 때, $\sin \theta \cos \theta$의 값은?
+① $- \frac{2}{5}$	② $- \frac{1}{5}$		③ $0$
+④ $\frac{1}{5}$		⑤ $\frac{2}{5}$
+
+[원본 정답·해설]
+[정답] ①
+
+[해설]
+$\sin \left( \frac{\pi}{2} + \theta \right) = \cos \theta$, $\cos \left( \frac{\pi}{2} - \theta \right) = \sin \theta$이므로
+$\cos \theta + \sin \theta = \frac{\sqrt{5}}{5}$
+$\left( \cos \theta + \sin \theta \right)^{2}$$= \cos^{2} \theta + 2 \cos \theta \sin \theta + \sin^{2} \theta$
+$= 1 + 2 \sin \theta \cos \theta = \frac{1}{5}$
+따라서 $\sin \theta \cos \theta = - \frac{2}{5}$

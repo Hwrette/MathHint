@@ -1,0 +1,22 @@
+[정답] $6$
+
+[해설]
+점 ${\mathrm{{P}}}$의 시각 $t \quad \left( t > 0 \right)$에서의 속도를 $v \left( t \right)$라 하면
+$v \left( t \right)$$= 6 t^{3} - 24 t^{2} + 30 t - 12$
+$= 6 \left( t - 1 \right)^{2} \left( t - 2 \right)$
+$v \left( t \right) = 0$에서 $t = 1$ 또는 $t = 2$
+함수 $x (t)$의 증가와 감소를 표로 나타내면
+
+$t$	$\mathrm{0}$	$\cdots$	$\mathrm{1}$	$\cdots$	$\mathrm{2}$	$\cdots$
+$v \left( t \right)$		-	$\mathrm{0}$	-	$\mathrm{0}$	+
+$x \left( t \right)$		$\searrow$	$- \frac{7}{2}$	$\searrow$	$\mathrm{- 4}$	$\nearrow$
+
+점 ${\mathrm{{P}}}$는 $0 < t < 2$에서 운동 방향이 음의 방향이고
+$t > 2$에서 운동 방향이 양의 방향이므로
+점 ${\mathrm{{P}}}$는 시각 $t = 2$에서 운동 방향이 바뀐다.
+점 ${\mathrm{{P}}}$의 시각 $t \quad \left( t > 0 \right)$에서의 가속도를 $a \left( t \right)$라 하면 $a \left( t \right) = v' \left( t \right) = 18 t^{2} - 48 t + 30$
+따라서
+점 ${\mathrm{{P}}}$의 운동 방향이 바뀌는 순간
+점 ${\mathrm{{P}}}$의 가속도는
+$a (2)$$= 18 \times 2^{2} - 48 \times 2 + 30$
+$= 6$

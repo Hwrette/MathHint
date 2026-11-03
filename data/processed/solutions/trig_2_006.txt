@@ -1,0 +1,6 @@
+[정답] ④
+
+[해설]
+$(\sin \theta - \cos \theta)^{2}$$= \sin^{2} \theta + \cos^{2} \theta - 2 \sin \theta \cos \theta$
+$= 1 + \frac{24}{25}$$= \frac{49}{25}$
+$\sin \theta - \cos \theta > 0$이므로 $\sin \theta - \cos \theta = \frac{7}{5}$

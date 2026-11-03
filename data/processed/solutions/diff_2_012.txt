@@ -1,0 +1,7 @@
+[정답] ⑤
+
+[해설]
+평균변화율 $\frac{f \left( 1 + h \right) - f \left( 1 \right)}{h} = h^{2} + 2 h + 3$에서
+$f' \left( 1 \right)$$= \lim_{h \rightarrow 0} \frac{f \left( 1 + h \right) - f \left( 1 \right)}{h}$
+$= \lim_{h \rightarrow 0} \left( h^{2} + 2 h + 3 \right)$
+$= 3$

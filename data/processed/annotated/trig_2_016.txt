@@ -1,0 +1,27 @@
+[문항 ID] trig_2_016
+[자료군] 삼각함수
+[파일 번호] 2
+[원래 문제 번호] 16
+[현재 문제 번호] 16
+[과목] 09 대수
+[단원] 06 삼각함수의 그래프
+[세부 단원] 02 삼각함수의 그래프 활용
+[유형] 01 각 변형1 (각 변형 규칙)
+[출처] 2022년(2023학년도) 평가원 고3공통 11월 > 공통범위 > 5 [3점]
+
+[문제]
+$\tan \theta < 0$이고 $\cos \left( \frac{\pi}{2} + \theta \right) = \frac{\sqrt{5}}{5}$일 때, $\cos \theta$의 값은?
+① $- \frac{2 \sqrt{5}}{5}$	② $- \frac{\sqrt{5}}{5}$	③ $\mathrm{0}$
+④ $\frac{\sqrt{5}}{5}$	⑤ $\frac{2 \sqrt{5}}{5}$
+
+[원본 정답·해설]
+[정답] ⑤
+
+[해설]
+$\cos \left( \frac{\pi}{2} + \theta \right) = - \sin \theta$이므로
+$\sin \theta = - \frac{\sqrt{5}}{5}$
+$\tan \theta < 0$, $\sin \theta < 0$이므로 $\theta$는 제 $\mathrm{4}$사분면의 각이고, $\cos \theta > 0$이다.
+$\cos^{2} \theta$$= 1 - \sin^{2} \theta$
+$= 1 - \left( \frac{\sqrt{5}}{5} \right)^{2}$
+$= \frac{4}{5}$
+$\therefore$ $\cos \theta = \frac{2}{5} \sqrt{5}$

@@ -1,0 +1,23 @@
+[문항 ID] trig_1_023
+[자료군] 삼각함수
+[파일 번호] 1
+[원래 문제 번호] 23
+[현재 문제 번호] 23
+[과목] 09 대수
+[단원] 06 삼각함수의 그래프
+[세부 단원] 02 삼각함수의 그래프 활용
+[유형] 01 각 변형1 (각 변형 규칙)
+[출처] 2024년(2025학년도) 평가원 고3공통 11월 > 공통범위 > 6 [3점]
+
+[문제]
+$\cos \left( \frac{\pi}{2} + \theta \right) = - \frac{1}{5}$일 때, $\frac{\sin \theta}{1 - \cos^{2} \theta}$의 값은?
+① $\mathrm{- 5}$		② $- \sqrt{5}$	③ $0$
+④ $\sqrt{5}$		⑤ $5$
+
+[원본 정답·해설]
+[정답] ⑤
+
+[해설]
+$\cos \left( \frac{\pi}{2} + \theta \right) = - \sin \theta = - \frac{1}{5}$에서    $\sin \theta = \frac{1}{5}$
+$1 - \cos^{2} \theta = \sin^{2} \theta = \frac{1}{25}$
+$\therefore$ $\frac{\sin \theta}{1 - \cos^{2} \theta}$$= 5$

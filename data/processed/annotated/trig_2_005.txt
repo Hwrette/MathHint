@@ -1,0 +1,26 @@
+[문항 ID] trig_2_005
+[자료군] 삼각함수
+[파일 번호] 2
+[원래 문제 번호] 5
+[현재 문제 번호] 5
+[과목] 09 대수
+[단원] 05 삼각함수의 정의
+[세부 단원] 02 삼각함수의 정의 및 활용
+[유형] 06 정의6 (삼각함수 사이의 관계. 값 구하기)
+[출처] 2021년(2022학년도) 평가원 고3공통 9월 > 공통범위 > 6 [3점]
+
+[문제]
+${\frac{\pi}{2} < \theta < \pi}$인 $\theta$에 대하여 $\frac{\sin \theta}{1 - \sin \theta} - \frac{\sin \theta}{1 + \sin \theta} = 4$일 때, $\cos \theta$의 값은?
+① $- \frac{\sqrt{3}}{3}$	② $- \frac{1}{3}$		③ $0$
+④ $\frac{1}{3}$		⑤ $\frac{\sqrt{3}}{3}$
+
+[원본 정답·해설]
+[정답] ①
+
+[해설]
+$\frac{\sin \theta}{1 - \sin \theta} - \frac{\sin \theta}{1 + \sin \theta} = 4$에서
+$\frac{\sin \theta \left( 1 + \sin \theta \right) - \sin \theta \left( 1 - \sin \theta \right)}{\left( 1 - \sin \theta \right) \left( 1 + \sin \theta \right)} = 4$
+$\frac{2 \sin^{2} \theta}{1 - \sin^{2} \theta} = 4$, $\frac{2 \left( 1 - \cos^{2} \theta \right)}{\cos^{2} \theta} = 4$
+$1 - \cos^{2} \theta = 2 \cos^{2} \theta$
+따라서 $\cos^{2} \theta = \frac{1}{3}$이고, $\frac{\pi}{2} < \theta < \pi$이므로
+$\cos \theta = - \frac{\sqrt{3}}{3}$

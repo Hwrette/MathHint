@@ -1,0 +1,24 @@
+[문항 ID] trig_1_005
+[자료군] 삼각함수
+[파일 번호] 1
+[원래 문제 번호] 5
+[현재 문제 번호] 5
+[과목] 09 대수
+[단원] 05 삼각함수의 정의
+[세부 단원] 02 삼각함수의 정의 및 활용
+[유형] 06 정의6 (삼각함수 사이의 관계. 값 구하기)
+[출처] 2024년 교육청 고3공통 3월 > 공통범위 > 3 [3점]
+
+[문제]
+$\cos \theta > 0$이고 $\sin \theta + \cos \theta \tan \theta = - 1$일 때, $\tan \theta$의 값은?
+① $- \sqrt{3}$	② $- \frac{\sqrt{3}}{3}$	③ $\frac{\sqrt{3}}{3}$
+④ $\mathrm{1}$		⑤ $\sqrt{3}$
+
+[원본 정답·해설]
+[정답] ②
+
+[해설]
+$\sin \theta + \cos \theta \tan \theta = - 1$에서
+$\sin \theta + \cos \theta \times \frac{\sin \theta}{\cos \theta} = - 1$이므로 $\sin \theta = - \frac{1}{2}$
+$\cos^{2} \theta = 1 - \sin^{2} \theta = \frac{3}{4}$이고 $\cos \theta > 0$이므로 $\cos \theta = \frac{\sqrt{3}}{2}$
+따라서 $\tan \theta = \frac{\sin \theta}{\cos \theta} = \frac{- \frac{1}{2}}{\frac{\sqrt{3}}{2}} = - \frac{\sqrt{3}}{3}$

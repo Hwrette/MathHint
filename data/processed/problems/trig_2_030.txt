@@ -1,0 +1,3 @@
+$0 \leq x < 2 \pi$일 때, 곡선 $y = \left| 4 \sin 3 x + 2 \right|$와 직선 $y = 2$가 만나는 서로 다른 점의 개수는?
+① $\mathrm{3}$		② $\mathrm{6}$		③ $\mathrm{9}$
+④ $\mathrm{12}$		⑤ $\mathrm{15}$

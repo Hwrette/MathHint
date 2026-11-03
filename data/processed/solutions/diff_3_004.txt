@@ -1,0 +1,6 @@
+[정답] $16$
+
+[해설]
+$\lim_{x \rightarrow 1} \frac{g (x)}{x^{2} - 1} = \frac{1}{2}$이므로 $\lim_{x \rightarrow 1} \frac{x^{2} - 1}{g (x)} = 2$
+$\lim_{x \rightarrow 1} \frac{(x + 1) f (x)}{g (x)} = \lim_{x \rightarrow 1} \left\{ \frac{f (x)}{x - 1} \times \frac{x^{2} - 1}{g (x)} \right\}$
+$= 8 \times 2 = 16$

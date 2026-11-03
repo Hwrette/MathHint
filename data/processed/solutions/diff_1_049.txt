@@ -1,0 +1,17 @@
+[정답] ⑤
+
+[해설]
+점 $\mathrm{P}$의 시각 $t$에서의 위치를 $x \left( t \right)$라 하면
+$x \left( t \right) = t^{3} - t^{2} - t + 1$
+ㄱ. $x \left( 1 \right) = 1 - 1 - 1 + 1 = 0$			(거짓)
+ㄴ. $t$초 후 속도를 $v$라 하면
+$v = \frac{d x}{d t} = 3 t^{2} - 2 t - 1$
+이때 시각 $t = 1$일 때 점 $\mathrm{P}$의 속도는 $0$이다.
+(참)
+ㄷ. 운동 방향을 바꾸는 순간의 속도는 $0$이므로
+$3 t^{2} - 2 t - 1 = 0$,    $\left( t - 1 \right) \left( 3 t + 1 \right)$$= 0$
+$\therefore \quad$$t = 1$$\left( \because \quad t > 0 \right)$
+이때 점 $\mathrm{P}$의 가속도를 $a$라 하면
+$a = \frac{d v}{d t} = 6 t - 2$
+따라서 $t = 1$일 때 점 $\mathrm{P}$의 가속도는 $4$이다.	(참)
+이상에서 옳은 것은 ㄴ, ㄷ이다.

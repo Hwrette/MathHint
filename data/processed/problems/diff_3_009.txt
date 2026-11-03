@@ -1,0 +1,5 @@
+함수
+$f (x) = \left\{\begin{array}{lll}x - 1 &  & (x < 2) \\ x^{2} - a x + 3 &  & (x \geq 2)\end{array}\right.$
+가 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?
+① $\mathrm{1}$		② $\mathrm{2}$		③ $\mathrm{3}$
+④ $\mathrm{4}$		⑤ $\mathrm{5}$

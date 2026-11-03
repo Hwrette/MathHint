@@ -1,0 +1,14 @@
+[정답] ①
+
+[해설]
+$\lim_{h \rightarrow 0} \frac{g \left( 1 + h \right) - 4}{h} = 9$이고 $\lim_{h \rightarrow 0} h = 0$이므로
+$\lim_{h \rightarrow 0} \left( g \left( 1 + h \right) - 4 \right) = 0$
+함수 $g \left( x \right) = \left( x^{2} + x \right) f \left( x \right)$가 다항함수이므로
+$\lim_{h \rightarrow 0} \left( g \left( 1 + h \right) - 4 \right) = g \left( 1 \right) - 4 = 0$에서
+$g \left( 1 \right) = 2 f \left( 1 \right) = 4$, $f \left( 1 \right) = 2$
+$\lim_{h \rightarrow 0} \frac{g \left( 1 + h \right) - 4}{h} = \lim_{h \rightarrow 0} \frac{g \left( 1 + h \right) - g \left( 1 \right)}{h} = g' \left( 1 \right)$이므로
+$g' \left( 1 \right) = 9$
+또한 $g' \left( x \right) = \left( 2 x + 1 \right) f \left( x \right) + \left( x^{2} + x \right) f' \left( x \right)$에서
+$g' \left( 1 \right) = 3 f \left( 1 \right) + 2 f' \left( 1 \right) = 6 + 2 f' \left( 1 \right)$이므로
+$f' \left( 1 \right) = \frac{3}{2}$
+따라서 $f \left( 1 \right) \times f' \left( 1 \right) = 2 \times \frac{3}{2} = 3$

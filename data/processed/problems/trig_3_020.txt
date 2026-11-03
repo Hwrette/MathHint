@@ -1,0 +1,3 @@
+$0 \leq x < 2 \pi$일 때, 방정식 $\sin x = \sqrt{3} \left( 1 + \cos x \right)$의 모든 해의 합은?
+① $\frac{\pi}{3}$		② $\frac{2}{3} \pi$		③ $\pi$
+④ $\frac{4}{3} \pi$		⑤ $\frac{5}{3} \pi$

@@ -1,0 +1,17 @@
+[정답] $14$
+
+[해설]
+함수 $f \left( x \right)$는 $x = 1$에서 극대이므로 $f' \left( 1 \right) = 0$
+$a = 9$
+$f' \left( x \right) = 3 \left( x - 1 \right) \left( x - 3 \right)$
+$f' \left( x \right) = 0$에서 $x = 1$ 또는 $x = 3$
+함수 $f \left( x \right)$의 증가와 감소를 표로 나타내면
+
+$x$	$\cdots$	$1$	$\cdots$	$3$	$\cdots$
+$f' \left( x \right)$	$+$	$0$	$-$	$0$	$+$
+$f \left( x \right)$	$\nearrow$	극대	$\searrow$	극소	$\nearrow$
+
+함수 $f \left( x \right)$는 $x = 3$에서 극솟값 $5$를 가지므로
+$f \left( 3 \right) = 27 - 54 + 27 + b = 5$에서
+$b = 5$
+따라서 $a + b = 9 + 5 = 14$

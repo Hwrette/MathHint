@@ -1,0 +1,9 @@
+[정답] ③
+
+[해설]
+(ⅰ) $2^{x} - 8 < 0$이고 $\cos x - \frac{1}{2} > 0$인 경우
+$0 < x < 3$이고 $0 < x < \frac{\pi}{3}$이므로 $0 < x < \frac{\pi}{3}$
+(ⅱ) $2^{x} - 8 > 0$이고 $\cos x - \frac{1}{2} < 0$인 경우
+$3 < x < \pi$이고 $\frac{\pi}{3} < x < \pi$이므로 $3 < x < \pi$
+따라서 $0 < x < \frac{\pi}{3}$ 또는 $3 < x < \pi$이므로
+$\left( b - a \right) + \left( d - c \right)$$= \left( \frac{\pi}{3} - 0 \right) + \left( \pi - 3 \right)$$= \frac{4 \pi}{3} - 3$

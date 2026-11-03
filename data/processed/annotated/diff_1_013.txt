@@ -1,0 +1,29 @@
+[문항 ID] diff_1_013
+[자료군] 미분
+[파일 번호] 1
+[원래 문제 번호] 13
+[현재 문제 번호] 13
+[과목] 10 미적분1
+[단원] 02 함수의 연속성
+[세부 단원] 01 함수의 연속성
+[유형] 05 연속성5 (구간정의함수)
+[출처] 2026년 교육청 고3 공통 07월 > 4 [3점]
+
+[문제]
+함수
+$f \left( x \right) = \left\{\begin{array}{lll}2 x + a &  & \left( x < 1 \right) \\ x^{2} - a x + 11 &  & \left( x \ge 1 \right)\end{array}\right.$
+이 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?
+① $1$		② $2$		③ $3$
+④ $4$		⑤ $5$
+
+[원본 정답·해설]
+[정답] ⑤
+
+[해설]
+함수 $f \left( x \right)$가 실수 전체의 집합에서 연속이므로 $x = 1$에서 연속이다.
+$\lim_{x \rightarrow 1 -} f \left( x \right) = \lim_{x \rightarrow 1 +} f \left( x \right) = f \left( 1 \right)$
+$\lim_{x \rightarrow 1 -} f \left( x \right) = \lim_{x \rightarrow 1 -} \left( 2 x + a \right) = 2 + a$
+$\lim_{x \rightarrow 1 +} f \left( x \right) = \lim_{x \rightarrow 1 +} \left( x^{2} - a x + 11 \right) = 12 - a$
+$f \left( 1 \right) = 12 - a$
+$2 + a = 12 - a$, $2 a = 10$
+따라서 $a = 5$

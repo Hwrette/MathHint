@@ -1,0 +1,21 @@
+[정답] ③
+
+[해설]
+시각 $t \quad \left( t \ge 0 \right)$에서의 두 점 ${\mathrm{{P}}}$, ${\mathrm{{Q}}}$ 사이의 거리는
+$\left| x_{1} - x_{2} \right| = \left| t^{3} - \frac{15}{2} t^{2} + 12 t + 10 \right|$
+$f \left( t \right) = t^{3} - \frac{15}{2} t^{2} + 12 t + 10 \quad \left( t \ge 0 \right)$이라 하면
+$f' \left( t \right) = 3 t^{2} - 15 t + 12 = 3 \left( t - 1 \right) \left( t - 4 \right)$
+함수 $f \left( t \right)$의 증가와 감소를 표로 나타내면 다음과 같다.
+
+$t$	$0$	$\cdots$	$1$	$\cdots$	$4$	$\cdots$
+$f' \left( t \right)$		$+$	$0$	$-$	$0$	$+$
+$f \left( t \right)$	$10$	$\nearrow$	극대	$\searrow$	극소	$\nearrow$
+
+$t \ge 0$에서 함수 $f \left( t \right)$의 최솟값이 $f \left( 4 \right) = 2$이므로 $f \left( t \right) > 0$
+$\left| x_{1} - x_{2} \right| = t^{3} - \frac{15}{2} t^{2} + 12 t + 10$이고
+두 점 ${\mathrm{{P}}}$, ${\mathrm{{Q}}}$ 사이의 거리는 $t = 4$에서 최소이다.
+시각 $t \quad \left( t \ge 0 \right)$에서의 점 ${\mathrm{{P}}}$의 속도와 가속도를 각각 $v \left( t \right)$, $a \left( t \right)$라 하면
+$v \left( t \right) = \frac{d x_{1}}{d t} = 3 t^{2} - 10 t + 10$
+$a \left( t \right) = v' \left( t \right) = 6 t - 10$
+따라서 $t = 4$에서의 점 ${\mathrm{{P}}}$의 가속도는
+$a \left( 4 \right) = 6 \times 4 - 10 = 14$

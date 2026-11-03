@@ -1,0 +1,24 @@
+[문항 ID] diff_1_021
+[자료군] 미분
+[파일 번호] 1
+[원래 문제 번호] 21
+[현재 문제 번호] 21
+[과목] 10 미적분1
+[단원] 03 미분계수와 도함수
+[세부 단원] 02 도함수의 정의와 미분법 공식
+[유형] 05 미분법 공식4 (곱의 미분법)
+[출처] 2026년 교육청 고3 공통 07월 > 5 [3점]
+
+[문제]
+다항함수 $f \left( x \right)$에 대하여 함수 $g \left( x \right)$를
+$g \left( x \right) = \left( x^{2} + 2 x \right) f \left( x \right)$
+라 하자. $f \left( 1 \right) = 2$, $f' \left( 1 \right) = 1$일 때, $g' \left( 1 \right)$의 값은?
+① $5$		② $7$		③ $9$
+④ $11$		⑤ $13$
+
+[원본 정답·해설]
+[정답] ④
+
+[해설]
+$g' \left( x \right) = \left( 2 x + 2 \right) f \left( x \right) + \left( x^{2} + 2 x \right) f' \left( x \right)$
+$g' \left( 1 \right) = 4 f \left( 1 \right) + 3 f' \left( 1 \right) = 4 \times 2 + 3 \times 1 = 11$

@@ -1,0 +1,5 @@
+[정답] ⑤
+
+[해설]
+$g' \left( x \right) = 2 x f \left( x \right) + \left( x^{2} - 1 \right) f' \left( x \right)$
+$g' \left( 1 \right) = 2 f \left( 1 \right) + 0 \times f' \left( 1 \right) = 2 \times 5 = 10$

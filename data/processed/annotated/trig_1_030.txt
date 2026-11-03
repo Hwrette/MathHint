@@ -1,0 +1,27 @@
+[문항 ID] trig_1_030
+[자료군] 삼각함수
+[파일 번호] 1
+[원래 문제 번호] 30
+[현재 문제 번호] 30
+[과목] 09 대수
+[단원] 06 삼각함수의 그래프
+[세부 단원] 02 삼각함수의 그래프 활용
+[유형] 01 각 변형1 (각 변형 규칙)
+[출처] 2025년 교육청 고3공통 10월 > 공통범위 > 6 [3점]
+
+[문제]
+$\pi < \theta < \frac{3}{2} \pi$인 $\theta$에 대하여 $\tan \left( \pi - \theta \right) = - 2$일 때, $\cos \theta - \sin \theta$의 값은?
+① $- \frac{\sqrt{5}}{5}$	② $- \frac{\sqrt{5}}{10}$	③ $0$
+④ $\frac{\sqrt{5}}{10}$	⑤ $\frac{\sqrt{5}}{5}$
+
+[원본 정답·해설]
+[정답] ⑤
+
+[해설]
+$\tan \left( \pi - \theta \right) = - \tan \theta = - 2$에서 $\tan \theta = 2$
+$\frac{\sin \theta}{\cos \theta} = 2$에서 $\sin \theta = 2 \cos \theta$
+$\sin^{2} \theta + \cos^{2} \theta = 1$에서
+$4 \cos^{2} \theta + \cos^{2} \theta = 1$, $\cos^{2} \theta = \frac{1}{5}$
+$\pi < \theta < \frac{3}{2} \pi$이므로 $\cos \theta < 0$, $\sin \theta < 0$
+$\cos \theta = - \frac{\sqrt{5}}{5}$이므로 $\sin \theta = 2 \cos \theta = - \frac{2 \sqrt{5}}{5}$
+따라서 $\cos \theta - \sin \theta = - \frac{\sqrt{5}}{5} - \left( - \frac{2 \sqrt{5}}{5} \right) = \frac{\sqrt{5}}{5}$

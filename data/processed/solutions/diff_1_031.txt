@@ -1,0 +1,17 @@
+[정답] ②
+
+[해설]
+$f \left( x \right) = 2 x^{3} + a x^{2} - 4 a x$에서
+$f' \left( x \right) = 6 x^{2} + 2 a x - 4 a$
+함수 $f \left( x \right)$가 $x = 1$에서 극소이므로    $f' \left( 1 \right) = 0$
+$6 + 2 a - 4 a = 0$    $\therefore$ $a = 3$
+즉 $f \left( x \right) = 2 x^{3} + 3 x^{2} - 12 x$이므로
+$f' \left( x \right) = 6 x^{2} + 6 x - 12 = 6 \left( x + 2 \right) \left( x - 1 \right)$
+$f' \left( x \right) = 0$에서    $x = - 2$ 또는 $x = 1$
+함수 $f \left( x \right)$의 증가와 감소를 표로 나타내면 다음과 같다.
+
+$x$	$\cdots$	$- 2$	$\cdots$	$1$	$\cdots$
+$f' \left( x \right)$	$+$	$0$	$-$	$0$	$+$
+$f \left( x \right)$	$\nearrow$	$20$	$\searrow$	$- 7$	$\nearrow$
+
+따라서 함수 $f \left( x \right)$는 $x = - 2$에서 극댓값 $20$을 갖는다.

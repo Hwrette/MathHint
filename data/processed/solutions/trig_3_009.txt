@@ -1,0 +1,8 @@
+[정답] $4$
+
+[해설]
+$\frac{\pi}{2} < \theta < \pi$인 $\theta$에 대하여 $\tan \theta = - \frac{4}{3}$이므로 $\sin \theta = \frac{4}{5}$
+$5 \sin \left( \pi + \theta \right) + 10 \cos \left( \frac{\pi}{2} - \theta \right)$
+$= - 5 \sin \theta + 10 \sin \theta$
+$= 5 \sin \theta$
+$= 4$

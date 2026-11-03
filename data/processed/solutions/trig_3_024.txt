@@ -1,0 +1,11 @@
+[정답] ④
+
+[해설]
+$2 \sin^{2} x + 3 \cos x = 3$
+$2 \left( 1 - \cos^{2} x \right) + 3 \cos x = 3$
+$2 \cos^{2} x - 3 \cos x + 1 = 0$
+$\left( \cos x - 1 \right) \left( 2 \cos x - 1 \right) = 0$
+$\cos x = 1$ 또는 $\cos x = \frac{1}{2}$
+이때, $0 \leq x < 2 \pi$이므로
+$x = 0$ 또는 $x = \frac{\pi}{3}$ 또는 $x = \frac{5}{3} \pi$
+따라서, 모든 해의 합은 $2 \pi$이다.

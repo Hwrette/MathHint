@@ -1,0 +1,10 @@
+[정답] ④
+
+[해설]
+$\sin \left( \frac{\pi}{2} - \theta \right) = \cos \theta$, $\tan \left( \pi + \theta \right) = \tan \theta$이므로
+$2 \sin \left( \frac{\pi}{2} - \theta \right) = \sin \theta \times \tan \left( \pi + \theta \right)$에서
+$2 \cos \theta = \sin \theta \times \tan \theta$
+$2 \cos \theta = \sin \theta \times \frac{\sin \theta}{\cos \theta}$
+$2 \cos^{2} \theta = \sin^{2} \theta$
+$\sin^{2} \theta + \cos^{2} \theta = 1$이므로 $2 \left( 1 - \sin^{2} \theta \right) = \sin^{2} \theta$
+따라서 $\sin^{2} \theta = \frac{2}{3}$

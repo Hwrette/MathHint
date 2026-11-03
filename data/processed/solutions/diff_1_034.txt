@@ -1,0 +1,16 @@
+[정답] $8$
+
+[해설]
+$f \left( x \right) = 3 x^{3} - 9 x^{2} + a$에서
+$f' \left( x \right) = 9 x^{2} - 18 x = 9 x \left( x - 2 \right)$
+$f' \left( x \right) = 0$에서    $x = 0$ 또는 $x = 2$
+함수 $f (x)$의 증가와 감소를 표로 나타내면 다음과 같다.
+
+$x$	$\cdots$	$0$	$\cdots$	$2$	$\cdots$
+$f' (x)$	$+$	$0$	$-$	$0$	$+$
+$f (x)$	$\nearrow$	$a$	$\searrow$	$- 12 + a$	$\nearrow$
+
+이때 함수 $f \left( x \right)$는 $x = 0$일 때 극댓값 $20$을 가지므로
+$f \left( 0 \right) = a = 20$
+따라서 함수 $f \left( x \right)$의 극솟값은
+$f \left( 2 \right) = - 12 + a = - 12 + 20 = 8$

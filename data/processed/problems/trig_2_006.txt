@@ -1,0 +1,3 @@
+$\frac{\pi}{2} < \theta < \pi$인 $\theta$에 대하여 $\sin \theta \cos \theta = - \frac{12}{25}$일 때, $\sin \theta - \cos \theta$의 값은?
+① $\frac{4}{5}$	② $1$		③ $\frac{6}{5}$
+④ $\frac{7}{5}$	⑤ $\frac{8}{5}$

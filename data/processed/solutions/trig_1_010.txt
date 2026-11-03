@@ -1,0 +1,18 @@
+[정답] ④
+
+[해설]
+$\frac{\pi}{2} < t < \pi$인 실수 $t$에 대하여 이차방정식
+$5 x^{2} + x + k = 0$이 두 실근 $\sin t$, $\cos t$를 가지므로
+$\sin t + \cos t = - \frac{1}{5}$, $\sin t \cos t = \frac{k}{5}$이다.
+$\left( \sin t + \cos t \right)^{2} = \frac{1}{25}$
+$\sin^{2} t + 2 \sin t \cos t + \cos^{2} t = \frac{1}{25}$
+이고 $\sin^{2} t + \cos^{2} t = 1$이므로
+$\sin t \cos t = - \frac{12}{25}$이다.
+$\frac{k}{5} = - \frac{12}{25}$에서 $k = - \frac{12}{5}$이다.
+$\frac{\pi}{2} < t < \pi$에서 $\sin t > 0$, $\cos t < 0$이므로
+이차방정식
+$5 x^{2} + x - \frac{12}{5} = 0$,
+$25 x^{2} + 5 x - 12 = 0$,
+$\left( 5 x - 3 \right) \left( 5 x + 4 \right) = 0$
+의 두 실근은 $\sin t = \frac{3}{5}$, $\cos t = - \frac{4}{5}$이다. $\tan t = \frac{\sin t}{\cos t} = \frac{3}{5} \times \left( - \frac{5}{4} \right) = - \frac{3}{4}$이다.
+따라서 $k \times \tan t = \left( - \frac{12}{5} \right) \times \left( - \frac{3}{4} \right) = \frac{9}{5}$이다.

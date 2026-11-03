@@ -1,0 +1,3 @@
+$0 \leq x \leq 2 \pi$일 때, 방정식 $\tan 2 x \sin 2 x = \frac{3}{2}$의 모든 해의 합은?
+① $2 \pi$		② $\frac{5}{2} \pi$		③ $3 \pi$
+④ $\frac{7}{2} \pi$	⑤ $4 \pi$

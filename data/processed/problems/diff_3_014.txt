@@ -1,0 +1,5 @@
+함수
+$f (x) = \left\{\begin{array}{lll}x - 4 &  & (x < a) \\ x + 3 &  & (x \geq a)\end{array}\right.$
+에 대하여 함수 $| f (x) |$가 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?
+① $- 1$		② $- \frac{1}{2}$		③ $\mathrm{0}$
+④ $\frac{1}{2}$		⑤ $\mathrm{1}$

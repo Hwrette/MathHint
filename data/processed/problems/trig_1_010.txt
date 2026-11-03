@@ -1,0 +1,5 @@
+$\frac{\pi}{2} < t < \pi$인 실수 $t$에 대하여 이차방정식
+$5 x^{2} + x + k = 0 \quad \left( k \right.$는 상수$\left.  \right)$
+가 두 실근 $\sin t$, $\cos t$를 가질 때, $k \times \tan t$의 값은?
+① $\frac{3}{2}$		② $\frac{9}{5}$		③ $\frac{21}{10}$
+④ $\frac{12}{5}$		⑤ $\frac{27}{10}$

@@ -1,0 +1,27 @@
+[문항 ID] diff_2_014
+[자료군] 미분
+[파일 번호] 2
+[원래 문제 번호] 14
+[현재 문제 번호] 14
+[과목] 10 미적분1
+[단원] 03 미분계수와 도함수
+[세부 단원] 02 도함수의 정의와 미분법 공식
+[유형] 05 미분법 공식4 (곱의 미분법)
+[출처] 2023년 교육청 고2공통 11월 > 12 [3점]
+
+[문제]
+다항함수 $f (x)$에 대하여 함수 $g (x)$를
+$g \left( x \right) = \left( x^{2} - 2 x \right) f \left( x \right)$
+라 하자. $g' (0) + g' (2) = 16$일 때, $f (2) - f (0)$의 값은?
+① $\mathrm{6}$		② $\mathrm{8}$		③ $\mathrm{10}$
+④ $\mathrm{12}$		⑤ $\mathrm{14}$
+
+[원본 정답·해설]
+[정답] ②
+
+[해설]
+$g \left( x \right) = \left( x^{2} - 2 x \right) f \left( x \right)$의 양변을 $x$에 대하여 미분하면
+$g' \left( x \right) = \left( 2 x - 2 \right) f \left( x \right) + \left( x^{2} - 2 x \right) f' \left( x \right)$
+$g' \left( 0 \right) = - 2 f \left( 0 \right)$, $g' \left( 2 \right) = 2 f \left( 2 \right)$
+$g' \left( 0 \right) + g' \left( 2 \right) = 2 \left\{ - f \left( 0 \right) + f \left( 2 \right) \right\} = 16$
+따라서 $f \left( 2 \right) - f \left( 0 \right) = 8$

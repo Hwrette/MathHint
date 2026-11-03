@@ -1,0 +1,9 @@
+[정답] ①
+
+[해설]
+함수 $\left\{ f \left( x \right) \right\}^{2}$이 실수 전체의 집합에서 연속이 되려면 $x = 2$에서 연속이어야 한다.
+$\lim_{x \rightarrow 2 -} \left\{ f \left( x \right) \right\}^{2} = \lim_{x \rightarrow 2 +} \left\{ f \left( x \right) \right\}^{2} = \left\{ f \left( 2 \right) \right\}^{2}$이어야 하므로
+$\lim_{x \rightarrow 2 -} \left\{ f \left( x \right) \right\}^{2} = \left( 5 - 2 a \right)^{2}$, $\lim_{x \rightarrow 2 +} \left\{ f \left( x \right) \right\}^{2} = 1$, $\left\{ f (2) \right\}^{2} = 1$
+에서 $\left( 5 - 2 a \right)^{2} = 1$
+따라서 $a = 2$ 또는 $a = 3$
+모든 상수 $a$의 값의 합은 $2 + 3 = 5$이다.

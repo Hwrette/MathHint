@@ -1,0 +1,13 @@
+[정답] $8$
+
+[해설]
+조건 (가)에서 $f \left( x \right) \ge 0$이고, 조건 (나)에서 방정식 $f \left( x \right) = 0$의 실근이 존재하므로 함수 $f \left( x \right)$의 최솟값은 $0$이다.
+수 $f \left( x \right) = a \sin b x + 8 - a$의 최솟값은 $8 - 2 a$이므로
+$8 - 2 a = 0$,    $a = 4$
+조건 (나)에서 $0 \leq x < 2 \pi$일 때, 방정식 $\sin b x = - 1$의 서로 다른 실근의 개수가 $4$이므로 방정식 $\sin b x = - 1$의 해는
+$b x = \frac{3}{2} \pi$, $2 \pi + \frac{3}{2} \pi$, $4 \pi + \frac{3}{2} \pi$, $6 \pi + \frac{3}{2} \pi$
+뿐이어야 한다.
+$x < 2 \pi$이므로    $6 \pi + \frac{3}{2} \pi < 2 \pi b \leq 8 \pi + \frac{3}{2} \pi$
+따라서 $3 + \frac{3}{4} < b \leq 4 + \frac{3}{4}$이고 $b$는 자연수이므로
+$b = 4$
+$\therefore$ $a + b = 8$

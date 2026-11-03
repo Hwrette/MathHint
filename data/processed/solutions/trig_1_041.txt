@@ -1,0 +1,8 @@
+[정답] $36$
+
+[해설]
+$f \left( g \left( x \right) \right) = g \left( x \right)$에서 $g \left( x \right) = t \quad \left( - 1 \leq t \leq 1 \right)$이라 하면 $f \left( t \right) = t$에서 $2 t^{2} + 2 t - 1 = t$, $\left( 2 t - 1 \right) \left( t + 1 \right) = 0$
+$t = \frac{1}{2}$ 또는 $t = - 1$이므로 $g \left( x \right) = \frac{1}{2}$ 또는 $g \left( x \right) = - 1$
+함수 $g \left( x \right) = \cos \frac{\pi}{3} x$의 주기는 $\mathrm{6}$이고, $g \left( 1 \right) = g \left( 5 \right) = \frac{1}{2}$, $g \left( 3 \right) = - 1$이다.
+
+그러므로 $0 \leq x < 12$에서 $g \left( 7 \right) = g \left( 11 \right) = \frac{1}{2}$, $g \left( 9 \right) = - 1$이다. 따라서 구하는 모든 실수 $x$의 값의 합은 $1 + 3 + 5 + 7 + 9 + 11 = 36$

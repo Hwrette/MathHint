@@ -1,0 +1,29 @@
+[정답] ①
+
+[해설]
+$f' \left( x \right) = 3 x^{2} + 6 a x = 3 x \left( x + 2 a \right)$
+$f' \left( x \right) = 0$에서 $x = - 2 a$ 또는 $x = 0$
+(ⅰ) $a > 0$인 경우
+함수 $f \left( x \right)$의 증가와 감소를 표로 나타내면
+
+$x$	$\cdots$	$- 2 a$	$\cdots$	$0$	$\cdots$
+$f' \left( x \right)$	$+$	$0$	$-$	$0$	$+$
+$f \left( x \right)$	$\nearrow$	극대	$\searrow$	극소	$\nearrow$
+
+함수 $f \left( x \right)$는 $x = 0$에서 극솟값을 가지므로
+$f \left( 0 \right) = 4 a = - 40$
+$a = - 10 < 0$이므로 조건을 만족시키지 않는다.
+(ⅱ) $a < 0$인 경우
+함수 $f \left( x \right)$의 증가와 감소를 표로 나타내면
+
+$x$	$\cdots$	$0$	$\cdots$	$- 2 a$	$\cdots$
+$f' \left( x \right)$	$+$	$0$	$-$	$0$	$+$
+$f \left( x \right)$	$\nearrow$	극대	$\searrow$	극소	$\nearrow$
+
+함수 $f \left( x \right)$는 $x = - 2 a$에서 극솟값을 가지므로
+$f \left( - 2 a \right)$$= \left( - 2 a \right)^{3} + 3 a \times \left( - 2 a \right)^{2} + 4 a$
+$= 4 a^{3} + 4 a = - 40$
+$a^{3} + a + 10 = 0$, $\left( a + 2 \right) \left( a^{2} - 2 a + 5 \right) = 0$
+$a = - 2$
+(ⅰ), (ⅱ)에서 $a = - 2$이고 $f \left( x \right) = x^{3} - 6 x^{2} - 8$
+따라서 $f \left( 2 \right) = 2^{3} - 6 \times 2^{2} - 8 = - 24$

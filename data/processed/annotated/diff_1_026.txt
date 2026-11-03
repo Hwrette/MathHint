@@ -1,0 +1,30 @@
+[문항 ID] diff_1_026
+[자료군] 미분
+[파일 번호] 1
+[원래 문제 번호] 26
+[현재 문제 번호] 26
+[과목] 10 미적분1
+[단원] 04 접선의 방정식
+[세부 단원] 01 접선의 방정식
+[유형] 01 접점1 (접선의 방정식)
+[출처] 2026년 교육청 고3 공통 07월 > 9 [4점]
+
+[문제]
+양수 $t$에 대하여 함수 $f \left( x \right) = 2 x^{3} - 7 x^{2} + 1$의 그래프 위의 점 $\left( t , f \left( t \right) \right)$에서의 접선이 점 $\left( 0 , 1 \right)$을 지나도록 하는 $t$의 값은?
+① $\frac{3}{4}$		② $1$		③ $\frac{5}{4}$
+④ $\frac{3}{2}$		⑤ $\frac{7}{4}$
+
+[원본 정답·해설]
+[정답] ⑤
+
+[해설]
+$f' \left( x \right) = 6 x^{2} - 14 x$
+함수 $y = f \left( x \right)$의 그래프 위의
+점 $\left( t , f \left( t \right) \right) \quad \left( t > 0 \right)$에서의 접선의 방정식은
+$y = f' \left( t \right) \left( x - t \right) + f \left( t \right)$
+$y = \left( 6 t^{2} - 14 t \right) \left( x - t \right) + 2 t^{3} - 7 t^{2} + 1$
+접선이 점 $\left( 0 , 1 \right)$을 지나므로
+$1 = \left( 6 t^{2} - 14 t \right) \left( 0 - t \right) + 2 t^{3} - 7 t^{2} + 1$
+$1 = - 4 t^{3} + 7 t^{2} + 1$
+$4 t^{3} - 7 t^{2} = t^{2} \left( 4 t - 7 \right) = 0$
+따라서 $t = \frac{7}{4}$

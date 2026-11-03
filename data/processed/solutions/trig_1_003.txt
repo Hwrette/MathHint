@@ -1,0 +1,13 @@
+[정답] ③
+
+[해설]
+점 ${\mathrm{{A}}}$의 좌표를 $\left( - 2 , a \right) \quad \left( a > 0 \right)$이라 하면
+점 ${\mathrm{{B}}}$의 좌표는 $(- 2 , - a)$이고 $\overline{{\mathrm{{O A}}}} = \overline{{\mathrm{{O B}}}} = r$이므로
+$\cos \alpha = - \frac{2}{r}$, $\sin \beta = - \frac{a}{r}$
+$2 \cos \alpha = 3 \sin \beta$에서
+$2 \times \left( - \frac{2}{r} \right) = 3 \times \left( - \frac{a}{r} \right)$
+$a = \frac{4}{3}$
+한편 $\sin \alpha = \frac{a}{r}$, $\cos \beta = - \frac{2}{r}$이므로
+$r \left( \sin \alpha + \cos \beta \right)$$= r \left\{ \frac{a}{r} + \left( - \frac{2}{r} \right) \right\}$
+$= a + \left( - 2 \right) = \frac{4}{3} + \left( - 2 \right)$
+$= - \frac{2}{3}$

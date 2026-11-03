@@ -1,0 +1,3 @@
+두 함수
+$f(x)=\log_3 x+2$, $\left. g \left( x \right) \right. = 3 \tan \left( x + \frac{\pi}{6} \right)$
+가 있다. $0 \leq x \leq \frac{\pi}{6}$에서 정의된 합성함수 $\left( f \circ g \right) \left( x \right)$의 최댓값과 최솟값을 각각 $M$, $m$이라 할 때, $M + m$의 값을 구하시오.

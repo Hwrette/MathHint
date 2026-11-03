@@ -1,0 +1,5 @@
+$0 \le x \le \pi$일 때, 방정식
+$2 \cos^{2} x + \left( 2 + \sqrt{3} \right) \sin x - \left( 2 + \sqrt{3} \right) = 0$
+의 모든 해의 합은?
+① $\frac{3}{4} \pi$		② $\pi$		③ $\frac{5}{4} \pi$
+④ $\frac{3}{2} \pi$		⑤ $\frac{7}{4} \pi$

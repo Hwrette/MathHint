@@ -1,0 +1,27 @@
+[문항 ID] trig_2_018
+[자료군] 삼각함수
+[파일 번호] 2
+[원래 문제 번호] 18
+[현재 문제 번호] 18
+[과목] 09 대수
+[단원] 06 삼각함수의 그래프
+[세부 단원] 02 삼각함수의 그래프 활용
+[유형] 01 각 변형1 (각 변형 규칙)
+[출처] 2023년 교육청 고2공통 11월 > 9 [3점]
+
+[문제]
+$2 \sin \left( \frac{\pi}{2} - \theta \right) = \sin \theta \times \tan \left( \pi + \theta \right)$일 때, $\sin^{2} \theta$의 값은?
+① $\frac{1}{3}$		② $\frac{4}{9}$		③ $\frac{5}{9}$
+④ $\frac{2}{3}$		⑤ $\frac{7}{9}$
+
+[원본 정답·해설]
+[정답] ④
+
+[해설]
+$\sin \left( \frac{\pi}{2} - \theta \right) = \cos \theta$, $\tan \left( \pi + \theta \right) = \tan \theta$이므로
+$2 \sin \left( \frac{\pi}{2} - \theta \right) = \sin \theta \times \tan \left( \pi + \theta \right)$에서
+$2 \cos \theta = \sin \theta \times \tan \theta$
+$2 \cos \theta = \sin \theta \times \frac{\sin \theta}{\cos \theta}$
+$2 \cos^{2} \theta = \sin^{2} \theta$
+$\sin^{2} \theta + \cos^{2} \theta = 1$이므로 $2 \left( 1 - \sin^{2} \theta \right) = \sin^{2} \theta$
+따라서 $\sin^{2} \theta = \frac{2}{3}$

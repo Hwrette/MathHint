@@ -1,0 +1,15 @@
+[정답] $4$
+
+[해설]
+[정답] $4$
+[해설]
+함수 $f \left( x \right) = x^{3} + a x^{2} - 9 x + b$에서
+$f' \left( x \right) = 3 x^{2} + 2 a x - 9$
+함수 $f \left( x \right)$는 $x = 1$에서 극솟값을 가지므로
+$f' \left( 1 \right) = 3 + 2 a - 9 = 0$$\therefore \quad$$a = 3$
+이때
+$f' \left( x \right) = 3 x^{2} + 6 x - 9 = 3 \left( x - 1 \right) \left( x + 3 \right)$
+함수 $f \left( x \right)$는 $x = - 3$에서 극댓값을 가지므로
+$f \left( - 3 \right) = - 27 + 27 + 27 + b = 27 + b$
+$27 + b = 28$에서 $b = 1$
+$\therefore \quad$$a + b = 3 + 1 = 4$

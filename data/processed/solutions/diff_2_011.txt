@@ -1,0 +1,18 @@
+[정답] ②
+
+[해설]
+조건 (가)의 식의 양변에 $x = 0$을 대입하면
+$0 \times f \left( 0 \right) = b$에서 $b = 0$
+조건 (가)의 식의 양변에 $x = 4$를 대입하면
+$2 f \left( 4 \right) = 16 + 4 a$
+조건 (나)에 의하여 $4 = 16 + 4 a$에서 $a = - 3$
+그러므로 $x \geq - \frac{1}{2}$이고 $x \neq 0$인 모든 실수 $x$에
+대하여 $f \left( x \right) = \frac{x \left( x - 3 \right)}{\sqrt{2 x + 1} - 1}$
+함수 $f \left( x \right)$가 실수 전체의 집합에서 연속이므로
+함수 $f \left( x \right)$는 $x = 0$에서 연속이다.
+따라서 $f \left( 0 \right)$$= \lim_{x \rightarrow 0} f \left( x \right)$
+$= \lim_{x \rightarrow 0} \frac{x \left( x - 3 \right)}{\sqrt{2 x + 1} - 1}$
+$= \lim_{x \rightarrow 0} \frac{x \left( x - 3 \right) \left( \sqrt{2 x + 1} + 1 \right)}{\left( \sqrt{2 x + 1} - 1 \right) \left( \sqrt{2 x + 1} + 1 \right)}$
+$= \lim_{x \rightarrow 0} \frac{x \left( x - 3 \right) \left( \sqrt{2 x + 1} + 1 \right)}{2 x}$
+$= \lim_{x \rightarrow 0} \frac{\left( x - 3 \right) \left( \sqrt{2 x + 1} + 1 \right)}{2}$
+$= \frac{- 3 \times 2}{2} = - 3$

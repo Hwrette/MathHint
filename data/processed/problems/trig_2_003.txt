@@ -1,0 +1,4 @@
+좌표평면 위에 두 점 ${\mathrm{{P}}} (a , b)$, $\mathrm{Q} \left( a^{2} , - 2 b^{2} \right) \quad \left( a > 0 , b > 0 \right)$이 있다. 두 동경 ${\mathrm{{O P}}}$, ${\mathrm{{O Q}}}$가 나타내는 각의 크기를 각각 $\theta_{1}$, $\theta_{2}$라 하자. $\tan \theta_{1} + \tan \theta_{2} = 0$일 때, $\sin \theta_{1}$의 값은?
+(단, ${\mathrm{{O}}}$는 원점이고, $x$축의 양의 방향을 시초선으로 한다.)
+① $\frac{2}{5}$		② $\frac{\sqrt{5}}{5}$		③ $\frac{\sqrt{6}}{5}$
+④ $\frac{\sqrt{7}}{5}$	⑤ $\frac{2 \sqrt{2}}{5}$

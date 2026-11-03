@@ -1,0 +1,6 @@
+[정답] ①
+
+[해설]
+$\sin^{2} \theta + \cos^{2} \theta = \left( \frac{\cos \theta}{4} \right)^{2} + \cos^{2} \theta = \frac{17}{16} \cos^{2} \theta = 1$
+$\cos^{2} \theta = \frac{16}{17}$
+$\sin \left( \frac{\pi}{2} + \theta \right) = \cos \theta < 0$이므로 $\cos \theta = - \frac{4 \sqrt{17}}{17}$

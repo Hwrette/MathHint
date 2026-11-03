@@ -1,0 +1,25 @@
+[정답] $9$
+
+[해설]
+함수
+$f \left( x \right) = \left\{\begin{array}{lll}- a x + 2 a &  & \left( x < 2 \right) \\ a x - 2 a &  & \left( x \ge 2 \right)\end{array}\right.$
+에 대하여
+(ⅰ) $k < 2$일 때
+$\lim_{x \rightarrow k} \frac{f \left( x \right) - f \left( k \right)}{x - k}$$= \lim_{x \rightarrow k} \frac{- a x + 2 a - \left( - a k + 2 a \right)}{x - k}$
+$= \lim_{x \rightarrow k} \frac{- a \left( x - k \right)}{x - k} = - a$
+이므로
+$\lim_{x \rightarrow k +} \frac{f \left( x \right) - f \left( k \right)}{x - k} - \lim_{x \rightarrow k -} \frac{f \left( x \right) - f \left( k \right)}{x - k}$
+$= - a - \left( - a \right) = 0 \ne 6$
+(ⅱ) $k = 2$일 때
+$\lim_{x \rightarrow 2 +} \frac{f \left( x \right) - f \left( 2 \right)}{x - 2} - \lim_{x \rightarrow 2 -} \frac{f \left( x \right) - f \left( 2 \right)}{x - 2}$
+$= \lim_{x \rightarrow 2 +} \frac{a x - 2 a}{x - 2} - \lim_{x \rightarrow 2 -} \frac{- a x + 2 a}{x - 2}$
+$= a - \left( - a \right) = 2 a$
+$2 a = 6$에서 $a = 3$
+(ⅲ) $k > 2$일 때
+$\lim_{x \rightarrow k} \frac{f \left( x \right) - f \left( k \right)}{x - k}$$= \lim_{x \rightarrow k} \frac{a x - 2 a - \left( a k - 2 a \right)}{x - k}$
+$= \lim_{x \rightarrow k} \frac{a \left( x - k \right)}{x - k} = a$
+이므로
+$\lim_{x \rightarrow k +} \frac{f \left( x \right) - f \left( k \right)}{x - k} - \lim_{x \rightarrow k -} \frac{f \left( x \right) - f \left( k \right)}{x - k}$
+$= a - a = 0 \ne 6$
+(ⅰ), (ⅱ), (ⅲ)에 의하여 $a = 3$, $k = 2$이므로
+$f \left( a + k \right) = f \left( 3 + 2 \right) = f \left( 5 \right) = 9$

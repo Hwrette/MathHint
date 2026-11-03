@@ -1,0 +1,9 @@
+[정답] ①
+
+[해설]
+동경 ${\mathrm{{O P}}}$가 나타내는 각의 크기가 $\theta$이고 $\overline{{\mathrm{{O P}}}} = r$이므로 $\sin \theta = \frac{a}{r}$이고 $\cos \theta = \frac{5}{r}$이다. $\sin \theta + 2 \cos \theta = 1$에서 $\frac{a}{r} + \frac{10}{r} = 1$이므로
+$r = a + 10$이다. $\cdots \cdots$㉠
+$\sin^{2} \theta + \cos^{2} \theta = 1$에서 $\left( \frac{a}{r} \right)^{2} + \left( \frac{5}{r} \right)^{2} = 1$이므로
+$a^{2} + 25 = r^{2}$이다. $\cdots \cdots$㉡
+㉠, ㉡에 의하여 $a = - \frac{15}{4}$이고 $r = \frac{25}{4}$이다.
+따라서 $a + r = \frac{5}{2}$

@@ -1,0 +1,5 @@
+함수
+$f \left( x \right) = \left\{\begin{array}{lll}\left( x - 2 a \right)^{2} &  & \left( x < a \right) \\ x^{2} - 3 x + 6 &  & \left( x \ge a \right)\end{array}\right.$
+가 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?
+① $1$		② $2$		③ $3$
+④ $4$		⑤ $5$

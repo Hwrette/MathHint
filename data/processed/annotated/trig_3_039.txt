@@ -1,0 +1,32 @@
+[문항 ID] trig_3_039
+[자료군] 삼각함수
+[파일 번호] 3
+[원래 문제 번호] 39
+[현재 문제 번호] 39
+[과목] 09 대수
+[단원] 06 삼각함수의 그래프
+[세부 단원] 03 삼각방정식과 부등식
+[유형] 08 방부등식의 활용1 (이차함수의 활용)
+[출처] 2018년(2019학년도) 평가원 고3이과 11월 > 11 [3점]
+
+[문제]
+$0 \leq \theta < 2 \pi$일 때, $x$에 대한 이차방정식
+$6 x^{2} + \left( 4 \cos \theta \right) x + \sin \theta = 0$
+이 실근을 갖지 않도록 하는 모든 $\theta$의 값의 범위는 $\alpha < \theta < \beta$이다. $3 \alpha + \beta$의 값은?
+① $\frac{5}{6} \pi$		② $\pi$		③ $\frac{7}{6} \pi$
+④ $\frac{4}{3} \pi$		⑤ $\frac{3}{2} \pi$
+
+[원본 정답·해설]
+[정답] ④
+
+[해설]
+실근을 갖지 않기 위해서는 이차방정식 $6 x^{2} + \left( 4 \cos \theta \right) x + \sin \theta = 0$의 판별식 $D < 0$이어야 한다.
+따라서 $\frac D4=\left(2\cos\theta\right)^2-6\sin\theta<0$에서
+$4 \cos^{2} \theta - 6 \sin \theta < 0$, $\left( \cos^{2} \theta = 1 - \sin^{2} \theta \right)$
+$4 (1 - \sin^{2} \theta) - 6 \sin \theta < 0$
+$2 \sin^{2} \theta + 3 \sin \theta - 4 > 0$
+$(2 \sin \theta - 1) (\sin \theta + 2) > 0$
+$\therefore$$\frac{1}{2} < \sin \theta \le 1$$(\because - 1 \le \sin \theta \le 1)$
+$0 \le \theta < 2 \pi$의 범위에서 ㉠을 만족하는 $\theta$의 범위는
+$\therefore \frac{1}{6} \pi < \theta < \frac{5}{6} \pi$
+따라서 $\alpha = \frac{1}{6} \pi , \beta = \frac{5}{6} \pi$이므로 $3 \alpha + \beta = \frac{4}{3} \pi$

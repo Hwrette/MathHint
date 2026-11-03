@@ -1,0 +1,16 @@
+[정답] ③
+
+[해설]
+$0 \le x \le 2 \pi$일 때 주어진 부등식 $\cos x \le \sin \frac{\pi}{7}$을 만족시키는 모든 $x$의 값의 범위는 다음 그림에서와 같이 $\alpha \le x \le \beta$이다.
+
+이때 $\sin \frac{\pi}{7} > 0$이고 함수 $y = \cos x$의 그래프는 직선 $x = \pi$에 대하여 대칭이므로
+$\frac{\pi}{2} - \alpha = \beta - \frac{3}{2} \pi = t$
+로 놓으면
+$\sin \frac{\pi}{7} = \cos \alpha = \cos \left( \frac{\pi}{2} - t \right) = \sin t$$\therefore \quad$$t = \frac{\pi}{7}$
+$\therefore \quad$$\beta - \alpha = \left( \frac{3}{2} \pi + t \right) - \left( \frac{\pi}{2} - t \right) = \frac{9}{7} \pi$
+[다른 풀이]
+$\sin \frac{\pi}{7} = \cos \left( \frac{\pi}{2} - \frac{\pi}{7} \right) = \cos \frac{5}{14} \pi$이므로 부등식 $\cos x \le \sin \frac{\pi}{7}$에서
+$\cos x \le \cos \frac{5}{14} \pi$
+$\therefore \quad$$\frac{5}{14} \pi \le x \le 2 \pi - \frac{5}{14} \pi$
+$\alpha = \frac{5}{14} \pi$, $\beta = \frac{23}{14} \pi$이므로
+$\beta - \alpha = \frac{9}{7} \pi$

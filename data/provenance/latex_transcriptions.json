@@ -1,0 +1,371 @@
+[
+  {
+    "question_id": "diff_1_002",
+    "region": "problem",
+    "raw_sha256": "34785151d04f85d654ba6c45f8f841b7b2ed9bdbf49244eeabc1be3e9fb3f37f",
+    "expected_raw": " lim_{x``rarrow`` inf } left(x-1 right)f left(x right)=12`",
+    "latex": "\\lim_{x \\rightarrow \\infty} \\left( x - 1 \\right) f \\left( x \\right) = 12",
+    "reason": "이 원본의 x→inf 극한 표기에서 inf는 무한대이다. 함수 inf(하한)와 구분해 ∞로 전사한다."
+  },
+  {
+    "question_id": "diff_1_002",
+    "region": "problem",
+    "raw_sha256": "a9323f5cb7da882ba547da4b529a64a60b28b5d5e4543165fc343f5245d76b20",
+    "expected_raw": " lim_{x``rarrow`` inf }{ left(x^{2}-1 right)f left(x right)} over {3x+1}`",
+    "latex": "\\lim_{x \\rightarrow \\infty} \\frac{\\left( x^{2} - 1 \\right) f \\left( x \\right)}{3 x + 1}",
+    "reason": "이 원본의 x→inf 극한 표기에서 inf는 무한대이다. 함수 inf(하한)와 구분해 ∞로 전사한다."
+  },
+  {
+    "question_id": "diff_1_002",
+    "region": "solution",
+    "raw_sha256": "869a3843cb16b7fd57ac2c74d15ed29ca372925e032d0123e5f7983dfc60c14c",
+    "expected_raw": " lim_{x``rarrow`` inf }{ left(x^{2}-1 right)f left(x right)} over {3x+1}",
+    "latex": "\\lim_{x \\rightarrow \\infty} \\frac{\\left( x^{2} - 1 \\right) f \\left( x \\right)}{3 x + 1}",
+    "reason": "이 원본의 x→inf 극한 표기에서 inf는 무한대이다. 함수 inf(하한)와 구분해 ∞로 전사한다."
+  },
+  {
+    "question_id": "diff_1_002",
+    "region": "solution",
+    "raw_sha256": "ccba1d7b305af924c45f94802a1fde3f70a74fc1fce3dbc592fa9be565382338",
+    "expected_raw": "= lim_{x``rarrow`` inf } left {{x+1} over {3x+1} times left(x-1 right)f left(x right) right }",
+    "latex": "= \\lim_{x \\rightarrow \\infty} \\left\\{ \\frac{x + 1}{3 x + 1} \\times \\left( x - 1 \\right) f \\left( x \\right) \\right\\}",
+    "reason": "이 원본의 x→inf 극한 표기에서 inf는 무한대이다. 함수 inf(하한)와 구분해 ∞로 전사한다."
+  },
+  {
+    "question_id": "diff_1_002",
+    "region": "solution",
+    "raw_sha256": "8a9e0d8cdfb717f97ed493e8bb13cb71257c0eca740cce5d6481e6b44d7d53ca",
+    "expected_raw": "= lim_{x``rarrow`` inf } left {{1+{1} over {x}} over {3+{1} over {x}} times left(x-1 right)f left(x right) right }",
+    "latex": "= \\lim_{x \\rightarrow \\infty} \\left\\{ \\frac{1 + \\frac{1}{x}}{3 + \\frac{1}{x}} \\times \\left( x - 1 \\right) f \\left( x \\right) \\right\\}",
+    "reason": "이 원본의 x→inf 극한 표기에서 inf는 무한대이다. 함수 inf(하한)와 구분해 ∞로 전사한다."
+  },
+  {
+    "question_id": "diff_1_003",
+    "region": "problem",
+    "raw_sha256": "c588d6615f539d1b088487a79c42c6edbcdaec8dfdfbe3301a7cdd7991f02f7a",
+    "expected_raw": " lim_{x``rarrow`` inf }{R` left(x right)} over {Q` left(x right)}=`-2",
+    "latex": "\\lim_{x \\rightarrow \\infty} \\frac{R \\left( x \\right)}{Q \\left( x \\right)} = - 2",
+    "reason": "이 원본의 x→inf 극한 표기에서 inf는 무한대이다. 함수 inf(하한)와 구분해 ∞로 전사한다."
+  },
+  {
+    "question_id": "diff_1_003",
+    "region": "solution",
+    "raw_sha256": "f1c3dd14b6a10d1396282d9a706311a8299572e6267e464b2ef892b083baefc2",
+    "expected_raw": " lim_{x``rarrow`` inf }{R` left(x right)} over {Q` left(x right)}= lim_{x``rarrow`` inf }{bx+c} over {2x+a}={b} over {2}`",
+    "latex": "\\lim_{x \\rightarrow \\infty} \\frac{R \\left( x \\right)}{Q \\left( x \\right)} = \\lim_{x \\rightarrow \\infty} \\frac{b x + c}{2 x + a} = \\frac{b}{2}",
+    "reason": "이 원본의 x→inf 극한 표기에서 inf는 무한대이다. 함수 inf(하한)와 구분해 ∞로 전사한다."
+  },
+  {
+    "question_id": "diff_1_044",
+    "region": "solution",
+    "raw_sha256": "1dfbaa41ac572add25b7c9f9a8c622cad5133f954ba2b6fc12933de32581570f",
+    "expected_raw": "rmP{`",
+    "latex": "\\mathrm{P}",
+    "reason": "원문에 있는 수학 내용은 보존하고, 원문 수식의 잘못된 그룹/구분자 또는 문장 사이에 나뉜 괄호를 전사했다."
+  },
+  {
+    "question_id": "diff_2_001",
+    "region": "problem",
+    "raw_sha256": "78461b9e6998b8db7c8a4a626932f825d1178008c87d9a0ba64500916e4edcb7",
+    "expected_raw": " lim _{x ``rarrow``  inf } x f left(x  right)`",
+    "latex": "\\lim_{x \\rightarrow \\infty} x f \\left( x \\right)",
+    "reason": "이 원본의 x→inf 극한 표기에서 inf는 무한대이다. 함수 inf(하한)와 구분해 ∞로 전사한다."
+  },
+  {
+    "question_id": "diff_2_002",
+    "region": "solution",
+    "raw_sha256": "ba5ec51d07a4ac0e951608704431d59a02b21a4e951acc10505a8dc407c501ee",
+    "expected_raw": ")",
+    "latex": ")",
+    "reason": "괄호의 앞부분과 한글 문장이 다른 수식/문자 객체에 나뉘어 있다. 닫는 괄호 문자만 보존한다."
+  },
+  {
+    "question_id": "diff_2_003",
+    "region": "problem",
+    "raw_sha256": "cd3be3457594d86643c7ac2fd994feca6d7835d19a11e8cda7b2bca4e722589d",
+    "expected_raw": " lim _{x ``rarrow``  inf } {f left(x  right)-2 x^{3}} over {x^{2}}= lim _{x ``rarrow`` 0} {f left(x  right)} over {x}=3",
+    "latex": "\\lim_{x \\rightarrow \\infty} \\frac{f \\left( x \\right) - 2 x^{3}}{x^{2}} = \\lim_{x \\rightarrow 0} \\frac{f \\left( x \\right)}{x} = 3",
+    "reason": "이 원본의 x→inf 극한 표기에서 inf는 무한대이다. 함수 inf(하한)와 구분해 ∞로 전사한다."
+  },
+  {
+    "question_id": "diff_2_003",
+    "region": "solution",
+    "raw_sha256": "37f1c3f51c3fa1f7b5844458dd02112640426527f57bd75b5b5433dd1eb8f56c",
+    "expected_raw": " lim _{x ``rarrow``  inf } {f left(x  right)-2 x^{3}} over {x^{2}}=3`",
+    "latex": "\\lim_{x \\rightarrow \\infty} \\frac{f \\left( x \\right) - 2 x^{3}}{x^{2}} = 3",
+    "reason": "이 원본의 x→inf 극한 표기에서 inf는 무한대이다. 함수 inf(하한)와 구분해 ∞로 전사한다."
+  },
+  {
+    "question_id": "diff_2_003",
+    "region": "solution",
+    "raw_sha256": "ba5ec51d07a4ac0e951608704431d59a02b21a4e951acc10505a8dc407c501ee",
+    "expected_raw": ")",
+    "latex": ")",
+    "reason": "괄호의 앞부분과 한글 문장이 다른 수식/문자 객체에 나뉘어 있다. 닫는 괄호 문자만 보존한다."
+  },
+  {
+    "question_id": "diff_2_004",
+    "region": "solution",
+    "raw_sha256": "a286b417dfb4bd1ce4c279474022a50354f2fa287fa38eda612a694e9f33f61e",
+    "expected_raw": "g(x)-f(x)=(x-3)(x+k)  ~ (k",
+    "latex": "g(x)-f(x)=(x-3)(x+k)\\quad(k",
+    "reason": "원문에 있는 수학 내용은 보존하고, 원문 수식의 잘못된 그룹/구분자 또는 문장 사이에 나뉜 괄호를 전사했다."
+  },
+  {
+    "question_id": "diff_2_004",
+    "region": "solution",
+    "raw_sha256": "ba5ec51d07a4ac0e951608704431d59a02b21a4e951acc10505a8dc407c501ee",
+    "expected_raw": ")",
+    "latex": ")",
+    "reason": "괄호의 앞부분과 한글 문장이 다른 수식/문자 객체에 나뉘어 있다. 닫는 괄호 문자만 보존한다."
+  },
+  {
+    "question_id": "diff_2_018",
+    "region": "solution",
+    "raw_sha256": "22c097effd739a7b37c9cd7306eccb5562b3b5ecab2fed2b7c37a07cc1b2302c",
+    "expected_raw": "= lim _{x ``->`` 1-} {} { LEFT (x-1 RIGHT ) LEFT { LEFT (-4b-2 RIGHT )x-3b-2 RIGHT . x-1} over {}",
+    "latex": "=\\lim_{x\\to1^-}\\frac{(x-1)\\{(-4b-2)x-3b-2\\}}{x-1}",
+    "reason": "원문 분수의 빈 분모와 분자에 붙은 x-1의 배치 오류를 바로잡았다. 직전 식의 분모 x-1 및 분자 (-4b-2)x²+bx+3b+2의 인수분해와 대조했다."
+  },
+  {
+    "question_id": "diff_3_005",
+    "region": "solution",
+    "raw_sha256": "94ae0c647b9fd2cc9a7d007077b167e45da67efa33939c38ac4ac2d37cd69de2",
+    "expected_raw": "lim _{x-> 1} {{f LEFT ( x RIGHT ) -3} over {LEFT ( x-1 RIGHT ) LEFT ( x-2 RIGHT )} ",
+    "latex": "\\lim_{x\\to1}\\frac{f(x)-3}{(x-1)(x-2)}",
+    "reason": "원문에 있는 수학 내용은 보존하고, 원문 수식의 잘못된 그룹/구분자 또는 문장 사이에 나뉜 괄호를 전사했다."
+  },
+  {
+    "question_id": "diff_3_005",
+    "region": "solution",
+    "raw_sha256": "b246052d16a99b8d33f58e511bf82e225b5e02c801f5d1e63039e3184ea0cc0b",
+    "expected_raw": "= lim _{x-> 1} {{LEFT ( x-1 RIGHT ) LEFT ( 2x+a+2 RIGHT )} over {LEFT ( x-1 RIGHT ) LEFT ( x-2 RIGHT )}}}",
+    "latex": "=\\lim_{x\\to1}\\frac{(x-1)(2x+a+2)}{(x-1)(x-2)}",
+    "reason": "원문에 있는 수학 내용은 보존하고, 원문 수식의 잘못된 그룹/구분자 또는 문장 사이에 나뉜 괄호를 전사했다."
+  },
+  {
+    "question_id": "diff_3_006",
+    "region": "problem",
+    "raw_sha256": "48dba33c8d18e1402c8d36c2542fe5225c76a102c5c55d98815dee2f61c10f3b",
+    "expected_raw": " lim _{x  ``rarrow``  inf } {f(x)} over {x^{2}}=2",
+    "latex": "\\lim_{x \\rightarrow \\infty} \\frac{f (x)}{x^{2}} = 2",
+    "reason": "이 원본의 x→inf 극한 표기에서 inf는 무한대이다. 함수 inf(하한)와 구분해 ∞로 전사한다."
+  },
+  {
+    "question_id": "diff_3_006",
+    "region": "solution",
+    "raw_sha256": "48dba33c8d18e1402c8d36c2542fe5225c76a102c5c55d98815dee2f61c10f3b",
+    "expected_raw": " lim _{x  ``rarrow``  inf } {f(x)} over {x^{2}}=2",
+    "latex": "\\lim_{x \\rightarrow \\infty} \\frac{f (x)}{x^{2}} = 2",
+    "reason": "이 원본의 x→inf 극한 표기에서 inf는 무한대이다. 함수 inf(하한)와 구분해 ∞로 전사한다."
+  },
+  {
+    "question_id": "diff_3_006",
+    "region": "solution",
+    "raw_sha256": "ba5ec51d07a4ac0e951608704431d59a02b21a4e951acc10505a8dc407c501ee",
+    "expected_raw": ")",
+    "latex": ")",
+    "reason": "괄호의 앞부분과 한글 문장이 다른 수식/문자 객체에 나뉘어 있다. 닫는 괄호 문자만 보존한다."
+  },
+  {
+    "question_id": "diff_3_018",
+    "region": "solution",
+    "raw_sha256": "be3a39c14a25771b613c3d9d5f27de5481debe31756db6397d6b4908e9dee50c",
+    "expected_raw": "f(x)=x^{2}+a x+b(a,`` b",
+    "latex": "f(x)=x^2+ax+b\\quad(a,b",
+    "reason": "원문에 있는 수학 내용은 보존하고, 원문 수식의 잘못된 그룹/구분자 또는 문장 사이에 나뉜 괄호를 전사했다."
+  },
+  {
+    "question_id": "diff_3_018",
+    "region": "solution",
+    "raw_sha256": "ba5ec51d07a4ac0e951608704431d59a02b21a4e951acc10505a8dc407c501ee",
+    "expected_raw": ")",
+    "latex": ")",
+    "reason": "괄호의 앞부분과 한글 문장이 다른 수식/문자 객체에 나뉘어 있다. 닫는 괄호 문자만 보존한다."
+  },
+  {
+    "question_id": "diff_3_024",
+    "region": "solution",
+    "raw_sha256": "86da8405da5d7651d2d7a3dc5d8abc2dabf445e312b5d721b7ad27b3e256890b",
+    "expected_raw": "lim _{x` rarrow `1} {` {(x-1)} =0",
+    "latex": "\\lim_{x\\to1}(x-1)=0",
+    "reason": "원문에 있는 수학 내용은 보존하고, 원문 수식의 잘못된 그룹/구분자 또는 문장 사이에 나뉜 괄호를 전사했다."
+  },
+  {
+    "question_id": "diff_3_024",
+    "region": "solution",
+    "raw_sha256": "b1d7b349733ef7032e0ecf6af1e341f6633a90155c40a5be0206296edc272156",
+    "expected_raw": "lim _{x` rarrow `1} {` { LEFT { f(x)-a+2 RIGHT } }  =0",
+    "latex": "\\lim_{x\\to1}\\{f(x)-a+2\\}=0",
+    "reason": "원문에 있는 수학 내용은 보존하고, 원문 수식의 잘못된 그룹/구분자 또는 문장 사이에 나뉜 괄호를 전사했다."
+  },
+  {
+    "question_id": "diff_3_024",
+    "region": "solution",
+    "raw_sha256": "61f773f63a6a01120fc723aa6a338beb529e773825aec4e6745ae1327b57862e",
+    "expected_raw": "lim _{x` rarrow `1} {`f(x)=f(1)=a-2",
+    "latex": "\\lim_{x\\to1}f(x)=f(1)=a-2",
+    "reason": "원문에 있는 수학 내용은 보존하고, 원문 수식의 잘못된 그룹/구분자 또는 문장 사이에 나뉜 괄호를 전사했다."
+  },
+  {
+    "question_id": "diff_3_024",
+    "region": "solution",
+    "raw_sha256": "851eb350d7174165b6105f4df4bdcf2cd03f13c75f7c6b03f3e3facf4b6409f7",
+    "expected_raw": "lim _{x rarrow 1} {` { LEFT { g(x)+a-2 RIGHT } } =0",
+    "latex": "\\lim_{x\\to1}\\{g(x)+a-2\\}=0",
+    "reason": "원문에 있는 수학 내용은 보존하고, 원문 수식의 잘못된 그룹/구분자 또는 문장 사이에 나뉜 괄호를 전사했다."
+  },
+  {
+    "question_id": "diff_3_024",
+    "region": "solution",
+    "raw_sha256": "b2e8eb7317c6be1e634070e6aad63265f3dacc7170961d3410d5b096902392fc",
+    "expected_raw": "lim _{x rarrow 1} {` {g(x)+a-2} over {x-1} =lim _{x rarrow 1} {` {g(x)-g(1)} over {x-1} = g'(1) =a",
+    "latex": "\\lim_{x\\to1}\\frac{g(x)+a-2}{x-1}=\\lim_{x\\to1}\\frac{g(x)-g(1)}{x-1}=g'(1)=a",
+    "reason": "원문에 있는 수학 내용은 보존하고, 원문 수식의 잘못된 그룹/구분자 또는 문장 사이에 나뉜 괄호를 전사했다."
+  },
+  {
+    "question_id": "diff_3_027",
+    "region": "solution",
+    "raw_sha256": "177fd211a6c9adc4e8b6840d7953511cf7fb8676ce6f9ad5f5653667734f955b",
+    "expected_raw": "g(x)=x^{2}+a x+b(a,`` b",
+    "latex": "g(x)=x^2+ax+b\\quad(a,b",
+    "reason": "원문에 있는 수학 내용은 보존하고, 원문 수식의 잘못된 그룹/구분자 또는 문장 사이에 나뉜 괄호를 전사했다."
+  },
+  {
+    "question_id": "diff_3_027",
+    "region": "solution",
+    "raw_sha256": "ba5ec51d07a4ac0e951608704431d59a02b21a4e951acc10505a8dc407c501ee",
+    "expected_raw": ")",
+    "latex": ")",
+    "reason": "괄호의 앞부분과 한글 문장이 다른 수식/문자 객체에 나뉘어 있다. 닫는 괄호 문자만 보존한다."
+  },
+  {
+    "question_id": "diff_3_029",
+    "region": "solution",
+    "raw_sha256": "042f283a5ed5f62c0fffea8878f312a67e6b4f9bc46d26fabd23712cd1131525",
+    "expected_raw": "lim _{x ``->`` -3-} {{f LEFT ( x RIGHT ) g LEFT ( x RIGHT ) -f LEFT ( -3 RIGHT ) g LEFT ( -3 RIGHT )} over {x+3}",
+    "latex": "\\lim_{x\\to-3^-}\\frac{f(x)g(x)-f(-3)g(-3)}{x+3}",
+    "reason": "원문에 있는 수학 내용은 보존하고, 원문 수식의 잘못된 그룹/구분자 또는 문장 사이에 나뉜 괄호를 전사했다."
+  },
+  {
+    "question_id": "diff_3_029",
+    "region": "solution",
+    "raw_sha256": "e37130a34228e75bf743bdce8e16e27b264c5cd9a255a027be06c7d34e725316",
+    "expected_raw": "= lim _{x ``->`` -3+} {{f LEFT ( x RIGHT ) g LEFT ( x RIGHT ) -f LEFT ( -3 RIGHT ) g LEFT ( -3 RIGHT )} over {x+3}}}",
+    "latex": "=\\lim_{x\\to-3^+}\\frac{f(x)g(x)-f(-3)g(-3)}{x+3}",
+    "reason": "원문에 있는 수학 내용은 보존하고, 원문 수식의 잘못된 그룹/구분자 또는 문장 사이에 나뉜 괄호를 전사했다."
+  },
+  {
+    "question_id": "diff_3_033",
+    "region": "solution",
+    "raw_sha256": "14e4842a7383296de4aac4417c1bea674b571af2287c7f42de8b5ccc155d77d0",
+    "expected_raw": "therefore~a=6}",
+    "latex": "\\therefore\\ a=6",
+    "reason": "원문에 있는 수학 내용은 보존하고, 원문 수식의 잘못된 그룹/구분자 또는 문장 사이에 나뉜 괄호를 전사했다."
+  },
+  {
+    "question_id": "trig_1_001",
+    "region": "solution",
+    "raw_sha256": "ba5ec51d07a4ac0e951608704431d59a02b21a4e951acc10505a8dc407c501ee",
+    "expected_raw": ")",
+    "latex": ")",
+    "reason": "괄호의 앞부분과 한글 문장이 다른 수식/문자 객체에 나뉘어 있다. 닫는 괄호 문자만 보존한다."
+  },
+  {
+    "question_id": "trig_1_015",
+    "region": "solution",
+    "raw_sha256": "98ff3ff6659c2f9794dacd04b7ac966d37ee0d3abdff2f7e2f79cc077ba5ecaa",
+    "expected_raw": "left[0,``2pi]`",
+    "latex": "\\left[0,2\\pi\\right]",
+    "reason": "원문에 있는 수학 내용은 보존하고, 원문 수식의 잘못된 그룹/구분자 또는 문장 사이에 나뉜 괄호를 전사했다."
+  },
+  {
+    "question_id": "trig_2_020",
+    "region": "solution",
+    "raw_sha256": "b25e6caeb79f26bc9d33fb954ff8966633e769f1a90634d7bad6ec9ccf81d895",
+    "expected_raw": "2 times{1} over {2} times{ pi } over {2n} times 3`left|` sin `2nt`left|` ={ pi } over {12}`",
+    "latex": "2\\times\\frac12\\times\\frac{\\pi}{2n}\\times3\\left|\\sin 2nt\\right|=\\frac{\\pi}{12}",
+    "reason": "원문에 있는 수학 내용은 보존하고, 원문 수식의 잘못된 그룹/구분자 또는 문장 사이에 나뉜 괄호를 전사했다."
+  },
+  {
+    "question_id": "trig_2_020",
+    "region": "solution",
+    "raw_sha256": "2c4886bdac6a2ce50f59e2eaf5ce5170f7b2b742afbcb9f5ac25527bef2f4aa0",
+    "expected_raw": "`left|` sin `2nt`left|` ={n} over {18}`",
+    "latex": "\\left|\\sin 2nt\\right|=\\frac{n}{18}",
+    "reason": "원문에 있는 수학 내용은 보존하고, 원문 수식의 잘못된 그룹/구분자 또는 문장 사이에 나뉜 괄호를 전사했다."
+  },
+  {
+    "question_id": "trig_2_020",
+    "region": "solution",
+    "raw_sha256": "0798d35439b8554601bf63b4915ddd17b4e1b8de69eaf19c49488c7e2a9ca60a",
+    "expected_raw": "0<`left|` sin `2nt`left|` le 1`",
+    "latex": "0<\\left|\\sin 2nt\\right|\\le1",
+    "reason": "원문에 있는 수학 내용은 보존하고, 원문 수식의 잘못된 그룹/구분자 또는 문장 사이에 나뉜 괄호를 전사했다."
+  },
+  {
+    "question_id": "trig_3_014",
+    "region": "problem",
+    "raw_sha256": "57d643d668ecd8ebfa57ea6035364548e83130bbfa2da60fd8ec0da6929bf07c",
+    "expected_raw": "{f LEFT ( x RIGHT ) RIGHT = log _{ 3} x +2}",
+    "latex": "f(x)=\\log_3 x+2",
+    "reason": "원문에 있는 수학 내용은 보존하고, 원문 수식의 잘못된 그룹/구분자 또는 문장 사이에 나뉜 괄호를 전사했다."
+  },
+  {
+    "question_id": "trig_3_016",
+    "region": "problem",
+    "raw_sha256": "68a4e7d5b4a90aaf22ce72afdcb0c23b3ff9d345e28e8346e7087c2357d23266",
+    "expected_raw": "left( pile{ it# it}",
+    "latex": "\\bigl(",
+    "reason": "단서 괄호가 빈 pile 서식 객체들과 범위 수식에 걸쳐 분리돼 있다. 빈 행은 레이아웃으로만 처리하고, 단서의 열린 괄호와 0≤x≤π/2 및 닫는 괄호를 보존한다."
+  },
+  {
+    "question_id": "trig_3_016",
+    "region": "problem",
+    "raw_sha256": "4557cd106a56b72852956d26f4ef9ca218b5485ebcf00be5a5449798a2b778ef",
+    "expected_raw": " pile{`#`} right left(`",
+    "latex": "",
+    "reason": "단서 괄호가 빈 pile 서식 객체들과 범위 수식에 걸쳐 분리돼 있다. 빈 행은 레이아웃으로만 처리하고, 단서의 열린 괄호와 0≤x≤π/2 및 닫는 괄호를 보존한다. 빈 서식에는 숫자나 명령어 토큰을 새로 추가하지 않는다.",
+    "layout_only": true
+  },
+  {
+    "question_id": "trig_3_016",
+    "region": "problem",
+    "raw_sha256": "1b8e0056865664901b5cdf9a87686b2b63e6a85cd8c566655d311b7b84415062",
+    "expected_raw": "0 le x le{ pi } over {2} right)",
+    "latex": "0\\le x\\le\\frac{\\pi}{2}\\bigr)",
+    "reason": "단서 괄호가 빈 pile 서식 객체들과 범위 수식에 걸쳐 분리돼 있다. 빈 행은 레이아웃으로만 처리하고, 단서의 열린 괄호와 0≤x≤π/2 및 닫는 괄호를 보존한다."
+  },
+  {
+    "question_id": "trig_3_023",
+    "region": "solution",
+    "raw_sha256": "efcab65807d6bceb401916fe21f33dd360be05779126395a8632278a59cb5fdb",
+    "expected_raw": "bold{ 10",
+    "latex": "\\mathbf{10}",
+    "reason": "원문에 있는 수학 내용은 보존하고, 원문 수식의 잘못된 그룹/구분자 또는 문장 사이에 나뉜 괄호를 전사했다."
+  },
+  {
+    "question_id": "trig_3_028",
+    "region": "solution",
+    "raw_sha256": "9775a9ea053b9fdb7ced34af29f36716960309118e0b454e4440dd7086b97b6f",
+    "expected_raw": "-1 le sin3x  le 1)",
+    "latex": "-1\\le\\sin 3x\\le1)",
+    "reason": "원문에 있는 수학 내용은 보존하고, 원문 수식의 잘못된 그룹/구분자 또는 문장 사이에 나뉜 괄호를 전사했다."
+  },
+  {
+    "question_id": "trig_3_035",
+    "region": "solution",
+    "raw_sha256": "30124500ced2d8494d96b3cd4adb1ecc27752afa00010b677f8c4c3dfcd1d576",
+    "expected_raw": "LEFT { ``y ```LEFT  - {3} over {4}  LEQ y LEQ  {5} over {4} RIGHT } RIGHT .",
+    "latex": "\\left\\{y\\mid-\\frac34\\le y\\le\\frac54\\right\\}",
+    "reason": "원문 사설 영역 문자 U+E04D는 집합 조건 구분선이다. y와 부등식의 내용은 보존하고 표준 집합 표기로 전사한다."
+  },
+  {
+    "question_id": "trig_3_039",
+    "region": "solution",
+    "raw_sha256": "90089406723519f5f74e649f5fac441ec013b281d8c8f9dfc585006bb059e932",
+    "expected_raw": "D over 4 = left ( 2 cos theta)^2 - 6 sintheta <0",
+    "latex": "\\frac D4=\\left(2\\cos\\theta\\right)^2-6\\sin\\theta<0",
+    "reason": "원문에 있는 수학 내용은 보존하고, 원문 수식의 잘못된 그룹/구분자 또는 문장 사이에 나뉜 괄호를 전사했다."
+  }
+]

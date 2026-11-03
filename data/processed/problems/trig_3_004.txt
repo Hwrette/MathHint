@@ -1,0 +1,5 @@
+두 함수
+$f \left( x \right) = \cos \left( a x \right) + 1$,  $g \left( x \right) = \left| \sin 3 x \right|$
+의 주기가 서로 같을 때, 양수 $a$의 값은?
+① $5$		② $6$		③ $7$
+④ $8$		⑤ $9$

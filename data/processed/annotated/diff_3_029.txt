@@ -1,0 +1,26 @@
+[문항 ID] diff_3_029
+[자료군] 미분
+[파일 번호] 3
+[원래 문제 번호] 29
+[현재 문제 번호] 28
+[과목] 10 미적분1
+[단원] 03 미분계수와 도함수
+[세부 단원] 04 미분가능성과 연속성
+[유형] 06 미분가능조건3 (곱함수)
+[출처] 2021년 교육청 고3공통 10월 > 공통범위 > 7 [3점]
+
+[문제]
+두 함수 $f \left( x \right)$$= \left| x + 3 \right|$, $g \left( x \right)$$= 2 x + a$에 대하여 함수 $f \left( x \right) g \left( x \right)$가 실수 전체의 집합에서 미분가능할 때, 상수 $a$의 값은?
+① $2$		② $4$		③ $6$
+④ $8$		⑤ $10$
+
+[원본 정답·해설]
+[정답] ③
+
+[해설]
+$f \left( x \right) g \left( x \right) = {\left\{\begin{array}{lll}- \left( x + 3 \right) \left( 2 x + a \right) &  & \left( x < - 3 \right) \\ \left( x + 3 \right) \left( 2 x + a \right) &  & \left( x \geq - 3 \right)\end{array}\right.}$
+함수 $f \left( x \right) g \left( x \right)$가 실수 전체의 집합에서 미분가능하므로 $x = - 3$에서 미분가능하다. 즉,
+$\lim_{x\to-3^-}\frac{f(x)g(x)-f(-3)g(-3)}{x+3}$
+$=\lim_{x\to-3^+}\frac{f(x)g(x)-f(-3)g(-3)}{x+3}$
+$\lim_{x \rightarrow - 3 -} {\left( - 2 x - a \right) = \lim_{x \rightarrow - 3 +} {\left( 2 x + a \right)}}$
+따라서 $6 - a = - 6 + a$에서 $a = 6$

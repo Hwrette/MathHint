@@ -1,0 +1,23 @@
+[문항 ID] trig_2_006
+[자료군] 삼각함수
+[파일 번호] 2
+[원래 문제 번호] 6
+[현재 문제 번호] 6
+[과목] 09 대수
+[단원] 05 삼각함수의 정의
+[세부 단원] 02 삼각함수의 정의 및 활용
+[유형] 06 정의6 (삼각함수 사이의 관계. 값 구하기)
+[출처] 2021년(2022학년도) 평가원 고3공통 예시 문항 > 공통범위 > 5 [3점]
+
+[문제]
+$\frac{\pi}{2} < \theta < \pi$인 $\theta$에 대하여 $\sin \theta \cos \theta = - \frac{12}{25}$일 때, $\sin \theta - \cos \theta$의 값은?
+① $\frac{4}{5}$	② $1$		③ $\frac{6}{5}$
+④ $\frac{7}{5}$	⑤ $\frac{8}{5}$
+
+[원본 정답·해설]
+[정답] ④
+
+[해설]
+$(\sin \theta - \cos \theta)^{2}$$= \sin^{2} \theta + \cos^{2} \theta - 2 \sin \theta \cos \theta$
+$= 1 + \frac{24}{25}$$= \frac{49}{25}$
+$\sin \theta - \cos \theta > 0$이므로 $\sin \theta - \cos \theta = \frac{7}{5}$

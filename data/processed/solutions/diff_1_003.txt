@@ -1,0 +1,22 @@
+[정답] ③
+
+[해설]
+삼차다항식 $f \left( x \right)$의 최고차항의 계수가 $2$이고
+$f \left( x \right)$를 $x^{2}$으로 나눈 몫이 $Q \left( x \right)$,
+나머지가 $R \left( x \right)$이므로
+$f \left( x \right) = x^{2} Q \left( x \right) + R \left( x \right)$, $Q \left( x \right) = 2 x + a \quad \left( a \right.$는 상수$\left.  \right)$,
+$R \left( x \right) = b x + c \quad \left( b , c \right.$는 상수$\left.  \right)$
+$\lim_{x \rightarrow \infty} \frac{R \left( x \right)}{Q \left( x \right)} = \lim_{x \rightarrow \infty} \frac{b x + c}{2 x + a} = \frac{b}{2}$이므로
+조건 (가)에 의하여 $b = - 4$
+조건 (나)에 의하여
+$\lim_{x \rightarrow 0} \frac{f \left( x \right) R \left( x \right)}{x^{2}}$의 값이 존재하고 $\lim_{x \rightarrow 0} x^{2} = 0$이므로
+$\lim_{x \rightarrow 0} f \left( x \right) R \left( x \right)$$= \lim_{x \rightarrow 0} \left\{ x^{2} \left( 2 x + a \right) + \left( - 4 x + c \right) \right\} \left( - 4 x + c \right)$
+$= c^{2} = 0$에서
+$c = 0$
+조건 (나)에 의하여
+$Q \left( 0 \right)$$= \lim_{x \rightarrow 0} \frac{f \left( x \right) R \left( x \right)}{x^{2}}$
+$= \lim_{x \rightarrow 0} \frac{\left\{ x^{2} \left( 2 x + a \right) - 4 x \right\} \left( - 4 x \right)}{x^{2}}$
+$= \lim_{x \rightarrow 0} \left\{ - 4 x \left( 2 x + a \right) + 16 \right\} = 16$이므로
+$a = 16$
+그러므로 $f \left( x \right) = x^{2} \left( 2 x + 16 \right) - 4 x$
+따라서 $f \left( 1 \right) = 14$
