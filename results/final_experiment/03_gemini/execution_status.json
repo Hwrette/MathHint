@@ -1,14 +1,7 @@
 {
-  "checked_at": "2026-11-08T16:38:15.911882+00:00",
-  "state": "BLOCKED_BEFORE_PROCESS_START",
+  "checked_at": "2026-11-08T17:03:52.981587+00:00",
+  "state": "RUNNING",
   "config_id": "fca7807f5e1e3cd16682847b4e70c49ad6b30c2d733b5d9e83c6c2f65164cf87",
-  "live_execution_attempt": {
-    "tool": "exec_command",
-    "permission_mode": "with_additional_permissions",
-    "network_requested": true,
-    "startup_wait_limit_seconds": 25,
-    "result": "No process/session response before startup timeout; no retry performed."
-  },
   "observed_response_counts": {
     "baseline": 80,
     "regression_hint": 80
@@ -23,5 +16,29 @@
   },
   "repeat_policy": "Do not blindly retry an ambiguous startup. Recheck current logs, processes and SDK snapshot files before starting or resuming. Successful responses are skipped by the durable engine.",
   "safe_invocation": "from collections import Counter\nimport os\nfrom mathhint_solver import ThreeWayGeneration as three\nfrom mathhint_solver import CompareGeneration as comparison\nconfig, plan = three.prepare_plan(three.ROOT, three.PREDICTIONS)\nmanifest = comparison.read_json(three.OUTPUT / \"config.json\")\nassert comparison.digest(config) == manifest[\"config_id\"]\ncompleted = comparison.load_completed(three.OUTPUT, manifest[\"config_id\"])\npending = [item for item in plan if completed.get((item[\"id\"], item[\"method\"]), {}).get(\"status\") != \"success\"]\nassert all(item[\"method\"] == \"oracle_hint\" for item in pending)\nassert os.environ.get(\"GEMINI_API_KEY\")\nthree.run_experiment(three.OUTPUT, config, plan, api_key=os.environ[\"GEMINI_API_KEY\"], workers=2, interval=5.0)\n",
-  "source_integrity_note": "Generation modules frozen at preflight. Interim summary.json reused_controls counter uses legacy origin name and undercounts reuse; authoritative final analysis must count reused_exact_request. No condition inputs affected."
+  "source_integrity_note": "Generation modules frozen at preflight. Interim summary.json reused_controls counter uses legacy origin name and undercounts reuse; authoritative final analysis must count reused_exact_request. No condition inputs affected.",
+  "startup_attempts": [
+    {
+      "tool": "exec_command",
+      "permission_mode": "with_additional_permissions",
+      "network_requested": true,
+      "startup_wait_limit_seconds": 25,
+      "result": "No process/session response before startup timeout; no retry performed."
+    },
+    {
+      "tool": "exec_command",
+      "permission_mode": "with_additional_permissions",
+      "network_requested": true,
+      "functions_cell": "g4:17",
+      "functions_wait_result": "aborted by user after 741.4s",
+      "native_session_id_returned": false,
+      "wait_was_not_cancelled_by_timer": true,
+      "observed_processes_at_check": "Only the zero-second status-check Python process; no active Gemini runner found."
+    }
+  ],
+  "latest_observation_note": "After the user-aborted tool wait, safe local checks found responses160, C0, execution_runs0, sdk_calls0. No new network/API command was started during this status-check turn. Parent may resume after another live-state check.",
+  "started_native_session": 83444,
+  "active_config_id": "fca7807f5e1e3cd16682847b4e70c49ad6b30c2d733b5d9e83c6c2f65164cf87",
+  "process_lock": "/tmp/mathhint-final-api.lock",
+  "approval": "native command prefix approved"
 }

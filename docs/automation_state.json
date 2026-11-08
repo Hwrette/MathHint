@@ -14,10 +14,14 @@
   "spec_status": "APPROVED",
   "execution_observed": false,
   "remote_checkpoint_published": true,
-  "github_permission_selection": "NOT_CHANGED_INHERIT; network command succeeded after awaited startup",
+  "github_permission_selection": "APPROVED_USER_ALWAYS_ALLOW",
   "current_workspace_checkpoint_commit": "1a6305a",
   "execution_allowed": true,
   "spec_sha256": "18cb0a83aebf2988b476118bcb4014f5ce7c0f1f7979fdceaead42f8deafbf56",
   "verification_note": "2026-11-08T16:32Z update succeeded and peek verified enabled, final-spec prompt, inherited environment. next_run_time remains null.",
-  "last_verified_remote_commit": "5eca866"
+  "last_verified_remote_commit": "5eca866",
+  "github_original_permission_mode": "inherit",
+  "github_current_permission_mode": "full_access",
+  "github_restore_on_completion": true,
+  "global_full_access": "UNAVAILABLE_PLATFORM_REJECTED"
 }

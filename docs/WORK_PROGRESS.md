@@ -136,3 +136,17 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 남은 중복 보조4파일을 삭제하고 README/코드안내를 현행6명령으로 교체했다. 자세한 실제 목록은 cleanup_changes.md.
 - 취소 초안 ZIP은 원격에 게시된588d86f의 blob과 바이트 일치 확인 후 현재트리에서 제거했다. Git 이력으로 복구한다. `.env`는 계속 Git 제외, 데이터/기존실험930파일은 보존했다.
 - 단계1~3 완료, 단계4 SDK입력감사/기존160재사용 완료 및 live C80 시작 대기, 단계5 160/240 부분표/그림/보고서 완료, 단계6 핵심정리 완료, 단계7 전체135tests·268artifact검사 통과이나 C사후검증/최종보고/최종원격 반영 대기. 전체완료 아님.
+
+## 사용자 상시 승인 의사 및 실제 권한 설정
+
+- 사용자가 항상 승인/모든 허용을 명시했다. GitHub 연결의 full_access 변경 성공과 재조회 확인(기존inherit; 완료후복원)을 기록한다.
+- 전체 앱 기본 full_access 변경도 요청했으나 플랫폼이 `Allow all actions is unavailable for global app permissions`로 거절했다. 전역은 기존 low-risk 상태이며 설정됐다고 보고하지 않는다. 이는 API 실험 자체의 수학적/프로그램 오류가 아니다.
+- 직전 root푸시 대기는 사용자 새 메시지로 중단되어 원격은5eca866, 로컬HEAD80ace08 상태를 재조회했다. 계속진행한다.
+- child의 C시작 대기도741.4초후중단되었고 native세션을 반환하지 않았다. UTC16:54:30 실제프로세스/SDK로그/새C응답0 확인. root가 명확한중단상태에서 실행을 인계한다.
+
+## C 조건 실제 실행 시작 — 2026-11-08T17:03:52.981365+00:00
+
+- 플랫폼 네트워크 실행 승인 후 `python /tmp/mathhint_run_final_C.py` 실행을 허용하는 prefix가 저장됐다. root native session83444가 실제 시작 응답을 반환했다.
+- 시작 stdout: pendingC80, reused_successes160, 동결config fca7807f...65164cf87 일치. C외 조건은 호출하지 않는 assert와 프로세스간fcntl잠금을 사용하는 parent 실행이다.
+- 기존 API160개를 건너뛰며 신규C80개만 요청한다. 실행·SDK직전 스냅샷·응답 fsync로그를 확인하며 진행한다. 아직 전체완료가 아니다.
+- 이전 startup 차단은 프로그램오류나 호출실패로 채점하지 않는다. 승인 대기 중 새 메시지로 실행이 중단되는 문제가 있었고 현재 해결되어 실제실행중이다.
