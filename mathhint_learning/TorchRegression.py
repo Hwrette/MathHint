@@ -45,6 +45,7 @@ def train_regression(X, Y, epochs=EPOCHS, learning_rate=LEARNING_RATE, seed=SEED
 
 
 def evaluate(prediction, answer):
+    prediction, answer = prediction.float(), answer.float()
     error = prediction - answer
     return {
         "mse": error.square().mean().item(),
@@ -80,7 +81,8 @@ def main():
 
     # 5. 모델·지표·문항별 예측 저장
     OUTPUT.mkdir(parents=True, exist_ok=True)
-    config = {"epochs": EPOCHS, "learning_rate": LEARNING_RATE, "seed": SEED}
+    config = {"epochs": EPOCHS, "learning_rate": LEARNING_RATE, "seed": SEED,
+              "evaluation_rounding": "none"}
     torch.save({
         "model_state_dict": model.state_dict(), "config": config,
         "input_vocabulary": data["vocabularies"]["problems"],
@@ -94,9 +96,10 @@ def main():
     write_json(OUTPUT / "regression_predictions.json", {
         "generation_id": data["generation_id"], "train_ids": data["ids"]["train"], "config": config,
         "vocabulary": data["vocabularies"]["solutions"],
+        "prediction_policy": "clip_negative_to_zero_without_rounding",
         "documents": [{
             "id": item_id, "raw_predicted_vector": test_prediction[i].tolist(),
-            "predicted_vector": test_prediction[i].clamp_min(0).tolist(), "actual_vector": Y_test[i].tolist(),
+            "predicted_vector": test_prediction[i].clamp_min(0).tolist(), "actual_vector": Y_test[i].to(torch.int64).tolist(),
         } for i, item_id in enumerate(data["ids"]["test"])],
     })
     print(f"학습 {len(X_train)}개 / 테스트 {len(X_test)}개")
