@@ -4,7 +4,7 @@ STATUS: IN_PROGRESS_READER_WORKFLOW
 EXECUTION_ALLOWED: true
 LAST_CONFIRMED_PUBLISHED_COMMIT: 289d662a8c017e61792ab6fe684292155d3013f9
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
-AUTOMATION_STATUS: DISABLED_AFTER_REAUDIT_VERIFIED_BY_PEEK
+AUTOMATION_STATUS: ENABLED_FOR_READER_WORKFLOW_VERIFIED_BY_PEEK
 FIRST_RUN_FROM_SAVED_RULE: 2026-11-09T05:58:50+09:00
 RECURRENCE: EVERY_5_HOURS
 NEXT_RUN_TIME_SERVER_FIELD: NOT_RETURNED
@@ -235,3 +235,12 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 현재부족: HTML이pre원문만표시, VectorComparison이과거모델하드코딩, 새학습출력과후속평가/LLM/보고서가단일설정으로연결되지않음.
 - 구현중: 정적오프라인뷰어와악성HTML/수식실패/좁은화면처리; 전체265문항군집읽기링크; 단일Experiment설정+얇은실행기; 모델/예측/동일차원어휘순서호환검사.
 - 다음: 실제브라우저검증·가짜자료학습→평가→입력준비→보고서경로검사·API/학습금지열람검사·보호SHA대조. 아직미완료다.
+
+- 기존5시간복구자동화의프롬프트를이번보완우선순위와실제연구학습/API금지로갱신하고활성상태를peek로확인했다. 중복예약없음. 최초첨부원문59790바이트SHA불변확인. 추가보호군집CSV/PCA를포함한2132파일SHA기록, 완료후자동화중지한다.
+
+## 읽기 화면 구현·브라우저 검증 체크포인트 — 2026-11-08T19:06:34.892306+00:00
+
+- 로컬 Markdown/KaTeX 정적뷰어 완성:265문항검색·학습비대상표시·A/B/C·원본해설/감사원문접기·상태분리. 원본입력/응답수정없음.
+- 독립Chromium검사24/24통과, 실제770개문서의수식12823개렌더링실패0, 외부요청0. 데스크톱/390px·분수/극한/첨자/경우나누기·악성HTML무실행·원문동일확인. file://는관리정책차단으로임시localhost에서검증했으며정책우회하지않음. 근거:results/final_experiment/reader_validation.json.
+- 최종JS소스변경뒤브라우저검사를다시실행했고28개배포자산과검증proof의SHA모두일치. 원본/모델/요청/응답/기존감사/핵심수치2150파일SHA불변. 연구재학습/신규API0.
+- 후속모델연결검증·새모드README·전체통합검사는진행중이며아직완료아님.

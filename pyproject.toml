@@ -28,3 +28,7 @@ mathhint-prepare-dataset = "mathhint_analysis.PrepareDataset:main"
 [tool.setuptools.packages.find]
 # 배포 패키지에 포함할 Python 폴더. 원본 데이터·생성 결과는 여기에 포함하지 않는다.
 include = ["mathhint_preprocess*", "mathhint_analysis*", "mathhint_solver*", "mathhint_learning*"]
+
+[tool.setuptools.package-data]
+# 정적 읽기 화면은 설치 후에도 로컬 스크립트·글꼴을 함께 사용한다.
+mathhint_analysis = ["viewer_assets/*", "viewer_assets/vendor/*", "viewer_assets/vendor/fonts/*"]

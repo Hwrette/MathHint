@@ -1,0 +1,168 @@
+{
+  "verified_at": "2026-11-08T19:05:42.123796+00:00",
+  "browser": "154.0.8037.57",
+  "protocol": "temporary loopback HTTP for browser validation only",
+  "file_url_verification": {
+    "executed": true,
+    "passed": false,
+    "reason": "Chromium managed policy returned ERR_BLOCKED_BY_ADMINISTRATOR; policy not bypassed"
+  },
+  "local_assets_only": true,
+  "entry": "results/final_experiment/03_gemini/report.html",
+  "actual_examples": [
+    "diff_1_005",
+    "diff_2_018",
+    "diff_1_001",
+    "trig_2_022"
+  ],
+  "synthetic_examples": [
+    "Markdown_table/codefence",
+    "HTML_script/URL/image/TeX_injection",
+    "invalid_math",
+    "long_math/wide_table"
+  ],
+  "passed": 24,
+  "failed": 0,
+  "full_corpus_math_scan": {
+    "actual_documents": 770,
+    "rendered_math_count": 12823,
+    "documents_with_fallbacks": 0,
+    "fallbacks": [],
+    "note": "Allactual265problems+265references+240latestoutputs scanned; mathematical correctness not judged by rendering."
+  },
+  "source_sha256": {
+    "mathhint_analysis/ResultViewer.py": "98a13b8b8564c523fd6ce4b137917091688d62ac6bea3c21fe438273b6156c21",
+    "mathhint_analysis/viewer_assets/viewer.js": "ed5fe3a23f9e0dfad9eea19390d419beb4e49dbfd49593241742ca36aefb85b6",
+    "mathhint_analysis/viewer_assets/README.md": "b6b845fea36fd98cb0152085f42385802a92c40fd08c0c62dde53585ed52078d",
+    "mathhint_analysis/viewer_assets/viewer.css": "45b15f56259d0ea8c8c9eb68ba087c85231c9655a90d9696ac949d5ff272dee7",
+    "mathhint_analysis/viewer_assets/vendor/markdown-it.min.js": "38c70a1e7ca91ab40e2d9e6e60129851a717ed1c7d4acbbdd41bf9503791cf68",
+    "mathhint_analysis/viewer_assets/vendor/katex.min.js": "e8d885505949f3a5f4abdd5dd0d53696bd1371ad26ffbf4f310dcd77c8cdae89",
+    "mathhint_analysis/viewer_assets/vendor/MARKDOWN_IT_LICENSE": "792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473",
+    "mathhint_analysis/viewer_assets/vendor/katex.min.css": "b075123b50e51a0a7819b49efa2a62bb05bc7dac04b0d65a9a3799c2211ea48f",
+    "mathhint_analysis/viewer_assets/vendor/KATEX_LICENSE": "766ccc1f306c885aa45542a9846bbd0a505b27a0374f146778171c2254ce18e3",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_SansSerif-Bold.woff2": "e99ae51144bf1232efcc1bfe5add36262c6866b0faab24fa75740e1b98577a62",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Typewriter-Regular.woff2": "71d517d67827787cfabdf186914cc3358eda539e37931941f2b2fd4a21f68c0b",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Caligraphic-Bold.woff2": "de7701e42cf1f4cf0b766c03fb27977207eee2f4fd5d76fa82188406da43ea4c",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_AMS-Regular.woff2": "0cdd387c9590a1a9f9794560022dbb59654a7d86f187aa0c81495ad42d3a7308",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Math-Italic.woff2": "7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Regular.woff2": "c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size3-Regular.woff2": "73d591271b1604960cb10bb90fee021670af7297017e0e98480b332d11f51995",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size2-Regular.woff2": "d04c54219f9eaec6d4d4fd42dfb28785975a4794d6b2fc71e566b9cd6db842dd",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size4-Regular.woff2": "a4af7d414440a1c1790825cfb700cf9cf43b0f2c4b04f0ebc523011ad9853ec0",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Bold.woff2": "0f60d1b897938ec918c8ce073092411baf9438f6739465693ff18b0f9d20b021",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_SansSerif-Italic.woff2": "00b26ac825e2095056396e0553b8ac26d3f8ad158c3826e28b4c45b385c4714a",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Italic.woff2": "97479ca6cce906abc961ecac96faa5f9ca2e61b8e7670d475826bcdee9a7c267",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Fraktur-Bold.woff2": "74444efd593c005e3f4573b44524704c0af0a937fe911cca9e94068d0d140d3f",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Script-Regular.woff2": "036d4e95149b69ff9bcc0cd55771efeb25ffa3947293e69acd78d5ac328c684b",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Fraktur-Regular.woff2": "51814d270d06ff0255dba0799994fa4d8c84d11f09951d47595f4abb1f3602dc",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_SansSerif-Regular.woff2": "68e8c73ef42afd3ccec58bf0fba302cce448938e7fc020a5e31f8a952eee1342",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-BoldItalic.woff2": "99cd42a3c072d918f2f44984a807cf7aa16e13545fd0875fc07c6c65f99e715b",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Caligraphic-Regular.woff2": "5d53e70ad607c2352162dec9e0923fb54ecdafaccbf604cd8dcf7d00facb989b",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Math-BoldItalic.woff2": "dc47344dbb6cb5b655c8460d561f4df5f501b90c804ad3c6cec65fe322351ab1",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size1-Regular.woff2": "6b47c40166b6dbe21a5dfca7718413f2147fd2399be1ba605d8ad39cedf25dfe"
+  },
+  "checks": [
+    {
+      "check": "all_265_questions_available",
+      "passed": true
+    },
+    {
+      "check": "loaded_assets_notice_and_navigation",
+      "passed": true
+    },
+    {
+      "check": "synthetic_url_dollars_preserved_without_html",
+      "passed": true
+    },
+    {
+      "check": "actual_fraction_limit_subscript_and_three_conditions",
+      "passed": true
+    },
+    {
+      "check": "actual_raw_input_system_output_preserved",
+      "passed": true
+    },
+    {
+      "check": "actual_piecewise_cases_rendered",
+      "passed": true
+    },
+    {
+      "check": "train_question_not_generation_target",
+      "passed": true
+    },
+    {
+      "check": "actual_source_key_conflict_shows_separate_supplemental_grade",
+      "passed": true
+    },
+    {
+      "check": "id_search_and_changed_correctness_filter",
+      "passed": true
+    },
+    {
+      "check": "synthetic_markdown_and_math_order",
+      "passed": true
+    },
+    {
+      "check": "synthetic_html_script_url_remote_image_inert",
+      "passed": true
+    },
+    {
+      "check": "synthetic_invalid_tex_visible_raw_fallback",
+      "passed": true
+    },
+    {
+      "check": "mobile_390_vertical_cards_long_math_table_local_scroll",
+      "passed": true
+    },
+    {
+      "check": "no_browser_page_errors",
+      "passed": true
+    },
+    {
+      "check": "original_audit_evidence_not_changed",
+      "passed": true
+    },
+    {
+      "check": "synthetic_distinct_api_failure_not_run_ungraded",
+      "passed": true
+    },
+    {
+      "check": "synthetic_unknown_usage_not_zero",
+      "passed": true
+    },
+    {
+      "check": "synthetic_review_pending_separate_from_answer",
+      "passed": true
+    },
+    {
+      "check": "static_builder_script_closing_escape_inert",
+      "passed": true
+    },
+    {
+      "check": "static_builder_malicious_response_raw_exact",
+      "passed": true
+    },
+    {
+      "check": "synthetic_pending_review_filter",
+      "passed": true
+    },
+    {
+      "check": "synthetic_train_no_false_missing_responses",
+      "passed": true
+    },
+    {
+      "check": "synthetic_no_external_network",
+      "passed": true
+    },
+    {
+      "check": "all_actual_documents_render_without_fallback",
+      "passed": true
+    }
+  ],
+  "external_request_attempts": [],
+  "page_errors": [],
+  "protected_artifacts_unchanged": 2150,
+  "new_gemini_calls": 0,
+  "research_training_runs": 0,
+  "note": "Temporary screenshots were visually inspected; retained proof contains actual checks and source hashes. Browser policy blocked file URLs; temporary loopback HTTP used without external requests."
+}
