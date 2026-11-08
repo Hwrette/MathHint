@@ -293,6 +293,23 @@
     "seed": 42,
     "architecture": "nn.Linear(346,431)"
   },
+  "training_metrics": {
+    "raw": {
+      "mse": 0.3404415249824524,
+      "mae": 0.11402781307697296,
+      "mean_cosine_similarity": 0.9732975959777832
+    },
+    "clipped_nonnegative": {
+      "mse": 0.33311355113983154,
+      "mae": 0.09944505989551544,
+      "mean_cosine_similarity": 0.9747496843338013
+    },
+    "training_mean_baseline": {
+      "mse": 3.3413424491882324,
+      "mae": 0.47771504521369934,
+      "mean_cosine_similarity": 0.7871190309524536
+    }
+  },
   "training_repeated": false,
   "test_used_for_parameter_selection": false,
   "torch_version_for_validation": "2.15.0+cpu",

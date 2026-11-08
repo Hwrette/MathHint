@@ -1,7 +1,6 @@
 {
   "schema_version": 1,
   "checked_at_utc": "2026-11-08T16:32:51.833529+00:00",
-  "git_head_at_start": "1a6305a27eec3bd8adc9d093ab9c77567e0e37c8",
   "status": "PASS",
   "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
   "counts": {
@@ -455,7 +454,8 @@
     "regenerated_generation_id_matches": true,
     "train_only_vocabulary_recreated_from_train_text": true,
     "problems_vocabulary_exact_train_token_union": true,
-    "solutions_vocabulary_exact_train_token_union": true
+    "solutions_vocabulary_exact_train_token_union": true,
+    "existing_experiment_manifest_sha256_valid": true
   },
   "details": {
     "duplicate_groups": [],
@@ -539,6 +539,12 @@
         "latex:\\mid"
       ],
       "included_in_vocabulary": 0
+    },
+    "existing_experiment_manifest": {
+      "manifest_path": "results/model_comparison_2026-11-07/manifest.json",
+      "files_checked": 930,
+      "failures": [],
+      "manifest_sha256": "ab94a60a34e3271116b4e88aaf7b3ae9d0d04160f1e037b7c857669e8387a1cc"
     }
   },
   "source_file_hashes": {
@@ -559,5 +565,25 @@
     "분할을 새로 최적화하지 않았다. 기존 seed42 분할과 바이트 동일성을 확인했다.",
     "최종 모델의 학습 경로와 Gemini 조건별 누출 여부는 별도 모델·입력 감사 단계에서 확인한다.",
     "이미 관찰한 테스트 결과 이후 설계한 후속 비교이므로 완전히 미관찰인 독립 최종 평가라고 주장하지 않는다."
-  ]
+  ],
+  "git_head_at_validation_end": "1a6305a27eec3bd8adc9d093ab9c77567e0e37c8",
+  "procedure": {
+    "implementation_functions": [
+      "mathhint_analysis.PrepareDataset.read_records",
+      "mathhint_analysis.PrepareDataset.prepare_records",
+      "mathhint_analysis.PrepareDataset._duplicate_groups",
+      "mathhint_analysis.PrepareDataset._count_function"
+    ],
+    "settings": {
+      "seed": 42,
+      "test_fraction": 0.3,
+      "overwrite": false,
+      "source_files": "SHA256 of data/raw/*.hml"
+    },
+    "output_safety": "tempfile.TemporaryDirectory under /tmp, no original data overwritten",
+    "regeneration_comparison": "Compare every generated relative path in processed/ and vectors/ with data/ counterpart using exact read_bytes equality",
+    "vocabulary_check": "Independently union token names counted in train clean text; compare exactly with saved vocabulary; count test-only token exclusion",
+    "existing_result_check": "Compare all manifest files SHA256 against results/model_comparison_2026-11-07/manifest.json",
+    "audit_script_at_execution": "/tmp/mathhint_data_validate.py (temporary operational script; project functions above and recorded hashes define the reproducible calculation)"
+  }
 }

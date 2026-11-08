@@ -240,7 +240,8 @@ def run(root=ROOT, source=SOURCE, output=OUTPUT):
         "validation": {"manifest_hashes": True, "train_test_disjoint": not bool(set(data["ids"]["train"]) & set(data["ids"]["test"])),
             "training_vocabulary_and_id_order_match": True, "model_reinference_exactly_matches_all_80_saved_raw_vectors": True,
             "actual_vectors_match_fixed_test_vectors": True, "clipped_vectors_match_saved_vectors": True, "actual_vectors_are_nonnegative_integers": True},
-        "model_config": saved["config"], "training_repeated": False, "test_used_for_parameter_selection": False,
+        "model_config": saved["config"], "training_metrics": read_json(source / source_paths[3])["metrics"]["train"],
+        "training_repeated": False, "test_used_for_parameter_selection": False,
         "torch_version_for_validation": torch.__version__, "forecast_storage": "float32 raw and clipped; no evaluation rounding"}
     write_json(output / "provenance.json", provenance)
     print(json.dumps({"reused_model": provenance["model_source"], "test_count": len(actual), "metrics": result["metrics"], "top_tokens": result["top_tokens"], "output": str(output)}, ensure_ascii=False, indent=2))
