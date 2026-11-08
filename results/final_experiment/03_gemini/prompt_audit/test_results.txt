@@ -1,4 +1,4 @@
-Command: python -m unittest tests.test_three_way_generation tests.test_generation_comparison tests.test_rate_limited_comparison tests.test_generation_audit -q
+Command: python -m unittest tests.test_three_way_generation tests.test_generation_audit tests.test_generation_comparison tests.test_rate_limited_comparison -q
 
 {"id": "q1", "method": "baseline", "status": "success", "correct": true, "total_tokens": 30, "completed_calls": 1}
 {"id": "q1", "method": "regression_hint", "status": "success", "correct": true, "total_tokens": 30, "completed_calls": 2}
@@ -9,7 +9,7 @@ Command: python -m unittest tests.test_three_way_generation tests.test_generatio
 {"id": "diff_1_005", "method": "baseline", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 1}
 입력 준비 완료: 4개 조건 · API 호출 0회
 실제 실행: RateLimitedComparison.py의 RUN_API를 True로 바꾸세요.
-저장 위치: /tmp/tmp7a65vnw_/prepared
+저장 위치: /tmp/tmp8aggysb6/prepared
 {"id": "diff_1_005", "method": "baseline", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 1}
 {"id": "diff_1_005", "method": "regression_hint", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 2}
 {"id": "diff_1_011", "method": "regression_hint", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 3}
@@ -19,7 +19,7 @@ Command: python -m unittest tests.test_three_way_generation tests.test_generatio
 {"id": "diff_1_011", "method": "regression_hint", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 3}
 {"id": "diff_1_011", "method": "baseline", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 4}
 ----------------------------------------------------------------------
-Ran 36 tests in 0.413s
+Ran 39 tests in 0.640s
 
 OK
 현재는 API를 호출하지 않습니다. 입력을 확인한 뒤 RUN_API = True로 바꾸세요.

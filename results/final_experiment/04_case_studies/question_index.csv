@@ -38,7 +38,7 @@ diff_3_012,data/processed/problems/diff_3_012.txt,data/processed/solutions/diff_
 diff_3_022,data/processed/problems/diff_3_022.txt,data/processed/solutions/diff_3_022.txt,questions.md#diff_3_022,10 미적분1,03 미분계수와 도함수,02 도함수의 정의와 미분법 공식,02 미분법 공식1 (공식과 미분계수),False,8.324727058410645,0.6
 diff_3_028,data/processed/problems/diff_3_028.txt,data/processed/solutions/diff_3_028.txt,questions.md#diff_3_028,10 미적분1,03 미분계수와 도함수,04 미분가능성과 연속성,04 미분가능조건1 (구간정의함수),False,2.2277252674102783,0.85
 diff_3_039,data/processed/problems/diff_3_039.txt,data/processed/solutions/diff_3_039.txt,questions.md#diff_3_039,10 미적분1,05 함수의 증가와 감소,02 함수의 극대와 극소,02 극대와 극소2 (삼차함수의 극대와 극소),False,1.0579805374145508,0.7
-diff_3_044,data/processed/problems/diff_3_044.txt,data/processed/solutions/diff_3_044.txt,questions.md#diff_3_044,10 미적분1,06 방부등식과 직선운동,01 방정식과 미분,02 방정식과 미분2 (삼차방정식의 실근의 범위),False,9.273092269897461,0.85
+diff_3_044,data/processed/problems/diff_3_044.txt,data/processed/solutions/diff_3_044.txt,questions.md#diff_3_044,10 미적분1,06 방부등식과 직선운동,01 방정식과 미분,02 방정식과 미분2 (삼차방정식의 실근의 범위),True,9.273092269897461,0.85
 diff_3_048,data/processed/problems/diff_3_048.txt,data/processed/solutions/diff_3_048.txt,questions.md#diff_3_048,10 미적분1,06 방부등식과 직선운동,02 부등식과 미분,01 부등식과 미분1 (모든 실수),False,0.8738687038421631,0.6
 diff_3_049,data/processed/problems/diff_3_049.txt,data/processed/solutions/diff_3_049.txt,questions.md#diff_3_049,10 미적분1,06 방부등식과 직선운동,02 부등식과 미분,03 부등식과 미분3 (부등식의 동치변형),False,1.6911736726760864,0.6
 trig_1_004,data/processed/problems/trig_1_004.txt,data/processed/solutions/trig_1_004.txt,questions.md#trig_1_004,09 대수,05 삼각함수의 정의,02 삼각함수의 정의 및 활용,06 정의6 (삼각함수 사이의 관계. 값 구하기),False,0.9044630527496338,0.7
@@ -56,7 +56,7 @@ trig_1_035,data/processed/problems/trig_1_035.txt,data/processed/solutions/trig_
 trig_1_039,data/processed/problems/trig_1_039.txt,data/processed/solutions/trig_1_039.txt,questions.md#trig_1_039,09 대수,06 삼각함수의 그래프,03 삼각방정식과 부등식,04 삼각방정식4 (대칭성과 실근),False,0.9634224772453308,0.7
 trig_1_042,data/processed/problems/trig_1_042.txt,data/processed/solutions/trig_1_042.txt,questions.md#trig_1_042,09 대수,06 삼각함수의 그래프,03 삼각방정식과 부등식,04 삼각방정식4 (대칭성과 실근),False,2.1689436435699463,0.65
 trig_1_043,data/processed/problems/trig_1_043.txt,data/processed/solutions/trig_1_043.txt,questions.md#trig_1_043,09 대수,06 삼각함수의 그래프,03 삼각방정식과 부등식,04 삼각방정식4 (대칭성과 실근),False,4.022713661193848,0.4
-trig_1_046,data/processed/problems/trig_1_046.txt,data/processed/solutions/trig_1_046.txt,questions.md#trig_1_046,09 대수,06 삼각함수의 그래프,03 삼각방정식과 부등식,06 삼각부등식1 (일차식꼴),False,2.0324509143829346,0.55
+trig_1_046,data/processed/problems/trig_1_046.txt,data/processed/solutions/trig_1_046.txt,questions.md#trig_1_046,09 대수,06 삼각함수의 그래프,03 삼각방정식과 부등식,06 삼각부등식1 (일차식꼴),True,2.0324509143829346,0.55
 trig_2_003,data/processed/problems/trig_2_003.txt,data/processed/solutions/trig_2_003.txt,questions.md#trig_2_003,09 대수,05 삼각함수의 정의,02 삼각함수의 정의 및 활용,01 정의1 (삼각함수의 뜻),False,2.815342903137207,0.7
 trig_2_007,data/processed/problems/trig_2_007.txt,data/processed/solutions/trig_2_007.txt,questions.md#trig_2_007,09 대수,05 삼각함수의 정의,02 삼각함수의 정의 및 활용,06 정의6 (삼각함수 사이의 관계. 값 구하기),False,0.5007315278053284,0.7
 trig_2_014,data/processed/problems/trig_2_014.txt,data/processed/solutions/trig_2_014.txt,questions.md#trig_2_014,09 대수,06 삼각함수의 그래프,01 삼각함수의 그래프,04 그래프4 (표준형 그래프에서 Mm),False,0.432070255279541,0.75

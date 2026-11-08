@@ -99,6 +99,23 @@ class GenerationAuditTests(unittest.TestCase):
         self.assertEqual(report["sdk_boundary_call_count"], 2)
         self.assertEqual(len(report["unknown_usage_attempts"]), 1)
 
+    def test_original_response_is_found_in_relocated_clone_and_still_hash_checked(self):
+        relocated_source = self.project / "results/original_responses.jsonl"
+        relocated_source.parent.mkdir()
+        relocated_source.write_bytes((self.project / "original_responses.jsonl").read_bytes())
+        self.config["predictions_source"] = "/unavailable/old_clone/results/predictions.json"
+        config_id = comparison.digest(self.config)
+        comparison.write_json(self.output / "config.json", {"config": self.config, "config_id": config_id})
+        for row in self.rows:
+            row["config_id"] = config_id
+            if row["response_origin"].startswith("reused"):
+                row["provenance"]["source_records"] = "/unavailable/old_clone/results/original_responses.jsonl"
+        self.save()
+        report = self.audit()
+        self.assertTrue(report["verification_passed"], report["violations"])
+        relocated_source.write_text("[]\n")
+        self.assertFalse(self.audit()["verification_passed"])
+
     def test_two_successful_results_for_one_condition_are_flagged(self):
         self.rows.append(deepcopy(self.rows[-1])); self.save()
         self.assertFalse(self.audit()["verification_passed"])

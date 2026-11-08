@@ -12,6 +12,21 @@ OUTPUT = ROOT / "results/final_experiment/03_gemini"
 CONDITIONS = {"baseline": "A", "regression_hint": "B", "oracle_hint": "C"}
 
 
+def resolve_source_file(historical_path, project, config):
+    """역사적 절대경로는 보존하고 같은 저장소 상대경로를 현재 clone에서 찾는다."""
+    source = Path(historical_path)
+    prediction_path = Path(config.get("predictions_source", ""))
+    if "results" in prediction_path.parts:
+        original_root = Path(*prediction_path.parts[:prediction_path.parts.index("results")])
+        try:
+            candidate = Path(project) / source.relative_to(original_root)
+            if candidate.is_file():
+                return candidate
+        except ValueError:
+            pass
+    return source
+
+
 def audit_generation(output=OUTPUT, *, project=ROOT, write_output=True):
     output, project = Path(output), Path(project)
     manifest = comparison.read_json(output / "config.json")
@@ -102,13 +117,15 @@ def audit_generation(output=OUTPUT, *, project=ROOT, write_output=True):
                     violations.append(f"response SDK request hash mismatch: {key}")
             elif row.get("response_origin", "").startswith("reused"):
                 provenance = row.get("provenance", {})
-                source_path = Path(provenance.get("source_records", ""))
+                source_path = resolve_source_file(provenance.get("source_records", ""), project, config)
                 if not source_path.is_file():
                     violations.append(f"reused response original file unavailable: {key}")
                 else:
                     if str(source_path) not in source_cache:
-                        source_rows = [json.loads(line) for line in source_path.read_text(encoding="utf-8").splitlines() if line.strip()]
-                        source_cache[str(source_path)] = (comparison.file_hash(source_path),
+                        source_hash = comparison.file_hash(source_path)
+                        source_rows = ([json.loads(line) for line in source_path.read_text(encoding="utf-8").splitlines() if line.strip()]
+                                       if source_hash == provenance.get("source_records_sha256") else [])
+                        source_cache[str(source_path)] = (source_hash,
                             {(value["id"], value["method"]): value for value in source_rows})
                     source_hash, source_rows = source_cache[str(source_path)]
                     original = source_rows.get(key)

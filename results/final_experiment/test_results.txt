@@ -97,6 +97,11 @@ test_fixed_loader_rejects_train_test_overlap (test_fixed_training.FixedSplitTrai
 test_fixed_loader_rejects_vocabulary_not_train_only (test_fixed_training.FixedSplitTrainingTests.test_fixed_loader_rejects_vocabulary_not_train_only) ... ok
 test_fixed_model_learns_train_rows_without_accepting_test_targets (test_fixed_training.FixedSplitTrainingTests.test_fixed_model_learns_train_rows_without_accepting_test_targets) ... ok
 test_majority_cluster_label_ties_are_deterministic (test_fixed_training.FixedSplitTrainingTests.test_majority_cluster_label_ties_are_deterministic) ... ok
+test_failed_then_successful_retry_preserves_unknown_usage_and_is_not_duplicate_success (test_generation_audit.GenerationAuditTests.test_failed_then_successful_retry_preserves_unknown_usage_and_is_not_duplicate_success) ... ok
+test_matching_requests_usage_and_sdk_capture_pass (test_generation_audit.GenerationAuditTests.test_matching_requests_usage_and_sdk_capture_pass) ... ok
+test_original_response_is_found_in_relocated_clone_and_still_hash_checked (test_generation_audit.GenerationAuditTests.test_original_response_is_found_in_relocated_clone_and_still_hash_checked) ... ok
+test_sdk_contents_tampering_is_a_verification_failure (test_generation_audit.GenerationAuditTests.test_sdk_contents_tampering_is_a_verification_failure) ... ok
+test_two_successful_results_for_one_condition_are_flagged (test_generation_audit.GenerationAuditTests.test_two_successful_results_for_one_condition_are_flagged) ... ok
 test_changed_inputs_cannot_resume_an_existing_run (test_generation_comparison.ComparisonTests.test_changed_inputs_cannot_resume_an_existing_run) ... ok
 test_errors_redact_the_api_key (test_generation_comparison.ComparisonTests.test_errors_redact_the_api_key) ... ok
 test_graceful_stop_saves_inflight_result_without_next_api_call (test_generation_comparison.ComparisonTests.test_graceful_stop_saves_inflight_result_without_next_api_call) ... {"id": "diff_1_005", "method": "baseline", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 1}
@@ -106,7 +111,7 @@ test_main_prepares_inputs_without_requesting_a_solution (test_generation_compari
 test_missing_usage_is_null_and_retry_keeps_both_attempts (test_generation_comparison.ComparisonTests.test_missing_usage_is_null_and_retry_keeps_both_attempts) ... ok
 test_pilot_then_full_resume_does_not_repeat_successful_requests (test_generation_comparison.ComparisonTests.test_pilot_then_full_resume_does_not_repeat_successful_requests) ... 입력 준비 완료: 4개 조건 · API 호출 0회
 실제 실행: RateLimitedComparison.py의 RUN_API를 True로 바꾸세요.
-저장 위치: /tmp/tmpn80089r_/prepared
+저장 위치: /tmp/tmp3bilmhf5/prepared
 {"id": "diff_1_005", "method": "baseline", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 1}
 {"id": "diff_1_005", "method": "regression_hint", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 2}
 {"id": "diff_1_011", "method": "regression_hint", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 3}
@@ -154,9 +159,13 @@ test_all_six_orders_balance_position_and_relative_hint_order (test_three_way_gen
 test_changed_actual_reference_vector_changes_only_oracle_inputs_and_config (test_three_way_generation.ThreeWayTests.test_changed_actual_reference_vector_changes_only_oracle_inputs_and_config) ... ok
 test_only_oracle_receives_true_vector_and_no_arm_receives_reference_prose (test_three_way_generation.ThreeWayTests.test_only_oracle_receives_true_vector_and_no_arm_receives_reference_prose) ... ok
 test_only_top_twenty_positive_coordinates_with_stable_ties (test_three_way_generation.ThreeWayTests.test_only_top_twenty_positive_coordinates_with_stable_ties) ... ok
+test_prediction_path_is_location_only_but_changed_bytes_are_rejected (test_three_way_generation.ThreeWayTests.test_prediction_path_is_location_only_but_changed_bytes_are_rejected) ... ok
+test_real_dataset_in_another_root_resumes_and_preserves_historical_requests (test_three_way_generation.ThreeWayTests.test_real_dataset_in_another_root_resumes_and_preserves_historical_requests) ... ok
+test_renderer_counts_reused_exact_requests_without_duplicate_summary_files (test_three_way_generation.ThreeWayTests.test_renderer_counts_reused_exact_requests_without_duplicate_summary_files) ... ok
 test_reused_exact_requests_keep_output_usage_time_and_are_not_repeated (test_three_way_generation.ThreeWayTests.test_reused_exact_requests_keep_output_usage_time_and_are_not_repeated) ... ok
 test_same_serialization_except_truthful_source_and_float_precision (test_three_way_generation.ThreeWayTests.test_same_serialization_except_truthful_source_and_float_precision) ... ok
 test_sdk_boundary_receives_exact_saved_contents_and_config_without_key (test_three_way_generation.ThreeWayTests.test_sdk_boundary_receives_exact_saved_contents_and_config_without_key) ... ok
+test_source_only_resume_keeps_original_identity_but_rejects_input_or_settings_changes (test_three_way_generation.ThreeWayTests.test_source_only_resume_keeps_original_identity_but_rejects_input_or_settings_changes) ... ok
 test_three_arm_resume_and_unknown_usage_use_existing_durable_engine (test_three_way_generation.ThreeWayTests.test_three_arm_resume_and_unknown_usage_use_existing_durable_engine) ... 현재는 API를 호출하지 않습니다. 입력을 확인한 뒤 RUN_API = True로 바꾸세요.
 {"id": "q1", "method": "baseline", "status": "success", "correct": true, "total_tokens": 30, "completed_calls": 1}
 {"id": "q1", "method": "regression_hint", "status": "success", "correct": true, "total_tokens": 30, "completed_calls": 2}
@@ -176,6 +185,6 @@ test_top_tokens_use_unrounded_values_then_vocabulary_index_and_omit_zeros (test_
 test_underfilled_precision_reports_fixed_and_available_denominators (test_vector_comparison.VectorComparisonTests.test_underfilled_precision_reports_fixed_and_available_denominators) ... ok
 
 ----------------------------------------------------------------------
-Ran 135 tests in 7.600s
+Ran 144 tests in 7.665s
 
 OK

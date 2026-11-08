@@ -1,4 +1,4 @@
 ﻿condition,method,name,expected,recorded,successful,graded,correct_original_key,accuracy_original_key,correct_ai_supplemental_key,accuracy_ai_supplemental_key,ungraded_or_missing,reused_responses,original_accuracy_wilson95
 A,baseline,A 문제만,80,80,80,80,78,0.975,79,0.9875,0,80,"[0.9133556701442198, 0.9931171067970292]"
 B,regression_hint,B 예측 상위20토큰,80,80,80,80,77,0.9625,78,0.975,0,80,"[0.8954527990995489, 0.9871654310800886]"
-C,oracle_hint,C 실제 해설 상위20토큰,80,0,0,0,,,,,80,0,null
+C,oracle_hint,C 실제 해설 상위20토큰,80,80,80,80,75,0.9375,76,0.95,0,0,"[0.8618985123272557, 0.973010624329158]"

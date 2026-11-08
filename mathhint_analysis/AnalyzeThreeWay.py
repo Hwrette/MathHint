@@ -15,6 +15,7 @@ from pathlib import Path
 
 from .ExperimentMetrics import answer_metrics, exact_mcnemar, usage_summary, wilson_interval, record_correct as correct
 from mathhint_solver.AnswerEvaluation import evaluate_answer
+from mathhint_solver.GenerationAudit import audit_generation
 
 ROOT = Path(__file__).resolve().parents[1]
 RUN_ROOT = ROOT / "results/final_experiment"
@@ -144,7 +145,9 @@ def review_evidence(folder, latest):
             for quote in record.get("evidence_quotes", [record["quote"]] if record.get("quote") else []):
                 if quote not in row.get("output_text", ""):
                     raise ValueError("신규 풀이 검토 인용문이 출력에 없습니다.")
-        result["new_review"] = new
+        result["new_review"] = {k:v for k,v in new.items() if k!="records"}
+        result["new_review_correct_answer_with_issues"] = [r["id"] for r in new.get("records",[]) if r.get("math_status")=="inappropriate" and r.get("final_answer_original_correct") is True]
+        result["new_review_wrong_answer_with_issues"] = [r["id"] for r in new.get("records",[]) if r.get("math_status")=="inappropriate" and r.get("final_answer_original_correct") is False]
         result["new_review_counts"] = {m: dict(Counter(r.get("math_status", "unreviewed") for r in new.get("records", []) if r["method"] == m)) for m in METHODS}
     return result
 
@@ -178,6 +181,7 @@ def analyze(run_root=RUN_ROOT, conflicts_path=None):
               "successful_conditions": sum(r.get("status") == "success" for r in latest.values()),
               "complete": len(latest) == expected and all(r.get("status") == "success" for r in latest.values()),
               "source_key": method_scores(latest, ids),
+              "new_api_attempts": [{"id": r["id"], "method": r["method"], "execution": a.get("execution"), "attempt": a.get("attempt"), "status": a.get("status"), "error_type": a.get("error_type"), "total_tokens": a.get("usage",{}).get("total_token_count")} for r in latest.values() if not reused(r) for a in r.get("attempts",[]) if not a.get("request_skipped") and a.get("status")!="skipped"],
               "supplemental_key": {**adjudication, "methods": method_scores(reviewed, ids)},
               "paired_source": {f"{a}_vs_{b}": paired_scores(latest, ids, a, b) for a, b in comparisons},
               "paired_supplemental": {f"{a}_vs_{b}": paired_scores(reviewed, ids, a, b) for a, b in comparisons},
@@ -192,77 +196,12 @@ def analyze(run_root=RUN_ROOT, conflicts_path=None):
     return result, latest, reviewed
 
 
-def audit_responses(folder, result, latest):
-    """완성 요청·원문·재사용 원본·실호출 캡처와 저장 응답을 대조한다."""
-    def digest(value):
-        return hashlib.sha256(json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
-    config=result["settings"]
-    if digest(config) != result["config_id"]:
-        raise ValueError("최종 설정 해시 불일치")
-    originals={(r["id"],r["method"]):r for r in (json.loads(line) for line in (LEGACY/"원본응답_160개.jsonl").read_text().splitlines() if line.strip())}
-    rows=[]; missing=[]; captured=0
-    for identifier in result["test_ids"]:
-        problem=(ROOT/f"data/processed/problems/{identifier}.txt").read_text()
-        for method in METHODS:
-            condition=CONDITIONS[method]
-            request=read_json(folder/f"prompt_audit/requests/{identifier}/{condition}.json")
-            if request["id"] != identifier or request["method"] != method or request["condition"] != condition:
-                raise ValueError("저장 요청 ID/조건 불일치")
-            if request["problem_text"] != problem or not request["user_message"].startswith(problem):
-                raise ValueError("저장 요청의 문제 원문 불일치")
-            if digest(request["user_message"]) != request["input_sha256"] or digest(request["sdk_request"]) != request["sdk_request_sha256"]:
-                raise ValueError("저장 요청 입력 해시 불일치")
-            if method == "baseline" and (request["user_message"] != problem or request["hint"] is not None):
-                raise ValueError("A 조건 추가 해설 정보 유입")
-            row=latest.get((identifier,method))
-            if row is None:
-                missing.append({"id":identifier,"condition":condition,"status":"not_run"})
-                continue
-            if row["input_text"] != request["user_message"] or row["input_sha256"] != request["input_sha256"] or row["system_instruction"] != request["system_instruction"]:
-                raise ValueError("응답과 저장 프롬프트 불일치")
-            if row.get("model") != request["requested_model"]:
-                raise ValueError("응답의 요청 모델 식별자 불일치")
-            for field,value in row.get("usage",{}).items():
-                if field in TOKENS and value is not None and (type(value) not in (int,float) or value < 0):
-                    raise ValueError("잘못된 토큰 사용량")
-            historic=False; boundary=False
-            if reused(row):
-                source=originals.get((identifier,method))
-                if source is None or digest(source) != row.get("provenance",{}).get("source_record_sha256"):
-                    raise ValueError("재사용 응답 원본 해시 불일치")
-                for field in ("input_text","input_sha256","system_instruction","output_text","usage","model_version","evaluation","reference_answer_text"):
-                    if row.get(field) != source.get(field):
-                        raise ValueError("재사용 응답과 원본 값 불일치: "+field)
-                historic=True
-            elif row.get("sdk_boundary_capture_expected"):
-                paths=list((folder/"prompt_audit/sdk_calls").glob(f"{identifier}_{condition}_{row['rate_limited_execution_id']}_*.json"))
-                if not paths or len(paths) != row.get("sdk_boundary_captured_attempts"):
-                    raise ValueError("실호출 SDK 캡처 누락")
-                for path in paths:
-                    snapshot=read_json(path)
-                    if snapshot["request"] != request["sdk_request"] or snapshot["request_sha256"] != request["sdk_request_sha256"]:
-                        raise ValueError("실호출 SDK 인자 불일치")
-                boundary=True;captured+=1
-            rows.append({"id":identifier,"condition":condition,"status":row.get("status"),
-                "input_and_request_hash_match":True,"historical_exact_record_verified":historic,
-                "live_sdk_boundary_verified":boundary,"requested_model":row.get("model"),
-                "reported_model_version":row.get("model_version"),
-                "usage_missing_fields":[field for field in TOKENS if row.get("usage",{}).get(field) is None]})
-    report={"expected_responses":result["expected_conditions"],"recorded_responses":len(rows),
-        "missing_count":len(missing),"missing":missing,"existing_response_checks_passed":True,
-        "reused_exact_responses":sum(r["historical_exact_record_verified"] for r in rows),
-        "new_live_sdk_boundary_verified_responses":captured,
-        "all_expected_responses_available":not missing,
-        "actual_model_internal_identity_verified":False,
-        "note":"과거 A/B는 원본·완성 요청의 일치를 확인했으며 과거 SDK 경계를 실시간 캡처한 것은 아니다. 새 C는 캡처가 있을 때만 실호출 경계 검증으로 표시한다. 미제공 토큰은 null을 유지한다.","records":rows}
-    write_json(folder/"prompt_audit/response_audit.json",report)
-    return report
-
-
 def export_tables(folder, result, latest, reviewed):
     ids = result["test_ids"]
     summaries, token_rows, questions = [], [], []
     conflicts = {r["id"]: r for r in result["supplemental_key"]["conflicts"]}
+    review_path=folder/"solution_review.json"
+    new_reviews={(r["id"],r["method"]):r for r in read_json(review_path).get("records",[])} if review_path.exists() else {}
     for method in METHODS:
         raw, fixed = result["source_key"][method], result["supplemental_key"]["methods"][method]
         summaries.append({"condition": CONDITIONS[method], "method": method, "name": NAMES[method],
@@ -295,6 +234,10 @@ def export_tables(folder, result, latest, reviewed):
             for field, label in TOKENS.items():
                 suffix = {"prompt_token_count": "input", "candidates_token_count": "output", "thoughts_token_count": "thinking", "total_token_count": "total"}[field]
                 row[prefix+"_"+suffix+"_tokens"] = raw.get("usage", {}).get(field)
+        oracle_review=new_reviews.get((i,"oracle_hint"),{})
+        row["C_math_review"]=oracle_review.get("math_status", "unreviewed")
+        row["C_math_error_kind"]=oracle_review.get("error_kind")
+        row["C_math_review_source"]="solution_review.json" if oracle_review else None
         row["changed_original_correctness"] = len({correct(latest.get((i, m))) for m in METHODS if correct(latest.get((i, m))) is not None}) > 1
         row["changed_final_answers"] = len({str(latest.get((i, m), {}).get("evaluation", {}).get("predicted_answer")) for m in METHODS if (i, m) in latest}) > 1
         for method, prefix in [("regression_hint", "B"), ("oracle_hint", "C")]:
@@ -337,9 +280,12 @@ def render_figures(folder, result, questions):
     fig, axes = plt.subplots(1, 4, figsize=(14,4.3))
     for ax,(field,label) in zip(axes,TOKENS.items()):
         vals = [result["source_key"][m]["usage"][field]["successful_response_mean"] for m in METHODS]
+        if all(v is None for v in vals):
+            ax.set_axis_off();ax.set_title(label+" 토큰")
+            ax.text(.5,.5,"API 미제공\n0으로 추정하지 않음",transform=ax.transAxes,ha="center",va="center")
+            continue
         bars=ax.bar(range(3),[v if v is not None else 0 for v in vals],color=colors,edgecolor="black")
         ax.set(xticks=range(3),xticklabels=["A", "B", "C"],title=label+" 토큰",ylabel="제공된 성공 응답의 평균")
-        if all(v is None for v in vals): ax.set_ylim(0,1)
         for b,v in zip(bars,vals):ax.text(b.get_x()+b.get_width()/2,b.get_height(),"미제공" if v is None else f"{v:.1f}",ha="center",va="bottom",fontsize=9)
     fig.tight_layout();fig.savefig(figures/"tokens.png",dpi=180);plt.close(fig)
     for start in range(0,len(questions),40):
@@ -381,9 +327,22 @@ def gemini_markdown(result):
               "|대응 비교|채점된 쌍|왼쪽만 정답|오른쪽만 정답|오른쪽−왼쪽|McNemar p|", "|---|---:|---:|---:|---:|---:|"]
     for row in result["paired_source"].values():
         lines.append(f"|{CONDITIONS[row['left']]} → {CONDITIONS[row['right']]}|{row['graded_pairs']}|{row['left_only']}|{row['right_only']}|{percent(row['difference_right_minus_left'])}|{number(row['exact_mcnemar_p'],4)}|")
+    unknown_by_condition={CONDITIONS[m]:result["source_key"][m]["usage"]["total_token_count"]["missing_attempts"] for m in METHODS}
+    lines += ["", "전체 토큰이 미제공인 전송 시도(누적 보존 이력): "+" / ".join(f"{c} {n}회" for c,n in unknown_by_condition.items())+". A/B의 이력은 재사용한 과거 실행이며 현재 추가 C 실행과 구분한다. 따라서 이 표의 성공 응답 합계를 모든 시도의 확정 소비량·청구 비용으로 해석하지 않는다."]
+    new_attempts=result.get("new_api_attempts",[])
+    failed=[a for a in new_attempts if a["status"]!="success"]
+    unknown=[a for a in new_attempts if a["total_tokens"] is None]
+    if new_attempts:
+        resumed_ids=sorted({a["id"] for a in new_attempts if (a.get("execution") or 1)>1})
+        if resumed_ids:
+            lines += ["", "실패 후 별도 실행에서 재요청한 문항: "+", ".join(f"`{i}` (누적 {sum(a['id']==i for a in new_attempts)}시도)" for i in resumed_ids)+". 성공이 이미 저장된 조건은 다시 요청하지 않았다."]
+        lines += ["",f"신규 실험의 기록된 전송 시도 {len(new_attempts)}회 중 실패 기록 {len(failed)}회, 전체 토큰 미제공 시도 {len(unknown)}회다. 성공 응답의 합계는 비교할 수 있지만, 실패 시도의 사용량이 미확인인 경우 전체 청구 비용·소비량은 확정할 수 없다."]
+        for a in failed:
+            lines.append(f"- `{a['id']}`: `{a['error_type'] or a['status']}` (실행 {a['execution']}, 시도 {a['attempt']}). 서버에서 처리가 끝났는지와 사용량은 응답이 없어 미확인이다. 재개 시 성공 응답을 중복 호출하지 않고 실패 문항만 제한적으로 다시 요청했다면 그 이력을 누적 보존한다.")
     lines += ["", "McNemar 검정은 같은 문제의 정오답 차이에 대한 보조 분석이다. 계획된 세 비교에 다중 비교 보정을 적용하지 않았으며 채점된 쌍이 없으면 산출하지 않는다. 작은 정답 수 차이를 일반적인 개선으로 단정하지 않는다.", "",
               "## 실제 입력과 응답", "", "[입력 감사](prompt_audit/) · [80문항 한 행 비교](question_comparison.csv) · [정오답 또는 답이 다른 문항](changed_questions.csv) · [생성 응답](responses.jsonl) · [상세 집계](analysis.json)", "",
-              "B/C의 선택·정렬·표시·기본 지시는 같고 벡터의 출처 설명만 달라진다. B는 기존 입력과 설정이 정확히 같을 때만 재사용했다. A/B는 이전 실행, C는 추가 실행 대상으로 남아 있다. 완료된 C 응답이 있다면 A/B와 호출 시점 차이가 남는다. 요청 모델과 실제 반환 model_version을 별도로 저장했으며 제공되지 않은 내부 모델 정보를 검증했다고 주장하지 않는다.", "",
+              "B/C의 선택·정렬·표시·기본 지시는 같고 벡터의 출처 설명만 달라진다. B는 기존 입력과 설정이 정확히 같을 때만 재사용했다. A/B는 이전 실행을 재사용하고 C는 추가 실험이다. 저장된 C 응답은 A/B와 호출 시점이 다르다. 요청 모델과 실제 반환 model_version을 별도로 저장했으며 제공되지 않은 내부 모델 정보를 검증했다고 주장하지 않는다.", "",
+              "응답이 보고한 model_version 분포: " + " / ".join(CONDITIONS[m]+"="+json.dumps(result["source_key"][m]["model_versions"],ensure_ascii=False) for m in METHODS) + ". 이는 반환된 식별자이며 내부 모델 동일성을 증명하지 않는다.", "",
               "## 풀이 타당성", ""]
     reviews=result["review"]["ai_review"]
     for m in METHODS:
@@ -397,6 +356,10 @@ def gemini_markdown(result):
             reviewed_n=sum(v for k,v in counts.items() if k!="unreviewed")
             pending=max(0,result["source_key"][m]["successful_responses"]-reviewed_n)
             lines.append(f"- {NAMES[m]}: "+(f"신규 AI 보조 검토 적절 {counts.get('appropriate',0)}, 부적절 {counts.get('inappropriate',0)}, 불확실 {counts.get('uncertain',0)}, 미검토 {pending}. [실제 인용·수학 근거](solution_review.json)를 확인한다. 사람의 확정 판정이 아니다." if new else "수학적 풀이 검토 미실시. 최종 답이 맞았다고 풀이가 타당하다고 집계하지 않는다."))
+    if result["review"].get("new_review"):
+        right_issues=result["review"].get("new_review_correct_answer_with_issues",[])
+        wrong_issues=result["review"].get("new_review_wrong_answer_with_issues",[])
+        lines += ["", f"C의 부적절 판정은 최종 답이 맞지만 표기·중간 논리에 문제가 있는 {len(right_issues)}건과 최종 오답이면서 풀이에도 문제가 있는 {len(wrong_issues)}건을 포함한다. 표기 오류·뒤에서 재계산한 오류·근거 부족·최종 오답의 error_kind를 구분해 기록했다. 따라서 {len(right_issues)+len(wrong_issues)}건을 모두 최종 오답이나 같은 심각도의 오류로 해석하지 않는다.", "", "신규 C와 기존 A/B는 검토 시점·검토자가 달라 AI 검토 개수 차이를 엄밀히 통제된 성능 차이로 확정하지 않는다. 공식 교육과정 성취기준 전체와 대조하지 않아 교과 범위는 여전히 미확정이다."]
     lines += ["", "기존 AI 검토는 조건을 알 수 있는 상태에서 작성되었으며 독립적인 블라인드 사람 평가가 아니다. 해시·인용 일치는 대상의 동일성을 확인할 뿐 판단의 수학적 정확성을 보증하지 않는다.", "",
               "![정답률](figures/accuracy.png)", "![토큰](figures/tokens.png)", "![문항별 토큰 차이](figures/question_token_differences.png)", "", "## 해석 범위", ""]
     lines += ["- "+note for note in result["interpretation"]]
@@ -437,6 +400,30 @@ def case_studies(run_root, result, latest, questions):
     notes=["# 직접 비교할 사례", "", "선정은 이미 나온 결과를 설명하기 위한 관찰이다. 이 문항을 보고 모델을 다시 선택하거나 학습하지 않았다.", "", "## 조건별 정오답이 바뀐 문항", ""]
     for r in changed:
         i=r["id"];notes += [f"- [{i}](questions.md#{i}): "+" / ".join(f"{p}={r[p+'_answer']} ({'정답' if r[p+'_correct_original'] else '오답'})" for p in "ABC" if r[p+"_correct_original"] is not None)]
+    notes += ["", "## 벡터 정보와 정오답 변화 관찰", ""]
+    categories=[("예측 조건에서만 개선된 것으로 보이는 사례",lambda r:r["A_correct_ai_supplemental"] is False and r["B_correct_ai_supplemental"] is True),
+        ("예측 조건에서 악화된 것으로 보이는 사례",lambda r:r["A_correct_ai_supplemental"] is True and r["B_correct_ai_supplemental"] is False),
+        ("실제 해설 벡터에도 오답이 남은 사례",lambda r:r["C_correct_ai_supplemental"] is False)]
+    for title,predicate in categories:
+        matched=[r for r in questions if predicate(r)]
+        notes += [f"### {title}", ""]
+        notes += [" · ".join(f"[{r['id']}](questions.md#{r['id']})" for r in matched) if matched else ("현재 확보된 판독·보조 채점 결과에는 해당 사례가 없다." if result["complete"] else "아직 C 등 미완료 조건이 있어 전체 비교를 확정하지 않는다."), ""]
+    review_path=run_root/"03_gemini/solution_review.json"
+    new_review=read_json(review_path) if review_path.exists() else {}
+    invalid=[r for r in new_review.get("records",[]) if r.get("math_status") in ("inappropriate","uncertain")]
+    if invalid:
+        notes += ["### 신규 C 풀이의 오류·불확실 사례", ""]
+        for review in invalid:
+            i=review["id"]
+            notes += [f"- [{i}](questions.md#{i}): {review['math_status']} / {review.get('error_kind')} / 원본 최종정오={review.get('final_answer_original_correct')} · {review.get('reason','')}"]
+        notes += ["", "근거는 [검토 JSON](../03_gemini/solution_review.json)의 실제 출력 인용과 해시를 확인한다. 최종 정오답과 별도인 AI 보조 판단이다."]
+    numeric_case=run_root/"03_gemini/prompt_audit/requests/diff_3_004/C.json"
+    if numeric_case.exists() and ("diff_3_004","oracle_hint") in latest:
+        mapping=read_json(numeric_case).get("hint",{}).get("mapping",{})
+        response=latest["diff_3_004","oracle_hint"]
+        if "latex:16" in mapping:
+            answer=response.get("evaluation",{}).get("predicted_answer")
+            notes += ["", f"`diff_3_004`의 실제 C 입력에는 정답16에 직접 연결되는 `latex:16` 빈도 {mapping['latex:16']}도 들어 있지만 최종 출력은 {answer}다. 숫자 토큰의 존재와 올바른 수식 관계·풀이 순서의 생성은 같지 않다는 관찰 사례다. 토큰 때문에 오류가 생겼다는 인과 주장은 아니다."]
     notes += ["", "이 변화만으로 빈도 토큰이 변화의 원인이었다고 확정할 수 없다. 풀이의 실제 인용과 수학적 검토를 함께 확인해야 한다.","",
               "## 이미 확인된 풀이 문제", "", "- `diff_3_004`: 기본 풀이에는 잘못된 중간 등식이 있으나 최종16에 도달한 사례다. 예측 조건의 답32와 구분해 볼 수 있다.",
               "- `diff_2_004`: 기본 풀이가 불가능한 중간 등식을 썼다가 뒤에서 다시 계산해 최종20에 도달한다. 최종 답 일치와 논리적 타당성은 다르다.",
@@ -485,7 +472,7 @@ def final_report(run_root, result):
             low,high=ordered[0],ordered[-1]
             lines += ["",f"예를 들어 `{high['id']}`는 코사인 {float(high['clipped_nonnegative_cosine_similarity']):.4f}·공통 토큰 {high['common_top20_count']}개인 반면 `{low['id']}`는 {float(low['clipped_nonnegative_cosine_similarity']):.4f}·{low['common_top20_count']}개다. 이 순위는 빈도 벡터의 유사도이며 수학적으로 중요한 개념을 맞혔다는 판정은 아니다."]
     lines += ["", "코사인 유사도는 벡터 방향의 유사도이며 문제의 정답률이 아니다. 음수 보정은 BoW의 비음수 성질과 맞지만 빈도 예측 오차가 사라지는 것은 아니다. 공통 대수 기호·일반 표현의 높은 빈도가 수학적으로 필요한 순서·관계를 포착했다는 뜻도 아니다. [문항별 지표·상위 토큰](02_regression/question_comparison.csv), [실제·원시·보정 벡터](02_regression/vectors.json), [성공·실패 및 그래프](02_regression/analysis.md)를 함께 본다.", "",
-              "## 7. Gemini API 비교 실험 방법", "", f"테스트80문항에 A문제만, B예측 해설 상위20토큰, C실제 해설 상위20토큰을 제공한다. 요청 모델 `{config['model']}`, temperature `{config['temperature']}`, thinking `{config['thinking_level']}`, 최대 출력 `{config['max_output_tokens']}` 및 시스템 지시·정답 평가를 통제한다. B/C는 동일한 고정 학습 어휘, 양수 토큰 선택·내림차순·동률 어휘순·소수3자리 표시·프롬프트 구조를 사용하며 정보 출처 설명만 다르다. 원시 예측값은 별도로 남긴다.", "", "C는 정답 해설에서 얻은 정보가 포함되는 오라클 진단 조건이다. 정답에 직접 연결되는 토큰이 있을 수 있어 서비스 성능으로 해석하지 않는다. 고정 어휘·상위20으로 정보를 제한하므로 전체 해설을 준 것도 아니고 이론적 성능 상한도 아니다. 기존 A/B 응답은 설정·완성 입력 해시가 같은 경우에만 재사용한다. C는 새로 필요한 호출이며 호출 날짜 차이 및 서비스 내부 변경 가능성은 남는다. API 직전 저장된 요청과 SDK 호출 인자는 [입력 감사](03_gemini/prompt_audit/)로 추적하고, 실제 모델 버전은 반환값 범위에서만 기록한다.", "",
+              "## 7. Gemini API 비교 실험 방법", "", f"테스트80문항에 A문제만, B예측 해설 상위20토큰, C실제 해설 상위20토큰을 제공한다. 요청 모델 `{config['model']}`, temperature `{config['temperature']}`, thinking `{config['thinking_level']}`, 최대 출력 `{config['max_output_tokens']}` 및 시스템 지시·정답 평가를 통제한다. B/C는 동일한 고정 학습 어휘, 양수 토큰 선택·내림차순·동률 어휘순·소수3자리 표시·프롬프트 구조를 사용하며 정보 출처 설명만 다르다. 원시 예측값은 별도로 남긴다.", "", "C는 정답 해설에서 얻은 정보가 포함되는 오라클 진단 조건이다. 정답에 직접 연결되는 토큰이 있을 수 있어 서비스 성능으로 해석하지 않는다. 고정 어휘·상위20으로 정보를 제한하므로 전체 해설을 준 것도 아니고 이론적 성능 상한도 아니다. 기존 A/B 응답은 설정·완성 입력 해시가 같은 경우에만 재사용한다. C는 이번 추가 실험이며 호출 날짜 차이 및 서비스 내부 변경 가능성은 남는다. API 직전 저장된 요청과 SDK 호출 인자는 [입력 감사](03_gemini/prompt_audit/)로 추적하고, 실제 모델 버전은 반환값 범위에서만 기록한다.", "",
               "## 8. 세 조건의 풀이 성능 및 토큰 사용량 비교", ""]
     gem=gemini_markdown(result)
     table=gem[gem.index("|조건|"):gem.index("## 실제 입력과 응답")]
@@ -494,8 +481,13 @@ def final_report(run_root, result):
     if a["graded_responses"] == len(result["test_ids"]) and b["graded_responses"] == len(result["test_ids"]):
         left=a["usage"]["total_token_count"]["successful_response_strict_total"]
         right=b["usage"]["total_token_count"]["successful_response_strict_total"]
-        cost=f" 전체 토큰은 {left:,}→{right:,}로 {(right-left)/left:.2%} 증가했다." if left and right is not None else ""
-        lines += [f"**관찰:** A와 B의 원본 정답 수는 {a['correct']}→{b['correct']}개다."+cost+" 이80문항의 결과에서 예측 힌트가 정답률을 높였다는 증거는 없으며 추가 입력 비용은 확인된다. 작은 차이의 일반화·원인은 확정할 수 없다.",""]
+        cost=f" 성공 응답에 보고된 전체 토큰은 {left:,}→{right:,}로 {(right-left)/left:.2%} 증가했다." if left and right is not None else ""
+        lines += [f"**관찰:** A와 B의 원본 정답 수는 {a['correct']}→{b['correct']}개다."+cost+" 이80문항의 결과에서 예측 힌트가 정답률을 높였다는 증거는 없으며 입력 토큰의 증가는 확인된다. 작은 차이의 일반화·원인은 확정할 수 없다.",""]
+    c=result["source_key"]["oracle_hint"]
+    if c["graded_responses"]==len(result["test_ids"]):
+        lines += [f"**관찰:** 실제 해설 토큰을 제공한 C는 원본 정답표 기준 {c['correct']}/{c['graded_responses']}개로 A보다 {c['correct']-a['correct']:+d}개, B보다 {c['correct']-b['correct']:+d}개 차이가 났다. 정답 해설에서 미리 얻은 정보를 주는 조건이므로 이를 일반적인 서비스 성능으로 비교하거나 원인 하나를 확정할 수 없다. 차이가 작고 문항당1회 생성이므로 예측 오차의 영향과 빈도 표현의 유용성을 탐색하는 참고 결과로 해석한다.", ""]
+    review_section=gem[gem.index("## 풀이 타당성"):gem.index("![정답률]")]
+    lines += [review_section.replace("## 풀이 타당성","### 풀이 타당성").replace("](solution_review.json)","](03_gemini/solution_review.json)"), ""]
     if not result["complete"]:
         lines += ["**미완료:** C 조건의 응답이 모두 확보되지 않아 실제 해설 정보 자체의 효과와 회귀 예측 오차의 영향을 구분하려던 세 조건 진단은 아직 검증되지 않았다.",""]
     lines += ["모든80문항을 같은 행에서 비교하는 [Gemini CSV](03_gemini/question_comparison.csv), [전체 분석](03_gemini/analysis.md), [조건별 실제 응답](03_gemini/responses.jsonl)을 제공한다. 풀이 타당성의 기존 AI 검토·미검토 범위는 Gemini 분석에 따로 표시했다. 최종 답과 풀이 평가를 합쳐 하나의 정확도로 부르지 않는다.", "",
@@ -508,7 +500,10 @@ def final_report(run_root, result):
 def build_report(run_root=RUN_ROOT):
     run_root=Path(run_root);folder=run_root/"03_gemini";folder.mkdir(parents=True,exist_ok=True)
     result,latest,reviewed=analyze(run_root)
-    audit_responses(folder, result, latest)
+    postflight=audit_generation(folder)
+    result["api_responses_complete"]=result["complete"]
+    result["postflight_verified"]=postflight["verification_passed"] and postflight["all_expected_successful"]
+    result["complete"]=result["complete"] and result["postflight_verified"]
     questions=export_tables(folder,result,latest,reviewed)
     render_figures(folder,result,questions)
     (folder/"analysis.md").write_text(gemini_markdown(result),encoding="utf-8")
@@ -522,6 +517,7 @@ def build_report(run_root=RUN_ROOT):
            "4. **통합 문항 찾기:** [80문항 ID별 연결](04_case_studies/questions.md), [사례 요약](04_case_studies/selected_cases.md).", 
            "5. **연구 전체 해석:** [최종 한국어 보고서](final_report.md).", "",
            "## 표와 그림", "", "[군집 지표표](01_clustering/summary.csv) · [군집 그림](01_clustering/figures/) · [회귀 그림](02_regression/figures/) · [Gemini 집계](03_gemini/summary.csv) · [토큰 합계·평균](03_gemini/token_summary.csv) · [Gemini 그림](03_gemini/figures/)", "",
+           "[전체 산출물 검증](validation.json) · [핵심 테스트 실행 로그](test_results.txt) · [독립 ML 수식 감사](independent_ml_audit.json)", "",
            "API 오류·미완료·채점불가는 오답으로 합치지 않는다. 원본 정답표와 AI 보조 보정 점수는 별도로 표시한다. C는 실제 해설 정보를 제공한 오라클 진단이며 서비스 성능이나 보장된 상한이 아니다. 코사인 유사도는 정답률이 아니다.", "",
            "## 재집계", "", "저장된 결과로만 표·그림·보고서를 다시 만들 때 `python -m mathhint_analysis.AnalyzeThreeWay`를 실행한다. 이 명령은 Gemini를 호출하거나 모델을 다시 학습하지 않는다. 전체 설치·실험 명령은 [프로젝트 README](../../README.md)를 따른다.", ""]
     (run_root/"README.md").write_text("\n".join(index),encoding="utf-8")

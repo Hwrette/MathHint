@@ -92,3 +92,13 @@ git restore --source=recovery/before-final-cleanup-20261108 -- examples mathhint
 - 복구: `git show 588d86f:docs/checkpoints/cancelled_before_final.zip > /tmp/mathhint_cancelled_checkpoint.zip`. 이 이력은 원격 게시 확인된5eca866의 조상이다. 새 최종 실험에 채택되지 않은 정수·전체벡터 초안의 중복 백업을 작업 공간에 남기지 않는다.
 - 기존 `results/model_comparison_2026-11-07/`는 재사용 API160개·AI검토·모델·학습기록·930파일 manifest를 연결하는 불변 근거 묶음으로 보존한다. 새 최종 안내는 `results/final_experiment/README.md` 하나를 사용한다. 오래된 정답/입력/응답을 새 실험으로 가장하지 않는다.
 - `.env`는 내용과 해시를 수집하지 않고 Git 제외 상태로 보존했다. 원본 데이터·분할·어휘·기존 결과는 삭제하지 않았다.
+
+## 최종 Gemini 표시 자료 통합
+
+- 삭제: `results/final_experiment/03_gemini/comparison.csv`, `summary.json`. 임시 생성기의 중복 표이며 최종 `question_comparison.csv`, `summary.csv`, `token_summary.csv`, `analysis.json`으로 통합했다. 입력·응답 원본 및 HTML 열람 화면은 보존했다.
+- 수정: `ThreeWayGeneration.py` 재사용 카운터를 현행 origin으로 계산한다. 실행 당시 source는 원격 Git4f67658 blob의 SHA를 확인해 보존하고, 표시 수정만으로 완료 실험을 다시 호출하지 않도록 source_transition.json에 현재·당시 소스 정보를 남겼다.
+- 추가/통합: `GenerationAudit.py`가 한 곳에서 SDK 직전 인자·응답·사용량·모델 반환값을 검증한다. 보고서 생성기의 중복 감사 구현은 제거했다.
+- 추가: `VerifyResults.py`는 원본 고정 분할·정수 빈도·군집 커버리지와 독립 회귀 계산·요청 해시·80행 비교표를 검사한다. 실제 API를 호출하지 않는다.
+
+- `.gitattributes`는 CSV 표준 CRLF를 정상 줄끝으로 취급하도록 지정했다. 표 내용·수식·빈도·원본 응답을 바꾸거나 정규화하지 않았다.
+- 최종 재배치 검증은 예측 파일의 위치 정보만 분리하고 예측 SHA·전체 설정·240입력·채점기 SHA는 엄격히 유지한다. 다른 임시 root에서 기존 요청240개가 바이트 그대로 유지되고 모의 SDK 검사·감사가 통과했으며 신규 호출은0이다.

@@ -25,6 +25,7 @@ API를 실행할 때만 `.env.example`을 `.env`로 복사하고 `GEMINI_API_KEY
 | 회귀 벡터 비교 | `python -m mathhint_learning.VectorComparison` | `02_regression/`; 기존 고정 모델을 검증해 재사용 |
 | Gemini 입력 준비·검증 | `python -m mathhint_solver.ThreeWayGeneration` | `03_gemini/`; 실제 API 호출 없음 |
 | 저장 결과 재집계 | `python -m mathhint_analysis.AnalyzeThreeWay` | 표·그림·사례·최종 보고서 갱신; API 호출·재학습 없음 |
+| 저장 결과 무결성 | `python -m mathhint_analysis.VerifyResults` | 분할·벡터·군집·요청·문항별 표를 대조; API 호출 없음 |
 | 핵심 검사 | `python -m unittest discover -s tests -v` | 가짜 입력과 저장된 자료로 검증; 실제 API 호출 없음 |
 
 위 `01_`~`03_` 경로는 모두 `results/final_experiment/` 아래에 있다. 전체 파일과 설정은 해당 폴더의 안내를 따른다.

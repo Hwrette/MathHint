@@ -199,7 +199,16 @@ def dry_run(output, project, config, plan):
             raise ValueError("문제만 조건에 추가 정보가 있습니다.")
         record["verification"] = {"mocked_sdk_arguments_match_saved": True, "json_roundtrip_preserves_latex": True,
             "problem_is_exact_prefix": True, "reference_prose_not_in_sdk_arguments": item["reference_solution"] not in item["input_text"]}
-        comparison.write_json(audit / "requests" / item["id"] / (item["condition"] + ".json"), record)
+        request_path = audit / "requests" / item["id"] / (item["condition"] + ".json")
+        if request_path.exists():
+            saved = comparison.read_json(request_path)
+            fields = ("id", "condition", "method", "sdk_request", "sdk_request_sha256", "input_sha256",
+                      "user_message", "system_instruction", "problem_text", "hint", "full_request_text")
+            if any(saved.get(field) != record.get(field) for field in fields):
+                raise ValueError("기존에 저장한 실제 요청과 새 입력이 다릅니다.")
+            # 다른 clone에서도 최초에 기록한 출처 경로와 SDK 요청을 그대로 보존한다.
+        else:
+            comparison.write_json(request_path, record)
         if item["id"] in {config["test_ids"][0], config["test_ids"][len(config["test_ids"]) // 2], config["test_ids"][-1]}:
             examples.append(record)
     table = ["# 실제 입력 감사", "", "240개 입력을 인증 없는 모의 SDK 경계로 검증했다. 실서비스 호출은 이 단계에서 0회다.", "",
@@ -267,18 +276,22 @@ def resolve_resume_config(output, config):
     saved = comparison.read_json(path)
     frozen = saved["config"]
     source_fields = {"runner_sha256", "shared_runner_sha256"}
-    semantic = lambda value: {key: item for key, item in value.items() if key not in source_fields}
+    location_fields = {"predictions_source"}
+    semantic = lambda value: {key: item for key, item in value.items() if key not in source_fields | location_fields}
     if comparison.digest(frozen) != saved["config_id"] or semantic(config) != semantic(frozen):
         raise ValueError("기존 실험의 입력 또는 설정이 달라졌습니다. 새 출력 폴더를 사용하세요.")
     if config != frozen:
         transition_path = Path(output) / "source_transition.json"
         transition = comparison.read_json(transition_path) if transition_path.exists() else {
             "frozen_config_id": saved["config_id"], "frozen_source_hashes": {key:frozen.get(key) for key in sorted(source_fields)}, "versions": []}
+        transition.setdefault("frozen_source_locations", {key:frozen.get(key) for key in sorted(location_fields)})
         current = {key:config.get(key) for key in sorted(source_fields)}
-        if not any(version["source_hashes"] == current for version in transition["versions"]):
+        locations = {key:config.get(key) for key in sorted(location_fields)}
+        if not any(version["source_hashes"] == current and version.get("source_locations") == locations for version in transition["versions"]):
             transition["versions"].append({"recorded_at": comparison.utc_now(), "source_hashes": current,
+                "source_locations": locations, "predictions_sha256": config.get("predictions_sha256"),
                 "all_non_source_config_fields_and_input_hashes_match": True,
-                "reason": "Source provenance changed; model/settings/prompt/vector/input/grader fingerprints are identical."})
+                "reason": "Only source code/location provenance changed; prediction bytes, model/settings/prompt/vector/input/grader fingerprints are identical."})
             comparison.write_json(transition_path, transition)
     return frozen
 

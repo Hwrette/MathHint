@@ -39,6 +39,8 @@ HML 원본 → 문항·분류·출처·원본 해설
 | A/B/C 입력·재사용·호출 | [ThreeWayGeneration.py](../mathhint_solver/ThreeWayGeneration.py)의 `prepare_plan`, `prepare`, `run_experiment` |
 | API 요청·응답 저장 | [CompareGeneration.py](../mathhint_solver/CompareGeneration.py)의 `make_request`, `generate_one`, `save_result` |
 | 호출 간격·재시도·할당량 중단 | [RateLimitedComparison.py](../mathhint_solver/RateLimitedComparison.py)의 `GlobalRateLimiter` |
+| 실제 요청·응답 사후 감사 | [GenerationAudit.py](../mathhint_solver/GenerationAudit.py)의 `audit_generation` |
+| 저장된 표·벡터 무결성 | [VerifyResults.py](../mathhint_analysis/VerifyResults.py)의 `verify` |
 | 최종 답 평가 | [AnswerEvaluation.py](../mathhint_solver/AnswerEvaluation.py)의 `evaluate_answer` |
 | 풀이 검토 근거 | [SolutionReview.py](../mathhint_solver/SolutionReview.py) |
 | 통계와 최종 결과 생성 | [ExperimentMetrics.py](../mathhint_analysis/ExperimentMetrics.py), [AnalyzeThreeWay.py](../mathhint_analysis/AnalyzeThreeWay.py) |

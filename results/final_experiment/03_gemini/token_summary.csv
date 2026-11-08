@@ -7,7 +7,7 @@ B,regression_hint,prompt_token_count,입력,80,80,0,31600,31600,395.0,31600,3160
 B,regression_hint,candidates_token_count,출력,80,80,0,37015,37015,462.6875,37015,37015
 B,regression_hint,thoughts_token_count,추론,80,0,80,,,,,
 B,regression_hint,total_token_count,전체,80,80,0,68615,68615,857.6875,68615,68615
-C,oracle_hint,prompt_token_count,입력,0,0,0,,,,,
-C,oracle_hint,candidates_token_count,출력,0,0,0,,,,,
-C,oracle_hint,thoughts_token_count,추론,0,0,0,,,,,
-C,oracle_hint,total_token_count,전체,0,0,0,,,,,
+C,oracle_hint,prompt_token_count,입력,80,80,0,28372,28372,354.65,28372,
+C,oracle_hint,candidates_token_count,출력,80,80,0,36423,36423,455.2875,36423,
+C,oracle_hint,thoughts_token_count,추론,80,0,80,,,,,
+C,oracle_hint,total_token_count,전체,80,80,0,64795,64795,809.9375,64795,

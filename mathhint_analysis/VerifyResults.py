@@ -38,6 +38,11 @@ def verify(root=ROOT, results=RESULTS):
     train = read(root / "data/processed/splits/train.json")
     test = read(root / "data/processed/splits/test.json")
     check("fixed_split_185_80_disjoint", len(train) == 185 and len(test) == 80 and not set(train) & set(test))
+    legacy = root / "results/model_comparison_2026-11-07"
+    legacy_files = read(legacy / "manifest.json")["files"]
+    check("legacy_930_artifacts_unchanged", len(legacy_files) == 930 and all(
+        hashlib.sha256((legacy / path).read_bytes()).hexdigest() == expected
+        for path, expected in legacy_files.items()))
     for region in ("problems", "solutions"):
         vocabulary = read(root / f"data/vectors/{region}/vocabulary.json")
         for part, identifiers in (("train", train), ("test", test)):
@@ -103,11 +108,33 @@ def verify(root=ROOT, results=RESULTS):
     table = rows(gemini / "question_comparison.csv")
     check("gemini_comparison_all_80_ids", [r["id"] for r in table] == test)
     latest = {(r["id"], r["method"]): r for r in records}
+    for row in rows(gemini / "summary.csv"):
+        selected = [r for r in latest.values() if r["method"] == row["method"] and r["status"] == "success"]
+        graded = [r for r in selected if type(r.get("evaluation", {}).get("correct")) is bool]
+        correct = sum(r["evaluation"]["correct"] for r in graded)
+        check("gemini_" + row["condition"] + "_summary_counts",
+              int(row["successful"]) == len(selected) and int(row["graded"]) == len(graded)
+              and int(row["correct_original_key"]) == correct
+              and (not graded or math.isclose(float(row["accuracy_original_key"]), correct / len(graded))))
+    for row in rows(gemini / "token_summary.csv"):
+        values = [r.get("usage", {}).get(row["token_field"]) for r in latest.values()
+                  if r["method"] == row["method"] and r["status"] == "success"]
+        known = [v for v in values if v is not None]
+        check("gemini_" + row["condition"] + "_" + row["token_field"] + "_table",
+              int(row["provided_responses"]) == len(known)
+              and row["sum_when_all_provided"] == (str(sum(known)) if values and len(known) == len(values) else "")
+              and (not known or math.isclose(float(row["mean_of_known"]), sum(known) / len(known))))
     for row in table:
         for condition, method in zip("ABC", manifest["config"]["methods"]):
             saved = latest.get((row["id"], method))
             check(f"table_{row['id']}_{condition}", row[condition + "_status"] == (saved["status"] if saved else "not_run")
-                  and (not saved or row[condition + "_input_sha256"] == saved["input_sha256"]))
+                  and (not saved or (
+                      row[condition + "_input_sha256"] == saved["input_sha256"]
+                      and row[condition + "_answer"] == str(saved.get("evaluation", {}).get("predicted_answer") or "")
+                      and row[condition + "_correct_original"] == (str(saved["evaluation"]["correct"])
+                          if type(saved.get("evaluation", {}).get("correct")) is bool else "")
+                      and row[condition + "_total_tokens"] == (str(saved.get("usage", {}).get("total_token_count"))
+                          if saved.get("usage", {}).get("total_token_count") is not None else ""))))
     expected = len(test) * 3
     successful = sum(r["status"] == "success" for r in latest.values())
     report = {"verified_at": datetime.now(timezone.utc).isoformat(),

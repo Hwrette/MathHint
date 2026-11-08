@@ -16,7 +16,7 @@
 |---|---|---|---:|---|
 |A 문제만|⑤|정답|792|[A 요청](../03_gemini/prompt_audit/requests/diff_1_005/A.json)|
 |B 예측 상위20토큰|⑤|정답|1,202|[B 요청](../03_gemini/prompt_audit/requests/diff_1_005/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_1_005/C.json)|
+|C 실제 해설 상위20토큰|⑤|정답|1,260|[C 요청](../03_gemini/prompt_audit/requests/diff_1_005/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_1_005` 검색.
 
@@ -45,7 +45,7 @@
 |---|---|---|---:|---|
 |A 문제만|③|정답|534|[A 요청](../03_gemini/prompt_audit/requests/diff_1_011/A.json)|
 |B 예측 상위20토큰|③|정답|691|[B 요청](../03_gemini/prompt_audit/requests/diff_1_011/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_1_011/C.json)|
+|C 실제 해설 상위20토큰|③|정답|652|[C 요청](../03_gemini/prompt_audit/requests/diff_1_011/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_1_011` 검색.
 
@@ -74,7 +74,7 @@
 |---|---|---|---:|---|
 |A 문제만|②|정답|536|[A 요청](../03_gemini/prompt_audit/requests/diff_1_012/A.json)|
 |B 예측 상위20토큰|②|정답|686|[B 요청](../03_gemini/prompt_audit/requests/diff_1_012/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_1_012/C.json)|
+|C 실제 해설 상위20토큰|②|정답|642|[C 요청](../03_gemini/prompt_audit/requests/diff_1_012/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_1_012` 검색.
 
@@ -103,7 +103,7 @@
 |---|---|---|---:|---|
 |A 문제만|②|정답|440|[A 요청](../03_gemini/prompt_audit/requests/diff_1_014/A.json)|
 |B 예측 상위20토큰|②|정답|651|[B 요청](../03_gemini/prompt_audit/requests/diff_1_014/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_1_014/C.json)|
+|C 실제 해설 상위20토큰|②|정답|672|[C 요청](../03_gemini/prompt_audit/requests/diff_1_014/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_1_014` 검색.
 
@@ -132,7 +132,7 @@
 |---|---|---|---:|---|
 |A 문제만|3|정답|472|[A 요청](../03_gemini/prompt_audit/requests/diff_1_018/A.json)|
 |B 예측 상위20토큰|3|정답|690|[B 요청](../03_gemini/prompt_audit/requests/diff_1_018/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_1_018/C.json)|
+|C 실제 해설 상위20토큰|3|정답|649|[C 요청](../03_gemini/prompt_audit/requests/diff_1_018/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_1_018` 검색.
 
@@ -161,7 +161,7 @@
 |---|---|---|---:|---|
 |A 문제만|①|정답|632|[A 요청](../03_gemini/prompt_audit/requests/diff_1_022/A.json)|
 |B 예측 상위20토큰|①|정답|878|[B 요청](../03_gemini/prompt_audit/requests/diff_1_022/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_1_022/C.json)|
+|C 실제 해설 상위20토큰|①|정답|825|[C 요청](../03_gemini/prompt_audit/requests/diff_1_022/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_1_022` 검색.
 
@@ -190,7 +190,7 @@
 |---|---|---|---:|---|
 |A 문제만|⑤|정답|632|[A 요청](../03_gemini/prompt_audit/requests/diff_1_026/A.json)|
 |B 예측 상위20토큰|⑤|정답|831|[B 요청](../03_gemini/prompt_audit/requests/diff_1_026/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_1_026/C.json)|
+|C 실제 해설 상위20토큰|⑤|정답|771|[C 요청](../03_gemini/prompt_audit/requests/diff_1_026/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_1_026` 검색.
 
@@ -219,7 +219,7 @@
 |---|---|---|---:|---|
 |A 문제만|①|정답|685|[A 요청](../03_gemini/prompt_audit/requests/diff_1_028/A.json)|
 |B 예측 상위20토큰|①|정답|773|[B 요청](../03_gemini/prompt_audit/requests/diff_1_028/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_1_028/C.json)|
+|C 실제 해설 상위20토큰|①|정답|782|[C 요청](../03_gemini/prompt_audit/requests/diff_1_028/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_1_028` 검색.
 
@@ -248,7 +248,7 @@
 |---|---|---|---:|---|
 |A 문제만|②|정답|488|[A 요청](../03_gemini/prompt_audit/requests/diff_1_030/A.json)|
 |B 예측 상위20토큰|②|정답|711|[B 요청](../03_gemini/prompt_audit/requests/diff_1_030/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_1_030/C.json)|
+|C 실제 해설 상위20토큰|②|정답|679|[C 요청](../03_gemini/prompt_audit/requests/diff_1_030/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_1_030` 검색.
 
@@ -277,7 +277,7 @@
 |---|---|---|---:|---|
 |A 문제만|④|정답|759|[A 요청](../03_gemini/prompt_audit/requests/diff_1_036/A.json)|
 |B 예측 상위20토큰|④|정답|1,000|[B 요청](../03_gemini/prompt_audit/requests/diff_1_036/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_1_036/C.json)|
+|C 실제 해설 상위20토큰|④|정답|956|[C 요청](../03_gemini/prompt_audit/requests/diff_1_036/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_1_036` 검색.
 
@@ -306,7 +306,7 @@
 |---|---|---|---:|---|
 |A 문제만|11|정답|608|[A 요청](../03_gemini/prompt_audit/requests/diff_1_038/A.json)|
 |B 예측 상위20토큰|11|정답|859|[B 요청](../03_gemini/prompt_audit/requests/diff_1_038/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_1_038/C.json)|
+|C 실제 해설 상위20토큰|11|정답|784|[C 요청](../03_gemini/prompt_audit/requests/diff_1_038/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_1_038` 검색.
 
@@ -335,7 +335,7 @@
 |---|---|---|---:|---|
 |A 문제만|③|정답|614|[A 요청](../03_gemini/prompt_audit/requests/diff_1_039/A.json)|
 |B 예측 상위20토큰|③|정답|868|[B 요청](../03_gemini/prompt_audit/requests/diff_1_039/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_1_039/C.json)|
+|C 실제 해설 상위20토큰|③|정답|814|[C 요청](../03_gemini/prompt_audit/requests/diff_1_039/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_1_039` 검색.
 
@@ -364,7 +364,7 @@
 |---|---|---|---:|---|
 |A 문제만|62|정답|961|[A 요청](../03_gemini/prompt_audit/requests/diff_1_041/A.json)|
 |B 예측 상위20토큰|62|정답|1,034|[B 요청](../03_gemini/prompt_audit/requests/diff_1_041/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_1_041/C.json)|
+|C 실제 해설 상위20토큰|62|정답|991|[C 요청](../03_gemini/prompt_audit/requests/diff_1_041/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_1_041` 검색.
 
@@ -393,7 +393,7 @@
 |---|---|---|---:|---|
 |A 문제만|20|정답|1,118|[A 요청](../03_gemini/prompt_audit/requests/diff_2_004/A.json)|
 |B 예측 상위20토큰|20|정답|968|[B 요청](../03_gemini/prompt_audit/requests/diff_2_004/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_2_004/C.json)|
+|C 실제 해설 상위20토큰|20|정답|1,076|[C 요청](../03_gemini/prompt_audit/requests/diff_2_004/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_2_004` 검색.
 
@@ -422,7 +422,7 @@
 |---|---|---|---:|---|
 |A 문제만|①|정답|534|[A 요청](../03_gemini/prompt_audit/requests/diff_2_006/A.json)|
 |B 예측 상위20토큰|①|정답|678|[B 요청](../03_gemini/prompt_audit/requests/diff_2_006/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_2_006/C.json)|
+|C 실제 해설 상위20토큰|①|정답|627|[C 요청](../03_gemini/prompt_audit/requests/diff_2_006/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_2_006` 검색.
 
@@ -451,7 +451,7 @@
 |---|---|---|---:|---|
 |A 문제만|③|정답|521|[A 요청](../03_gemini/prompt_audit/requests/diff_2_007/A.json)|
 |B 예측 상위20토큰|③|정답|758|[B 요청](../03_gemini/prompt_audit/requests/diff_2_007/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_2_007/C.json)|
+|C 실제 해설 상위20토큰|③|정답|740|[C 요청](../03_gemini/prompt_audit/requests/diff_2_007/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_2_007` 검색.
 
@@ -480,7 +480,7 @@
 |---|---|---|---:|---|
 |A 문제만|③|정답|669|[A 요청](../03_gemini/prompt_audit/requests/diff_2_010/A.json)|
 |B 예측 상위20토큰|③|정답|884|[B 요청](../03_gemini/prompt_audit/requests/diff_2_010/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_2_010/C.json)|
+|C 실제 해설 상위20토큰|③|정답|810|[C 요청](../03_gemini/prompt_audit/requests/diff_2_010/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_2_010` 검색.
 
@@ -509,7 +509,7 @@
 |---|---|---|---:|---|
 |A 문제만|③|정답|559|[A 요청](../03_gemini/prompt_audit/requests/diff_2_013/A.json)|
 |B 예측 상위20토큰|③|정답|771|[B 요청](../03_gemini/prompt_audit/requests/diff_2_013/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_2_013/C.json)|
+|C 실제 해설 상위20토큰|③|정답|750|[C 요청](../03_gemini/prompt_audit/requests/diff_2_013/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_2_013` 검색.
 
@@ -538,7 +538,7 @@
 |---|---|---|---:|---|
 |A 문제만|②|정답|532|[A 요청](../03_gemini/prompt_audit/requests/diff_2_014/A.json)|
 |B 예측 상위20토큰|②|정답|740|[B 요청](../03_gemini/prompt_audit/requests/diff_2_014/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_2_014/C.json)|
+|C 실제 해설 상위20토큰|②|정답|688|[C 요청](../03_gemini/prompt_audit/requests/diff_2_014/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_2_014` 검색.
 
@@ -567,7 +567,7 @@
 |---|---|---|---:|---|
 |A 문제만|22|정답|483|[A 요청](../03_gemini/prompt_audit/requests/diff_2_016/A.json)|
 |B 예측 상위20토큰|22|정답|773|[B 요청](../03_gemini/prompt_audit/requests/diff_2_016/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_2_016/C.json)|
+|C 실제 해설 상위20토큰|22|정답|629|[C 요청](../03_gemini/prompt_audit/requests/diff_2_016/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_2_016` 검색.
 
@@ -596,7 +596,7 @@
 |---|---|---|---:|---|
 |A 문제만|③|정답|656|[A 요청](../03_gemini/prompt_audit/requests/diff_2_018/A.json)|
 |B 예측 상위20토큰|③|정답|866|[B 요청](../03_gemini/prompt_audit/requests/diff_2_018/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_2_018/C.json)|
+|C 실제 해설 상위20토큰|③|정답|828|[C 요청](../03_gemini/prompt_audit/requests/diff_2_018/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_2_018` 검색.
 
@@ -625,7 +625,7 @@
 |---|---|---|---:|---|
 |A 문제만|⑤|정답|831|[A 요청](../03_gemini/prompt_audit/requests/diff_2_020/A.json)|
 |B 예측 상위20토큰|⑤|정답|1,033|[B 요청](../03_gemini/prompt_audit/requests/diff_2_020/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_2_020/C.json)|
+|C 실제 해설 상위20토큰|⑤|정답|995|[C 요청](../03_gemini/prompt_audit/requests/diff_2_020/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_2_020` 검색.
 
@@ -654,7 +654,7 @@
 |---|---|---|---:|---|
 |A 문제만|22|정답|739|[A 요청](../03_gemini/prompt_audit/requests/diff_2_023/A.json)|
 |B 예측 상위20토큰|22|정답|897|[B 요청](../03_gemini/prompt_audit/requests/diff_2_023/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_2_023/C.json)|
+|C 실제 해설 상위20토큰|22|정답|978|[C 요청](../03_gemini/prompt_audit/requests/diff_2_023/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_2_023` 검색.
 
@@ -683,7 +683,7 @@
 |---|---|---|---:|---|
 |A 문제만|③|정답|908|[A 요청](../03_gemini/prompt_audit/requests/diff_2_024/A.json)|
 |B 예측 상위20토큰|③|정답|1,099|[B 요청](../03_gemini/prompt_audit/requests/diff_2_024/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_2_024/C.json)|
+|C 실제 해설 상위20토큰|③|정답|1,359|[C 요청](../03_gemini/prompt_audit/requests/diff_2_024/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_2_024` 검색.
 
@@ -712,7 +712,7 @@
 |---|---|---|---:|---|
 |A 문제만|①|정답|432|[A 요청](../03_gemini/prompt_audit/requests/diff_2_029/A.json)|
 |B 예측 상위20토큰|①|정답|618|[B 요청](../03_gemini/prompt_audit/requests/diff_2_029/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_2_029/C.json)|
+|C 실제 해설 상위20토큰|①|정답|581|[C 요청](../03_gemini/prompt_audit/requests/diff_2_029/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_2_029` 검색.
 
@@ -741,7 +741,7 @@
 |---|---|---|---:|---|
 |A 문제만|6|정답|581|[A 요청](../03_gemini/prompt_audit/requests/diff_2_030/A.json)|
 |B 예측 상위20토큰|6|정답|803|[B 요청](../03_gemini/prompt_audit/requests/diff_2_030/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_2_030/C.json)|
+|C 실제 해설 상위20토큰|6|정답|778|[C 요청](../03_gemini/prompt_audit/requests/diff_2_030/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_2_030` 검색.
 
@@ -770,7 +770,7 @@
 |---|---|---|---:|---|
 |A 문제만|②|정답|534|[A 요청](../03_gemini/prompt_audit/requests/diff_2_031/A.json)|
 |B 예측 상위20토큰|②|정답|764|[B 요청](../03_gemini/prompt_audit/requests/diff_2_031/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_2_031/C.json)|
+|C 실제 해설 상위20토큰|②|정답|753|[C 요청](../03_gemini/prompt_audit/requests/diff_2_031/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_2_031` 검색.
 
@@ -799,7 +799,7 @@
 |---|---|---|---:|---|
 |A 문제만|④|정답|577|[A 요청](../03_gemini/prompt_audit/requests/diff_2_036/A.json)|
 |B 예측 상위20토큰|④|정답|797|[B 요청](../03_gemini/prompt_audit/requests/diff_2_036/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_2_036/C.json)|
+|C 실제 해설 상위20토큰|④|정답|779|[C 요청](../03_gemini/prompt_audit/requests/diff_2_036/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_2_036` 검색.
 
@@ -828,7 +828,7 @@
 |---|---|---|---:|---|
 |A 문제만|③|정답|591|[A 요청](../03_gemini/prompt_audit/requests/diff_2_037/A.json)|
 |B 예측 상위20토큰|③|정답|784|[B 요청](../03_gemini/prompt_audit/requests/diff_2_037/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_2_037/C.json)|
+|C 실제 해설 상위20토큰|③|정답|758|[C 요청](../03_gemini/prompt_audit/requests/diff_2_037/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_2_037` 검색.
 
@@ -857,7 +857,7 @@
 |---|---|---|---:|---|
 |A 문제만|①|정답|659|[A 요청](../03_gemini/prompt_audit/requests/diff_2_040/A.json)|
 |B 예측 상위20토큰|①|정답|904|[B 요청](../03_gemini/prompt_audit/requests/diff_2_040/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_2_040/C.json)|
+|C 실제 해설 상위20토큰|①|정답|793|[C 요청](../03_gemini/prompt_audit/requests/diff_2_040/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_2_040` 검색.
 
@@ -886,7 +886,7 @@
 |---|---|---|---:|---|
 |A 문제만|6|정답|739|[A 요청](../03_gemini/prompt_audit/requests/diff_2_041/A.json)|
 |B 예측 상위20토큰|6|정답|1,010|[B 요청](../03_gemini/prompt_audit/requests/diff_2_041/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_2_041/C.json)|
+|C 실제 해설 상위20토큰|6|정답|801|[C 요청](../03_gemini/prompt_audit/requests/diff_2_041/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_2_041` 검색.
 
@@ -915,7 +915,7 @@
 |---|---|---|---:|---|
 |A 문제만|⑤|정답|456|[A 요청](../03_gemini/prompt_audit/requests/diff_3_001/A.json)|
 |B 예측 상위20토큰|⑤|정답|749|[B 요청](../03_gemini/prompt_audit/requests/diff_3_001/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_3_001/C.json)|
+|C 실제 해설 상위20토큰|⑤|정답|653|[C 요청](../03_gemini/prompt_audit/requests/diff_3_001/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_3_001` 검색.
 
@@ -944,7 +944,7 @@
 |---|---|---|---:|---|
 |A 문제만|16|정답|878|[A 요청](../03_gemini/prompt_audit/requests/diff_3_004/A.json)|
 |B 예측 상위20토큰|32|오답|841|[B 요청](../03_gemini/prompt_audit/requests/diff_3_004/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_3_004/C.json)|
+|C 실제 해설 상위20토큰|32|오답|853|[C 요청](../03_gemini/prompt_audit/requests/diff_3_004/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_3_004` 검색.
 
@@ -973,7 +973,7 @@
 |---|---|---|---:|---|
 |A 문제만|9|정답|701|[A 요청](../03_gemini/prompt_audit/requests/diff_3_005/A.json)|
 |B 예측 상위20토큰|9|정답|1,022|[B 요청](../03_gemini/prompt_audit/requests/diff_3_005/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_3_005/C.json)|
+|C 실제 해설 상위20토큰|9|정답|979|[C 요청](../03_gemini/prompt_audit/requests/diff_3_005/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_3_005` 검색.
 
@@ -1002,7 +1002,7 @@
 |---|---|---|---:|---|
 |A 문제만|④|정답|466|[A 요청](../03_gemini/prompt_audit/requests/diff_3_008/A.json)|
 |B 예측 상위20토큰|④|정답|637|[B 요청](../03_gemini/prompt_audit/requests/diff_3_008/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_3_008/C.json)|
+|C 실제 해설 상위20토큰|④|정답|589|[C 요청](../03_gemini/prompt_audit/requests/diff_3_008/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_3_008` 검색.
 
@@ -1031,7 +1031,7 @@
 |---|---|---|---:|---|
 |A 문제만|⑤|정답|749|[A 요청](../03_gemini/prompt_audit/requests/diff_3_012/A.json)|
 |B 예측 상위20토큰|⑤|정답|913|[B 요청](../03_gemini/prompt_audit/requests/diff_3_012/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_3_012/C.json)|
+|C 실제 해설 상위20토큰|⑤|정답|917|[C 요청](../03_gemini/prompt_audit/requests/diff_3_012/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_3_012` 검색.
 
@@ -1060,7 +1060,7 @@
 |---|---|---|---:|---|
 |A 문제만|11|정답|805|[A 요청](../03_gemini/prompt_audit/requests/diff_3_022/A.json)|
 |B 예측 상위20토큰|11|정답|1,016|[B 요청](../03_gemini/prompt_audit/requests/diff_3_022/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_3_022/C.json)|
+|C 실제 해설 상위20토큰|11|정답|943|[C 요청](../03_gemini/prompt_audit/requests/diff_3_022/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_3_022` 검색.
 
@@ -1089,7 +1089,7 @@
 |---|---|---|---:|---|
 |A 문제만|④|정답|591|[A 요청](../03_gemini/prompt_audit/requests/diff_3_028/A.json)|
 |B 예측 상위20토큰|④|정답|840|[B 요청](../03_gemini/prompt_audit/requests/diff_3_028/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_3_028/C.json)|
+|C 실제 해설 상위20토큰|④|정답|781|[C 요청](../03_gemini/prompt_audit/requests/diff_3_028/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_3_028` 검색.
 
@@ -1118,7 +1118,7 @@
 |---|---|---|---:|---|
 |A 문제만|⑤|정답|498|[A 요청](../03_gemini/prompt_audit/requests/diff_3_039/A.json)|
 |B 예측 상위20토큰|⑤|정답|709|[B 요청](../03_gemini/prompt_audit/requests/diff_3_039/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_3_039/C.json)|
+|C 실제 해설 상위20토큰|⑤|정답|676|[C 요청](../03_gemini/prompt_audit/requests/diff_3_039/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_3_039` 검색.
 
@@ -1147,7 +1147,7 @@
 |---|---|---|---:|---|
 |A 문제만|7|정답|740|[A 요청](../03_gemini/prompt_audit/requests/diff_3_044/A.json)|
 |B 예측 상위20토큰|7|정답|1,028|[B 요청](../03_gemini/prompt_audit/requests/diff_3_044/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_3_044/C.json)|
+|C 실제 해설 상위20토큰|1|오답|969|[C 요청](../03_gemini/prompt_audit/requests/diff_3_044/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_3_044` 검색.
 
@@ -1176,7 +1176,7 @@
 |---|---|---|---:|---|
 |A 문제만|32|정답|641|[A 요청](../03_gemini/prompt_audit/requests/diff_3_048/A.json)|
 |B 예측 상위20토큰|32|정답|870|[B 요청](../03_gemini/prompt_audit/requests/diff_3_048/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_3_048/C.json)|
+|C 실제 해설 상위20토큰|32|정답|790|[C 요청](../03_gemini/prompt_audit/requests/diff_3_048/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_3_048` 검색.
 
@@ -1205,7 +1205,7 @@
 |---|---|---|---:|---|
 |A 문제만|⑤|정답|670|[A 요청](../03_gemini/prompt_audit/requests/diff_3_049/A.json)|
 |B 예측 상위20토큰|⑤|정답|859|[B 요청](../03_gemini/prompt_audit/requests/diff_3_049/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/diff_3_049/C.json)|
+|C 실제 해설 상위20토큰|⑤|정답|757|[C 요청](../03_gemini/prompt_audit/requests/diff_3_049/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `diff_3_049` 검색.
 
@@ -1234,7 +1234,7 @@
 |---|---|---|---:|---|
 |A 문제만|①|정답|476|[A 요청](../03_gemini/prompt_audit/requests/trig_1_004/A.json)|
 |B 예측 상위20토큰|①|정답|678|[B 요청](../03_gemini/prompt_audit/requests/trig_1_004/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_1_004/C.json)|
+|C 실제 해설 상위20토큰|①|정답|652|[C 요청](../03_gemini/prompt_audit/requests/trig_1_004/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_1_004` 검색.
 
@@ -1263,7 +1263,7 @@
 |---|---|---|---:|---|
 |A 문제만|①|정답|616|[A 요청](../03_gemini/prompt_audit/requests/trig_1_007/A.json)|
 |B 예측 상위20토큰|①|정답|825|[B 요청](../03_gemini/prompt_audit/requests/trig_1_007/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_1_007/C.json)|
+|C 실제 해설 상위20토큰|①|정답|791|[C 요청](../03_gemini/prompt_audit/requests/trig_1_007/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_1_007` 검색.
 
@@ -1292,7 +1292,7 @@
 |---|---|---|---:|---|
 |A 문제만|④|정답|923|[A 요청](../03_gemini/prompt_audit/requests/trig_1_009/A.json)|
 |B 예측 상위20토큰|④|정답|1,073|[B 요청](../03_gemini/prompt_audit/requests/trig_1_009/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_1_009/C.json)|
+|C 실제 해설 상위20토큰|④|정답|1,070|[C 요청](../03_gemini/prompt_audit/requests/trig_1_009/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_1_009` 검색.
 
@@ -1321,7 +1321,7 @@
 |---|---|---|---:|---|
 |A 문제만|②|오답|799|[A 요청](../03_gemini/prompt_audit/requests/trig_1_010/A.json)|
 |B 예측 상위20토큰|②|오답|1,047|[B 요청](../03_gemini/prompt_audit/requests/trig_1_010/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_1_010/C.json)|
+|C 실제 해설 상위20토큰|②|오답|1,005|[C 요청](../03_gemini/prompt_audit/requests/trig_1_010/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_1_010` 검색.
 
@@ -1350,7 +1350,7 @@
 |---|---|---|---:|---|
 |A 문제만|7|정답|564|[A 요청](../03_gemini/prompt_audit/requests/trig_1_011/A.json)|
 |B 예측 상위20토큰|7|정답|816|[B 요청](../03_gemini/prompt_audit/requests/trig_1_011/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_1_011/C.json)|
+|C 실제 해설 상위20토큰|7|정답|726|[C 요청](../03_gemini/prompt_audit/requests/trig_1_011/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_1_011` 검색.
 
@@ -1379,7 +1379,7 @@
 |---|---|---|---:|---|
 |A 문제만|⑤|정답|671|[A 요청](../03_gemini/prompt_audit/requests/trig_1_013/A.json)|
 |B 예측 상위20토큰|⑤|정답|893|[B 요청](../03_gemini/prompt_audit/requests/trig_1_013/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_1_013/C.json)|
+|C 실제 해설 상위20토큰|⑤|정답|727|[C 요청](../03_gemini/prompt_audit/requests/trig_1_013/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_1_013` 검색.
 
@@ -1408,7 +1408,7 @@
 |---|---|---|---:|---|
 |A 문제만|12|정답|767|[A 요청](../03_gemini/prompt_audit/requests/trig_1_018/A.json)|
 |B 예측 상위20토큰|12|정답|951|[B 요청](../03_gemini/prompt_audit/requests/trig_1_018/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_1_018/C.json)|
+|C 실제 해설 상위20토큰|12|정답|885|[C 요청](../03_gemini/prompt_audit/requests/trig_1_018/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_1_018` 검색.
 
@@ -1437,7 +1437,7 @@
 |---|---|---|---:|---|
 |A 문제만|2|정답|550|[A 요청](../03_gemini/prompt_audit/requests/trig_1_020/A.json)|
 |B 예측 상위20토큰|2|정답|817|[B 요청](../03_gemini/prompt_audit/requests/trig_1_020/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_1_020/C.json)|
+|C 실제 해설 상위20토큰|2|정답|761|[C 요청](../03_gemini/prompt_audit/requests/trig_1_020/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_1_020` 검색.
 
@@ -1466,7 +1466,7 @@
 |---|---|---|---:|---|
 |A 문제만|7|정답|616|[A 요청](../03_gemini/prompt_audit/requests/trig_1_021/A.json)|
 |B 예측 상위20토큰|7|정답|802|[B 요청](../03_gemini/prompt_audit/requests/trig_1_021/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_1_021/C.json)|
+|C 실제 해설 상위20토큰|7|정답|676|[C 요청](../03_gemini/prompt_audit/requests/trig_1_021/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_1_021` 검색.
 
@@ -1495,7 +1495,7 @@
 |---|---|---|---:|---|
 |A 문제만|⑤|정답|522|[A 요청](../03_gemini/prompt_audit/requests/trig_1_028/A.json)|
 |B 예측 상위20토큰|⑤|정답|754|[B 요청](../03_gemini/prompt_audit/requests/trig_1_028/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_1_028/C.json)|
+|C 실제 해설 상위20토큰|⑤|정답|740|[C 요청](../03_gemini/prompt_audit/requests/trig_1_028/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_1_028` 검색.
 
@@ -1524,7 +1524,7 @@
 |---|---|---|---:|---|
 |A 문제만|①|정답|567|[A 요청](../03_gemini/prompt_audit/requests/trig_1_032/A.json)|
 |B 예측 상위20토큰|①|정답|744|[B 요청](../03_gemini/prompt_audit/requests/trig_1_032/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_1_032/C.json)|
+|C 실제 해설 상위20토큰|①|정답|648|[C 요청](../03_gemini/prompt_audit/requests/trig_1_032/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_1_032` 검색.
 
@@ -1553,7 +1553,7 @@
 |---|---|---|---:|---|
 |A 문제만|④|정답|499|[A 요청](../03_gemini/prompt_audit/requests/trig_1_035/A.json)|
 |B 예측 상위20토큰|④|정답|748|[B 요청](../03_gemini/prompt_audit/requests/trig_1_035/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_1_035/C.json)|
+|C 실제 해설 상위20토큰|④|정답|712|[C 요청](../03_gemini/prompt_audit/requests/trig_1_035/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_1_035` 검색.
 
@@ -1582,7 +1582,7 @@
 |---|---|---|---:|---|
 |A 문제만|④|정답|475|[A 요청](../03_gemini/prompt_audit/requests/trig_1_039/A.json)|
 |B 예측 상위20토큰|④|정답|729|[B 요청](../03_gemini/prompt_audit/requests/trig_1_039/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_1_039/C.json)|
+|C 실제 해설 상위20토큰|④|정답|621|[C 요청](../03_gemini/prompt_audit/requests/trig_1_039/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_1_039` 검색.
 
@@ -1611,7 +1611,7 @@
 |---|---|---|---:|---|
 |A 문제만|②|정답|640|[A 요청](../03_gemini/prompt_audit/requests/trig_1_042/A.json)|
 |B 예측 상위20토큰|②|정답|883|[B 요청](../03_gemini/prompt_audit/requests/trig_1_042/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_1_042/C.json)|
+|C 실제 해설 상위20토큰|②|정답|781|[C 요청](../03_gemini/prompt_audit/requests/trig_1_042/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_1_042` 검색.
 
@@ -1640,7 +1640,7 @@
 |---|---|---|---:|---|
 |A 문제만|4|정답|1,292|[A 요청](../03_gemini/prompt_audit/requests/trig_1_043/A.json)|
 |B 예측 상위20토큰|4|정답|1,381|[B 요청](../03_gemini/prompt_audit/requests/trig_1_043/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_1_043/C.json)|
+|C 실제 해설 상위20토큰|4|정답|1,331|[C 요청](../03_gemini/prompt_audit/requests/trig_1_043/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_1_043` 검색.
 
@@ -1669,7 +1669,7 @@
 |---|---|---|---:|---|
 |A 문제만|20|정답|514|[A 요청](../03_gemini/prompt_audit/requests/trig_1_046/A.json)|
 |B 예측 상위20토큰|20|정답|728|[B 요청](../03_gemini/prompt_audit/requests/trig_1_046/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_1_046/C.json)|
+|C 실제 해설 상위20토큰|9|오답|773|[C 요청](../03_gemini/prompt_audit/requests/trig_1_046/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_1_046` 검색.
 
@@ -1698,7 +1698,7 @@
 |---|---|---|---:|---|
 |A 문제만|②|정답|679|[A 요청](../03_gemini/prompt_audit/requests/trig_2_003/A.json)|
 |B 예측 상위20토큰|②|정답|960|[B 요청](../03_gemini/prompt_audit/requests/trig_2_003/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_2_003/C.json)|
+|C 실제 해설 상위20토큰|②|정답|891|[C 요청](../03_gemini/prompt_audit/requests/trig_2_003/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_2_003` 검색.
 
@@ -1727,7 +1727,7 @@
 |---|---|---|---:|---|
 |A 문제만|⑤|정답|699|[A 요청](../03_gemini/prompt_audit/requests/trig_2_007/A.json)|
 |B 예측 상위20토큰|⑤|정답|902|[B 요청](../03_gemini/prompt_audit/requests/trig_2_007/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_2_007/C.json)|
+|C 실제 해설 상위20토큰|⑤|정답|815|[C 요청](../03_gemini/prompt_audit/requests/trig_2_007/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_2_007` 검색.
 
@@ -1756,7 +1756,7 @@
 |---|---|---|---:|---|
 |A 문제만|①|정답|452|[A 요청](../03_gemini/prompt_audit/requests/trig_2_014/A.json)|
 |B 예측 상위20토큰|①|정답|662|[B 요청](../03_gemini/prompt_audit/requests/trig_2_014/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_2_014/C.json)|
+|C 실제 해설 상위20토큰|①|정답|645|[C 요청](../03_gemini/prompt_audit/requests/trig_2_014/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_2_014` 검색.
 
@@ -1785,7 +1785,7 @@
 |---|---|---|---:|---|
 |A 문제만|⑤|정답|624|[A 요청](../03_gemini/prompt_audit/requests/trig_2_016/A.json)|
 |B 예측 상위20토큰|⑤|정답|812|[B 요청](../03_gemini/prompt_audit/requests/trig_2_016/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_2_016/C.json)|
+|C 실제 해설 상위20토큰|⑤|정답|772|[C 요청](../03_gemini/prompt_audit/requests/trig_2_016/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_2_016` 검색.
 
@@ -1814,7 +1814,7 @@
 |---|---|---|---:|---|
 |A 문제만|②|정답|561|[A 요청](../03_gemini/prompt_audit/requests/trig_2_017/A.json)|
 |B 예측 상위20토큰|②|정답|779|[B 요청](../03_gemini/prompt_audit/requests/trig_2_017/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_2_017/C.json)|
+|C 실제 해설 상위20토큰|②|정답|735|[C 요청](../03_gemini/prompt_audit/requests/trig_2_017/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_2_017` 검색.
 
@@ -1843,7 +1843,7 @@
 |---|---|---|---:|---|
 |A 문제만|①|오답|643|[A 요청](../03_gemini/prompt_audit/requests/trig_2_022/A.json)|
 |B 예측 상위20토큰|③|정답|889|[B 요청](../03_gemini/prompt_audit/requests/trig_2_022/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_2_022/C.json)|
+|C 실제 해설 상위20토큰|③|정답|787|[C 요청](../03_gemini/prompt_audit/requests/trig_2_022/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_2_022` 검색.
 
@@ -1872,7 +1872,7 @@
 |---|---|---|---:|---|
 |A 문제만|12|정답|499|[A 요청](../03_gemini/prompt_audit/requests/trig_2_024/A.json)|
 |B 예측 상위20토큰|12|정답|835|[B 요청](../03_gemini/prompt_audit/requests/trig_2_024/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_2_024/C.json)|
+|C 실제 해설 상위20토큰|12|정답|758|[C 요청](../03_gemini/prompt_audit/requests/trig_2_024/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_2_024` 검색.
 
@@ -1901,7 +1901,7 @@
 |---|---|---|---:|---|
 |A 문제만|③|정답|496|[A 요청](../03_gemini/prompt_audit/requests/trig_2_025/A.json)|
 |B 예측 상위20토큰|③|정답|705|[B 요청](../03_gemini/prompt_audit/requests/trig_2_025/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_2_025/C.json)|
+|C 실제 해설 상위20토큰|③|정답|701|[C 요청](../03_gemini/prompt_audit/requests/trig_2_025/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_2_025` 검색.
 
@@ -1930,7 +1930,7 @@
 |---|---|---|---:|---|
 |A 문제만|③|정답|581|[A 요청](../03_gemini/prompt_audit/requests/trig_2_030/A.json)|
 |B 예측 상위20토큰|③|정답|826|[B 요청](../03_gemini/prompt_audit/requests/trig_2_030/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_2_030/C.json)|
+|C 실제 해설 상위20토큰|③|정답|702|[C 요청](../03_gemini/prompt_audit/requests/trig_2_030/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_2_030` 검색.
 
@@ -1959,7 +1959,7 @@
 |---|---|---|---:|---|
 |A 문제만|32|정답|994|[A 요청](../03_gemini/prompt_audit/requests/trig_2_035/A.json)|
 |B 예측 상위20토큰|32|정답|1,357|[B 요청](../03_gemini/prompt_audit/requests/trig_2_035/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_2_035/C.json)|
+|C 실제 해설 상위20토큰|32|정답|1,154|[C 요청](../03_gemini/prompt_audit/requests/trig_2_035/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_2_035` 검색.
 
@@ -1988,7 +1988,7 @@
 |---|---|---|---:|---|
 |A 문제만|20|정답|642|[A 요청](../03_gemini/prompt_audit/requests/trig_3_002/A.json)|
 |B 예측 상위20토큰|20|정답|797|[B 요청](../03_gemini/prompt_audit/requests/trig_3_002/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_3_002/C.json)|
+|C 실제 해설 상위20토큰|20|정답|746|[C 요청](../03_gemini/prompt_audit/requests/trig_3_002/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_3_002` 검색.
 
@@ -2017,7 +2017,7 @@
 |---|---|---|---:|---|
 |A 문제만|⑤|정답|307|[A 요청](../03_gemini/prompt_audit/requests/trig_3_010/A.json)|
 |B 예측 상위20토큰|⑤|정답|512|[B 요청](../03_gemini/prompt_audit/requests/trig_3_010/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_3_010/C.json)|
+|C 실제 해설 상위20토큰|⑤|정답|463|[C 요청](../03_gemini/prompt_audit/requests/trig_3_010/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_3_010` 검색.
 
@@ -2046,7 +2046,7 @@
 |---|---|---|---:|---|
 |A 문제만|80|정답|841|[A 요청](../03_gemini/prompt_audit/requests/trig_3_011/A.json)|
 |B 예측 상위20토큰|80|정답|1,082|[B 요청](../03_gemini/prompt_audit/requests/trig_3_011/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_3_011/C.json)|
+|C 실제 해설 상위20토큰|80|정답|992|[C 요청](../03_gemini/prompt_audit/requests/trig_3_011/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_3_011` 검색.
 
@@ -2075,7 +2075,7 @@
 |---|---|---|---:|---|
 |A 문제만|6|정답|768|[A 요청](../03_gemini/prompt_audit/requests/trig_3_014/A.json)|
 |B 예측 상위20토큰|6|정답|1,038|[B 요청](../03_gemini/prompt_audit/requests/trig_3_014/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_3_014/C.json)|
+|C 실제 해설 상위20토큰|6|정답|917|[C 요청](../03_gemini/prompt_audit/requests/trig_3_014/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_3_014` 검색.
 
@@ -2104,7 +2104,7 @@
 |---|---|---|---:|---|
 |A 문제만|③|정답|522|[A 요청](../03_gemini/prompt_audit/requests/trig_3_015/A.json)|
 |B 예측 상위20토큰|③|정답|678|[B 요청](../03_gemini/prompt_audit/requests/trig_3_015/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_3_015/C.json)|
+|C 실제 해설 상위20토큰|③|정답|616|[C 요청](../03_gemini/prompt_audit/requests/trig_3_015/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_3_015` 검색.
 
@@ -2133,7 +2133,7 @@
 |---|---|---|---:|---|
 |A 문제만|②|정답|788|[A 요청](../03_gemini/prompt_audit/requests/trig_3_017/A.json)|
 |B 예측 상위20토큰|②|정답|1,014|[B 요청](../03_gemini/prompt_audit/requests/trig_3_017/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_3_017/C.json)|
+|C 실제 해설 상위20토큰|②|정답|911|[C 요청](../03_gemini/prompt_audit/requests/trig_3_017/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_3_017` 검색.
 
@@ -2162,7 +2162,7 @@
 |---|---|---|---:|---|
 |A 문제만|②|정답|506|[A 요청](../03_gemini/prompt_audit/requests/trig_3_021/A.json)|
 |B 예측 상위20토큰|②|정답|682|[B 요청](../03_gemini/prompt_audit/requests/trig_3_021/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_3_021/C.json)|
+|C 실제 해설 상위20토큰|②|정답|644|[C 요청](../03_gemini/prompt_audit/requests/trig_3_021/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_3_021` 검색.
 
@@ -2191,7 +2191,7 @@
 |---|---|---|---:|---|
 |A 문제만|7|정답|484|[A 요청](../03_gemini/prompt_audit/requests/trig_3_026/A.json)|
 |B 예측 상위20토큰|7|정답|768|[B 요청](../03_gemini/prompt_audit/requests/trig_3_026/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_3_026/C.json)|
+|C 실제 해설 상위20토큰|7|정답|684|[C 요청](../03_gemini/prompt_audit/requests/trig_3_026/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_3_026` 검색.
 
@@ -2220,7 +2220,7 @@
 |---|---|---|---:|---|
 |A 문제만|⑤|정답|1,045|[A 요청](../03_gemini/prompt_audit/requests/trig_3_034/A.json)|
 |B 예측 상위20토큰|②|오답|1,163|[B 요청](../03_gemini/prompt_audit/requests/trig_3_034/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_3_034/C.json)|
+|C 실제 해설 상위20토큰|④|오답|1,153|[C 요청](../03_gemini/prompt_audit/requests/trig_3_034/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_3_034` 검색.
 
@@ -2249,7 +2249,7 @@
 |---|---|---|---:|---|
 |A 문제만|30|정답|922|[A 요청](../03_gemini/prompt_audit/requests/trig_3_035/A.json)|
 |B 예측 상위20토큰|30|정답|1,003|[B 요청](../03_gemini/prompt_audit/requests/trig_3_035/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_3_035/C.json)|
+|C 실제 해설 상위20토큰|30|정답|1,023|[C 요청](../03_gemini/prompt_audit/requests/trig_3_035/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_3_035` 검색.
 
@@ -2278,7 +2278,7 @@
 |---|---|---|---:|---|
 |A 문제만|④|정답|756|[A 요청](../03_gemini/prompt_audit/requests/trig_3_039/A.json)|
 |B 예측 상위20토큰|④|정답|952|[B 요청](../03_gemini/prompt_audit/requests/trig_3_039/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_3_039/C.json)|
+|C 실제 해설 상위20토큰|④|정답|948|[C 요청](../03_gemini/prompt_audit/requests/trig_3_039/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_3_039` 검색.
 
@@ -2307,7 +2307,7 @@
 |---|---|---|---:|---|
 |A 문제만|①|정답|509|[A 요청](../03_gemini/prompt_audit/requests/trig_3_040/A.json)|
 |B 예측 상위20토큰|①|정답|825|[B 요청](../03_gemini/prompt_audit/requests/trig_3_040/B.json)|
-|C 실제 해설 상위20토큰|미실행·미판독|미채점|미제공|[C 요청](../03_gemini/prompt_audit/requests/trig_3_040/C.json)|
+|C 실제 해설 상위20토큰|①|정답|732|[C 요청](../03_gemini/prompt_audit/requests/trig_3_040/C.json)|
 
 [세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `trig_3_040` 검색.
 

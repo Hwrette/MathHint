@@ -1,2 +1,2 @@
-# HML 원본의 바이트·줄바꿈을 보존하고, 큰 수식/이미지 XML diff를 생략한다.
-data/raw/*.hml -text -diff
+# CSV 표준 CRLF를 보존하고 정상 줄끝을 공백 오류로 취급하지 않는다.
+*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

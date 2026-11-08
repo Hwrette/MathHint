@@ -1,8 +1,12 @@
 {
-  "verified_at": "2026-11-08T16:46:20.341531+00:00",
+  "verified_at": "2026-11-08T17:27:40.203737+00:00",
   "checks": [
     {
       "check": "fixed_split_185_80_disjoint",
+      "passed": true
+    },
+    {
+      "check": "legacy_930_artifacts_unchanged",
       "passed": true
     },
     {
@@ -111,6 +115,66 @@
     },
     {
       "check": "gemini_comparison_all_80_ids",
+      "passed": true
+    },
+    {
+      "check": "gemini_A_summary_counts",
+      "passed": true
+    },
+    {
+      "check": "gemini_B_summary_counts",
+      "passed": true
+    },
+    {
+      "check": "gemini_C_summary_counts",
+      "passed": true
+    },
+    {
+      "check": "gemini_A_prompt_token_count_table",
+      "passed": true
+    },
+    {
+      "check": "gemini_A_candidates_token_count_table",
+      "passed": true
+    },
+    {
+      "check": "gemini_A_thoughts_token_count_table",
+      "passed": true
+    },
+    {
+      "check": "gemini_A_total_token_count_table",
+      "passed": true
+    },
+    {
+      "check": "gemini_B_prompt_token_count_table",
+      "passed": true
+    },
+    {
+      "check": "gemini_B_candidates_token_count_table",
+      "passed": true
+    },
+    {
+      "check": "gemini_B_thoughts_token_count_table",
+      "passed": true
+    },
+    {
+      "check": "gemini_B_total_token_count_table",
+      "passed": true
+    },
+    {
+      "check": "gemini_C_prompt_token_count_table",
+      "passed": true
+    },
+    {
+      "check": "gemini_C_candidates_token_count_table",
+      "passed": true
+    },
+    {
+      "check": "gemini_C_thoughts_token_count_table",
+      "passed": true
+    },
+    {
+      "check": "gemini_C_total_token_count_table",
       "passed": true
     },
     {
@@ -1074,10 +1138,10 @@
       "passed": true
     }
   ],
-  "passed": 268,
+  "passed": 284,
   "failed": 0,
-  "gemini_successful": 160,
+  "gemini_successful": 240,
   "gemini_expected": 240,
-  "experiment_complete": false,
+  "experiment_complete": true,
   "limits": "Stored artifact consistency; mathematical solution validity and future network access are separate."
 }

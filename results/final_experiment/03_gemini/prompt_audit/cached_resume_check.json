@@ -9,5 +9,10 @@
   "reused_counter_A": 80,
   "reused_counter_B": 80,
   "no_pending_calls": true,
-  "network_client_forbidden_during_check": true
+  "network_client_forbidden_during_check": true,
+  "saved_requests_never_overwritten": true,
+  "prediction_location_is_provenance_only": true,
+  "prediction_bytes_sha256_still_strict": true,
+  "real_relocated_project_test": "Passed: actual fixed data and predictions in a temporary second root, frozen ID restored, 240 mocked SDK calls matched historical requests, and all240 saved request JSON files stayed byte-identical.",
+  "related_generation_tests": 39
 }

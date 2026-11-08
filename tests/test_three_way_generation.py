@@ -1,6 +1,7 @@
 """세 조건의 정보 접근·상위20개·SDK 경계·정확한 재사용·재개를 확인한다."""
 
 import json
+import shutil
 from pathlib import Path
 from types import SimpleNamespace
 import tempfile
@@ -147,6 +148,44 @@ class ThreeWayTests(unittest.TestCase):
             three.resolve_resume_config(output, {**changed, "temperature": .5})
         with self.assertRaises(ValueError):
             three.resolve_resume_config(output, {**changed, "inputs": []})
+
+    def test_prediction_path_is_location_only_but_changed_bytes_are_rejected(self):
+        output = self.root / "relocation"
+        comparison.initialize_run(output, self.config, self.plan)
+        changed = {**self.config, "predictions_source": "/different/clone/predictions.json"}
+        self.assertEqual(three.resolve_resume_config(output, changed), self.config)
+        transition = comparison.read_json(output / "source_transition.json")
+        self.assertEqual(transition["frozen_source_locations"]["predictions_source"], str(self.predictions))
+        self.assertEqual(transition["versions"][-1]["source_locations"]["predictions_source"], changed["predictions_source"])
+        with self.assertRaises(ValueError):
+            three.resolve_resume_config(output, {**changed, "predictions_sha256": "different_prediction_bytes"})
+        with self.assertRaises(ValueError):
+            three.resolve_resume_config(output, {**changed, "grader_sha256": "different_grader"})
+
+    def test_real_dataset_in_another_root_resumes_and_preserves_historical_requests(self):
+        original = three.ROOT / "results/final_experiment/03_gemini"
+        if not (original / "config.json").exists():
+            self.skipTest("Final experiment artifacts are not present")
+        relocated = self.root / "different_clone"
+        relocated.mkdir()
+        (relocated / "data").symlink_to(three.ROOT / "data", target_is_directory=True)
+        (relocated / "results").mkdir()
+        (relocated / "results/model_comparison_2026-11-07").symlink_to(three.PREVIOUS, target_is_directory=True)
+        output = relocated / "results/final_experiment/03_gemini"
+        output.mkdir(parents=True)
+        (output / "config.json").write_bytes((original / "config.json").read_bytes())
+        shutil.copytree(original / "prompt_audit/requests", output / "prompt_audit/requests")
+        hashes = {path:comparison.file_hash(path) for path in (output / "prompt_audit/requests").glob("*/*.json")}
+        predictions = relocated / "results/model_comparison_2026-11-07/01_회귀모델/regression_predictions.json"
+        config, plan = three.prepare_plan(relocated, predictions)
+        frozen = comparison.read_json(output / "config.json")
+        self.assertNotEqual(config["predictions_source"], frozen["config"]["predictions_source"])
+        self.assertEqual(config["predictions_sha256"], frozen["config"]["predictions_sha256"])
+        resolved = three.resolve_resume_config(output, config)
+        self.assertEqual(comparison.digest(resolved), frozen["config_id"])
+        audit = three.dry_run(output, relocated, resolved, plan)
+        self.assertEqual(audit["requests"], 240)
+        self.assertTrue(all(comparison.file_hash(path) == digest for path, digest in hashes.items()))
 
     def test_renderer_counts_reused_exact_requests_without_duplicate_summary_files(self):
         output = self.root / "viewer"; output.mkdir()

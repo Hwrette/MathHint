@@ -13,6 +13,19 @@
       },
       "all_non_source_config_fields_and_input_hashes_match": true,
       "reason": "Source provenance changed; model/settings/prompt/vector/input/grader fingerprints are identical."
+    },
+    {
+      "recorded_at": "2026-11-08T17:24:37.387432+00:00",
+      "source_hashes": {
+        "runner_sha256": "e66ebb2490b627a5e8b84ac1991a35633b008cbe4f02bdfe8f0ca9b16bebcd8f",
+        "shared_runner_sha256": "0ad583a3dc4dbc0678adf85f9c3bbe3f4e9a155adf4dc1713b5e99ca24514765"
+      },
+      "source_locations": {
+        "predictions_source": "/workspace/MathHint/results/model_comparison_2026-11-07/01_회귀모델/regression_predictions.json"
+      },
+      "predictions_sha256": "06ceb7eb8131ea6505b7f55a35724e354b6c6073275bbac4291f6fe8f0d6fd0a",
+      "all_non_source_config_fields_and_input_hashes_match": true,
+      "reason": "Only source code/location provenance changed; prediction bytes, model/settings/prompt/vector/input/grader fingerprints are identical."
     }
   ],
   "frozen_source_commit": "4f676586562668affe7800b4163cb44fc6d20520",
@@ -27,5 +40,9 @@
     }
   },
   "recovery_command": "git show 4f676586562668affe7800b4163cb44fc6d20520:<source path>",
-  "change_description": "After all live calls completed: correct reused-request display counter, remove redundant derived summary/comparison files from runner, and allow source-only maintenance with every semantic setting/input/grader fingerprint unchanged. No API inputs or saved responses were changed."
+  "change_description": "After all live calls completed: correct reused-request display counter, remove redundant derived summary/comparison files from runner, and allow source-only maintenance with every semantic setting/input/grader fingerprint unchanged. No API inputs or saved responses were changed.",
+  "frozen_source_locations": {
+    "predictions_source": "/workspace/MathHint/results/model_comparison_2026-11-07/01_회귀모델/regression_predictions.json"
+  },
+  "relocation_note": "predictions_source is historical filesystem location provenance. A different clone path is accepted only when predictions_sha256 and every other semantic setting/input/grader fingerprint match. Historical captured request source paths remain untouched."
 }

@@ -946,9 +946,9 @@
   ],
   "expected_questions": 80,
   "expected_conditions": 240,
-  "recorded_conditions": 160,
-  "successful_conditions": 160,
-  "complete": false,
+  "recorded_conditions": 240,
+  "successful_conditions": 240,
+  "complete": true,
   "source_key": {
     "baseline": {
       "expected_questions": 80,
@@ -1344,194 +1344,932 @@
     },
     "oracle_hint": {
       "expected_questions": 80,
-      "recorded_questions": 0,
-      "successful_responses": 0,
-      "graded_responses": 0,
-      "correct": 0,
-      "incorrect": 0,
-      "ungraded_or_missing": 80,
-      "accuracy_on_graded": null,
-      "accuracy_on_graded_wilson95": null,
-      "confirmed_correct_per_expected_question": 0.0,
-      "grading_coverage": 0.0,
+      "recorded_questions": 80,
+      "successful_responses": 80,
+      "graded_responses": 80,
+      "correct": 75,
+      "incorrect": 5,
+      "ungraded_or_missing": 0,
+      "accuracy_on_graded": 0.9375,
+      "accuracy_on_graded_wilson95": [
+        0.8618985123272557,
+        0.973010624329158
+      ],
+      "confirmed_correct_per_expected_question": 0.9375,
+      "grading_coverage": 1.0,
       "usage": {
         "prompt_token_count": {
-          "all_attempts": 0,
+          "all_attempts": 81,
           "skipped_without_request": 0,
-          "known_attempts": 0,
-          "missing_attempts": 0,
-          "known_sum": null,
+          "known_attempts": 80,
+          "missing_attempts": 1,
+          "known_sum": 28372,
           "strict_total": null,
-          "successful_responses": 0,
-          "known_successful_responses": 0,
-          "successful_response_known_sum": null,
-          "successful_response_strict_total": null,
+          "successful_responses": 80,
+          "known_successful_responses": 80,
+          "successful_response_known_sum": 28372,
+          "successful_response_strict_total": 28372,
           "missing_successful_responses": 0,
-          "successful_response_mean": null
+          "successful_response_mean": 354.65
         },
         "candidates_token_count": {
-          "all_attempts": 0,
+          "all_attempts": 81,
           "skipped_without_request": 0,
-          "known_attempts": 0,
-          "missing_attempts": 0,
-          "known_sum": null,
+          "known_attempts": 80,
+          "missing_attempts": 1,
+          "known_sum": 36423,
           "strict_total": null,
-          "successful_responses": 0,
-          "known_successful_responses": 0,
-          "successful_response_known_sum": null,
-          "successful_response_strict_total": null,
+          "successful_responses": 80,
+          "known_successful_responses": 80,
+          "successful_response_known_sum": 36423,
+          "successful_response_strict_total": 36423,
           "missing_successful_responses": 0,
-          "successful_response_mean": null
+          "successful_response_mean": 455.2875
         },
         "thoughts_token_count": {
-          "all_attempts": 0,
+          "all_attempts": 81,
           "skipped_without_request": 0,
           "known_attempts": 0,
-          "missing_attempts": 0,
+          "missing_attempts": 81,
           "known_sum": null,
           "strict_total": null,
-          "successful_responses": 0,
+          "successful_responses": 80,
           "known_successful_responses": 0,
           "successful_response_known_sum": null,
           "successful_response_strict_total": null,
-          "missing_successful_responses": 0,
+          "missing_successful_responses": 80,
           "successful_response_mean": null
         },
         "total_token_count": {
-          "all_attempts": 0,
+          "all_attempts": 81,
           "skipped_without_request": 0,
-          "known_attempts": 0,
-          "missing_attempts": 0,
-          "known_sum": null,
+          "known_attempts": 80,
+          "missing_attempts": 1,
+          "known_sum": 64795,
           "strict_total": null,
-          "successful_responses": 0,
-          "known_successful_responses": 0,
-          "successful_response_known_sum": null,
-          "successful_response_strict_total": null,
+          "successful_responses": 80,
+          "known_successful_responses": 80,
+          "successful_response_known_sum": 64795,
+          "successful_response_strict_total": 64795,
           "missing_successful_responses": 0,
-          "successful_response_mean": null
+          "successful_response_mean": 809.9375
         },
         "cached_content_token_count": {
-          "all_attempts": 0,
+          "all_attempts": 81,
           "skipped_without_request": 0,
           "known_attempts": 0,
-          "missing_attempts": 0,
+          "missing_attempts": 81,
           "known_sum": null,
           "strict_total": null,
-          "successful_responses": 0,
+          "successful_responses": 80,
           "known_successful_responses": 0,
           "successful_response_known_sum": null,
           "successful_response_strict_total": null,
-          "missing_successful_responses": 0,
+          "missing_successful_responses": 80,
           "successful_response_mean": null
         },
         "tool_use_prompt_token_count": {
-          "all_attempts": 0,
+          "all_attempts": 81,
           "skipped_without_request": 0,
           "known_attempts": 0,
-          "missing_attempts": 0,
+          "missing_attempts": 81,
           "known_sum": null,
           "strict_total": null,
-          "successful_responses": 0,
+          "successful_responses": 80,
           "known_successful_responses": 0,
           "successful_response_known_sum": null,
           "successful_response_strict_total": null,
-          "missing_successful_responses": 0,
+          "missing_successful_responses": 80,
           "successful_response_mean": null
         }
       },
       "new_api_usage": {
         "prompt_token_count": {
-          "all_attempts": 0,
+          "all_attempts": 81,
           "skipped_without_request": 0,
-          "known_attempts": 0,
-          "missing_attempts": 0,
-          "known_sum": null,
+          "known_attempts": 80,
+          "missing_attempts": 1,
+          "known_sum": 28372,
           "strict_total": null,
-          "successful_responses": 0,
-          "known_successful_responses": 0,
-          "successful_response_known_sum": null,
-          "successful_response_strict_total": null,
+          "successful_responses": 80,
+          "known_successful_responses": 80,
+          "successful_response_known_sum": 28372,
+          "successful_response_strict_total": 28372,
           "missing_successful_responses": 0,
-          "successful_response_mean": null
+          "successful_response_mean": 354.65
         },
         "candidates_token_count": {
-          "all_attempts": 0,
+          "all_attempts": 81,
           "skipped_without_request": 0,
-          "known_attempts": 0,
-          "missing_attempts": 0,
-          "known_sum": null,
+          "known_attempts": 80,
+          "missing_attempts": 1,
+          "known_sum": 36423,
           "strict_total": null,
-          "successful_responses": 0,
-          "known_successful_responses": 0,
-          "successful_response_known_sum": null,
-          "successful_response_strict_total": null,
+          "successful_responses": 80,
+          "known_successful_responses": 80,
+          "successful_response_known_sum": 36423,
+          "successful_response_strict_total": 36423,
           "missing_successful_responses": 0,
-          "successful_response_mean": null
+          "successful_response_mean": 455.2875
         },
         "thoughts_token_count": {
-          "all_attempts": 0,
+          "all_attempts": 81,
           "skipped_without_request": 0,
           "known_attempts": 0,
-          "missing_attempts": 0,
+          "missing_attempts": 81,
           "known_sum": null,
           "strict_total": null,
-          "successful_responses": 0,
+          "successful_responses": 80,
           "known_successful_responses": 0,
           "successful_response_known_sum": null,
           "successful_response_strict_total": null,
-          "missing_successful_responses": 0,
+          "missing_successful_responses": 80,
           "successful_response_mean": null
         },
         "total_token_count": {
-          "all_attempts": 0,
+          "all_attempts": 81,
           "skipped_without_request": 0,
-          "known_attempts": 0,
-          "missing_attempts": 0,
-          "known_sum": null,
+          "known_attempts": 80,
+          "missing_attempts": 1,
+          "known_sum": 64795,
           "strict_total": null,
-          "successful_responses": 0,
-          "known_successful_responses": 0,
-          "successful_response_known_sum": null,
-          "successful_response_strict_total": null,
+          "successful_responses": 80,
+          "known_successful_responses": 80,
+          "successful_response_known_sum": 64795,
+          "successful_response_strict_total": 64795,
           "missing_successful_responses": 0,
-          "successful_response_mean": null
+          "successful_response_mean": 809.9375
         },
         "cached_content_token_count": {
-          "all_attempts": 0,
+          "all_attempts": 81,
           "skipped_without_request": 0,
           "known_attempts": 0,
-          "missing_attempts": 0,
+          "missing_attempts": 81,
           "known_sum": null,
           "strict_total": null,
-          "successful_responses": 0,
+          "successful_responses": 80,
           "known_successful_responses": 0,
           "successful_response_known_sum": null,
           "successful_response_strict_total": null,
-          "missing_successful_responses": 0,
+          "missing_successful_responses": 80,
           "successful_response_mean": null
         },
         "tool_use_prompt_token_count": {
-          "all_attempts": 0,
+          "all_attempts": 81,
           "skipped_without_request": 0,
           "known_attempts": 0,
-          "missing_attempts": 0,
+          "missing_attempts": 81,
           "known_sum": null,
           "strict_total": null,
-          "successful_responses": 0,
+          "successful_responses": 80,
           "known_successful_responses": 0,
           "successful_response_known_sum": null,
           "successful_response_strict_total": null,
-          "missing_successful_responses": 0,
+          "missing_successful_responses": 80,
           "successful_response_mean": null
         }
       },
       "reused_responses": 0,
-      "statuses": {},
-      "model_versions": {},
+      "statuses": {
+        "success": 80
+      },
+      "model_versions": {
+        "gemini-3.1-flash-lite": 80
+      },
       "uses_actual_test_reference_vector": true
     }
   },
+  "new_api_attempts": [
+    {
+      "id": "diff_1_011",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 652
+    },
+    {
+      "id": "diff_1_005",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 1260
+    },
+    {
+      "id": "diff_1_012",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 642
+    },
+    {
+      "id": "diff_1_018",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 649
+    },
+    {
+      "id": "diff_1_014",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 672
+    },
+    {
+      "id": "diff_1_026",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 771
+    },
+    {
+      "id": "diff_1_028",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 782
+    },
+    {
+      "id": "diff_1_030",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 679
+    },
+    {
+      "id": "diff_1_022",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 825
+    },
+    {
+      "id": "diff_1_038",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 784
+    },
+    {
+      "id": "diff_1_039",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 814
+    },
+    {
+      "id": "diff_1_036",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 956
+    },
+    {
+      "id": "diff_2_004",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 1076
+    },
+    {
+      "id": "diff_2_006",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 627
+    },
+    {
+      "id": "diff_1_041",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 991
+    },
+    {
+      "id": "diff_2_007",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 740
+    },
+    {
+      "id": "diff_2_010",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 810
+    },
+    {
+      "id": "diff_2_013",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 750
+    },
+    {
+      "id": "diff_2_014",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 688
+    },
+    {
+      "id": "diff_2_018",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 828
+    },
+    {
+      "id": "diff_2_016",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 629
+    },
+    {
+      "id": "diff_2_023",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 978
+    },
+    {
+      "id": "diff_2_024",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 1359
+    },
+    {
+      "id": "diff_2_029",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 581
+    },
+    {
+      "id": "diff_2_020",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "error",
+      "error_type": "ReadTimeout",
+      "total_tokens": null
+    },
+    {
+      "id": "diff_2_020",
+      "method": "oracle_hint",
+      "execution": 2,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 995
+    },
+    {
+      "id": "diff_2_031",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 753
+    },
+    {
+      "id": "diff_2_036",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 779
+    },
+    {
+      "id": "diff_2_030",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 778
+    },
+    {
+      "id": "diff_2_040",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 793
+    },
+    {
+      "id": "diff_2_041",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 801
+    },
+    {
+      "id": "diff_3_001",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 653
+    },
+    {
+      "id": "diff_2_037",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 758
+    },
+    {
+      "id": "diff_3_005",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 979
+    },
+    {
+      "id": "diff_3_008",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 589
+    },
+    {
+      "id": "diff_3_004",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 853
+    },
+    {
+      "id": "diff_3_022",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 943
+    },
+    {
+      "id": "diff_3_028",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 781
+    },
+    {
+      "id": "diff_3_012",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 917
+    },
+    {
+      "id": "diff_3_039",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 676
+    },
+    {
+      "id": "diff_3_044",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 969
+    },
+    {
+      "id": "diff_3_049",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 757
+    },
+    {
+      "id": "trig_1_004",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 652
+    },
+    {
+      "id": "trig_1_007",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 791
+    },
+    {
+      "id": "diff_3_048",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 790
+    },
+    {
+      "id": "trig_1_010",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 1005
+    },
+    {
+      "id": "trig_1_011",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 726
+    },
+    {
+      "id": "trig_1_013",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 727
+    },
+    {
+      "id": "trig_1_018",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 885
+    },
+    {
+      "id": "trig_1_020",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 761
+    },
+    {
+      "id": "trig_1_021",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 676
+    },
+    {
+      "id": "trig_1_009",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 1070
+    },
+    {
+      "id": "trig_1_028",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 740
+    },
+    {
+      "id": "trig_1_032",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 648
+    },
+    {
+      "id": "trig_1_035",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 712
+    },
+    {
+      "id": "trig_1_039",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 621
+    },
+    {
+      "id": "trig_1_042",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 781
+    },
+    {
+      "id": "trig_1_046",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 773
+    },
+    {
+      "id": "trig_2_003",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 891
+    },
+    {
+      "id": "trig_1_043",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 1331
+    },
+    {
+      "id": "trig_2_014",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 645
+    },
+    {
+      "id": "trig_2_007",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 815
+    },
+    {
+      "id": "trig_2_016",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 772
+    },
+    {
+      "id": "trig_2_017",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 735
+    },
+    {
+      "id": "trig_2_022",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 787
+    },
+    {
+      "id": "trig_2_024",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 758
+    },
+    {
+      "id": "trig_2_030",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 702
+    },
+    {
+      "id": "trig_2_025",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 701
+    },
+    {
+      "id": "trig_3_002",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 746
+    },
+    {
+      "id": "trig_3_010",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 463
+    },
+    {
+      "id": "trig_2_035",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 1154
+    },
+    {
+      "id": "trig_3_011",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 992
+    },
+    {
+      "id": "trig_3_015",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 616
+    },
+    {
+      "id": "trig_3_017",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 911
+    },
+    {
+      "id": "trig_3_021",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 644
+    },
+    {
+      "id": "trig_3_026",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 684
+    },
+    {
+      "id": "trig_3_034",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 1153
+    },
+    {
+      "id": "trig_3_035",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 1023
+    },
+    {
+      "id": "trig_3_039",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 948
+    },
+    {
+      "id": "trig_3_040",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 732
+    },
+    {
+      "id": "trig_3_014",
+      "method": "oracle_hint",
+      "execution": 1,
+      "attempt": 1,
+      "status": "success",
+      "error_type": null,
+      "total_tokens": 917
+    }
+  ],
   "supplemental_key": {
     "conflicts": [
       {
@@ -1598,6 +2336,30 @@
       {
         "id": "trig_1_010",
         "method": "regression_hint",
+        "original": {
+          "predicted_answer": "②",
+          "correct": false,
+          "status": "incorrect",
+          "reason": "choice_index_comparison",
+          "extraction_method": "final_answer_marker",
+          "reference_answer": "④",
+          "predicted_kind": "choice",
+          "predicted_choice": 2
+        },
+        "supplemental": {
+          "predicted_answer": "②",
+          "correct": true,
+          "status": "correct",
+          "reason": "choice_index_comparison",
+          "extraction_method": "final_answer_marker",
+          "reference_answer": "②",
+          "predicted_kind": "choice",
+          "predicted_choice": 2
+        }
+      },
+      {
+        "id": "trig_1_010",
+        "method": "oracle_hint",
         "original": {
           "predicted_answer": "②",
           "correct": false,
@@ -2018,191 +2780,198 @@
       },
       "oracle_hint": {
         "expected_questions": 80,
-        "recorded_questions": 0,
-        "successful_responses": 0,
-        "graded_responses": 0,
-        "correct": 0,
-        "incorrect": 0,
-        "ungraded_or_missing": 80,
-        "accuracy_on_graded": null,
-        "accuracy_on_graded_wilson95": null,
-        "confirmed_correct_per_expected_question": 0.0,
-        "grading_coverage": 0.0,
+        "recorded_questions": 80,
+        "successful_responses": 80,
+        "graded_responses": 80,
+        "correct": 76,
+        "incorrect": 4,
+        "ungraded_or_missing": 0,
+        "accuracy_on_graded": 0.95,
+        "accuracy_on_graded_wilson95": [
+          0.8783772379535698,
+          0.9803864454644556
+        ],
+        "confirmed_correct_per_expected_question": 0.95,
+        "grading_coverage": 1.0,
         "usage": {
           "prompt_token_count": {
-            "all_attempts": 0,
+            "all_attempts": 81,
             "skipped_without_request": 0,
-            "known_attempts": 0,
-            "missing_attempts": 0,
-            "known_sum": null,
+            "known_attempts": 80,
+            "missing_attempts": 1,
+            "known_sum": 28372,
             "strict_total": null,
-            "successful_responses": 0,
-            "known_successful_responses": 0,
-            "successful_response_known_sum": null,
-            "successful_response_strict_total": null,
+            "successful_responses": 80,
+            "known_successful_responses": 80,
+            "successful_response_known_sum": 28372,
+            "successful_response_strict_total": 28372,
             "missing_successful_responses": 0,
-            "successful_response_mean": null
+            "successful_response_mean": 354.65
           },
           "candidates_token_count": {
-            "all_attempts": 0,
+            "all_attempts": 81,
             "skipped_without_request": 0,
-            "known_attempts": 0,
-            "missing_attempts": 0,
-            "known_sum": null,
+            "known_attempts": 80,
+            "missing_attempts": 1,
+            "known_sum": 36423,
             "strict_total": null,
-            "successful_responses": 0,
-            "known_successful_responses": 0,
-            "successful_response_known_sum": null,
-            "successful_response_strict_total": null,
+            "successful_responses": 80,
+            "known_successful_responses": 80,
+            "successful_response_known_sum": 36423,
+            "successful_response_strict_total": 36423,
             "missing_successful_responses": 0,
-            "successful_response_mean": null
+            "successful_response_mean": 455.2875
           },
           "thoughts_token_count": {
-            "all_attempts": 0,
+            "all_attempts": 81,
             "skipped_without_request": 0,
             "known_attempts": 0,
-            "missing_attempts": 0,
+            "missing_attempts": 81,
             "known_sum": null,
             "strict_total": null,
-            "successful_responses": 0,
+            "successful_responses": 80,
             "known_successful_responses": 0,
             "successful_response_known_sum": null,
             "successful_response_strict_total": null,
-            "missing_successful_responses": 0,
+            "missing_successful_responses": 80,
             "successful_response_mean": null
           },
           "total_token_count": {
-            "all_attempts": 0,
+            "all_attempts": 81,
             "skipped_without_request": 0,
-            "known_attempts": 0,
-            "missing_attempts": 0,
-            "known_sum": null,
+            "known_attempts": 80,
+            "missing_attempts": 1,
+            "known_sum": 64795,
             "strict_total": null,
-            "successful_responses": 0,
-            "known_successful_responses": 0,
-            "successful_response_known_sum": null,
-            "successful_response_strict_total": null,
+            "successful_responses": 80,
+            "known_successful_responses": 80,
+            "successful_response_known_sum": 64795,
+            "successful_response_strict_total": 64795,
             "missing_successful_responses": 0,
-            "successful_response_mean": null
+            "successful_response_mean": 809.9375
           },
           "cached_content_token_count": {
-            "all_attempts": 0,
+            "all_attempts": 81,
             "skipped_without_request": 0,
             "known_attempts": 0,
-            "missing_attempts": 0,
+            "missing_attempts": 81,
             "known_sum": null,
             "strict_total": null,
-            "successful_responses": 0,
+            "successful_responses": 80,
             "known_successful_responses": 0,
             "successful_response_known_sum": null,
             "successful_response_strict_total": null,
-            "missing_successful_responses": 0,
+            "missing_successful_responses": 80,
             "successful_response_mean": null
           },
           "tool_use_prompt_token_count": {
-            "all_attempts": 0,
+            "all_attempts": 81,
             "skipped_without_request": 0,
             "known_attempts": 0,
-            "missing_attempts": 0,
+            "missing_attempts": 81,
             "known_sum": null,
             "strict_total": null,
-            "successful_responses": 0,
+            "successful_responses": 80,
             "known_successful_responses": 0,
             "successful_response_known_sum": null,
             "successful_response_strict_total": null,
-            "missing_successful_responses": 0,
+            "missing_successful_responses": 80,
             "successful_response_mean": null
           }
         },
         "new_api_usage": {
           "prompt_token_count": {
-            "all_attempts": 0,
+            "all_attempts": 81,
             "skipped_without_request": 0,
-            "known_attempts": 0,
-            "missing_attempts": 0,
-            "known_sum": null,
+            "known_attempts": 80,
+            "missing_attempts": 1,
+            "known_sum": 28372,
             "strict_total": null,
-            "successful_responses": 0,
-            "known_successful_responses": 0,
-            "successful_response_known_sum": null,
-            "successful_response_strict_total": null,
+            "successful_responses": 80,
+            "known_successful_responses": 80,
+            "successful_response_known_sum": 28372,
+            "successful_response_strict_total": 28372,
             "missing_successful_responses": 0,
-            "successful_response_mean": null
+            "successful_response_mean": 354.65
           },
           "candidates_token_count": {
-            "all_attempts": 0,
+            "all_attempts": 81,
             "skipped_without_request": 0,
-            "known_attempts": 0,
-            "missing_attempts": 0,
-            "known_sum": null,
+            "known_attempts": 80,
+            "missing_attempts": 1,
+            "known_sum": 36423,
             "strict_total": null,
-            "successful_responses": 0,
-            "known_successful_responses": 0,
-            "successful_response_known_sum": null,
-            "successful_response_strict_total": null,
+            "successful_responses": 80,
+            "known_successful_responses": 80,
+            "successful_response_known_sum": 36423,
+            "successful_response_strict_total": 36423,
             "missing_successful_responses": 0,
-            "successful_response_mean": null
+            "successful_response_mean": 455.2875
           },
           "thoughts_token_count": {
-            "all_attempts": 0,
+            "all_attempts": 81,
             "skipped_without_request": 0,
             "known_attempts": 0,
-            "missing_attempts": 0,
+            "missing_attempts": 81,
             "known_sum": null,
             "strict_total": null,
-            "successful_responses": 0,
+            "successful_responses": 80,
             "known_successful_responses": 0,
             "successful_response_known_sum": null,
             "successful_response_strict_total": null,
-            "missing_successful_responses": 0,
+            "missing_successful_responses": 80,
             "successful_response_mean": null
           },
           "total_token_count": {
-            "all_attempts": 0,
+            "all_attempts": 81,
             "skipped_without_request": 0,
-            "known_attempts": 0,
-            "missing_attempts": 0,
-            "known_sum": null,
+            "known_attempts": 80,
+            "missing_attempts": 1,
+            "known_sum": 64795,
             "strict_total": null,
-            "successful_responses": 0,
-            "known_successful_responses": 0,
-            "successful_response_known_sum": null,
-            "successful_response_strict_total": null,
+            "successful_responses": 80,
+            "known_successful_responses": 80,
+            "successful_response_known_sum": 64795,
+            "successful_response_strict_total": 64795,
             "missing_successful_responses": 0,
-            "successful_response_mean": null
+            "successful_response_mean": 809.9375
           },
           "cached_content_token_count": {
-            "all_attempts": 0,
+            "all_attempts": 81,
             "skipped_without_request": 0,
             "known_attempts": 0,
-            "missing_attempts": 0,
+            "missing_attempts": 81,
             "known_sum": null,
             "strict_total": null,
-            "successful_responses": 0,
+            "successful_responses": 80,
             "known_successful_responses": 0,
             "successful_response_known_sum": null,
             "successful_response_strict_total": null,
-            "missing_successful_responses": 0,
+            "missing_successful_responses": 80,
             "successful_response_mean": null
           },
           "tool_use_prompt_token_count": {
-            "all_attempts": 0,
+            "all_attempts": 81,
             "skipped_without_request": 0,
             "known_attempts": 0,
-            "missing_attempts": 0,
+            "missing_attempts": 81,
             "known_sum": null,
             "strict_total": null,
-            "successful_responses": 0,
+            "successful_responses": 80,
             "known_successful_responses": 0,
             "successful_response_known_sum": null,
             "successful_response_strict_total": null,
-            "missing_successful_responses": 0,
+            "missing_successful_responses": 80,
             "successful_response_mean": null
           }
         },
         "reused_responses": 0,
-        "statuses": {},
-        "model_versions": {},
+        "statuses": {
+          "success": 80
+        },
+        "model_versions": {
+          "gemini-3.1-flash-lite": 80
+        },
         "uses_actual_test_reference_vector": true
       }
     }
@@ -2238,36 +3007,57 @@
     "baseline_vs_oracle_hint": {
       "left": "baseline",
       "right": "oracle_hint",
-      "graded_pairs": 0,
-      "excluded_pairs": 80,
-      "both_correct": 0,
-      "left_only": 0,
-      "right_only": 0,
-      "both_incorrect": 0,
-      "left_correct": 0,
-      "right_correct": 0,
-      "difference_right_minus_left": null,
-      "left_wilson95": null,
-      "right_wilson95": null,
-      "exact_mcnemar_p": null,
-      "changed_ids": []
+      "graded_pairs": 80,
+      "excluded_pairs": 0,
+      "both_correct": 74,
+      "left_only": 4,
+      "right_only": 1,
+      "both_incorrect": 1,
+      "left_correct": 78,
+      "right_correct": 75,
+      "difference_right_minus_left": -0.0375,
+      "left_wilson95": [
+        0.9133556701442198,
+        0.9931171067970292
+      ],
+      "right_wilson95": [
+        0.8618985123272557,
+        0.973010624329158
+      ],
+      "exact_mcnemar_p": 0.375,
+      "changed_ids": [
+        "diff_3_004",
+        "diff_3_044",
+        "trig_1_046",
+        "trig_2_022",
+        "trig_3_034"
+      ]
     },
     "regression_hint_vs_oracle_hint": {
       "left": "regression_hint",
       "right": "oracle_hint",
-      "graded_pairs": 0,
-      "excluded_pairs": 80,
-      "both_correct": 0,
-      "left_only": 0,
+      "graded_pairs": 80,
+      "excluded_pairs": 0,
+      "both_correct": 75,
+      "left_only": 2,
       "right_only": 0,
-      "both_incorrect": 0,
-      "left_correct": 0,
-      "right_correct": 0,
-      "difference_right_minus_left": null,
-      "left_wilson95": null,
-      "right_wilson95": null,
-      "exact_mcnemar_p": null,
-      "changed_ids": []
+      "both_incorrect": 3,
+      "left_correct": 77,
+      "right_correct": 75,
+      "difference_right_minus_left": -0.025,
+      "left_wilson95": [
+        0.8954527990995489,
+        0.9871654310800886
+      ],
+      "right_wilson95": [
+        0.8618985123272557,
+        0.973010624329158
+      ],
+      "exact_mcnemar_p": 0.5,
+      "changed_ids": [
+        "diff_3_044",
+        "trig_1_046"
+      ]
     }
   },
   "paired_supplemental": {
@@ -2301,36 +3091,57 @@
     "baseline_vs_oracle_hint": {
       "left": "baseline",
       "right": "oracle_hint",
-      "graded_pairs": 0,
-      "excluded_pairs": 80,
-      "both_correct": 0,
-      "left_only": 0,
-      "right_only": 0,
+      "graded_pairs": 80,
+      "excluded_pairs": 0,
+      "both_correct": 75,
+      "left_only": 4,
+      "right_only": 1,
       "both_incorrect": 0,
-      "left_correct": 0,
-      "right_correct": 0,
-      "difference_right_minus_left": null,
-      "left_wilson95": null,
-      "right_wilson95": null,
-      "exact_mcnemar_p": null,
-      "changed_ids": []
+      "left_correct": 79,
+      "right_correct": 76,
+      "difference_right_minus_left": -0.0375,
+      "left_wilson95": [
+        0.9325372992233133,
+        0.9977900244795476
+      ],
+      "right_wilson95": [
+        0.8783772379535698,
+        0.9803864454644556
+      ],
+      "exact_mcnemar_p": 0.375,
+      "changed_ids": [
+        "diff_3_004",
+        "diff_3_044",
+        "trig_1_046",
+        "trig_2_022",
+        "trig_3_034"
+      ]
     },
     "regression_hint_vs_oracle_hint": {
       "left": "regression_hint",
       "right": "oracle_hint",
-      "graded_pairs": 0,
-      "excluded_pairs": 80,
-      "both_correct": 0,
-      "left_only": 0,
+      "graded_pairs": 80,
+      "excluded_pairs": 0,
+      "both_correct": 76,
+      "left_only": 2,
       "right_only": 0,
-      "both_incorrect": 0,
-      "left_correct": 0,
-      "right_correct": 0,
-      "difference_right_minus_left": null,
-      "left_wilson95": null,
-      "right_wilson95": null,
-      "exact_mcnemar_p": null,
-      "changed_ids": []
+      "both_incorrect": 2,
+      "left_correct": 78,
+      "right_correct": 76,
+      "difference_right_minus_left": -0.025,
+      "left_wilson95": [
+        0.9133556701442198,
+        0.9931171067970292
+      ],
+      "right_wilson95": [
+        0.8783772379535698,
+        0.9803864454644556
+      ],
+      "exact_mcnemar_p": 0.5,
+      "changed_ids": [
+        "diff_3_044",
+        "trig_1_046"
+      ]
     }
   },
   "review": {
@@ -2507,14 +3318,48 @@
         }
       }
     },
-    "new_review": null,
+    "new_review": {
+      "reviewed_at": "2026-11-08T17:17:01.548831+00:00",
+      "reviewer_type": "AI_assisted",
+      "human_confirmed": false,
+      "conditions_aware": true,
+      "reviewed_count": 80,
+      "review_protocol": "C 응답 전문을 문제·변환된 원본 해설과 대조하고 수식·구간·근 개수·중간 논리를 검토했다. 정확 인용과 응답 SHA-256을 재검증했다. 표기 오류·자기 수정 계산 오류·최종 오답을 error_kind로 구분한다. 최종답 정오와 풀이 오류를 분리한다.",
+      "limitations": [
+        "사람의 확정 판정이나 형식적 증명 검증이 아니다.",
+        "조건과 원본 해설을 알고 검토했으므로 검토 편향이 남는다.",
+        "전체 교육과정 성취기준 원문과 전부 대조하지 않았다.",
+        "기존 A/B 검토와 신규 C 검토는 실행 시점·검토자가 다르므로 검토 개수 차이를 확정적 성능 차이로 해석하지 않는다."
+      ]
+    },
     "caveat": "AI 보조 검토는 수학적 증명이나 교사의 확정 판정이 아니다. 검토하지 않은 응답은 미검토다.",
     "legacy_summary_path": "results/model_comparison_2026-11-07/03_Gemini비교/풀이검토_요약.json",
-    "legacy_source_sha256": "7f3c34d3909d01f6ed29560171ced63e08c11bd0b142671b1967e0190ad8801c"
+    "legacy_source_sha256": "7f3c34d3909d01f6ed29560171ced63e08c11bd0b142671b1967e0190ad8801c",
+    "new_review_correct_answer_with_issues": [
+      "diff_1_038",
+      "diff_2_004",
+      "diff_2_024",
+      "trig_1_013",
+      "trig_1_043"
+    ],
+    "new_review_wrong_answer_with_issues": [
+      "diff_3_004",
+      "diff_3_044",
+      "trig_1_046",
+      "trig_3_034"
+    ],
+    "new_review_counts": {
+      "baseline": {},
+      "regression_hint": {},
+      "oracle_hint": {
+        "appropriate": 71,
+        "inappropriate": 9
+      }
+    }
   },
   "source_hashes": {
     "config": "d3fd230720b50ac8868bfdd2d753284905d7d68f8cd913db0a99e0fba7cb441f",
-    "responses": "4f1fac737cbe3cb5008c46bdf8455d8a6f2d9a63a13830bd97c8c08c9b5a21db"
+    "responses": "8f7ec994ad265c723bdf5d72c2f2d6fbce4e04847ce92a75ba74080e82bd7bdc"
   },
   "interpretation": [
     "C는 실제 해설의 상위 토큰을 제공하는 진단 조건이며 일반 예측 성능이나 보장된 이론적 상한이 아니다.",
@@ -2523,5 +3368,7 @@
     "80문항·각 조건 문항당1회 생성이며, 반복 생성의 변동을 측정하지 않았다.",
     "이전 테스트 결과를 본 뒤 후속 비교를 설계했다. 학습에 테스트를 넣지 않았지만 완전히 미관찰한 독립 평가라고 주장하지 않는다.",
     "미제공 추론 토큰은 null이며 전체 토큰에 추가 합산하지 않는다."
-  ]
+  ],
+  "api_responses_complete": true,
+  "postflight_verified": true
 }
