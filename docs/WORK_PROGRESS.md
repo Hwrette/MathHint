@@ -1,20 +1,20 @@
 # MathHint 작업 진행 상태
 
-STATUS: REAUDIT_VERIFIED_PENDING_PUBLICATION
+STATUS: COMPLETED_AFTER_REAUDIT
 EXECUTION_ALLOWED: true
-LAST_CONFIRMED_PUBLISHED_COMMIT: c75dee8
+LAST_CONFIRMED_PUBLISHED_COMMIT: 289d662a8c017e61792ab6fe684292155d3013f9
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
-AUTOMATION_STATUS: REENABLED_FOR_FINAL_AUDIT_VERIFIED_BY_PEEK
+AUTOMATION_STATUS: DISABLED_AFTER_REAUDIT_VERIFIED_BY_PEEK
 FIRST_RUN_FROM_SAVED_RULE: 2026-11-09T05:58:50+09:00
 RECURRENCE: EVERY_5_HOURS
 NEXT_RUN_TIME_SERVER_FIELD: NOT_RETURNED
 ENVIRONMENT: MathHint / inherited / current_environment_id_confirmed
-REMOTE_CHECKPOINT_STATUS: REAUDIT_VERIFIED_PENDING_PUBLICATION
+REMOTE_CHECKPOINT_STATUS: REAUDIT_CODE_RESULTS_PUBLISHED
 GITHUB_PREAUTHORIZATION_SETTING: RESTORED_TO_ORIGINAL_INHERIT_VERIFIED
 TIMEZONE: Asia/Seoul
 USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 
-## 현재 최종 상태 — 2026-11-08T17:28:55.784855+00:00
+## 현재 최종 상태 — 2026-11-08T17:55:21.415494+00:00
 
 | 단계 | 상태 | 최종 근거 |
 |---|---|---|
@@ -22,11 +22,11 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 | 2 군집화 비교 | 완료 | 01_clustering 8실험·2120배정·16지표·모델/교차표검증 |
 | 3 회귀 검증 | 완료 | 02_regression 고정80·3기준·실수벡터·모델재추론완전일치 |
 | 4 Gemini 검증·세조건 | 완료 | A/B160재사용·C80성공·SDK81·최신240성공·사후감사PASS |
-| 5 시각자료·통합 | 완료 | 결과README·80행비교·사례·11절보고서·1518파일링크확인 |
+| 5 시각자료·통합 | 완료 | 결과README·80행비교·사례·11절보고서·3941파일링크확인 |
 | 6 저장소 정리 | 완료 | docs/cleanup_changes.md 실제삭제/통합/복구·원본보존 |
 | 7 전체 검증·보고서 | 완료 | 재감사후140testsPASS(7.802s), VerifyResults284/284, 캐시·재배치재개 신규API0 |
 
-최초 완료 후 재감사에서 정리 누락을 찾아 보완했다. 실험·핵심 수치는 그대로이며 구 실행 코드·상위 결과 안내·유형 사례·입력 비교표·그림 연결을 추가 정리했다. 현재 재검증은 끝났고 보완 커밋의 원격 게시와 복구 예약 재중지 확인만 남았다. API·학습은 다시 실행하지 않는다.
+최초 완료 후 재감사에서 정리 누락을 찾아 보완했다. 구 실행 코드·상위 결과 안내·유형 사례·입력 비교표·그림 연결까지 재정리하고 재검증했다. 보완코드/결과289d662를원격main에푸시했고복구예약도다시중지하여peek로확인했다. 추가미완료필수항목은발견되지않았다. API·학습을다시실행하지않는다.
 
 ## 이전 대기 상태의 기록 (명세 수령 전 이력이며 현재 완료 상태가 우선)
 
@@ -220,3 +220,9 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - B/C전송토큰비교표3문항77행을실제JSON값/순위/미전송표시로독립대조했다(공통17/12/14). 미전송을0빈도로해석하지않는다.
 - 전체test140개PASS,7.802초. 결과무결성284/284PASS·240성공완료. 336보호파일SHA불변,구930SHA불변,최종/상위/안내Markdown파일링크3941개누락0. 구실행경로참조0(역사적출처기록제외),공백검사PASS.
 - genai.Client금지상태로표준입력준비를실행해pending0·240기존요청/241응답/81SDK로그불변을확인했다. 기존학습함수금지mock으로군집캐시검증도통과했다. 신규API0·재학습0,정답수78/77/75·성공토큰합51820/68615/64795불변.
+
+## 재감사 최종 게시·예약 중지 — 2026-11-08T17:55:21.415494+00:00
+
+- 보완구현·최종산출물·누적정리문서를커밋289d662로저장하고원격main푸시exit0확인. 재감사전복구브랜치도원격에있다.
+- 기존자동화다시update(is_enabled=false)success·peek false확인. 추가미완료필수항목없음.
+- 공식근거가없는확정판정은보태지않았다. 실험새실행/새API요청없이기존결과의정리와검증만보완했다. 이전완료기록의정리누락을그대로역사에남기고이재감사결과가현재상태임을명시한다.
