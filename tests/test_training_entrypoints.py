@@ -15,6 +15,7 @@ except ModuleNotFoundError:
 
 if torch is not None:
     from mathhint_learning import TorchKMeans, TorchRegression
+    from mathhint_learning.Experiment import Experiment
     from test_fixed_training import write_fixture
 
 
@@ -24,12 +25,12 @@ class TrainingEntrypointTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             write_fixture(root)
-            output = root / "results"
-            with mock.patch.multiple(TorchRegression, ROOT=root, OUTPUT=output, EPOCHS=5), \
-                 mock.patch.object(torch, "randperm", side_effect=AssertionError("must not resplit")), \
+            experiment = Experiment(name="tiny", project_root=root, epochs=5)
+            output = experiment.regression_dir
+            with mock.patch.object(torch, "randperm", side_effect=AssertionError("must not resplit")), \
                  contextlib.redirect_stdout(io.StringIO()):
-                TorchRegression.main()
-            metrics = json.loads((output / "regression_metrics.json").read_text())
+                TorchRegression.train_for_experiment(experiment, make_figures=False)
+            metrics = json.loads((output / "provenance.json").read_text())
             predictions = json.loads((output / "regression_predictions.json").read_text())
             self.assertEqual(metrics["train_ids"], ["a", "b"])
             self.assertEqual(metrics["test_ids"], ["c"])

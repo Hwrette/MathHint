@@ -116,32 +116,42 @@ def load_predictions(path: Path, test_ids: list[str], generation_id: str) -> tup
             raise ValueError("예측 문항 ID가 중복되거나 예측 벡터가 없습니다.")
         serialize_hint(vocabulary, vector)
         predictions[identifier] = vector
-    if set(predictions) != set(test_ids):
-        raise ValueError("회귀 예측 ID 집합이 고정 테스트 ID 집합과 다릅니다.")
+    if [document["id"] for document in documents] != test_ids:
+        raise ValueError(f"{path}: 회귀 예측 문항 ID/행 순서가 고정 테스트 ID 목록과 다릅니다.")
     return vocabulary, predictions
 
 
 def prepare_plan(project: Path, predictions_path: Path, *, model: str,
                  thinking_level: str, temperature: float, max_output_tokens: int,
                  system_instruction: str = DEFAULT_SYSTEM, attempts: int = 2,
-                 hint_mode: str = "top_tokens", hint_top_k: int = 20) -> tuple[dict, list[dict]]:
-    metadata_path = project / "data/processed/metadata.json"
+                 hint_mode: str = "top_tokens", hint_top_k: int = 20,
+                 data_root: Path | None = None) -> tuple[dict, list[dict]]:
+    project = Path(project)
+    data_root = Path(data_root) if data_root is not None else project / "data"
+    metadata_path = data_root / "processed/metadata.json"
     metadata = read_json(metadata_path)
-    train_path = project / "data/processed/splits/train.json"
-    test_path = project / "data/processed/splits/test.json"
+    train_path = data_root / "processed/splits/train.json"
+    test_path = data_root / "processed/splits/test.json"
     train_ids, test_ids = read_json(train_path), read_json(test_path)
-    if set(train_ids) & set(test_ids) or len(set(test_ids)) != len(test_ids):
+    if set(train_ids) & set(test_ids) or len(set(test_ids)) != len(test_ids) or len(set(train_ids)) != len(train_ids):
         raise ValueError("학습·테스트 ID가 겹치거나 테스트 ID가 중복됩니다.")
     vocabulary, predictions = load_predictions(predictions_path, test_ids, metadata["generation_id"])
     prediction_metadata = read_json(predictions_path)
+    vocabulary_path = data_root / "vectors/solutions/vocabulary.json"
+    if vocabulary != read_json(vocabulary_path):
+        raise ValueError(f"{predictions_path}: 해설 어휘 내용/순서가 {vocabulary_path}와 다릅니다.")
+    if "input_vocabulary" in prediction_metadata:
+        input_path = data_root / "vectors/problems/vocabulary.json"
+        if prediction_metadata["input_vocabulary"] != read_json(input_path):
+            raise ValueError(f"{predictions_path}: 문제 어휘 내용/순서가 {input_path}와 다릅니다.")
     if "train_ids" in prediction_metadata and prediction_metadata["train_ids"] != train_ids:
         raise ValueError("회귀 학습 ID가 고정 학습 ID/순서와 다릅니다.")
     records = {record["id"]: record for record in metadata["records"]}
     plan, input_hashes = [], []
     for index, identifier in enumerate(test_ids):
         meta = records[identifier]
-        problem = (project / "data/processed/problems" / (identifier + ".txt")).read_text(encoding="utf-8-sig")
-        solution = (project / "data/processed/solutions" / (identifier + ".txt")).read_text(encoding="utf-8-sig")
+        problem = (data_root / "processed/problems" / (identifier + ".txt")).read_text(encoding="utf-8-sig")
+        solution = (data_root / "processed/solutions" / (identifier + ".txt")).read_text(encoding="utf-8-sig")
         reference = extract_reference(meta, problem)
         hint, hint_audit = serialize_hint(vocabulary, predictions[identifier], mode=hint_mode, top_k=hint_top_k)
         pair = []

@@ -54,6 +54,25 @@ def read_csv(path):
         return list(csv.DictReader(stream))
 
 
+def reader_opening_guide():
+    return ("GitHub 파일 페이지는 HTML 소스를 보여주며 읽기 화면을 실행하지 않는다. "
+            "저장소 ZIP 전체를 압축 해제하거나 clone한 뒤, 이 안내와 같은 폴더의 `03_gemini/report.html`을 브라우저에서 연다. "
+            "화면만 보려면 `report.html`과 그 파일 기준 `../viewer_assets/`를 같은 상대 구조로 함께 보존해야 한다. "
+            "HTML 하나만 내려받으면 수식·Markdown 표시 파일이 빠진다. 원문·CSV 링크까지 사용하려면 저장소 전체가 필요하다. "
+            "렌더러와 글꼴은 로컬에 포함되어 외부 인터넷 연결은 필요하지 않다.")
+
+
+def cluster_reading_table(run_root):
+    lines = ["|실제 분류 수준|유클리드 군집별 문제|코사인(구면) 군집별 문제|", "|---|---|---|"]
+    for level, name in (("curriculum", "과목"), ("unit", "단원"), ("subunit", "세부단원"), ("type", "문제 유형")):
+        links = []
+        for method in ("euclidean", "spherical"):
+            relative = Path("01_clustering/experiments") / f"{level}_{method}" / "clusters.md"
+            links.append(f"[군집 목록]({relative.as_posix()})" if (run_root / relative).exists() else "미생성")
+        lines.append(f"|{name}|{'|'.join(links)}|")
+    return lines
+
+
 def token_comparison_rows(predicted, actual):
     """저장된 전송 JSON의 순서·값을 비교한다. 빠진 토큰을 0으로 가정하지 않는다."""
     b_rank = {token: i + 1 for i, token in enumerate(predicted)}
@@ -65,8 +84,10 @@ def token_comparison_rows(predicted, actual):
             for token in tokens]
 
 
-def prompt_token_comparison(run_root, ids):
+def prompt_token_comparison(run_root, ids, *, preserve_existing=False):
     folder = run_root / "03_gemini/prompt_audit"
+    if preserve_existing and (folder / "token_comparison.md").exists():
+        return
     lines = ["# B·C에 실제로 전송한 토큰 비교", "",
              "고정 테스트 목록의 첫째·가운데·마지막 문항을 예시로 골랐다. 아래 값과 순위는 보존된 요청 JSON에서 읽었으며 입력 파일을 다시 쓰지 않았다.", "",
              "A에는 문제와 공통 시스템 지시만 제공한다. B와 C는 동일한 상위20토큰 JSON 구조를 사용하고 출처 설명만 다르다. **미전송은 해당 벡터의 빈도가0이라는 뜻이 아니다.** 상위20 선택에서 제외되었거나 표시 반올림 뒤 생략된 항목일 수 있다.", "",
@@ -202,10 +223,11 @@ def method_scores(latest, ids):
     return result
 
 
-def review_evidence(folder, latest):
+def review_evidence(folder, latest, *, legacy_dir=None, project_root=ROOT):
     """기존 AI 검토의 대상 원본과 현재 출력이 같을 때만 요약을 재사용한다."""
-    summary_path = LEGACY / "풀이검토_요약.json"
-    response_path = LEGACY / "원본응답_160개.jsonl"
+    legacy = LEGACY if legacy_dir is None else (Path(legacy_dir) if legacy_dir else None)
+    summary_path = legacy / "풀이검토_요약.json" if legacy else Path(folder) / "no_legacy_review"
+    response_path = legacy / "원본응답_160개.jsonl" if legacy else Path(folder) / "no_legacy_responses"
     result = {"human_reviewed_count": 0, "ai_review": {}, "new_review": None,
               "caveat": "AI 보조 검토는 수학적 증명이나 교사의 확정 판정이 아니다. 검토하지 않은 응답은 미검토다."}
     if summary_path.exists() and response_path.exists():
@@ -215,9 +237,9 @@ def review_evidence(folder, latest):
         source_rows = [json.loads(line) for line in response_path.read_text().splitlines() if line.strip()]
         for method in METHODS[:2]:
             originals = [r for r in source_rows if r["method"] == method]
-            if len(originals) == 80 and all(latest.get((r["id"], method), {}).get("output_text") == r["output_text"] for r in originals):
+            if len(originals) == 80 and all(all(latest.get((r["id"], method), {}).get(key) == r.get(key) for key in ("output_text", "input_sha256", "problem_text", "reference_answer_text", "model", "thinking_level")) for r in originals):
                 result["ai_review"][method] = old["review_kinds"]["ai_suggestion"][method]
-        result["legacy_summary_path"] = str(summary_path.relative_to(ROOT))
+        result["legacy_summary_path"] = os.path.relpath(summary_path, project_root)
         result["legacy_source_sha256"] = file_hash(response_path)
     new_path = folder / "solution_review.json"
     if new_path.exists():
@@ -236,8 +258,9 @@ def review_evidence(folder, latest):
     return result
 
 
-def analyze(run_root=RUN_ROOT, conflicts_path=None):
-    run_root = Path(run_root)
+def analyze(run_root=RUN_ROOT, conflicts_path=None, *, project_root=ROOT, data_root=None, use_legacy=None):
+    run_root, project_root = Path(run_root), Path(project_root)
+    use_legacy = run_root.resolve() == (project_root / "results/final_experiment").resolve() if use_legacy is None else use_legacy
     folder = run_root / "03_gemini"
     manifest = read_json(folder / "config.json")
     config, config_id = manifest["config"], manifest["config_id"]
@@ -257,7 +280,7 @@ def analyze(run_root=RUN_ROOT, conflicts_path=None):
         if key in latest and latest[key].get("status") == "success":
             raise ValueError("성공 응답 뒤 같은 조건의 중복 기록이 있습니다.")
         latest[key] = row
-    reviewed, adjudication = supplemental_scores(latest, ids, Path(conflicts_path) if conflicts_path else CONFLICTS)
+    reviewed, adjudication = supplemental_scores(latest, ids, Path(conflicts_path) if conflicts_path else (project_root / "results/model_comparison_2026-11-07/03_Gemini비교/원본정답표_오류근거.json" if use_legacy else run_root / "answer_conflicts.json"))
     comparisons = [("baseline", "regression_hint"), ("baseline", "oracle_hint"), ("regression_hint", "oracle_hint")]
     expected = len(ids) * len(METHODS)
     result = {"config_id": config_id, "settings": config, "test_ids": ids,
@@ -269,12 +292,12 @@ def analyze(run_root=RUN_ROOT, conflicts_path=None):
               "supplemental_key": {**adjudication, "methods": method_scores(reviewed, ids)},
               "paired_source": {f"{a}_vs_{b}": paired_scores(latest, ids, a, b) for a, b in comparisons},
               "paired_supplemental": {f"{a}_vs_{b}": paired_scores(reviewed, ids, a, b) for a, b in comparisons},
-              "review": review_evidence(folder, latest),
+              "review": review_evidence(folder, latest, legacy_dir=(project_root / "results/model_comparison_2026-11-07/03_Gemini비교") if use_legacy else False, project_root=project_root),
               "source_hashes": {"config": file_hash(folder / "config.json"), "responses": file_hash(path) if path.exists() else None},
               "interpretation": ["C는 실제 해설의 상위 토큰을 제공하는 진단 조건이며 일반 예측 성능이나 보장된 이론적 상한이 아니다.",
                                  "회귀 평가는 반올림하지 않는다. API에는 음수 보정 후 반올림 전 값으로 선정한 상위20토큰을 소수 셋째 자리까지 표시한다.",
                                  "원본 정답표와 AI 보조 보정 점수는 분리하며 원본 응답을 수정하지 않는다.",
-                                 "80문항·각 조건 문항당1회 생성이며, 반복 생성의 변동을 측정하지 않았다.",
+                                 f"{len(ids)}문항·각 조건 문항당1회 생성이며, 반복 생성의 변동을 측정하지 않았다.",
                                  "이전 테스트 결과를 본 뒤 후속 비교를 설계했다. 학습에 테스트를 넣지 않았지만 완전히 미관찰한 독립 평가라고 주장하지 않는다.",
                                  "미제공 추론 토큰은 null이며 전체 토큰에 추가 합산하지 않는다."]}
     return result, latest, reviewed
@@ -450,27 +473,30 @@ def gemini_markdown(result):
     return "\n".join(lines)+"\n"
 
 
-def case_studies(run_root, result, latest, questions):
+def case_studies(run_root, result, latest, questions, *, project_root=None, data_root=None):
     output=run_root/"04_case_studies";output.mkdir(exist_ok=True)
-    metadata={r["id"]:r for r in read_json(ROOT/"data/processed/metadata.json")["records"]}
+    project_root = Path(project_root) if project_root is not None else ROOT
+    data_root = Path(data_root) if data_root is not None else Path(project_root) / "data"
+    metadata={r["id"]:r for r in read_json(data_root/"processed/metadata.json")["records"]}
     regression={r["id"]:r for r in read_csv(run_root/"02_regression/question_comparison.csv")}
     assignments={}
     members=read_csv(run_root/"01_clustering/cluster_members.csv")
     for row in members:
         assignments.setdefault(row["id"],[]).append(row)
-    lines=["# 문항 ID로 모든 결과 찾기", "", "원문을 여러 번 복사하지 않고 고정 ID로 연결했다. 군집은 숫자의 크기에 의미가 없고, 서로 다른 실험의 같은 군집 번호는 같은 그룹이 아니다.", "",
+    lines=["# 문항 ID로 모든 결과 찾기", "", f"**먼저 [전체 {len(metadata)}문항 수식 읽기 화면](../03_gemini/report.html)을 연다.** 이 문서는 Gemini 비교 대상 {len(questions)}문항의 근거 연결이다. 학습 문항은 읽기 화면에서 검색하며 ‘생성 실험 대상 아님’으로 표시된다. 학습 문항에 누락 응답이 있다는 뜻이 아니다.", "",
+           "읽기 화면에서 ID를 검색하고 조건별 정오답·답변 변화 필터로 관심 문항을 고른 뒤, 아래의 원본 문제·해설·A/B/C 요청·회귀·군집 링크로 근거를 확인한다. 원문을 여러 번 복사하지 않고 고정 ID로 연결했다. 군집 번호는 임의 번호이며 서로 다른 실험의 같은 번호가 같은 그룹을 뜻하지 않는다.", "",
            "[군집 성공·실패 관찰](../01_clustering/analysis.md) · [회귀 성공·실패 관찰](../02_regression/analysis.md) · [Gemini 정오답 변화](../03_gemini/changed_questions.csv)", ""]
     index=[]
     for row in questions:
         i=row["id"];meta=metadata[i];reg=regression.get(i,{})
         lines += [f"## {i}", "", " / ".join(meta[k] for k in ("curriculum","unit","subunit","type")), "",
-                  f"[원본 문제](../../../data/processed/problems/{i}.txt) · [원본 해설](../../../data/processed/solutions/{i}.txt) · [출처·분류 포함 텍스트](../../../data/processed/annotated/{i}.txt)","",
+                  f"[읽기 화면](../03_gemini/report.html#{i}) · [원본 문제]({os.path.relpath(data_root / f'processed/problems/{i}.txt', output)}) · [원본 해설]({os.path.relpath(data_root / f'processed/solutions/{i}.txt', output)}) · [출처·분류 포함 텍스트]({os.path.relpath(data_root / f'processed/annotated/{i}.txt', output)})","",
                   f"출처: {meta['source']} · 원본 번호 {meta['original_number']} · 현재 번호 {meta['current_number']}", "",
                   "|조건|답|원본 정오|전체 토큰|실제 입력|", "|---|---|---|---:|---|"]
         for m in METHODS:
             c=CONDITIONS[m];answer=row[c+"_answer"];score=row[c+"_correct_original"]
             lines.append(f"|{NAMES[m]}|{answer if answer is not None else '미실행·미판독'}|{'정답' if score is True else '오답' if score is False else '미채점'}|{number(row[c+'_total_tokens'],0)}|[{c} 요청](../03_gemini/prompt_audit/requests/{i}/{c}.json)|")
-        lines += ["",f"[세 조건 출력 전문](../03_gemini/report.html)에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `{i}` 검색.", ""]
+        lines += ["",f"[수식이 표시되는 세 조건 읽기 화면](../03_gemini/report.html#{i})에서 문항 ID로 검색하거나 [응답 JSONL](../03_gemini/responses.jsonl)에서 `{i}` 검색.", ""]
         if reg:
             lines += [f"회귀: 음수 보정 MSE {number(reg.get('clipped_nonnegative_mse'))}, 코사인 {number(reg.get('clipped_nonnegative_cosine_similarity'))}, 상위20 공통 토큰 {reg.get('common_top20_count')}/20. [벡터·토큰 전체](../02_regression/question_comparison.csv)와 [수치 벡터](../02_regression/vectors.json)에서 ID로 찾는다.", ""]
         if assignments.get(i):
@@ -478,7 +504,7 @@ def case_studies(run_root, result, latest, questions):
             for a in assignments[i]:
                 lines.append(f"|[{a['experiment']}](../01_clustering/experiments/{a['experiment']}/clusters.md)|{a['cluster']}|{a['matches_train_majority']}|")
             lines.append("")
-        index.append({"id":i,"problem_path":f"data/processed/problems/{i}.txt","solution_path":f"data/processed/solutions/{i}.txt", "case_anchor":"questions.md#"+i, "curriculum":meta["curriculum"],"unit":meta["unit"],"subunit":meta["subunit"],"type":meta["type"], "gemini_changed":row["changed_original_correctness"],"regression_clipped_mse":reg.get("clipped_nonnegative_mse"),"regression_precision_at_20":reg.get("precision_at_20")})
+        index.append({"id":i,"problem_path":os.path.relpath(data_root / f"processed/problems/{i}.txt",project_root),"solution_path":os.path.relpath(data_root / f"processed/solutions/{i}.txt",project_root), "reader_path":"../03_gemini/report.html#"+i,"case_anchor":"questions.md#"+i, "curriculum":meta["curriculum"],"unit":meta["unit"],"subunit":meta["subunit"],"type":meta["type"], "gemini_changed":row["changed_original_correctness"],"regression_clipped_mse":reg.get("clipped_nonnegative_mse"),"regression_precision_at_20":reg.get("precision_at_20")})
     (output/"questions.md").write_text("\n".join(lines)+"\n",encoding="utf-8")
     write_csv(output/"question_index.csv",index)
     changed=[r for r in questions if r["changed_original_correctness"]]
@@ -610,37 +636,142 @@ def final_report(run_root, result):
     (run_root/"final_report.md").write_text("\n".join(lines),encoding="utf-8")
 
 
-def build_report(run_root=RUN_ROOT):
+def _build_final_report(run_root=RUN_ROOT, *, project_root=ROOT, data_root=None, rebuild_figures=False):
     run_root=Path(run_root);folder=run_root/"03_gemini";folder.mkdir(parents=True,exist_ok=True)
-    result,latest,reviewed=analyze(run_root)
-    postflight=audit_generation(folder)
+    result,latest,reviewed=analyze(run_root, project_root=project_root, data_root=data_root)
+    postflight=audit_generation(folder, project=project_root, data_root=data_root, write_output=False)
+    if not postflight["verification_passed"]:
+        raise ValueError("저장된 요청·응답·선택 데이터가 불일치합니다: " + "; ".join(postflight["violations"][:5]))
     result["api_responses_complete"]=result["complete"]
     result["postflight_verified"]=postflight["verification_passed"] and postflight["all_expected_successful"]
     result["complete"]=result["complete"] and result["postflight_verified"]
     questions=export_tables(folder,result,latest,reviewed)
-    prompt_token_comparison(run_root,result["test_ids"])
-    render_figures(folder,result,questions)
+    prompt_token_comparison(run_root,result["test_ids"], preserve_existing=True)
+    if rebuild_figures or not (folder / "figures/accuracy.png").exists():
+        render_figures(folder,result,questions)
     (folder/"analysis.md").write_text(gemini_markdown(result),encoding="utf-8")
-    case_studies(run_root,result,latest,questions)
+    case_studies(run_root,result,latest,questions,project_root=project_root,data_root=data_root)
     final_report(run_root,result)
     state="실험 응답 확보 완료" if result["complete"] else "부분 결과 · 미완료 항목 존재"
-    index=["# MathHint 최종 실험 결과", "",f"**{state}: 성공 {result['successful_conditions']}/{result['expected_conditions']}개 응답.**", "",
-           "1. **군집별 실제 문항:** [8개 실험의 문항 배정 CSV](01_clustering/cluster_members.csv), [실험별 군집 원문 링크](01_clustering/experiments/), [군집 분석](01_clustering/analysis.md).",
-           "2. **Gemini80문항 세 조건:** [정답·A/B/C답·정오·토큰 한 행 비교](03_gemini/question_comparison.csv), [변화 문항](03_gemini/changed_questions.csv), [실제 입력](03_gemini/prompt_audit/), [B/C 토큰 나란히 비교](03_gemini/prompt_audit/token_comparison.md), [원본 응답](03_gemini/responses.jsonl).",
-           "3. **회귀 자체의 성능:** [MSE·MAE·코사인](02_regression/summary.csv), [문항별 상위토큰·오차](02_regression/question_comparison.csv), [실제·원시·보정 벡터](02_regression/vectors.json), [회귀 분석](02_regression/analysis.md).",
-           "4. **통합 문항 찾기:** [80문항 ID별 연결](04_case_studies/questions.md), [사례 요약](04_case_studies/selected_cases.md).",
-           "5. **연구 전체 해석:** [최종 한국어 보고서](final_report.md).", "",
-           "## 표와 그림", "", "[군집 지표표](01_clustering/summary.csv) · [군집 그림](01_clustering/figures/) · [회귀 그림](02_regression/figures/) · [Gemini 집계](03_gemini/summary.csv) · [토큰 합계·평균](03_gemini/token_summary.csv) · [Gemini 그림](03_gemini/figures/)", "",
-           "[전체 산출물 검증](validation.json) · [핵심 테스트 실행 로그](test_results.txt) · [독립 ML 수식 감사](independent_ml_audit.json)", "",
-           "API 오류·미완료·채점불가는 오답으로 합치지 않는다. 원본 정답표와 AI 보조 보정 점수는 별도로 표시한다. C는 실제 해설 정보를 제공한 오라클 진단이며 서비스 성능이나 보장된 상한이 아니다. 코사인 유사도는 정답률이 아니다.", "",
-           "## 재집계", "", "저장된 결과로만 표·그림·보고서를 다시 만들 때 `python -m mathhint_analysis.AnalyzeThreeWay`를 실행한다. 이 명령은 Gemini를 호출하거나 모델을 다시 학습하지 않는다. 전체 설치·실험 명령은 [프로젝트 README](../../README.md)를 따른다.", ""]
+    binding_reference = "[데이터·모델 연결](experiment.json)" if (run_root / "experiment.json").exists() else "[회귀 모델 출처](02_regression/provenance.json)"
+    index=["# MathHint 최종 결과 · [수식 읽기 화면](03_gemini/report.html)", "",
+           "**전체 265문항을 ID로 검색한다.** 테스트 80문항은 A 문제만 / B 예측 해설 토큰 / C 실제 해설 토큰을 비교하고, 학습 185문항은 ‘생성 실험 대상 아님’으로 표시한다. 문제·선택지·풀이의 수식과 Markdown을 읽고, 정오답 변화 필터로 관심 문항을 찾을 수 있다.", "",
+           f"**{state}: 성공 {result['successful_conditions']}/{result['expected_conditions']}개 응답.**", "",
+           reader_opening_guide(), "", "## 처음 → 다음 → 근거", "",
+           "|순서|바로 열 자료|", "|---|---|",
+           "|처음: 전체 흐름|[최종 한국어 보고서](final_report.md) · [군집 ARI·NMI](01_clustering/summary.csv) · [회귀 MSE·MAE·코사인](02_regression/summary.csv) · [Gemini 정답률](03_gemini/summary.csv) · [토큰 합계·평균](03_gemini/token_summary.csv)|",
+           "|다음: 관심 문항 선택|[수식 읽기 화면](03_gemini/report.html) · [80문항 A/B/C 한 행 비교](03_gemini/question_comparison.csv) · [정오답·답변 변화](03_gemini/changed_questions.csv) · [실제·예측 토큰과 오차](02_regression/question_comparison.csv) · [대표 사례](04_case_studies/selected_cases.md)|",
+           "|문제 하나의 전체 결과|[80문항 ID별 근거 연결](04_case_studies/questions.md) · [전체 문항 군집 배정 CSV](01_clustering/cluster_members.csv)|",
+           f"|자세한 근거|[실제 A/B/C 요청 전문](03_gemini/prompt_audit/requests/) · [B/C 전송 토큰 비교](03_gemini/prompt_audit/token_comparison.md) · [응답 원문](03_gemini/responses.jsonl) · [실제·원시·보정 벡터](02_regression/vectors.json) · {binding_reference}|", "",
+           "## 8개 군집 실험의 실제 문항", "", "군집 목록의 문항 ID를 누르면 수식 읽기 화면으로 연결된다. 학습/테스트 구분과 실제 과목·단원·세부단원·유형을 함께 확인한다.", "",
+           *cluster_reading_table(run_root), "", "[군집 해석](01_clustering/analysis.md) · [회귀 해석](02_regression/analysis.md) · [Gemini 해석](03_gemini/analysis.md)", "",
+           "## 표·그림과 검증 기록", "", "[군집 그림](01_clustering/figures/) · [회귀 그림](02_regression/figures/) · [Gemini 그림](03_gemini/figures/)", "",
+           "[전체 산출물 검증](validation.json) · [읽기 화면 브라우저 검증](reader_validation.json) · [핵심 테스트 로그](test_results.txt) · [독립 ML 수식 감사](independent_ml_audit.json)", "",
+           "API 오류·미완료·채점불가는 오답이나 0토큰으로 합치지 않는다. 원본 정답표와 AI 보조 보정 점수는 별도다. C는 실제 해설 정보를 제공한 오라클 진단이며 서비스 성능이나 보장된 상한이 아니다. 코사인 유사도는 정답률이 아니다.", "",
+           "## 화면과 안내 다시 만들기", "", "`python -m mathhint_learning.RunExperiment view`는 저장된 결과만 읽어 화면·표·안내를 다시 만든다. 학습·모델 재추론·Gemini API 호출은 하지 않으며 보존된 원본 감사 기록을 다시 쓰지 않는다. 설치와 별도 평가·학습·API 준비 명령은 [프로젝트 README](../../README.md)를 따른다.", ""]
     (run_root/"README.md").write_text("\n".join(index),encoding="utf-8")
     print(json.dumps({"output":str(run_root),"successful_conditions":result["successful_conditions"],"expected_conditions":result["expected_conditions"],"complete":result["complete"]},ensure_ascii=False))
     return result
 
 
+
+def _selected_run_report(run_root, *, project_root, data_root):
+    """새 실험에는 그 폴더의 저장 결과만 쓰고 과거 연구의 수치를 대입하지 않는다."""
+    metadata = read_json(data_root / "processed/metadata.json")
+    train_ids = read_json(data_root / "processed/splits/train.json")
+    test_ids = read_json(data_root / "processed/splits/test.json")
+    binding_path = run_root / "experiment.json"
+    binding = read_json(binding_path) if binding_path.exists() else {}
+    name = binding.get("selected", {}).get("name", run_root.name)
+    lines = [f"# {name} 저장 결과", "", "이 안내는 선택한 실험 폴더의 파일만 읽어 생성했다. 재학습·모델 재추론·실제 API 호출은 하지 않았다.", "",
+             "**먼저 열기:** [수식·Markdown 문항 읽기 화면](03_gemini/report.html). 최종 결과 폴더와 viewer_assets를 함께 두고 브라우저에서 연다. GitHub 파일 페이지는 HTML 실행 화면이 아니다.", "",
+             f"데이터 식별자: `{metadata['generation_id']}` · 학습 {len(train_ids)}개 / 테스트 {len(test_ids)}개.", ""]
+    if binding_path.exists():
+        lines += ["[선택한 데이터·체크포인트·예측 연결](experiment.json)", "", "|자료|실제 선택 경로|", "|---|---|"]
+        for key, value in binding.get("artifacts", {}).items():
+            if not key.endswith("_sha256"):
+                lines.append(f"|{key}|`{os.path.relpath(value, run_root)}`|")
+        lines.append("")
+    regression = read_csv(run_root / "02_regression/summary.csv")
+    lines += ["## 회귀 예측", ""]
+    if regression:
+        lines += ["|방법|평가 문항|MSE ↓|MAE ↓|코사인 ↑|", "|---|---:|---:|---:|---:|"]
+        for row in regression:
+            lines.append(f"|{row['method']}|{row['test_count']}|{number(row['mse'],6)}|{number(row['mae'],6)}|{number(row['cosine_similarity'],6)}|")
+        lines += ["", "[문항별 실제·예측 토큰과 오차](02_regression/question_comparison.csv) · [실수 벡터](02_regression/vectors.json) · [해석과 그림](02_regression/analysis.md)", "",
+                  "원시 횟수는 정수, 회귀 예측은 실수다. 음수 보정 전후를 구분하며 코사인을 정답률로 해석하지 않는다.", ""]
+    else:
+        lines += ["이 실험 폴더에는 회귀 평가 결과가 아직 없다. 기존 모델이나 예측을 대신 가져오지 않았다.", ""]
+    if (run_root / "01_clustering/summary.csv").exists():
+        lines += ["## 군집화", "", "[현재 실험의 군집 비교표](01_clustering/summary.csv) · [실제 문항 목록](01_clustering/experiments/)", ""]
+    folder = run_root / "03_gemini"
+    folder.mkdir(exist_ok=True)
+    result = {"complete": False, "generation_prepared": False, "successful_conditions": 0,
+              "expected_conditions": len(test_ids) * len(METHODS), "regression_available": bool(regression)}
+    lines += ["## Gemini 세 조건", ""]
+    if (folder / "config.json").exists():
+        result, latest, reviewed = analyze(run_root, project_root=project_root, data_root=data_root, use_legacy=False)
+        audit = audit_generation(folder, project=project_root, data_root=data_root, write_output=False)
+        if not audit["verification_passed"]:
+            raise ValueError("선택한 실험의 요청·응답 감사 불일치: " + "; ".join(audit["violations"][:5]))
+        result.update(generation_prepared=True, postflight_verified=audit["verification_passed"],
+                      complete=result["complete"] and audit["all_expected_successful"])
+        export_tables(folder, result, latest, reviewed)
+        prompt_token_comparison(run_root, result["test_ids"], preserve_existing=True)
+        lines += [f"성공 응답 {result['successful_conditions']}/{result['expected_conditions']}개. 미실행·실패·미채점은 오답이나0토큰으로 합치지 않는다.", "",
+                  "[문항별 세 조건 비교](03_gemini/question_comparison.csv) · [실제 입력](03_gemini/prompt_audit/) · [B/C 전송 토큰 비교](03_gemini/prompt_audit/token_comparison.md)", ""]
+        if (folder / "responses.jsonl").exists():
+            lines += ["[응답 원문](03_gemini/responses.jsonl)", ""]
+        lines += ["|조건|채점 문항|정답|정답률|", "|---|---:|---:|---:|"]
+        for method, score in result["source_key"].items():
+            lines.append(f"|{NAMES[method]}|{score['graded_responses']}|{score['correct'] if score['graded_responses'] else '미채점'}|{percent(score['accuracy_on_graded'])}|")
+        lines += ["", "실제 해설 토큰 조건은 정답 해설 정보를 제공하는 오라클 진단이며 서비스 예측 성능이나 이론적 상한이 아니다.", ""]
+    else:
+        lines += ["생성 실험은 준비·실행하지 않았다. 읽기 화면의 테스트 문항은 ‘미실행’, 학습 문항은 ‘생성 실험 대상 아님’으로 구분한다. 다른 실험의 응답은 가져오지 않았다.", ""]
+    lines += ["## 다음 작업", "", "읽기와 보고서 재생성은 view, 지정 체크포인트 재평가는 evaluate, 별도 경로의 새 학습은 train, API 없는 입력 검증은 prepare로 구분한다. generate를 명시한 경우에만 실제 Gemini를 호출한다.", ""]
+    (run_root / "final_report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    index = [f"# {name} 결과 · [수식 읽기 화면](03_gemini/report.html)", "", f"전체 {len(metadata['records'])}문항을 ID로 검색한다. 테스트 {len(test_ids)}문항은 A/B/C 비교 대상이며, 학습 {len(train_ids)}문항은 ‘생성 실험 대상 아님’으로 구분한다. 응답이 없으면 ‘미실행’으로 표시한다.", "", reader_opening_guide(), "",
+             "## 처음 → 다음 → 근거", "",
+             "- [현재 실험의 보고서와 지표](final_report.md)",
+             "- [선택한 데이터·모델·예측 연결](experiment.json)" if binding_path.exists() else "- 데이터·모델 연결 정보는 현재 저장 결과의 출처 기록을 따른다."]
+    if regression:
+        index.append("- [회귀 문항별 실제·예측 토큰과 오차](02_regression/question_comparison.csv) · [실수 벡터](02_regression/vectors.json)")
+    if (run_root / "01_clustering/summary.csv").exists():
+        index.append("- [군집 비교표](01_clustering/summary.csv) · [군집별 실제 문항](01_clustering/experiments/)")
+        index += ["", *cluster_reading_table(run_root), ""]
+    if (folder / "config.json").exists():
+        index.append("- [Gemini 문항별 비교](03_gemini/question_comparison.csv) · [실제 입력 원문](03_gemini/prompt_audit/)")
+    index += ["", "`python -m mathhint_learning.RunExperiment view`로 저장된 결과의 화면과 안내를 다시 만든다. 재학습·모델 재추론·API 호출은 하지 않으며 기존 원본 감사 기록을 다시 쓰지 않는다.", ""]
+    (run_root / "README.md").write_text("\n".join(index), encoding="utf-8")
+    return result
+
+
+def build_report(run_root=RUN_ROOT, *, project_root=ROOT, data_root=None, rebuild_figures=False):
+    """저장 결과만 읽는다. 선택한 모델의 학습·재추론·API 실행은 하지 않는다."""
+    run_root, project_root = Path(run_root), Path(project_root)
+    data_root = Path(data_root) if data_root is not None else project_root / "data"
+    if not run_root.is_dir():
+        raise FileNotFoundError(f"저장 결과 폴더가 없습니다: {run_root}")
+    from mathhint_learning.RunExperiment import verify_saved_data
+    from mathhint_learning.Experiment import LEGACY_DATA_FINGERPRINT
+    from mathhint_learning.TorchData import read_dataset
+    data = read_dataset(project_root, data_root)
+    verify_saved_data(run_root, data, project_root=project_root)
+    canonical = (run_root.resolve() == (project_root / "results/final_experiment").resolve()
+                 and data["identity"]["fingerprint"] == LEGACY_DATA_FINGERPRINT)
+    if canonical and (run_root / "03_gemini/config.json").is_file():
+        result = _build_final_report(run_root, project_root=project_root, data_root=data_root, rebuild_figures=rebuild_figures)
+    else:
+        result = _selected_run_report(run_root, project_root=project_root, data_root=data_root)
+    from .ResultViewer import build_viewer
+    build_viewer(project_root, run_root, data_root=data_root)
+    from mathhint_learning.ClusterReport import refresh_cluster_reading_links
+    refresh_cluster_reading_links(project_root, run_root / "01_clustering", data_root=data_root)
+    return result
+
 def main():
-    build_report()
+    from mathhint_learning.RunExperiment import run
+    return run("view")
 
 
 if __name__ == "__main__":

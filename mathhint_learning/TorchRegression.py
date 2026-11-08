@@ -1,9 +1,10 @@
 """문제 빈도 벡터 → 해설 빈도 벡터를 예측하는 선형회귀.
 
-아래 설정을 바꾸고 이 파일을 실행한다. 학습·테스트를 다시 나누지 않는다.
+Experiment.py의 EXPERIMENT에서 별도 실험 경로를 선택하고 RunExperiment의
+train 작업으로 실행한다. 학습·테스트를 다시 나누지 않는다.
 """
 
-from pathlib import Path
+import os
 
 import torch
 from torch import nn
@@ -14,15 +15,7 @@ else:
     from TorchData import load_fixed_dataset, write_json
 
 
-# 1. 설정
-ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "outputs/regression"
-EPOCHS = 500
-LEARNING_RATE = 0.01
-SEED = 42
-
-
-def train_regression(X, Y, epochs=EPOCHS, learning_rate=LEARNING_RATE, seed=SEED):
+def train_regression(X, Y, epochs=500, learning_rate=.01, seed=42):
     """학습 자료 X와 Y만 받는다. 테스트 자료는 이 함수에 넣지 않는다."""
     torch.manual_seed(seed)
     model = nn.Linear(X.shape[1], Y.shape[1])
@@ -54,57 +47,52 @@ def evaluate(prediction, answer):
     }
 
 
-def main():
-    # 2. 원래 나눈 학습·테스트 데이터 읽기
+def train_for_experiment(experiment, *, make_figures=True):
+    """선택한 별도 실험 경로에서만 학습하고 해당 모델로 예측·평가한다."""
+    from .Experiment import LEGACY_NAME
+    from .TorchData import file_hash
+    from .VectorComparison import evaluate_for_experiment
+
+    output = experiment.regression_dir
+    protected = experiment.project_root / "results/final_experiment"
+    archive = experiment.project_root / "results" / LEGACY_NAME
+    if experiment.result_root == protected or experiment.result_root.is_relative_to(archive):
+        raise ValueError(f"{experiment.result_root}: 보존된 실험에 학습 결과를 덮어쓰지 않습니다. 새 result_root를 지정하세요.")
+    if output.exists() and any(output.iterdir()):
+        raise FileExistsError(f"{output}: 기존 회귀 결과가 있습니다. 새 실험 경로를 지정하세요.")
+    if (not experiment.checkpoint.is_relative_to(output)
+            or not experiment.predictions.is_relative_to(output)):
+        raise ValueError(f"{output}: 새 학습의 checkpoint와 predictions는 선택한 회귀 출력 폴더 안에 있어야 합니다.")
+    if type(experiment.epochs) is not int or experiment.epochs < 1 or experiment.learning_rate <= 0:
+        raise ValueError("epochs는 양의 정수, learning_rate는 양수여야 합니다.")
     torch.set_num_threads(2)
-    data = load_fixed_dataset(ROOT)
-    X_train = data["arrays"]["problems"]["train"]
-    X_test = data["arrays"]["problems"]["test"]
-    Y_train = data["arrays"]["solutions"]["train"]
-    Y_test = data["arrays"]["solutions"]["test"]
-
-    # 3. 학습 — 테스트 정답은 사용하지 않는다.
-    model, history = train_regression(X_train, Y_train, EPOCHS, LEARNING_RATE, SEED)
-
-    # 4. 평가 — 평균 벡터만 예측하는 기준선과도 비교한다.
-    with torch.no_grad():
-        train_prediction, test_prediction = model(X_train), model(X_test)
-    mean_prediction = Y_train.mean(dim=0).expand_as(Y_test)
-    metrics = {
-        "train": {"raw": evaluate(train_prediction, Y_train)},
-        "test": {
-            "raw": evaluate(test_prediction, Y_test),
-            "clipped_nonnegative": evaluate(test_prediction.clamp_min(0), Y_test),
-            "training_mean_baseline": evaluate(mean_prediction, Y_test),
-        },
-    }
-
-    # 5. 모델·지표·문항별 예측 저장
-    OUTPUT.mkdir(parents=True, exist_ok=True)
-    config = {"epochs": EPOCHS, "learning_rate": LEARNING_RATE, "seed": SEED,
+    data = load_fixed_dataset(experiment.project_root, experiment.data_root)
+    model, history = train_regression(data["arrays"]["problems"]["train"], data["arrays"]["solutions"]["train"],
+                                      experiment.epochs, experiment.learning_rate, experiment.seed)
+    output.mkdir(parents=True, exist_ok=True)
+    experiment.checkpoint.parent.mkdir(parents=True, exist_ok=True)
+    config = {"epochs": experiment.epochs, "learning_rate": experiment.learning_rate,
+              "seed": experiment.seed, "architecture": f"nn.Linear({len(data['vocabularies']['problems'])},{len(data['vocabularies']['solutions'])})",
               "evaluation_rounding": "none"}
-    torch.save({
-        "model_state_dict": model.state_dict(), "config": config,
-        "input_vocabulary": data["vocabularies"]["problems"],
-        "output_vocabulary": data["vocabularies"]["solutions"],
-        "train_ids": data["ids"]["train"], "generation_id": data["generation_id"],
-    }, OUTPUT / "regression_model.pt")
-    write_json(OUTPUT / "regression_metrics.json", {
-        "config": config, "train_ids": data["ids"]["train"], "test_ids": data["ids"]["test"], "metrics": metrics,
-    })
-    write_json(OUTPUT / "regression_learning_curve.json", history)
-    write_json(OUTPUT / "regression_predictions.json", {
-        "generation_id": data["generation_id"], "train_ids": data["ids"]["train"], "config": config,
-        "vocabulary": data["vocabularies"]["solutions"],
-        "prediction_policy": "clip_negative_to_zero_without_rounding",
-        "documents": [{
-            "id": item_id, "raw_predicted_vector": test_prediction[i].tolist(),
-            "predicted_vector": test_prediction[i].clamp_min(0).tolist(), "actual_vector": Y_test[i].to(torch.int64).tolist(),
-        } for i, item_id in enumerate(data["ids"]["test"])],
-    })
-    print(f"학습 {len(X_train)}개 / 테스트 {len(X_test)}개")
-    print(f"테스트 MSE: {metrics['test']['raw']['mse']:.4f}")
-    print(f"저장 위치: {OUTPUT}")
+    history_path = output / "regression_learning_curve.json"
+    write_json(history_path, history)
+    torch.save({"model_type": "multioutput_linear_regression", "model_state_dict": model.state_dict(),
+                "config": config, "input_dim": len(data["vocabularies"]["problems"]),
+                "output_dim": len(data["vocabularies"]["solutions"]),
+                "input_vocabulary": data["vocabularies"]["problems"], "output_vocabulary": data["vocabularies"]["solutions"],
+                "train_ids": data["ids"]["train"], "test_ids": data["ids"]["test"],
+                "generation_id": data["generation_id"], "data_identity": data["identity"],
+                "learning_curve": {"path": os.path.relpath(history_path, experiment.checkpoint.parent),
+                                   "sha256": file_hash(history_path)}}, experiment.checkpoint)
+    result = evaluate_for_experiment(experiment, make_figures=make_figures)
+    result["training_performed"] = True
+    return result
+
+
+def main(experiment=None):
+    from .Experiment import EXPERIMENT
+    result = train_for_experiment(experiment or EXPERIMENT)
+    print(f"학습 결과: {result['regression_dir']}")
 
 
 if __name__ == "__main__":

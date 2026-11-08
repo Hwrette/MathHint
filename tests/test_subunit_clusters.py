@@ -24,7 +24,7 @@ def make_dataset(root):
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps(value, ensure_ascii=False), encoding="utf-8")
     ids = {"train": ["a", "b", "c", "d"], "test": ["e", "f", "g"]}
-    values = {"a": 0, "b": 1, "c": 10, "d": 11, "e": .2, "f": 10.2, "g": 50}
+    values = {"a": 0, "b": 10, "c": 100, "d": 110, "e": 2, "f": 102, "g": 500}
     records = []
     for identifier in values:
         unit = "U1" if identifier in "abe" else "U2" if identifier in "cdf" else "U3"

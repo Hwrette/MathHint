@@ -2,19 +2,29 @@
 
 STATUS: IN_PROGRESS_READER_WORKFLOW
 EXECUTION_ALLOWED: true
-LAST_CONFIRMED_PUBLISHED_COMMIT: 289d662a8c017e61792ab6fe684292155d3013f9
+LAST_CONFIRMED_PUBLISHED_COMMIT: 2992591
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
 AUTOMATION_STATUS: ENABLED_FOR_READER_WORKFLOW_VERIFIED_BY_PEEK
 FIRST_RUN_FROM_SAVED_RULE: 2026-11-09T05:58:50+09:00
 RECURRENCE: EVERY_5_HOURS
 NEXT_RUN_TIME_SERVER_FIELD: NOT_RETURNED
 ENVIRONMENT: MathHint / inherited / current_environment_id_confirmed
-REMOTE_CHECKPOINT_STATUS: REAUDIT_CODE_RESULTS_PUBLISHED
+REMOTE_CHECKPOINT_STATUS: READER_IMPLEMENTATION_PUBLISHED_WORKFLOW_VALIDATION_IN_PROGRESS
 GITHUB_PREAUTHORIZATION_SETTING: RESTORED_TO_ORIGINAL_INHERIT_VERIFIED
 TIMEZONE: Asia/Seoul
 USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 
-## 현재 최종 상태 — 2026-11-08T17:55:21.415494+00:00
+## 현재 추가 보완 상태
+
+| 우선순위 | 상태 | 실제 확인 내용 |
+|---|---|---|
+| 1 수식·Markdown 읽기 | 완료 | 265문항·80ABC·원문접기·상태구분·브라우저24/24·770문서수식12823개 |
+| 2 같은 실험의 데이터→모델→예측→보고서 | 완료 | 단일 설정/5모드·가짜자료 전구간·어휘순서/ID/SHA차단·중첩모델학습곡선SHA |
+| 3 안내·파일 정리 | 검증 완료·게시 중 | 8군집2120링크·README5모드·원본근거2150SHA불변·최종174tests/284검사 |
+
+이전 최종 연구는 아래 이력대로 완료된 상태이며, 현재 작업은 이후 승인된 열람·연결 보완이다. 실제 연구 재학습과 신규Gemini호출은 금지하고, 임시 가짜자료 검사만 허용한다.
+
+## 이전 통합 명세 완료 이력 — 2026-11-08T17:55:21.415494+00:00
 
 | 단계 | 상태 | 최종 근거 |
 |---|---|---|
@@ -244,3 +254,21 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 독립Chromium검사24/24통과, 실제770개문서의수식12823개렌더링실패0, 외부요청0. 데스크톱/390px·분수/극한/첨자/경우나누기·악성HTML무실행·원문동일확인. file://는관리정책차단으로임시localhost에서검증했으며정책우회하지않음. 근거:results/final_experiment/reader_validation.json.
 - 최종JS소스변경뒤브라우저검사를다시실행했고28개배포자산과검증proof의SHA모두일치. 원본/모델/요청/응답/기존감사/핵심수치2150파일SHA불변. 연구재학습/신규API0.
 - 후속모델연결검증·새모드README·전체통합검사는진행중이며아직완료아님.
+
+## 연결·열람 통합 검증 체크포인트 — 2026-11-08T19:09:52.308768+00:00
+
+- 읽기 구현2992591을원격main에push exit0확인했다. 새중앙Experiment/얇은RunExperiment는view/evaluate/train/prepare/generate를구분한다. view/prepare에서실SDK·학습·Linear.forward를금지한실제최종경로실행PASS,240기존성공재사용·신규필요0.
+- 최초view의부분실험(config만존재)에서도모델/예측SHA검사, 경로이름만final인새데이터를기존185/80보고서로보내지않도록전체지문검사를추가했다. 가짜학습→재평가→입력준비→보고서에서동일선택경로를확인했다.
+- 전체tests173개PASS(8.374초),결과무결성284/284PASS. 원본/모델/입력/응답/기존감사/핵심수치2150SHA불변. 기존감사source_transition도읽기/prepare후그대로다.
+- 독립링크감사:31Markdown/6213파일링크·2120군집읽기링크·696HTML동적링크·5로컬자산·20글꼴모두정상. 임시소스복사wheel빌드성공,28정적자산바이트동일포함. 최종안내재생성후링크재검사예정.
+- 남은작업:중첩체크포인트학습곡선연결검사→최종재집계/검사→핵심테스트로그/진행기록갱신→커밋푸시→복구예약중지확인. 아직보완전체완료아님.
+
+## 추가 보완 전체 실행 검증 완료 — 2026-11-08T19:12:16.620636+00:00
+
+- 최종전체unittest174개PASS(8.106초,skip0),VerifyResults284/284PASS. 저장된test_results.txt갱신. 새fake전구간/동일차원어휘순서/부분prepare후viewSHA/중첩모델곡선SHA검사포함.
+- canonical evaluate는기존체크포인트로만80개재추론했고학습/SDK금지,이전모델·예측·지표모두그대로다. view/prepare는추론Linear.forward까지금지한상태로PASS. 성공240/240, 신규필요0, 원본정답78/77/75·성공토큰51820/68615/64795불변.
+- 최종생성안내링크재검사31Markdown/6214파일링크·2120군집링크·696동적원문링크누락0. 로컬글꼴20참조정상·소스/배포28파일일치·임시wheel빌드/28자산포함PASS.
+- 원본/모델/240요청/241응답/81SDK/기존감사/핵심수치2150SHA불변. 예전실험931파일전부보존. 이번추가삭제0; 폐기pre표시구현만현행뷰어로통합하고학습기능유지.
+- 브라우저최종JS재검사24/24·770문서/12823수식실패0·외부요청0. file://는관리정책차단으로직접파일열기미검증,임시localhost에서확인했다. clean머신설치미검증이며wheel자산포함까지검증. 수식가독성검사가사람수학판정은아님.
+- 결과요약/원문읽기와모델추론/학습/API실행구분을README에명시했다. 사용자추가요청전체원문은FINAL_TASK_SPEC에남아있으며,원첨부59790바이트SHA불변이다.
+- 다음최종단계: 통합변경커밋/원격푸시확인→복구자동화중지peek확인→진행기록완료체크포인트게시. 신규연구학습/API0.

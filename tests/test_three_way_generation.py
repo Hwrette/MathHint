@@ -26,6 +26,9 @@ class ThreeWayTests(unittest.TestCase):
             (self.root / f"data/processed/solutions/{identifier}.txt").write_text("REFERENCE_PROSE_SECRET 정답42", encoding="utf-8")
             metadata.append({"id": identifier, "answer_text": "$42$", "subject": "SUBJECT_SECRET",
                              "unit": "UNIT_SECRET", "type": "TYPE_SECRET", "source": "SOURCE_SECRET"})
+        metadata.append({"id": "train1", "answer_text": "$42$"})
+        for region in ("problems", "solutions"):
+            (self.root / f"data/processed/{region}/train1.txt").write_text("학습 자료", encoding="utf-8")
         comparison.write_json(self.root / "data/processed/metadata.json", {"generation_id": "fixture", "records": metadata})
         comparison.write_json(self.root / "data/processed/splits/train.json", ["train1"])
         comparison.write_json(self.root / "data/processed/splits/test.json", self.ids)
@@ -137,12 +140,12 @@ class ThreeWayTests(unittest.TestCase):
         output = self.root / "source_transition"
         comparison.initialize_run(output, self.config, self.plan)
         changed = {**self.config, "runner_sha256": "new_source_fingerprint"}
-        resolved = three.resolve_resume_config(output, changed)
+        resolved = three.resolve_resume_config(output, changed, record_transition=True)
         self.assertEqual(resolved, self.config)
         transition = comparison.read_json(output / "source_transition.json")
         self.assertTrue(transition["versions"][0]["all_non_source_config_fields_and_input_hashes_match"])
         self.assertEqual(len(transition["versions"]), 1)
-        three.resolve_resume_config(output, changed)
+        three.resolve_resume_config(output, changed, record_transition=True)
         self.assertEqual(len(comparison.read_json(output / "source_transition.json")["versions"]), 1)
         with self.assertRaises(ValueError):
             three.resolve_resume_config(output, {**changed, "temperature": .5})
@@ -153,7 +156,7 @@ class ThreeWayTests(unittest.TestCase):
         output = self.root / "relocation"
         comparison.initialize_run(output, self.config, self.plan)
         changed = {**self.config, "predictions_source": "/different/clone/predictions.json"}
-        self.assertEqual(three.resolve_resume_config(output, changed), self.config)
+        self.assertEqual(three.resolve_resume_config(output, changed, record_transition=True), self.config)
         transition = comparison.read_json(output / "source_transition.json")
         self.assertEqual(transition["frozen_source_locations"]["predictions_source"], str(self.predictions))
         self.assertEqual(transition["versions"][-1]["source_locations"]["predictions_source"], changed["predictions_source"])
@@ -161,6 +164,18 @@ class ThreeWayTests(unittest.TestCase):
             three.resolve_resume_config(output, {**changed, "predictions_sha256": "different_prediction_bytes"})
         with self.assertRaises(ValueError):
             three.resolve_resume_config(output, {**changed, "grader_sha256": "different_grader"})
+
+    def test_display_only_resume_does_not_rewrite_audit_or_transition_records(self):
+        output = self.root / "immutable_audit"
+        three.prepare(output, self.config, self.plan, project=self.root)
+        paths = [p for p in (output / "prompt_audit").rglob("*") if p.is_file()]
+        paths += [output / "config.json", output / "preflight.json"]
+        hashes = {p: comparison.file_hash(p) for p in paths}
+        changed = {**self.config, "runner_sha256": "display_only_source_change"}
+        three.prepare(output, changed, self.plan, project=self.root)
+        three.dry_run(output, self.root, changed, self.plan, write_output=False)
+        self.assertTrue(all(comparison.file_hash(p) == sha for p, sha in hashes.items()))
+        self.assertFalse((output / "source_transition.json").exists())
 
     def test_real_dataset_in_another_root_resumes_and_preserves_historical_requests(self):
         original = three.ROOT / "results/final_experiment/03_gemini"
@@ -189,7 +204,7 @@ class ThreeWayTests(unittest.TestCase):
 
     def test_renderer_counts_reused_exact_requests_without_duplicate_summary_files(self):
         output = self.root / "viewer"; output.mkdir()
-        row = comparison.generate_one(self.plan[0], self.config, "fixture", "fixture", lambda _: self.response())
+        row = comparison.generate_one(self.plan[0], self.config, comparison.digest(self.config), "fixture", lambda _: self.response())
         row["response_origin"] = "reused_exact_request"
         summary = three.render_reports(output, [row], self.config)
         self.assertEqual(summary["methods"][row["method"]]["reused_controls"], 1)
@@ -204,9 +219,9 @@ class ThreeWayTests(unittest.TestCase):
             return self.response()
         limiter = SimpleNamespace(daily_exhausted=False, request=lambda function, text: function(text))
         with patch.object(three, "GlobalRateLimiter", return_value=limiter):
-            three.run_experiment(output, self.config, self.plan, api_key="fixture", limit=1, workers=1, request_function=request)
+            three.run_experiment(output, self.config, self.plan, api_key="fixture", limit=1, workers=1, request_function=request, project=self.root)
             self.assertEqual(len(calls), 3)
-            summary = three.run_experiment(output, self.config, self.plan, api_key="fixture", workers=1, request_function=request)
+            summary = three.run_experiment(output, self.config, self.plan, api_key="fixture", workers=1, request_function=request, project=self.root)
         self.assertEqual(len(calls), 6)
         rows = comparison.load_completed(output, comparison.digest(self.config))
         self.assertEqual(len(rows), 6)

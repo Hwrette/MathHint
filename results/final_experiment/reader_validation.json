@@ -164,5 +164,52 @@
   "protected_artifacts_unchanged": 2150,
   "new_gemini_calls": 0,
   "research_training_runs": 0,
-  "note": "Temporary screenshots were visually inspected; retained proof contains actual checks and source hashes. Browser policy blocked file URLs; temporary loopback HTTP used without external requests."
+  "note": "Temporary screenshots were visually inspected; retained proof contains actual checks and source hashes. Browser policy blocked file URLs; temporary loopback HTTP used without external requests.",
+  "workflow_verification": {
+    "verified_at": "2026-11-08T19:12:16.620165+00:00",
+    "unit_tests": {
+      "passed": 174,
+      "failed": 0,
+      "skipped": 0,
+      "log": "test_results.txt"
+    },
+    "artifact_checks": {
+      "passed": 284,
+      "failed": 0,
+      "record": "validation.json"
+    },
+    "canonical_modes": {
+      "view": "SDK, training and Linear.forward forbidden; passed",
+      "evaluate": "same saved checkpoint re-inference; training/SDK forbidden; published vectors unchanged",
+      "prepare": "SDK, training and Linear.forward forbidden; 240 request dry-run, new real calls 0"
+    },
+    "toy_pipeline": "Temporary 2-train/1-test fixture trained, evaluated, prepared, rendered; selected checkpoint/predictions/data hashes followed end to end; no live API; never mixed with research results",
+    "mismatch_rejections": [
+      "same-dimensional reordered vocabularies",
+      "ID/row/split differences",
+      "selected checkpoint SHA",
+      "predictions from another checkpoint",
+      "missing files without fallback",
+      "first view after partial prepare with modified model or predictions",
+      "modified nested checkpoint learning curve"
+    ],
+    "protected_original_files_sha256_unchanged": 2150,
+    "markdown_files_checked": 31,
+    "relative_file_links_checked": 6214,
+    "cluster_reader_links_checked": 2120,
+    "dynamic_html_links_checked": 696,
+    "local_assets_verified": 28,
+    "css_font_references_checked": 20,
+    "wheel_package_assets": {
+      "build_exit": 0,
+      "exact_assets": 28
+    },
+    "new_gemini_calls": 0,
+    "research_training_runs": 0,
+    "limits": [
+      "Managed Chromium blocked file://; browser rendering tested on temporary loopback HTTP only",
+      "Wheel built and assets inspected in a temporary copy; no separate clean-machine installation was performed",
+      "Rendering validation does not prove mathematical correctness or constitute human grading"
+    ]
+  }
 }

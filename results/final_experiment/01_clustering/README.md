@@ -2,6 +2,8 @@
 
 먼저 [전체 비교표](summary.csv)와 [해석·사례](analysis.md)를 보고, [문항별 군집 배정](cluster_members.csv)을 실험명·군집 번호로 필터링하세요.
 
+문항 목록의 ID는 수식·Markdown 읽기 화면으로 연결됩니다. 학습 문항은 생성 실험 대상 아님으로 표시하고, 저장된 원문은 별도 링크에서 확인할 수 있습니다.
+
 - [ARI 비교](figures/ari_comparison.png), [NMI 비교](figures/nmi_comparison.png)
 - [분류별 문항 수](label_counts.csv), [군집별 실제 라벨 빈도·비율](cluster_label_distribution.csv)
 - [동일 분류의 군집 분산도](label_dispersion.csv)

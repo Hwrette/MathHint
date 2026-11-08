@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "selected": {
+    "name": "final_experiment",
+    "project_root": "/workspace/MathHint",
+    "data_root": "/workspace/MathHint/data",
+    "result_root": "/workspace/MathHint/results/final_experiment",
+    "checkpoint": "/workspace/MathHint/results/model_comparison_2026-11-07/models/regression_model.pt",
+    "predictions": "/workspace/MathHint/results/model_comparison_2026-11-07/01_회귀모델/regression_predictions.json",
+    "epochs": 500,
+    "learning_rate": 0.01,
+    "seed": 42,
+    "dataset_files": {
+      "metadata": "/workspace/MathHint/data/processed/metadata.json",
+      "train_ids": "/workspace/MathHint/data/processed/splits/train.json",
+      "test_ids": "/workspace/MathHint/data/processed/splits/test.json",
+      "problems_vocabulary": "/workspace/MathHint/data/vectors/problems/vocabulary.json",
+      "problems_train": "/workspace/MathHint/data/vectors/problems/train_vectors.json",
+      "problems_test": "/workspace/MathHint/data/vectors/problems/test_vectors.json",
+      "solutions_vocabulary": "/workspace/MathHint/data/vectors/solutions/vocabulary.json",
+      "solutions_train": "/workspace/MathHint/data/vectors/solutions/train_vectors.json",
+      "solutions_test": "/workspace/MathHint/data/vectors/solutions/test_vectors.json"
+    }
+  },
+  "data_identity": {
+    "schema_version": 1,
+    "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+    "files_sha256": {
+      "metadata": "cf68d42c52f247398b8a6b4e6d68fa669bed655f77120ebea3f4441ae6054000",
+      "train_ids": "4ae0174a69a8b4d6ae698b445a30733e689fe1136be44bb23d656579782f49ff",
+      "test_ids": "91bb385ac437d80d2b4c6a8a6940cdeef64c47907feab7f1998df09061b79c54",
+      "problems_vocabulary": "fd141aa650cc091b4d2f3ade55b7f94c85dce6f4cc9b27cb05b5959a179a798a",
+      "problems_train": "efadb158142d2fba520ca6729f1df6aeba740a29d826baf632740b3cf80ccce2",
+      "problems_test": "5c9f55772cabfa221c0c933261d0ca317cd4730f2bc18ba80dfde8d4180b5951",
+      "solutions_vocabulary": "44d022a21aeb1e0878e8ac1cb6dbc49ef49797375405dc1c2025eb413cdeda3b",
+      "solutions_train": "50003c69209d9a9ecf3ea241441084a91d15453497e59cad589b06bb8b713707",
+      "solutions_test": "3cc15f412e8f1129dac59c93e0b1fb048cef13b5a5d0fe9fc6f857c14c759031"
+    },
+    "fingerprint": "6e1cc73d9b4a712ff3a7b9916e14b9570373f92f6dae347ace711cb930e89035"
+  },
+  "artifacts": {
+    "checkpoint": "/workspace/MathHint/results/model_comparison_2026-11-07/models/regression_model.pt",
+    "predictions": "/workspace/MathHint/results/model_comparison_2026-11-07/01_회귀모델/regression_predictions.json",
+    "checkpoint_sha256": "d196bd3147db4acd0c91d8d9a6b5aaded5329e0860f9f8b74931f975dd19503e",
+    "predictions_sha256": "06ceb7eb8131ea6505b7f55a35724e354b6c6073275bbac4291f6fe8f0d6fd0a"
+  },
+  "last_action": "prepare",
+  "note": "view reads saved results only; model evaluation and API execution require explicit actions."
+}

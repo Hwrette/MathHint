@@ -8,6 +8,7 @@ from collections import Counter
 import csv
 import hashlib
 import json
+import os
 from pathlib import Path
 
 import torch
@@ -71,21 +72,24 @@ def evaluate_assignments(assignments, labels, training_majorities, k):
             "cluster_sizes": {str(i): counts[i] for i in range(k)}}
 
 
-def input_hashes(root):
+def input_hashes(root, data_root=None):
+    root = Path(root)
+    selected = Path(data_root).resolve() if data_root is not None else root / "data"
     paths = ["data/processed/metadata.json", "data/processed/splits/train.json", "data/processed/splits/test.json",
              "data/vectors/problems/vocabulary.json", "data/vectors/problems/train_vectors.json",
              "data/vectors/problems/test_vectors.json"]
-    return {path: sha256(root / path) for path in paths}
+    return {path: sha256(selected / Path(path).relative_to("data")) for path in paths}
 
 
-def run(root=ROOT, output=OUTPUT, seeds=SEEDS, max_iter=MAX_ITER, tolerance=TOLERANCE):
+def run(root=ROOT, output=OUTPUT, seeds=SEEDS, max_iter=MAX_ITER, tolerance=TOLERANCE, *, data_root=None):
     root, output = Path(root), Path(output)
+    selected_data = Path(data_root).resolve() if data_root is not None else (root / "data").resolve()
     torch.set_num_threads(2)
-    data = load_fixed_dataset(root)
+    data = load_fixed_dataset(root, data_root=selected_data)
     ids, records, matrices = data["ids"], data["records"], data["arrays"]["problems"]
     output.mkdir(parents=True, exist_ok=True)
     config = {"experiment": "four_hierarchy_euclidean_vs_spherical_v1",
-              "generation_id": data["generation_id"], "input_hashes": input_hashes(root),
+              "generation_id": data["generation_id"], "input_hashes": input_hashes(root, selected_data),
               "seeds": list(seeds), "max_iter": max_iter, "tolerance": tolerance,
               "levels": {key: list(value) for key, value in LEVELS.items()},
               "fit_split": "train", "majority_label_split": "train",
@@ -102,12 +106,21 @@ def run(root=ROOT, output=OUTPUT, seeds=SEEDS, max_iter=MAX_ITER, tolerance=TOLE
               "label_majority_tie_rule": "label ascending lexical order",
               "source_subject_warning": "subject is the source group, not course; actual course uses curriculum",
               "torch_version": str(torch.__version__)}
-    config_hash = hashlib.sha256(json.dumps(config, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+    if selected_data != (root / "data").resolve():
+        config["data_source"] = {"data_root": str(selected_data), "paths_are_provenance": True}
+    print("군집 입력 데이터:", selected_data, "· 결과:", output, flush=True)
+    # 이동한 폴더의 위치만으로 같은 입력 바이트의 완료 모델을 다시 학습하지 않는다.
+    config_identity = {key: value for key, value in config.items() if key != "data_source"}
+    config_hash = hashlib.sha256(json.dumps(config_identity, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
     manifest_path = output / "manifest.json"
     if manifest_path.exists():
         manifest = json.loads(manifest_path.read_text())
         if manifest.get("config_sha256") != config_hash:
-            raise ValueError("기존 군집화 결과의 설정이 다릅니다. 새 실험 폴더를 지정하세요.")
+            previous = json.loads((output / "config.json").read_text()) if (output / "config.json").exists() else {}
+            changed = next((name for name, value in config["input_hashes"].items()
+                            if previous.get("input_hashes", {}).get(name) != value), None)
+            detail = f" 입력 파일: {selected_data / Path(changed).relative_to('data')}" if changed else ""
+            raise ValueError("기존 군집화 결과의 설정 또는 입력이 다릅니다. 새 실험 폴더를 지정하세요." + detail)
         if all((output / name).exists() and sha256(output / name) == value
                for name, value in manifest["files"].items()):
             print("군집화 완료 결과 재사용: 해시 검증 통과", output)
@@ -115,8 +128,10 @@ def run(root=ROOT, output=OUTPUT, seeds=SEEDS, max_iter=MAX_ITER, tolerance=TOLE
         raise ValueError("완료 결과가 누락되거나 변형되었습니다. 덮어쓰지 않고 중단합니다.")
     if any(output.iterdir()) and not (output / "config.json").exists():
         raise ValueError("출처가 불명확한 기존 파일이 있어 결과를 덮어쓰지 않습니다.")
-    if (output / "config.json").exists() and json.loads((output / "config.json").read_text()) != config:
-        raise ValueError("미완료 결과의 입력/설정이 다릅니다. 새 폴더를 쓰세요.")
+    if (output / "config.json").exists():
+        previous = json.loads((output / "config.json").read_text())
+        if {key: value for key, value in previous.items() if key != "data_source"} != config_identity:
+            raise ValueError("미완료 결과의 입력/설정이 다릅니다. 새 폴더를 쓰세요.")
     write_json(output / "config.json", config)
     label_inventory, label_counts = {}, []
     for level in LEVELS:
@@ -175,8 +190,8 @@ def run(root=ROOT, output=OUTPUT, seeds=SEEDS, max_iter=MAX_ITER, tolerance=TOLE
                                         "actual_label": label, "train_majority_label": majorities.get(cluster),
                                         "matches_train_majority": label == majorities.get(cluster),
                                         **{field: record.get(field, "") for field in ("subject", "curriculum", "unit", "subunit", "type", "source", "source_file", "original_number", "current_number")},
-                                        "problem_path": f"data/processed/problems/{identifier}.txt",
-                                        "annotated_path": f"data/processed/annotated/{identifier}.txt"})
+                                        "problem_path": Path(os.path.relpath(selected_data / f"processed/problems/{identifier}.txt", root)).as_posix(),
+                                        "annotated_path": Path(os.path.relpath(selected_data / f"processed/annotated/{identifier}.txt", root)).as_posix()})
                 report = {"config_sha256": config_hash, "experiment": experiment_id,
                           "level": level, "method": method, "k": k,
                           "selected_seed": seeds[best], "training_objective_name": objective,
@@ -190,7 +205,7 @@ def run(root=ROOT, output=OUTPUT, seeds=SEEDS, max_iter=MAX_ITER, tolerance=TOLE
                             "training_ids": ids["train"], "generation_id": data["generation_id"],
                             "vocabulary": data["vocabularies"]["problems"], "config_sha256": config_hash}, target / "model.pt")
                 distribution, dispersion = save_final_cluster_reports(root, output, target, members, k,
-                                                                       label_inventory[level]["labels"])
+                                                                       label_inventory[level]["labels"], data_root=selected_data)
                 write_json(target / "cluster_label_distribution.json", distribution)
                 write_json(target / "label_dispersion.json", dispersion)
                 report["artifact_hashes"] = {p.relative_to(target).as_posix(): sha256(p)
@@ -221,8 +236,8 @@ def run(root=ROOT, output=OUTPUT, seeds=SEEDS, max_iter=MAX_ITER, tolerance=TOLE
                                         "experiments": experiment_reports})
     plot_final_comparison(output, summaries)
     save_pca_views(output, matrices, ids, records, experiment_reports)
-    save_analysis(output, summaries, all_members, all_dispersion)
-    validate_saved_results(root, output)
+    save_analysis(output, summaries, all_members, all_dispersion, project_root=root, data_root=selected_data)
+    validate_saved_results(root, output, data_root=selected_data)
     files = {path.relative_to(output).as_posix(): sha256(path)
              for path in output.rglob("*") if path.is_file() and path.name != "manifest.json"}
     write_json(manifest_path, {"config_sha256": config_hash, "files": files})
@@ -230,16 +245,26 @@ def run(root=ROOT, output=OUTPUT, seeds=SEEDS, max_iter=MAX_ITER, tolerance=TOLE
     return json.loads((output / "metrics.json").read_text())
 
 
-def validate_saved_results(root, output):
+def validate_saved_results(root, output, *, data_root=None):
     """저장된 중심으로 재배정하고 학습 다수 라벨·교차표·기존 중심을 대조한다."""
     root, output = Path(root), Path(output)
-    data = load_fixed_dataset(root)
-    reports = json.loads((output / "metrics.json").read_text())["experiments"]
+    data = load_fixed_dataset(root, data_root=data_root)
+    metrics = json.loads((output / "metrics.json").read_text())
+    for name, actual in input_hashes(root, data["data_root"]).items():
+        if metrics["config"]["input_hashes"].get(name) != actual:
+            path = Path(data["data_root"]) / Path(name).relative_to("data")
+            raise ValueError(f"{path}: 저장된 군집 모델과 입력 데이터가 다릅니다.")
+    reports = metrics["experiments"]
     checks = []
     legacy = []
     for report in reports:
         folder = output / "experiments" / report["experiment"]
         saved = torch.load(folder / "model.pt", weights_only=True)
+        if (saved.get("vocabulary") != data["vocabularies"]["problems"]
+                or saved.get("training_ids") != data["ids"]["train"]
+                or saved.get("generation_id") != data["generation_id"]
+                or saved.get("config_sha256") != report["config_sha256"]):
+            raise ValueError(f"{folder / 'model.pt'}: 어휘 순서·학습 ID·데이터 버전 또는 설정이 입력과 다릅니다.")
         k = report["k"]
         if list(saved["centers"].shape) != [k, len(data["vocabularies"]["problems"])]:
             raise ValueError("저장된 군집 중심 차원이 다릅니다.")
@@ -269,7 +294,7 @@ def validate_saved_results(root, output):
         checks.append({"experiment": report["experiment"], "model_reassignment_matches": True,
                        "training_only_majority_matches": True, "cross_tables_match_members": True})
         old_path = root / f"results/model_comparison_2026-11-07/models/kmeans_k{k}_model.pt"
-        if report["method"] == "euclidean" and old_path.exists():
+        if report["method"] == "euclidean" and old_path.exists() and Path(data["data_root"]).resolve() == (root / "data").resolve():
             old = torch.load(old_path, weights_only=True)
             legacy.append({"experiment": report["experiment"], "legacy_model_path": old_path.relative_to(root).as_posix(),
                            "legacy_model_sha256": sha256(old_path),
@@ -278,15 +303,28 @@ def validate_saved_results(root, output):
                            "same_vocabulary": old["vocabulary"] == data["vocabularies"]["problems"],
                            "centers_exactly_equal": bool(torch.equal(old["centers"], saved["centers"])),
                            "reused_without_refitting_in_this_execution": False})
-    result = {"checks": checks, "legacy_model_equivalence": legacy,
-              "legacy_note": "유클리드 k=2/8/70은 새 구면 비교 구현의 공통 조건을 확인하는 검증 실행에서 재계산했다. 기존 중심과의 정확 일치 여부를 기록하며 단순 재사용으로 보고하지 않는다. 완료 후 동일 설정 재실행은 manifest 해시를 검사해 재학습 없이 반환한다."}
+    note = ("유클리드 k=2/8/70은 새 구면 비교 구현의 공통 조건을 확인하는 검증 실행에서 재계산했다. 기존 중심과의 정확 일치 여부를 기록하며 단순 재사용으로 보고하지 않는다. 완료 후 동일 설정 재실행은 manifest 해시를 검사해 재학습 없이 반환한다."
+            if legacy else "선택한 데이터에 대해 호환되는 과거 군집 모델을 비교하지 않았다. 저장한 중심·배정·학습 대표 라벨·교차표를 검증했다.")
+    result = {"checks": checks, "legacy_model_equivalence": legacy, "legacy_note": note}
     write_json(output / "validation.json", result)
     return result
 
 
-def save_analysis(output, summaries, members, dispersion):
+def save_analysis(output, summaries, members, dispersion, *, project_root=ROOT, data_root=None, reader_path=None):
+    from .ClusterReport import cluster_problem_links
+    output = Path(output)
+    train_n = len({row["id"] for row in members if row["split"] == "train"})
+    test_n = len({row["id"] for row in members if row["split"] == "test"})
+    def problem_link(row):
+        return cluster_problem_links(project_root, output, output, row["id"],
+                                     data_root=data_root, reader_path=reader_path)
     rows = [row for row in summaries if row["split"] == "test"]
-    lines = ["# 유클리드·코사인 군집화 비교", "", "학습 185문항에서 중심과 군집의 대표 라벨을 만들고 고정 테스트 80문항에 적용했다. 과목은 curriculum을 사용하며 subject는 자료군이다.", "",
+    type_k = next((row["k"] for row in rows if row["level"] == "type"), "확인한")
+    config_path = output / "config.json"
+    config = json.loads(config_path.read_text()) if config_path.exists() else {}
+    dimension = config.get("input_vocabulary_size", "저장된 고차원")
+    seed_n = len(config.get("seeds", SEEDS))
+    lines = ["# 유클리드·코사인 군집화 비교", "", f"학습 {train_n}문항에서 중심과 군집의 대표 라벨을 만들고 고정 테스트 {test_n}문항에 적용했다. 과목은 curriculum을 사용하며 subject는 자료군이다.", "",
              "[문항별 군집 배정](cluster_members.csv) · [군집별 라벨 비율](cluster_label_distribution.csv) · [실제 라벨의 분산도](label_dispersion.csv) · [분류 수](label_counts.csv)", "",
              "ARI는 우연 일치를 보정한 군집 일치도, NMI는 분류와 군집이 공유하는 정보다. 다수 라벨 정확도는 학습 군집의 대표 라벨로 테스트 분류를 맞힌 비율이다.", "",
              "| 분류 | 거리 | k | ARI | NMI | 학습 다수 라벨 정확도 | 점유 군집 |", "|---|---|---:|---:|---:|---:|---:|"]
@@ -297,8 +335,8 @@ def save_analysis(output, summaries, members, dispersion):
         a, b = [next(r for r in rows if r["level"] == level and r["method"] == method) for method in METHOD_NAMES]
         lines.append(f"- {LEVEL_NAMES[level]} 테스트 ARI는 유클리드 {a['ari']:.4f}, 구면 {b['ari']:.4f}; NMI는 {a['nmi']:.4f}, {b['nmi']:.4f}다.")
     lines += ["", "## 해석과 한계", "", "원시 빈도와 유클리드 거리는 문서 길이·전체 등장 횟수의 영향을 받을 수 있다. 구면 방식은 방향을 비교하므로 길이 영향을 줄이지만, 이번 비교 하나로 모든 차이의 원인을 길이로 확정할 수 없다.",
-              "유형 70개에 학습 185문항이므로 작은 군집이 많다. k가 커질 때 NMI가 높아지는 경향과 테스트에 나타나지 않은 라벨을 함께 고려해야 한다. 학습·테스트 점수 차이도 확인해야 한다.",
-              "5개 시드 중 각 방법의 학습 목적함수로만 결과를 선택했다. 두 방법의 목적함수 값은 단위와 의미가 다르므로 서로 비교하지 않는다. 테스트 지표로 시드나 k를 선택하지 않았다.",
+              f"유형 {type_k}개에 학습 {train_n}문항이다. 작은 군집과 k가 커질 때 NMI가 높아지는 경향, 테스트에 나타나지 않은 라벨을 함께 고려해야 한다. 학습·테스트 점수 차이도 확인해야 한다.",
+              f"{seed_n}개 시드 중 각 방법의 학습 목적함수로만 결과를 선택했다. 두 방법의 목적함수 값은 단위와 의미가 다르므로 서로 비교하지 않는다. 테스트 지표로 시드나 k를 선택하지 않았다.",
               "기존 테스트 성능을 관찰한 뒤 설계한 후속 비교이며, 전혀 보지 않은 독립 최종 평가로 주장하지 않는다.", "",
               "## 직접 확인할 성공·혼합·분산 사례", "", "사례는 결과를 읽기 위한 기술적 예시이며 통계적 일반화를 위한 별도 표본이 아니다.", ""]
     for level in ("subunit", "type"):
@@ -314,30 +352,37 @@ def save_analysis(output, summaries, members, dispersion):
                       f"[이 실험의 군집 문항·그림](experiments/{level}_{method}/README.md)", ""]
             if successes:
                 row = successes[0]
-                lines += [f"- 학습 다수 라벨과 일치: [{row['id']}](../../../{row['problem_path']}) · 군집 {row['cluster']} · 실제 `{row['actual_label']}`. 학습 내 같은 라벨은 {group_counts[(row['cluster'], row['actual_label'])]}/{cluster_n[row['cluster']]}문항이다. 이 사례가 전체 유형의 완전 분리를 뜻하지는 않는다."]
+                lines += [f"- 학습 다수 라벨과 일치: {problem_link(row)} · 군집 {row['cluster']} · 실제 `{row['actual_label']}`. 학습 내 같은 라벨은 {group_counts[(row['cluster'], row['actual_label'])]}/{cluster_n[row['cluster']]}문항이다. 이 사례가 전체 유형의 완전 분리를 뜻하지는 않는다."]
             if failures:
                 row = failures[0]
                 other = next((r for r in training if r["cluster"] == row["cluster"] and r["actual_label"] == row["train_majority_label"]), None)
-                lines += [f"- 서로 다른 라벨이 같은 군집: [{row['id']}](../../../{row['problem_path']}) · 실제 `{row['actual_label']}` · 군집 {row['cluster']}의 학습 다수 `{row['train_majority_label']}`."]
+                lines += [f"- 서로 다른 라벨이 같은 군집: {problem_link(row)} · 실제 `{row['actual_label']}` · 군집 {row['cluster']}의 학습 다수 `{row['train_majority_label']}`."]
                 if other:
-                    lines += [f"  같은 군집의 학습 문항 [{other['id']}](../../../{other['problem_path']})의 실제 라벨은 `{other['actual_label']}`이다. 대표 라벨은 테스트 문항을 보지 않고 학습에서 정했다."]
+                    lines += [f"  같은 군집의 학습 문항 {problem_link(other)}의 실제 라벨은 `{other['actual_label']}`이다. 대표 라벨은 테스트 문항을 보지 않고 학습에서 정했다."]
             ds = [r for r in dispersion if r["level"] == level and r["method"] == method and r["split"] == "train"]
             dispersed = sorted(ds, key=lambda r: (-r["occupied_clusters"], -r["n"], r["actual_label"]))[0]
             matches = [r for r in training if r["actual_label"] == dispersed["actual_label"]]
-            examples = ", ".join(f"[{r['id']}](../../../{r['problem_path']})→{r['cluster']}" for r in matches[:8])
+            examples = ", ".join(f"{problem_link(r)}→{r['cluster']}" for r in matches[:8])
             remainder = f" 외 {len(matches) - 8}문항" if len(matches) > 8 else ""
             lines += [f"- 같은 라벨이 여러 군집으로 분산: `{dispersed['actual_label']}` 학습 {dispersed['n']}문항이 {dispersed['occupied_clusters']}군집으로 나뉨. 예: {examples}{remainder}. 전체 ID와 군집은 [문항별 배정](cluster_members.csv), 분산 수치는 [분산도 표](label_dispersion.csv)에서 이 라벨로 확인한다.", ""]
     (output / "analysis.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     readme = ["# 군집화 결과", "", "먼저 [전체 비교표](summary.csv)와 [해석·사례](analysis.md)를 보고, [문항별 군집 배정](cluster_members.csv)을 실험명·군집 번호로 필터링하세요.", "",
+              "문항 목록의 ID는 수식·Markdown 읽기 화면으로 연결됩니다. 학습 문항은 생성 실험 대상 아님으로 표시하고, 저장된 원문은 별도 링크에서 확인할 수 있습니다.", "",
               "- [ARI 비교](figures/ari_comparison.png), [NMI 비교](figures/nmi_comparison.png)",
               "- [분류별 문항 수](label_counts.csv), [군집별 실제 라벨 빈도·비율](cluster_label_distribution.csv)",
               "- [동일 분류의 군집 분산도](label_dispersion.csv)", "", "| 분류 | 유클리드 | 코사인(구면) |", "|---|---|---|"]
     for level in LEVELS:
         readme.append(f"| {LEVEL_NAMES[level]} | [군집 문항·교차표·그림](experiments/{level}_euclidean/README.md) | [군집 문항·교차표·그림](experiments/{level}_spherical/README.md) |")
     readme += ["", "`config.json`은 입력 해시와 공통 설정, 각 실험의 `experiment.json`은 모든 시드의 학습 목적함수·선택 결과, `model.pt`는 중심과 학습 ID를 보존한다. `manifest.json`은 산출물 무결성 검사 목록이다.",
-               "PCA는 학습 자료에서만 맞춘 표시용 2차원 투영이다. 군집화 자체는 원래 346차원에서 수행했다. 원시 빈도와 L2 정규화 공간은 별도로 투영했으며 서로 다른 PCA 좌표를 직접 비교하지 않는다."]
+               f"PCA는 학습 자료에서만 맞춘 표시용 2차원 투영이다. 군집화 자체는 원래 {dimension}차원에서 수행했다. 원시 빈도와 L2 정규화 공간은 별도로 투영했으며 서로 다른 PCA 좌표를 직접 비교하지 않는다."]
     (output / "README.md").write_text("\n".join(readme) + "\n", encoding="utf-8")
 
 
+def main():
+    from .Experiment import EXPERIMENT
+    return run(EXPERIMENT.project_root, EXPERIMENT.result_root / "01_clustering",
+               data_root=EXPERIMENT.data_root)
+
+
 if __name__ == "__main__":
-    run()
+    main()

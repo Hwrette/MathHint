@@ -27,6 +27,7 @@ class ComparisonTests(unittest.TestCase):
         comparison.write_json(self.root / "data/processed/metadata.json", {"generation_id": "fixture", "records": records})
         comparison.write_json(self.root / "data/processed/splits/train.json", ["train_only_001"])
         comparison.write_json(self.root / "data/processed/splits/test.json", self.ids)
+        comparison.write_json(self.root / "data/vectors/solutions/vocabulary.json", ["term", "negative", "zero", "tiny"])
         self.predictions = self.root / "predictions.json"
         comparison.write_json(self.predictions, {"generation_id": "fixture", "train_ids": ["train_only_001"],
             "vocabulary": ["term", "negative", "zero", "tiny"], "documents": [

@@ -27,15 +27,20 @@ def resolve_source_file(historical_path, project, config):
     return source
 
 
-def audit_generation(output=OUTPUT, *, project=ROOT, write_output=True):
+def audit_generation(output=OUTPUT, *, project=ROOT, data_root=None, write_output=True):
     output, project = Path(output), Path(project)
+    data_root = Path(data_root) if data_root is not None else project / "data"
     manifest = comparison.read_json(output / "config.json")
     config, config_id = manifest["config"], manifest["config_id"]
     violations, warnings = [], []
     if comparison.digest(config) != config_id:
         violations.append("config.json digest mismatch")
+    metadata_path = data_root / "processed/metadata.json"
+    if config.get("metadata_sha256") and comparison.file_hash(metadata_path) != config["metadata_sha256"]:
+        violations.append(f"selected metadata differs from saved request data: {metadata_path}")
     expected = {(identifier, method) for identifier in config["test_ids"] for method in config["methods"]}
-    all_rows = [json.loads(line) for line in (output / "responses.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
+    response_path = output / "responses.jsonl"
+    all_rows = [json.loads(line) for line in response_path.read_text(encoding="utf-8").splitlines() if line.strip()] if response_path.exists() else []
     histories, latest = defaultdict(list), {}
     for row in all_rows:
         key = row["id"], row["method"]
@@ -63,7 +68,7 @@ def audit_generation(output=OUTPUT, *, project=ROOT, write_output=True):
         request = comparison.read_json(request_path)
         payload = request["sdk_request"]
         text = request["user_message"]
-        problem_path = project / "data/processed/problems" / (identifier + ".txt")
+        problem_path = data_root / "processed/problems" / (identifier + ".txt")
         problem = problem_path.read_text(encoding="utf-8-sig")
         checks = {
             "request_identity": (request["id"], request["method"], request["condition"]) == (identifier, method, condition),
@@ -182,10 +187,12 @@ def audit_generation(output=OUTPUT, *, project=ROOT, write_output=True):
 
 
 def main():
-    report = audit_generation()
-    print(json.dumps({key: report[key] for key in ("verification_passed", "all_expected_responses_available", "all_expected_successful", "latest_records", "sdk_boundary_call_count")}, ensure_ascii=False))
+    from mathhint_learning.Experiment import EXPERIMENT
+    report = audit_generation(EXPERIMENT.result_root / "03_gemini", project=EXPERIMENT.project_root,
+                              data_root=EXPERIMENT.data_root, write_output=False)
+    print(json.dumps({key: report[key] for key in ("verification_passed", "all_expected_responses_available", "all_expected_successful", "latest_records", "sdk_boundary_call_count", "violations")}, ensure_ascii=False))
     if not report["verification_passed"]:
-        raise SystemExit("요청·응답 감사 불일치가 있습니다. response_audit.json을 확인하세요.")
+        raise SystemExit("요청·응답 감사 불일치가 있습니다. 위 violations를 확인하세요. 보존된 감사 파일은 수정하지 않았습니다.")
 
 
 if __name__ == "__main__":

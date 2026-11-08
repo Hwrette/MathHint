@@ -5,6 +5,45 @@ import csv
 import json
 import os
 from pathlib import Path
+from urllib.parse import quote
+
+
+def cluster_problem_links(root, output, source_folder, identifier, *, data_root=None, reader_path=None):
+    """선택한 결과의 수식 화면과 선택한 데이터의 원문을 상대 경로로 연결한다."""
+    source_folder, output = Path(source_folder), Path(output)
+    data_root = Path(data_root) if data_root is not None else Path(root) / "data"
+    reader = Path(reader_path) if reader_path is not None else output.parent / "03_gemini/report.html"
+    rendered = quote(os.path.relpath(reader, source_folder).replace(os.sep, "/"), safe="/")
+    original = quote(os.path.relpath(data_root / "processed/problems" / f"{identifier}.txt", source_folder).replace(os.sep, "/"), safe="/")
+    return f"[{identifier}]({rendered}#{quote(str(identifier), safe='')}) · [원문]({original})"
+
+
+def save_final_cluster_members(root, output, target, documents, n_clusters, *, data_root=None, reader_path=None):
+    """이미 저장된 배정만 읽어 학습/테스트 문항의 읽기 링크를 만든다."""
+    target = Path(target)
+    lines = ["# 군집별 실제 문항", "",
+             "문항 ID는 수식·Markdown이 표시되는 읽기 화면을 연다. 원문 링크는 저장된 문제 텍스트를 연다.",
+             "학습 문항은 생성 실험 대상 아님으로 표시한다. 테스트 문항의 실제 응답 상태는 읽기 화면에서 확인하며, 이 목록을 여는 것은 API를 호출하지 않는다.",
+             "대표 라벨은 학습에서만 정했으며, 군집 번호는 임의 번호다.", ""]
+    for cluster in range(n_clusters):
+        members = [row for row in documents if row["cluster"] == cluster]
+        training = [row for row in members if row["split"] == "train"]
+        majority = next((row["train_majority_label"] for row in members), None)
+        lines += [f"## 군집 {cluster:02d}", "",
+                  f"학습 {len(training)}문항 · 테스트 {len(members) - len(training)}문항 · 학습 다수 라벨: {majority or '없음'}", "",
+                  "| 구분 | 문항 ID / 수식 읽기 · 원문 | 생성 실험 | 실제 과목 | 단원 | 세부단원 | 유형 |",
+                  "|---|---|---|---|---|---|---|"]
+        for part in ("train", "test"):
+            for row in members:
+                if row["split"] != part:
+                    continue
+                links = cluster_problem_links(root, output, target, row["id"], data_root=data_root, reader_path=reader_path)
+                status = "생성 실험 대상 아님" if part == "train" else "비교 대상 · 응답 상태는 화면에서 확인"
+                lines.append(f"| {'학습' if part == 'train' else '테스트'} | {links} | {status} | {row['curriculum']} | {row['unit']} | {row['subunit']} | {row['type']} |")
+        if not members:
+            lines.append("| - | 문항 없음 | - | | | | |")
+        lines.append("")
+    (target / "clusters.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def save_cluster_reports(root, output, documents, n_clusters):
@@ -122,7 +161,7 @@ def setup_final_plots():
     return plt
 
 
-def save_final_cluster_reports(root, output, target, documents, n_clusters, labels):
+def save_final_cluster_reports(root, output, target, documents, n_clusters, labels, *, data_root=None, reader_path=None):
     """현재 분류 단계의 문항 목록·빈도/비율·라벨 분산도·교차표를 저장한다."""
     import math
     import numpy as np
@@ -138,8 +177,6 @@ def save_final_cluster_reports(root, output, target, documents, n_clusters, labe
     for row in documents:
         counts[row["split"]][label_index[row["actual_label"]], row["cluster"]] += 1
     groups, distribution, dispersion = [], [], []
-    cluster_lines = ["# 군집별 실제 문항", "", "문항 ID 링크는 문제 본문을 연다. 대표 라벨은 학습에서만 정했으며, 군집 번호는 임의 번호다.", ""]
-    base = os.path.relpath(root, target).replace(os.sep, "/")
     for cluster in range(n_clusters):
         members = [row for row in documents if row["cluster"] == cluster]
         by_part = {part: [r for r in members if r["split"] == part] for part in counts}
@@ -148,8 +185,6 @@ def save_final_cluster_reports(root, output, target, documents, n_clusters, labe
                        "train_majority_label": training_majority,
                        "train_ids": ",".join(row["id"] for row in by_part["train"]),
                        "test_ids": ",".join(row["id"] for row in by_part["test"])})
-        cluster_lines += [f"## 군집 {cluster:02d}", "", f"학습 {len(by_part['train'])}문항 · 테스트 {len(by_part['test'])}문항 · 학습 다수 라벨: {training_majority or '없음'}", "",
-                          "| 구분 | 문항 ID / 문제 | 실제 과목 | 단원 | 세부단원 | 유형 |", "|---|---|---|---|---|---|"]
         for part in counts:
             frequencies = Counter(row["actual_label"] for row in by_part[part])
             for label, count in frequencies.most_common():
@@ -157,11 +192,6 @@ def save_final_cluster_reports(root, output, target, documents, n_clusters, labe
                                      "split": part, "cluster": cluster, "actual_label": label, "label_code": label_codes[label],
                                      "count": count, "cluster_n": len(by_part[part]), "ratio": count / len(by_part[part]),
                                      "train_majority_label": training_majority})
-            for row in by_part[part]:
-                cluster_lines.append(f"| {'학습' if part == 'train' else '테스트'} | [{row['id']}]({base}/{row['problem_path']}) | {row['curriculum']} | {row['unit']} | {row['subunit']} | {row['type']} |")
-        if not members:
-            cluster_lines.append("| - | 문항 없음 | | | | |")
-        cluster_lines.append("")
     for part, matrix in counts.items():
         write_csv(target / f"cross_tab_{part}.csv", [
             {"label_code": label_codes[label], "actual_label": label, **{f"cluster_{c:02d}": int(matrix[i, c]) for c in range(n_clusters)}}
@@ -176,18 +206,23 @@ def save_final_cluster_reports(root, output, target, documents, n_clusters, labe
                                "cluster_entropy_bits": -sum(p * math.log2(p) for p in proportions) if n else None,
                                "cluster_ids": ",".join(str(c) for c in range(n_clusters) if matrix[i, c])})
     write_csv(target / "cluster_summary.csv", groups)
-    (target / "clusters.md").write_text("\n".join(cluster_lines) + "\n", encoding="utf-8")
+    save_final_cluster_members(root, output, target, documents, n_clusters,
+                               data_root=data_root, reader_path=reader_path)
     plot_final_cross_tabs(figures, counts, labels, label_codes, n_clusters)
     plot_final_composition(figures, counts, labels, label_codes, n_clusters)
-    save_final_cluster_readme(target, documents[0]["experiment"], n_clusters)
+    save_final_cluster_readme(target, documents[0]["experiment"], n_clusters,
+                              reader_path=reader_path or Path(output).parent / "03_gemini/report.html")
     return distribution, dispersion
 
 
-def save_final_cluster_readme(target, experiment, n_clusters):
+def save_final_cluster_readme(target, experiment, n_clusters, *, reader_path=None):
     """계산을 반복하지 않고 이미 저장된 표·분할 그림의 안내만 갱신한다."""
     target = Path(target)
+    reader = Path(reader_path) if reader_path is not None else target.parent.parent.parent / "03_gemini/report.html"
+    reader_link = quote(os.path.relpath(reader, target).replace(os.sep, "/"), safe="/")
     lines = [
         f"# {experiment} · k={n_clusters}", "", "[군집별 문항 목록](clusters.md) · [문항별 CSV](members.csv) · [군집 요약/문항 ID](cluster_summary.csv)", "",
+        f"[문제·풀이 수식 읽기 화면]({reader_link})에서 문항 ID로 찾을 수 있다. 군집 문항 목록의 ID를 누르면 해당 문제를 바로 연다. 학습 문항은 생성 실험 대상 아님으로 표시하며 추가 API를 호출하지 않는다.", "",
         "[학습 교차표](cross_tab_train.csv) · [테스트 교차표](cross_tab_test.csv) · [라벨 코드 전체 경로](label_key.csv)", "",
         "아래 링크에서 저장된 그림을 바로 연다. 라벨이 많으면 최대 20행으로 히트맵을 나누었다. 라벨 코드는 전체 경로의 사전순 번호이며 라벨 번호와 군집 번호는 다르다.",
         "구성비 그림은 학습 빈도 상위 8개 라벨과 기타를 사용한다. 모든 실제 라벨의 정확한 비율은 상위 폴더의 `cluster_label_distribution.csv`에 보존했다.",
@@ -200,6 +235,77 @@ def save_final_cluster_readme(target, experiment, n_clusters):
             links.append(" · ".join(f"[{i}쪽]({path.relative_to(target).as_posix()})" for i, path in enumerate(images, 1)) or "생성된 그림 없음")
         lines.append(f"| {title} | {links[0]} | {links[1]} |")
     (target / "README.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def refresh_cluster_reading_links(root, output, *, data_root=None, reader_path=None):
+    """완료된 배정의 문서만 갱신한다. 모델·CSV·그림을 다시 계산하지 않는다."""
+    import hashlib
+
+    root, output = Path(root), Path(output)
+    manifest_path = output / "manifest.json"
+    if not manifest_path.exists():
+        return {"updated_experiments": 0, "status": "no_complete_clustering"}
+
+    def digest(path):
+        return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+    def save_json(path, value):
+        temporary = path.with_name(path.name + ".tmp")
+        temporary.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        temporary.replace(path)
+
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    for name, expected in manifest["files"].items():
+        path = output / name
+        if not path.exists() or digest(path) != expected:
+            raise ValueError(f"군집 문서 갱신 전 저장 결과의 해시가 다릅니다: {path}")
+    metrics = json.loads((output / "metrics.json").read_text(encoding="utf-8"))
+    selected_data = Path(data_root) if data_root is not None else root / "data"
+    inputs = metrics["config"].get("input_hashes")
+    if not isinstance(inputs, dict) or not inputs:
+        raise ValueError(f"군집 결과에 검증할 입력 파일 해시가 없습니다: {output / 'metrics.json'}")
+    for name, expected in inputs.items():
+        relative = Path(name)
+        path = selected_data.joinpath(*relative.parts[1:]) if relative.parts[0] == "data" else root / relative
+        if not path.exists() or digest(path) != expected:
+            raise ValueError(f"군집 결과와 선택한 데이터가 다릅니다: {path}")
+
+    allowed = {"analysis.md", "README.md", "metrics.json"}
+    members = []
+    for report in metrics["experiments"]:
+        relative = Path("experiments") / report["experiment"]
+        allowed.update((relative / name).as_posix() for name in ("clusters.md", "README.md", "experiment.json"))
+    unchanged = {name: expected for name, expected in manifest["files"].items() if name not in allowed}
+
+    for report in metrics["experiments"]:
+        target = output / "experiments" / report["experiment"]
+        save_final_cluster_members(root, output, target, report["documents"], report["k"],
+                                   data_root=selected_data, reader_path=reader_path)
+        save_final_cluster_readme(target, report["experiment"], report["k"],
+                                  reader_path=reader_path or output.parent / "03_gemini/report.html")
+        report["artifact_hashes"].update({name: digest(target / name) for name in ("clusters.md", "README.md")})
+        save_json(target / "experiment.json", report)
+        members.extend(report["documents"])
+    with (output / "summary.csv").open(encoding="utf-8-sig", newline="") as stream:
+        summaries = list(csv.DictReader(stream))
+    # Analysis uses numeric metrics; read their original JSON values rather than recasting CSV strings.
+    for row in summaries:
+        report = next(item for item in metrics["experiments"] if item["experiment"] == row["experiment"])
+        row.update(report["metrics"][row["split"]], k=report["k"])
+    with (output / "label_dispersion.csv").open(encoding="utf-8-sig", newline="") as stream:
+        dispersion = list(csv.DictReader(stream))
+    for row in dispersion:
+        row.update(n=int(row["n"]), occupied_clusters=int(row["occupied_clusters"]))
+    from .FinalClustering import save_analysis
+    save_analysis(output, summaries, members, dispersion, project_root=root,
+                  data_root=selected_data, reader_path=reader_path)
+    save_json(output / "metrics.json", metrics)
+    if any(digest(output / name) != expected for name, expected in unchanged.items()):
+        raise ValueError("문서 갱신 중 모델·CSV·그림 자료가 변경되어 중단합니다.")
+    manifest["files"] = {name: digest(output / name) for name in manifest["files"]}
+    save_json(manifest_path, manifest)
+    return {"updated_experiments": len(metrics["experiments"]), "status": "presentation_updated",
+            "unchanged_artifacts": len(unchanged)}
 
 
 def plot_final_cross_tabs(folder, counts, labels, codes, k):

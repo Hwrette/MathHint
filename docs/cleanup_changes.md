@@ -39,7 +39,7 @@
 | `mathhint_analysis/AnalyzeExperiment.py` | 구 2조건 보고서; 공통 통계는 ExperimentMetrics로 통합 |
 | `mathhint_analysis/BuildComparisonViewer.py` | 구 2조건 화면; 최종 세 조건 열람 화면으로 대체 |
 | `mathhint_analysis/BuildFrequencyVectors.py` | 일반 TXT 보조 실행; 고정 데이터 준비로 통일 |
-| `mathhint_learning/RunTraining.py` | 구 통합 실행; 현행 군집화·회귀 실행으로 분리 |
+| `mathhint_learning/RunTraining.py` | 구 통합 실행; 현행 핵심 모듈과 얇은 RunExperiment 연결로 대체 |
 | `mathhint_preprocess/__main__.py` | 현재 HML 파이프라인에서 사용하지 않는 HWPX 전용 기능 |
 | `mathhint_preprocess/export.py` | 현재 HML 파이프라인에서 사용하지 않는 HWPX 전용 기능 |
 | `mathhint_preprocess/hwpx.py` | 현재 HML 파이프라인에서 사용하지 않는 HWPX 전용 기능 |
@@ -63,7 +63,7 @@
 - `TorchKMeans.py`, `FinalClustering.py`, `ClusterReport.py`: 유클리드/구면 비교, 학습 라벨 수로 k 결정, 문항·분포·그림 출력. 재점검에서는 사례·링크만 바꿨고 모델 학습 코드는 바꾸지 않았다.
 - `TorchRegression.py`, `VectorComparison.py`: 고정 분할 학습과 실수 예측 평가, 기존 모델 재추론 검증·상위 토큰 비교. 정수 반올림 초안을 제거했다.
 - `CompareGeneration.py`, `RateLimitedComparison.py`: 공통 입력·SDK·저장·재개·속도 제한을 유지한다. 이제 독립된 구 두 조건 main이나 구 보고서 생성 기능이 없다.
-- `ThreeWayGeneration.py`, `GenerationAudit.py`: 유일한 최종 API 실행과 정확한 재사용, SDK 인자·응답 감사. 실행 당시 소스는 Git `4f67658`에서 복구하며 현재 소스의 유지보수 이력은 source_transition.json에 남긴다.
+- `ThreeWayGeneration.py`, `GenerationAudit.py`: 최종 API 실행과 정확한 재사용, SDK 인자·응답 감사. 실행 당시 소스는 Git `4f67658`에서 복구한다. 실제 실행 시점의 소스 전환 기록은 source_transition.json에 보존하고, 표시·입력 검증만 수행할 때는 기존 감사 파일을 다시 쓰지 않는다.
 - `ExperimentMetrics.py`, `AnalyzeThreeWay.py`, `VerifyResults.py`: 공통 통계·최종 보고서·산출물 검증. 실제 풀이 검토는 현행 review_evidence에서 해시·인용과 AI/사람 구분을 확인한다.
 - 현재 기능의 오류·재개·어휘·ID·음수/소수·SDK 입력·검토 근거 검사는 유지했다. 폐기된 검토 인터페이스 검사 대신 실제 최종 검토 경로의 핵심 4개 검사를 추가했다.
 - `pyproject.toml`의 폐기 HWPX CLI·뷰어 의존성, README와 코드 안내를 정리했다. `.gitattributes`는 원래 HML `-text -diff` 규칙을 유지하고 CSV 표준 CRLF만 공백 검사에서 허용한다.
@@ -89,3 +89,18 @@ git show 588d86f:docs/checkpoints/cancelled_before_final.zip > /tmp/mathhint_can
 최신 실행 결과는 [검증 JSON](../results/final_experiment/validation.json), [전체 테스트 로그](../results/final_experiment/test_results.txt), [API 사후 감사](../results/final_experiment/03_gemini/prompt_audit/response_audit.json), [진행 기록](WORK_PROGRESS.md)을 기준으로 확인한다. 재점검에서는 보호 대상336개 파일의 SHA 불변, 구 실행 참조 제거, 학습/API를 금지한 캐시 재사용, 링크·그림·실제 사례 수치를 대조한다.
 
 PDF 생성, 사람의 확정 풀이 판정, 공식 교육과정 전수 대조는 이번 명세의 필수 완료 조건이 아니다. 실패 API의 전체 청구 비용은 확인할 수 없어 null로 남긴다. 이런 한계와 필수 산출물 누락을 혼동하지 않는다. 현재 preflight의 신규호출0은 완료된 실험의 캐시를 읽는 시점의 상태이며 과거 호출이 없었다는 뜻이 아니다.
+
+## 결과 열람·후속 실험 연결 보완
+
+이번 보완에서는 추가 파일 삭제 없이, 사용하던 표시 코드와 실행 경로를 정리했다. 복구 지점은 `recovery/before-reader-workflow-20261108`이다.
+
+| 수정·통합 | 이유와 보존 범위 |
+|---|---|
+| AnalyzeThreeWay의 원문 `<pre>` 화면 → ResultViewer | 265문항의 문제·참고 해설·A/B/C를 수식·Markdown으로 표시. 감사 원문은 접이식으로 별도 보존 |
+| viewer_assets의 로컬 Markdown·KaTeX·글꼴 | 외부 업로드·스크립트 없이 읽기. 소스 자산과 생성 결과의 배포 자산은 각각 재생성과 오프라인 열람에 필요; MIT 라이선스 포함 |
+| Experiment + RunExperiment | 경로 설정 한곳과 얇은 연결기. 과거 모델 재사용·새 모델 학습 기능을 모두 유지하고 5개 동작을 명시적으로 구분 |
+| TorchData·회귀·벡터 비교·Gemini 입력·보고서 연결 | 어휘 내용/순서·문항/행·분할·파일 신원·모델/예측 SHA가 다른 실험을 섞지 않음 |
+| 군집 문서의 2,120개 문항 링크 | 8개 실험에서 학습·테스트 모두 같은 수식 읽기 화면으로 연결; 학습은 생성 대상 아님 표시 |
+| README·코드 안내·핵심 검사 | 파일을 여는 방법과 재실험 방법을 구분. 임시 검사 자료는 연구 결과에 넣지 않음 |
+
+이전 삭제 목록은 역사적 누적 목록이며 이번 보완으로 다시 삭제한 파일이 아니다. 원본 데이터·학습 기능·기존 모델·구 실험 폴더·원본 요청/응답·사용량·완료 당시 감사 기록을 계속 보존한다. 최신 브라우저 검증의 범위와 `file://` 정책 제한은 [읽기 화면 검증](../results/final_experiment/reader_validation.json)에 기록한다.

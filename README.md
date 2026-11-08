@@ -2,7 +2,9 @@
 
 수학 문제를 BoW(단어 빈도) 벡터로 표현하고, K-means 군집화와 선형회귀가 Gemini의 풀이 생성에 제공할 수 있는 정보를 검증하는 고2 연구 프로젝트다. 새로운 모델을 추가하기보다 기존 방법의 성능과 한계를 비교한다.
 
-결과를 읽으려면 **[최종 실험 안내](results/final_experiment/README.md)**부터 연다. 진행 중인 API 문항 수와 완료 여부도 그 안내와 [작업 진행 기록](docs/WORK_PROGRESS.md)에 표시한다.
+결과를 읽으려면 **[최종 실험 안내](results/final_experiment/README.md)**부터 연다. 문제와 풀이를 수식으로 읽는 화면은 **[문항별 비교 HTML](results/final_experiment/03_gemini/report.html)**이다. 전체 265문항을 검색하고, 테스트 80문항의 A/B/C 응답과 원문을 비교할 수 있다.
+
+GitHub의 HTML 파일 페이지는 소스 보기다. 저장소를 ZIP으로 내려받아 압축을 푼 뒤 `results/final_experiment/03_gemini/report.html`을 브라우저로 연다. 읽기 화면만 옮길 때도 `03_gemini/report.html`과 그 옆 상위 폴더의 `viewer_assets/`를 같은 상대 위치로 함께 옮겨야 한다. 수식·Markdown 스크립트와 글꼴을 포함하므로 인터넷 연결이 필요 없다. CSV·감사 원본 링크까지 보려면 저장소 전체를 유지한다.
 
 - **군집별 실제 문항:** [문항 배정 CSV](results/final_experiment/01_clustering/cluster_members.csv), [실험별 군집 목록](results/final_experiment/01_clustering/experiments/).
 - **Gemini 80문항의 A/B/C 비교:** [정답·생성 답·정오·토큰 비교 CSV](results/final_experiment/03_gemini/question_comparison.csv).
@@ -19,33 +21,34 @@ python -m pip install -e '.[analysis,learning,solver]'
 
 API를 실행할 때만 `.env.example`을 `.env`로 복사하고 `GEMINI_API_KEY`를 설정한다. 기존 환경변수가 우선하며 `.env`는 Git에 포함하지 않는다. 데이터 준비·모델 검증·보고서 생성에는 API 키가 필요 없다.
 
-| 목적 | 명령 | 저장 위치와 실행 범위 |
+| 목적 | 명령 | 실행 범위 |
 |---|---|---|
-| 군집화 비교 | `python -m mathhint_learning.FinalClustering` | `01_clustering/`; 동일 입력·설정의 완료 결과는 해시 검증 후 재사용 |
-| 회귀 벡터 비교 | `python -m mathhint_learning.VectorComparison` | `02_regression/`; 기존 고정 모델을 검증해 재사용 |
-| Gemini 입력 준비·검증 | `python -m mathhint_solver.ThreeWayGeneration` | `03_gemini/`; 실제 API 호출 없음 |
-| 저장 결과 재집계 | `python -m mathhint_analysis.AnalyzeThreeWay` | 표·그림·사례·최종 보고서 갱신; API 호출·재학습 없음 |
-| 저장 결과 무결성 | `python -m mathhint_analysis.VerifyResults` | 분할·벡터·군집·요청·문항별 표를 대조; API 호출 없음 |
-| 핵심 검사 | `python -m unittest discover -s tests -v` | 가짜 입력과 저장된 자료로 검증; 실제 API 호출 없음 |
+| 기존 결과 읽기·화면 재생성 | `python -m mathhint_learning.RunExperiment view` | 저장된 결과만 집계. 재추론·재학습·API 호출 없음. 인수 생략도 `view` |
+| 지정한 기존 모델 평가 | `python -m mathhint_learning.RunExperiment evaluate` | 선택한 체크포인트로 예측·평가. 재학습·API 호출 없음 |
+| 새 실험 학습 | `python -m mathhint_learning.RunExperiment train` | 별도로 지정한 빈 실험 경로에 학습·예측·평가·보고서 저장. API 호출 없음 |
+| Gemini 입력 준비·검증 | `python -m mathhint_learning.RunExperiment prepare` | 선택한 모델·예측으로 완성 요청을 만들고 검증. API 호출 없음 |
+| Gemini 실제 호출 | `python -m mathhint_learning.RunExperiment generate` | **명시적으로 선택할 때만 외부 API 호출.** 동일한 완료 요청은 재사용 |
+| 군집화 비교 | `python -m mathhint_learning.FinalClustering` | 선택한 실험의 `01_clustering/`. 같은 입력·설정의 완료 결과는 검증 후 재사용 |
+| 최종 연구 산출물 무결성 | `python -m mathhint_analysis.VerifyResults` | 게시된 최종 연구의 분할·벡터·군집·요청·표 대조. API 호출 없음 |
+| 핵심 검사 | `python -m unittest discover -s tests -v` | 임시 가짜 자료와 저장 결과 사용. 연구 데이터 재학습·실제 API 호출 없음 |
 
-위 `01_`~`03_` 경로는 모두 `results/final_experiment/` 아래에 있다. 전체 파일과 설정은 해당 폴더의 안내를 따른다.
+기본 결과 경로는 `results/final_experiment/`다. `AnalyzeThreeWay`는 `view`, `VectorComparison`은 `evaluate`, `ThreeWayGeneration`은 `prepare`에 해당하는 개별 진입점이다. 아래의 단일 설정을 함께 사용한다. 요청 간격·제한된 재시도·할당량 중단 기능은 유지한다. API 실행을 중단하려면 선택한 결과 폴더의 `03_gemini/stop_requested` 파일을 만들고 재개 전에 제거한다.
 
-실제 Gemini 생성이 필요할 때만 다음을 실행한다. **이 명령은 외부 API를 호출한다.** 입력·설정이 일치하는 기존 성공 응답은 재사용하고 미완료 요청부터 이어 간다.
+## 다음 실험의 데이터·모델 선택
 
-```bash
-python -c 'from mathhint_solver import ThreeWayGeneration as run; run.RUN_API = True; run.main()'
-```
+[Experiment.py](mathhint_learning/Experiment.py)의 `EXPERIMENT` 한곳에서 이름·데이터·결과·체크포인트·예측 경로와 학습 설정을 고른다. 기본값은 기존 연구의 검증된 모델·예측을 명시적으로 선택한다. 실행 시 선택 경로를 출력하고, 결과 폴더의 `experiment.json`에 데이터 신원·모델·예측 해시를 남긴다.
 
-실행 코드는 설정·소스 해시를 확인하므로 기존 실험을 이어 갈 때 소스의 `RUN_API` 값을 직접 고치지 않는다. 요청 간격·제한된 재시도·할당량 중단 및 문항별 저장 기능을 유지한다. 안전하게 중단하려면 `results/final_experiment/03_gemini/stop_requested` 파일을 만들고 재개 전 제거한다. 입력이나 모델 설정을 변경하는 새 실험은 별도 결과 경로를 사용한다.
+나중에 새 선형회귀 실험을 하기로 정했다면 설정을 예컨대 `EXPERIMENT = Experiment(name="linear_next_01")`로 바꾸고 `train`을 실행한다. `results/linear_next_01/`의 모델→예측→평가→보고서가 연결된다. 이후 `prepare`는 그 예측을 사용한다. 기존 모델을 별도 폴더에서 다시 평가하려면 새 이름과 `checkpoint`를 명시하고 `evaluate`를 실행한다. 다른 데이터를 쓰려면 같은 설정의 `data_root`에 전처리된 데이터 폴더를 지정한다. 이번 보완에서는 새 연구 학습·Gemini 실험을 실행하지 않았다.
+
+어휘의 내용과 순서, 문항 ID·행 순서, 고정 분할, 데이터 파일 해시, 모델·예측 해시를 검사한다. 차원만 같아도 어휘 순서가 다르면 중단한다. 필요한 파일이 없으면 과거 결과를 대신 사용하지 않는다. `train`은 최종 연구·보존 폴더나 이미 결과가 있는 회귀 폴더를 덮어쓰지 않는다. 원시 빈도는 정수, 회귀 예측은 실수로 보존하며 기존 음수 보정·전송 소수점 규칙을 유지한다.
 
 데이터를 원본에서 새로 만들거나 학습 코드를 공부할 때는 다음 명령을 사용한다. 현재 저장 데이터와 모델 결과를 읽는 데는 다시 실행할 필요가 없다.
 
 ```bash
 python -m mathhint_analysis.PrepareDataset
-python -m mathhint_learning.TorchRegression
 ```
 
-`PrepareDataset`은 HML 추출→문항 분리→고정 분할→학습 어휘→벡터를 생성한다. 기본 `OVERWRITE=False`이므로 기존 데이터가 있으면 교체하지 않는다. 재생성이 필요하면 상단 설정에서 새 출력 경로를 지정하거나 교체 의도를 명시한다. `TorchRegression`은 선택적인 재학습 경로이며 결과를 `outputs/regression/`에 저장한다. 최종 비교는 기존 모델의 실수 예측을 사용한다.
+`PrepareDataset`은 HML 추출→문항 분리→고정 분할→학습 어휘→벡터를 생성한다. 기본 `OVERWRITE=False`이므로 기존 데이터가 있으면 교체하지 않는다. 재생성이 필요하면 상단 설정에서 새 출력 경로를 지정한다. 학습은 위의 별도 실험 설정과 `RunExperiment train`을 사용한다.
 
 ## 데이터와 문항 ID
 
