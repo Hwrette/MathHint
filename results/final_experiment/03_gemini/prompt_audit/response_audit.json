@@ -1,2495 +1,482 @@
 {
-  "expected_responses": 240,
-  "recorded_responses": 160,
-  "missing_count": 80,
-  "missing": [
+  "checked_at": "2026-11-08T17:17:34.545162+00:00",
+  "config_id": "fca7807f5e1e3cd16682847b4e70c49ad6b30c2d733b5d9e83c6c2f65164cf87",
+  "expected_requests": 240,
+  "latest_records": 240,
+  "historical_record_count": 241,
+  "verification_passed": true,
+  "all_expected_responses_available": true,
+  "all_expected_successful": true,
+  "violations": [],
+  "warnings": [],
+  "missing_requests": [],
+  "status_counts": {
+    "success": 240
+  },
+  "reused_successful_responses": 160,
+  "new_successful_responses": 80,
+  "sdk_boundary_call_count": 81,
+  "sdk_call_count_by_condition": {
+    "A": 0,
+    "B": 0,
+    "C": 81
+  },
+  "raw_usage_fields_compared": 240,
+  "unknown_usage_attempts": [
     {
-      "id": "diff_1_005",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "diff_1_011",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "diff_1_012",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "diff_1_014",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "diff_1_018",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "diff_1_022",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "diff_1_026",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "diff_1_028",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "diff_1_030",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "diff_1_036",
-      "condition": "C",
-      "status": "not_run"
+      "id": "diff_1_038",
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 1,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
     },
     {
       "id": "diff_1_038",
-      "condition": "C",
-      "status": "not_run"
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 2,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
     },
     {
-      "id": "diff_1_039",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "diff_1_041",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "diff_2_004",
-      "condition": "C",
-      "status": "not_run"
+      "id": "diff_1_038",
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 1,
+      "execution": 2,
+      "status": "error",
+      "error_type": "ServerError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
     },
     {
       "id": "diff_2_006",
-      "condition": "C",
-      "status": "not_run"
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 1,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
+    },
+    {
+      "id": "diff_2_006",
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 2,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
     },
     {
       "id": "diff_2_007",
-      "condition": "C",
-      "status": "not_run"
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 1,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
     },
     {
       "id": "diff_2_010",
-      "condition": "C",
-      "status": "not_run"
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 1,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
+    },
+    {
+      "id": "diff_2_010",
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 2,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
     },
     {
       "id": "diff_2_013",
-      "condition": "C",
-      "status": "not_run"
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 1,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
+    },
+    {
+      "id": "diff_2_013",
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 2,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
     },
     {
       "id": "diff_2_014",
-      "condition": "C",
-      "status": "not_run"
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 1,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
+    },
+    {
+      "id": "diff_2_014",
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 2,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
     },
     {
       "id": "diff_2_016",
-      "condition": "C",
-      "status": "not_run"
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 1,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
     },
     {
       "id": "diff_2_018",
-      "condition": "C",
-      "status": "not_run"
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 1,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
+    },
+    {
+      "id": "diff_2_018",
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 2,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
     },
     {
       "id": "diff_2_020",
-      "condition": "C",
-      "status": "not_run"
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 1,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
+    },
+    {
+      "id": "diff_2_020",
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 2,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
     },
     {
       "id": "diff_2_023",
-      "condition": "C",
-      "status": "not_run"
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 1,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
+    },
+    {
+      "id": "diff_2_023",
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 2,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
     },
     {
       "id": "diff_2_024",
-      "condition": "C",
-      "status": "not_run"
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 1,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
+    },
+    {
+      "id": "diff_2_024",
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 2,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
     },
     {
       "id": "diff_2_029",
-      "condition": "C",
-      "status": "not_run"
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 1,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
+    },
+    {
+      "id": "diff_2_029",
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 2,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
     },
     {
       "id": "diff_2_030",
-      "condition": "C",
-      "status": "not_run"
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 1,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
+    },
+    {
+      "id": "diff_2_030",
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 2,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
     },
     {
       "id": "diff_2_031",
-      "condition": "C",
-      "status": "not_run"
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 1,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
+    },
+    {
+      "id": "diff_2_031",
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 2,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
     },
     {
       "id": "diff_2_036",
-      "condition": "C",
-      "status": "not_run"
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 1,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
+    },
+    {
+      "id": "diff_2_036",
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 2,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
     },
     {
       "id": "diff_2_037",
-      "condition": "C",
-      "status": "not_run"
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 1,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
+    },
+    {
+      "id": "diff_2_037",
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 2,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
     },
     {
       "id": "diff_2_040",
-      "condition": "C",
-      "status": "not_run"
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 1,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
+    },
+    {
+      "id": "diff_2_040",
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 2,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
     },
     {
       "id": "diff_2_041",
-      "condition": "C",
-      "status": "not_run"
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 1,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
     },
     {
-      "id": "diff_3_001",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "diff_3_004",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "diff_3_005",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "diff_3_008",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "diff_3_012",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "diff_3_022",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "diff_3_028",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "diff_3_039",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "diff_3_044",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "diff_3_048",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "diff_3_049",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_1_004",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_1_007",
-      "condition": "C",
-      "status": "not_run"
+      "id": "diff_2_041",
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 2,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ClientError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
     },
     {
       "id": "trig_1_009",
-      "condition": "C",
-      "status": "not_run"
+      "method": "baseline",
+      "condition": "A",
+      "response_origin": "reused_exact_request",
+      "attempt": 1,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ServerError",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
     },
     {
-      "id": "trig_1_010",
+      "id": "diff_2_020",
+      "method": "oracle_hint",
       "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_1_011",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_1_013",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_1_018",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_1_020",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_1_021",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_1_028",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_1_032",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_1_035",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_1_039",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_1_042",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_1_043",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_1_046",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_2_003",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_2_007",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_2_014",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_2_016",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_2_017",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_2_022",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_2_024",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_2_025",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_2_030",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_2_035",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_3_002",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_3_010",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_3_011",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_3_014",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_3_015",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_3_017",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_3_021",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_3_026",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_3_034",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_3_035",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_3_039",
-      "condition": "C",
-      "status": "not_run"
-    },
-    {
-      "id": "trig_3_040",
-      "condition": "C",
-      "status": "not_run"
+      "response_origin": "new_api_call",
+      "attempt": 1,
+      "execution": 1,
+      "status": "error",
+      "error_type": "ReadTimeout",
+      "total_token_count": null,
+      "server_completion_and_billing": "not_confirmable_from_saved_response"
     }
   ],
-  "existing_response_checks_passed": true,
-  "reused_exact_responses": 160,
-  "new_live_sdk_boundary_verified_responses": 0,
-  "all_expected_responses_available": false,
-  "actual_model_internal_identity_verified": false,
-  "note": "과거 A/B는 원본·완성 요청의 일치를 확인했으며 과거 SDK 경계를 실시간 캡처한 것은 아니다. 새 C는 캡처가 있을 때만 실호출 경계 검증으로 표시한다. 미제공 토큰은 null을 유지한다.",
-  "records": [
-    {
-      "id": "diff_1_005",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_005",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_011",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_011",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_012",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_012",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_014",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_014",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_018",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_018",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_022",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_022",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_026",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_026",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_028",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_028",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_030",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_030",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_036",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_036",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_038",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_038",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_039",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_039",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_041",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_1_041",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_004",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_004",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_006",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_006",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_007",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_007",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_010",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_010",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_013",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_013",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_014",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_014",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_016",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_016",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_018",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_018",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_020",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_020",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_023",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_023",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_024",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_024",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_029",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_029",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_030",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_030",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_031",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_031",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_036",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_036",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_037",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_037",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_040",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_040",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_041",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_2_041",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_3_001",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_3_001",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_3_004",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_3_004",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_3_005",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_3_005",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_3_008",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_3_008",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_3_012",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_3_012",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_3_022",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_3_022",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_3_028",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_3_028",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_3_039",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_3_039",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_3_044",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_3_044",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_3_048",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_3_048",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_3_049",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "diff_3_049",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_004",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_004",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_007",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_007",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_009",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_009",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_010",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_010",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_011",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_011",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_013",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_013",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_018",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_018",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_020",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_020",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_021",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_021",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_028",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_028",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_032",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_032",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_035",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_035",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_039",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_039",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_042",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_042",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_043",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_043",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_046",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_1_046",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_2_003",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_2_003",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_2_007",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_2_007",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_2_014",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_2_014",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_2_016",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_2_016",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_2_017",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_2_017",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_2_022",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_2_022",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_2_024",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_2_024",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_2_025",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_2_025",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_2_030",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_2_030",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_2_035",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_2_035",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_002",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_002",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_010",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_010",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_011",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_011",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_014",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_014",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_015",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_015",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_017",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_017",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_021",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_021",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_026",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_026",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_034",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_034",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_035",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_035",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_039",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_039",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_040",
-      "condition": "A",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    },
-    {
-      "id": "trig_3_040",
-      "condition": "B",
-      "status": "success",
-      "input_and_request_hash_match": true,
-      "historical_exact_record_verified": true,
-      "live_sdk_boundary_verified": false,
-      "requested_model": "gemini-3.1-flash-lite",
-      "reported_model_version": "gemini-3.1-flash-lite",
-      "usage_missing_fields": [
-        "thoughts_token_count"
-      ]
-    }
-  ]
+  "unknown_usage_attempts_by_condition": {
+    "A": 36,
+    "C": 1
+  },
+  "model_versions": {
+    "gemini-3.1-flash-lite": 240
+  },
+  "model_verification_limit": "Requested model and API-returned model_version are recorded separately. Hidden internal model identity is not observable.",
+  "historical_boundary_capture_limit": "Reused A/B requests are exact-text/config/hash verified against saved original records. Historical live SDK boundary capture was not available; current dry-run boundary verification does not retroactively establish it.",
+  "token_accounting": "Use API total_token_count directly. Input/output/thought/cache fields are reported separately and never added to that total. Missing attempt usage stays null, so complete billed totals cannot be inferred.",
+  "retry_accounting": "Failed then successful records for one ID/condition are preserved history. Two successful responses for one ID/condition would be flagged as duplicate completion."
 }

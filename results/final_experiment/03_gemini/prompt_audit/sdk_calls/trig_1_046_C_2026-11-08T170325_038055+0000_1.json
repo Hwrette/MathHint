@@ -1,0 +1,22 @@
+{
+  "id": "trig_1_046",
+  "condition": "C",
+  "method": "oracle_hint",
+  "captured_at": "2026-11-08T17:10:51.537258+00:00",
+  "execution_id": "2026-11-08T170325_038055+0000",
+  "request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "$0 < x \\leq 10$일 때, 부등식\n$\\cos \\frac{\\pi}{5} x < \\sin \\frac{\\pi}{5} x$\n를 만족시키는 모든 자연수 $x$의 값의 합을 구하시오.\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:{\":17.0,\"latex:}\":17.0,\"latex:x\":9.0,\"latex:\\\\frac\":8.0,\"latex:5\":7.0,\"kiwi:,\":6.0,\"latex:4\":5.0,\"kiwi:의\":4.0,\"kiwi:이\":4.0,\"latex:<\":4.0,\"latex:\\\\pi\":4.0,\"kiwi:는\":3.0,\"kiwi:[\":2.0,\"kiwi:]\":2.0,\"kiwi:가\":2.0,\"kiwi:값\":2.0,\"kiwi:은\":2.0,\"latex:20\":2.0,\"latex:25\":2.0,\"latex:=\":2.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "request_sha256": "d63ba69b1b43324a5330b8a1b0dd084d45b8a1ef312e26cd78930261092b59ea",
+  "matches_saved_prompt": true,
+  "capture": "immediately_before_sdk_generate_content"
+}

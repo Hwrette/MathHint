@@ -1,0 +1,22 @@
+{
+  "id": "diff_1_022",
+  "condition": "C",
+  "method": "oracle_hint",
+  "captured_at": "2026-11-08T17:03:50.397836+00:00",
+  "execution_id": "2026-11-08T170325_038055+0000",
+  "request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "다항함수 $f \\left( x \\right)$에 대하여 함수 $g \\left( x \\right)$를\n$g \\left( x \\right) = \\left( x^{2} + x \\right) f \\left( x \\right)$\n라 하자. $\\lim_{h \\rightarrow 0} \\frac{g \\left( 1 + h \\right) - 4}{h} = 9$일 때, $f \\left( 1 \\right) \\times f' \\left( 1 \\right)$의 값은?\n① $3$\t\t② $\\frac{9}{2}$\t\t③ $6$\n④ $\\frac{15}{2}$\t\t⑤ $9$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:(\":29.0,\"latex:)\":29.0,\"latex:\\\\left\":29.0,\"latex:\\\\right\":29.0,\"latex:1\":20.0,\"latex:=\":18.0,\"latex:{\":18.0,\"latex:}\":18.0,\"latex:h\":15.0,\"latex:g\":13.0,\"latex:+\":11.0,\"latex:f\":11.0,\"latex:2\":10.0,\"latex:x\":10.0,\"kiwi:이\":9.0,\"latex:'\":9.0,\"latex:0\":9.0,\"latex:-\":6.0,\"latex:4\":6.0,\"latex:\\\\lim\":6.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "request_sha256": "dcd6f63fe72b65419ba2a35ae2db7060f77342ba74e24c0b3076e5c0acf399bf",
+  "matches_saved_prompt": true,
+  "capture": "immediately_before_sdk_generate_content"
+}

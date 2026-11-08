@@ -1,0 +1,22 @@
+{
+  "id": "diff_2_016",
+  "condition": "C",
+  "method": "oracle_hint",
+  "captured_at": "2026-11-08T17:05:12.034097+00:00",
+  "execution_id": "2026-11-08T170325_038055+0000",
+  "request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "삼차함수 $f \\left( x \\right)$에 대하여 함수 $g \\left( x \\right)$를\n$g \\left( x \\right) = \\left( x + 2 \\right) f \\left( x \\right)$\n라 하자. 곡선 $y = f \\left( x \\right)$ 위의 점 $\\left( 3 , 2 \\right)$에서의 접선의 기울기가 $\\mathrm{4}$일 때, $g' \\left( 3 \\right)$의 값을 구하시오.\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:(\":14.0,\"latex:)\":14.0,\"latex:\\\\left\":14.0,\"latex:\\\\right\":14.0,\"latex:=\":8.0,\"latex:f\":8.0,\"latex:x\":8.0,\"latex:3\":6.0,\"latex:'\":5.0,\"latex:+\":5.0,\"latex:2\":5.0,\"kiwi:이\":4.0,\"kiwi:의\":3.0,\"latex:4\":3.0,\"latex:g\":3.0,\"kiwi:[\":2.0,\"kiwi:]\":2.0,\"kiwi:므로\":2.0,\"kiwi:에서\":2.0,\"latex:5\":2.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "request_sha256": "d17db26f2fb96581dcde66105b82e7d574c995460fb8a8dcec7c3ea339c8d9d8",
+  "matches_saved_prompt": true,
+  "capture": "immediately_before_sdk_generate_content"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "diff_1_038",
+  "condition": "C",
+  "method": "oracle_hint",
+  "captured_at": "2026-11-08T17:04:27.032852+00:00",
+  "execution_id": "2026-11-08T170325_038055+0000",
+  "request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "두 상수 $a$, $b$에 대하여 함수 $f \\left( x \\right)$를\n$f \\left( x \\right) = x^{3} - 6 x^{2} + a x + b$\n라 하자. 함수 $f \\left( x \\right)$는 $x = 3$에서 극값을 갖고, 함수 $f \\left( x \\right)$의 극댓값과 극솟값의 합이 $8$이다. $a + b$의 값을 구하시오.\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:x\":17.0,\"latex:=\":14.0,\"latex:(\":13.0,\"latex:)\":13.0,\"latex:\\\\left\":13.0,\"latex:\\\\right\":13.0,\"latex:f\":11.0,\"latex:+\":8.0,\"latex:3\":8.0,\"kiwi:이\":6.0,\"latex:-\":6.0,\"latex:'\":5.0,\"latex:b\":5.0,\"latex:0\":4.0,\"latex:1\":4.0,\"latex:2\":4.0,\"latex:a\":4.0,\"kiwi:의\":3.0,\"kiwi:함수\":3.0,\"latex:\\\\cdots\":3.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "request_sha256": "c3dc6543bd56bc0938e94e84fa896e545d2b5c6bacfd8a32c03329068a3de462",
+  "matches_saved_prompt": true,
+  "capture": "immediately_before_sdk_generate_content"
+}

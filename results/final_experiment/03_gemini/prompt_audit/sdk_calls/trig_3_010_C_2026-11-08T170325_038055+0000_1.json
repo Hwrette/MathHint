@@ -1,0 +1,22 @@
+{
+  "id": "trig_3_010",
+  "condition": "C",
+  "method": "oracle_hint",
+  "captured_at": "2026-11-08T17:11:51.540012+00:00",
+  "execution_id": "2026-11-08T170325_038055+0000",
+  "request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "$\\sin \\theta = \\frac{1}{3}$일 때, $\\cos \\left( \\theta + \\frac{\\pi}{2} \\right)$의 값은?\n① $- \\frac{7}{9}$\t② $- \\frac{2}{3}$\t\t③ $- \\frac{5}{9}$\n④ $- \\frac{4}{9}$\t⑤ $- \\frac{1}{3}$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:{\":4.0,\"latex:}\":4.0,\"kiwi:[\":2.0,\"kiwi:]\":2.0,\"latex:-\":2.0,\"latex:=\":2.0,\"latex:\\\\frac\":2.0,\"latex:\\\\theta\":2.0,\"kiwi:⑤\":1.0,\"kiwi:정답\":1.0,\"kiwi:해설\":1.0,\"latex:(\":1.0,\"latex:)\":1.0,\"latex:+\":1.0,\"latex:1\":1.0,\"latex:2\":1.0,\"latex:3\":1.0,\"latex:\\\\cos\":1.0,\"latex:\\\\left\":1.0,\"latex:\\\\pi\":1.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "request_sha256": "de4eee645cb259a46519c2f4ec744e9ff46beb7f68e66897e49b4b5f9a477c87",
+  "matches_saved_prompt": true,
+  "capture": "immediately_before_sdk_generate_content"
+}

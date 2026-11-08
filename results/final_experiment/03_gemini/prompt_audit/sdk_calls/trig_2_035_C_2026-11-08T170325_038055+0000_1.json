@@ -1,0 +1,22 @@
+{
+  "id": "trig_2_035",
+  "condition": "C",
+  "method": "oracle_hint",
+  "captured_at": "2026-11-08T17:11:56.541501+00:00",
+  "execution_id": "2026-11-08T170325_038055+0000",
+  "request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "함수 $f (x) = \\sin \\frac{\\pi}{4} x$라 할 때, $0 < x < 16$에서 부등식\n$f \\left( 2 + x \\right) f \\left( 2 - x \\right) < \\frac{1}{4}$\n을 만족시키는 모든 자연수 $x$의 값의 합을 구하시오.\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:{\":90.0,\"latex:}\":90.0,\"latex:(\":54.0,\"latex:)\":54.0,\"latex:\\\\left\":44.0,\"latex:\\\\right\":44.0,\"latex:\\\\frac\":42.0,\"latex:f\":41.0,\"latex:2\":40.0,\"latex:=\":36.0,\"latex:x\":32.0,\"latex:<\":27.0,\"latex:1\":22.0,\"latex:4\":22.0,\"latex:3\":21.0,\"latex:\\\\pi\":20.0,\"kiwi:이\":18.0,\"latex:-\":17.0,\"kiwi:,\":12.0,\"latex:+\":12.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "request_sha256": "bb4edb1654c9b2352d384a328efa60cb080dd4e21a0fa96625c4b124c58d4bec",
+  "matches_saved_prompt": true,
+  "capture": "immediately_before_sdk_generate_content"
+}

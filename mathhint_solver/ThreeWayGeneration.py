@@ -4,7 +4,6 @@ RUN_API=False가 기본이다. 정확히 일치하는 기존 A/B만 재사용하
 해설 빈도는 진단용 oracle 정보로 구분한다. 요청 직전 SDK 인자를 저장한다.
 """
 
-import csv
 import html
 import json
 import os
@@ -241,15 +240,7 @@ def render_reports(output, records, config, *, charts=False):
         summary["methods"][method] = {"recorded": len(rows), "successful": len(success), "graded": len(graded),
             "correct": correct, "accuracy_on_graded": correct / len(graded) if graded else None,
             "correct_per_expected": correct / len(config["test_ids"]), "usage": usage,
-            "reused_controls": sum(row.get("response_origin") == "reused_control" for row in rows)}
-    comparison.write_json(output / "summary.json", summary)
-    with (output / "comparison.csv").open("w", encoding="utf-8-sig", newline="") as stream:
-        fields = ["id", "method", "uses_test_reference_vector", "status", "reference_answer_text", "predicted_answer", "correct", *comparison.USAGE_FIELDS, "input_text", "output_text"]
-        writer = csv.DictWriter(stream, fieldnames=fields); writer.writeheader()
-        for row in records:
-            writer.writerow({**{f: row.get(f) for f in fields if f not in comparison.USAGE_FIELDS},
-                **{f: row["usage"].get(f) for f in comparison.USAGE_FIELDS},
-                "predicted_answer": row["evaluation"].get("predicted_answer"), "correct": row["evaluation"].get("correct")})
+            "reused_controls": sum(row.get("response_origin", "").startswith("reused") for row in rows)}
     escaped = lambda value: html.escape(str(value))
     indexed = {(row["id"], row["method"]): row for row in records}
     cards = []
@@ -268,8 +259,33 @@ def render_reports(output, records, config, *, charts=False):
     return summary
 
 
+def resolve_resume_config(output, config):
+    """입력·설정이 모두 같으면 소스 정리 뒤에도 기존 실험 ID를 보존한다."""
+    path = Path(output) / "config.json"
+    if not path.exists():
+        return config
+    saved = comparison.read_json(path)
+    frozen = saved["config"]
+    source_fields = {"runner_sha256", "shared_runner_sha256"}
+    semantic = lambda value: {key: item for key, item in value.items() if key not in source_fields}
+    if comparison.digest(frozen) != saved["config_id"] or semantic(config) != semantic(frozen):
+        raise ValueError("기존 실험의 입력 또는 설정이 달라졌습니다. 새 출력 폴더를 사용하세요.")
+    if config != frozen:
+        transition_path = Path(output) / "source_transition.json"
+        transition = comparison.read_json(transition_path) if transition_path.exists() else {
+            "frozen_config_id": saved["config_id"], "frozen_source_hashes": {key:frozen.get(key) for key in sorted(source_fields)}, "versions": []}
+        current = {key:config.get(key) for key in sorted(source_fields)}
+        if not any(version["source_hashes"] == current for version in transition["versions"]):
+            transition["versions"].append({"recorded_at": comparison.utc_now(), "source_hashes": current,
+                "all_non_source_config_fields_and_input_hashes_match": True,
+                "reason": "Source provenance changed; model/settings/prompt/vector/input/grader fingerprints are identical."})
+            comparison.write_json(transition_path, transition)
+    return frozen
+
+
 def prepare(output, config, plan, source_config_path=SOURCE_CONFIG, source_records_path=SOURCE_RECORDS, *, project=ROOT):
     output = Path(output)
+    config = resolve_resume_config(output, config)
     # Validate source reuse before storing any imported result.
     imported = reuse_existing(output, config, plan, source_config_path, source_records_path) if source_config_path else {
         "validated_reusable": 0, "imported_this_run": 0}
@@ -289,7 +305,9 @@ def prepare(output, config, plan, source_config_path=SOURCE_CONFIG, source_recor
 def run_experiment(output, config, plan, *, api_key, interval=INTERVAL, workers=WORKERS,
                    limit=None, retry_errors=True, request_function=None):
     """검증된 입력만 기존 저장·재개·속도 제한 엔진으로 실행한다."""
-    output = Path(output); comparison.initialize_run(output, config, plan)
+    output = Path(output)
+    config = resolve_resume_config(output, config)
+    comparison.initialize_run(output, config, plan)
     execution_id = comparison.utc_now().replace(":", "").replace(".", "_")
     directory = output / "execution_runs"; directory.mkdir(exist_ok=True)
     execution = {"config_id": comparison.digest(config), "started_at": comparison.utc_now(), "status": "running",

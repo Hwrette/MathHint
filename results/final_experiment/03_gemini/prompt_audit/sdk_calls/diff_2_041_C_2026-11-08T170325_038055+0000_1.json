@@ -1,0 +1,22 @@
+{
+  "id": "diff_2_041",
+  "condition": "C",
+  "method": "oracle_hint",
+  "captured_at": "2026-11-08T17:07:12.140825+00:00",
+  "execution_id": "2026-11-08T170325_038055+0000",
+  "request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "수직선 위를 움직이는 점 $\\mathrm{P}$의 시각 $t \\quad \\left( t > 0 \\right)$에서의 위치 $x \\left( t \\right)$가\n$x \\left( t \\right) = \\frac{3}{2} t^{4} - 8 t^{3} + 15 t^{2} - 12 t$\n이다. 점 ${\\mathrm{{P}}}$의 운동 방향이 바뀌는 순간 점 ${\\mathrm{{P}}}$의 가속도를 구하시오.\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:{\":31.0,\"latex:}\":31.0,\"latex:t\":26.0,\"latex:(\":14.0,\"latex:)\":14.0,\"latex:2\":14.0,\"latex:\\\\left\":12.0,\"latex:\\\\mathrm\":12.0,\"latex:\\\\right\":12.0,\"latex:=\":10.0,\"kiwi:의\":9.0,\"latex:-\":8.0,\"latex:0\":7.0,\"kiwi:방향\":6.0,\"kiwi:에서\":6.0,\"kiwi:이\":6.0,\"kiwi:점\":6.0,\"latex:P\":6.0,\"latex:^\":5.0,\"latex:v\":5.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "request_sha256": "05942eb1d0fecf1c071d7d8993c20b5eae05503d5746c2aebe4b1b290d95988c",
+  "matches_saved_prompt": true,
+  "capture": "immediately_before_sdk_generate_content"
+}

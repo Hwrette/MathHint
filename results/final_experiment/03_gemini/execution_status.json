@@ -1,18 +1,19 @@
 {
-  "checked_at": "2026-11-08T17:03:52.981587+00:00",
-  "state": "RUNNING",
+  "checked_at": "2026-11-08T17:18:27.275984+00:00",
+  "state": "COMPLETED_AND_POSTFLIGHT_VERIFIED",
   "config_id": "fca7807f5e1e3cd16682847b4e70c49ad6b30c2d733b5d9e83c6c2f65164cf87",
   "observed_response_counts": {
     "baseline": 80,
-    "regression_hint": 80
+    "regression_hint": 80,
+    "oracle_hint": 80
   },
   "successful_reused": 160,
-  "observed_execution_files": 0,
-  "observed_sdk_boundary_files": 0,
+  "observed_execution_files": 4,
+  "observed_sdk_boundary_files": 81,
   "unfinished_conditions": {
     "baseline": 0,
     "regression_hint": 0,
-    "oracle_hint": 80
+    "oracle_hint": 0
   },
   "repeat_policy": "Do not blindly retry an ambiguous startup. Recheck current logs, processes and SDK snapshot files before starting or resuming. Successful responses are skipped by the durable engine.",
   "safe_invocation": "from collections import Counter\nimport os\nfrom mathhint_solver import ThreeWayGeneration as three\nfrom mathhint_solver import CompareGeneration as comparison\nconfig, plan = three.prepare_plan(three.ROOT, three.PREDICTIONS)\nmanifest = comparison.read_json(three.OUTPUT / \"config.json\")\nassert comparison.digest(config) == manifest[\"config_id\"]\ncompleted = comparison.load_completed(three.OUTPUT, manifest[\"config_id\"])\npending = [item for item in plan if completed.get((item[\"id\"], item[\"method\"]), {}).get(\"status\") != \"success\"]\nassert all(item[\"method\"] == \"oracle_hint\" for item in pending)\nassert os.environ.get(\"GEMINI_API_KEY\")\nthree.run_experiment(three.OUTPUT, config, plan, api_key=os.environ[\"GEMINI_API_KEY\"], workers=2, interval=5.0)\n",
@@ -36,9 +37,19 @@
       "observed_processes_at_check": "Only the zero-second status-check Python process; no active Gemini runner found."
     }
   ],
-  "latest_observation_note": "After the user-aborted tool wait, safe local checks found responses160, C0, execution_runs0, sdk_calls0. No new network/API command was started during this status-check turn. Parent may resume after another live-state check.",
+  "latest_observation_note": "Parent completed initial C80 and retried only diff_2_020 once after ReadTimeout. Latest A/B/C each80 success. JSONL241 preserves the initial failed attempt; SDK81 snapshots preserve every new call. Timed-out request completion/billing remains unknown. Final audit passed; cache-only main repeated240 mock boundary checks without any new live request and preserved all saved prompt/response hashes.",
   "started_native_session": 83444,
   "active_config_id": "fca7807f5e1e3cd16682847b4e70c49ad6b30c2d733b5d9e83c6c2f65164cf87",
   "process_lock": "/tmp/mathhint-final-api.lock",
-  "approval": "native command prefix approved"
+  "approval": "native command prefix approved",
+  "new_successful_responses": 80,
+  "verification_passed": true,
+  "successful_conditions": 240,
+  "new_successful_C": 80,
+  "total_new_sdk_calls": 81,
+  "reused_successful_A_B": 160,
+  "first_timeout_preserved": true,
+  "timeout_retry_additional_attempts": 1,
+  "all_attempt_usage_complete": false,
+  "postflight": "prompt_audit/response_audit.json"
 }

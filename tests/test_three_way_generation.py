@@ -132,6 +132,32 @@ class ThreeWayTests(unittest.TestCase):
             three.prepare(self.root / "bad", self.config, self.plan, source / "config.json", source / "responses.jsonl")
         self.assertFalse((self.root / "bad/responses.jsonl").exists())
 
+    def test_source_only_resume_keeps_original_identity_but_rejects_input_or_settings_changes(self):
+        output = self.root / "source_transition"
+        comparison.initialize_run(output, self.config, self.plan)
+        changed = {**self.config, "runner_sha256": "new_source_fingerprint"}
+        resolved = three.resolve_resume_config(output, changed)
+        self.assertEqual(resolved, self.config)
+        transition = comparison.read_json(output / "source_transition.json")
+        self.assertTrue(transition["versions"][0]["all_non_source_config_fields_and_input_hashes_match"])
+        self.assertEqual(len(transition["versions"]), 1)
+        three.resolve_resume_config(output, changed)
+        self.assertEqual(len(comparison.read_json(output / "source_transition.json")["versions"]), 1)
+        with self.assertRaises(ValueError):
+            three.resolve_resume_config(output, {**changed, "temperature": .5})
+        with self.assertRaises(ValueError):
+            three.resolve_resume_config(output, {**changed, "inputs": []})
+
+    def test_renderer_counts_reused_exact_requests_without_duplicate_summary_files(self):
+        output = self.root / "viewer"; output.mkdir()
+        row = comparison.generate_one(self.plan[0], self.config, "fixture", "fixture", lambda _: self.response())
+        row["response_origin"] = "reused_exact_request"
+        summary = three.render_reports(output, [row], self.config)
+        self.assertEqual(summary["methods"][row["method"]]["reused_controls"], 1)
+        self.assertTrue((output / "report.html").is_file())
+        self.assertFalse((output / "summary.json").exists())
+        self.assertFalse((output / "comparison.csv").exists())
+
     def test_three_arm_resume_and_unknown_usage_use_existing_durable_engine(self):
         output = self.root / "run"; calls = []
         def request(text):
@@ -141,11 +167,12 @@ class ThreeWayTests(unittest.TestCase):
         with patch.object(three, "GlobalRateLimiter", return_value=limiter):
             three.run_experiment(output, self.config, self.plan, api_key="fixture", limit=1, workers=1, request_function=request)
             self.assertEqual(len(calls), 3)
-            three.run_experiment(output, self.config, self.plan, api_key="fixture", workers=1, request_function=request)
+            summary = three.run_experiment(output, self.config, self.plan, api_key="fixture", workers=1, request_function=request)
         self.assertEqual(len(calls), 6)
         rows = comparison.load_completed(output, comparison.digest(self.config))
         self.assertEqual(len(rows), 6)
-        summary = comparison.read_json(output / "summary.json")
+        self.assertFalse((output / "summary.json").exists())
+        self.assertFalse((output / "comparison.csv").exists())
         self.assertEqual(set(summary["methods"]), set(three.METHODS))
         self.assertTrue(all(row["correct"] == 2 for row in summary["methods"].values()))
         self.assertIsNone(summary["methods"]["oracle_hint"]["usage"]["thoughts_token_count"]["sum"])

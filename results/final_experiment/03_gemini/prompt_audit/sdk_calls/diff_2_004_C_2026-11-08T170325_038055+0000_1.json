@@ -1,0 +1,22 @@
+{
+  "id": "diff_2_004",
+  "condition": "C",
+  "method": "oracle_hint",
+  "captured_at": "2026-11-08T17:04:37.033341+00:00",
+  "execution_id": "2026-11-08T170325_038055+0000",
+  "request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "두 이차함수 $f (x)$, $g (x)$가\n$\\lim_{x \\rightarrow \\infty} \\frac{f \\left( x \\right)}{g \\left( x \\right) - x^{2}} = 1$, $\\lim_{x \\rightarrow 3} \\frac{g \\left( x \\right) - f \\left( x \\right)}{x - 3} = 8$\n을 만족시킬 때, $g (5) - f (5)$의 값을 구하시오.\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:x\":37.0,\"latex:(\":29.0,\"latex:)\":29.0,\"latex:{\":20.0,\"latex:}\":20.0,\"latex:-\":19.0,\"latex:\\\\left\":18.0,\"latex:\\\\right\":18.0,\"kiwi:이\":14.0,\"latex:3\":12.0,\"latex:=\":12.0,\"latex:f\":10.0,\"latex:g\":10.0,\"latex:1\":6.0,\"latex:k\":6.0,\"kiwi:의\":5.0,\"latex:+\":5.0,\"latex:\\\\frac\":5.0,\"latex:\\\\lim\":5.0,\"latex:\\\\rightarrow\":5.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "request_sha256": "9baa356f011e5a76581f1f78e63a3872d131f25ab255159c10075f3cd34af49d",
+  "matches_saved_prompt": true,
+  "capture": "immediately_before_sdk_generate_content"
+}

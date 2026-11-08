@@ -1,0 +1,22 @@
+{
+  "id": "trig_2_017",
+  "condition": "C",
+  "method": "oracle_hint",
+  "captured_at": "2026-11-08T17:11:21.538566+00:00",
+  "execution_id": "2026-11-08T170325_038055+0000",
+  "request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "$\\frac{3}{2} \\pi < \\theta < 2 \\pi$인 $\\theta$에 대하여 $\\sin \\left( - \\theta \\right) = \\frac{1}{3}$일 때, $\\tan \\theta$의 값은?\n① $- \\frac{\\sqrt{2}}{2}$\t② $- \\frac{\\sqrt{2}}{4}$\t③ $- \\frac{1}{4}$\n④ $\\frac{1}{4}$\t\t⑤ $\\frac{\\sqrt{2}}{4}$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:{\":23.0,\"latex:}\":23.0,\"latex:2\":9.0,\"latex:=\":9.0,\"latex:\\\\theta\":9.0,\"latex:-\":8.0,\"latex:\\\\frac\":8.0,\"latex:1\":6.0,\"latex:3\":5.0,\"latex:\\\\sin\":5.0,\"latex:\\\\sqrt\":5.0,\"kiwi:[\":2.0,\"kiwi:]\":2.0,\"kiwi:이\":2.0,\"latex:(\":2.0,\"latex:)\":2.0,\"latex:<\":2.0,\"latex:\\\\cos\":2.0,\"latex:\\\\left\":2.0,\"latex:\\\\pi\":2.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "request_sha256": "eee45028d992f109065c1645449a43def9e85b4c30c02bb637cd5e5a5e540151",
+  "matches_saved_prompt": true,
+  "capture": "immediately_before_sdk_generate_content"
+}

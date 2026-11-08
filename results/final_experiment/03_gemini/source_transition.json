@@ -1,0 +1,31 @@
+{
+  "frozen_config_id": "fca7807f5e1e3cd16682847b4e70c49ad6b30c2d733b5d9e83c6c2f65164cf87",
+  "frozen_source_hashes": {
+    "runner_sha256": "4e96083ad1135031febf401e079d3c7211cf262c481591e1c18525634f90c87e",
+    "shared_runner_sha256": "0ad583a3dc4dbc0678adf85f9c3bbe3f4e9a155adf4dc1713b5e99ca24514765"
+  },
+  "versions": [
+    {
+      "recorded_at": "2026-11-08T17:17:33.964778+00:00",
+      "source_hashes": {
+        "runner_sha256": "5ffda233a2a17caacfb8da038db4f180625d8f13b3c41cf559e0b9dd72d39bd4",
+        "shared_runner_sha256": "0ad583a3dc4dbc0678adf85f9c3bbe3f4e9a155adf4dc1713b5e99ca24514765"
+      },
+      "all_non_source_config_fields_and_input_hashes_match": true,
+      "reason": "Source provenance changed; model/settings/prompt/vector/input/grader fingerprints are identical."
+    }
+  ],
+  "frozen_source_commit": "4f676586562668affe7800b4163cb44fc6d20520",
+  "frozen_git_blobs_verified": {
+    "mathhint_solver/ThreeWayGeneration.py": {
+      "sha256": "4e96083ad1135031febf401e079d3c7211cf262c481591e1c18525634f90c87e",
+      "matches_executed_config": true
+    },
+    "mathhint_solver/CompareGeneration.py": {
+      "sha256": "0ad583a3dc4dbc0678adf85f9c3bbe3f4e9a155adf4dc1713b5e99ca24514765",
+      "matches_executed_config": true
+    }
+  },
+  "recovery_command": "git show 4f676586562668affe7800b4163cb44fc6d20520:<source path>",
+  "change_description": "After all live calls completed: correct reused-request display counter, remove redundant derived summary/comparison files from runner, and allow source-only maintenance with every semantic setting/input/grader fingerprint unchanged. No API inputs or saved responses were changed."
+}

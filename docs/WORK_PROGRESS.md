@@ -150,3 +150,23 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 시작 stdout: pendingC80, reused_successes160, 동결config fca7807f...65164cf87 일치. C외 조건은 호출하지 않는 assert와 프로세스간fcntl잠금을 사용하는 parent 실행이다.
 - 기존 API160개를 건너뛰며 신규C80개만 요청한다. 실행·SDK직전 스냅샷·응답 fsync로그를 확인하며 진행한다. 아직 전체완료가 아니다.
 - 이전 startup 차단은 프로그램오류나 호출실패로 채점하지 않는다. 승인 대기 중 새 메시지로 실행이 중단되는 문제가 있었고 현재 해결되어 실제실행중이다.
+
+## 실API 진행 체크포인트 — 2026-11-08T17:12:29.541468+00:00
+
+- 사용자 환경 설정이 danger-full-access/network-enabled/approval-never로 변경되어 추가 승인 인자를 쓰지 않고 실행한다. native API session83444는 계속 실행 중이다.
+- `git push` 성공: 원격 main `4f67658`, 복구브랜치 `recovery/before-final-cleanup-20261108` 생성 확인.
+- 현재 저장 상태: {('baseline', 'success'): 80, ('regression_hint', 'success'): 80, ('oracle_hint', 'success'): 74, ('oracle_hint', 'api_error'): 1}. 새C성공이 도착할 때마다 SDK직전snapshot과 응답을 저장한다.
+- diff_2_020 첫시도 ReadTimeout(90초, 서버처리/usage미확인)1건. 오답으로 채점하지 않았다. 성공응답 중복 없이 로그/응답ID 부재를 확인한 뒤 기존max_attempts2 총예산 안에서 해당1건만 재개할 예정이다. 최초실패 사용량은null로 보존한다.
+- C수학검토는 원문/해설과 직접 대조하는 AI보조 검토로 진행 중이며 최종답 정오와 풀이 타당성을 분리한다. 사람확정검토는0이다.
+
+## 단계4 완료: 실제 세 조건 실험 및 사후감사
+
+- 성공응답240개 확보(A80/B80재사용·C80신규). 새SDK전송81개=C성공80+최초ReadTimeout1. JSONL241행에 최초실패와재개성공을모두보존했다. 성공중복0.
+- diff_2_020은 로컬실패/응답ID부재/기존성공부재를 확인해 정확히한번만재시도했다. 전체시도2회, 재시도는max신규시도1로제한했고실제성공995토큰. 서버의최초처리/사용량은미확인null이다.
+- 사후감사 verification_passed/all_expected_successful=true. 240요청·81실SDKsnapshot·240latestresponse를ID/해시/설정/usage/model_version로대조했다.
+- 원본키 정답수 A78/B77/C75(80개씩), trig_1_010 AI보조키별도 A79/B78/C76. 원본데이터수정0.
+- C성공응답 토큰 입력28372/출력36423/전체64795. A51820/B68615와비교하되 성공응답수치이며누락된실패시도때문에전체청구비용은알수없다.
+- C80개 전부 AI보조수학검토: 적절71/부적절9. 정답오류4개와답은맞지만풀이오류5개를분리했다. 모든인용/응답SHA80개대조통과, 사람확정검토0.
+- 현재source표시수정전실행소스는 원격4f67658 Gitblob에서복구가능하며실행당시SHA동일확인. 표시카운터수정·중복summary/comparison제거후 source_transition.json으로기록했다. 입력/설정변경은허용하지않고소스provenance2필드만변경된경우동결config를유지한다.
+- 실제SDK호출을금지한표준main재개검증:240개모두skip, 신규호출0, 응답/입력/설정/SDK81개해시불변. 관련36testsPASS.
+- 다음: 최종보고서전체재집계·전체test/결과무결성/링크검증·최종커밋푸시·자동화중지확인. 아직최종완료표시는하지않는다.

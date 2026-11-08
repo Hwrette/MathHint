@@ -1,0 +1,22 @@
+{
+  "id": "trig_3_040",
+  "condition": "C",
+  "method": "oracle_hint",
+  "captured_at": "2026-11-08T17:12:46.542805+00:00",
+  "execution_id": "2026-11-08T170325_038055+0000",
+  "request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "${0 \\leq x < 2 \\pi}$일 때, $x$에 대한 부등식\n$\\sin^{2} x - 4 \\sin x - 5 k + 5 \\geq 0$\n이 항상 성립하도록 하는 실수 $k$의 최댓값은?\n① $\\frac{2}{5}$\t\t② $\\frac{1}{2}$\t\t③ $\\frac{3}{5}$\n④ $\\frac{7}{10}$\t\t⑤ $\\frac{4}{5}$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:-\":11.0,\"latex:t\":10.0,\"latex:1\":9.0,\"latex:2\":8.0,\"latex:5\":8.0,\"latex:k\":8.0,\"latex:{\":8.0,\"latex:}\":8.0,\"latex:(\":6.0,\"latex:)\":6.0,\"latex:\\\\left\":6.0,\"latex:\\\\right\":6.0,\"latex:+\":5.0,\"latex:\\\\leq\":5.0,\"kiwi:이\":4.0,\"latex:0\":4.0,\"latex:\\\\geq\":4.0,\"latex:^\":4.0,\"latex:=\":3.0,\"latex:\\\\sin\":3.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "request_sha256": "f0fd9851da7f4a8dd61b9533dac1dd3ce1c7899366693e7cb3fd4818c848c7c7",
+  "matches_saved_prompt": true,
+  "capture": "immediately_before_sdk_generate_content"
+}

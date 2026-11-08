@@ -1,0 +1,14 @@
+{
+  "id": "diff_2_020",
+  "checked_at": "2026-11-08T17:14:48.343733+00:00",
+  "prior_status": "api_error",
+  "prior_attempts": 1,
+  "prior_output_missing": true,
+  "prior_response_id_missing": true,
+  "prior_server_processing": "unknown; no recoverable response available locally",
+  "prior_usage": "unknown; not zero",
+  "maximum_additional_attempts": 1,
+  "maximum_total_attempts": 2,
+  "reason": "One verified failed request with no successful response; bounded resume under existing retry budget; all239 successful conditions skipped.",
+  "generation_settings_changed": false
+}

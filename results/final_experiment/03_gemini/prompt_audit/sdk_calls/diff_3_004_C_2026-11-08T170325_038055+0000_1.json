@@ -1,0 +1,22 @@
+{
+  "id": "diff_3_004",
+  "condition": "C",
+  "method": "oracle_hint",
+  "captured_at": "2026-11-08T17:07:22.142175+00:00",
+  "execution_id": "2026-11-08T170325_038055+0000",
+  "request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "두 함수 $f (x)$, $g (x)$가\n$\\lim_{x \\rightarrow 1} \\frac{f (x)}{x - 1} = 8$, $\\lim_{x \\rightarrow 1} \\frac{g (x)}{x^{2} - 1} = \\frac{1}{2}$\n을 만족시킬 때, $\\lim_{x \\rightarrow 1} \\frac{(x + 1) f (x)}{g (x)}$의 값을 구하시오.\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:{\":19.0,\"latex:}\":19.0,\"latex:x\":15.0,\"latex:1\":10.0,\"latex:(\":7.0,\"latex:)\":7.0,\"latex:2\":6.0,\"latex:\\\\frac\":6.0,\"latex:=\":5.0,\"latex:-\":4.0,\"latex:\\\\lim\":4.0,\"latex:\\\\rightarrow\":4.0,\"latex:_\":4.0,\"latex:g\":4.0,\"latex:^\":3.0,\"kiwi:[\":2.0,\"kiwi:]\":2.0,\"kiwi:이\":2.0,\"latex:16\":2.0,\"latex:\\\\times\":2.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "request_sha256": "08911c400cb07dd1aa6e94a0e598d086a0c787b0533387d711e444920067b094",
+  "matches_saved_prompt": true,
+  "capture": "immediately_before_sdk_generate_content"
+}

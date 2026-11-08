@@ -1,0 +1,22 @@
+{
+  "id": "diff_2_040",
+  "condition": "C",
+  "method": "oracle_hint",
+  "captured_at": "2026-11-08T17:07:07.140741+00:00",
+  "execution_id": "2026-11-08T170325_038055+0000",
+  "request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "수직선 위를 움직이는 두 점 ${\\mathrm{{P}}}$, ${\\mathrm{{Q}}}$의 시각 $t \\quad \\left( t \\geq 0 \\right)$에서의 위치가 각각\n$x_{1} = t^{2} + t - 6$, $x_{2} = - t^{3} + 7 t^{2}$\n이다. 두 점 ${\\mathrm{{P}}}$, ${\\mathrm{{Q}}}$의 위치가 같아지는 순간 두 점 ${\\mathrm{{P}}}$, ${\\mathrm{{Q}}}$의 가속도를 각각 $p$, $q$라 할 때, $p - q$의 값은?\n① $\\mathrm{24}$\t\t② $\\mathrm{27}$\t\t③ $\\mathrm{30}$\n④ $\\mathrm{33}$\t\t⑤ $\\mathrm{36}$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:{\":22.0,\"latex:}\":22.0,\"latex:t\":12.0,\"latex:2\":10.0,\"latex:=\":10.0,\"latex:_\":10.0,\"latex:-\":9.0,\"latex:1\":6.0,\"latex:x\":6.0,\"kiwi:,\":5.0,\"latex:(\":5.0,\"latex:)\":5.0,\"latex:\\\\left\":5.0,\"latex:\\\\right\":5.0,\"kiwi:의\":4.0,\"latex:+\":4.0,\"latex:6\":4.0,\"latex:\\\\mathrm\":4.0,\"latex:^\":4.0,\"latex:a\":4.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "request_sha256": "6a5d12cf9ddc1a97cd04c7f086d7aceec9c48c42a918c185eabfe6c24790d126",
+  "matches_saved_prompt": true,
+  "capture": "immediately_before_sdk_generate_content"
+}

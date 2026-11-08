@@ -1,0 +1,22 @@
+{
+  "id": "diff_1_036",
+  "condition": "C",
+  "method": "oracle_hint",
+  "captured_at": "2026-11-08T17:04:22.031780+00:00",
+  "execution_id": "2026-11-08T170325_038055+0000",
+  "request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "양수 $a$에 대하여 함수 $f \\left( x \\right)$를\n$f \\left( x \\right) = x^{3} + 3 a x^{2} - 9 a^{2} x + 4$\n라 하자. 직선 $y = 5$가 곡선 $y = f \\left( x \\right)$에 접할 때, $f \\left( 2 \\right)$의 값은?\n① $11$\t\t② $12$\t\t③ $13$\n④ $14$\t\t⑤ $15$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:a\":39.0,\"latex:{\":36.0,\"latex:}\":36.0,\"latex:3\":31.0,\"latex:=\":31.0,\"latex:^\":28.0,\"latex:x\":23.0,\"latex:+\":20.0,\"latex:-\":19.0,\"latex:2\":16.0,\"latex:(\":14.0,\"latex:)\":14.0,\"latex:\\\\left\":14.0,\"latex:\\\\right\":14.0,\"kiwi:이\":10.0,\"latex:4\":10.0,\"latex:5\":10.0,\"latex:f\":9.0,\"latex:27\":7.0,\"kiwi:,\":6.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "request_sha256": "0933d57da51cd9cbfcbb2f25416c9fc63e22360c1a0edc9c1cac600a6f8cb0b4",
+  "matches_saved_prompt": true,
+  "capture": "immediately_before_sdk_generate_content"
+}

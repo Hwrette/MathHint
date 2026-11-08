@@ -1,0 +1,22 @@
+{
+  "id": "diff_1_028",
+  "condition": "C",
+  "method": "oracle_hint",
+  "captured_at": "2026-11-08T17:04:00.402055+00:00",
+  "execution_id": "2026-11-08T170325_038055+0000",
+  "request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "점 $\\left( 0 , 1 \\right)$에서 곡선 $y = x^{3} - 2 x + 17$에 그은 접선이 점 $\\left( a , 11 \\right)$을 지날 때, $a$의 값은?\n① $1$\t\t② $2$\t\t③ $3$\n④ $4$\t\t⑤ $5$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:2\":13.0,\"latex:-\":11.0,\"latex:t\":11.0,\"latex:=\":10.0,\"latex:3\":9.0,\"latex:^\":9.0,\"latex:{\":9.0,\"latex:}\":9.0,\"latex:(\":8.0,\"latex:)\":8.0,\"latex:+\":8.0,\"latex:\\\\left\":8.0,\"latex:\\\\right\":8.0,\"latex:x\":8.0,\"latex:1\":6.0,\"latex:17\":6.0,\"latex:y\":6.0,\"kiwi:이\":5.0,\"kiwi:의\":4.0,\"latex:,\":4.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "request_sha256": "641ad532992d2a03c31cab5d9fa10be2a052bef0f0adddd14d6b047c103fb7c6",
+  "matches_saved_prompt": true,
+  "capture": "immediately_before_sdk_generate_content"
+}

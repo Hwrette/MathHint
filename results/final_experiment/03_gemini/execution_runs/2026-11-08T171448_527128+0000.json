@@ -1,0 +1,11 @@
+{
+  "config_id": "fca7807f5e1e3cd16682847b4e70c49ad6b30c2d733b5d9e83c6c2f65164cf87",
+  "started_at": "2026-11-08T17:14:48.527321+00:00",
+  "status": "completed",
+  "wrapper_sha256": "4e96083ad1135031febf401e079d3c7211cf262c481591e1c18525634f90c87e",
+  "interval": 5.0,
+  "workers": 2,
+  "retry_errors": true,
+  "limit": null,
+  "completed_at": "2026-11-08T17:14:57.273312+00:00"
+}
