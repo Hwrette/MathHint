@@ -80,3 +80,15 @@ git restore --source=recovery/before-final-cleanup-20261108 -- examples mathhint
 - `README.md`, `docs/code_guide_ko.md`: 현행 단일 데이터 준비·4단계 군집화·실수 회귀 검증·A/B/C 입력 준비·선택 API 실행·저장 결과 재집계 경로로 교체한다. 신규 API 실행은 소스의 상수를 편집하지 않고 프로세스 안에서 `run.RUN_API = True`로 지정하도록 안내해 입력/소스 해시 가드를 유지한다.
 
 두 번째 삭제 수행 시점(UTC): 2026-11-08T16:45:16.080444+00:00
+
+- 두 번째 정리 후 HML·수식·분할·BoW 핵심 검사: 56개 실행, 실패0개, 오류0개, 건너뜀0개.
+- README의6개 모듈이 실제 존재하고 main/run 실행 진입점을 제공함을 확인했다. 이 확인을 위해 API나 재학습을 실행하지 않았다.
+- README/코드 안내의 모든 로컬 링크 존재 및 설치 extra/폐기 viewer 의존성 제거 검사: PASS.
+- 두 번째 검증 시점(UTC): 2026-11-08T16:48:18.631166+00:00
+
+## 취소 초안 복구 ZIP의 Git 이력 이동
+
+- `docs/checkpoints/cancelled_before_final.zip`, `docs/checkpoints/README.md`를 현재 트리에서 삭제했다. ZIP은 로컬 및 원격 main 이력의 `588d86f`와 완전히 같은 바이트임을 확인했다(SHA256 `56cc3b6aad2ea6d5b3b0784a820f1f3549d4138fae557adcec2e3f862055756c`).
+- 복구: `git show 588d86f:docs/checkpoints/cancelled_before_final.zip > /tmp/mathhint_cancelled_checkpoint.zip`. 이 이력은 원격 게시 확인된5eca866의 조상이다. 새 최종 실험에 채택되지 않은 정수·전체벡터 초안의 중복 백업을 작업 공간에 남기지 않는다.
+- 기존 `results/model_comparison_2026-11-07/`는 재사용 API160개·AI검토·모델·학습기록·930파일 manifest를 연결하는 불변 근거 묶음으로 보존한다. 새 최종 안내는 `results/final_experiment/README.md` 하나를 사용한다. 오래된 정답/입력/응답을 새 실험으로 가장하지 않는다.
+- `.env`는 내용과 해시를 수집하지 않고 Git 제외 상태로 보존했다. 원본 데이터·분할·어휘·기존 결과는 삭제하지 않았다.

@@ -1,0 +1,241 @@
+{
+  "audit_type": "independent_readonly_machine_learning_audit",
+  "audited_at": "2026-11-08T16:49:33.427553+00:00",
+  "status": "PASS_WITH_FLOAT_PRECISION_TIE_NOTE",
+  "new_training_runs_by_auditor": 0,
+  "API_calls_by_auditor": 0,
+  "source_sha256": {
+    "mathhint_learning/TorchKMeans.py": "0bfb7f8a776c456af3db97bb6c31011f06aee47087afce97ed6631cfc3997521",
+    "mathhint_learning/FinalClustering.py": "e1b356949046259980ed5e5fb23847d973fd525597830480cc4dd58e3e7e0045",
+    "mathhint_learning/ClusterReport.py": "754b77e044b38711c4557977464b62f0a4821f6823c5ce15b28f7cefa9a18d6d",
+    "mathhint_learning/VectorComparison.py": "3a554963a3d2e85a0b755ada0acb85c9521f9d3421fbfa4a49087cb2a0af0f22"
+  },
+  "checks": {
+    "four_actual_hierarchy_paths_and_training_derived_k": true,
+    "same_seed_candidates_42_to_46_both_methods": true,
+    "best_restart_uses_training_objective_only": true,
+    "euclidean_raw_mean_centers": true,
+    "spherical_L2_inputs_and_normalized_updated_centers": true,
+    "zero_and_empty_spherical_cases_protected_by_tests": true,
+    "all_8_models_265_rows_reassigned_with_native_float32": true,
+    "float64_reassignments_match_except_recorded_near_ties": true,
+    "all_16_summary_rows_ARI_NMI_and_train_majority_accuracy_recomputed_independently": true,
+    "PCA_training_only_mean_and_saved_projection_algebra_verified": true,
+    "regression_80_integer_truth_and_unrounded_raw_clipped_values_verified": true,
+    "regression_all_three_summary_and_per_question_metrics_recomputed_float64": true,
+    "top20_positive_ties_vocab_rule_recomputed_for_all_80": true,
+    "old_three_Euclidean_models_exactly_equal_but_refit_disclosed": true
+  },
+  "clustering_metrics_checks": [
+    {
+      "experiment": "curriculum_euclidean",
+      "split": "train",
+      "n": 185,
+      "k_train_derived": 2,
+      "assignment_and_independent_ari_nmi_majority_match": true
+    },
+    {
+      "experiment": "curriculum_euclidean",
+      "split": "test",
+      "n": 80,
+      "k_train_derived": 2,
+      "assignment_and_independent_ari_nmi_majority_match": true
+    },
+    {
+      "experiment": "curriculum_spherical",
+      "split": "train",
+      "n": 185,
+      "k_train_derived": 2,
+      "assignment_and_independent_ari_nmi_majority_match": true
+    },
+    {
+      "experiment": "curriculum_spherical",
+      "split": "test",
+      "n": 80,
+      "k_train_derived": 2,
+      "assignment_and_independent_ari_nmi_majority_match": true
+    },
+    {
+      "experiment": "unit_euclidean",
+      "split": "train",
+      "n": 185,
+      "k_train_derived": 8,
+      "assignment_and_independent_ari_nmi_majority_match": true
+    },
+    {
+      "experiment": "unit_euclidean",
+      "split": "test",
+      "n": 80,
+      "k_train_derived": 8,
+      "assignment_and_independent_ari_nmi_majority_match": true
+    },
+    {
+      "experiment": "unit_spherical",
+      "split": "train",
+      "n": 185,
+      "k_train_derived": 8,
+      "assignment_and_independent_ari_nmi_majority_match": true
+    },
+    {
+      "experiment": "unit_spherical",
+      "split": "test",
+      "n": 80,
+      "k_train_derived": 8,
+      "assignment_and_independent_ari_nmi_majority_match": true
+    },
+    {
+      "experiment": "subunit_euclidean",
+      "split": "train",
+      "n": 185,
+      "k_train_derived": 25,
+      "assignment_and_independent_ari_nmi_majority_match": true
+    },
+    {
+      "experiment": "subunit_euclidean",
+      "split": "test",
+      "n": 80,
+      "k_train_derived": 25,
+      "assignment_and_independent_ari_nmi_majority_match": true
+    },
+    {
+      "experiment": "subunit_spherical",
+      "split": "train",
+      "n": 185,
+      "k_train_derived": 25,
+      "assignment_and_independent_ari_nmi_majority_match": true
+    },
+    {
+      "experiment": "subunit_spherical",
+      "split": "test",
+      "n": 80,
+      "k_train_derived": 25,
+      "assignment_and_independent_ari_nmi_majority_match": true
+    },
+    {
+      "experiment": "type_euclidean",
+      "split": "train",
+      "n": 185,
+      "k_train_derived": 70,
+      "assignment_and_independent_ari_nmi_majority_match": true
+    },
+    {
+      "experiment": "type_euclidean",
+      "split": "test",
+      "n": 80,
+      "k_train_derived": 70,
+      "assignment_and_independent_ari_nmi_majority_match": true
+    },
+    {
+      "experiment": "type_spherical",
+      "split": "train",
+      "n": 185,
+      "k_train_derived": 70,
+      "assignment_and_independent_ari_nmi_majority_match": true
+    },
+    {
+      "experiment": "type_spherical",
+      "split": "test",
+      "n": 80,
+      "k_train_derived": 70,
+      "assignment_and_independent_ari_nmi_majority_match": true
+    }
+  ],
+  "center_update_checks": [
+    {
+      "experiment": "curriculum_euclidean",
+      "max_abs_update_error_float64": 5.651403363060581e-07
+    },
+    {
+      "experiment": "curriculum_spherical",
+      "max_abs_update_error_float64": 2.7802850022240477e-08
+    },
+    {
+      "experiment": "unit_euclidean",
+      "max_abs_update_error_float64": 2.3072765742426782e-07
+    },
+    {
+      "experiment": "unit_spherical",
+      "max_abs_update_error_float64": 4.079187371219817e-08
+    },
+    {
+      "experiment": "subunit_euclidean",
+      "max_abs_update_error_float64": 4.0871756468163767e-07
+    },
+    {
+      "experiment": "subunit_spherical",
+      "max_abs_update_error_float64": 6.56189054759615e-08
+    },
+    {
+      "experiment": "type_euclidean",
+      "max_abs_update_error_float64": 3.8146972691777137e-07
+    },
+    {
+      "experiment": "type_spherical",
+      "max_abs_update_error_float64": 5.165294586495506e-08
+    }
+  ],
+  "PCA_checks": [
+    {
+      "method": "euclidean",
+      "saved_mean_matches_training_only_mean": true,
+      "all_265_projections_match_saved_components": true
+    },
+    {
+      "method": "spherical",
+      "saved_mean_matches_training_only_mean": true,
+      "all_265_projections_match_saved_components": true
+    }
+  ],
+  "regression_checks": [
+    {
+      "method": "training_mean",
+      "independent_float64_metrics_and_80_per_question_values_match_float32_results": true,
+      "mse": 3.5594324612440875,
+      "mae": 0.48431209631905686,
+      "cosine_similarity": 0.7986296659227683
+    },
+    {
+      "method": "raw",
+      "independent_float64_metrics_and_80_per_question_values_match_float32_results": true,
+      "mse": 3.356984758177298,
+      "mae": 0.6229177452314033,
+      "cosine_similarity": 0.8200150209551147
+    },
+    {
+      "method": "clipped_nonnegative",
+      "independent_float64_metrics_and_80_per_question_values_match_float32_results": true,
+      "mse": 3.0124780914585165,
+      "mae": 0.4855836258279975,
+      "cosine_similarity": 0.8479803100251626
+    }
+  ],
+  "top20_mean_common": 14.0625,
+  "finite_precision_ties": [
+    {
+      "experiment": "type_euclidean",
+      "split": "test",
+      "id": "trig_3_014",
+      "saved_float32_cluster": 64,
+      "float64_cluster": 65,
+      "objective_distance_gap_float64": 5.15154340519075e-07
+    }
+  ],
+  "tests_executed": {
+    "final_clustering": {
+      "passed": 6,
+      "total": 6
+    },
+    "vector_comparison": {
+      "passed": 4,
+      "total": 4
+    }
+  },
+  "limitations": [
+    "This audit does not refit the8 final clustering experiments or retrain regression; it verifies stored models, algebra, assignments and code paths.",
+    "For k=70,185 training and80 test examples are sparse. Test has42 observed types, only34/37 occupied Euclidean/spherical clusters; high NMI is not high classification accuracy.",
+    "Test results had already been observed before this follow-up design; absence of training leakage does not make this an untouched independent holdout.",
+    "Zero/empty-cluster handling is verified by small synthetic tests; actual data has no zero input rows.",
+    "Clustering config records inputs/settings and manifest artifact hashes, not runner source hashes; this audit records actual source hashes and Git must preserve that code revision.",
+    "Native float32 distances determine cluster membership; mathematically near-tied assignments may differ if recalculated with float64, recorded explicitly above."
+  ]
+}

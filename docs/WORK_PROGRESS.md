@@ -128,3 +128,11 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 보고서 핵심8테스트 통과, 5개 생성Markdown의 상대 파일링크 누락0.
 - 새 `mathhint_analysis/VerifyResults.py`를 실행해 고정분할·정수빈도·군집 커버리지/해시·독립NumPy회귀지표·240요청해시·80행응답대응 268검사 통과. 현재160/240이므로 전체완료false다.
 - 단계4 live C80의 시작 요청은 현재 동일 실행을 대기 중이다. 자동 재요청하지 않고 저장 응답/SDK로그로 실제 시작 여부를 확인한다.
+
+## 정리 후 전체 검증
+
+- `python -m unittest discover -s tests -v`:135개 전부 PASS, 7.600초. 원본 로그는 `/tmp/mathhint-final-tests.log`; 최종 검증 로그에 보존한다.
+- `results/final_experiment/independent_ml_audit.json`: 군집2120배정·16행ARI/NMI를 독립 수식 재계산, 구면 중심·train-only대표/PCA·회귀80문항 지표/상위토큰 대조 통과. type_euclidean trig_3_014의5.15e-7 near-tie는 float32재현정상이며 한계로 기록했다.
+- 남은 중복 보조4파일을 삭제하고 README/코드안내를 현행6명령으로 교체했다. 자세한 실제 목록은 cleanup_changes.md.
+- 취소 초안 ZIP은 원격에 게시된588d86f의 blob과 바이트 일치 확인 후 현재트리에서 제거했다. Git 이력으로 복구한다. `.env`는 계속 Git 제외, 데이터/기존실험930파일은 보존했다.
+- 단계1~3 완료, 단계4 SDK입력감사/기존160재사용 완료 및 live C80 시작 대기, 단계5 160/240 부분표/그림/보고서 완료, 단계6 핵심정리 완료, 단계7 전체135tests·268artifact검사 통과이나 C사후검증/최종보고/최종원격 반영 대기. 전체완료 아님.
