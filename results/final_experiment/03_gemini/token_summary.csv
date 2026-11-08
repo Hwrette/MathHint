@@ -1,0 +1,13 @@
+﻿condition,method,token_field,token_kind,successful_responses,provided_responses,missing_responses,sum_when_all_provided,sum_of_known,mean_of_known,all_attempts_known_sum,all_attempts_strict_total
+A,baseline,prompt_token_count,입력,80,80,0,12051,12051,150.6375,12051,
+A,baseline,candidates_token_count,출력,80,80,0,39769,39769,497.1125,39769,
+A,baseline,thoughts_token_count,추론,80,0,80,,,,,
+A,baseline,total_token_count,전체,80,80,0,51820,51820,647.75,51820,
+B,regression_hint,prompt_token_count,입력,80,80,0,31600,31600,395.0,31600,31600
+B,regression_hint,candidates_token_count,출력,80,80,0,37015,37015,462.6875,37015,37015
+B,regression_hint,thoughts_token_count,추론,80,0,80,,,,,
+B,regression_hint,total_token_count,전체,80,80,0,68615,68615,857.6875,68615,68615
+C,oracle_hint,prompt_token_count,입력,0,0,0,,,,,
+C,oracle_hint,candidates_token_count,출력,0,0,0,,,,,
+C,oracle_hint,thoughts_token_count,추론,0,0,0,,,,,
+C,oracle_hint,total_token_count,전체,0,0,0,,,,,

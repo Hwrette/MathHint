@@ -1,0 +1,1083 @@
+{
+  "verified_at": "2026-11-08T16:46:20.341531+00:00",
+  "checks": [
+    {
+      "check": "fixed_split_185_80_disjoint",
+      "passed": true
+    },
+    {
+      "check": "problems_train_rows_and_integer_counts",
+      "passed": true
+    },
+    {
+      "check": "problems_test_rows_and_integer_counts",
+      "passed": true
+    },
+    {
+      "check": "solutions_train_rows_and_integer_counts",
+      "passed": true
+    },
+    {
+      "check": "solutions_test_rows_and_integer_counts",
+      "passed": true
+    },
+    {
+      "check": "clustering_8_experiments_16_metrics_2120_members",
+      "passed": true
+    },
+    {
+      "check": "curriculum_euclidean_id_coverage",
+      "passed": true
+    },
+    {
+      "check": "curriculum_spherical_id_coverage",
+      "passed": true
+    },
+    {
+      "check": "subunit_euclidean_id_coverage",
+      "passed": true
+    },
+    {
+      "check": "subunit_spherical_id_coverage",
+      "passed": true
+    },
+    {
+      "check": "type_euclidean_id_coverage",
+      "passed": true
+    },
+    {
+      "check": "type_spherical_id_coverage",
+      "passed": true
+    },
+    {
+      "check": "unit_euclidean_id_coverage",
+      "passed": true
+    },
+    {
+      "check": "unit_spherical_id_coverage",
+      "passed": true
+    },
+    {
+      "check": "clustering_artifact_hashes",
+      "passed": true
+    },
+    {
+      "check": "regression_test_id_order",
+      "passed": true
+    },
+    {
+      "check": "regression_truth_exact_and_integer",
+      "passed": true
+    },
+    {
+      "check": "regression_training_mean_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "regression_raw_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "regression_clipped_nonnegative_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "gemini_config_digest",
+      "passed": true
+    },
+    {
+      "check": "gemini_no_duplicate_success",
+      "passed": true
+    },
+    {
+      "check": "gemini_expected_response_keys",
+      "passed": true
+    },
+    {
+      "check": "gemini_all_records_same_config",
+      "passed": true
+    },
+    {
+      "check": "gemini_A_80_exact_request_hashes",
+      "passed": true
+    },
+    {
+      "check": "gemini_B_80_exact_request_hashes",
+      "passed": true
+    },
+    {
+      "check": "gemini_C_80_exact_request_hashes",
+      "passed": true
+    },
+    {
+      "check": "gemini_comparison_all_80_ids",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_005_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_005_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_005_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_011_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_011_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_011_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_012_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_012_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_012_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_014_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_014_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_014_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_018_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_018_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_018_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_022_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_022_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_022_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_026_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_026_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_026_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_028_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_028_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_028_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_030_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_030_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_030_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_036_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_036_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_036_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_038_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_038_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_038_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_039_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_039_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_039_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_041_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_041_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_1_041_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_004_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_004_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_004_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_006_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_006_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_006_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_007_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_007_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_007_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_010_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_010_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_010_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_013_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_013_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_013_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_014_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_014_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_014_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_016_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_016_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_016_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_018_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_018_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_018_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_020_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_020_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_020_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_023_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_023_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_023_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_024_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_024_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_024_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_029_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_029_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_029_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_030_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_030_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_030_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_031_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_031_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_031_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_036_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_036_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_036_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_037_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_037_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_037_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_040_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_040_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_040_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_041_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_041_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_2_041_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_001_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_001_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_001_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_004_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_004_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_004_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_005_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_005_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_005_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_008_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_008_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_008_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_012_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_012_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_012_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_022_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_022_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_022_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_028_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_028_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_028_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_039_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_039_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_039_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_044_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_044_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_044_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_048_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_048_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_048_C",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_049_A",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_049_B",
+      "passed": true
+    },
+    {
+      "check": "table_diff_3_049_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_004_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_004_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_004_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_007_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_007_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_007_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_009_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_009_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_009_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_010_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_010_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_010_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_011_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_011_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_011_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_013_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_013_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_013_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_018_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_018_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_018_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_020_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_020_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_020_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_021_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_021_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_021_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_028_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_028_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_028_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_032_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_032_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_032_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_035_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_035_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_035_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_039_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_039_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_039_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_042_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_042_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_042_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_043_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_043_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_043_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_046_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_046_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_1_046_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_003_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_003_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_003_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_007_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_007_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_007_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_014_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_014_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_014_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_016_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_016_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_016_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_017_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_017_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_017_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_022_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_022_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_022_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_024_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_024_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_024_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_025_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_025_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_025_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_030_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_030_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_030_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_035_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_035_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_2_035_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_002_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_002_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_002_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_010_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_010_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_010_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_011_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_011_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_011_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_014_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_014_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_014_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_015_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_015_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_015_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_017_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_017_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_017_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_021_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_021_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_021_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_026_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_026_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_026_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_034_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_034_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_034_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_035_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_035_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_035_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_039_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_039_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_039_C",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_040_A",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_040_B",
+      "passed": true
+    },
+    {
+      "check": "table_trig_3_040_C",
+      "passed": true
+    }
+  ],
+  "passed": 268,
+  "failed": 0,
+  "gemini_successful": 160,
+  "gemini_expected": 240,
+  "experiment_complete": false,
+  "limits": "Stored artifact consistency; mathematical solution validity and future network access are separate."
+}

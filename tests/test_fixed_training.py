@@ -11,7 +11,9 @@ except ModuleNotFoundError:
     torch = None
 
 if torch is not None:
-    from mathhint_learning.RunTraining import fit_fixed_regression, load_fixed_dataset, majority_labels
+    from mathhint_learning.TorchRegression import train_regression as fit_fixed_regression
+    from mathhint_learning.TorchData import load_fixed_dataset
+    from mathhint_learning.FinalClustering import majority_labels
 
 
 def write_fixture(root: Path) -> None:
