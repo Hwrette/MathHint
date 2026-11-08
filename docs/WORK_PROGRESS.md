@@ -9,6 +9,8 @@ FIRST_RUN_FROM_SAVED_RULE: 2026-11-09T05:58:50+09:00
 RECURRENCE: EVERY_5_HOURS
 NEXT_RUN_TIME_SERVER_FIELD: NOT_RETURNED
 ENVIRONMENT: MathHint / inherited / current_environment_id_confirmed
+REMOTE_CHECKPOINT_STATUS: PENDING_NETWORK_OR_PERMISSION
+GITHUB_PREAUTHORIZATION_SETTING: WAITING_FOR_USER_SELECTION
 TIMEZONE: Asia/Seoul
 USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 
@@ -46,6 +48,8 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 기계가 읽을 상세 정보는 `docs/automation_state.json`에 있다.
 - 취소된 작업 체크포인트 SHA-256: `56cc3b6aad2ea6d5b3b0784a820f1f3549d4138fae557adcec2e3f862055756c`.
 - 위 LAST_CONFIRMED_PUBLISHED_COMMIT은 자동화 설정 전 완료 작업의 기준 커밋이다. 이 진행 문서의 실제 최신 커밋·원격 상태는 다음 실행에서 Git으로 확인한다.
+- 문서와 체크포인트를 로컬 커밋 `588d86f`로 저장했다. GitHub 전송은 아직 확인되지 않았다. 원격에 문서가 있다고 가정하지 않는다. 현재 MathHint 실행 환경에는 파일이 있다.
+- 사용자는 사전 허용 의사를 밝혔고, GitHub 연결 전체를 모든 작업 허용으로 바꾸는 구체적 범위는 별도 선택 대기 중이다. 승인되기 전에는 그 계정 설정을 변경하지 않는다.
 
 ## 다음에 필요한 입력
 
