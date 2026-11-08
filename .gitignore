@@ -15,7 +15,7 @@ __pycache__/
 *.egg-info/
 build/
 dist/
-# 전처리 결과, 검사 산출물, 원본 자료. 코드 저장소와 데이터 보관을 구별한다.
+# 임시 실행 결과는 제외한다. 검토한 실험 결과는 results/에서 Git으로 관리한다.
 outputs/
 artifacts/
 data/raw/*

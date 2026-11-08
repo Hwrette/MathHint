@@ -1,0 +1,231 @@
+{
+  "id": "trig_3_015",
+  "method": "regression_hint",
+  "input_text": "$0 \\le x \\le \\pi$일 때, 방정식\n$1 + \\sqrt{2} \\sin 2 x = 0$\n의 모든 해의 합은?\n① $\\pi$\t\t② $\\frac{5 \\pi}{4}$\t\t③ $\\frac{3 \\pi}{2}$\n④ $\\frac{7 \\pi}{4}$\t\t⑤ $2 \\pi$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:}\":13.641,\"latex:{\":13.567,\"latex:2\":9.557,\"latex:x\":9.309,\"latex:=\":7.569,\"latex:\\\\sin\":7.289,\"latex:1\":6.141,\"latex:\\\\pi\":4.702,\"kiwi:이\":4.69,\"latex:\\\\frac\":4.385,\"latex:+\":2.993,\"latex:0\":2.974,\"latex:^\":2.831,\"latex:)\":2.801,\"latex:(\":2.719,\"latex:-\":2.53,\"latex:\\\\sqrt\":2.465,\"kiwi:,\":2.204,\"latex:4\":2.089,\"kiwi:]\":1.965}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "1c48205cdf35adb327c8701ce0b0adb336cf74522385fd018163e2f0b5d556e3",
+  "reference": {
+    "answer_text": "③",
+    "kind": "choice",
+    "choice": 3,
+    "value_text": "$\\frac{3 \\pi}{2}$",
+    "source": {
+      "id": "trig_3_015",
+      "source_file": "모의고사_삼각함수_문제_3.hml",
+      "source_sha256": "4853842eca14740e8bbc1083fae38beb51f1c6cde8e78fe6d3c398eca800b30b",
+      "original_number": 15,
+      "current_number": 15
+    },
+    "numeric_value": 4.71238898038469,
+    "gradable": true
+  },
+  "reference_answer_text": "③",
+  "reference_solution": "[정답] ③\n\n[해설]\n$1 + \\sqrt{2} \\sin 2 x = 0$에서\n$\\sin 2 x = - \\frac{1}{\\sqrt{2}}$\n$2 x = \\frac{5 \\pi}{4}$ 또는 $2 x = \\frac{7 \\pi}{4}$\n$x = \\frac{5 \\pi}{8}$ 또는 $x = \\frac{7 \\pi}{8}$\n따라서 모든 해의 합은\n$\\frac{5 \\pi}{8} + \\frac{7 \\pi}{8} = \\frac{12 \\pi}{8} = \\frac{3 \\pi}{2}$\n",
+  "problem_text": "$0 \\le x \\le \\pi$일 때, 방정식\n$1 + \\sqrt{2} \\sin 2 x = 0$\n의 모든 해의 합은?\n① $\\pi$\t\t② $\\frac{5 \\pi}{4}$\t\t③ $\\frac{3 \\pi}{2}$\n④ $\\frac{7 \\pi}{4}$\t\t⑤ $2 \\pi$\n",
+  "subject": "삼각함수",
+  "unit": "06 삼각함수의 그래프",
+  "type": "01 삼각방정식1 (일차식꼴)",
+  "source": "2017년(2018학년도) 평가원 고3이과 9월 > 6 [3점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:}": 13.641,
+      "latex:{": 13.567,
+      "latex:2": 9.557,
+      "latex:x": 9.309,
+      "latex:=": 7.569,
+      "latex:\\sin": 7.289,
+      "latex:1": 6.141,
+      "latex:\\pi": 4.702,
+      "kiwi:이": 4.69,
+      "latex:\\frac": 4.385,
+      "latex:+": 2.993,
+      "latex:0": 2.974,
+      "latex:^": 2.831,
+      "latex:)": 2.801,
+      "latex:(": 2.719,
+      "latex:-": 2.53,
+      "latex:\\sqrt": 2.465,
+      "kiwi:,": 2.204,
+      "latex:4": 2.089,
+      "kiwi:]": 1.965
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:17:19.196941+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:17:19.196953+00:00",
+      "usage": {
+        "prompt_token_count": 368,
+        "candidates_token_count": 310,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 678,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 310,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 368,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 368
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 678,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "I13vaqr-BsnH-8YPkJDJ-A8",
+      "latency_seconds": 5.325,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "주어진 방정식 $1 + \\sqrt{2} \\sin 2x = 0$을 정리하면 다음과 같습니다.\n\n$\\sqrt{2} \\sin 2x = -1$\n$\\sin 2x = -\\frac{1}{\\sqrt{2}} = -\\frac{\\sqrt{2}}{2}$\n\n범위가 $0 \\le x \\le \\pi$이므로, $2x$의 범위는 $0 \\le 2x \\le 2\\pi$입니다.\n$\\sin \\theta = -\\frac{\\sqrt{2}}{2}$를 만족하는 $\\theta$의 값은 $0 \\le \\theta \\le 2\\pi$ 범위에서 다음과 같습니다.\n\n$2x = \\pi + \\frac{\\pi}{4} = \\frac{5\\pi}{4}$\n$2x = 2\\pi - \\frac{\\pi}{4} = \\frac{7\\pi}{4}$\n\n따라서 $x$의 값은 각각 다음과 같습니다.\n$x = \\frac{5\\pi}{8}$\n$x = \\frac{7\\pi}{8}$\n\n이 두 해의 합을 구하면 다음과 같습니다.\n$\\frac{5\\pi}{8} + \\frac{7\\pi}{8} = \\frac{12\\pi}{8} = \\frac{3\\pi}{2}$\n\n따라서 정답은 ③번입니다.\n\n최종정답: ③",
+  "usage": {
+    "prompt_token_count": 368,
+    "candidates_token_count": 310,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 678,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 310,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 368,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 368
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 678,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "I13vaqr-BsnH-8YPkJDJ-A8",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:17:24 GMT",
+        "server": "envoy",
+        "content-length": "837",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1404",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "1662"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "주어진 방정식 $1 + \\sqrt{2} \\sin 2x = 0$을 정리하면 다음과 같습니다.\n\n$\\sqrt{2} \\sin 2x = -1$\n$\\sin 2x = -\\frac{1}{\\sqrt{2}} = -\\frac{\\sqrt{2}}{2}$\n\n범위가 $0 \\le x \\le \\pi$이므로, $2x$의 범위는 $0 \\le 2x \\le 2\\pi$입니다.\n$\\sin \\theta = -\\frac{\\sqrt{2}}{2}$를 만족하는 $\\theta$의 값은 $0 \\le \\theta \\le 2\\pi$ 범위에서 다음과 같습니다.\n\n$2x = \\pi + \\frac{\\pi}{4} = \\frac{5\\pi}{4}$\n$2x = 2\\pi - \\frac{\\pi}{4} = \\frac{7\\pi}{4}$\n\n따라서 $x$의 값은 각각 다음과 같습니다.\n$x = \\frac{5\\pi}{8}$\n$x = \\frac{7\\pi}{8}$\n\n이 두 해의 합을 구하면 다음과 같습니다.\n$\\frac{5\\pi}{8} + \\frac{7\\pi}{8} = \\frac{12\\pi}{8} = \\frac{3\\pi}{2}$\n\n따라서 정답은 ③번입니다.\n\n최종정답: ③",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TlJJgAFV1j7u8x8K6Lb1XuP1eRAPMzW-3NDGny9sqZXUo8-aHHAlL3x7WN9yXtXNjhRW6oihvzuO5oV6-zCpZazo9XxW98xG8l4o9G3jIKW2BxgMSW9Vr4n32h15MpI4STpzyk3zcvv6ebJ1j",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "I13vaqr-BsnH-8YPkJDJ-A8",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 310,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 368,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 368
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 678,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 5.325,
+  "completed_at": "2026-11-07T17:17:24.522192+00:00",
+  "evaluation": {
+    "predicted_answer": "③",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "③",
+    "predicted_kind": "choice",
+    "predicted_choice": 3
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

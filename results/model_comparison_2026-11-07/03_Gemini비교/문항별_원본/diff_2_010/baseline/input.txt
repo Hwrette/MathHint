@@ -1,0 +1,5 @@
+함수
+$f \left( x \right) = {\left\{\begin{array}{lll}x - \frac{1}{2} &  & \left( x < 0 \right) \\ - x^{2} + 3 &  & \left( x \geq 0 \right)\end{array}\right.}$
+에 대하여 함수 $(f (x) + a)^{2}$이 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?
+① $- \frac{9}{4}$	② $- \frac{7}{4}$		③ $- \frac{5}{4}$
+④ $- \frac{3}{4}$	⑤ $- \frac{1}{4}$

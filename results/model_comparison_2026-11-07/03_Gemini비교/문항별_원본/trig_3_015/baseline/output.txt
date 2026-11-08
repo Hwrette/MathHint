@@ -1,0 +1,24 @@
+주어진 방정식 $1 + \sqrt{2} \sin 2x = 0$을 정리하면 다음과 같습니다.
+
+$\sqrt{2} \sin 2x = -1$
+$\sin 2x = -\frac{1}{\sqrt{2}} = -\frac{\sqrt{2}}{2}$
+
+문제에서 $0 \le x \le \pi$라고 하였으므로, $2x$의 범위는 다음과 같습니다.
+$0 \le 2x \le 2\pi$
+
+이제 $\sin \theta = -\frac{\sqrt{2}}{2}$를 만족하는 $\theta$ ($0 \le \theta \le 2\pi$)를 찾습니다.
+사인 함수가 음수 값을 갖는 사분면은 제3사분면과 제4사분면입니다.
+$\sin \frac{\pi}{4} = \frac{\sqrt{2}}{2}$이므로,
+$\theta = \pi + \frac{\pi}{4} = \frac{5\pi}{4}$
+$\theta = 2\pi - \frac{\pi}{4} = \frac{7\pi}{4}$
+
+따라서 $2x = \frac{5\pi}{4}$ 또는 $2x = \frac{7\pi}{4}$입니다.
+이를 $x$에 대해 풀면:
+$x = \frac{5\pi}{8}$ 또는 $x = \frac{7\pi}{8}$
+
+이 두 해의 합을 구하면:
+$\frac{5\pi}{8} + \frac{7\pi}{8} = \frac{12\pi}{8} = \frac{3\pi}{2}$
+
+따라서 모든 해의 합은 $\frac{3\pi}{2}$입니다.
+
+최종정답: ③

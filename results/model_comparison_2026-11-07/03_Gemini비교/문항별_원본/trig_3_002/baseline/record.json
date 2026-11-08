@@ -1,0 +1,209 @@
+{
+  "id": "trig_3_002",
+  "method": "baseline",
+  "input_text": "이차방정식 ${x^{2} - k}$$= 0$이 서로 다른 두 실근 $6 \\cos \\theta$, $5 \\tan \\theta$를 가질 때, 상수 $k$의 값을 구하시오.\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "4c9d3d6246622ee640bb2fdb61e6e5dab0f25be247e7bc47b0005fd065dddbf1",
+  "reference": {
+    "answer_text": "$\\mathbf{20}$",
+    "kind": "value",
+    "choice": null,
+    "value_text": "$\\mathbf{20}$",
+    "source": {
+      "id": "trig_3_002",
+      "source_file": "모의고사_삼각함수_문제_3.hml",
+      "source_sha256": "4853842eca14740e8bbc1083fae38beb51f1c6cde8e78fe6d3c398eca800b30b",
+      "original_number": 2,
+      "current_number": 2
+    },
+    "numeric_value": 20.0,
+    "gradable": true
+  },
+  "reference_answer_text": "$\\mathbf{20}$",
+  "reference_solution": "[정답] $\\mathbf{20}$\n\n[해설]\n이차방정식 $x^{2} - k = 0$의 두 근의 합이 $0$이므로\n$6 \\cos \\theta + 5 \\tan \\theta = 0 ,$$6 \\cos^{2} \\theta + 5 \\sin \\theta = 0$\n$\\cos^{2} \\theta = 1 - \\sin^{2} \\theta$이므로 $6 \\sin^{2} \\theta - 5 \\sin \\theta - 6 = 0$\n$(3 \\sin \\theta + 2) (2 \\sin \\theta - 3) = 0$\n$- 1 \\leq \\sin \\theta \\leq 1$이므로 $\\sin \\theta = - \\frac{2}{3}$\n이차방정식 $x^{2} - k = 0$의 두 근의 곱이 $- k$이므로\n$k = - 6 \\cos \\theta \\times 5 \\tan \\theta = - 30 \\sin \\theta = 20$\n",
+  "problem_text": "이차방정식 ${x^{2} - k}$$= 0$이 서로 다른 두 실근 $6 \\cos \\theta$, $5 \\tan \\theta$를 가질 때, 상수 $k$의 값을 구하시오.\n",
+  "subject": "삼각함수",
+  "unit": "05 삼각함수의 정의",
+  "type": "09 활용3 (삼각함수 사이의 관계)",
+  "source": "2020년 교육청 고2공통 11월 > 27 [4점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:50:16.476494+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:50:16.476509+00:00",
+      "usage": {
+        "prompt_token_count": 94,
+        "candidates_token_count": 548,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 642,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 548,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 94,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 94
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 642,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "mSzvaqyvA_6v_uMP9r-6kQE",
+      "latency_seconds": 5.788,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "이차방정식 $x^2 - k = 0$의 두 실근을 $\\alpha, \\beta$라고 하면, 근과 계수의 관계에 의해 다음이 성립합니다.\n1) $\\alpha + \\beta = 0$\n2) $\\alpha \\beta = -k$\n\n문제에서 두 실근이 $6 \\cos \\theta$와 $5 \\tan \\theta$라고 하였으므로,\n$6 \\cos \\theta + 5 \\tan \\theta = 0$ 이 성립해야 합니다.\n\n이를 정리하면:\n$6 \\cos \\theta + 5 \\frac{\\sin \\theta}{\\cos \\theta} = 0$\n$6 \\cos^2 \\theta + 5 \\sin \\theta = 0$\n\n$\\cos^2 \\theta = 1 - \\sin^2 \\theta$를 대입하면:\n$6(1 - \\sin^2 \\theta) + 5 \\sin \\theta = 0$\n$6 - 6 \\sin^2 \\theta + 5 \\sin \\theta = 0$\n$6 \\sin^2 \\theta - 5 \\sin \\theta - 6 = 0$\n\n인수분해를 하면:\n$(2 \\sin \\theta - 3)(3 \\sin \\theta + 2) = 0$\n\n$-1 \\le \\sin \\theta \\le 1$이어야 하므로, $\\sin \\theta = -\\frac{2}{3}$입니다.\n이때 $\\cos^2 \\theta = 1 - \\sin^2 \\theta = 1 - \\frac{4}{9} = \\frac{5}{9}$이므로, $\\cos \\theta = \\pm \\frac{\\sqrt{5}}{3}$입니다.\n\n두 근은 $\\alpha = 6 \\cos \\theta$, $\\beta = 5 \\tan \\theta$인데, $\\alpha + \\beta = 0$이므로 $\\alpha = -\\beta$입니다.\n따라서 $\\alpha \\beta = -\\alpha^2 = -k$, 즉 $k = \\alpha^2$입니다.\n\n$\\alpha = 6 \\cos \\theta$이므로, $\\alpha^2 = 36 \\cos^2 \\theta$입니다.\n위에서 구한 $\\cos^2 \\theta = \\frac{5}{9}$를 대입하면:\n$k = 36 \\times \\frac{5}{9} = 4 \\times 5 = 20$\n\n최종정답: 20",
+  "usage": {
+    "prompt_token_count": 94,
+    "candidates_token_count": 548,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 642,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 548,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 94,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 94
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 642,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "mSzvaqyvA_6v_uMP9r-6kQE",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:50:22 GMT",
+        "server": "envoy",
+        "content-length": "1037",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=5230",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "5680"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "이차방정식 $x^2 - k = 0$의 두 실근을 $\\alpha, \\beta$라고 하면, 근과 계수의 관계에 의해 다음이 성립합니다.\n1) $\\alpha + \\beta = 0$\n2) $\\alpha \\beta = -k$\n\n문제에서 두 실근이 $6 \\cos \\theta$와 $5 \\tan \\theta$라고 하였으므로,\n$6 \\cos \\theta + 5 \\tan \\theta = 0$ 이 성립해야 합니다.\n\n이를 정리하면:\n$6 \\cos \\theta + 5 \\frac{\\sin \\theta}{\\cos \\theta} = 0$\n$6 \\cos^2 \\theta + 5 \\sin \\theta = 0$\n\n$\\cos^2 \\theta = 1 - \\sin^2 \\theta$를 대입하면:\n$6(1 - \\sin^2 \\theta) + 5 \\sin \\theta = 0$\n$6 - 6 \\sin^2 \\theta + 5 \\sin \\theta = 0$\n$6 \\sin^2 \\theta - 5 \\sin \\theta - 6 = 0$\n\n인수분해를 하면:\n$(2 \\sin \\theta - 3)(3 \\sin \\theta + 2) = 0$\n\n$-1 \\le \\sin \\theta \\le 1$이어야 하므로, $\\sin \\theta = -\\frac{2}{3}$입니다.\n이때 $\\cos^2 \\theta = 1 - \\sin^2 \\theta = 1 - \\frac{4}{9} = \\frac{5}{9}$이므로, $\\cos \\theta = \\pm \\frac{\\sqrt{5}}{3}$입니다.\n\n두 근은 $\\alpha = 6 \\cos \\theta$, $\\beta = 5 \\tan \\theta$인데, $\\alpha + \\beta = 0$이므로 $\\alpha = -\\beta$입니다.\n따라서 $\\alpha \\beta = -\\alpha^2 = -k$, 즉 $k = \\alpha^2$입니다.\n\n$\\alpha = 6 \\cos \\theta$이므로, $\\alpha^2 = 36 \\cos^2 \\theta$입니다.\n위에서 구한 $\\cos^2 \\theta = \\frac{5}{9}$를 대입하면:\n$k = 36 \\times \\frac{5}{9} = 4 \\times 5 = 20$\n\n최종정답: 20",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0Tkww2j9Vs_u99aOffC2X7Gp31drlzkcDs7lbvewfndJvD_fUPYXFUHcLE89wuPtBWmD2E4u4f__G0imKjdGvqiT9yJ9CQBoDjGTsv74aC586jLx3kzJr0SX4wjE5eIir2CvQGRNLPXkPqbVrE",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "mSzvaqyvA_6v_uMP9r-6kQE",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 548,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 94,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 94
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 642,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 5.788,
+  "completed_at": "2026-11-07T13:50:22.264819+00:00",
+  "evaluation": {
+    "predicted_answer": "20",
+    "correct": true,
+    "status": "correct",
+    "reason": "numeric_constant_comparison_tolerance_1e-9",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "$\\mathbf{20}$",
+    "predicted_kind": "value",
+    "predicted_numeric_value": 20.0
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "eccaab583695279ce8db04065789df152c6cde23497bd2e764e111f6d0a13186",
+    "imported_at": "2026-11-07T16:57:38.419204+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "id": "diff_2_041",
+  "method": "baseline",
+  "input_text": "수직선 위를 움직이는 점 $\\mathrm{P}$의 시각 $t \\quad \\left( t > 0 \\right)$에서의 위치 $x \\left( t \\right)$가\n$x \\left( t \\right) = \\frac{3}{2} t^{4} - 8 t^{3} + 15 t^{2} - 12 t$\n이다. 점 ${\\mathrm{{P}}}$의 운동 방향이 바뀌는 순간 점 ${\\mathrm{{P}}}$의 가속도를 구하시오.\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "6116181264282ab62de387a0cbdc3916947a6d648d4c0179c5415ffa71ce7ab4",
+  "reference": {
+    "answer_text": "$6$",
+    "kind": "value",
+    "choice": null,
+    "value_text": "$6$",
+    "source": {
+      "id": "diff_2_041",
+      "source_file": "모의고사_미분_문제_2.hml",
+      "source_sha256": "bdf632f0269bd027f72fcf686c276a8040aa5cb2b985b26c7a2fe65391d878af",
+      "original_number": 41,
+      "current_number": 41
+    },
+    "numeric_value": 6.0,
+    "gradable": true
+  },
+  "reference_answer_text": "$6$",
+  "reference_solution": "[정답] $6$\n\n[해설]\n점 ${\\mathrm{{P}}}$의 시각 $t \\quad \\left( t > 0 \\right)$에서의 속도를 $v \\left( t \\right)$라 하면\n$v \\left( t \\right)$$= 6 t^{3} - 24 t^{2} + 30 t - 12$\n$= 6 \\left( t - 1 \\right)^{2} \\left( t - 2 \\right)$\n$v \\left( t \\right) = 0$에서 $t = 1$ 또는 $t = 2$\n함수 $x (t)$의 증가와 감소를 표로 나타내면\n\n$t$\t$\\mathrm{0}$\t$\\cdots$\t$\\mathrm{1}$\t$\\cdots$\t$\\mathrm{2}$\t$\\cdots$\n$v \\left( t \\right)$\t\t-\t$\\mathrm{0}$\t-\t$\\mathrm{0}$\t+\n$x \\left( t \\right)$\t\t$\\searrow$\t$- \\frac{7}{2}$\t$\\searrow$\t$\\mathrm{- 4}$\t$\\nearrow$\n\n점 ${\\mathrm{{P}}}$는 $0 < t < 2$에서 운동 방향이 음의 방향이고\n$t > 2$에서 운동 방향이 양의 방향이므로\n점 ${\\mathrm{{P}}}$는 시각 $t = 2$에서 운동 방향이 바뀐다.\n점 ${\\mathrm{{P}}}$의 시각 $t \\quad \\left( t > 0 \\right)$에서의 가속도를 $a \\left( t \\right)$라 하면 $a \\left( t \\right) = v' \\left( t \\right) = 18 t^{2} - 48 t + 30$\n따라서\n점 ${\\mathrm{{P}}}$의 운동 방향이 바뀌는 순간\n점 ${\\mathrm{{P}}}$의 가속도는\n$a (2)$$= 18 \\times 2^{2} - 48 \\times 2 + 30$\n$= 6$\n",
+  "problem_text": "수직선 위를 움직이는 점 $\\mathrm{P}$의 시각 $t \\quad \\left( t > 0 \\right)$에서의 위치 $x \\left( t \\right)$가\n$x \\left( t \\right) = \\frac{3}{2} t^{4} - 8 t^{3} + 15 t^{2} - 12 t$\n이다. 점 ${\\mathrm{{P}}}$의 운동 방향이 바뀌는 순간 점 ${\\mathrm{{P}}}$의 가속도를 구하시오.\n",
+  "subject": "미분",
+  "unit": "06 방부등식과 직선운동",
+  "type": "05 속도와 가속도의 해석4 (운동방향)",
+  "source": "2023년 교육청 고3공통 4월(5_10시행) > 공통범위 > 19 [3점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:35:44.814721+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:20:14.066426+00:00",
+      "usage": {
+        "prompt_token_count": null,
+        "candidates_token_count": null,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "raw": null
+      },
+      "status": "error",
+      "error_type": "ClientError",
+      "code": 429,
+      "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 45.78962465s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '45s'}]}}",
+      "latency_seconds": 1.23,
+      "execution": 1
+    },
+    {
+      "attempt": 2,
+      "started_at": "2026-11-07T13:20:15.296769+00:00",
+      "usage": {
+        "prompt_token_count": null,
+        "candidates_token_count": null,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "raw": null
+      },
+      "status": "error",
+      "error_type": "ClientError",
+      "code": 429,
+      "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 44.537653319s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '44s'}]}}",
+      "latency_seconds": 0.275,
+      "execution": 1
+    },
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:35:44.814737+00:00",
+      "usage": {
+        "prompt_token_count": 157,
+        "candidates_token_count": 582,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 739,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 582,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 157,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 157
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 739,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "NCnvat76A-3Vz7IPifzdoQI",
+      "latency_seconds": 30.115,
+      "execution": 2
+    }
+  ],
+  "status": "success",
+  "output_text": "점 $\\mathrm{P}$의 위치 $x(t)$가 $x(t) = \\frac{3}{2}t^4 - 8t^3 + 15t^2 - 12t$이므로, 점 $\\mathrm{P}$의 속도 $v(t)$는 위치를 시간 $t$에 대해 미분하여 구할 수 있습니다.\n\n$v(t) = \\frac{dx}{dt} = \\frac{3}{2} \\cdot 4t^3 - 8 \\cdot 3t^2 + 15 \\cdot 2t - 12$\n$v(t) = 6t^3 - 24t^2 + 30t - 12$\n\n점 $\\mathrm{P}$의 운동 방향이 바뀌는 순간은 속도 $v(t) = 0$이 되는 지점입니다.\n$6(t^3 - 4t^2 + 5t - 2) = 0$\n\n조립제법을 이용하여 $t^3 - 4t^2 + 5t - 2$를 인수분해합니다. $t=1$을 대입하면 $1 - 4 + 5 - 2 = 0$이므로 $(t-1)$을 인수로 가집니다.\n$(t-1)(t^2 - 3t + 2) = 0$\n$(t-1)(t-1)(t-2) = 0$\n$(t-1)^2(t-2) = 0$\n\n따라서 $v(t)=0$이 되는 시각은 $t=1$ 또는 $t=2$입니다.\n$t=1$에서는 속도의 부호가 바뀌지 않지만(중근), $t=2$에서는 속도의 부호가 바뀌므로 운동 방향이 바뀌는 순간은 $t=2$입니다.\n\n다음으로 가속도 $a(t)$는 속도를 시간 $t$에 대해 미분하여 구합니다.\n$a(t) = \\frac{dv}{dt} = 18t^2 - 48t + 30$\n\n운동 방향이 바뀌는 순간인 $t=2$에서의 가속도를 구하면,\n$a(2) = 18(2)^2 - 48(2) + 30$\n$a(2) = 18(4) - 96 + 30$\n$a(2) = 72 - 96 + 30$\n$a(2) = 6$\n\n최종정답: 6",
+  "usage": {
+    "prompt_token_count": 157,
+    "candidates_token_count": 582,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 739,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 582,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 157,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 157
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 739,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "NCnvat76A-3Vz7IPifzdoQI",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:36:14 GMT",
+        "server": "envoy",
+        "content-length": "1063",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=26837",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "27012"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "점 $\\mathrm{P}$의 위치 $x(t)$가 $x(t) = \\frac{3}{2}t^4 - 8t^3 + 15t^2 - 12t$이므로, 점 $\\mathrm{P}$의 속도 $v(t)$는 위치를 시간 $t$에 대해 미분하여 구할 수 있습니다.\n\n$v(t) = \\frac{dx}{dt} = \\frac{3}{2} \\cdot 4t^3 - 8 \\cdot 3t^2 + 15 \\cdot 2t - 12$\n$v(t) = 6t^3 - 24t^2 + 30t - 12$\n\n점 $\\mathrm{P}$의 운동 방향이 바뀌는 순간은 속도 $v(t) = 0$이 되는 지점입니다.\n$6(t^3 - 4t^2 + 5t - 2) = 0$\n\n조립제법을 이용하여 $t^3 - 4t^2 + 5t - 2$를 인수분해합니다. $t=1$을 대입하면 $1 - 4 + 5 - 2 = 0$이므로 $(t-1)$을 인수로 가집니다.\n$(t-1)(t^2 - 3t + 2) = 0$\n$(t-1)(t-1)(t-2) = 0$\n$(t-1)^2(t-2) = 0$\n\n따라서 $v(t)=0$이 되는 시각은 $t=1$ 또는 $t=2$입니다.\n$t=1$에서는 속도의 부호가 바뀌지 않지만(중근), $t=2$에서는 속도의 부호가 바뀌므로 운동 방향이 바뀌는 순간은 $t=2$입니다.\n\n다음으로 가속도 $a(t)$는 속도를 시간 $t$에 대해 미분하여 구합니다.\n$a(t) = \\frac{dv}{dt} = 18t^2 - 48t + 30$\n\n운동 방향이 바뀌는 순간인 $t=2$에서의 가속도를 구하면,\n$a(2) = 18(2)^2 - 48(2) + 30$\n$a(2) = 18(4) - 96 + 30$\n$a(2) = 72 - 96 + 30$\n$a(2) = 6$\n\n최종정답: 6",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TMDeDN9DvgOZ0jzTbm2ILDRagVdCQPRquPg_qWxgY4SQF-wWmEAkqRc_jLkK5pkb2Rhpm6NoB7eBNPGNaj1pdEWwwltWEwnOMRVX52pqSEVmK12qpKtiO78IwVZ86mQ6FFO7wmezN-8vyyfDC",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "NCnvat76A-3Vz7IPifzdoQI",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 582,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 157,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 157
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 739,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 30.115,
+  "completed_at": "2026-11-07T13:36:14.929416+00:00",
+  "evaluation": {
+    "predicted_answer": "6",
+    "correct": true,
+    "status": "correct",
+    "reason": "numeric_constant_comparison_tolerance_1e-9",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "$6$",
+    "predicted_kind": "value",
+    "predicted_numeric_value": 6.0
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "prior_executions": [
+    {
+      "status": "api_error",
+      "started_at": "2026-11-07T13:20:14.066411+00:00",
+      "completed_at": "2026-11-07T13:20:15.572096+00:00",
+      "error": {
+        "code": 429,
+        "type": "ClientError",
+        "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 44.537653319s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '44s'}]}}"
+      },
+      "response_id": null
+    }
+  ],
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "83851ff2844a77ffbea4e92073dff3578089252741c3ba77d4fe2aba51a4f4bf",
+    "imported_at": "2026-11-07T16:57:38.381389+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

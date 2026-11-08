@@ -1,0 +1,16 @@
+방정식 $\sin \frac{\pi x}{2} = \frac{3}{4}$의 해를 구하기 위해 $t = \frac{\pi x}{2}$라고 치환합니다.
+주어진 범위 $0 \leq x < 8$에서 $t$의 범위는 다음과 같습니다.
+$0 \leq \frac{\pi x}{2} < 4\pi$ 즉, $0 \leq t < 4\pi$
+
+이제 방정식 $\sin t = \frac{3}{4}$을 만족하는 $t$의 값을 찾습니다.
+$0 \leq t < 2\pi$ 범위에서 $\sin t = \frac{3}{4}$을 만족하는 두 근을 $\alpha, \beta$라고 하면, 사인 함수의 대칭성에 의해 $\alpha + \beta = \pi$입니다.
+$2\pi \leq t < 4\pi$ 범위에서는 위 근들에 각각 $2\pi$를 더한 값이 해가 됩니다. 즉, $\alpha + 2\pi$와 $\beta + 2\pi$가 해가 됩니다.
+
+따라서 $t$의 모든 해의 합은 다음과 같습니다.
+$\alpha + \beta + (\alpha + 2\pi) + (\beta + 2\pi) = (\alpha + \beta) + (\alpha + \beta) + 4\pi = \pi + \pi + 4\pi = 6\pi$
+
+이제 $t = \frac{\pi x}{2}$이므로 $x = \frac{2t}{\pi}$입니다.
+모든 $x$의 합은 $t$의 모든 합을 $\frac{\pi}{2}$로 나눈 것과 같습니다.
+$\sum x = \frac{2}{\pi} \times (\sum t) = \frac{2}{\pi} \times 6\pi = 12$
+
+최종정답: 12

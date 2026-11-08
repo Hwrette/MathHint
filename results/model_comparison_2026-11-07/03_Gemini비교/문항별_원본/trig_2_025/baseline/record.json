@@ -1,0 +1,209 @@
+{
+  "id": "trig_2_025",
+  "method": "baseline",
+  "input_text": "$0 \\leq x \\leq 3 \\pi$일 때, 방정식 $\\sqrt{2} \\cos x - 1 = 0$의 모든 해의 합은?\n① $\\frac{15}{4} \\pi$\t② $4 \\pi$\t\t③ $\\frac{17}{4} \\pi$\n④ $\\frac{9}{2} \\pi$\t\t⑤ $\\frac{19}{4} \\pi$\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "08aebdbd01967e85582e5b8ee1ab6099274434a20fcc94997a7e0065ac524435",
+  "reference": {
+    "answer_text": "③",
+    "kind": "choice",
+    "choice": 3,
+    "value_text": "$\\frac{17}{4} \\pi$",
+    "source": {
+      "id": "trig_2_025",
+      "source_file": "모의고사_삼각함수_문제_2.hml",
+      "source_sha256": "2a36b54c30c9b890ee90fe84dc6c2b62847494cb5830bd51de8b1fb6877d7cc2",
+      "original_number": 25,
+      "current_number": 25
+    },
+    "numeric_value": 13.351768777756622,
+    "gradable": true
+  },
+  "reference_answer_text": "③",
+  "reference_solution": "[정답] ③\n\n[해설]\n$\\sqrt{2} \\cos x - 1 = 0$, $\\cos x = \\frac{\\sqrt{2}}{2}$\n$0 \\leq x \\leq 3 \\pi$일 때, 방정식 $\\cos x = \\frac{\\sqrt{2}}{2}$의 해는\n$x = \\frac{\\pi}{4}$, $x = \\frac{7}{4} \\pi$, $x = \\frac{9}{4} \\pi$\n따라서 모든 해의 합은 $\\frac{17}{4} \\pi$\n",
+  "problem_text": "$0 \\leq x \\leq 3 \\pi$일 때, 방정식 $\\sqrt{2} \\cos x - 1 = 0$의 모든 해의 합은?\n① $\\frac{15}{4} \\pi$\t② $4 \\pi$\t\t③ $\\frac{17}{4} \\pi$\n④ $\\frac{9}{2} \\pi$\t\t⑤ $\\frac{19}{4} \\pi$\n",
+  "subject": "삼각함수",
+  "unit": "06 삼각함수의 그래프",
+  "type": "04 삼각방정식4 (대칭성과 실근)",
+  "source": "2022년 교육청 고2공통 11월 > 5 [3점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:49:19.771160+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:49:19.771173+00:00",
+      "usage": {
+        "prompt_token_count": 139,
+        "candidates_token_count": 357,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 496,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 357,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 139,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 139
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 496,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "Yyzvapm5IZOdz7IPwLK_iQk",
+      "latency_seconds": 4.86,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "주어진 방정식 $\\sqrt{2} \\cos x - 1 = 0$을 정리하면 다음과 같습니다.\n$\\sqrt{2} \\cos x = 1$\n$\\cos x = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$\n\n범위 $0 \\leq x \\leq 3\\pi$에서 $\\cos x = \\frac{\\sqrt{2}}{2}$를 만족하는 $x$의 값을 구합니다.\n\n1. $0 \\leq x \\leq 2\\pi$ 구간에서:\n   $\\cos x = \\frac{\\sqrt{2}}{2}$를 만족하는 해는 $x = \\frac{\\pi}{4}$와 $x = 2\\pi - \\frac{\\pi}{4} = \\frac{7}{4}\\pi$입니다.\n\n2. $2\\pi < x \\leq 3\\pi$ 구간에서:\n   $x = 2\\pi + \\frac{\\pi}{4} = \\frac{9}{4}\\pi$가 해가 됩니다. (다음 해인 $2\\pi + \\frac{7}{4}\\pi = \\frac{15}{4}\\pi$는 $3\\pi$를 넘어가므로 제외됩니다.)\n\n따라서 구하는 모든 해는 $\\frac{\\pi}{4}, \\frac{7}{4}\\pi, \\frac{9}{4}\\pi$입니다.\n\n이 해들의 합을 구하면:\n$\\frac{\\pi}{4} + \\frac{7}{4}\\pi + \\frac{9}{4}\\pi = \\frac{17}{4}\\pi$\n\n최종정답: ③",
+  "usage": {
+    "prompt_token_count": 139,
+    "candidates_token_count": 357,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 496,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 357,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 139,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 139
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 496,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "Yyzvapm5IZOdz7IPwLK_iQk",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:49:24 GMT",
+        "server": "envoy",
+        "content-length": "891",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1046",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "1504"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "주어진 방정식 $\\sqrt{2} \\cos x - 1 = 0$을 정리하면 다음과 같습니다.\n$\\sqrt{2} \\cos x = 1$\n$\\cos x = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$\n\n범위 $0 \\leq x \\leq 3\\pi$에서 $\\cos x = \\frac{\\sqrt{2}}{2}$를 만족하는 $x$의 값을 구합니다.\n\n1. $0 \\leq x \\leq 2\\pi$ 구간에서:\n   $\\cos x = \\frac{\\sqrt{2}}{2}$를 만족하는 해는 $x = \\frac{\\pi}{4}$와 $x = 2\\pi - \\frac{\\pi}{4} = \\frac{7}{4}\\pi$입니다.\n\n2. $2\\pi < x \\leq 3\\pi$ 구간에서:\n   $x = 2\\pi + \\frac{\\pi}{4} = \\frac{9}{4}\\pi$가 해가 됩니다. (다음 해인 $2\\pi + \\frac{7}{4}\\pi = \\frac{15}{4}\\pi$는 $3\\pi$를 넘어가므로 제외됩니다.)\n\n따라서 구하는 모든 해는 $\\frac{\\pi}{4}, \\frac{7}{4}\\pi, \\frac{9}{4}\\pi$입니다.\n\n이 해들의 합을 구하면:\n$\\frac{\\pi}{4} + \\frac{7}{4}\\pi + \\frac{9}{4}\\pi = \\frac{17}{4}\\pi$\n\n최종정답: ③",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TzxO8n6nGZwbVFQ91I1A83CQ2qBazwhxs97194pg6MTsuZdShZoFBtG3rTlsT1QJpIQdXgYDCgO34BeB5VT2CIJAbN0QYL0rMChgGVUSahAuKcLPbxudu4GN7fazlONzik6FO6WKi7EZWE8F-",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "Yyzvapm5IZOdz7IPwLK_iQk",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 357,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 139,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 139
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 496,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 4.86,
+  "completed_at": "2026-11-07T13:49:24.631577+00:00",
+  "evaluation": {
+    "predicted_answer": "③",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "③",
+    "predicted_kind": "choice",
+    "predicted_choice": 3
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "4b93c0bbc9d43cdd93720103328eaa604922c1f52c9a18e9ce12057568cf0d4f",
+    "imported_at": "2026-11-07T16:57:38.416383+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

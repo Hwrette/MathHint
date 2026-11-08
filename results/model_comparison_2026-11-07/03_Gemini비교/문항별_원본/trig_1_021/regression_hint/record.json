@@ -1,0 +1,231 @@
+{
+  "id": "trig_1_021",
+  "method": "regression_hint",
+  "input_text": "함수 $f \\left( x \\right) = 4 \\sin \\left( x - \\frac{\\pi}{3} \\right) + a$의 최솟값이 $1$이다. $f \\left( \\frac{\\pi}{2} \\right)$의 값을 구하시오. (단, $a$는 상수이다.)\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:}\":10.377,\"latex:{\":10.309,\"latex:a\":9.207,\"latex:=\":9.006,\"latex:x\":8.66,\"latex:(\":8.645,\"latex:)\":8.618,\"latex:+\":6.476,\"latex:\\\\left\":6.05,\"latex:-\":5.971,\"latex:2\":5.871,\"latex:\\\\right\":5.773,\"latex:k\":5.46,\"latex:f\":5.403,\"latex:\\\\pi\":4.846,\"latex:5\":4.457,\"kiwi:이\":4.052,\"kiwi:함수\":3.939,\"latex:\\\\frac\":3.847,\"latex:6\":3.714}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "2ab47773f1e7442e811284d5b8f21db67faba0c931a90174c1c4ac3a8281f4fd",
+  "reference": {
+    "answer_text": "$7$",
+    "kind": "value",
+    "choice": null,
+    "value_text": "$7$",
+    "source": {
+      "id": "trig_1_021",
+      "source_file": "모의고사_삼각함수_문제_1.hml",
+      "source_sha256": "40e5d3256beca74c23225ea16d79b402d009340fbb175e827264f20535bad869",
+      "original_number": 21,
+      "current_number": 21
+    },
+    "numeric_value": 7.0,
+    "gradable": true
+  },
+  "reference_answer_text": "$7$",
+  "reference_solution": "[정답] $7$\n\n[해설]\n$- 1 \\le \\sin \\left( x - \\frac{\\pi}{3} \\right) \\le 1$이고\n함수 $f \\left( x \\right) = 4 \\sin \\left( x - \\frac{\\pi}{3} \\right) + a$의 최솟값이 $1$이므로\n$- 4 + a = 1$, $a = 5$\n따라서\n$f \\left( \\frac{\\pi}{2} \\right)$$= 4 \\sin \\left( \\frac{\\pi}{2} - \\frac{\\pi}{3} \\right) + 5$\n$= 4 \\sin \\frac{\\pi}{6} + 5$\n$= 4 \\times \\frac{1}{2} + 5 = 7$\n",
+  "problem_text": "함수 $f \\left( x \\right) = 4 \\sin \\left( x - \\frac{\\pi}{3} \\right) + a$의 최솟값이 $1$이다. $f \\left( \\frac{\\pi}{2} \\right)$의 값을 구하시오. (단, $a$는 상수이다.)\n",
+  "subject": "삼각함수",
+  "unit": "06 삼각함수의 그래프",
+  "type": "04 그래프4 (표준형 그래프에서 Mm)",
+  "source": "2026년 교육청 고3공통 10월 > 18 [3점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:}": 10.377,
+      "latex:{": 10.309,
+      "latex:a": 9.207,
+      "latex:=": 9.006,
+      "latex:x": 8.66,
+      "latex:(": 8.645,
+      "latex:)": 8.618,
+      "latex:+": 6.476,
+      "latex:\\left": 6.05,
+      "latex:-": 5.971,
+      "latex:2": 5.871,
+      "latex:\\right": 5.773,
+      "latex:k": 5.46,
+      "latex:f": 5.403,
+      "latex:\\pi": 4.846,
+      "latex:5": 4.457,
+      "kiwi:이": 4.052,
+      "kiwi:함수": 3.939,
+      "latex:\\frac": 3.847,
+      "latex:6": 3.714
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:15:20.971222+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:15:20.971237+00:00",
+      "usage": {
+        "prompt_token_count": 357,
+        "candidates_token_count": 445,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 802,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 445,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 357,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 357
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 802,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "rFzvarHTKri1qtsP-oWngQY",
+      "latency_seconds": 15.461,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $f(x) = 4 \\sin \\left( x - \\frac{\\pi}{3} \\right) + a$의 최솟값을 구하는 과정은 다음과 같습니다.\n\n1. **최솟값 조건 이용**:\n   사인 함수 $\\sin \\theta$의 값은 $-1$에서 $1$ 사이의 값을 가집니다. 따라서 $f(x)$의 최솟값은 사인 부분이 $-1$일 때 발생합니다.\n   $$f(x)_{\\text{min}} = 4 \\times (-1) + a = -4 + a$$\n   문제에서 최솟값이 $1$이라고 하였으므로,\n   $$-4 + a = 1$$\n   $$a = 5$$\n\n2. **함수식 완성**:\n   구한 $a$의 값을 대입하면 함수식은 다음과 같습니다.\n   $$f(x) = 4 \\sin \\left( x - \\frac{\\pi}{3} \\right) + 5$$\n\n3. **$f \\left( \\frac{\\pi}{2} \\right)$ 계산**:\n   $x = \\frac{\\pi}{2}$를 함수식에 대입합니다.\n   $$f \\left( \\frac{\\pi}{2} \\right) = 4 \\sin \\left( \\frac{\\pi}{2} - \\frac{\\pi}{3} \\right) + 5$$\n   괄호 안을 계산하면 $\\frac{\\pi}{2} - \\frac{\\pi}{3} = \\frac{3\\pi}{6} - \\frac{2\\pi}{6} = \\frac{\\pi}{6}$입니다.\n   $$\\sin \\left( \\frac{\\pi}{6} \\right) = \\frac{1}{2}$$\n   따라서,\n   $$f \\left( \\frac{\\pi}{2} \\right) = 4 \\times \\left( \\frac{1}{2} \\right) + 5 = 2 + 5 = 7$$\n\n최종정답: 7",
+  "usage": {
+    "prompt_token_count": 357,
+    "candidates_token_count": 445,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 802,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 445,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 357,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 357
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 802,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "rFzvarHTKri1qtsP-oWngQY",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:15:36 GMT",
+        "server": "envoy",
+        "content-length": "989",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=11700",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "12337"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $f(x) = 4 \\sin \\left( x - \\frac{\\pi}{3} \\right) + a$의 최솟값을 구하는 과정은 다음과 같습니다.\n\n1. **최솟값 조건 이용**:\n   사인 함수 $\\sin \\theta$의 값은 $-1$에서 $1$ 사이의 값을 가집니다. 따라서 $f(x)$의 최솟값은 사인 부분이 $-1$일 때 발생합니다.\n   $$f(x)_{\\text{min}} = 4 \\times (-1) + a = -4 + a$$\n   문제에서 최솟값이 $1$이라고 하였으므로,\n   $$-4 + a = 1$$\n   $$a = 5$$\n\n2. **함수식 완성**:\n   구한 $a$의 값을 대입하면 함수식은 다음과 같습니다.\n   $$f(x) = 4 \\sin \\left( x - \\frac{\\pi}{3} \\right) + 5$$\n\n3. **$f \\left( \\frac{\\pi}{2} \\right)$ 계산**:\n   $x = \\frac{\\pi}{2}$를 함수식에 대입합니다.\n   $$f \\left( \\frac{\\pi}{2} \\right) = 4 \\sin \\left( \\frac{\\pi}{2} - \\frac{\\pi}{3} \\right) + 5$$\n   괄호 안을 계산하면 $\\frac{\\pi}{2} - \\frac{\\pi}{3} = \\frac{3\\pi}{6} - \\frac{2\\pi}{6} = \\frac{\\pi}{6}$입니다.\n   $$\\sin \\left( \\frac{\\pi}{6} \\right) = \\frac{1}{2}$$\n   따라서,\n   $$f \\left( \\frac{\\pi}{2} \\right) = 4 \\times \\left( \\frac{1}{2} \\right) + 5 = 2 + 5 = 7$$\n\n최종정답: 7",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TLEHcyqJoi_4d4xjzcwCAUP7ISx9YyN4lT2s_to7Cv6fPnSSI7PXcyvMfXXVA6desK91ibE9xs6bcGTguhSFts0S7UQDRxoPDqj_WVFN3JqCEz2cz1W4N1ceUu8qvRzDtURI9eCOHFd_GCzLl",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "rFzvarHTKri1qtsP-oWngQY",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 445,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 357,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 357
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 802,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 15.461,
+  "completed_at": "2026-11-07T17:15:36.432125+00:00",
+  "evaluation": {
+    "predicted_answer": "7",
+    "correct": true,
+    "status": "correct",
+    "reason": "numeric_constant_comparison_tolerance_1e-9",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "$7$",
+    "predicted_kind": "value",
+    "predicted_numeric_value": 7.0
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

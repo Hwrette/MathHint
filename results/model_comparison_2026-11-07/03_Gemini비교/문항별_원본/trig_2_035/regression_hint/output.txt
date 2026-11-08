@@ -1,0 +1,28 @@
+주어진 함수 $f(x) = \sin \left( \frac{\pi}{4} x \right)$에 대하여 부등식 $f(2+x)f(2-x) < \frac{1}{4}$을 풀어봅시다.
+
+먼저 $f(2+x) = \sin \left( \frac{\pi}{4}(2+x) \right) = \sin \left( \frac{\pi}{2} + \frac{\pi}{4}x \right) = \cos \left( \frac{\pi}{4}x \right)$이고,
+$f(2-x) = \sin \left( \frac{\pi}{4}(2-x) \right) = \sin \left( \frac{\pi}{2} - \frac{\pi}{4}x \right) = \cos \left( \frac{\pi}{4}x \right)$입니다.
+
+따라서 주어진 부등식은 다음과 같이 변형됩니다.
+$\cos^2 \left( \frac{\pi}{4}x \right) < \frac{1}{4}$
+
+이 부등식은 $-\frac{1}{2} < \cos \left( \frac{\pi}{4}x \right) < \frac{1}{2}$과 같습니다.
+$0 < x < 16$의 범위에서 $\theta = \frac{\pi}{4}x$라 하면 $0 < \theta < 4\pi$입니다.
+$\cos \theta$의 값이 $-\frac{1}{2}$과 $\frac{1}{2}$ 사이인 구간을 찾으면 다음과 같습니다.
+
+1) $0 < \theta < 4\pi$에서 $\cos \theta = \frac{1}{2}$인 $\theta$는 $\frac{\pi}{3}, \frac{5\pi}{3}, \frac{7\pi}{3}, \frac{11\pi}{3}$입니다.
+2) $0 < \theta < 4\pi$에서 $\cos \theta = -\frac{1}{2}$인 $\theta$는 $\frac{2\pi}{3}, \frac{4\pi}{3}, \frac{8\pi}{3}, \frac{10\pi}{3}$입니다.
+
+따라서 $-\frac{1}{2} < \cos \theta < \frac{1}{2}$을 만족하는 $\theta$의 범위는
+$\frac{\pi}{3} < \theta < \frac{2\pi}{3}$, $\frac{4\pi}{3} < \theta < \frac{5\pi}{3}$, $\frac{7\pi}{3} < \theta < \frac{8\pi}{3}$, $\frac{10\pi}{3} < \theta < \frac{11\pi}{3}$ 입니다.
+
+$\theta = \frac{\pi}{4}x$를 대입하면:
+$\frac{\pi}{3} < \frac{\pi}{4}x < \frac{2\pi}{3} \implies \frac{4}{3} < x < \frac{8}{3} \implies 1.33 < x < 2.66 \implies x=2$
+$\frac{4\pi}{3} < \frac{\pi}{4}x < \frac{5\pi}{3} \implies \frac{16}{3} < x < \frac{20}{3} \implies 5.33 < x < 6.66 \implies x=6$
+$\frac{7\pi}{3} < \frac{\pi}{4}x < \frac{8\pi}{3} \implies \frac{28}{3} < x < \frac{32}{3} \implies 9.33 < x < 10.66 \implies x=10$
+$\frac{10\pi}{3} < \frac{\pi}{4}x < \frac{11\pi}{3} \implies \frac{40}{3} < x < \frac{44}{3} \implies 13.33 < x < 14.66 \implies x=14$
+
+만족하는 자연수 $x$는 $2, 6, 10, 14$입니다.
+이들의 합은 $2 + 6 + 10 + 14 = 32$입니다.
+
+최종정답: 32

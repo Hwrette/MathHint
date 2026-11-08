@@ -1,0 +1,20 @@
+주어진 합성함수 $(f \circ g)(x) = f(g(x))$에 대하여, $0 \leq x \leq \frac{\pi}{6}$ 범위에서 $g(x) = 3 \tan \left( x + \frac{\pi}{6} \right)$의 치역을 먼저 구합니다.
+
+1. **$g(x)$의 범위 구하기:**
+   $0 \leq x \leq \frac{\pi}{6}$이므로, $x + \frac{\pi}{6}$의 범위는 $\frac{\pi}{6} \leq x + \frac{\pi}{6} \leq \frac{\pi}{3}$입니다.
+   탄젠트 함수 $y = \tan \theta$는 이 구간에서 증가함수이므로,
+   - $x=0$일 때, $g(0) = 3 \tan \left( \frac{\pi}{6} \right) = 3 \cdot \frac{1}{\sqrt{3}} = \sqrt{3}$
+   - $x=\frac{\pi}{6}$일 때, $g\left(\frac{\pi}{6}\right) = 3 \tan \left( \frac{\pi}{3} \right) = 3 \cdot \sqrt{3} = 3\sqrt{3}$
+   따라서 $g(x)$의 치역은 $[\sqrt{3}, 3\sqrt{3}]$입니다.
+
+2. **$(f \circ g)(x)$의 최댓값과 최솟값 구하기:**
+   $f(x) = \log_3 x + 2$는 밑이 3(>1)인 로그함수이므로 증가함수입니다.
+   따라서 $g(x)$가 최소일 때 $f(g(x))$도 최소이고, $g(x)$가 최대일 때 $f(g(x))$도 최대입니다.
+
+   - 최솟값 $m = f(\sqrt{3}) = \log_3 (\sqrt{3}) + 2 = \log_3 (3^{1/2}) + 2 = \frac{1}{2} + 2 = \frac{5}{2}$
+   - 최댓값 $M = f(3\sqrt{3}) = \log_3 (3 \cdot 3^{1/2}) + 2 = \log_3 (3^{3/2}) + 2 = \frac{3}{2} + 2 = \frac{7}{2}$
+
+3. **$M + m$ 계산:**
+   $M + m = \frac{7}{2} + \frac{5}{2} = \frac{12}{2} = 6$
+
+최종정답: 6

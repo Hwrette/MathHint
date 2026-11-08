@@ -1,0 +1,19 @@
+주어진 합성함수 $(f \circ g)(x) = f(g(x))$에 대하여, $g(x) = 3 \tan \left( x + \frac{\pi}{6} \right)$라 하면, $0 \leq x \leq \frac{\pi}{6}$에서 $g(x)$의 범위를 먼저 구합니다.
+
+1. **$g(x)$의 범위 구하기:**
+   $x$의 범위가 $0 \leq x \leq \frac{\pi}{6}$이므로, $x + \frac{\pi}{6}$의 범위는 $\frac{\pi}{6} \leq x + \frac{\pi}{6} \leq \frac{\pi}{3}$입니다.
+   탄젠트 함수 $y = \tan \theta$는 이 구간에서 증가함수이므로,
+   - $x=0$일 때, $g(0) = 3 \tan \left( \frac{\pi}{6} \right) = 3 \cdot \frac{1}{\sqrt{3}} = \sqrt{3}$
+   - $x=\frac{\pi}{6}$일 때, $g\left( \frac{\pi}{6} \right) = 3 \tan \left( \frac{\pi}{3} \right) = 3 \cdot \sqrt{3} = 3\sqrt{3}$
+   따라서 $g(x)$의 범위는 $\sqrt{3} \leq g(x) \leq 3\sqrt{3}$입니다.
+
+2. **$(f \circ g)(x)$의 최댓값과 최솟값 구하기:**
+   $f(t) = \log_3 t + 2$라 하면, $f(t)$는 밑이 3인 로그함수이므로 증가함수입니다.
+   따라서 $t$의 범위가 $\sqrt{3} \leq t \leq 3\sqrt{3}$일 때, $f(t)$의 최댓값 $M$과 최솟값 $m$은 다음과 같습니다.
+   - $m = f(\sqrt{3}) = \log_3 (\sqrt{3}) + 2 = \log_3 (3^{1/2}) + 2 = \frac{1}{2} + 2 = \frac{5}{2}$
+   - $M = f(3\sqrt{3}) = \log_3 (3 \cdot 3^{1/2}) + 2 = \log_3 (3^{3/2}) + 2 = \frac{3}{2} + 2 = \frac{7}{2}$
+
+3. **$M + m$ 계산:**
+   $M + m = \frac{7}{2} + \frac{5}{2} = \frac{12}{2} = 6$
+
+최종정답: 6

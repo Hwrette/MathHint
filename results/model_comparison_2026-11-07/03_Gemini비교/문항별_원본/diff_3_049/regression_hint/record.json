@@ -1,0 +1,231 @@
+{
+  "id": "diff_3_049",
+  "method": "regression_hint",
+  "input_text": "두 함수\n$f (x) = x^{3} - x + 6$, $\\quad g (x) = x^{2} + a$\n가 있다. $x \\geq 0$인 모든 실수 $x$에 대하여 부등식\n$f (x) \\geq g (x)$\n가 성립할 때, 실수 $a$의 최댓값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:x\":13.925,\"latex:{\":9.539,\"latex:}\":9.404,\"latex:4\":9.254,\"latex:0\":8.472,\"latex:2\":7.509,\"latex:(\":7.503,\"kiwi:이\":7.502,\"latex:)\":7.434,\"latex:=\":6.449,\"latex:-\":6.206,\"latex:\\\\right\":4.255,\"latex:\\\\left\":4.214,\"latex:|\":3.578,\"latex:'\":3.414,\"kiwi:다\":3.399,\"latex:3\":3.329,\"kiwi:.\":3.252,\"latex:h\":3.152,\"kiwi:,\":2.895}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "300dae615d2931f0bb52888ce9751188dfab65475976929d5b2bf60b28f5fa17",
+  "reference": {
+    "answer_text": "⑤",
+    "kind": "choice",
+    "choice": 5,
+    "value_text": "$\\mathrm{5}$",
+    "source": {
+      "id": "diff_3_049",
+      "source_file": "모의고사_미분_문제_3.hml",
+      "source_sha256": "9c5d864f886ff6f2c93f9125549a8bce3fad8f18a790a887380963d1652adf8d",
+      "original_number": 49,
+      "current_number": 48
+    },
+    "numeric_value": 5.0,
+    "gradable": true
+  },
+  "reference_answer_text": "⑤",
+  "reference_solution": "[정답] ⑤\n\n[해설]\n$h (x) = f (x) - g (x)$라 하면\n$h (x) = x^{3} - x^{2} - x + 6 - a$\n이때 $x \\geq 0$인 모든 실수 $x$에 대하여 부\n등식 $h (x) \\geq 0$이 성립하려면 $x \\geq 0$에서\n함수 $h (x)$의 최솟값이 $\\mathrm{0}$ 이상이어야 한다.\n$h' (x)$$= 3 x^{2} - 2 x - 1$\n$= (3 x + 1) (x - 1)$\n이므로 $h' (x) = 0$ 에서\n$x = - \\frac{1}{3}$ 또는 $x = 1$\n$x \\geq 0$에서 함수 $h (x)$의 증가와 감소를\n표로 나타내면 다음과 같다.\n\n$x$\t$\\mathrm{0}$\t$\\cdots$\t$\\mathrm{1}$\t$\\cdots$\n$h' (x)$\t\t$-$\t$\\mathrm{0}$\t$+$\n$h (x)$\t$6 - a$\t$\\searrow$\t$5 - a$\t$\\nearrow$\n\n즉, $x \\geq 0$에서 함수 $h (x)$의 최솟값이 $5 - a$이므로 주어진 조건을 만족시키려면 $5 - a \\geq 0$이어야 한다.\n따라서 $a \\leq 5$이므로 구하는 실수 $a$의 최댓값은 $\\mathrm{5}$이다.\n",
+  "problem_text": "두 함수\n$f (x) = x^{3} - x + 6$, $\\quad g (x) = x^{2} + a$\n가 있다. $x \\geq 0$인 모든 실수 $x$에 대하여 부등식\n$f (x) \\geq g (x)$\n가 성립할 때, 실수 $a$의 최댓값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+  "subject": "미분",
+  "unit": "06 방부등식과 직선운동",
+  "type": "03 부등식과 미분3 (부등식의 동치변형)",
+  "source": "2022년(2023학년도) 평가원 고3공통 6월 > 공통범위 > 9 [4점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:x": 13.925,
+      "latex:{": 9.539,
+      "latex:}": 9.404,
+      "latex:4": 9.254,
+      "latex:0": 8.472,
+      "latex:2": 7.509,
+      "latex:(": 7.503,
+      "kiwi:이": 7.502,
+      "latex:)": 7.434,
+      "latex:=": 6.449,
+      "latex:-": 6.206,
+      "latex:\\right": 4.255,
+      "latex:\\left": 4.214,
+      "latex:|": 3.578,
+      "latex:'": 3.414,
+      "kiwi:다": 3.399,
+      "latex:3": 3.329,
+      "kiwi:.": 3.252,
+      "latex:h": 3.152,
+      "kiwi:,": 2.895
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:14:38.559555+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:14:38.559568+00:00",
+      "usage": {
+        "prompt_token_count": 403,
+        "candidates_token_count": 456,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 859,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 456,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 403,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 403
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 859,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "f1zvaoj_D9CcjMcPvObc4Ag",
+      "latency_seconds": 2.138,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "주어진 부등식 $f(x) \\geq g(x)$가 $x \\geq 0$인 모든 실수 $x$에 대하여 성립해야 합니다.\n두 함수를 대입하면 다음과 같습니다.\n$x^3 - x + 6 \\geq x^2 + a$\n\n이 식을 $a$에 대하여 정리하면 다음과 같습니다.\n$a \\leq x^3 - x^2 - x + 6$\n\n$x \\geq 0$인 모든 $x$에 대하여 위 부등식이 성립하려면, 함수 $h(x) = x^3 - x^2 - x + 6$의 $x \\geq 0$에서의 최솟값이 $a$보다 크거나 같아야 합니다. 즉, $a \\leq \\min_{x \\geq 0} h(x)$가 되어야 합니다.\n\n$h(x)$의 최솟값을 구하기 위해 미분합니다.\n$h'(x) = 3x^2 - 2x - 1$\n$h'(x) = (3x + 1)(x - 1) = 0$\n$x \\geq 0$ 범위에서 $h'(x) = 0$이 되는 값은 $x = 1$입니다.\n\n$x$의 값에 따른 $h(x)$의 변화를 살펴보면:\n- $x = 0$일 때, $h(0) = 6$\n- $x = 1$일 때, $h(1) = 1 - 1 - 1 + 6 = 5$\n- $x \\to \\infty$일 때, $h(x) \\to \\infty$\n\n따라서 $x \\geq 0$에서 $h(x)$의 최솟값은 $x = 1$일 때인 $5$입니다.\n부등식 $a \\leq h(x)$가 항상 성립하려면 $a \\leq 5$여야 하므로, 실수 $a$의 최댓값은 $5$입니다.\n\n최종정답: ⑤",
+  "usage": {
+    "prompt_token_count": 403,
+    "candidates_token_count": 456,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 859,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 456,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 403,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 403
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 859,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "f1zvaoj_D9CcjMcPvObc4Ag",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:14:40 GMT",
+        "server": "envoy",
+        "content-length": "1046",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1442",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "1906"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "주어진 부등식 $f(x) \\geq g(x)$가 $x \\geq 0$인 모든 실수 $x$에 대하여 성립해야 합니다.\n두 함수를 대입하면 다음과 같습니다.\n$x^3 - x + 6 \\geq x^2 + a$\n\n이 식을 $a$에 대하여 정리하면 다음과 같습니다.\n$a \\leq x^3 - x^2 - x + 6$\n\n$x \\geq 0$인 모든 $x$에 대하여 위 부등식이 성립하려면, 함수 $h(x) = x^3 - x^2 - x + 6$의 $x \\geq 0$에서의 최솟값이 $a$보다 크거나 같아야 합니다. 즉, $a \\leq \\min_{x \\geq 0} h(x)$가 되어야 합니다.\n\n$h(x)$의 최솟값을 구하기 위해 미분합니다.\n$h'(x) = 3x^2 - 2x - 1$\n$h'(x) = (3x + 1)(x - 1) = 0$\n$x \\geq 0$ 범위에서 $h'(x) = 0$이 되는 값은 $x = 1$입니다.\n\n$x$의 값에 따른 $h(x)$의 변화를 살펴보면:\n- $x = 0$일 때, $h(0) = 6$\n- $x = 1$일 때, $h(1) = 1 - 1 - 1 + 6 = 5$\n- $x \\to \\infty$일 때, $h(x) \\to \\infty$\n\n따라서 $x \\geq 0$에서 $h(x)$의 최솟값은 $x = 1$일 때인 $5$입니다.\n부등식 $a \\leq h(x)$가 항상 성립하려면 $a \\leq 5$여야 하므로, 실수 $a$의 최댓값은 $5$입니다.\n\n최종정답: ⑤",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0Tr-G31TvhcgR5NsYk7bRDu2jgqr_ucS-vNYLIeGjh7Wxj9n_xwFu8zKvu-C979w5jWY8-Vo-6UA2QWCvQjkrdNv4yEd8Fx6vrb79OirDXy2FywAYU3GrAdOm7D2vQNcBvjkd8K8VAIOiTD_K_",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "f1zvaoj_D9CcjMcPvObc4Ag",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 456,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 403,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 403
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 859,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 2.138,
+  "completed_at": "2026-11-07T17:14:40.697099+00:00",
+  "evaluation": {
+    "predicted_answer": "⑤",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "⑤",
+    "predicted_kind": "choice",
+    "predicted_choice": 5
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

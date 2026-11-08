@@ -1,0 +1,39 @@
+{
+  "records": [
+    {
+      "id": "trig_1_010",
+      "source_file": "모의고사_삼각함수_문제_1.hml",
+      "source_sha256": "40e5d3256beca74c23225ea16d79b402d009340fbb175e827264f20535bad869",
+      "source_metadata_sha256": "40e5d3256beca74c23225ea16d79b402d009340fbb175e827264f20535bad869",
+      "original_number": 10,
+      "raw_endnote_index_zero_based": 9,
+      "raw_answer_char_text": [
+        " [정답] ④"
+      ],
+      "raw_endnote_sha256": "9e2b816c4d40accb50b4c5fd8b0ac15e8502038395021c002b4c28d924f81eb3",
+      "raw_final_equation_scripts": [
+        " left(5x-3 right) left(5x+4 right)=0",
+        " sin `t={3} over {5}",
+        " cos `t=`-{4} over {5}`",
+        " tan `t={ sin `t} over { cos `t}={3} over {5} times left(-{5} over {4} right)=`-{3} over {4}`",
+        "k times tan `t= left(-{12} over {5} right) times left(-{3} over {4} right)={9} over {5}`"
+      ],
+      "original_answer": "④",
+      "original_answer_value": "12/5",
+      "mathematically_supported_answer": "②",
+      "mathematically_supported_value": "9/5",
+      "original_written_solution_conclusion": "9/5",
+      "independent_exact_calculation": {
+        "sin_t": "3/5",
+        "cos_t": "-4/5",
+        "k": "-12/5",
+        "tan_t": "-3/4",
+        "product": "9/5"
+      },
+      "reason": "원본 HML ENDNOTE 자체의 [정답] ④가 원본 해설의 마지막 계산9/5 및 객관식 보기②와 충돌한다. 수식변환이나 메타데이터 추출 오류가 아니다.",
+      "recommended_scoring": "retain_source_answer_and_raw_data; report separate audited mathematics-based score or flag disputed key; do not count model② as definite mathematical error",
+      "reviewer_kind": "AI_assisted_independent_mathematical_audit",
+      "raw_data_modified": false
+    }
+  ]
+}

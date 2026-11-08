@@ -1,0 +1,12 @@
+[정답] ①
+
+[해설]
+두 점 ${\mathrm{{P}}}$, $\mathrm{Q}$의 위치가 같아지는 시각 $t$는 $t \ge 0$에서 방정식 $x_{1} = x_{2}$의 실근과 같다.
+$x_{1} - x_{2}$$= \left( t^{2} + t - 6 \right) - \left( - t^{3} + 7 t^{2} \right)$
+$= \left( t^{2} + 1 \right) \left( t - 6 \right)$
+$x_{1} - x_{2} = 0$에서    $t = 6 \quad \left( \because \quad t \ge 0 \right)$
+두 점 ${\mathrm{{P}}}$, $\mathrm{Q}$의 시각 $t$에서의 가속도를 각각 $a_{1}$, $a_{2}$라 하면
+$a_{1} = 2$, $a_{2} = - 6 t + 14$
+이므로
+$p = 2$, $q = - 22$
+$\therefore$ $p - q = 24$

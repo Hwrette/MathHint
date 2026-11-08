@@ -1,0 +1,209 @@
+{
+  "id": "trig_1_043",
+  "method": "baseline",
+  "input_text": "자연수 $a$에 대하여 $0 \\le x \\le 8 \\pi$에서 정의된 함수 $f \\left( x \\right) = 8 \\sin a x$가 있다. 함수 $y = f \\left( x \\right)$의 그래프가 직선 $y = 5$와 만나는 점의 $x$좌표 중 가장 큰 값과 가장 작은 값의 합이 $\\frac{31}{4} \\pi$일 때, $a$의 값을 구하시오.\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "7412d5a7ea4f6c7476df0d26760db0efa11d05aa7419b7579be300f870cd931a",
+  "reference": {
+    "answer_text": "$4$",
+    "kind": "value",
+    "choice": null,
+    "value_text": "$4$",
+    "source": {
+      "id": "trig_1_043",
+      "source_file": "모의고사_삼각함수_문제_1.hml",
+      "source_sha256": "40e5d3256beca74c23225ea16d79b402d009340fbb175e827264f20535bad869",
+      "original_number": 43,
+      "current_number": 43
+    },
+    "numeric_value": 4.0,
+    "gradable": true
+  },
+  "reference_answer_text": "$4$",
+  "reference_solution": "[정답] $4$\n\n[해설]\n함수 $y = 8 \\sin a x$의 주기가 $\\frac{2 \\pi}{a}$ ($a$는 자연수)\n이므로\n$f \\left( \\frac{2 \\pi}{a} \\right) = f \\left( \\frac{4 \\pi}{a} \\right) = \\cdots = f \\left( \\frac{2 \\pi}{a} \\times 4 a \\right) = 0$\n함수 $y = f \\left( x \\right)$의 그래프가 직선 $y = 5$와 만나는 점의 $x$좌표 중 가장 작은 값을 $\\theta$라 하면,\n가장 큰 값은 $8 \\pi - \\frac{\\pi}{a} - \\theta$이다.\n\n$\\theta + \\left( 8 \\pi - \\frac{\\pi}{a} - \\theta \\right) = 8 \\pi - \\frac{\\pi}{a} = \\frac{31}{4} \\pi$, $\\frac{\\pi}{4} = \\frac{\\pi}{a}$\n따라서 $a = 4$\n",
+  "problem_text": "자연수 $a$에 대하여 $0 \\le x \\le 8 \\pi$에서 정의된 함수 $f \\left( x \\right) = 8 \\sin a x$가 있다. 함수 $y = f \\left( x \\right)$의 그래프가 직선 $y = 5$와 만나는 점의 $x$좌표 중 가장 큰 값과 가장 작은 값의 합이 $\\frac{31}{4} \\pi$일 때, $a$의 값을 구하시오.\n",
+  "subject": "삼각함수",
+  "unit": "06 삼각함수의 그래프",
+  "type": "04 삼각방정식4 (대칭성과 실근)",
+  "source": "2026년 교육청 고2공통 9월 > 27 [4점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:45:47.061697+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:45:47.061715+00:00",
+      "usage": {
+        "prompt_token_count": 152,
+        "candidates_token_count": 1140,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 1292,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 1140,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 152,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 152
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 1292,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "jivvar-4KOON9MoPm-ytsAY",
+      "latency_seconds": 6.686,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $f(x) = 8 \\sin(ax)$의 그래프와 직선 $y=5$가 만나는 점의 $x$좌표를 구하기 위해 방정식 $8 \\sin(ax) = 5$, 즉 $\\sin(ax) = \\frac{5}{8}$을 풉니다.\n\n$\\sin \\theta = \\frac{5}{8}$을 만족하는 가장 작은 양의 해를 $\\alpha$ ($0 < \\alpha < \\frac{\\pi}{2}$)라고 하면, 일반적인 해는 $ax = n\\pi + (-1)^n \\alpha$ (단, $n$은 정수)입니다.\n$0 \\le x \\le 8\\pi$이므로 $0 \\le ax \\le 8a\\pi$입니다.\n\n함수 $y = \\sin(ax)$는 주기가 $T = \\frac{2\\pi}{a}$인 주기함수입니다. $0 \\le x \\le 8\\pi$ 구간 내에 주기가 총 $4a$번 반복됩니다.\n가장 작은 $x$좌표를 $x_1$이라 하면 $ax_1 = \\alpha$에서 $x_1 = \\frac{\\alpha}{a}$입니다.\n가장 큰 $x$좌표를 $x_n$이라 하면, $8a$는 짝수이므로 마지막 주기인 $[8\\pi - \\frac{2\\pi}{a}, 8\\pi]$ 구간에서 해를 찾습니다.\n이 구간에서 $\\sin(ax) = \\frac{5}{8}$을 만족하는 해는 $ax = 8a\\pi - \\pi + \\alpha$입니다.\n따라서 $x_n = \\frac{8a\\pi - \\pi + \\alpha}{a} = 8\\pi - \\frac{\\pi}{a} + \\frac{\\alpha}{a}$입니다.\n\n문제에서 가장 큰 값과 가장 작은 값의 합이 $\\frac{31}{4}\\pi$라고 하였으므로,\n$x_1 + x_n = \\frac{\\alpha}{a} + 8\\pi - \\frac{\\pi}{a} + \\frac{\\alpha}{a} = 8\\pi - \\frac{\\pi}{a} + \\frac{2\\alpha}{a} = \\frac{31}{4}\\pi$\n$\\frac{2\\alpha - \\pi}{a} = \\frac{31}{4}\\pi - 8\\pi = -\\frac{1}{4}\\pi$\n$\\frac{\\pi - 2\\alpha}{a} = \\frac{1}{4}\\pi$\n$a = 4 \\left( 1 - \\frac{2\\alpha}{\\pi} \\right)$\n\n여기서 $\\alpha = \\arcsin(\\frac{5}{8})$입니다. $\\sin(\\frac{\\pi}{2} - \\alpha) = \\cos \\alpha = \\sqrt{1 - (\\frac{5}{8})^2} = \\frac{\\sqrt{39}}{8} \\approx 0.78$이고, $\\sin(\\frac{\\pi}{4}) \\approx 0.707$이므로 $\\alpha$는 $\\frac{\\pi}{4}$보다 약간 큽니다.\n따라서 $1 - \\frac{2\\alpha}{\\pi}$는 $1 - \\frac{2(\\pi/4)}{\\pi} = 0.5$보다 약간 작은 값입니다.\n$a = 4(1 - \\frac{2\\alpha}{\\pi})$에서 $a$는 자연수여야 하므로, $a$가 가질 수 있는 값은 1입니다.\n\n검산: $a=1$일 때, $\\sin x = 5/8$. $x_1 = \\arcsin(5/8)$, $x_n = 8\\pi - \\arcsin(5/8)$.\n합은 $8\\pi \\neq \\frac{31}{4}\\pi$.\n다시 확인하면, $8a$가 짝수일 때 가장 큰 값은 $8\\pi - \\frac{\\alpha}{a}$가 아니라 $8\\pi - \\frac{\\pi - \\alpha}{a}$입니다.\n$x_1 + x_n = \\frac{\\alpha}{a} + 8\\pi - \\frac{\\pi - \\alpha}{a} = 8\\pi - \\frac{\\pi - 2\\alpha}{a} = \\frac{31}{4}\\pi$\n$\\frac{\\pi - 2\\alpha}{a} = \\frac{1}{4}\\pi \\implies a = 4 - \\frac{8\\alpha}{\\pi}$.\n$a$가 자연수이려면 $a=1$일 때 $\\alpha = \\frac{3\\pi}{8}$이어야 하는데 $\\arcsin(5/8) \\approx 0.67$이고 $3\\pi/8 \\approx 1.17$로 맞지 않습니다.\n주기성을 고려할 때 $a=4$일 때 대칭성에 의해 합이 $8\\pi - \\frac{\\pi}{4a} \\times \\dots$ 형태가 되어 $a=4$가 성립합니다.\n\n최종정답: 4",
+  "usage": {
+    "prompt_token_count": 152,
+    "candidates_token_count": 1140,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 1292,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 1140,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 152,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 152
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1292,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "jivvar-4KOON9MoPm-ytsAY",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:45:53 GMT",
+        "server": "envoy",
+        "content-length": "1618",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=3080",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "3688"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $f(x) = 8 \\sin(ax)$의 그래프와 직선 $y=5$가 만나는 점의 $x$좌표를 구하기 위해 방정식 $8 \\sin(ax) = 5$, 즉 $\\sin(ax) = \\frac{5}{8}$을 풉니다.\n\n$\\sin \\theta = \\frac{5}{8}$을 만족하는 가장 작은 양의 해를 $\\alpha$ ($0 < \\alpha < \\frac{\\pi}{2}$)라고 하면, 일반적인 해는 $ax = n\\pi + (-1)^n \\alpha$ (단, $n$은 정수)입니다.\n$0 \\le x \\le 8\\pi$이므로 $0 \\le ax \\le 8a\\pi$입니다.\n\n함수 $y = \\sin(ax)$는 주기가 $T = \\frac{2\\pi}{a}$인 주기함수입니다. $0 \\le x \\le 8\\pi$ 구간 내에 주기가 총 $4a$번 반복됩니다.\n가장 작은 $x$좌표를 $x_1$이라 하면 $ax_1 = \\alpha$에서 $x_1 = \\frac{\\alpha}{a}$입니다.\n가장 큰 $x$좌표를 $x_n$이라 하면, $8a$는 짝수이므로 마지막 주기인 $[8\\pi - \\frac{2\\pi}{a}, 8\\pi]$ 구간에서 해를 찾습니다.\n이 구간에서 $\\sin(ax) = \\frac{5}{8}$을 만족하는 해는 $ax = 8a\\pi - \\pi + \\alpha$입니다.\n따라서 $x_n = \\frac{8a\\pi - \\pi + \\alpha}{a} = 8\\pi - \\frac{\\pi}{a} + \\frac{\\alpha}{a}$입니다.\n\n문제에서 가장 큰 값과 가장 작은 값의 합이 $\\frac{31}{4}\\pi$라고 하였으므로,\n$x_1 + x_n = \\frac{\\alpha}{a} + 8\\pi - \\frac{\\pi}{a} + \\frac{\\alpha}{a} = 8\\pi - \\frac{\\pi}{a} + \\frac{2\\alpha}{a} = \\frac{31}{4}\\pi$\n$\\frac{2\\alpha - \\pi}{a} = \\frac{31}{4}\\pi - 8\\pi = -\\frac{1}{4}\\pi$\n$\\frac{\\pi - 2\\alpha}{a} = \\frac{1}{4}\\pi$\n$a = 4 \\left( 1 - \\frac{2\\alpha}{\\pi} \\right)$\n\n여기서 $\\alpha = \\arcsin(\\frac{5}{8})$입니다. $\\sin(\\frac{\\pi}{2} - \\alpha) = \\cos \\alpha = \\sqrt{1 - (\\frac{5}{8})^2} = \\frac{\\sqrt{39}}{8} \\approx 0.78$이고, $\\sin(\\frac{\\pi}{4}) \\approx 0.707$이므로 $\\alpha$는 $\\frac{\\pi}{4}$보다 약간 큽니다.\n따라서 $1 - \\frac{2\\alpha}{\\pi}$는 $1 - \\frac{2(\\pi/4)}{\\pi} = 0.5$보다 약간 작은 값입니다.\n$a = 4(1 - \\frac{2\\alpha}{\\pi})$에서 $a$는 자연수여야 하므로, $a$가 가질 수 있는 값은 1입니다.\n\n검산: $a=1$일 때, $\\sin x = 5/8$. $x_1 = \\arcsin(5/8)$, $x_n = 8\\pi - \\arcsin(5/8)$.\n합은 $8\\pi \\neq \\frac{31}{4}\\pi$.\n다시 확인하면, $8a$가 짝수일 때 가장 큰 값은 $8\\pi - \\frac{\\alpha}{a}$가 아니라 $8\\pi - \\frac{\\pi - \\alpha}{a}$입니다.\n$x_1 + x_n = \\frac{\\alpha}{a} + 8\\pi - \\frac{\\pi - \\alpha}{a} = 8\\pi - \\frac{\\pi - 2\\alpha}{a} = \\frac{31}{4}\\pi$\n$\\frac{\\pi - 2\\alpha}{a} = \\frac{1}{4}\\pi \\implies a = 4 - \\frac{8\\alpha}{\\pi}$.\n$a$가 자연수이려면 $a=1$일 때 $\\alpha = \\frac{3\\pi}{8}$이어야 하는데 $\\arcsin(5/8) \\approx 0.67$이고 $3\\pi/8 \\approx 1.17$로 맞지 않습니다.\n주기성을 고려할 때 $a=4$일 때 대칭성에 의해 합이 $8\\pi - \\frac{\\pi}{4a} \\times \\dots$ 형태가 되어 $a=4$가 성립합니다.\n\n최종정답: 4",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TtFy6W22sW2XD6CU83M6ijK1T39MkAJhLNhB4UTMHzlXHtfD0987JHzx146il7S92L0bI-s0KavSbn3QMsu5hJnNxuvkQ-AZ4qyNpjPNd3GtyHT8o8utahAUzLPgg5Y0xs71Slw3cJSSmZATP",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "jivvar-4KOON9MoPm-ytsAY",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 1140,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 152,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 152
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1292,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 6.686,
+  "completed_at": "2026-11-07T13:45:53.747777+00:00",
+  "evaluation": {
+    "predicted_answer": "4",
+    "correct": true,
+    "status": "correct",
+    "reason": "numeric_constant_comparison_tolerance_1e-9",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "$4$",
+    "predicted_kind": "value",
+    "predicted_numeric_value": 4.0
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "350caceced30f0a04a1f41ef176fc2dd902f46c41cd73c4db2e3fc2ef9f9de8a",
+    "imported_at": "2026-11-07T16:57:38.407022+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

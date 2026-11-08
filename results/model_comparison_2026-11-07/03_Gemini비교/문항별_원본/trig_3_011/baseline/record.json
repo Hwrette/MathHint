@@ -1,0 +1,209 @@
+{
+  "id": "trig_3_011",
+  "method": "baseline",
+  "input_text": "좌표평면에서 제$1$사분면에 점 ${\\mathrm{{P}}}$가 있다. 점 ${\\mathrm{{P}}}$를 직선 $y = x$에 대하여 대칭이동한 점을 ${\\mathrm{{Q}}}$라 하고, 점 ${\\mathrm{{Q}}}$를 원점에 대하여 대칭이동한 점을 ${\\mathrm{{R}}}$이라 할 때, 세 동경 ${\\mathrm{{O P}}}$, ${\\mathrm{{O Q}}}$, ${\\mathrm{{O R}}}$이 나타내는 각을 각각 $\\alpha$, $\\beta$, $\\gamma$라 하자. $\\sin \\alpha = \\frac{1}{3}$일 때, $9 \\left( \\sin^{2} \\beta + \\tan^{2} \\gamma \\right)$의 값을 구하시오. (단, ${\\mathrm{{O}}}$는 원점이고, 시초선은 $x$축의 양의 방향이다.)\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "da4a024ea20de554a08737e08b09517ad1ab9258f225b9f98d21d2b2a1476be9",
+  "reference": {
+    "answer_text": "$\\mathbf{80}$",
+    "kind": "value",
+    "choice": null,
+    "value_text": "$\\mathbf{80}$",
+    "source": {
+      "id": "trig_3_011",
+      "source_file": "모의고사_삼각함수_문제_3.hml",
+      "source_sha256": "4853842eca14740e8bbc1083fae38beb51f1c6cde8e78fe6d3c398eca800b30b",
+      "original_number": 11,
+      "current_number": 11
+    },
+    "numeric_value": 80.0,
+    "gradable": true
+  },
+  "reference_answer_text": "$\\mathbf{80}$",
+  "reference_solution": "[정답] $\\mathbf{80}$\n\n[해설]\n원점을 중심으로 하고 반지름의 길이가 $3$인 원이 세 동경 $\\mathrm{O P , O Q , O R}$와 만나는 점을 각각 $\\mathrm{A , B , C}$라 하자.\n점 $\\mathrm{P}$가 제$1$사분면 위에 있고, $\\sin \\alpha = \\frac{1}{3}$이므로 점 $\\mathrm{A}$의 좌표는\n$\\mathrm{A} \\left( 2 \\sqrt{2} , 1 \\right)$\n점 $\\mathrm{Q}$가 점 $\\mathrm{P}$와 직선 $y = x$에 대하여 대칭이므로 동경 $\\mathrm{O Q}$도 동경 $\\mathrm{O P}$와 직선 $y = x$에 대하여 대칭이다.\n그러므로 점 $\\mathrm{B}$의 좌표는 $\\mathrm{B} \\left( 1 , 2 \\sqrt{2} \\right)$\n점 $\\mathrm{R}$가 점 $\\mathrm{Q}$와 원점에 대하여 대칭이므로 동경 $\\mathrm{O R}$도 동경 $\\mathrm{O Q}$와 원점에 대하여 대칭이다.\n그러므로 점 $\\mathrm{C}$의 좌표는 $\\mathrm{C} \\left( - 1 , - 2 \\sqrt{2} \\right)$\n삼각함수의 정의에 의하여\n$\\sin \\beta = \\frac{2 \\sqrt{2}}{3}$, $\\tan \\gamma = \\frac{\\left( - 2 \\sqrt{2} \\right)}{\\left( - 1 \\right)}$$= 2 \\sqrt{2}$\n따라서 $9 \\left( \\sin^{2} \\beta + \\tan^{2} \\gamma \\right)$$= 9 \\times \\left( \\frac{8}{9} + 8 \\right)$$= 80$\n",
+  "problem_text": "좌표평면에서 제$1$사분면에 점 ${\\mathrm{{P}}}$가 있다. 점 ${\\mathrm{{P}}}$를 직선 $y = x$에 대하여 대칭이동한 점을 ${\\mathrm{{Q}}}$라 하고, 점 ${\\mathrm{{Q}}}$를 원점에 대하여 대칭이동한 점을 ${\\mathrm{{R}}}$이라 할 때, 세 동경 ${\\mathrm{{O P}}}$, ${\\mathrm{{O Q}}}$, ${\\mathrm{{O R}}}$이 나타내는 각을 각각 $\\alpha$, $\\beta$, $\\gamma$라 하자. $\\sin \\alpha = \\frac{1}{3}$일 때, $9 \\left( \\sin^{2} \\beta + \\tan^{2} \\gamma \\right)$의 값을 구하시오. (단, ${\\mathrm{{O}}}$는 원점이고, 시초선은 $x$축의 양의 방향이다.)\n",
+  "subject": "삼각함수",
+  "unit": "06 삼각함수의 그래프",
+  "type": "03 각 변형3 (각 변형 규칙의 활용)",
+  "source": "2020년 교육청 고3이과 3월 > 26 [4점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:50:42.817917+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:50:42.817934+00:00",
+      "usage": {
+        "prompt_token_count": 231,
+        "candidates_token_count": 610,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 841,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 610,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 231,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 231
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 841,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "tyzvaq-MCsmkmtkP0ezl6Ac",
+      "latency_seconds": 6.822,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "점 $\\mathrm{P}$의 좌표를 $(x, y)$라 하면, 제1사분면에 있으므로 $x > 0, y > 0$입니다.\n점 $\\mathrm{P}$의 동경이 나타내는 각이 $\\alpha$이므로, $\\sin \\alpha = \\frac{y}{\\sqrt{x^2+y^2}} = \\frac{1}{3}$입니다.\n이를 통해 $y^2 = \\frac{1}{9}(x^2+y^2)$에서 $9y^2 = x^2+y^2$, 즉 $x^2 = 8y^2$이므로 $x = 2\\sqrt{2}y$ ($x>0$)임을 알 수 있습니다. 따라서 $\\mathrm{P} = (2\\sqrt{2}y, y)$입니다.\n\n1. **점 $\\mathrm{Q}$의 좌표**: 점 $\\mathrm{P}$를 직선 $y=x$에 대하여 대칭이동하면 $x$와 $y$의 좌표가 바뀝니다.\n   $\\mathrm{Q} = (y, 2\\sqrt{2}y)$\n   점 $\\mathrm{Q}$의 동경이 나타내는 각이 $\\beta$이므로, $\\sin \\beta = \\frac{2\\sqrt{2}y}{\\sqrt{y^2 + (2\\sqrt{2}y)^2}} = \\frac{2\\sqrt{2}y}{\\sqrt{9y^2}} = \\frac{2\\sqrt{2}y}{3y} = \\frac{2\\sqrt{2}}{3}$입니다.\n   따라서 $\\sin^2 \\beta = \\left( \\frac{2\\sqrt{2}}{3} \\right)^2 = \\frac{8}{9}$입니다.\n\n2. **점 $\\mathrm{R}$의 좌표**: 점 $\\mathrm{Q}$를 원점에 대하여 대칭이동하면 좌표의 부호가 모두 바뀝니다.\n   $\\mathrm{R} = (-y, -2\\sqrt{2}y)$\n   점 $\\mathrm{R}$의 동경이 나타내는 각이 $\\gamma$이므로, $\\tan \\gamma = \\frac{-2\\sqrt{2}y}{-y} = 2\\sqrt{2}$입니다.\n   따라서 $\\tan^2 \\gamma = (2\\sqrt{2})^2 = 8$입니다.\n\n3. **최종 계산**:\n   $9(\\sin^2 \\beta + \\tan^2 \\gamma) = 9 \\left( \\frac{8}{9} + 8 \\right) = 9 \\left( \\frac{8 + 72}{9} \\right) = 8 + 72 = 80$\n\n최종정답: 80",
+  "usage": {
+    "prompt_token_count": 231,
+    "candidates_token_count": 610,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 841,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 610,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 231,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 231
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 841,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "tyzvaq-MCsmkmtkP0ezl6Ac",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:50:49 GMT",
+        "server": "envoy",
+        "content-length": "1084",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=2445",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "3014"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "점 $\\mathrm{P}$의 좌표를 $(x, y)$라 하면, 제1사분면에 있으므로 $x > 0, y > 0$입니다.\n점 $\\mathrm{P}$의 동경이 나타내는 각이 $\\alpha$이므로, $\\sin \\alpha = \\frac{y}{\\sqrt{x^2+y^2}} = \\frac{1}{3}$입니다.\n이를 통해 $y^2 = \\frac{1}{9}(x^2+y^2)$에서 $9y^2 = x^2+y^2$, 즉 $x^2 = 8y^2$이므로 $x = 2\\sqrt{2}y$ ($x>0$)임을 알 수 있습니다. 따라서 $\\mathrm{P} = (2\\sqrt{2}y, y)$입니다.\n\n1. **점 $\\mathrm{Q}$의 좌표**: 점 $\\mathrm{P}$를 직선 $y=x$에 대하여 대칭이동하면 $x$와 $y$의 좌표가 바뀝니다.\n   $\\mathrm{Q} = (y, 2\\sqrt{2}y)$\n   점 $\\mathrm{Q}$의 동경이 나타내는 각이 $\\beta$이므로, $\\sin \\beta = \\frac{2\\sqrt{2}y}{\\sqrt{y^2 + (2\\sqrt{2}y)^2}} = \\frac{2\\sqrt{2}y}{\\sqrt{9y^2}} = \\frac{2\\sqrt{2}y}{3y} = \\frac{2\\sqrt{2}}{3}$입니다.\n   따라서 $\\sin^2 \\beta = \\left( \\frac{2\\sqrt{2}}{3} \\right)^2 = \\frac{8}{9}$입니다.\n\n2. **점 $\\mathrm{R}$의 좌표**: 점 $\\mathrm{Q}$를 원점에 대하여 대칭이동하면 좌표의 부호가 모두 바뀝니다.\n   $\\mathrm{R} = (-y, -2\\sqrt{2}y)$\n   점 $\\mathrm{R}$의 동경이 나타내는 각이 $\\gamma$이므로, $\\tan \\gamma = \\frac{-2\\sqrt{2}y}{-y} = 2\\sqrt{2}$입니다.\n   따라서 $\\tan^2 \\gamma = (2\\sqrt{2})^2 = 8$입니다.\n\n3. **최종 계산**:\n   $9(\\sin^2 \\beta + \\tan^2 \\gamma) = 9 \\left( \\frac{8}{9} + 8 \\right) = 9 \\left( \\frac{8 + 72}{9} \\right) = 8 + 72 = 80$\n\n최종정답: 80",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0T-aMi4cqsCN9ksRP6N8PQQTPWplBZf-_ELMnmkTNiUAMvo0ToS1wzUaNser2T0tBYWwAx5UIk7ybMLVHiMCA-La6spbSHa-sJFAE7moVo2M7EHq_z0GL544E2k9VAWHH1tQUX-EecoA8NRKux",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "tyzvaq-MCsmkmtkP0ezl6Ac",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 610,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 231,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 231
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 841,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 6.822,
+  "completed_at": "2026-11-07T13:50:49.640240+00:00",
+  "evaluation": {
+    "predicted_answer": "80",
+    "correct": true,
+    "status": "correct",
+    "reason": "numeric_constant_comparison_tolerance_1e-9",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "$\\mathbf{80}$",
+    "predicted_kind": "value",
+    "predicted_numeric_value": 80.0
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "2635d584edfdf5f758bd63b096f56ccb93c5de9f678978fc3cf6d3e3cab3ba1f",
+    "imported_at": "2026-11-07T16:57:38.420872+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

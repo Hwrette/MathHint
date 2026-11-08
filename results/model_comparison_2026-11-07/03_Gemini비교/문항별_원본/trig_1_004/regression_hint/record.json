@@ -1,0 +1,231 @@
+{
+  "id": "trig_1_004",
+  "method": "regression_hint",
+  "input_text": "$\\frac{\\pi}{2} < \\theta < \\pi$인 $\\theta$에 대하여 $\\tan^{2} \\theta = 2$일 때, $\\cos \\theta$의 값은?\n① $- \\frac{\\sqrt{3}}{3}$\t② $- \\frac{1}{3}$\t\t③ $- \\frac{1}{6}$\n④ $\\frac{1}{3}$\t\t⑤ $\\frac{\\sqrt{3}}{3}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:}\":24.07,\"latex:{\":23.986,\"latex:\\\\theta\":11.245,\"latex:3\":9.443,\"latex:\\\\frac\":8.065,\"latex:=\":7.692,\"latex:\\\\cos\":5.382,\"latex:1\":4.87,\"latex:2\":4.627,\"latex:-\":3.876,\"latex:10\":3.638,\"latex:\\\\pi\":3.213,\"latex:\\\\sin\":2.74,\"latex:\\\\alpha\":2.727,\"latex:<\":2.651,\"kiwi:이\":2.504,\"latex:^\":2.409,\"latex:\\\\sqrt\":2.0,\"kiwi:]\":1.803,\"kiwi:[\":1.8}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "da5404f93375f05d3e623f3c1a9f02c12c9be9e3f508ef7bcec7500718a59e3e",
+  "reference": {
+    "answer_text": "①",
+    "kind": "choice",
+    "choice": 1,
+    "value_text": "$- \\frac{\\sqrt{3}}{3}$",
+    "source": {
+      "id": "trig_1_004",
+      "source_file": "모의고사_삼각함수_문제_1.hml",
+      "source_sha256": "40e5d3256beca74c23225ea16d79b402d009340fbb175e827264f20535bad869",
+      "original_number": 4,
+      "current_number": 4
+    },
+    "numeric_value": -0.5773502691896257,
+    "gradable": true
+  },
+  "reference_answer_text": "①",
+  "reference_solution": "[정답] ①\n\n[해설]\n$\\tan^{2} \\theta = \\frac{\\sin^{2} \\theta}{\\cos^{2} \\theta} = 2$, $\\sin^{2} \\theta = 2 \\cos^{2} \\theta$\n$1 - \\cos^{2} \\theta = 2 \\cos^{2} \\theta$, $\\cos^{2} \\theta = \\frac{1}{3}$\n$\\theta$는 제$2$사분면의 각이므로 $\\cos \\theta < 0$\n따라서 $\\cos \\theta = - \\frac{\\sqrt{3}}{3}$\n",
+  "problem_text": "$\\frac{\\pi}{2} < \\theta < \\pi$인 $\\theta$에 대하여 $\\tan^{2} \\theta = 2$일 때, $\\cos \\theta$의 값은?\n① $- \\frac{\\sqrt{3}}{3}$\t② $- \\frac{1}{3}$\t\t③ $- \\frac{1}{6}$\n④ $\\frac{1}{3}$\t\t⑤ $\\frac{\\sqrt{3}}{3}$\n",
+  "subject": "삼각함수",
+  "unit": "05 삼각함수의 정의",
+  "type": "06 정의6 (삼각함수 사이의 관계. 값 구하기)",
+  "source": "2026년 교육청 고3공통 10월 > 6 [3점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:}": 24.07,
+      "latex:{": 23.986,
+      "latex:\\theta": 11.245,
+      "latex:3": 9.443,
+      "latex:\\frac": 8.065,
+      "latex:=": 7.692,
+      "latex:\\cos": 5.382,
+      "latex:1": 4.87,
+      "latex:2": 4.627,
+      "latex:-": 3.876,
+      "latex:10": 3.638,
+      "latex:\\pi": 3.213,
+      "latex:\\sin": 2.74,
+      "latex:\\alpha": 2.727,
+      "latex:<": 2.651,
+      "kiwi:이": 2.504,
+      "latex:^": 2.409,
+      "latex:\\sqrt": 2.0,
+      "kiwi:]": 1.803,
+      "kiwi:[": 1.8
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:14:40.700562+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:14:40.700575+00:00",
+      "usage": {
+        "prompt_token_count": 377,
+        "candidates_token_count": 301,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 678,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 301,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 377,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 377
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 678,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "hFzvaquGC6aq6dkPuPChgQY",
+      "latency_seconds": 4.635,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "주어진 조건 $\\tan^2 \\theta = 2$를 이용하여 $\\cos \\theta$의 값을 구하는 과정은 다음과 같습니다.\n\n1. **삼각함수의 관계식 이용**:\n   $\\tan^2 \\theta = \\frac{\\sin^2 \\theta}{\\cos^2 \\theta} = 2$이므로, $\\sin^2 \\theta = 2 \\cos^2 \\theta$입니다.\n   삼각함수의 기본 항등식 $\\sin^2 \\theta + \\cos^2 \\theta = 1$에 대입하면:\n   $2 \\cos^2 \\theta + \\cos^2 \\theta = 1$\n   $3 \\cos^2 \\theta = 1$\n   $\\cos^2 \\theta = \\frac{1}{3}$\n\n2. **부호 결정**:\n   문제에서 $\\frac{\\pi}{2} < \\theta < \\pi$라고 하였습니다. 이는 $\\theta$가 제2사분면의 각임을 의미합니다.\n   제2사분면에서 $\\cos \\theta$의 값은 음수이므로:\n   $\\cos \\theta = -\\sqrt{\\frac{1}{3}} = -\\frac{1}{\\sqrt{3}} = -\\frac{\\sqrt{3}}{3}$\n\n따라서 구하는 값은 $-\\frac{\\sqrt{3}}{3}$입니다.\n\n최종정답: ①",
+  "usage": {
+    "prompt_token_count": 377,
+    "candidates_token_count": 301,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 678,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 301,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 377,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 377
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 678,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "hFzvaquGC6aq6dkPuPChgQY",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:14:45 GMT",
+        "server": "envoy",
+        "content-length": "925",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1122",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "1735"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "주어진 조건 $\\tan^2 \\theta = 2$를 이용하여 $\\cos \\theta$의 값을 구하는 과정은 다음과 같습니다.\n\n1. **삼각함수의 관계식 이용**:\n   $\\tan^2 \\theta = \\frac{\\sin^2 \\theta}{\\cos^2 \\theta} = 2$이므로, $\\sin^2 \\theta = 2 \\cos^2 \\theta$입니다.\n   삼각함수의 기본 항등식 $\\sin^2 \\theta + \\cos^2 \\theta = 1$에 대입하면:\n   $2 \\cos^2 \\theta + \\cos^2 \\theta = 1$\n   $3 \\cos^2 \\theta = 1$\n   $\\cos^2 \\theta = \\frac{1}{3}$\n\n2. **부호 결정**:\n   문제에서 $\\frac{\\pi}{2} < \\theta < \\pi$라고 하였습니다. 이는 $\\theta$가 제2사분면의 각임을 의미합니다.\n   제2사분면에서 $\\cos \\theta$의 값은 음수이므로:\n   $\\cos \\theta = -\\sqrt{\\frac{1}{3}} = -\\frac{1}{\\sqrt{3}} = -\\frac{\\sqrt{3}}{3}$\n\n따라서 구하는 값은 $-\\frac{\\sqrt{3}}{3}$입니다.\n\n최종정답: ①",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TicHLOH_wUTw6eVv2p72KCUy8K7rN_V5lSBMfR1yGBsErNRHJS-T31W2QyGUQtZhvCoND5zVh-eieowubXvaqaLDjbFZvx81ru1lowXcUuIwERB9ZKSzjluWR9Z9vmK4qAZiRK65eRD6QyV_3",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "hFzvaquGC6aq6dkPuPChgQY",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 301,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 377,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 377
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 678,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 4.635,
+  "completed_at": "2026-11-07T17:14:45.335677+00:00",
+  "evaluation": {
+    "predicted_answer": "①",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "①",
+    "predicted_kind": "choice",
+    "predicted_choice": 1
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

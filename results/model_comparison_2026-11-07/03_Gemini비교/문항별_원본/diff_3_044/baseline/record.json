@@ -1,0 +1,209 @@
+{
+  "id": "diff_3_044",
+  "method": "baseline",
+  "input_text": "방정식 $2 x^{3} - 6 x^{2} + k = 0$의 서로 다른 양의 실근의 개수가 $2$가 되도록 하는 정수 $k$의 개수를 구하시오.\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "f33418ffb6203c561e592452d0be469eae60b4531f0e092ab4a7667152b805c8",
+  "reference": {
+    "answer_text": "$7$",
+    "kind": "value",
+    "choice": null,
+    "value_text": "$7$",
+    "source": {
+      "id": "diff_3_044",
+      "source_file": "모의고사_미분_문제_3.hml",
+      "source_sha256": "9c5d864f886ff6f2c93f9125549a8bce3fad8f18a790a887380963d1652adf8d",
+      "original_number": 44,
+      "current_number": 43
+    },
+    "numeric_value": 7.0,
+    "gradable": true
+  },
+  "reference_answer_text": "$7$",
+  "reference_solution": "[정답] $7$\n\n[해설]\n방정식 $2 x^{3} - 6 x^{2} + k = 0$에서\n$f (x) = 2 x^{3} - 6 x^{2} + k$라 하면 방정식의 실근은 함수 $y = f (x)$의 그래프와 $x$축이 만나는 점의 $x$좌표이다.\n$f' (x)$$= 6 x^{2} - 12 x$$= 6 x (x - 2)$\n이므로 $f' (x) = 0$에서\n$x = 0$ 또는 $x = 2$\n함수 $f (x)$의 증가와 감소를 표로 나타내면 다음과 같다.\n\n$x$\t$\\cdots$\t$\\mathrm{0}$\t$\\cdots$\t$\\mathrm{2}$\t$\\cdots$\n$f' (x)$\t$+$\t$\\mathrm{0}$\t$-$\t$\\mathrm{0}$\t$+$\n$f (x)$\t$\\nearrow$\t$k$\t$\\searrow$\t$k - 8$\t$\\nearrow$\n\n이때, 방정식 $f \\left( x \\right) = 0$이 $\\mathrm{2}$개의 서로 다른 양의 실근을 갖기 위해서는 그림과 같이 함수 $f (x)$의 극댓값은 양수이어야 하고 함수 $f (x)$의 극솟값은 음수이어야 한다.\n\n따라서 $k > 0$이고 $k - 8 < 0$이므로\n$0 < k < 8$\n따라서 정수 $k$는 $1$, $2$, $3$, $4$, $5$, $6$, $7$의 $\\mathrm{7}$개다.\n\n[다른 풀이]\n방정식 $2 x^{3} - 6 x^{2} + k = 0$의 서로 다른 양의 실근의 개수가 $2$이므로 $k = - 2 x^{3} + 6 x^{2}$에서 함수 $y = - 2 x^{3} + 6 x^{2}$의 그래프와 직선 $y = k$의 교점의 $x$좌표가 양수인 두 점에서 만나야 한다.\n$f (x) = - 2 x^{3} + 6 x^{2}$이라 하면\n$f' (x) = - 6 x^{2} + 12 x = - 6 x (x - 2)$\n$f' (x) = 0$에서    $x = 0$ 또는 $x = 2$\n함수 $f \\left( x \\right)$의 증가와 감소를 표로 나타내면 다음과 같다.\n\n$x$\t${\\cdots}$\t$0$\t${\\cdots}$\t$2$\t${\\cdots}$\n$f' (x)$\t$-$\t$0$\t$+$\t$0$\t$-$\n$f (x)$\t$\\searrow$\t$0$\t$\\nearrow$\t$8$\t$\\searrow$\n\n함수 $y = f (x)$의 그래프와 직선 $y = k$의 교점의 $x$좌표가 양수인 두 점에서 만나려면\n$0 < k < 8$\n따라서 정수 $k$의 개수는 $7$이다.\n",
+  "problem_text": "방정식 $2 x^{3} - 6 x^{2} + k = 0$의 서로 다른 양의 실근의 개수가 $2$가 되도록 하는 정수 $k$의 개수를 구하시오.\n",
+  "subject": "미분",
+  "unit": "06 방부등식과 직선운동",
+  "type": "02 방정식과 미분2 (삼차방정식의 실근의 범위)",
+  "source": "2022년(2023학년도) 평가원 고3공통 11월 > 공통범위 > 19 [3점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:39:25.293155+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:39:25.293170+00:00",
+      "usage": {
+        "prompt_token_count": 93,
+        "candidates_token_count": 647,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 740,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 647,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 93,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 93
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 740,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "DyrvaqX9OcmkmtkP0ezl6Ac",
+      "latency_seconds": 4.777,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "방정식 $2x^3 - 6x^2 + k = 0$을 변형하면 다음과 같습니다.\n$2x^3 - 6x^2 = -k$\n\n함수 $f(x) = 2x^3 - 6x^2$이라 하고, 이 함수의 그래프를 그려서 $y = -k$와의 교점을 분석합니다.\n$f'(x) = 6x^2 - 12x = 6x(x - 2)$\n$f'(x) = 0$이 되는 $x$의 값은 $x = 0$ 또는 $x = 2$입니다.\n\n각 점에서의 함숫값을 구하면:\n- $f(0) = 2(0)^3 - 6(0)^2 = 0$\n- $f(2) = 2(8) - 6(4) = 16 - 24 = -8$\n\n함수 $f(x)$의 개형을 살펴보면:\n- $x < 0$일 때 $f(x) < 0$\n- $x = 0$일 때 극댓값 $0$\n- $0 < x < 2$일 때 $f(x)$는 감소\n- $x = 2$일 때 극솟값 $-8$\n- $x > 2$일 때 $f(x)$는 증가하며 $x \\to \\infty$일 때 $f(x) \\to \\infty$\n\n방정식 $f(x) = -k$가 서로 다른 양의 실근을 2개 가지려면, $x > 0$인 범위에서 그래프와 직선 $y = -k$가 두 점에서 만나야 합니다.\n1. $x=0$일 때 $f(0)=0$이므로, $x>0$인 범위에서 교점이 생기려면 $-k$의 값은 극솟값보다 커야 합니다.\n2. $-8 < -k < 0$인 경우:\n   - $x=2$일 때 $f(2)=-8$이므로, $-k = -8$이면 $x=2$에서 중근을 갖고 $x=0$보다 작은 곳에서 다른 근을 가지므로 양의 실근은 1개입니다.\n   - $-k = 0$이면 $x=0$에서 근을 갖고 $x=3$에서 다른 근을 가지므로 양의 실근은 1개입니다.\n   - 따라서 $-8 < -k < 0$이면 $x>0$인 범위에서 서로 다른 두 양의 실근을 갖습니다.\n   - 부등식을 풀면 $0 < k < 8$입니다.\n\n이 범위에 속하는 정수 $k$는 $1, 2, 3, 4, 5, 6, 7$로 총 7개입니다.\n\n최종정답: 7",
+  "usage": {
+    "prompt_token_count": 93,
+    "candidates_token_count": 647,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 740,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 647,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 93,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 93
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 740,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "DyrvaqX9OcmkmtkP0ezl6Ac",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:39:29 GMT",
+        "server": "envoy",
+        "content-length": "1239",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=2081",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "2514"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "방정식 $2x^3 - 6x^2 + k = 0$을 변형하면 다음과 같습니다.\n$2x^3 - 6x^2 = -k$\n\n함수 $f(x) = 2x^3 - 6x^2$이라 하고, 이 함수의 그래프를 그려서 $y = -k$와의 교점을 분석합니다.\n$f'(x) = 6x^2 - 12x = 6x(x - 2)$\n$f'(x) = 0$이 되는 $x$의 값은 $x = 0$ 또는 $x = 2$입니다.\n\n각 점에서의 함숫값을 구하면:\n- $f(0) = 2(0)^3 - 6(0)^2 = 0$\n- $f(2) = 2(8) - 6(4) = 16 - 24 = -8$\n\n함수 $f(x)$의 개형을 살펴보면:\n- $x < 0$일 때 $f(x) < 0$\n- $x = 0$일 때 극댓값 $0$\n- $0 < x < 2$일 때 $f(x)$는 감소\n- $x = 2$일 때 극솟값 $-8$\n- $x > 2$일 때 $f(x)$는 증가하며 $x \\to \\infty$일 때 $f(x) \\to \\infty$\n\n방정식 $f(x) = -k$가 서로 다른 양의 실근을 2개 가지려면, $x > 0$인 범위에서 그래프와 직선 $y = -k$가 두 점에서 만나야 합니다.\n1. $x=0$일 때 $f(0)=0$이므로, $x>0$인 범위에서 교점이 생기려면 $-k$의 값은 극솟값보다 커야 합니다.\n2. $-8 < -k < 0$인 경우:\n   - $x=2$일 때 $f(2)=-8$이므로, $-k = -8$이면 $x=2$에서 중근을 갖고 $x=0$보다 작은 곳에서 다른 근을 가지므로 양의 실근은 1개입니다.\n   - $-k = 0$이면 $x=0$에서 근을 갖고 $x=3$에서 다른 근을 가지므로 양의 실근은 1개입니다.\n   - 따라서 $-8 < -k < 0$이면 $x>0$인 범위에서 서로 다른 두 양의 실근을 갖습니다.\n   - 부등식을 풀면 $0 < k < 8$입니다.\n\n이 범위에 속하는 정수 $k$는 $1, 2, 3, 4, 5, 6, 7$로 총 7개입니다.\n\n최종정답: 7",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TGVMnNBaaF7TI4wL8H--RZHSN8ELbr4Jbz7LhMkXVguA75JDc6dVzz0yyZ6gH_LFyfTt10j0dbsRg_zsuFVJQB42MQBhC-HWl4ysZorTsbmgZOTQcK3GA65be5gbeq1YrJFhfaaeHdwWUN_l7",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "DyrvaqX9OcmkmtkP0ezl6Ac",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 647,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 93,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 93
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 740,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 4.777,
+  "completed_at": "2026-11-07T13:39:30.070204+00:00",
+  "evaluation": {
+    "predicted_answer": "7",
+    "correct": true,
+    "status": "correct",
+    "reason": "numeric_constant_comparison_tolerance_1e-9",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "$7$",
+    "predicted_kind": "value",
+    "predicted_numeric_value": 7.0
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "dbf2fa8cc3ee16735b4f0fe5533aa4b1bdb431f37f5264ded7368c690376b950",
+    "imported_at": "2026-11-07T16:57:38.390568+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

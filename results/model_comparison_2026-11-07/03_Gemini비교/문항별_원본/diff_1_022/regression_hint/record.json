@@ -1,0 +1,231 @@
+{
+  "id": "diff_1_022",
+  "method": "regression_hint",
+  "input_text": "다항함수 $f \\left( x \\right)$에 대하여 함수 $g \\left( x \\right)$를\n$g \\left( x \\right) = \\left( x^{2} + x \\right) f \\left( x \\right)$\n라 하자. $\\lim_{h \\rightarrow 0} \\frac{g \\left( 1 + h \\right) - 4}{h} = 9$일 때, $f \\left( 1 \\right) \\times f' \\left( 1 \\right)$의 값은?\n① $3$\t\t② $\\frac{9}{2}$\t\t③ $6$\n④ $\\frac{15}{2}$\t\t⑤ $9$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:)\":17.734,\"latex:(\":17.71,\"latex:2\":13.512,\"latex:\\\\left\":11.91,\"latex:\\\\right\":11.714,\"latex:1\":11.091,\"latex:}\":10.547,\"latex:{\":10.395,\"latex:x\":9.954,\"latex:=\":9.599,\"latex:+\":8.943,\"latex:3\":7.944,\"latex:f\":7.881,\"latex:h\":6.602,\"latex:-\":5.832,\"latex:\\\\times\":5.642,\"latex:^\":5.61,\"latex:\\\\theta\":5.233,\"latex:'\":4.622,\"latex:t\":3.833}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "6227097fad8b04773e319920e27b7af9a5cdaf4aef2eb43020b4e2a947330537",
+  "reference": {
+    "answer_text": "①",
+    "kind": "choice",
+    "choice": 1,
+    "value_text": "$3$",
+    "source": {
+      "id": "diff_1_022",
+      "source_file": "모의고사_미분_문제_1.hml",
+      "source_sha256": "02487629c158a7d2ad3e0f0701b391a6efa7f5d517ab48c044f978924365270f",
+      "original_number": 22,
+      "current_number": 22
+    },
+    "numeric_value": 3.0,
+    "gradable": true
+  },
+  "reference_answer_text": "①",
+  "reference_solution": "[정답] ①\n\n[해설]\n$\\lim_{h \\rightarrow 0} \\frac{g \\left( 1 + h \\right) - 4}{h} = 9$이고 $\\lim_{h \\rightarrow 0} h = 0$이므로\n$\\lim_{h \\rightarrow 0} \\left( g \\left( 1 + h \\right) - 4 \\right) = 0$\n함수 $g \\left( x \\right) = \\left( x^{2} + x \\right) f \\left( x \\right)$가 다항함수이므로\n$\\lim_{h \\rightarrow 0} \\left( g \\left( 1 + h \\right) - 4 \\right) = g \\left( 1 \\right) - 4 = 0$에서\n$g \\left( 1 \\right) = 2 f \\left( 1 \\right) = 4$, $f \\left( 1 \\right) = 2$\n$\\lim_{h \\rightarrow 0} \\frac{g \\left( 1 + h \\right) - 4}{h} = \\lim_{h \\rightarrow 0} \\frac{g \\left( 1 + h \\right) - g \\left( 1 \\right)}{h} = g' \\left( 1 \\right)$이므로\n$g' \\left( 1 \\right) = 9$\n또한 $g' \\left( x \\right) = \\left( 2 x + 1 \\right) f \\left( x \\right) + \\left( x^{2} + x \\right) f' \\left( x \\right)$에서\n$g' \\left( 1 \\right) = 3 f \\left( 1 \\right) + 2 f' \\left( 1 \\right) = 6 + 2 f' \\left( 1 \\right)$이므로\n$f' \\left( 1 \\right) = \\frac{3}{2}$\n따라서 $f \\left( 1 \\right) \\times f' \\left( 1 \\right) = 2 \\times \\frac{3}{2} = 3$\n",
+  "problem_text": "다항함수 $f \\left( x \\right)$에 대하여 함수 $g \\left( x \\right)$를\n$g \\left( x \\right) = \\left( x^{2} + x \\right) f \\left( x \\right)$\n라 하자. $\\lim_{h \\rightarrow 0} \\frac{g \\left( 1 + h \\right) - 4}{h} = 9$일 때, $f \\left( 1 \\right) \\times f' \\left( 1 \\right)$의 값은?\n① $3$\t\t② $\\frac{9}{2}$\t\t③ $6$\n④ $\\frac{15}{2}$\t\t⑤ $9$\n",
+  "subject": "미분",
+  "unit": "03 미분계수와 도함수",
+  "type": "06 미분법 공식5 (곱의 미분법, 극한식의 해석)",
+  "source": "2026년 교육청 고3공통 5월 > 공통범위 > 9 [4점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:)": 17.734,
+      "latex:(": 17.71,
+      "latex:2": 13.512,
+      "latex:\\left": 11.91,
+      "latex:\\right": 11.714,
+      "latex:1": 11.091,
+      "latex:}": 10.547,
+      "latex:{": 10.395,
+      "latex:x": 9.954,
+      "latex:=": 9.599,
+      "latex:+": 8.943,
+      "latex:3": 7.944,
+      "latex:f": 7.881,
+      "latex:h": 6.602,
+      "latex:-": 5.832,
+      "latex:\\times": 5.642,
+      "latex:^": 5.61,
+      "latex:\\theta": 5.233,
+      "latex:'": 4.622,
+      "latex:t": 3.833
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:08:50.995199+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:08:50.995212+00:00",
+      "usage": {
+        "prompt_token_count": 443,
+        "candidates_token_count": 435,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 878,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 435,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 443,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 443
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 878,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "J1vvatXHC9CcjMcPyPrbyAY",
+      "latency_seconds": 5.627,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "주어진 극한식 $\\lim_{h \\rightarrow 0} \\frac{g(1+h)-4}{h} = 9$는 미분계수의 정의에 의해 $g'(1) = 9$임을 의미합니다. 또한, $h \\rightarrow 0$일 때 분자가 0으로 수렴해야 하므로 $g(1) - 4 = 0$, 즉 $g(1) = 4$입니다.\n\n1. $g(x) = (x^2 + x)f(x)$이므로, $g(1) = (1^2 + 1)f(1) = 2f(1) = 4$입니다.\n   따라서 **$f(1) = 2$**입니다.\n\n2. $g(x)$를 미분하면 곱의 미분법에 의해 다음과 같습니다.\n   $g'(x) = (2x + 1)f(x) + (x^2 + x)f'(x)$\n\n3. $g'(1) = 9$를 대입하면:\n   $g'(1) = (2(1) + 1)f(1) + (1^2 + 1)f'(1) = 9$\n   $3f(1) + 2f'(1) = 9$\n\n4. 위에서 구한 $f(1) = 2$를 대입합니다.\n   $3(2) + 2f'(1) = 9$\n   $6 + 2f'(1) = 9$\n   $2f'(1) = 3$\n   **$f'(1) = \\frac{3}{2}$**\n\n5. 문제에서 요구하는 $f(1) \\times f'(1)$의 값은:\n   $f(1) \\times f'(1) = 2 \\times \\frac{3}{2} = 3$\n\n최종정답: ①",
+  "usage": {
+    "prompt_token_count": 443,
+    "candidates_token_count": 435,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 878,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 435,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 443,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 443
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 878,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "J1vvatXHC9CcjMcPyPrbyAY",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:08:56 GMT",
+        "server": "envoy",
+        "content-length": "965",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1443",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "2257"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "주어진 극한식 $\\lim_{h \\rightarrow 0} \\frac{g(1+h)-4}{h} = 9$는 미분계수의 정의에 의해 $g'(1) = 9$임을 의미합니다. 또한, $h \\rightarrow 0$일 때 분자가 0으로 수렴해야 하므로 $g(1) - 4 = 0$, 즉 $g(1) = 4$입니다.\n\n1. $g(x) = (x^2 + x)f(x)$이므로, $g(1) = (1^2 + 1)f(1) = 2f(1) = 4$입니다.\n   따라서 **$f(1) = 2$**입니다.\n\n2. $g(x)$를 미분하면 곱의 미분법에 의해 다음과 같습니다.\n   $g'(x) = (2x + 1)f(x) + (x^2 + x)f'(x)$\n\n3. $g'(1) = 9$를 대입하면:\n   $g'(1) = (2(1) + 1)f(1) + (1^2 + 1)f'(1) = 9$\n   $3f(1) + 2f'(1) = 9$\n\n4. 위에서 구한 $f(1) = 2$를 대입합니다.\n   $3(2) + 2f'(1) = 9$\n   $6 + 2f'(1) = 9$\n   $2f'(1) = 3$\n   **$f'(1) = \\frac{3}{2}$**\n\n5. 문제에서 요구하는 $f(1) \\times f'(1)$의 값은:\n   $f(1) \\times f'(1) = 2 \\times \\frac{3}{2} = 3$\n\n최종정답: ①",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TCTSjWqKm-irZsZJYnEuNS5SJc__NqRqEXp2Br_eTMh4rYVBk3EtkbUQ6WchjjZPYsILZACdFfASQkTzeQuUHKajGa6W4Lssq1FO9nVkC2AQK6lV_ZepNtC82l2pGnb56n6aHIzCLwNTiA7eU",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "J1vvatXHC9CcjMcPyPrbyAY",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 435,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 443,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 443
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 878,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 5.627,
+  "completed_at": "2026-11-07T17:08:56.622689+00:00",
+  "evaluation": {
+    "predicted_answer": "①",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "①",
+    "predicted_kind": "choice",
+    "predicted_choice": 1
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

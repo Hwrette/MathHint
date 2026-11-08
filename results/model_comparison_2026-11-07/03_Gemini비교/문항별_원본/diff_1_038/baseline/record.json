@@ -1,0 +1,284 @@
+{
+  "id": "diff_1_038",
+  "method": "baseline",
+  "input_text": "두 상수 $a$, $b$에 대하여 함수 $f \\left( x \\right)$를\n$f \\left( x \\right) = x^{3} - 6 x^{2} + a x + b$\n라 하자. 함수 $f \\left( x \\right)$는 $x = 3$에서 극값을 갖고, 함수 $f \\left( x \\right)$의 극댓값과 극솟값의 합이 $8$이다. $a + b$의 값을 구하시오.\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "7293b7290c2a7edff8244fe6a72d5eec4e2d4658da663cf78c1627375fe014bc",
+  "reference": {
+    "answer_text": "$11$",
+    "kind": "value",
+    "choice": null,
+    "value_text": "$11$",
+    "source": {
+      "id": "diff_1_038",
+      "source_file": "모의고사_미분_문제_1.hml",
+      "source_sha256": "02487629c158a7d2ad3e0f0701b391a6efa7f5d517ab48c044f978924365270f",
+      "original_number": 38,
+      "current_number": 38
+    },
+    "numeric_value": 11.0,
+    "gradable": true
+  },
+  "reference_answer_text": "$11$",
+  "reference_solution": "[정답] $11$\n\n[해설]\n$f' \\left( x \\right) = 3 x^{2} - 12 x + a$\n$f' \\left( 3 \\right) = 27 - 36 + a = 0$이므로 $a = 9$\n$f' \\left( x \\right) = 3 x^{2} - 12 x + 9 = 3 \\left( x - 1 \\right) \\left( x - 3 \\right)$\n$f' \\left( x \\right) = 0$에서 $x = 1$ 또는 $x = 3$\n함수 $f \\left( x \\right)$의 증가와 감소를 표로 나타내면\n\n$x$\t$\\cdots$\t$1$\t$\\cdots$\t$3$\t$\\cdots$\n$f' \\left( x \\right)$\t$+$\t$0$\t$-$\t$0$\t$+$\n$f \\left( x \\right)$\t$\\nearrow$\t극대\t$\\searrow$\t극소\t$\\nearrow$\n\n함수 $f \\left( x \\right)$의 극댓값은 $f \\left( 1 \\right) = 4 + b$이고,\n함수 $f \\left( x \\right)$의 극솟값은 $f \\left( 3 \\right) = b$이므로\n$4 + 2 b = 8$, $b = 2$\n따라서 $a + b = 11$\n",
+  "problem_text": "두 상수 $a$, $b$에 대하여 함수 $f \\left( x \\right)$를\n$f \\left( x \\right) = x^{3} - 6 x^{2} + a x + b$\n라 하자. 함수 $f \\left( x \\right)$는 $x = 3$에서 극값을 갖고, 함수 $f \\left( x \\right)$의 극댓값과 극솟값의 합이 $8$이다. $a + b$의 값을 구하시오.\n",
+  "subject": "미분",
+  "unit": "05 함수의 증가와 감소",
+  "type": "02 극대와 극소2 (삼차함수의 극대와 극소)",
+  "source": "2025년 교육청 고3공통 10월 > 공통범위 > 19 [3점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:24:09.451692+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:19:45.693543+00:00",
+      "usage": {
+        "prompt_token_count": null,
+        "candidates_token_count": null,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "raw": null
+      },
+      "status": "error",
+      "error_type": "ClientError",
+      "code": 429,
+      "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 13.686408896s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '13s'}]}}",
+      "latency_seconds": 1.734,
+      "execution": 1
+    },
+    {
+      "attempt": 2,
+      "started_at": "2026-11-07T13:19:47.427925+00:00",
+      "usage": {
+        "prompt_token_count": null,
+        "candidates_token_count": null,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "raw": null
+      },
+      "status": "error",
+      "error_type": "ClientError",
+      "code": 429,
+      "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 12.080657674s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '12s'}]}}",
+      "latency_seconds": 0.567,
+      "execution": 1
+    },
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:24:09.451715+00:00",
+      "usage": {
+        "prompt_token_count": null,
+        "candidates_token_count": null,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "raw": null
+      },
+      "status": "error",
+      "error_type": "ServerError",
+      "code": 504,
+      "message": "504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}",
+      "latency_seconds": 91.147,
+      "execution": 2
+    },
+    {
+      "attempt": 2,
+      "started_at": "2026-11-07T13:25:40.598265+00:00",
+      "usage": {
+        "prompt_token_count": 154,
+        "candidates_token_count": 454,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 608,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 454,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 154,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 154
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 608,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "1SbvaumqHf2o_uMP967WgQc",
+      "latency_seconds": 7.99,
+      "execution": 2
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $f(x) = x^3 - 6x^2 + ax + b$가 $x=3$에서 극값을 가지므로, 미분계수 $f'(3) = 0$이어야 합니다.\n\n1. **$a$의 값 구하기**\n   $f'(x) = 3x^2 - 12x + a$\n   $f'(3) = 3(3)^2 - 12(3) + a = 27 - 36 + a = -9 + a$\n   $-9 + a = 0$ 이므로 **$a = 9$**입니다.\n\n2. **극값 구하기**\n   $f'(x) = 3x^2 - 12x + 9 = 3(x^2 - 4x + 3) = 3(x-1)(x-3)$\n   $f'(x) = 0$이 되는 $x$는 $x=1$ 또는 $x=3$입니다.\n   따라서 극값은 $f(1)$과 $f(3)$입니다.\n\n   $f(1) = 1^3 - 6(1)^2 + 9(1) + b = 1 - 6 + 9 + b = 4 + b$\n   $f(3) = 3^3 - 6(3)^2 + 9(3) + b = 27 - 54 + 27 + b = b$\n\n3. **$b$의 값 구하기**\n   극댓값과 극솟값의 합이 8이라고 하였으므로,\n   $(4 + b) + b = 8$\n   $2b + 4 = 8$\n   $2b = 4$\n   **$b = 2$**\n\n4. **$a + b$ 계산하기**\n   $a + b = 9 + 2 = 11$\n\n최종정답: 11",
+  "usage": {
+    "prompt_token_count": 154,
+    "candidates_token_count": 454,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 608,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 454,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 154,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 154
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 608,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "error": {
+    "code": 504,
+    "type": "ServerError",
+    "message": "504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}"
+  },
+  "response_id": "1SbvaumqHf2o_uMP967WgQc",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:25:48 GMT",
+        "server": "envoy",
+        "content-length": "923",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=7100",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "7879"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $f(x) = x^3 - 6x^2 + ax + b$가 $x=3$에서 극값을 가지므로, 미분계수 $f'(3) = 0$이어야 합니다.\n\n1. **$a$의 값 구하기**\n   $f'(x) = 3x^2 - 12x + a$\n   $f'(3) = 3(3)^2 - 12(3) + a = 27 - 36 + a = -9 + a$\n   $-9 + a = 0$ 이므로 **$a = 9$**입니다.\n\n2. **극값 구하기**\n   $f'(x) = 3x^2 - 12x + 9 = 3(x^2 - 4x + 3) = 3(x-1)(x-3)$\n   $f'(x) = 0$이 되는 $x$는 $x=1$ 또는 $x=3$입니다.\n   따라서 극값은 $f(1)$과 $f(3)$입니다.\n\n   $f(1) = 1^3 - 6(1)^2 + 9(1) + b = 1 - 6 + 9 + b = 4 + b$\n   $f(3) = 3^3 - 6(3)^2 + 9(3) + b = 27 - 54 + 27 + b = b$\n\n3. **$b$의 값 구하기**\n   극댓값과 극솟값의 합이 8이라고 하였으므로,\n   $(4 + b) + b = 8$\n   $2b + 4 = 8$\n   $2b = 4$\n   **$b = 2$**\n\n4. **$a + b$ 계산하기**\n   $a + b = 9 + 2 = 11$\n\n최종정답: 11",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TQHGV6P8aB4jbiVnkV3MrxEQc4Yki8wbz10sVbBiDgeogOo3pMTdWMpALK82J8yL_HMIIExOT_4zwbS0kx_zEGY6L4JBDD7IPfrr5oOJ9nGhtUh3DdAurg7FKoi53s2oVWU6sxMB5CJ9h_Fff",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "1SbvaumqHf2o_uMP967WgQc",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 454,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 154,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 154
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 608,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 99.137,
+  "completed_at": "2026-11-07T13:25:48.588520+00:00",
+  "evaluation": {
+    "predicted_answer": "11",
+    "correct": true,
+    "status": "correct",
+    "reason": "numeric_constant_comparison_tolerance_1e-9",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "$11$",
+    "predicted_kind": "value",
+    "predicted_numeric_value": 11.0
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "prior_executions": [
+    {
+      "status": "api_error",
+      "started_at": "2026-11-07T13:19:45.693531+00:00",
+      "completed_at": "2026-11-07T13:19:47.994701+00:00",
+      "error": {
+        "code": 429,
+        "type": "ClientError",
+        "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 12.080657674s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '12s'}]}}"
+      },
+      "response_id": null
+    }
+  ],
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "308803b50e621bc3624005675971dc002deea92b1bf6539fa50c7af823804d7a",
+    "imported_at": "2026-11-07T16:57:38.363958+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

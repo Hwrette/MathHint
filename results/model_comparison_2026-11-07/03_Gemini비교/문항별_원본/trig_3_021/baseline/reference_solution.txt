@@ -1,0 +1,9 @@
+[정답] ②
+
+[해설]
+두 함수의 그래프가 만나는 점의 $y$좌표가 같으므로
+$\sin x$$= \cos \left( x + \frac{\pi}{2} \right) + 1$
+$\cos \left( x + \frac{\pi}{2} \right)$$= - \sin x$이므로 $2 \sin x$$= 1$
+즉, $\sin x$$= \frac{1}{2}$
+그러므로 $x$$= \frac{\pi}{6}$ 또는 $x$$= \frac{5}{6} \pi$
+따라서 모든 점의 $x$좌표의 합은 $\pi$

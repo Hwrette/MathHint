@@ -1,0 +1,21 @@
+주어진 방정식 $2 \cos \theta + \cos \left( \frac{\pi}{2} - \theta \right) = 0$을 풀어봅시다.
+
+1. 삼각함수의 성질에 의해 $\cos \left( \frac{\pi}{2} - \theta \right) = \sin \theta$이므로, 주어진 식은 다음과 같이 바뀝니다.
+   $2 \cos \theta + \sin \theta = 0$
+   $\sin \theta = -2 \cos \theta$
+
+2. 삼각함수의 기본 관계식 $\sin^2 \theta + \cos^2 \theta = 1$에 위 식을 대입합니다.
+   $(-2 \cos \theta)^2 + \cos^2 \theta = 1$
+   $4 \cos^2 \theta + \cos^2 \theta = 1$
+   $5 \cos^2 \theta = 1$
+   $\cos^2 \theta = \frac{1}{5}$
+
+3. 따라서 $\cos \theta = \pm \frac{1}{\sqrt{5}} = \pm \frac{\sqrt{5}}{5}$입니다.
+
+4. 문제에서 $\sin \theta < 0$이라고 하였습니다.
+   $\sin \theta = -2 \cos \theta$이므로, $\sin \theta < 0$이 되려면 $-2 \cos \theta < 0$이어야 합니다.
+   즉, $\cos \theta > 0$이어야 합니다.
+
+5. 따라서 $\cos \theta = \frac{\sqrt{5}}{5}$입니다.
+
+최종정답: ④

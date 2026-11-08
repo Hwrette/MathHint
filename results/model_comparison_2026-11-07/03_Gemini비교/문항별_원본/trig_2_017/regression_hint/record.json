@@ -1,0 +1,231 @@
+{
+  "id": "trig_2_017",
+  "method": "regression_hint",
+  "input_text": "$\\frac{3}{2} \\pi < \\theta < 2 \\pi$인 $\\theta$에 대하여 $\\sin \\left( - \\theta \\right) = \\frac{1}{3}$일 때, $\\tan \\theta$의 값은?\n① $- \\frac{\\sqrt{2}}{2}$\t② $- \\frac{\\sqrt{2}}{4}$\t③ $- \\frac{1}{4}$\n④ $\\frac{1}{4}$\t\t⑤ $\\frac{\\sqrt{2}}{4}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:}\":24.632,\"latex:{\":24.376,\"latex:\\\\theta\":12.209,\"latex:2\":11.584,\"latex:\\\\frac\":7.624,\"latex:=\":7.28,\"latex:\\\\sin\":4.899,\"latex:\\\\pi\":4.814,\"latex:-\":4.785,\"latex:4\":4.728,\"latex:1\":3.938,\"latex:^\":3.538,\"latex:\\\\sqrt\":3.197,\"latex:)\":2.265,\"latex:(\":2.213,\"latex:t\":2.131,\"latex:\\\\cos\":1.995,\"latex:10\":1.923,\"kiwi:]\":1.881,\"kiwi:[\":1.872}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "f1a896b46bc863b76ee7e85fec583ddf37cc639a919e3b97282769b5d3e9e404",
+  "reference": {
+    "answer_text": "②",
+    "kind": "choice",
+    "choice": 2,
+    "value_text": "$- \\frac{\\sqrt{2}}{4}$",
+    "source": {
+      "id": "trig_2_017",
+      "source_file": "모의고사_삼각함수_문제_2.hml",
+      "source_sha256": "2a36b54c30c9b890ee90fe84dc6c2b62847494cb5830bd51de8b1fb6877d7cc2",
+      "original_number": 17,
+      "current_number": 17
+    },
+    "numeric_value": -0.3535533905932738,
+    "gradable": true
+  },
+  "reference_answer_text": "②",
+  "reference_solution": "[정답] ②\n\n[해설]\n$\\sin \\left( - \\theta \\right) = - \\sin \\theta = \\frac{1}{3}$에서    $\\sin \\theta = - \\frac{1}{3}$\n$\\frac{2}{3} \\pi < \\theta < 2 \\pi$이므로\n$\\cos \\theta$$= \\sqrt{1 - \\sin^{2} \\theta}$$= \\sqrt{1 - \\left( - \\frac{1}{3} \\right)^{2}}$$= \\frac{2 \\sqrt{2}}{3}$\n$\\therefore$ $\\tan \\theta = \\frac{\\sin \\theta}{\\cos \\theta} = - \\frac{1}{2 \\sqrt{2}} = - \\frac{\\sqrt{2}}{4}$\n",
+  "problem_text": "$\\frac{3}{2} \\pi < \\theta < 2 \\pi$인 $\\theta$에 대하여 $\\sin \\left( - \\theta \\right) = \\frac{1}{3}$일 때, $\\tan \\theta$의 값은?\n① $- \\frac{\\sqrt{2}}{2}$\t② $- \\frac{\\sqrt{2}}{4}$\t③ $- \\frac{1}{4}$\n④ $\\frac{1}{4}$\t\t⑤ $\\frac{\\sqrt{2}}{4}$\n",
+  "subject": "삼각함수",
+  "unit": "06 삼각함수의 그래프",
+  "type": "01 각 변형1 (각 변형 규칙)",
+  "source": "2023년(2024학년도) 평가원 고3공통 11월 > 공통범위 > 3 [3점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:}": 24.632,
+      "latex:{": 24.376,
+      "latex:\\theta": 12.209,
+      "latex:2": 11.584,
+      "latex:\\frac": 7.624,
+      "latex:=": 7.28,
+      "latex:\\sin": 4.899,
+      "latex:\\pi": 4.814,
+      "latex:-": 4.785,
+      "latex:4": 4.728,
+      "latex:1": 3.938,
+      "latex:^": 3.538,
+      "latex:\\sqrt": 3.197,
+      "latex:)": 2.265,
+      "latex:(": 2.213,
+      "latex:t": 2.131,
+      "latex:\\cos": 1.995,
+      "latex:10": 1.923,
+      "kiwi:]": 1.881,
+      "kiwi:[": 1.872
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:16:22.880432+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:16:22.880452+00:00",
+      "usage": {
+        "prompt_token_count": 396,
+        "candidates_token_count": 383,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 779,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 383,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 396,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 396
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 779,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "6FzvatPiJbKv6dkPhu6U4QU",
+      "latency_seconds": 24.933,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "주어진 조건과 삼각함수의 성질을 이용하여 문제를 해결합니다.\n\n1. **$\\sin(-\\theta)$의 성질 이용:**\n   $\\sin(-\\theta) = -\\sin\\theta$이므로,\n   $-\\sin\\theta = \\frac{1}{3}$ 에서 $\\sin\\theta = -\\frac{1}{3}$ 입니다.\n\n2. **$\\cos\\theta$의 값 구하기:**\n   $\\sin^2\\theta + \\cos^2\\theta = 1$이므로,\n   $\\left(-\\frac{1}{3}\\right)^2 + \\cos^2\\theta = 1$\n   $\\frac{1}{9} + \\cos^2\\theta = 1$\n   $\\cos^2\\theta = \\frac{8}{9}$\n   주어진 범위가 $\\frac{3}{2}\\pi < \\theta < 2\\pi$ (제4사분면)이므로 $\\cos\\theta > 0$입니다.\n   따라서 $\\cos\\theta = \\sqrt{\\frac{8}{9}} = \\frac{2\\sqrt{2}}{3}$ 입니다.\n\n3. **$\\tan\\theta$의 값 구하기:**\n   $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$ 이므로,\n   $\\tan\\theta = \\frac{-\\frac{1}{3}}{\\frac{2\\sqrt{2}}{3}} = -\\frac{1}{2\\sqrt{2}}$\n   분모를 유리화하면,\n   $\\tan\\theta = -\\frac{\\sqrt{2}}{2 \\times 2} = -\\frac{\\sqrt{2}}{4}$\n\n따라서 구하는 값은 $-\\frac{\\sqrt{2}}{4}$입니다.\n\n최종정답: ②",
+  "usage": {
+    "prompt_token_count": 396,
+    "candidates_token_count": 383,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 779,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 383,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 396,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 396
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 779,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "6FzvatPiJbKv6dkPhu6U4QU",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:16:47 GMT",
+        "server": "envoy",
+        "content-length": "947",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=23148",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "23656"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "주어진 조건과 삼각함수의 성질을 이용하여 문제를 해결합니다.\n\n1. **$\\sin(-\\theta)$의 성질 이용:**\n   $\\sin(-\\theta) = -\\sin\\theta$이므로,\n   $-\\sin\\theta = \\frac{1}{3}$ 에서 $\\sin\\theta = -\\frac{1}{3}$ 입니다.\n\n2. **$\\cos\\theta$의 값 구하기:**\n   $\\sin^2\\theta + \\cos^2\\theta = 1$이므로,\n   $\\left(-\\frac{1}{3}\\right)^2 + \\cos^2\\theta = 1$\n   $\\frac{1}{9} + \\cos^2\\theta = 1$\n   $\\cos^2\\theta = \\frac{8}{9}$\n   주어진 범위가 $\\frac{3}{2}\\pi < \\theta < 2\\pi$ (제4사분면)이므로 $\\cos\\theta > 0$입니다.\n   따라서 $\\cos\\theta = \\sqrt{\\frac{8}{9}} = \\frac{2\\sqrt{2}}{3}$ 입니다.\n\n3. **$\\tan\\theta$의 값 구하기:**\n   $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$ 이므로,\n   $\\tan\\theta = \\frac{-\\frac{1}{3}}{\\frac{2\\sqrt{2}}{3}} = -\\frac{1}{2\\sqrt{2}}$\n   분모를 유리화하면,\n   $\\tan\\theta = -\\frac{\\sqrt{2}}{2 \\times 2} = -\\frac{\\sqrt{2}}{4}$\n\n따라서 구하는 값은 $-\\frac{\\sqrt{2}}{4}$입니다.\n\n최종정답: ②",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TGhbNzzmZawr4AHzTs6VCKaxocTcePI9GDonx8NbFXeqvTJkpw_uYeVi-its_OTxtsDRA-PqbBLLmtOkj-EjYj7x43kk8J4g7pepffv98UwAQty2OgyFgt1147Xza3k6nHjekMzGObx2maFNv",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "6FzvatPiJbKv6dkPhu6U4QU",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 383,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 396,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 396
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 779,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 24.933,
+  "completed_at": "2026-11-07T17:16:47.813038+00:00",
+  "evaluation": {
+    "predicted_answer": "②",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "②",
+    "predicted_kind": "choice",
+    "predicted_choice": 2
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

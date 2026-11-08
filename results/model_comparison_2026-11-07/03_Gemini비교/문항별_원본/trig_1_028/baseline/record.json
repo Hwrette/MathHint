@@ -1,0 +1,209 @@
+{
+  "id": "trig_1_028",
+  "method": "baseline",
+  "input_text": "$\\sin \\left( \\pi - \\theta \\right) > 0$이고 $2 \\cos \\theta = \\sin \\theta$일 때, $\\cos \\theta$의 값은?\n① $- \\frac{\\sqrt{5}}{5}$\t② $- \\frac{\\sqrt{5}}{10}$\t③ $0$\n④ $\\frac{\\sqrt{5}}{10}$\t⑤ $\\frac{\\sqrt{5}}{5}$\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "cb98a6fcf2d48a94ff84ce914ee11f9f8c1b6305da64d2f26d0d366b1a49708b",
+  "reference": {
+    "answer_text": "⑤",
+    "kind": "choice",
+    "choice": 5,
+    "value_text": "$\\frac{\\sqrt{5}}{5}$",
+    "source": {
+      "id": "trig_1_028",
+      "source_file": "모의고사_삼각함수_문제_1.hml",
+      "source_sha256": "40e5d3256beca74c23225ea16d79b402d009340fbb175e827264f20535bad869",
+      "original_number": 28,
+      "current_number": 28
+    },
+    "numeric_value": 0.447213595499958,
+    "gradable": true
+  },
+  "reference_answer_text": "⑤",
+  "reference_solution": "[정답] ⑤\n\n[해설]\n$2 \\cos \\theta = \\sin \\theta$에서    $\\tan \\theta = 2$\n$\\frac{1}{\\cos^{2} \\theta} = \\frac{\\sin^{2} \\theta + \\cos^{2} \\theta}{\\cos^{2} \\theta} = \\tan^{2} \\theta + 1 = 5$\n$\\cos \\theta = \\frac{1}{\\sqrt{5}}$ 또는 $\\cos \\theta = - \\frac{1}{\\sqrt{5}}$\n$\\sin \\left( \\pi - \\theta \\right) = \\sin \\theta > 0$, $\\tan \\theta > 0$이므로 $\\theta$가 제$1$사분면의 각이다.\n따라서 $\\cos \\theta > 0$이므로\n$\\cos \\theta = \\frac{1}{\\sqrt{5}}$$= \\frac{\\sqrt{5}}{5}$\n",
+  "problem_text": "$\\sin \\left( \\pi - \\theta \\right) > 0$이고 $2 \\cos \\theta = \\sin \\theta$일 때, $\\cos \\theta$의 값은?\n① $- \\frac{\\sqrt{5}}{5}$\t② $- \\frac{\\sqrt{5}}{10}$\t③ $0$\n④ $\\frac{\\sqrt{5}}{10}$\t⑤ $\\frac{\\sqrt{5}}{5}$\n",
+  "subject": "삼각함수",
+  "unit": "06 삼각함수의 그래프",
+  "type": "01 각 변형1 (각 변형 규칙)",
+  "source": "2025년(2026학년도) 평가원 고3공통 6월 > 공통범위 > 8 [3점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:43:32.541704+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:43:32.541722+00:00",
+      "usage": {
+        "prompt_token_count": 138,
+        "candidates_token_count": 384,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 522,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 384,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 138,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 138
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 522,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "Byvvat-1Ns2U_uMP9pis6QQ",
+      "latency_seconds": 4.644,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "주어진 조건을 하나씩 해결해 보겠습니다.\n\n**1. $\\sin(\\pi - \\theta) > 0$ 조건 해석**\n삼각함수의 성질에 의해 $\\sin(\\pi - \\theta) = \\sin \\theta$입니다.\n따라서 $\\sin \\theta > 0$이어야 합니다. 이는 $\\theta$가 제1사분면 또는 제2사분면의 각임을 의미합니다.\n\n**2. $2 \\cos \\theta = \\sin \\theta$ 조건 해석**\n양변을 $\\cos \\theta$로 나누면(단, $\\cos \\theta \\neq 0$):\n$\\tan \\theta = \\frac{\\sin \\theta}{\\cos \\theta} = 2$\n$\\tan \\theta = 2$이므로 $\\theta$는 제1사분면의 각입니다. (제1사분면에서 $\\sin \\theta > 0, \\cos \\theta > 0$이므로 조건 만족)\n\n**3. $\\cos \\theta$의 값 구하기**\n$\\tan \\theta = 2$인 직각삼각형을 생각하면, 밑변의 길이를 $1$, 높이를 $2$라고 할 때 빗변의 길이는 $\\sqrt{1^2 + 2^2} = \\sqrt{5}$입니다.\n$\\theta$가 제1사분면의 각이므로 $\\cos \\theta$는 양수입니다.\n$\\cos \\theta = \\frac{\\text{밑변}}{\\text{빗변}} = \\frac{1}{\\sqrt{5}}$\n\n유리화하면:\n$\\cos \\theta = \\frac{1}{\\sqrt{5}} = \\frac{\\sqrt{5}}{5}$\n\n따라서 정답은 ⑤번입니다.\n\n최종정답: ⑤",
+  "usage": {
+    "prompt_token_count": 138,
+    "candidates_token_count": 384,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 522,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 384,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 138,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 138
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 522,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "Byvvat-1Ns2U_uMP9pis6QQ",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:43:37 GMT",
+        "server": "envoy",
+        "content-length": "1043",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1274",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "1775"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "주어진 조건을 하나씩 해결해 보겠습니다.\n\n**1. $\\sin(\\pi - \\theta) > 0$ 조건 해석**\n삼각함수의 성질에 의해 $\\sin(\\pi - \\theta) = \\sin \\theta$입니다.\n따라서 $\\sin \\theta > 0$이어야 합니다. 이는 $\\theta$가 제1사분면 또는 제2사분면의 각임을 의미합니다.\n\n**2. $2 \\cos \\theta = \\sin \\theta$ 조건 해석**\n양변을 $\\cos \\theta$로 나누면(단, $\\cos \\theta \\neq 0$):\n$\\tan \\theta = \\frac{\\sin \\theta}{\\cos \\theta} = 2$\n$\\tan \\theta = 2$이므로 $\\theta$는 제1사분면의 각입니다. (제1사분면에서 $\\sin \\theta > 0, \\cos \\theta > 0$이므로 조건 만족)\n\n**3. $\\cos \\theta$의 값 구하기**\n$\\tan \\theta = 2$인 직각삼각형을 생각하면, 밑변의 길이를 $1$, 높이를 $2$라고 할 때 빗변의 길이는 $\\sqrt{1^2 + 2^2} = \\sqrt{5}$입니다.\n$\\theta$가 제1사분면의 각이므로 $\\cos \\theta$는 양수입니다.\n$\\cos \\theta = \\frac{\\text{밑변}}{\\text{빗변}} = \\frac{1}{\\sqrt{5}}$\n\n유리화하면:\n$\\cos \\theta = \\frac{1}{\\sqrt{5}} = \\frac{\\sqrt{5}}{5}$\n\n따라서 정답은 ⑤번입니다.\n\n최종정답: ⑤",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TBqVqGRmqe8vwsjE_v79vIwqOUN-gitoC5leVadbcwRmdfqIj9nFqX2MaC6KUj6PDfO-2dLdm0KGIkNF4wMl73Y-AHl6e0HuDXyVUz8i3dM9KDjyUTRbH4FcP7JQqvqUXn7uf1gCuxqmdWlEJ",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "Byvvat-1Ns2U_uMP9pis6QQ",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 384,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 138,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 138
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 522,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 4.644,
+  "completed_at": "2026-11-07T13:43:37.185947+00:00",
+  "evaluation": {
+    "predicted_answer": "⑤",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "⑤",
+    "predicted_kind": "choice",
+    "predicted_choice": 5
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "15d47a2528aa2440beee215abe831285864c637f0b893b67e357a22726f203ed",
+    "imported_at": "2026-11-07T16:57:38.401842+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

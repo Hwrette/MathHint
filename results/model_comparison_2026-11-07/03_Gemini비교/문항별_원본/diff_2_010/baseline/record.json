@@ -1,0 +1,260 @@
+{
+  "id": "diff_2_010",
+  "method": "baseline",
+  "input_text": "함수\n$f \\left( x \\right) = {\\left\\{\\begin{array}{lll}x - \\frac{1}{2} &  & \\left( x < 0 \\right) \\\\ - x^{2} + 3 &  & \\left( x \\geq 0 \\right)\\end{array}\\right.}$\n에 대하여 함수 $(f (x) + a)^{2}$이 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?\n① $- \\frac{9}{4}$\t② $- \\frac{7}{4}$\t\t③ $- \\frac{5}{4}$\n④ $- \\frac{3}{4}$\t⑤ $- \\frac{1}{4}$\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "186fffc34cd1e22424685db7b4de79634654c8ee078b175ba66a94a5ecc816d0",
+  "reference": {
+    "answer_text": "③",
+    "kind": "choice",
+    "choice": 3,
+    "value_text": "$- \\frac{5}{4}$",
+    "source": {
+      "id": "diff_2_010",
+      "source_file": "모의고사_미분_문제_2.hml",
+      "source_sha256": "bdf632f0269bd027f72fcf686c276a8040aa5cb2b985b26c7a2fe65391d878af",
+      "original_number": 10,
+      "current_number": 10
+    },
+    "numeric_value": -1.25,
+    "gradable": true
+  },
+  "reference_answer_text": "③",
+  "reference_solution": "[정답] ③\n\n[해설]\n함수 $\\left( f (x) + a \\right)^{2}$이 실수 전체의 집합에서 연속이려면 $x = 0$에서 연속이어야 하므로\n$\\lim_{x \\rightarrow 0 +} \\left( f (x) + a \\right)^{2} = \\lim_{x \\rightarrow 0 -} \\left( f (x) + a \\right)^{2} = \\left( f (0) + a \\right)^{2}$\n이때 $\\left( f (0) + a \\right)^{2} = \\left( 3 + a \\right)^{2}$이고\n$\\lim_{x \\rightarrow 0 +} \\left( f (x) + a \\right)^{2}$$= \\lim_{x \\rightarrow 0 +} \\left( - x^{2} + 3 + a \\right)^{2}$\n$= \\left( 3 + a \\right)^{2}$\n$\\lim_{x \\rightarrow 0 -} \\left( f (x) + a \\right)^{2}$$= \\lim_{x \\rightarrow 0 -} \\left( x - \\frac{1}{2} + a \\right)^{2}$\n$= \\left( - \\frac{1}{2} + a \\right)^{2}$\n이므로    $\\left( 3 + a \\right)^{2} = \\left( - \\frac{1}{2} + a \\right)^{2}$\n$9 + 6 a + a^{2} = \\frac{1}{4} - a + a^{2}$,    $7 a = \\frac{1}{4} - 9$\n$\\therefore$ $a = - \\frac{5}{4}$\n",
+  "problem_text": "함수\n$f \\left( x \\right) = {\\left\\{\\begin{array}{lll}x - \\frac{1}{2} &  & \\left( x < 0 \\right) \\\\ - x^{2} + 3 &  & \\left( x \\geq 0 \\right)\\end{array}\\right.}$\n에 대하여 함수 $(f (x) + a)^{2}$이 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?\n① $- \\frac{9}{4}$\t② $- \\frac{7}{4}$\t\t③ $- \\frac{5}{4}$\n④ $- \\frac{3}{4}$\t⑤ $- \\frac{1}{4}$\n",
+  "subject": "미분",
+  "unit": "02 함수의 연속성",
+  "type": "05 연속성5 (구간정의함수)",
+  "source": "2024년(2025학년도) 평가원 고3공통 6월 > 공통범위 > 9 [4점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:31:33.219405+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:19:54.049778+00:00",
+      "usage": {
+        "prompt_token_count": null,
+        "candidates_token_count": null,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "raw": null
+      },
+      "status": "error",
+      "error_type": "ClientError",
+      "code": 429,
+      "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 5.789518155s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '5s'}]}}",
+      "latency_seconds": 1.243,
+      "execution": 1
+    },
+    {
+      "attempt": 2,
+      "started_at": "2026-11-07T13:19:55.292378+00:00",
+      "usage": {
+        "prompt_token_count": null,
+        "candidates_token_count": null,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "raw": null
+      },
+      "status": "error",
+      "error_type": "ClientError",
+      "code": 429,
+      "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 4.208277584s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '4s'}]}}",
+      "latency_seconds": 0.6,
+      "execution": 1
+    },
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:31:33.219422+00:00",
+      "usage": {
+        "prompt_token_count": 199,
+        "candidates_token_count": 470,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 669,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 470,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 199,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 199
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 669,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "NSjvavG4N9-VmtkP6J29iQY",
+      "latency_seconds": 33.26,
+      "execution": 2
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $g(x) = (f(x) + a)^2$이 실수 전체의 집합에서 연속이려면, 함수 $f(x)$가 불연속일 가능성이 있는 지점인 $x=0$에서 $g(x)$가 연속이어야 합니다.\n\n먼저 $x=0$에서 $f(x)$의 좌극한과 우극한(함숫값)을 구합니다.\n1) 좌극한: $\\lim_{x \\to 0^-} f(x) = \\lim_{x \\to 0^-} (x - \\frac{1}{2}) = -\\frac{1}{2}$\n2) 우극한 및 함숫값: $\\lim_{x \\to 0^+} f(x) = f(0) = -(0)^2 + 3 = 3$\n\n이제 $g(x) = (f(x) + a)^2$이 $x=0$에서 연속이 되기 위한 조건을 구합니다.\n$\\lim_{x \\to 0^-} g(x) = \\lim_{x \\to 0^+} g(x)$ 이어야 하므로,\n$(-\\frac{1}{2} + a)^2 = (3 + a)^2$\n\n이 방정식을 풉니다.\n$(a - \\frac{1}{2})^2 = (a + 3)^2$\n$a^2 - a + \\frac{1}{4} = a^2 + 6a + 9$\n\n양변에서 $a^2$을 소거하고 정리하면:\n$-a + \\frac{1}{4} = 6a + 9$\n$-7a = 9 - \\frac{1}{4}$\n$-7a = \\frac{36}{4} - \\frac{1}{4}$\n$-7a = \\frac{35}{4}$\n$a = -\\frac{35}{4} \\times \\frac{1}{7}$\n$a = -\\frac{5}{4}$\n\n따라서 상수 $a$의 값은 $-\\frac{5}{4}$입니다.\n\n최종정답: ③",
+  "usage": {
+    "prompt_token_count": 199,
+    "candidates_token_count": 470,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 669,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 470,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 199,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 199
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 669,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "NSjvavG4N9-VmtkP6J29iQY",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:32:06 GMT",
+        "server": "envoy",
+        "content-length": "1001",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=32551",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "33102"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $g(x) = (f(x) + a)^2$이 실수 전체의 집합에서 연속이려면, 함수 $f(x)$가 불연속일 가능성이 있는 지점인 $x=0$에서 $g(x)$가 연속이어야 합니다.\n\n먼저 $x=0$에서 $f(x)$의 좌극한과 우극한(함숫값)을 구합니다.\n1) 좌극한: $\\lim_{x \\to 0^-} f(x) = \\lim_{x \\to 0^-} (x - \\frac{1}{2}) = -\\frac{1}{2}$\n2) 우극한 및 함숫값: $\\lim_{x \\to 0^+} f(x) = f(0) = -(0)^2 + 3 = 3$\n\n이제 $g(x) = (f(x) + a)^2$이 $x=0$에서 연속이 되기 위한 조건을 구합니다.\n$\\lim_{x \\to 0^-} g(x) = \\lim_{x \\to 0^+} g(x)$ 이어야 하므로,\n$(-\\frac{1}{2} + a)^2 = (3 + a)^2$\n\n이 방정식을 풉니다.\n$(a - \\frac{1}{2})^2 = (a + 3)^2$\n$a^2 - a + \\frac{1}{4} = a^2 + 6a + 9$\n\n양변에서 $a^2$을 소거하고 정리하면:\n$-a + \\frac{1}{4} = 6a + 9$\n$-7a = 9 - \\frac{1}{4}$\n$-7a = \\frac{36}{4} - \\frac{1}{4}$\n$-7a = \\frac{35}{4}$\n$a = -\\frac{35}{4} \\times \\frac{1}{7}$\n$a = -\\frac{5}{4}$\n\n따라서 상수 $a$의 값은 $-\\frac{5}{4}$입니다.\n\n최종정답: ③",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0Tb4k4WKrfZsF9yCT0qTNId-JMhlL0He0rTU1yA5AxhFJCktXb1IWeQpig-65r5MnqspvLYlvYYzrgNoilsTg7BhyaNe4njvGcUF6YIrNERctmJzOf5g5ZWGi3V2Lp7fBseDoVGRf39VzCzvkr",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "NSjvavG4N9-VmtkP6J29iQY",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 470,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 199,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 199
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 669,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 33.26,
+  "completed_at": "2026-11-07T13:32:06.479211+00:00",
+  "evaluation": {
+    "predicted_answer": "③",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "③",
+    "predicted_kind": "choice",
+    "predicted_choice": 3
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "prior_executions": [
+    {
+      "status": "api_error",
+      "started_at": "2026-11-07T13:19:54.049763+00:00",
+      "completed_at": "2026-11-07T13:19:55.892164+00:00",
+      "error": {
+        "code": 429,
+        "type": "ClientError",
+        "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 4.208277584s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '4s'}]}}"
+      },
+      "response_id": null
+    }
+  ],
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "4005d4cc74abae847f54549b206ae509f943680936510f1272d04760f18fcb4f",
+    "imported_at": "2026-11-07T16:57:38.366905+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

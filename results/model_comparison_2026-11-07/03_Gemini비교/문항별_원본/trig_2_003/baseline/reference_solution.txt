@@ -1,0 +1,7 @@
+[정답] ②
+
+[해설]
+$a > 0$이므로 $\tan \theta_{1} = \frac{b}{a}$, $\tan \theta_{2} = - \frac{2 b^{2}}{a^{2}}$
+$\tan \theta_{1} + \tan \theta_{2} = \frac{b}{a} + \left( - \frac{2 b^{2}}{a^{2}} \right) = \frac{b (a - 2 b)}{a^{2}} = 0$에서
+$b > 0$이므로 $a = 2 b$
+따라서 $\sin \theta_{1} = \frac{b}{\sqrt{a^{2} + b^{2}}} = \frac{b}{\sqrt{5 b^{2}}} = \frac{\sqrt{5}}{5}$

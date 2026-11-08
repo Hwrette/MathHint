@@ -1,0 +1,9 @@
+[정답] ⑤
+
+[해설]
+$2 \cos \theta = \sin \theta$에서    $\tan \theta = 2$
+$\frac{1}{\cos^{2} \theta} = \frac{\sin^{2} \theta + \cos^{2} \theta}{\cos^{2} \theta} = \tan^{2} \theta + 1 = 5$
+$\cos \theta = \frac{1}{\sqrt{5}}$ 또는 $\cos \theta = - \frac{1}{\sqrt{5}}$
+$\sin \left( \pi - \theta \right) = \sin \theta > 0$, $\tan \theta > 0$이므로 $\theta$가 제$1$사분면의 각이다.
+따라서 $\cos \theta > 0$이므로
+$\cos \theta = \frac{1}{\sqrt{5}}$$= \frac{\sqrt{5}}{5}$

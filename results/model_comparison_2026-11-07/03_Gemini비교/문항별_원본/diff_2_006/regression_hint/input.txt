@@ -1,0 +1,10 @@
+함수
+$f \left( x \right) = {\left\{\begin{array}{lll}3 x - a &  & \left( x < 2 \right) \\ x^{2} + a &  & \left( x \geq 2 \right)\end{array}\right.}$
+가 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?
+① $\mathrm{1}$		② $\mathrm{2}$		③ $\mathrm{3}$
+④ $\mathrm{4}$		⑤ $\mathrm{5}$
+
+
+[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]
+{"latex:x":10.974,"latex:2":8.234,"latex:=":6.551,"latex:a":6.411,"latex:}":6.147,"latex:{":6.125,"latex:\\right":6.107,"latex:\\left":6.068,"latex:-":5.239,"latex:)":4.911,"latex:(":4.901,"latex:\\rightarrow":3.629,"latex:+":3.48,"latex:\\lim":3.216,"kiwi:이":2.91,"latex:_":2.906,"latex:f":2.74,"latex:^":2.091,"kiwi:]":1.979,"kiwi:[":1.969}
+위 주요 토큰을 참고하여 풀이를 작성해줘.

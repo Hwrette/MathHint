@@ -1,0 +1,231 @@
+{
+  "id": "diff_1_038",
+  "method": "regression_hint",
+  "input_text": "두 상수 $a$, $b$에 대하여 함수 $f \\left( x \\right)$를\n$f \\left( x \\right) = x^{3} - 6 x^{2} + a x + b$\n라 하자. 함수 $f \\left( x \\right)$는 $x = 3$에서 극값을 갖고, 함수 $f \\left( x \\right)$의 극댓값과 극솟값의 합이 $8$이다. $a + b$의 값을 구하시오.\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:x\":22.297,\"latex:a\":16.274,\"latex:=\":16.193,\"latex:\\\\left\":15.216,\"latex:\\\\right\":15.125,\"latex:)\":13.105,\"latex:(\":13.056,\"latex:-\":11.129,\"latex:{\":10.755,\"latex:}\":10.588,\"latex:+\":10.527,\"latex:3\":10.425,\"latex:f\":10.231,\"latex:2\":7.945,\"latex:1\":7.672,\"kiwi:이\":7.066,\"latex:b\":6.994,\"latex:^\":5.887,\"latex:'\":4.366,\"kiwi:함수\":3.79}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "6b7aa93df4cb919a1098d29cd176b5cc26f4ec7879a0c39938c23936327b3d45",
+  "reference": {
+    "answer_text": "$11$",
+    "kind": "value",
+    "choice": null,
+    "value_text": "$11$",
+    "source": {
+      "id": "diff_1_038",
+      "source_file": "모의고사_미분_문제_1.hml",
+      "source_sha256": "02487629c158a7d2ad3e0f0701b391a6efa7f5d517ab48c044f978924365270f",
+      "original_number": 38,
+      "current_number": 38
+    },
+    "numeric_value": 11.0,
+    "gradable": true
+  },
+  "reference_answer_text": "$11$",
+  "reference_solution": "[정답] $11$\n\n[해설]\n$f' \\left( x \\right) = 3 x^{2} - 12 x + a$\n$f' \\left( 3 \\right) = 27 - 36 + a = 0$이므로 $a = 9$\n$f' \\left( x \\right) = 3 x^{2} - 12 x + 9 = 3 \\left( x - 1 \\right) \\left( x - 3 \\right)$\n$f' \\left( x \\right) = 0$에서 $x = 1$ 또는 $x = 3$\n함수 $f \\left( x \\right)$의 증가와 감소를 표로 나타내면\n\n$x$\t$\\cdots$\t$1$\t$\\cdots$\t$3$\t$\\cdots$\n$f' \\left( x \\right)$\t$+$\t$0$\t$-$\t$0$\t$+$\n$f \\left( x \\right)$\t$\\nearrow$\t극대\t$\\searrow$\t극소\t$\\nearrow$\n\n함수 $f \\left( x \\right)$의 극댓값은 $f \\left( 1 \\right) = 4 + b$이고,\n함수 $f \\left( x \\right)$의 극솟값은 $f \\left( 3 \\right) = b$이므로\n$4 + 2 b = 8$, $b = 2$\n따라서 $a + b = 11$\n",
+  "problem_text": "두 상수 $a$, $b$에 대하여 함수 $f \\left( x \\right)$를\n$f \\left( x \\right) = x^{3} - 6 x^{2} + a x + b$\n라 하자. 함수 $f \\left( x \\right)$는 $x = 3$에서 극값을 갖고, 함수 $f \\left( x \\right)$의 극댓값과 극솟값의 합이 $8$이다. $a + b$의 값을 구하시오.\n",
+  "subject": "미분",
+  "unit": "05 함수의 증가와 감소",
+  "type": "02 극대와 극소2 (삼차함수의 극대와 극소)",
+  "source": "2025년 교육청 고3공통 10월 > 공통범위 > 19 [3점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:x": 22.297,
+      "latex:a": 16.274,
+      "latex:=": 16.193,
+      "latex:\\left": 15.216,
+      "latex:\\right": 15.125,
+      "latex:)": 13.105,
+      "latex:(": 13.056,
+      "latex:-": 11.129,
+      "latex:{": 10.755,
+      "latex:}": 10.588,
+      "latex:+": 10.527,
+      "latex:3": 10.425,
+      "latex:f": 10.231,
+      "latex:2": 7.945,
+      "latex:1": 7.672,
+      "kiwi:이": 7.066,
+      "latex:b": 6.994,
+      "latex:^": 5.887,
+      "latex:'": 4.366,
+      "kiwi:함수": 3.79
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:09:15.997658+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:09:15.997673+00:00",
+      "usage": {
+        "prompt_token_count": 407,
+        "candidates_token_count": 452,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 859,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 452,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 407,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 407
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 859,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "RFvvareZOdzP_uMP5v30WA",
+      "latency_seconds": 10.224,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $f(x) = x^3 - 6x^2 + ax + b$가 $x=3$에서 극값을 가지므로, 도함수 $f'(x)$는 $x=3$을 근으로 갖습니다.\n\n1. **$a$의 값 구하기**\n   $f'(x) = 3x^2 - 12x + a$\n   $f'(3) = 3(3)^2 - 12(3) + a = 0$\n   $27 - 36 + a = 0$\n   $-9 + a = 0 \\implies a = 9$\n\n2. **극값 구하기**\n   $f'(x) = 3x^2 - 12x + 9 = 3(x^2 - 4x + 3) = 3(x-1)(x-3)$\n   따라서 $f(x)$는 $x=1$에서 극대, $x=3$에서 극소를 갖습니다.\n   극댓값: $f(1) = 1^3 - 6(1)^2 + 9(1) + b = 1 - 6 + 9 + b = 4 + b$\n   극솟값: $f(3) = 3^3 - 6(3)^2 + 9(3) + b = 27 - 54 + 27 + b = b$\n\n3. **$b$의 값 구하기**\n   극댓값과 극솟값의 합이 8이므로,\n   $(4 + b) + b = 8$\n   $4 + 2b = 8$\n   $2b = 4 \\implies b = 2$\n\n4. **$a + b$의 값 구하기**\n   $a = 9, b = 2$이므로\n   $a + b = 9 + 2 = 11$\n\n최종정답: 11",
+  "usage": {
+    "prompt_token_count": 407,
+    "candidates_token_count": 452,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 859,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 452,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 407,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 407
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 859,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "RFvvareZOdzP_uMP5v30WA",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:09:26 GMT",
+        "server": "envoy",
+        "content-length": "886",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1294",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "1765"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $f(x) = x^3 - 6x^2 + ax + b$가 $x=3$에서 극값을 가지므로, 도함수 $f'(x)$는 $x=3$을 근으로 갖습니다.\n\n1. **$a$의 값 구하기**\n   $f'(x) = 3x^2 - 12x + a$\n   $f'(3) = 3(3)^2 - 12(3) + a = 0$\n   $27 - 36 + a = 0$\n   $-9 + a = 0 \\implies a = 9$\n\n2. **극값 구하기**\n   $f'(x) = 3x^2 - 12x + 9 = 3(x^2 - 4x + 3) = 3(x-1)(x-3)$\n   따라서 $f(x)$는 $x=1$에서 극대, $x=3$에서 극소를 갖습니다.\n   극댓값: $f(1) = 1^3 - 6(1)^2 + 9(1) + b = 1 - 6 + 9 + b = 4 + b$\n   극솟값: $f(3) = 3^3 - 6(3)^2 + 9(3) + b = 27 - 54 + 27 + b = b$\n\n3. **$b$의 값 구하기**\n   극댓값과 극솟값의 합이 8이므로,\n   $(4 + b) + b = 8$\n   $4 + 2b = 8$\n   $2b = 4 \\implies b = 2$\n\n4. **$a + b$의 값 구하기**\n   $a = 9, b = 2$이므로\n   $a + b = 9 + 2 = 11$\n\n최종정답: 11",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TQYK9wK40WpoQ3kZiKt_dZxCQOrRSgaN97R02IoiEMvCA-qH6YZ0UlGcJvd9kjbIdq_GHFgyG5MlVJSiUs4RYbgoCfVzhjkmqafM22NAQrQBbGUine1GG0GKXONT7d78yauYo1d5rrMbuKc9q",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "RFvvareZOdzP_uMP5v30WA",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 452,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 407,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 407
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 859,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 10.224,
+  "completed_at": "2026-11-07T17:09:26.221671+00:00",
+  "evaluation": {
+    "predicted_answer": "11",
+    "correct": true,
+    "status": "correct",
+    "reason": "numeric_constant_comparison_tolerance_1e-9",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "$11$",
+    "predicted_kind": "value",
+    "predicted_numeric_value": 11.0
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

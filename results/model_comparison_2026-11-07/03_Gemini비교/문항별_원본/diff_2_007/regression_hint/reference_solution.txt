@@ -1,0 +1,10 @@
+[정답] ③
+
+[해설]
+함수 $f \left( x \right)$가 실수 전체의 집합에서 연속이므로 $x = 4$에서 연속이다. 이때 $f \left( 4 \right) = 4$이고
+$\lim_{x \rightarrow 4 -} f \left( x \right)$$= \lim_{x \rightarrow 4 -} \left( x - a \right)^{2}$$= \left( 4 - a \right)^{2}$
+$\lim_{x \rightarrow 4 +} f \left( x \right)$$= \lim_{x \rightarrow 4 +} \left( 2 x - 4 \right)$$= 4$
+이므로
+$\left( 4 - a \right)^{2} = 4$,    $a^{2} - 8 a + 12 = 0$
+$\left( a - 2 \right) \left( a - 6 \right) = 0$,    $a = 2$ 또는 $a = 6$
+따라서 모든 상수 $a$의 값의 곱은 $12$이다.

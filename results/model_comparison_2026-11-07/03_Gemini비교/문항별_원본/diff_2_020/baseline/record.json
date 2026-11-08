@@ -1,0 +1,260 @@
+{
+  "id": "diff_2_020",
+  "method": "baseline",
+  "input_text": "최고차항의 계수가 $\\mathrm{1}$이고 $f (0) = 0$인 삼차함수 $f (x)$가\n$\\lim_{x \\rightarrow a} \\frac{f \\left( x \\right) - 1}{x - a} = 3$\n을 만족시킨다. 곡선 $y = f (x)$ 위의 점 $(a , f (a))$에서의 접선의 $y$절편이 $\\mathrm{4}$일 때, $f (1)$의 값은? (단, $a$는 상수이다.)\n① $\\mathrm{- 1}$\t\t② $\\mathrm{- 2}$\t\t③ $\\mathrm{- 3}$\n④ $\\mathrm{- 4}$\t\t⑤ $\\mathrm{- 5}$\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "d98b088dba9e5ce62dfed4ee5323522686975d3b0c60558618d10a93f923bc3c",
+  "reference": {
+    "answer_text": "⑤",
+    "kind": "choice",
+    "choice": 5,
+    "value_text": "$\\mathrm{- 5}$",
+    "source": {
+      "id": "diff_2_020",
+      "source_file": "모의고사_미분_문제_2.hml",
+      "source_sha256": "bdf632f0269bd027f72fcf686c276a8040aa5cb2b985b26c7a2fe65391d878af",
+      "original_number": 20,
+      "current_number": 20
+    },
+    "numeric_value": -5.0,
+    "gradable": true
+  },
+  "reference_answer_text": "⑤",
+  "reference_solution": "[정답] ⑤\n\n[해설]\n최고차항의 계수가 $1$이고 $f \\left( 0 \\right) = 0$인 삼차함수 $f \\left( x \\right)$를\n$f \\left( x \\right) = x^{3} + p x^{2} + q x$ ($p$, $q$는 상수)\n라 하면    $f' \\left( x \\right) = 3 x^{2} + 2 p x + q$\n$\\lim_{x \\rightarrow a} \\frac{f \\left( x \\right) - 1}{x} - a = 3$에서 $x \\rightarrow a$일 때 (분모)$\\rightarrow 0$이고 극한값이 존재하므로 (분자)$\\rightarrow 0$이다.\n즉 $\\lim_{x \\rightarrow a} {\\left\\{ f \\left( x \\right) - 1 \\right\\}} = 0$에서    $f \\left( a \\right) = 1$\n$\\lim_{x \\rightarrow a} \\frac{f \\left( x \\right) - f \\left( a \\right)}{x} - a = 3$에서    $f' \\left( a \\right) = 3$\n즉 곡선 $y = f \\left( x \\right)$ 위의 점 $\\left( a , f \\left( a \\right) \\right)$에서의 접선의 방정식은\n$y - f \\left( a \\right) = f' \\left( a \\right) \\left( x - a \\right)$에서    $y = 3 \\left( x - a \\right) + 1$\n이 직선의 $y$절편이 $4$이므로\n$- 3 a + 1 = 4$,    $a = - 1$\n즉 $f \\left( - 1 \\right) = 1$에서    $- 1 + p - q = 1$,    $p - q = 2$\n$f' \\left( - 1 \\right) = 3$에서    $3 - 2 p + q = 3$,    $- 2 p + q = 0$\n두 식을 연립하여 풀면    $p = - 2$, $q = - 4$\n따라서 $f \\left( x \\right) = x^{3} - 2 x^{2} - 4 x$이므로\n$f \\left( 1 \\right)$$= 1^{3} - 2 \\times 1^{2} - 4 \\times 1$\n$= - 5$\n",
+  "problem_text": "최고차항의 계수가 $\\mathrm{1}$이고 $f (0) = 0$인 삼차함수 $f (x)$가\n$\\lim_{x \\rightarrow a} \\frac{f \\left( x \\right) - 1}{x - a} = 3$\n을 만족시킨다. 곡선 $y = f (x)$ 위의 점 $(a , f (a))$에서의 접선의 $y$절편이 $\\mathrm{4}$일 때, $f (1)$의 값은? (단, $a$는 상수이다.)\n① $\\mathrm{- 1}$\t\t② $\\mathrm{- 2}$\t\t③ $\\mathrm{- 3}$\n④ $\\mathrm{- 4}$\t\t⑤ $\\mathrm{- 5}$\n",
+  "subject": "미분",
+  "unit": "04 접선의 방정식",
+  "type": "03 접점3 (해석)",
+  "source": "2024년(2025학년도) 평가원 고3공통 6월 > 공통범위 > 11 [4점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:34:09.099678+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:20:03.631070+00:00",
+      "usage": {
+        "prompt_token_count": null,
+        "candidates_token_count": null,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "raw": null
+      },
+      "status": "error",
+      "error_type": "ClientError",
+      "code": 429,
+      "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 56.207065545s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.1-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '56s'}]}}",
+      "latency_seconds": 1.242,
+      "execution": 1
+    },
+    {
+      "attempt": 2,
+      "started_at": "2026-11-07T13:20:04.872789+00:00",
+      "usage": {
+        "prompt_token_count": null,
+        "candidates_token_count": null,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "raw": null
+      },
+      "status": "error",
+      "error_type": "ClientError",
+      "code": 429,
+      "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 54.992485854s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.1-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '54s'}]}}",
+      "latency_seconds": 0.221,
+      "execution": 1
+    },
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:34:09.099695+00:00",
+      "usage": {
+        "prompt_token_count": 208,
+        "candidates_token_count": 623,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 831,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 623,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 208,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 208
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 831,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "0SjvapaqMa_E_PUP-76TmA4",
+      "latency_seconds": 2.564,
+      "execution": 2
+    }
+  ],
+  "status": "success",
+  "output_text": "삼차함수 $f(x)$의 최고차항의 계수가 1이고 $f(0)=0$이므로, $f(x) = x^3 + px^2 + qx$라고 할 수 있습니다.\n\n1. **미분계수의 정의 이용:**\n   $\\lim_{x \\rightarrow a} \\frac{f(x) - 1}{x - a} = 3$이라는 식에서, 분모가 0으로 가므로 분자도 0으로 가야 합니다. 즉, $f(a) - 1 = 0$이므로 $f(a) = 1$입니다.\n   따라서 주어진 식은 미분계수의 정의에 의해 $f'(a) = 3$이 됩니다.\n\n2. **접선의 방정식 이용:**\n   곡선 $y=f(x)$ 위의 점 $(a, f(a))$에서의 접선의 방정식은 다음과 같습니다.\n   $y - f(a) = f'(a)(x - a)$\n   $f(a)=1, f'(a)=3$을 대입하면,\n   $y - 1 = 3(x - a) \\implies y = 3x - 3a + 1$\n   이 접선의 $y$절편이 4라고 하였으므로, $x=0$일 때 $y=4$입니다.\n   $-3a + 1 = 4 \\implies -3a = 3 \\implies a = -1$\n\n3. **$f(x)$ 구하기:**\n   $a = -1$이므로 $f(-1) = 1$이고 $f'(-1) = 3$입니다.\n   $f(x) = x^3 + px^2 + qx$에서\n   $f(-1) = -1 + p - q = 1 \\implies p - q = 2$  --- (1)\n   $f'(x) = 3x^2 + 2px + q$\n   $f'(-1) = 3 - 2p + q = 3 \\implies -2p + q = 0 \\implies q = 2p$ --- (2)\n\n   (2)를 (1)에 대입하면:\n   $p - 2p = 2 \\implies -p = 2 \\implies p = -2$\n   $q = 2(-2) = -4$\n   따라서 $f(x) = x^3 - 2x^2 - 4x$입니다.\n\n4. **$f(1)$ 계산:**\n   $f(1) = 1^3 - 2(1)^2 - 4(1) = 1 - 2 - 4 = -5$\n\n최종정답: ⑤",
+  "usage": {
+    "prompt_token_count": 208,
+    "candidates_token_count": 623,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 831,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 623,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 208,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 208
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 831,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "0SjvapaqMa_E_PUP-76TmA4",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:34:11 GMT",
+        "server": "envoy",
+        "content-length": "1171",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1861",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "2466"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "삼차함수 $f(x)$의 최고차항의 계수가 1이고 $f(0)=0$이므로, $f(x) = x^3 + px^2 + qx$라고 할 수 있습니다.\n\n1. **미분계수의 정의 이용:**\n   $\\lim_{x \\rightarrow a} \\frac{f(x) - 1}{x - a} = 3$이라는 식에서, 분모가 0으로 가므로 분자도 0으로 가야 합니다. 즉, $f(a) - 1 = 0$이므로 $f(a) = 1$입니다.\n   따라서 주어진 식은 미분계수의 정의에 의해 $f'(a) = 3$이 됩니다.\n\n2. **접선의 방정식 이용:**\n   곡선 $y=f(x)$ 위의 점 $(a, f(a))$에서의 접선의 방정식은 다음과 같습니다.\n   $y - f(a) = f'(a)(x - a)$\n   $f(a)=1, f'(a)=3$을 대입하면,\n   $y - 1 = 3(x - a) \\implies y = 3x - 3a + 1$\n   이 접선의 $y$절편이 4라고 하였으므로, $x=0$일 때 $y=4$입니다.\n   $-3a + 1 = 4 \\implies -3a = 3 \\implies a = -1$\n\n3. **$f(x)$ 구하기:**\n   $a = -1$이므로 $f(-1) = 1$이고 $f'(-1) = 3$입니다.\n   $f(x) = x^3 + px^2 + qx$에서\n   $f(-1) = -1 + p - q = 1 \\implies p - q = 2$  --- (1)\n   $f'(x) = 3x^2 + 2px + q$\n   $f'(-1) = 3 - 2p + q = 3 \\implies -2p + q = 0 \\implies q = 2p$ --- (2)\n\n   (2)를 (1)에 대입하면:\n   $p - 2p = 2 \\implies -p = 2 \\implies p = -2$\n   $q = 2(-2) = -4$\n   따라서 $f(x) = x^3 - 2x^2 - 4x$입니다.\n\n4. **$f(1)$ 계산:**\n   $f(1) = 1^3 - 2(1)^2 - 4(1) = 1 - 2 - 4 = -5$\n\n최종정답: ⑤",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TnexEQBnRmm3fwV8fNkfsTySwYvSFEmJONhItSk3hrTQh3UQdamKdZnFuGfUZ5xZSua8QFiVK5WfyRl49ySk2ViTwwU4sgWSBS51ZwhT4_xpOOJhHUGzEZl4ZJQduiIdYZtnG0t_lgjOzIs2K",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "0SjvapaqMa_E_PUP-76TmA4",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 623,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 208,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 208
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 831,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 2.564,
+  "completed_at": "2026-11-07T13:34:11.663718+00:00",
+  "evaluation": {
+    "predicted_answer": "⑤",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "⑤",
+    "predicted_kind": "choice",
+    "predicted_choice": 5
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "prior_executions": [
+    {
+      "status": "api_error",
+      "started_at": "2026-11-07T13:20:03.631057+00:00",
+      "completed_at": "2026-11-07T13:20:05.094297+00:00",
+      "error": {
+        "code": 429,
+        "type": "ClientError",
+        "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 54.992485854s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.1-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '54s'}]}}"
+      },
+      "response_id": null
+    }
+  ],
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "f80389a50ad10fe7c9ec3124ee12b620fb51a7ca50c1e63eef03bf58d4c77d7a",
+    "imported_at": "2026-11-07T16:57:38.372379+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

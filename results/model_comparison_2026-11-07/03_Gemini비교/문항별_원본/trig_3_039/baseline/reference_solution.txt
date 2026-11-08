@@ -1,0 +1,13 @@
+[정답] ④
+
+[해설]
+실근을 갖지 않기 위해서는 이차방정식 $6 x^{2} + \left( 4 \cos \theta \right) x + \sin \theta = 0$의 판별식 $D < 0$이어야 한다.
+따라서 $\frac D4=\left(2\cos\theta\right)^2-6\sin\theta<0$에서
+$4 \cos^{2} \theta - 6 \sin \theta < 0$, $\left( \cos^{2} \theta = 1 - \sin^{2} \theta \right)$
+$4 (1 - \sin^{2} \theta) - 6 \sin \theta < 0$
+$2 \sin^{2} \theta + 3 \sin \theta - 4 > 0$
+$(2 \sin \theta - 1) (\sin \theta + 2) > 0$
+$\therefore$$\frac{1}{2} < \sin \theta \le 1$$(\because - 1 \le \sin \theta \le 1)$
+$0 \le \theta < 2 \pi$의 범위에서 ㉠을 만족하는 $\theta$의 범위는
+$\therefore \frac{1}{6} \pi < \theta < \frac{5}{6} \pi$
+따라서 $\alpha = \frac{1}{6} \pi , \beta = \frac{5}{6} \pi$이므로 $3 \alpha + \beta = \frac{4}{3} \pi$

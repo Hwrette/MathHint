@@ -1,0 +1,215 @@
+{
+  "status": "PASS",
+  "audited_at": "2026-11-07T17:32:47.583459+00:00",
+  "reviewer_kind": "AI_assisted_independent_integrity_audit",
+  "source_hashes": {
+    "responses_sha256": "7f3c34d3909d01f6ed29560171ced63e08c11bd0b142671b1967e0190ad8801c",
+    "config_sha256": "12d2ce5155b87cb396db6221b00d5727ab63b3212f23c62339b52d12d79c4852",
+    "integrated_summary_sha256": "5839ec9d842a5c012cdf45cf4f82c1a3eae9f9a028024b0bc3effac3a1e3fa2e",
+    "summary_markdown_sha256": "613b29a4e692646a4260def2a96dd5b301c6d5b559fe3f5a1c13a508744601e0"
+  },
+  "checks": {
+    "160_unique_complete_successful_conditions": {
+      "status": "PASS",
+      "detail": {
+        "baseline": 80,
+        "regression_hint": 80
+      }
+    },
+    "fixed185_80_split": {
+      "status": "PASS"
+    },
+    "config_digest": {
+      "status": "PASS"
+    },
+    "shared_model_and_control_settings": {
+      "status": "PASS",
+      "detail": {
+        "model": "gemini-3.1-flash-lite",
+        "thinking_level": "minimal",
+        "temperature": 0.0,
+        "max_output_tokens": 8192
+      }
+    },
+    "frozen_training_predictions_and_metadata": {
+      "status": "PASS"
+    },
+    "all_inputs_independently_reconstructed_no_answer_leakage": {
+      "status": "PASS",
+      "detail": {
+        "baseline": "clean problem only",
+        "regression_hint": "same problem plus predicted top20 mapping and fixed instruction",
+        "min_coordinates": 20,
+        "max_coordinates": 20,
+        "actual_solution_or_actual_vector_or_type_injected": false
+      }
+    },
+    "77_reused_controls_exact_original_input_output_usage_time": {
+      "status": "PASS",
+      "detail": {
+        "reused_controls": 77
+      }
+    },
+    "3_fresh_baselines_replace_old_failures": {
+      "status": "PASS",
+      "detail": {
+        "fresh_ids": [
+          "diff_1_041",
+          "diff_1_039",
+          "diff_2_004"
+        ]
+      }
+    },
+    "source_scores_baseline": {
+      "status": "PASS",
+      "detail": {
+        "correct": 78,
+        "total": 80
+      }
+    },
+    "token_means_baseline": {
+      "status": "PASS",
+      "detail": {
+        "prompt_token_count": 150.6375,
+        "candidates_token_count": 497.1125,
+        "total_token_count": 647.75
+      }
+    },
+    "source_scores_regression_hint": {
+      "status": "PASS",
+      "detail": {
+        "correct": 77,
+        "total": 80
+      }
+    },
+    "token_means_regression_hint": {
+      "status": "PASS",
+      "detail": {
+        "prompt_token_count": 395.0,
+        "candidates_token_count": 462.6875,
+        "total_token_count": 857.6875
+      }
+    },
+    "usage_exact_saved_raw_api_metadata": {
+      "status": "PASS"
+    },
+    "single_source_answer_conflict_exact_math": {
+      "status": "PASS",
+      "detail": {
+        "original_key": "④",
+        "supported_key": "②",
+        "supported_value": "9/5",
+        "raw_file_sha256": "40e5d3256beca74c23225ea16d79b402d009340fbb175e827264f20535bad869"
+      }
+    },
+    "supplemental_math_key_score_baseline": {
+      "status": "PASS",
+      "detail": {
+        "correct": 79,
+        "total": 80
+      }
+    },
+    "supplemental_math_key_score_regression_hint": {
+      "status": "PASS",
+      "detail": {
+        "correct": 78,
+        "total": 80
+      }
+    },
+    "5_ai_files_160_unique_output_hashes_and640_exact_quotes": {
+      "status": "PASS",
+      "detail": {
+        "files": 5,
+        "output_hashes_checked": 160,
+        "verbatim_quotes_checked": 640
+      }
+    },
+    "160_ai_imports_no_hash_or_quote_rejections": {
+      "status": "PASS"
+    },
+    "review_snapshot_current": {
+      "status": "PASS"
+    },
+    "human_reviews_not_fabricated": {
+      "status": "PASS",
+      "detail": {
+        "human_reviewed": 0,
+        "human_unreviewed": 160,
+        "AI_reviews": "method-aware, not blinded human evaluations"
+      }
+    },
+    "integrated_scores_consistent": {
+      "status": "PASS"
+    },
+    "report_distinguishes_math_review_and_curriculum": {
+      "status": "PASS",
+      "detail": {
+        "baseline_math_appropriate": 76,
+        "hint_math_appropriate": 71,
+        "denominator_each": 80,
+        "rates_percent": [
+          95.0,
+          88.75
+        ],
+        "method_aware_AI_review_disclosure": true
+      }
+    },
+    "summary_pdf_and_plots_exist": {
+      "status": "PASS"
+    },
+    "tracked_dataset_blobs_byte_identical_to_HEAD": {
+      "status": "PASS",
+      "detail": {
+        "verified_blobs": 819,
+        "commit": "0fca4aab689b32e8e9c27d5cefea049c216f192d"
+      }
+    },
+    "dotenv_untracked": {
+      "status": "PASS"
+    },
+    "configured_secrets_absent_from_code_and_results": {
+      "status": "PASS",
+      "detail": {
+        "files_scanned": 2705,
+        "values_exposed": false,
+        "matched_paths": []
+      }
+    },
+    "unknown_error_attempt_cost_preserved_as_unknown": {
+      "status": "PASS"
+    }
+  },
+  "issues": [],
+  "limitations": [
+    "AI solution reviews were method-aware, not blinded human reviews. All160 human reviews remain unreviewed.",
+    "Output-hash and quote agreement verifies provenance, not the mathematical correctness of AI judgments.",
+    "Source-key scores and AI-assisted supplemental key scores are separate; original data and responses remain intact.",
+    "Token means describe final successful responses. Baseline history includes36 attempts with unknown usage, so exact billed total is not established.",
+    "Top20 policy follows exploratory full-vector observations; full-vector and top20 conditions are stored separately.",
+    "A single80-question paired run with77reused controls does not establish a statistically reliable accuracy improvement."
+  ],
+  "recomputed": {
+    "baseline": {
+      "source_correct": 78,
+      "denominator": 80,
+      "successful_response_token_means": {
+        "prompt_token_count": 150.6375,
+        "candidates_token_count": 497.1125,
+        "total_token_count": 647.75
+      }
+    },
+    "regression_hint": {
+      "source_correct": 77,
+      "denominator": 80,
+      "successful_response_token_means": {
+        "prompt_token_count": 395.0,
+        "candidates_token_count": 462.6875,
+        "total_token_count": 857.6875
+      }
+    }
+  },
+  "supplemental_math_key_correct": {
+    "baseline": 79,
+    "regression_hint": 78
+  }
+}

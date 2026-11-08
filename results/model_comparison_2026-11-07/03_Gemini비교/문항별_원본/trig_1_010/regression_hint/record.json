@@ -1,0 +1,231 @@
+{
+  "id": "trig_1_010",
+  "method": "regression_hint",
+  "input_text": "$\\frac{\\pi}{2} < t < \\pi$인 실수 $t$에 대하여 이차방정식\n$5 x^{2} + x + k = 0 \\quad \\left( k \\right.$는 상수$\\left.  \\right)$\n가 두 실근 $\\sin t$, $\\cos t$를 가질 때, $k \\times \\tan t$의 값은?\n① $\\frac{3}{2}$\t\t② $\\frac{9}{5}$\t\t③ $\\frac{21}{10}$\n④ $\\frac{12}{5}$\t\t⑤ $\\frac{27}{10}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:}\":32.064,\"latex:{\":31.845,\"latex:\\\\theta\":18.828,\"latex:2\":17.334,\"latex:=\":15.198,\"latex:\\\\frac\":13.466,\"latex:t\":12.656,\"latex:-\":11.695,\"latex:3\":11.17,\"latex:1\":10.487,\"latex:^\":10.225,\"latex:+\":10.181,\"latex:\\\\pi\":9.538,\"latex:10\":9.314,\"latex:\\\\tan\":8.509,\"latex:)\":8.365,\"latex:(\":8.133,\"latex:\\\\cos\":7.177,\"kiwi:면\":5.898,\"latex:\\\\sqrt\":5.507}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "39cbfba31628294c636a07f8af11089bb99690240d42f101bc767b71bfb05a17",
+  "reference": {
+    "answer_text": "④",
+    "kind": "choice",
+    "choice": 4,
+    "value_text": "$\\frac{12}{5}$",
+    "source": {
+      "id": "trig_1_010",
+      "source_file": "모의고사_삼각함수_문제_1.hml",
+      "source_sha256": "40e5d3256beca74c23225ea16d79b402d009340fbb175e827264f20535bad869",
+      "original_number": 10,
+      "current_number": 10
+    },
+    "numeric_value": 2.4,
+    "gradable": true
+  },
+  "reference_answer_text": "④",
+  "reference_solution": "[정답] ④\n\n[해설]\n$\\frac{\\pi}{2} < t < \\pi$인 실수 $t$에 대하여 이차방정식\n$5 x^{2} + x + k = 0$이 두 실근 $\\sin t$, $\\cos t$를 가지므로\n$\\sin t + \\cos t = - \\frac{1}{5}$, $\\sin t \\cos t = \\frac{k}{5}$이다.\n$\\left( \\sin t + \\cos t \\right)^{2} = \\frac{1}{25}$\n$\\sin^{2} t + 2 \\sin t \\cos t + \\cos^{2} t = \\frac{1}{25}$\n이고 $\\sin^{2} t + \\cos^{2} t = 1$이므로\n$\\sin t \\cos t = - \\frac{12}{25}$이다.\n$\\frac{k}{5} = - \\frac{12}{25}$에서 $k = - \\frac{12}{5}$이다.\n$\\frac{\\pi}{2} < t < \\pi$에서 $\\sin t > 0$, $\\cos t < 0$이므로\n이차방정식\n$5 x^{2} + x - \\frac{12}{5} = 0$,\n$25 x^{2} + 5 x - 12 = 0$,\n$\\left( 5 x - 3 \\right) \\left( 5 x + 4 \\right) = 0$\n의 두 실근은 $\\sin t = \\frac{3}{5}$, $\\cos t = - \\frac{4}{5}$이다. $\\tan t = \\frac{\\sin t}{\\cos t} = \\frac{3}{5} \\times \\left( - \\frac{5}{4} \\right) = - \\frac{3}{4}$이다.\n따라서 $k \\times \\tan t = \\left( - \\frac{12}{5} \\right) \\times \\left( - \\frac{3}{4} \\right) = \\frac{9}{5}$이다.\n",
+  "problem_text": "$\\frac{\\pi}{2} < t < \\pi$인 실수 $t$에 대하여 이차방정식\n$5 x^{2} + x + k = 0 \\quad \\left( k \\right.$는 상수$\\left.  \\right)$\n가 두 실근 $\\sin t$, $\\cos t$를 가질 때, $k \\times \\tan t$의 값은?\n① $\\frac{3}{2}$\t\t② $\\frac{9}{5}$\t\t③ $\\frac{21}{10}$\n④ $\\frac{12}{5}$\t\t⑤ $\\frac{27}{10}$\n",
+  "subject": "삼각함수",
+  "unit": "05 삼각함수의 정의",
+  "type": "09 활용3 (삼각함수 사이의 관계)",
+  "source": "2025년 교육청 고2공통 6월 > 13 [3점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:}": 32.064,
+      "latex:{": 31.845,
+      "latex:\\theta": 18.828,
+      "latex:2": 17.334,
+      "latex:=": 15.198,
+      "latex:\\frac": 13.466,
+      "latex:t": 12.656,
+      "latex:-": 11.695,
+      "latex:3": 11.17,
+      "latex:1": 10.487,
+      "latex:^": 10.225,
+      "latex:+": 10.181,
+      "latex:\\pi": 9.538,
+      "latex:10": 9.314,
+      "latex:\\tan": 8.509,
+      "latex:)": 8.365,
+      "latex:(": 8.133,
+      "latex:\\cos": 7.177,
+      "kiwi:면": 5.898,
+      "latex:\\sqrt": 5.507
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:14:56.292537+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:14:56.292550+00:00",
+      "usage": {
+        "prompt_token_count": 431,
+        "candidates_token_count": 616,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 1047,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 616,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 431,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 431
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 1047,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "k1zvaurqEKLXz7IPkfXUsQY",
+      "latency_seconds": 4.882,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "이차방정식 $5x^2 + x + k = 0$의 두 실근이 $\\sin t, \\cos t$이므로, 근과 계수의 관계에 의해 다음이 성립합니다.\n\n1) $\\sin t + \\cos t = -\\frac{1}{5}$\n2) $\\sin t \\cos t = \\frac{k}{5}$\n\n먼저 1)의 양변을 제곱하면,\n$(\\sin t + \\cos t)^2 = \\left(-\\frac{1}{5}\\right)^2$\n$\\sin^2 t + \\cos^2 t + 2\\sin t \\cos t = \\frac{1}{25}$\n\n$\\sin^2 t + \\cos^2 t = 1$이므로,\n$1 + 2\\left(\\frac{k}{5}\\right) = \\frac{1}{25}$\n$1 + \\frac{2k}{5} = \\frac{1}{25}$\n$\\frac{2k}{5} = \\frac{1}{25} - 1 = -\\frac{24}{25}$\n$k = -\\frac{24}{25} \\times \\frac{5}{2} = -\\frac{12}{5}$\n\n이제 $\\sin t \\cos t = \\frac{k}{5} = \\frac{-12/5}{5} = -\\frac{12}{25}$입니다.\n$\\sin t$와 $\\cos t$는 $x^2 - (\\text{합})x + (\\text{곱}) = 0$의 근이므로,\n$x^2 + \\frac{1}{5}x - \\frac{12}{25} = 0$\n$25x^2 + 5x - 12 = 0$\n$(5x - 3)(5x + 4) = 0$\n따라서 $x = \\frac{3}{5}$ 또는 $x = -\\frac{4}{5}$입니다.\n\n$\\frac{\\pi}{2} < t < \\pi$에서 $\\sin t > 0$이고 $\\cos t < 0$이므로,\n$\\sin t = \\frac{3}{5}$, $\\cos t = -\\frac{4}{5}$입니다.\n\n이때 $\\tan t = \\frac{\\sin t}{\\cos t} = \\frac{3/5}{-4/5} = -\\frac{3}{4}$입니다.\n\n구하고자 하는 값은 $k \\times \\tan t$이므로,\n$k \\times \\tan t = \\left(-\\frac{12}{5}\\right) \\times \\left(-\\frac{3}{4}\\right) = \\frac{36}{20} = \\frac{9}{5}$\n\n최종정답: ②",
+  "usage": {
+    "prompt_token_count": 431,
+    "candidates_token_count": 616,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 1047,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 616,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 431,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 431
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1047,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "k1zvaurqEKLXz7IPkfXUsQY",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:15:01 GMT",
+        "server": "envoy",
+        "content-length": "1068",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1856",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "2463"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "이차방정식 $5x^2 + x + k = 0$의 두 실근이 $\\sin t, \\cos t$이므로, 근과 계수의 관계에 의해 다음이 성립합니다.\n\n1) $\\sin t + \\cos t = -\\frac{1}{5}$\n2) $\\sin t \\cos t = \\frac{k}{5}$\n\n먼저 1)의 양변을 제곱하면,\n$(\\sin t + \\cos t)^2 = \\left(-\\frac{1}{5}\\right)^2$\n$\\sin^2 t + \\cos^2 t + 2\\sin t \\cos t = \\frac{1}{25}$\n\n$\\sin^2 t + \\cos^2 t = 1$이므로,\n$1 + 2\\left(\\frac{k}{5}\\right) = \\frac{1}{25}$\n$1 + \\frac{2k}{5} = \\frac{1}{25}$\n$\\frac{2k}{5} = \\frac{1}{25} - 1 = -\\frac{24}{25}$\n$k = -\\frac{24}{25} \\times \\frac{5}{2} = -\\frac{12}{5}$\n\n이제 $\\sin t \\cos t = \\frac{k}{5} = \\frac{-12/5}{5} = -\\frac{12}{25}$입니다.\n$\\sin t$와 $\\cos t$는 $x^2 - (\\text{합})x + (\\text{곱}) = 0$의 근이므로,\n$x^2 + \\frac{1}{5}x - \\frac{12}{25} = 0$\n$25x^2 + 5x - 12 = 0$\n$(5x - 3)(5x + 4) = 0$\n따라서 $x = \\frac{3}{5}$ 또는 $x = -\\frac{4}{5}$입니다.\n\n$\\frac{\\pi}{2} < t < \\pi$에서 $\\sin t > 0$이고 $\\cos t < 0$이므로,\n$\\sin t = \\frac{3}{5}$, $\\cos t = -\\frac{4}{5}$입니다.\n\n이때 $\\tan t = \\frac{\\sin t}{\\cos t} = \\frac{3/5}{-4/5} = -\\frac{3}{4}$입니다.\n\n구하고자 하는 값은 $k \\times \\tan t$이므로,\n$k \\times \\tan t = \\left(-\\frac{12}{5}\\right) \\times \\left(-\\frac{3}{4}\\right) = \\frac{36}{20} = \\frac{9}{5}$\n\n최종정답: ②",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0Tn1nqvf78yKSMmFEJfTeXw6WXa-QX-ENKgzQMS3uk4XfnPX6dyLLJM2Qodb6SfAVfK_l74OTKqbdUsXp5owCUWNlp-OqpmjWnvgJ8s-nN3W0sbQSvSHJhuHqvt64ElD7T347YBeLIC-L7_Y02",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "k1zvaurqEKLXz7IPkfXUsQY",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 616,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 431,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 431
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1047,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 4.882,
+  "completed_at": "2026-11-07T17:15:01.174275+00:00",
+  "evaluation": {
+    "predicted_answer": "②",
+    "correct": false,
+    "status": "incorrect",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "④",
+    "predicted_kind": "choice",
+    "predicted_choice": 2
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

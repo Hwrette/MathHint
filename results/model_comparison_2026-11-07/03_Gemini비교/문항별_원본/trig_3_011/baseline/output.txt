@@ -1,0 +1,18 @@
+점 $\mathrm{P}$의 좌표를 $(x, y)$라 하면, 제1사분면에 있으므로 $x > 0, y > 0$입니다.
+점 $\mathrm{P}$의 동경이 나타내는 각이 $\alpha$이므로, $\sin \alpha = \frac{y}{\sqrt{x^2+y^2}} = \frac{1}{3}$입니다.
+이를 통해 $y^2 = \frac{1}{9}(x^2+y^2)$에서 $9y^2 = x^2+y^2$, 즉 $x^2 = 8y^2$이므로 $x = 2\sqrt{2}y$ ($x>0$)임을 알 수 있습니다. 따라서 $\mathrm{P} = (2\sqrt{2}y, y)$입니다.
+
+1. **점 $\mathrm{Q}$의 좌표**: 점 $\mathrm{P}$를 직선 $y=x$에 대하여 대칭이동하면 $x$와 $y$의 좌표가 바뀝니다.
+   $\mathrm{Q} = (y, 2\sqrt{2}y)$
+   점 $\mathrm{Q}$의 동경이 나타내는 각이 $\beta$이므로, $\sin \beta = \frac{2\sqrt{2}y}{\sqrt{y^2 + (2\sqrt{2}y)^2}} = \frac{2\sqrt{2}y}{\sqrt{9y^2}} = \frac{2\sqrt{2}y}{3y} = \frac{2\sqrt{2}}{3}$입니다.
+   따라서 $\sin^2 \beta = \left( \frac{2\sqrt{2}}{3} \right)^2 = \frac{8}{9}$입니다.
+
+2. **점 $\mathrm{R}$의 좌표**: 점 $\mathrm{Q}$를 원점에 대하여 대칭이동하면 좌표의 부호가 모두 바뀝니다.
+   $\mathrm{R} = (-y, -2\sqrt{2}y)$
+   점 $\mathrm{R}$의 동경이 나타내는 각이 $\gamma$이므로, $\tan \gamma = \frac{-2\sqrt{2}y}{-y} = 2\sqrt{2}$입니다.
+   따라서 $\tan^2 \gamma = (2\sqrt{2})^2 = 8$입니다.
+
+3. **최종 계산**:
+   $9(\sin^2 \beta + \tan^2 \gamma) = 9 \left( \frac{8}{9} + 8 \right) = 9 \left( \frac{8 + 72}{9} \right) = 8 + 72 = 80$
+
+최종정답: 80

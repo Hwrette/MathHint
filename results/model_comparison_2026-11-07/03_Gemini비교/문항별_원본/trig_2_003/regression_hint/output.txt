@@ -1,0 +1,21 @@
+두 점 $\mathrm{P}(a, b)$와 $\mathrm{Q}(a^2, -2b^2)$에 대하여, 각 동경이 나타내는 각을 $\theta_1, \theta_2$라 하면 탄젠트의 정의에 의해 다음과 같습니다.
+$\tan \theta_1 = \frac{b}{a}$
+$\tan \theta_2 = \frac{-2b^2}{a^2}$
+
+문제에서 $\tan \theta_1 + \tan \theta_2 = 0$이라고 하였으므로,
+$\frac{b}{a} + \left( -\frac{2b^2}{a^2} \right) = 0$
+$\frac{b}{a} = \frac{2b^2}{a^2}$
+
+$a > 0, b > 0$이므로 양변을 $\frac{b}{a}$로 나누면(단, $b \neq 0$이므로 가능),
+$1 = \frac{2b}{a}$
+따라서 $a = 2b$가 성립합니다.
+
+이제 $\sin \theta_1$의 값을 구하기 위해 $\tan \theta_1$을 계산하면,
+$\tan \theta_1 = \frac{b}{a} = \frac{b}{2b} = \frac{1}{2}$
+
+$\theta_1$은 $a>0, b>0$이므로 제1사분면의 각입니다. $\tan \theta_1 = \frac{1}{2}$인 직각삼각형을 생각하면 밑변의 길이를 $2$, 높이를 $1$이라 할 때 빗변의 길이는 $\sqrt{2^2 + 1^2} = \sqrt{5}$입니다.
+
+따라서 $\sin \theta_1$의 값은 다음과 같습니다.
+$\sin \theta_1 = \frac{\text{높이}}{\text{빗변}} = \frac{1}{\sqrt{5}} = \frac{\sqrt{5}}{5}$
+
+최종정답: ②

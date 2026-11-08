@@ -1,0 +1,231 @@
+{
+  "id": "diff_1_026",
+  "method": "regression_hint",
+  "input_text": "양수 $t$에 대하여 함수 $f \\left( x \\right) = 2 x^{3} - 7 x^{2} + 1$의 그래프 위의 점 $\\left( t , f \\left( t \\right) \\right)$에서의 접선이 점 $\\left( 0 , 1 \\right)$을 지나도록 하는 $t$의 값은?\n① $\\frac{3}{4}$\t\t② $1$\t\t③ $\\frac{5}{4}$\n④ $\\frac{3}{2}$\t\t⑤ $\\frac{7}{4}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:\\\\right\":14.107,\"latex:\\\\left\":13.694,\"latex:)\":12.498,\"latex:(\":12.315,\"latex:}\":10.801,\"latex:{\":10.437,\"latex:-\":8.683,\"latex:+\":8.608,\"latex:x\":7.614,\"latex:0\":7.489,\"latex:k\":7.346,\"latex:6\":7.17,\"latex:=\":7.065,\"latex:3\":6.906,\"latex:2\":6.761,\"latex:a\":6.15,\"latex:t\":6.124,\"latex:1\":5.84,\"kiwi:의\":5.633,\"latex:^\":4.986}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "8e4359322a105f5cd774d75d581f7a40292d0c8285702a86d826900920d6938f",
+  "reference": {
+    "answer_text": "⑤",
+    "kind": "choice",
+    "choice": 5,
+    "value_text": "$\\frac{7}{4}$",
+    "source": {
+      "id": "diff_1_026",
+      "source_file": "모의고사_미분_문제_1.hml",
+      "source_sha256": "02487629c158a7d2ad3e0f0701b391a6efa7f5d517ab48c044f978924365270f",
+      "original_number": 26,
+      "current_number": 26
+    },
+    "numeric_value": 1.75,
+    "gradable": true
+  },
+  "reference_answer_text": "⑤",
+  "reference_solution": "[정답] ⑤\n\n[해설]\n$f' \\left( x \\right) = 6 x^{2} - 14 x$\n함수 $y = f \\left( x \\right)$의 그래프 위의\n점 $\\left( t , f \\left( t \\right) \\right) \\quad \\left( t > 0 \\right)$에서의 접선의 방정식은\n$y = f' \\left( t \\right) \\left( x - t \\right) + f \\left( t \\right)$\n$y = \\left( 6 t^{2} - 14 t \\right) \\left( x - t \\right) + 2 t^{3} - 7 t^{2} + 1$\n접선이 점 $\\left( 0 , 1 \\right)$을 지나므로\n$1 = \\left( 6 t^{2} - 14 t \\right) \\left( 0 - t \\right) + 2 t^{3} - 7 t^{2} + 1$\n$1 = - 4 t^{3} + 7 t^{2} + 1$\n$4 t^{3} - 7 t^{2} = t^{2} \\left( 4 t - 7 \\right) = 0$\n따라서 $t = \\frac{7}{4}$\n",
+  "problem_text": "양수 $t$에 대하여 함수 $f \\left( x \\right) = 2 x^{3} - 7 x^{2} + 1$의 그래프 위의 점 $\\left( t , f \\left( t \\right) \\right)$에서의 접선이 점 $\\left( 0 , 1 \\right)$을 지나도록 하는 $t$의 값은?\n① $\\frac{3}{4}$\t\t② $1$\t\t③ $\\frac{5}{4}$\n④ $\\frac{3}{2}$\t\t⑤ $\\frac{7}{4}$\n",
+  "subject": "미분",
+  "unit": "04 접선의 방정식",
+  "type": "01 접점1 (접선의 방정식)",
+  "source": "2026년 교육청 고3 공통 07월 > 9 [4점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:\\right": 14.107,
+      "latex:\\left": 13.694,
+      "latex:)": 12.498,
+      "latex:(": 12.315,
+      "latex:}": 10.801,
+      "latex:{": 10.437,
+      "latex:-": 8.683,
+      "latex:+": 8.608,
+      "latex:x": 7.614,
+      "latex:0": 7.489,
+      "latex:k": 7.346,
+      "latex:6": 7.17,
+      "latex:=": 7.065,
+      "latex:3": 6.906,
+      "latex:2": 6.761,
+      "latex:a": 6.15,
+      "latex:t": 6.124,
+      "latex:1": 5.84,
+      "kiwi:의": 5.633,
+      "latex:^": 4.986
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:08:56.626399+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:08:56.626414+00:00",
+      "usage": {
+        "prompt_token_count": 409,
+        "candidates_token_count": 422,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 831,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 422,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 409,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 409
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 831,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "K1vvapzuIMmtz7IPh8u38Qs",
+      "latency_seconds": 4.714,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $f(x) = 2x^3 - 7x^2 + 1$에 대하여, 점 $(t, f(t))$에서의 접선의 방정식을 구합니다.\n\n먼저 $f(x)$를 미분하면,\n$f'(x) = 6x^2 - 14x$입니다.\n\n점 $(t, f(t))$에서의 접선의 기울기는 $f'(t) = 6t^2 - 14t$이므로, 접선의 방정식은 다음과 같습니다.\n$y - f(t) = f'(t)(x - t)$\n$y - (2t^3 - 7t^2 + 1) = (6t^2 - 14t)(x - t)$\n\n이 접선이 점 $(0, 1)$을 지나므로, $x=0, y=1$을 대입합니다.\n$1 - (2t^3 - 7t^2 + 1) = (6t^2 - 14t)(0 - t)$\n$1 - 2t^3 + 7t^2 - 1 = -6t^3 + 14t^2$\n$-2t^3 + 7t^2 = -6t^3 + 14t^2$\n\n모든 항을 좌변으로 이항하여 정리하면,\n$4t^3 - 7t^2 = 0$\n$t^2(4t - 7) = 0$\n\n문제에서 $t$는 양수라고 하였으므로 $t^2 \\neq 0$입니다. 따라서,\n$4t - 7 = 0$\n$4t = 7$\n$t = \\frac{7}{4}$\n\n따라서 구하는 $t$의 값은 $\\frac{7}{4}$입니다.\n\n최종정답: ⑤",
+  "usage": {
+    "prompt_token_count": 409,
+    "candidates_token_count": 422,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 831,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 422,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 409,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 409
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 831,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "K1vvapzuIMmtz7IPh8u38Qs",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:09:01 GMT",
+        "server": "envoy",
+        "content-length": "956",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1767",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "1916"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $f(x) = 2x^3 - 7x^2 + 1$에 대하여, 점 $(t, f(t))$에서의 접선의 방정식을 구합니다.\n\n먼저 $f(x)$를 미분하면,\n$f'(x) = 6x^2 - 14x$입니다.\n\n점 $(t, f(t))$에서의 접선의 기울기는 $f'(t) = 6t^2 - 14t$이므로, 접선의 방정식은 다음과 같습니다.\n$y - f(t) = f'(t)(x - t)$\n$y - (2t^3 - 7t^2 + 1) = (6t^2 - 14t)(x - t)$\n\n이 접선이 점 $(0, 1)$을 지나므로, $x=0, y=1$을 대입합니다.\n$1 - (2t^3 - 7t^2 + 1) = (6t^2 - 14t)(0 - t)$\n$1 - 2t^3 + 7t^2 - 1 = -6t^3 + 14t^2$\n$-2t^3 + 7t^2 = -6t^3 + 14t^2$\n\n모든 항을 좌변으로 이항하여 정리하면,\n$4t^3 - 7t^2 = 0$\n$t^2(4t - 7) = 0$\n\n문제에서 $t$는 양수라고 하였으므로 $t^2 \\neq 0$입니다. 따라서,\n$4t - 7 = 0$\n$4t = 7$\n$t = \\frac{7}{4}$\n\n따라서 구하는 $t$의 값은 $\\frac{7}{4}$입니다.\n\n최종정답: ⑤",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0Tf5fkS-UVoMMGcaKCoE3y9Vf2aeZ5gO6uvb4sh_JmISLCcU0BIh6n1Bn-NlI-IsrULCHxxTaBZ-kBwjVlSVcCH8curzeiDZp8Gm6DnKDcHz8UTgkFux6ZALrXs5NLF1Q5ExT2uuGCxpJyGPyv",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "K1vvapzuIMmtz7IPh8u38Qs",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 422,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 409,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 409
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 831,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 4.714,
+  "completed_at": "2026-11-07T17:09:01.340157+00:00",
+  "evaluation": {
+    "predicted_answer": "⑤",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "⑤",
+    "predicted_kind": "choice",
+    "predicted_choice": 5
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

@@ -1,0 +1,25 @@
+{
+  "execution_id": "2026-11-07T170833_964026+0000",
+  "started_at": "2026-11-07T17:08:33.964091+00:00",
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "wrapper_sha256": "9c18d3de71de0cdbce4418cfbc0cf92daa67826ef58403006daa5ce171ccde57",
+  "rate_policy": {
+    "minimum_start_interval_seconds": 5.0,
+    "initial_cooldown_seconds": 0.0,
+    "honor_429_retry_after": true,
+    "cooldown_safety_seconds": 1,
+    "workers": 2,
+    "daily_quota_abort": true,
+    "service_503_backoff_seconds": [
+      30,
+      60,
+      120
+    ],
+    "reset_backoff_on_success": true
+  },
+  "retry_errors": true,
+  "limit": null,
+  "status": "completed",
+  "stop_file": "/workspace/experiment_results/model_comparison_2026-11-07/generation_top_tokens/stop_requested",
+  "completed_at": "2026-11-07T17:18:27.068304+00:00"
+}

@@ -1,0 +1,13 @@
+[정답] ④
+
+[해설]
+$\cos \left( \frac{\pi}{2} - \theta \right) = \sin \theta$이므로
+$2 \cos \theta + \sin \theta = 0$
+$2 \cos \theta = - \sin \theta$				$\cdots$$\cdots$ ㉠
+$4 \cos^{2} \theta = \sin^{2} \theta$
+$\sin^{2} \theta + \cos^{2} \theta = 1$이므로
+$4 \cos^{2} \theta = 1 - \cos^{2} \theta$
+$\cos^{2} \theta = \frac{1}{5}$
+$\sin \theta < 0$이므로
+㉠에 의하여 $\cos \theta > 0$
+따라서 $\cos \theta = \frac{\sqrt{5}}{5}$

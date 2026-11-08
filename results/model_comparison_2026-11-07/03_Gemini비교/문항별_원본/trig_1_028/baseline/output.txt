@@ -1,0 +1,22 @@
+주어진 조건을 하나씩 해결해 보겠습니다.
+
+**1. $\sin(\pi - \theta) > 0$ 조건 해석**
+삼각함수의 성질에 의해 $\sin(\pi - \theta) = \sin \theta$입니다.
+따라서 $\sin \theta > 0$이어야 합니다. 이는 $\theta$가 제1사분면 또는 제2사분면의 각임을 의미합니다.
+
+**2. $2 \cos \theta = \sin \theta$ 조건 해석**
+양변을 $\cos \theta$로 나누면(단, $\cos \theta \neq 0$):
+$\tan \theta = \frac{\sin \theta}{\cos \theta} = 2$
+$\tan \theta = 2$이므로 $\theta$는 제1사분면의 각입니다. (제1사분면에서 $\sin \theta > 0, \cos \theta > 0$이므로 조건 만족)
+
+**3. $\cos \theta$의 값 구하기**
+$\tan \theta = 2$인 직각삼각형을 생각하면, 밑변의 길이를 $1$, 높이를 $2$라고 할 때 빗변의 길이는 $\sqrt{1^2 + 2^2} = \sqrt{5}$입니다.
+$\theta$가 제1사분면의 각이므로 $\cos \theta$는 양수입니다.
+$\cos \theta = \frac{\text{밑변}}{\text{빗변}} = \frac{1}{\sqrt{5}}$
+
+유리화하면:
+$\cos \theta = \frac{1}{\sqrt{5}} = \frac{\sqrt{5}}{5}$
+
+따라서 정답은 ⑤번입니다.
+
+최종정답: ⑤

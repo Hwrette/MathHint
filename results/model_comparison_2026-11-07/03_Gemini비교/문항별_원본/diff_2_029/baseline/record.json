@@ -1,0 +1,260 @@
+{
+  "id": "diff_2_029",
+  "method": "baseline",
+  "input_text": "함수 $f \\left( x \\right) = 2 x^{3} - 6 x + a$의 극솟값이 $\\mathrm{2}$일 때, 상수 $a$의 값은?\n① $6$\t\t② $7$\t\t③ $8$\n④ $9$ \t\t⑤ $10$\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "a31fd66e7252fb8c4153f17f3e54e9fed6713dc7c237435ab2d9aa74e0be75d0",
+  "reference": {
+    "answer_text": "①",
+    "kind": "choice",
+    "choice": 1,
+    "value_text": "$6$",
+    "source": {
+      "id": "diff_2_029",
+      "source_file": "모의고사_미분_문제_2.hml",
+      "source_sha256": "bdf632f0269bd027f72fcf686c276a8040aa5cb2b985b26c7a2fe65391d878af",
+      "original_number": 29,
+      "current_number": 29
+    },
+    "numeric_value": 6.0,
+    "gradable": true
+  },
+  "reference_answer_text": "①",
+  "reference_solution": "[정답] ①\n\n[해설]\n$f' \\left( x \\right)$$= 6 x^{2} - 6$\n$= 6 \\left( x + 1 \\right) \\left( x - 1 \\right)$\n$f' \\left( x \\right) = 0$에서 $x = - 1$ 또는 $x = 1$\n함수 $f \\left( x \\right)$의 증가와 감소를 표로 나타내면\n\n$x$\t$\\cdots$\t$\\mathrm{- 1}$\t$\\cdots$\t$\\mathrm{1}$\t$\\cdots$\n$f' \\left( x \\right)$\t+\t$\\mathrm{0}$\t-\t$\\mathrm{0}$\t+\n$f \\left( x \\right)$\t$\\nearrow$\t$a + 4$\t$\\searrow$\t$a - 4$\t$\\nearrow$\n\n함수 $f \\left( x \\right)$는 $x = 1$에서 극솟값 $a - 4$를 갖는다.\n따라서\n$a - 4 = 2$, $a = 6$\n",
+  "problem_text": "함수 $f \\left( x \\right) = 2 x^{3} - 6 x + a$의 극솟값이 $\\mathrm{2}$일 때, 상수 $a$의 값은?\n① $6$\t\t② $7$\t\t③ $8$\n④ $9$ \t\t⑤ $10$\n",
+  "subject": "미분",
+  "unit": "05 함수의 증가와 감소",
+  "type": "02 극대와 극소2 (삼차함수의 극대와 극소)",
+  "source": "2023년 교육청 고3공통 4월(5_10시행) > 공통범위 > 4 [3점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:34:33.652113+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:20:06.672023+00:00",
+      "usage": {
+        "prompt_token_count": null,
+        "candidates_token_count": null,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "raw": null
+      },
+      "status": "error",
+      "error_type": "ClientError",
+      "code": 429,
+      "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 53.115580786s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.1-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '53s'}]}}",
+      "latency_seconds": 1.288,
+      "execution": 1
+    },
+    {
+      "attempt": 2,
+      "started_at": "2026-11-07T13:20:07.959767+00:00",
+      "usage": {
+        "prompt_token_count": null,
+        "candidates_token_count": null,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "raw": null
+      },
+      "status": "error",
+      "error_type": "ClientError",
+      "code": 429,
+      "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 51.414472598s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '51s'}]}}",
+      "latency_seconds": 0.737,
+      "execution": 1
+    },
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:34:33.652127+00:00",
+      "usage": {
+        "prompt_token_count": 115,
+        "candidates_token_count": 317,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 432,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 317,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 115,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 115
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 432,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "7CjvatHyGPOY1MkP5YifsQw",
+      "latency_seconds": 4.345,
+      "execution": 2
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $f(x) = 2x^3 - 6x + a$의 극값을 구하기 위해 먼저 도함수를 구합니다.\n\n$f'(x) = 6x^2 - 6$\n\n극값을 갖는 지점을 찾기 위해 $f'(x) = 0$으로 놓으면,\n$6(x^2 - 1) = 0$\n$6(x - 1)(x + 1) = 0$\n따라서 $x = 1$ 또는 $x = -1$에서 극값을 갖습니다.\n\n이계도함수를 구하여 극대와 극소를 판별하면,\n$f''(x) = 12x$\n$f''(1) = 12 > 0$ 이므로 $x = 1$에서 극솟값을 갖습니다.\n$f''(-1) = -12 < 0$ 이므로 $x = -1$에서 극댓값을 갖습니다.\n\n문제에서 극솟값이 2라고 하였으므로, $f(1) = 2$를 만족해야 합니다.\n$f(1) = 2(1)^3 - 6(1) + a = 2$\n$2 - 6 + a = 2$\n$-4 + a = 2$\n$a = 6$\n\n따라서 상수 $a$의 값은 6입니다.\n\n최종정답: ①",
+  "usage": {
+    "prompt_token_count": 115,
+    "candidates_token_count": 317,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 432,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 317,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 115,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 115
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 432,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "7CjvatHyGPOY1MkP5YifsQw",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:34:37 GMT",
+        "server": "envoy",
+        "content-length": "885",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1605",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "2075"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $f(x) = 2x^3 - 6x + a$의 극값을 구하기 위해 먼저 도함수를 구합니다.\n\n$f'(x) = 6x^2 - 6$\n\n극값을 갖는 지점을 찾기 위해 $f'(x) = 0$으로 놓으면,\n$6(x^2 - 1) = 0$\n$6(x - 1)(x + 1) = 0$\n따라서 $x = 1$ 또는 $x = -1$에서 극값을 갖습니다.\n\n이계도함수를 구하여 극대와 극소를 판별하면,\n$f''(x) = 12x$\n$f''(1) = 12 > 0$ 이므로 $x = 1$에서 극솟값을 갖습니다.\n$f''(-1) = -12 < 0$ 이므로 $x = -1$에서 극댓값을 갖습니다.\n\n문제에서 극솟값이 2라고 하였으므로, $f(1) = 2$를 만족해야 합니다.\n$f(1) = 2(1)^3 - 6(1) + a = 2$\n$2 - 6 + a = 2$\n$-4 + a = 2$\n$a = 6$\n\n따라서 상수 $a$의 값은 6입니다.\n\n최종정답: ①",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TznVJMdEsckvA2AJoqD770-SlWt8CpPuvVlZSTesWoIOrNEFq2NRsUTH6Z2N_S0IXcypCSLWmNaMEajvYxwBfKw55bRXLgHScA0Bkt96GViT6RRx0u8Un5QzohVl8H82ROm8cjFHdiHbpWdto",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "7CjvatHyGPOY1MkP5YifsQw",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 317,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 115,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 115
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 432,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 4.345,
+  "completed_at": "2026-11-07T13:34:37.997459+00:00",
+  "evaluation": {
+    "predicted_answer": "①",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "①",
+    "predicted_kind": "choice",
+    "predicted_choice": 1
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "prior_executions": [
+    {
+      "status": "api_error",
+      "started_at": "2026-11-07T13:20:06.672010+00:00",
+      "completed_at": "2026-11-07T13:20:08.696975+00:00",
+      "error": {
+        "code": 429,
+        "type": "ClientError",
+        "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 51.414472598s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '51s'}]}}"
+      },
+      "response_id": null
+    }
+  ],
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "b3fddbd5d1cc4e724c23cb997d02ff5a5f425c7705b890b9c6a7629d65a8b24e",
+    "imported_at": "2026-11-07T16:57:38.375227+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

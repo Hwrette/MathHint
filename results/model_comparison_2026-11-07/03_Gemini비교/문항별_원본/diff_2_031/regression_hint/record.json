@@ -1,0 +1,231 @@
+{
+  "id": "diff_2_031",
+  "method": "regression_hint",
+  "input_text": "함수 $f \\left( x \\right) = x^{3} - 3 x + 2 a$의 극솟값이 $a + 3$일 때, 함수 $f \\left( x \\right)$의 극댓값은? (단, $a$는 상수이다.)\n① $\\mathrm{11}$\t\t② $\\mathrm{12}$\t\t③ $\\mathrm{13}$\n④ $\\mathrm{14}$\t\t⑤ $\\mathrm{15}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:x\":17.904,\"latex:)\":15.009,\"latex:(\":14.892,\"latex:=\":12.111,\"latex:f\":11.122,\"latex:-\":10.937,\"latex:a\":10.219,\"latex:3\":8.836,\"latex:0\":8.815,\"latex:+\":8.711,\"latex:\\\\left\":7.826,\"latex:\\\\right\":7.804,\"latex:{\":7.319,\"latex:}\":7.288,\"latex:1\":6.216,\"kiwi:함수\":6.094,\"latex:\\\\cdots\":5.121,\"kiwi:의\":4.358,\"latex:'\":4.2,\"kiwi:이\":4.027}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "f03dcdf34c90226d9890cf2b351b773c221620632a98b7cec0dbad0e706ce16b",
+  "reference": {
+    "answer_text": "②",
+    "kind": "choice",
+    "choice": 2,
+    "value_text": "$\\mathrm{12}$",
+    "source": {
+      "id": "diff_2_031",
+      "source_file": "모의고사_미분_문제_2.hml",
+      "source_sha256": "bdf632f0269bd027f72fcf686c276a8040aa5cb2b985b26c7a2fe65391d878af",
+      "original_number": 31,
+      "current_number": 31
+    },
+    "numeric_value": 12.0,
+    "gradable": true
+  },
+  "reference_answer_text": "②",
+  "reference_solution": "[정답] ②\n\n[해설]\n$f' \\left( x \\right) = 3 x^{2} - 3 = 3 \\left( x + 1 \\right) \\left( x - 1 \\right)$\n함수 $f \\left( x \\right)$의 증가와 감소를 표로 나타내면 다음과 같다.\n\n$x$\t$\\cdots$\t$\\mathrm{- 1}$\t$\\cdots$\t$\\mathrm{1}$\t$\\cdots$\n$f' \\left( x \\right)$\t$+$\t$\\mathrm{0}$\t$-$\t$\\mathrm{0}$\t$+$\n$f \\left( x \\right)$\t$\\nearrow$\t극대\t$\\searrow$\t극소\t$\\nearrow$\n\n함수 $f \\left( x \\right)$는 $x = - 1$에서 극댓값을 갖고, $x = 1$에서 극솟값을 갖는다.\n$f \\left( 1 \\right) = 1 - 3 + 2 a = a + 3$이므로 $a = 5$\n$f \\left( x \\right) = x^{3} - 3 x + 10$\n따라서 $f \\left( - 1 \\right) = \\left( - 1 \\right)^{3} - 3 \\times \\left( - 1 \\right) + 10 = 12$\n",
+  "problem_text": "함수 $f \\left( x \\right) = x^{3} - 3 x + 2 a$의 극솟값이 $a + 3$일 때, 함수 $f \\left( x \\right)$의 극댓값은? (단, $a$는 상수이다.)\n① $\\mathrm{11}$\t\t② $\\mathrm{12}$\t\t③ $\\mathrm{13}$\n④ $\\mathrm{14}$\t\t⑤ $\\mathrm{15}$\n",
+  "subject": "미분",
+  "unit": "05 함수의 증가와 감소",
+  "type": "02 극대와 극소2 (삼차함수의 극대와 극소)",
+  "source": "2024년 교육청 고3공통 7월 > 공통범위 > 7 [3점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:x": 17.904,
+      "latex:)": 15.009,
+      "latex:(": 14.892,
+      "latex:=": 12.111,
+      "latex:f": 11.122,
+      "latex:-": 10.937,
+      "latex:a": 10.219,
+      "latex:3": 8.836,
+      "latex:0": 8.815,
+      "latex:+": 8.711,
+      "latex:\\left": 7.826,
+      "latex:\\right": 7.804,
+      "latex:{": 7.319,
+      "latex:}": 7.288,
+      "latex:1": 6.216,
+      "kiwi:함수": 6.094,
+      "latex:\\cdots": 5.121,
+      "kiwi:의": 4.358,
+      "latex:'": 4.2,
+      "kiwi:이": 4.027
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:13:06.701097+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:13:06.701169+00:00",
+      "usage": {
+        "prompt_token_count": 394,
+        "candidates_token_count": 370,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 764,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 370,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 394,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 394
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 764,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "I1zvav_MIM3Q1MkP5p6PkQI",
+      "latency_seconds": 2.06,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $f(x) = x^3 - 3x + 2a$의 극값을 구하기 위해 도함수를 구하면 다음과 같습니다.\n$f'(x) = 3x^2 - 3 = 3(x^2 - 1) = 3(x - 1)(x + 1)$\n\n$f'(x) = 0$이 되는 $x$의 값은 $x = -1$ 또는 $x = 1$입니다.\n함수 $f(x)$의 증감표를 생각해보면, $x = -1$에서 극대이고 $x = 1$에서 극소임을 알 수 있습니다.\n\n문제에서 극솟값이 $a + 3$이라고 하였으므로, $f(1)$을 구하면 다음과 같습니다.\n$f(1) = 1^3 - 3(1) + 2a = 1 - 3 + 2a = 2a - 2$\n따라서 $2a - 2 = a + 3$이 성립합니다.\n이를 풀면 $a = 5$입니다.\n\n이제 극댓값 $f(-1)$을 구합니다.\n$f(-1) = (-1)^3 - 3(-1) + 2a = -1 + 3 + 2a = 2a + 2$\n위에서 구한 $a = 5$를 대입하면,\n$f(-1) = 2(5) + 2 = 10 + 2 = 12$\n\n따라서 함수 $f(x)$의 극댓값은 12입니다.\n\n최종정답: ②",
+  "usage": {
+    "prompt_token_count": 394,
+    "candidates_token_count": 370,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 764,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 370,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 394,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 394
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 764,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "I1zvav_MIM3Q1MkP5p6PkQI",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:13:08 GMT",
+        "server": "envoy",
+        "content-length": "925",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1234",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "2019"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $f(x) = x^3 - 3x + 2a$의 극값을 구하기 위해 도함수를 구하면 다음과 같습니다.\n$f'(x) = 3x^2 - 3 = 3(x^2 - 1) = 3(x - 1)(x + 1)$\n\n$f'(x) = 0$이 되는 $x$의 값은 $x = -1$ 또는 $x = 1$입니다.\n함수 $f(x)$의 증감표를 생각해보면, $x = -1$에서 극대이고 $x = 1$에서 극소임을 알 수 있습니다.\n\n문제에서 극솟값이 $a + 3$이라고 하였으므로, $f(1)$을 구하면 다음과 같습니다.\n$f(1) = 1^3 - 3(1) + 2a = 1 - 3 + 2a = 2a - 2$\n따라서 $2a - 2 = a + 3$이 성립합니다.\n이를 풀면 $a = 5$입니다.\n\n이제 극댓값 $f(-1)$을 구합니다.\n$f(-1) = (-1)^3 - 3(-1) + 2a = -1 + 3 + 2a = 2a + 2$\n위에서 구한 $a = 5$를 대입하면,\n$f(-1) = 2(5) + 2 = 10 + 2 = 12$\n\n따라서 함수 $f(x)$의 극댓값은 12입니다.\n\n최종정답: ②",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0T9E78QITq_4WX4eZWMD1-mKnOIFYeV7exjT3kepBPem4tfTRg8X9bTpyaVJOp2CEDbwpFDIJhWhO3HLT6uu3edzTDn-Sz4RjTsqX5hQ3BxyUuSHl4cjfQtp7uS1Q13hPu8Rcc6GrCwxpigUtb",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "I1zvav_MIM3Q1MkP5p6PkQI",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 370,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 394,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 394
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 764,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 2.06,
+  "completed_at": "2026-11-07T17:13:08.761492+00:00",
+  "evaluation": {
+    "predicted_answer": "②",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "②",
+    "predicted_kind": "choice",
+    "predicted_choice": 2
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

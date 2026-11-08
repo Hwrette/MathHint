@@ -1,0 +1,231 @@
+{
+  "id": "trig_1_013",
+  "method": "regression_hint",
+  "input_text": "두 양수 $a$, $b$에 대하여 함수 $f (x) = a \\cos b x$의 주기가 $6 \\pi$이고 닫힌구간 $[\\pi , 4 \\pi]$에서 함수 $f (x)$의 최댓값이 $\\mathrm{1}$일 때, $a + b$의 값은?\n① $\\frac{5}{3}$\t\t② $\\frac{11}{6}$\t\t③ $\\mathrm{2}$\n④ $\\frac{13}{6}$\t\t⑤ $\\frac{7}{3}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:{\":21.436,\"latex:}\":21.352,\"latex:|\":14.257,\"latex:=\":11.785,\"latex:3\":9.938,\"latex:\\\\pi\":9.717,\"latex:\\\\frac\":9.261,\"latex:a\":7.805,\"kiwi:이\":5.787,\"latex:\\\\right\":5.784,\"latex:\\\\left\":5.479,\"latex:x\":5.346,\"latex:+\":4.648,\"latex:1\":4.605,\"latex:4\":4.582,\"latex:b\":3.812,\"latex:6\":3.372,\"kiwi:에서\":3.315,\"latex:)\":3.049,\"latex:(\":3.046}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "e7cf9ea3347c30c04966db35027dc0c9459c19347b98ac4ce0b0a3059d76827e",
+  "reference": {
+    "answer_text": "⑤",
+    "kind": "choice",
+    "choice": 5,
+    "value_text": "$\\frac{7}{3}$",
+    "source": {
+      "id": "trig_1_013",
+      "source_file": "모의고사_삼각함수_문제_1.hml",
+      "source_sha256": "40e5d3256beca74c23225ea16d79b402d009340fbb175e827264f20535bad869",
+      "original_number": 13,
+      "current_number": 13
+    },
+    "numeric_value": 2.3333333333333335,
+    "gradable": true
+  },
+  "reference_answer_text": "⑤",
+  "reference_solution": "[정답] ⑤\n\n[해설]\n함수 $f \\left( x \\right) = a \\cos b x$의 주기는 $\\frac{2 \\pi}{\\left| b \\right|} = 6 \\pi$이므로\n$b = \\frac{1}{3}$, $f (x) = a \\cos \\frac{x}{3}$\n함수 $y = f (x)$의 그래프는 그림과 같다.\n\n닫힌구간 $[\\pi , 4 \\pi]$에서 함수 $f (x)$의 최댓값은\n$f (\\pi) = a \\cos \\frac{\\pi}{3} = \\frac{a}{2} = 1$이므로 $a = 2$\n따라서 $a + b = 2 + \\frac{1}{3} = \\frac{7}{3}$\n",
+  "problem_text": "두 양수 $a$, $b$에 대하여 함수 $f (x) = a \\cos b x$의 주기가 $6 \\pi$이고 닫힌구간 $[\\pi , 4 \\pi]$에서 함수 $f (x)$의 최댓값이 $\\mathrm{1}$일 때, $a + b$의 값은?\n① $\\frac{5}{3}$\t\t② $\\frac{11}{6}$\t\t③ $\\mathrm{2}$\n④ $\\frac{13}{6}$\t\t⑤ $\\frac{7}{3}$\n",
+  "subject": "삼각함수",
+  "unit": "06 삼각함수의 그래프",
+  "type": "04 그래프4 (표준형 그래프에서 Mm)",
+  "source": "2024년 교육청 고3공통 5월 > 공통범위 > 8 [3점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:{": 21.436,
+      "latex:}": 21.352,
+      "latex:|": 14.257,
+      "latex:=": 11.785,
+      "latex:3": 9.938,
+      "latex:\\pi": 9.717,
+      "latex:\\frac": 9.261,
+      "latex:a": 7.805,
+      "kiwi:이": 5.787,
+      "latex:\\right": 5.784,
+      "latex:\\left": 5.479,
+      "latex:x": 5.346,
+      "latex:+": 4.648,
+      "latex:1": 4.605,
+      "latex:4": 4.582,
+      "latex:b": 3.812,
+      "latex:6": 3.372,
+      "kiwi:에서": 3.315,
+      "latex:)": 3.049,
+      "latex:(": 3.046
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:15:05.396336+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:15:05.396351+00:00",
+      "usage": {
+        "prompt_token_count": 407,
+        "candidates_token_count": 486,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 893,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 486,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 407,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 407
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 893,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "nVzvaqjICcup6dkPh-mZgAY",
+      "latency_seconds": 8.142,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $f(x) = a \\cos bx$ ($a > 0, b > 0$)의 주기가 $6\\pi$이므로,\n$$\\frac{2\\pi}{b} = 6\\pi$$\n이를 풀면 $b = \\frac{2\\pi}{6\\pi} = \\frac{1}{3}$입니다.\n\n이제 함수는 $f(x) = a \\cos \\left( \\frac{1}{3}x \\right)$가 됩니다.\n닫힌구간 $[\\pi, 4\\pi]$에서 $x$의 범위를 구하면,\n$$\\pi \\le x \\le 4\\pi \\implies \\frac{\\pi}{3} \\le \\frac{x}{3} \\le \\frac{4\\pi}{3}$$\n이 범위에서 $\\cos \\left( \\frac{x}{3} \\right)$의 값의 범위를 구합니다.\n$\\cos \\left( \\frac{\\pi}{3} \\right) = \\frac{1}{2}$이고, $\\cos \\left( \\frac{4\\pi}{3} \\right) = -\\frac{1}{2}$입니다.\n또한, 구간 내에 $\\frac{\\pi}{2}$가 포함되어 있으므로 $\\cos \\left( \\frac{x}{3} \\right)$의 최댓값은 $\\cos \\left( \\frac{\\pi}{3} \\right) = \\frac{1}{2}$이고, 최솟값은 $\\cos \\left( \\frac{4\\pi}{3} \\right) = -\\frac{1}{2}$입니다.\n\n따라서 $f(x) = a \\cos \\left( \\frac{x}{3} \\right)$의 최댓값은 $a \\times \\frac{1}{2}$이 됩니다.\n문제에서 최댓값이 $1$이라고 하였으므로,\n$$\\frac{1}{2}a = 1 \\implies a = 2$$\n\n구하는 값은 $a + b$이므로,\n$$a + b = 2 + \\frac{1}{3} = \\frac{6}{3} + \\frac{1}{3} = \\frac{7}{3}$$\n\n최종정답: ⑤",
+  "usage": {
+    "prompt_token_count": 407,
+    "candidates_token_count": 486,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 893,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 486,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 407,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 407
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 893,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "nVzvaqjICcup6dkPh-mZgAY",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:15:13 GMT",
+        "server": "envoy",
+        "content-length": "984",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=4343",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "4826"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $f(x) = a \\cos bx$ ($a > 0, b > 0$)의 주기가 $6\\pi$이므로,\n$$\\frac{2\\pi}{b} = 6\\pi$$\n이를 풀면 $b = \\frac{2\\pi}{6\\pi} = \\frac{1}{3}$입니다.\n\n이제 함수는 $f(x) = a \\cos \\left( \\frac{1}{3}x \\right)$가 됩니다.\n닫힌구간 $[\\pi, 4\\pi]$에서 $x$의 범위를 구하면,\n$$\\pi \\le x \\le 4\\pi \\implies \\frac{\\pi}{3} \\le \\frac{x}{3} \\le \\frac{4\\pi}{3}$$\n이 범위에서 $\\cos \\left( \\frac{x}{3} \\right)$의 값의 범위를 구합니다.\n$\\cos \\left( \\frac{\\pi}{3} \\right) = \\frac{1}{2}$이고, $\\cos \\left( \\frac{4\\pi}{3} \\right) = -\\frac{1}{2}$입니다.\n또한, 구간 내에 $\\frac{\\pi}{2}$가 포함되어 있으므로 $\\cos \\left( \\frac{x}{3} \\right)$의 최댓값은 $\\cos \\left( \\frac{\\pi}{3} \\right) = \\frac{1}{2}$이고, 최솟값은 $\\cos \\left( \\frac{4\\pi}{3} \\right) = -\\frac{1}{2}$입니다.\n\n따라서 $f(x) = a \\cos \\left( \\frac{x}{3} \\right)$의 최댓값은 $a \\times \\frac{1}{2}$이 됩니다.\n문제에서 최댓값이 $1$이라고 하였으므로,\n$$\\frac{1}{2}a = 1 \\implies a = 2$$\n\n구하는 값은 $a + b$이므로,\n$$a + b = 2 + \\frac{1}{3} = \\frac{6}{3} + \\frac{1}{3} = \\frac{7}{3}$$\n\n최종정답: ⑤",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TddTClEyXJ5jlFDkRF7jE6vjPgYwjMwM5_YTx8YvCkZepziU1zmNmPXcOAKDRT6tfFwu2PNT-yUj6QPQ67HW2jXCKBeJzoWq-zfolw4m8dAOk-AR1JclGRm8zG7XvK0Sf1htYlXl0NDDr_e54",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "nVzvaqjICcup6dkPh-mZgAY",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 486,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 407,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 407
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 893,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 8.142,
+  "completed_at": "2026-11-07T17:15:13.538062+00:00",
+  "evaluation": {
+    "predicted_answer": "⑤",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "⑤",
+    "predicted_kind": "choice",
+    "predicted_choice": 5
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

@@ -1,0 +1,14 @@
+[정답] $12$
+
+[해설]
+함수 $f \left( x \right) = a \cos b x + 10 - a$의 주기가 $3 \pi$이므로
+$\frac{2 \pi}{b} = 3 \pi$, $b = \frac{2}{3}$이다.
+만족시키지 않는다.
+(ⅰ) $a > 0$인 경우
+함수 $f \left( x \right)$의 최댓값은 $a + 10 - a = 10$이므로 조건을 만족시키지 않는다.
+(ⅱ) $a < 0$인 경우
+함수 $f \left( x \right)$의 최댓값은
+$- a + 10 - a = - 2 a + 10 = 18$이므로 $a = - 4$이다.
+그러므로 (ⅰ), (ⅱ)에 의하여
+$f \left( x \right) = - 4 \cos \frac{2}{3} x + 14$이다.
+따라서 $f \left( \frac{\pi}{2} \right) = - 4 \cos \left( \frac{2}{3} \times \frac{\pi}{2} \right) + 14 = 12$이다.

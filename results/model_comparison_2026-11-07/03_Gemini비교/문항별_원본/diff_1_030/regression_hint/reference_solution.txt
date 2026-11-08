@@ -1,0 +1,16 @@
+[정답] ②
+
+[해설]
+$f \left( x \right) = x^{3} + a x + 9$에서
+$f' \left( x \right) = 3 x^{2} + a$
+$x = - 1$에서 극대이므로
+$f' \left( - 1 \right) = 0$,    $3 + a = 0$,    $a = - 3$
+이때 $f' \left( x \right) = 3 x^{2} - 3 = 3 \left( x + 1 \right) \left( x - 1 \right)$이므로 $f' \left( x \right) = 0$에서
+$x = - 1$ 또는 $x = 1$
+함수 $f \left( x \right)$의 증가와 감소를 표로 나타내면 다음과 같다.
+
+$x$	$\cdots$	$- 1$	$\cdots$	$1$	$\cdots$
+$f' \left( x \right)$	$+$	$0$	$-$	$0$	$+$
+$f \left( x \right)$	$\nearrow$	$11$	$\searrow$	$7$	$\nearrow$
+
+따라서 함수 $f \left( x \right)$는 $x = 1$에서 극솟값 $7$을 갖는다.

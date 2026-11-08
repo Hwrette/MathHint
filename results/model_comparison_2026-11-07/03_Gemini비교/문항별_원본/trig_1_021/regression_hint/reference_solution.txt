@@ -1,0 +1,10 @@
+[정답] $7$
+
+[해설]
+$- 1 \le \sin \left( x - \frac{\pi}{3} \right) \le 1$이고
+함수 $f \left( x \right) = 4 \sin \left( x - \frac{\pi}{3} \right) + a$의 최솟값이 $1$이므로
+$- 4 + a = 1$, $a = 5$
+따라서
+$f \left( \frac{\pi}{2} \right)$$= 4 \sin \left( \frac{\pi}{2} - \frac{\pi}{3} \right) + 5$
+$= 4 \sin \frac{\pi}{6} + 5$
+$= 4 \times \frac{1}{2} + 5 = 7$

@@ -1,0 +1,12 @@
+[정답] $6$
+
+[해설]
+함수 $f \left( x \right) = a x^{3} + b x + a$가 $x = 1$에서 극솟값 $- 2$를 가지므로
+$f \left( 1 \right) = - 2$, $f' \left( 1 \right) = 0$
+$f \left( 1 \right) = a + b + a = 2 a + b = - 2$		$\cdots \cdots$ ㉠
+$f' \left( x \right) = 3 a x^{2} + b$에서    $f' \left( 1 \right) = 3 a + b = 0$		$\cdots \cdots$ ㉡
+㉠과 ㉡을 연립하면    $a = 2$, $b = - 6$
+$\therefore$ $f \left( x \right) = 2 x^{3} - 6 x + 2$, $f' \left( x \right) = 6 x^{2} - 6$
+$f' \left( x \right) = 6 x^{2} - 6 = 0$에서    $x = - 1$ 또는 $x = 1$
+함수 $f \left( x \right)$는 $x = - 1$에서 극댓값을 가지므로
+$f \left( - 1 \right) = - 2 + 6 + 2 = 6$

@@ -1,0 +1,209 @@
+{
+  "id": "diff_3_049",
+  "method": "baseline",
+  "input_text": "두 함수\n$f (x) = x^{3} - x + 6$, $\\quad g (x) = x^{2} + a$\n가 있다. $x \\geq 0$인 모든 실수 $x$에 대하여 부등식\n$f (x) \\geq g (x)$\n가 성립할 때, 실수 $a$의 최댓값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "561a484fc3e33126907bc8ece4a8b241431b1817d5749dc05268bc9fdb0ad97e",
+  "reference": {
+    "answer_text": "⑤",
+    "kind": "choice",
+    "choice": 5,
+    "value_text": "$\\mathrm{5}$",
+    "source": {
+      "id": "diff_3_049",
+      "source_file": "모의고사_미분_문제_3.hml",
+      "source_sha256": "9c5d864f886ff6f2c93f9125549a8bce3fad8f18a790a887380963d1652adf8d",
+      "original_number": 49,
+      "current_number": 48
+    },
+    "numeric_value": 5.0,
+    "gradable": true
+  },
+  "reference_answer_text": "⑤",
+  "reference_solution": "[정답] ⑤\n\n[해설]\n$h (x) = f (x) - g (x)$라 하면\n$h (x) = x^{3} - x^{2} - x + 6 - a$\n이때 $x \\geq 0$인 모든 실수 $x$에 대하여 부\n등식 $h (x) \\geq 0$이 성립하려면 $x \\geq 0$에서\n함수 $h (x)$의 최솟값이 $\\mathrm{0}$ 이상이어야 한다.\n$h' (x)$$= 3 x^{2} - 2 x - 1$\n$= (3 x + 1) (x - 1)$\n이므로 $h' (x) = 0$ 에서\n$x = - \\frac{1}{3}$ 또는 $x = 1$\n$x \\geq 0$에서 함수 $h (x)$의 증가와 감소를\n표로 나타내면 다음과 같다.\n\n$x$\t$\\mathrm{0}$\t$\\cdots$\t$\\mathrm{1}$\t$\\cdots$\n$h' (x)$\t\t$-$\t$\\mathrm{0}$\t$+$\n$h (x)$\t$6 - a$\t$\\searrow$\t$5 - a$\t$\\nearrow$\n\n즉, $x \\geq 0$에서 함수 $h (x)$의 최솟값이 $5 - a$이므로 주어진 조건을 만족시키려면 $5 - a \\geq 0$이어야 한다.\n따라서 $a \\leq 5$이므로 구하는 실수 $a$의 최댓값은 $\\mathrm{5}$이다.\n",
+  "problem_text": "두 함수\n$f (x) = x^{3} - x + 6$, $\\quad g (x) = x^{2} + a$\n가 있다. $x \\geq 0$인 모든 실수 $x$에 대하여 부등식\n$f (x) \\geq g (x)$\n가 성립할 때, 실수 $a$의 최댓값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+  "subject": "미분",
+  "unit": "06 방부등식과 직선운동",
+  "type": "03 부등식과 미분3 (부등식의 동치변형)",
+  "source": "2022년(2023학년도) 평가원 고3공통 6월 > 공통범위 > 9 [4점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:41:17.855474+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:41:17.855490+00:00",
+      "usage": {
+        "prompt_token_count": 162,
+        "candidates_token_count": 508,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 670,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 508,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 162,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 162
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 670,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "firvapPjGe3Vz7IPifzdoQI",
+      "latency_seconds": 2.12,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "주어진 부등식 $f(x) \\geq g(x)$를 $x \\geq 0$인 모든 실수 $x$에 대하여 성립하도록 하는 $a$의 범위를 구해야 합니다.\n\n1. **부등식 정리:**\n   $x^3 - x + 6 \\geq x^2 + a$\n   $a \\leq x^3 - x^2 - x + 6$\n\n2. **함수 설정:**\n   $h(x) = x^3 - x^2 - x + 6$이라 하면, $x \\geq 0$인 모든 $x$에 대하여 $a \\leq h(x)$가 성립해야 합니다. 이는 $a$가 $x \\geq 0$에서 $h(x)$의 최솟값보다 작거나 같아야 함을 의미합니다.\n\n3. **$h(x)$의 최솟값 구하기:**\n   $h'(x) = 3x^2 - 2x - 1$\n   $h'(x) = (3x + 1)(x - 1) = 0$을 만족하는 $x$는 $x = -\\frac{1}{3}$ 또는 $x = 1$입니다.\n   $x \\geq 0$인 범위에서 $h'(x)$의 부호 변화를 살펴보면:\n   - $0 \\leq x < 1$일 때 $h'(x) < 0$ (감소)\n   - $x > 1$일 때 $h'(x) > 0$ (증가)\n   따라서 $h(x)$는 $x = 1$에서 최솟값을 갖습니다.\n\n4. **최솟값 계산:**\n   $h(1) = 1^3 - 1^2 - 1 + 6 = 1 - 1 - 1 + 6 = 5$\n\n5. **결론:**\n   $x \\geq 0$에서 $h(x)$의 최솟값이 5이므로, 모든 $x \\geq 0$에 대하여 $a \\leq h(x)$가 성립하려면 $a \\leq 5$여야 합니다.\n   따라서 실수 $a$의 최댓값은 5입니다.\n\n최종정답: ⑤",
+  "usage": {
+    "prompt_token_count": 162,
+    "candidates_token_count": 508,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 670,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 508,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 162,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 162
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 670,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "firvapPjGe3Vz7IPifzdoQI",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:41:19 GMT",
+        "server": "envoy",
+        "content-length": "1089",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1528",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "2020"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "주어진 부등식 $f(x) \\geq g(x)$를 $x \\geq 0$인 모든 실수 $x$에 대하여 성립하도록 하는 $a$의 범위를 구해야 합니다.\n\n1. **부등식 정리:**\n   $x^3 - x + 6 \\geq x^2 + a$\n   $a \\leq x^3 - x^2 - x + 6$\n\n2. **함수 설정:**\n   $h(x) = x^3 - x^2 - x + 6$이라 하면, $x \\geq 0$인 모든 $x$에 대하여 $a \\leq h(x)$가 성립해야 합니다. 이는 $a$가 $x \\geq 0$에서 $h(x)$의 최솟값보다 작거나 같아야 함을 의미합니다.\n\n3. **$h(x)$의 최솟값 구하기:**\n   $h'(x) = 3x^2 - 2x - 1$\n   $h'(x) = (3x + 1)(x - 1) = 0$을 만족하는 $x$는 $x = -\\frac{1}{3}$ 또는 $x = 1$입니다.\n   $x \\geq 0$인 범위에서 $h'(x)$의 부호 변화를 살펴보면:\n   - $0 \\leq x < 1$일 때 $h'(x) < 0$ (감소)\n   - $x > 1$일 때 $h'(x) > 0$ (증가)\n   따라서 $h(x)$는 $x = 1$에서 최솟값을 갖습니다.\n\n4. **최솟값 계산:**\n   $h(1) = 1^3 - 1^2 - 1 + 6 = 1 - 1 - 1 + 6 = 5$\n\n5. **결론:**\n   $x \\geq 0$에서 $h(x)$의 최솟값이 5이므로, 모든 $x \\geq 0$에 대하여 $a \\leq h(x)$가 성립하려면 $a \\leq 5$여야 합니다.\n   따라서 실수 $a$의 최댓값은 5입니다.\n\n최종정답: ⑤",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TsrqTJQtIxG9W8qKb4ioRQP31Hqqj-P_pB_7ckEknc4oUkJpvfpO_4Q8BDUyQ8pz2SpqJsYGTQR-nNZzLVHmZ9mrbu-TgmR3yyG-3Ny_TKFQ6VSOoZwI6O0g5IfEDhHzPtkH85Bn_Zyx3u65Y",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "firvapPjGe3Vz7IPifzdoQI",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 508,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 162,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 162
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 670,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 2.12,
+  "completed_at": "2026-11-07T13:41:19.975457+00:00",
+  "evaluation": {
+    "predicted_answer": "⑤",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "⑤",
+    "predicted_kind": "choice",
+    "predicted_choice": 5
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "7bd77989052f9dd02dd455ba572b1b442508ba9843ca031ecbb2850b3f93e7e4",
+    "imported_at": "2026-11-07T16:57:38.392388+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

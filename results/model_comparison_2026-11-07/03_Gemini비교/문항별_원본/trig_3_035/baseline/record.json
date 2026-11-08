@@ -1,0 +1,209 @@
+{
+  "id": "trig_3_035",
+  "method": "baseline",
+  "input_text": "$x$에 대한 방정식 $\\left| \\cos x + \\frac{1}{4} \\right| = k$가 서로 다른 $3$개의 실근을 갖도록 하는 실수 $k$의 값을 $\\alpha$라 할 때, $40 \\alpha$의 값을 구하시오. (단, $0 \\le x < 2 \\pi$)\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "7f914421eb11e27546b3524190e850a42a7f0b1ab0da889b8ee450fb1a53b270",
+  "reference": {
+    "answer_text": "$30$",
+    "kind": "value",
+    "choice": null,
+    "value_text": "$30$",
+    "source": {
+      "id": "trig_3_035",
+      "source_file": "모의고사_삼각함수_문제_3.hml",
+      "source_sha256": "4853842eca14740e8bbc1083fae38beb51f1c6cde8e78fe6d3c398eca800b30b",
+      "original_number": 35,
+      "current_number": 35
+    },
+    "numeric_value": 30.0,
+    "gradable": true
+  },
+  "reference_answer_text": "$30$",
+  "reference_solution": "[정답] $30$\n\n[해설]\n$y = \\cos x + \\frac{1}{4}$의 그래프는 $y = \\cos x$의 그래프를\n$y$축의 방향으로 $\\frac{1}{4}$만큼 평행이동한 그래프이므로\n주기는 $2 \\pi$, 치역은 $\\left\\{y\\mid-\\frac34\\le y\\le\\frac54\\right\\}$이다.\n$y = \\left| \\cos x + \\frac{1}{4} \\right|$의 그래프는 $y = \\cos x + \\frac{1}{4}$의\n그래프에서 $y < 0$인 부분을 $x$축에 대하여\n대칭이동시켜 얻은 그래프이다.\n$y = \\left| \\cos x + \\frac{1}{4} \\right|$의 그래프는 그림과 같다.\n\n$y = \\left| \\cos x + \\frac{1}{4} \\right|$의 그래프와 직선 $y = k$가\n서로 다른 세 점에서 만나는 $k$의 값은 $\\frac{3}{4}$\n따라서 $\\alpha = \\frac{3}{4}$이고 $40 \\alpha = 30$\n",
+  "problem_text": "$x$에 대한 방정식 $\\left| \\cos x + \\frac{1}{4} \\right| = k$가 서로 다른 $3$개의 실근을 갖도록 하는 실수 $k$의 값을 $\\alpha$라 할 때, $40 \\alpha$의 값을 구하시오. (단, $0 \\le x < 2 \\pi$)\n",
+  "subject": "삼각함수",
+  "unit": "06 삼각함수의 그래프",
+  "type": "05 삼각방정식5 (실근의 개수)",
+  "source": "2016년 교육청 고3이과 4월 > 26 [4점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:53:13.181493+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:53:13.181510+00:00",
+      "usage": {
+        "prompt_token_count": 120,
+        "candidates_token_count": 802,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 922,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 802,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 120,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 120
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 922,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "SS3varG_Jt2sqtsPgMGpoAY",
+      "latency_seconds": 2.61,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "주어진 방정식 $\\left| \\cos x + \\frac{1}{4} \\right| = k$ ($0 \\le x < 2\\pi$)가 서로 다른 3개의 실근을 갖기 위한 조건을 구합니다.\n\n1. **함수 $f(x) = \\cos x + \\frac{1}{4}$의 그래프 분석:**\n   $0 \\le x < 2\\pi$에서 $\\cos x$의 값은 $-1$에서 $1$ 사이의 값을 가집니다.\n   따라서 $f(x) = \\cos x + \\frac{1}{4}$의 값의 범위는 $-\\frac{3}{4} \\le f(x) \\le \\frac{5}{4}$입니다.\n\n2. **절댓값 함수 $g(x) = |f(x)| = \\left| \\cos x + \\frac{1}{4} \\right|$의 그래프 분석:**\n   - $f(x) = 0$이 되는 지점은 $\\cos x = -\\frac{1}{4}$일 때입니다. 이 방정식은 $0 \\le x < 2\\pi$ 범위에서 서로 다른 두 실근을 갖습니다.\n   - $f(x)$의 최솟값은 $-\\frac{3}{4}$이므로, $|f(x)|$의 최솟값은 $0$입니다.\n   - $f(x)$의 최댓값은 $\\frac{5}{4}$이므로, $|f(x)|$의 최댓값은 $\\frac{5}{4}$입니다.\n   - $f(x)$가 $-\\frac{3}{4}$일 때 $|f(x)| = \\frac{3}{4}$이 됩니다.\n\n3. **실근의 개수와 $k$의 관계:**\n   - $k > \\frac{5}{4}$이면 실근은 0개입니다.\n   - $k = \\frac{5}{4}$이면 $\\cos x + \\frac{1}{4} = \\frac{5}{4}$ 또는 $-\\frac{5}{4}$인데, $\\cos x = 1$ (1개) 또는 $\\cos x = -\\frac{3}{2}$ (0개)이므로 실근은 1개입니다.\n   - $\\frac{3}{4} < k < \\frac{5}{4}$이면 실근은 2개입니다.\n   - **$k = \\frac{3}{4}$**이면:\n     $\\left| \\cos x + \\frac{1}{4} \\right| = \\frac{3}{4}$\n     $\\cos x + \\frac{1}{4} = \\frac{3}{4} \\implies \\cos x = \\frac{1}{2}$ (2개의 실근: $x = \\frac{\\pi}{3}, \\frac{5\\pi}{3}$)\n     $\\cos x + \\frac{1}{4} = -\\frac{3}{4} \\implies \\cos x = -1$ (1개의 실근: $x = \\pi$)\n     따라서 총 **3개의 실근**을 갖습니다.\n   - $0 < k < \\frac{3}{4}$이면 실근은 4개입니다.\n   - $k = 0$이면 실근은 2개입니다.\n\n4. **결론:**\n   서로 다른 3개의 실근을 갖게 하는 $k$의 값은 $\\alpha = \\frac{3}{4}$입니다.\n   따라서 $40\\alpha = 40 \\times \\frac{3}{4} = 30$입니다.\n\n최종정답: 30",
+  "usage": {
+    "prompt_token_count": 120,
+    "candidates_token_count": 802,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 922,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 802,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 120,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 120
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 922,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "SS3varG_Jt2sqtsPgMGpoAY",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:53:15 GMT",
+        "server": "envoy",
+        "content-length": "1208",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=2129",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "2560"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "주어진 방정식 $\\left| \\cos x + \\frac{1}{4} \\right| = k$ ($0 \\le x < 2\\pi$)가 서로 다른 3개의 실근을 갖기 위한 조건을 구합니다.\n\n1. **함수 $f(x) = \\cos x + \\frac{1}{4}$의 그래프 분석:**\n   $0 \\le x < 2\\pi$에서 $\\cos x$의 값은 $-1$에서 $1$ 사이의 값을 가집니다.\n   따라서 $f(x) = \\cos x + \\frac{1}{4}$의 값의 범위는 $-\\frac{3}{4} \\le f(x) \\le \\frac{5}{4}$입니다.\n\n2. **절댓값 함수 $g(x) = |f(x)| = \\left| \\cos x + \\frac{1}{4} \\right|$의 그래프 분석:**\n   - $f(x) = 0$이 되는 지점은 $\\cos x = -\\frac{1}{4}$일 때입니다. 이 방정식은 $0 \\le x < 2\\pi$ 범위에서 서로 다른 두 실근을 갖습니다.\n   - $f(x)$의 최솟값은 $-\\frac{3}{4}$이므로, $|f(x)|$의 최솟값은 $0$입니다.\n   - $f(x)$의 최댓값은 $\\frac{5}{4}$이므로, $|f(x)|$의 최댓값은 $\\frac{5}{4}$입니다.\n   - $f(x)$가 $-\\frac{3}{4}$일 때 $|f(x)| = \\frac{3}{4}$이 됩니다.\n\n3. **실근의 개수와 $k$의 관계:**\n   - $k > \\frac{5}{4}$이면 실근은 0개입니다.\n   - $k = \\frac{5}{4}$이면 $\\cos x + \\frac{1}{4} = \\frac{5}{4}$ 또는 $-\\frac{5}{4}$인데, $\\cos x = 1$ (1개) 또는 $\\cos x = -\\frac{3}{2}$ (0개)이므로 실근은 1개입니다.\n   - $\\frac{3}{4} < k < \\frac{5}{4}$이면 실근은 2개입니다.\n   - **$k = \\frac{3}{4}$**이면:\n     $\\left| \\cos x + \\frac{1}{4} \\right| = \\frac{3}{4}$\n     $\\cos x + \\frac{1}{4} = \\frac{3}{4} \\implies \\cos x = \\frac{1}{2}$ (2개의 실근: $x = \\frac{\\pi}{3}, \\frac{5\\pi}{3}$)\n     $\\cos x + \\frac{1}{4} = -\\frac{3}{4} \\implies \\cos x = -1$ (1개의 실근: $x = \\pi$)\n     따라서 총 **3개의 실근**을 갖습니다.\n   - $0 < k < \\frac{3}{4}$이면 실근은 4개입니다.\n   - $k = 0$이면 실근은 2개입니다.\n\n4. **결론:**\n   서로 다른 3개의 실근을 갖게 하는 $k$의 값은 $\\alpha = \\frac{3}{4}$입니다.\n   따라서 $40\\alpha = 40 \\times \\frac{3}{4} = 30$입니다.\n\n최종정답: 30",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TcWWQXrJ6uKw5-bCjQGQvvHH0fpGQzoPhlNSY5xaF98mbaHn0mJYOjdB-FpZigDztFXMcaVmaKk64h0elrxwZDT4BsQNAccjyoxQ0Ogvxg38jAhgj7FiMsTf7v4S5fxwBroOmaL6BQOPbkDRY",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "SS3varG_Jt2sqtsPgMGpoAY",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 802,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 120,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 120
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 922,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 2.61,
+  "completed_at": "2026-11-07T13:53:15.791182+00:00",
+  "evaluation": {
+    "predicted_answer": "30",
+    "correct": true,
+    "status": "correct",
+    "reason": "numeric_constant_comparison_tolerance_1e-9",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "$30$",
+    "predicted_kind": "value",
+    "predicted_numeric_value": 30.0
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "708bc7832aa57e1450679f038233e6aa5ab396cb40619a85e1718102936bcc8f",
+    "imported_at": "2026-11-07T16:57:38.426795+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

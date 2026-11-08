@@ -1,0 +1,7 @@
+[정답] ①
+
+[해설]
+$\tan^{2} \theta = \frac{\sin^{2} \theta}{\cos^{2} \theta} = 2$, $\sin^{2} \theta = 2 \cos^{2} \theta$
+$1 - \cos^{2} \theta = 2 \cos^{2} \theta$, $\cos^{2} \theta = \frac{1}{3}$
+$\theta$는 제$2$사분면의 각이므로 $\cos \theta < 0$
+따라서 $\cos \theta = - \frac{\sqrt{3}}{3}$

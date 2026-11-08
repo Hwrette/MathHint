@@ -1,0 +1,3 @@
+양수 $t$에 대하여 함수 $f \left( x \right) = 2 x^{3} - 7 x^{2} + 1$의 그래프 위의 점 $\left( t , f \left( t \right) \right)$에서의 접선이 점 $\left( 0 , 1 \right)$을 지나도록 하는 $t$의 값은?
+① $\frac{3}{4}$		② $1$		③ $\frac{5}{4}$
+④ $\frac{3}{2}$		⑤ $\frac{7}{4}$

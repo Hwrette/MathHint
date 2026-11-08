@@ -1,0 +1,21 @@
+주어진 식 $\sin^{4} \theta + \cos^{4} \theta = \frac{23}{32}$을 변형하여 $\sin \theta \cos \theta$의 값을 구합니다.
+
+$\sin^{4} \theta + \cos^{4} \theta = (\sin^{2} \theta + \cos^{2} \theta)^{2} - 2\sin^{2} \theta \cos^{2} \theta$ 이고,
+$\sin^{2} \theta + \cos^{2} \theta = 1$이므로,
+$1 - 2(\sin \theta \cos \theta)^{2} = \frac{23}{32}$
+$2(\sin \theta \cos \theta)^{2} = 1 - \frac{23}{32} = \frac{9}{32}$
+$(\sin \theta \cos \theta)^{2} = \frac{9}{64}$
+따라서 $\sin \theta \cos \theta = \pm \frac{3}{8}$입니다.
+
+문제에서 $\frac{\pi}{2} < \theta < \pi$라고 하였으므로, $\sin \theta > 0$이고 $\cos \theta < 0$입니다.
+따라서 $\sin \theta \cos \theta < 0$이 되어야 하므로, $\sin \theta \cos \theta = -\frac{3}{8}$입니다.
+
+이제 $(\sin \theta - \cos \theta)^{2}$을 계산합니다.
+$(\sin \theta - \cos \theta)^{2} = \sin^{2} \theta + \cos^{2} \theta - 2\sin \theta \cos \theta$
+$= 1 - 2\left(-\frac{3}{8}\right) = 1 + \frac{3}{4} = \frac{7}{4}$
+
+$\frac{\pi}{2} < \theta < \pi$ 범위에서 $\sin \theta > 0$이고 $\cos \theta < 0$이므로,
+$\sin \theta - \cos \theta > 0$입니다.
+따라서 $\sin \theta - \cos \theta = \sqrt{\frac{7}{4}} = \frac{\sqrt{7}}{2}$입니다.
+
+최종정답: ⑤

@@ -1,0 +1,11 @@
+[정답] $7$
+
+[해설]
+함수 $f \left( x \right) = 6 \cos a x + 10$에서 주기가 $\frac{2 \pi}{a}$이므로
+$\frac{2 \pi}{a} = 4 \pi$, $a = \frac{1}{2}$
+$f \left( \frac{4}{3} \pi \right)$$= 6 \cos \left( \frac{1}{2} \times \frac{4}{3} \pi \right) + 10$
+$= 6 \cos \frac{2}{3} \pi + 10$
+$= 6 \cos \left( \pi - \frac{\pi}{3} \right) + 10$
+$= - 6 \cos \frac{\pi}{3} + 10$
+$= - 6 \times \frac{1}{2} + 10$
+$= 7$

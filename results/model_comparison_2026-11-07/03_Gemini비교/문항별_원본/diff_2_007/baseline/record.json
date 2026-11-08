@@ -1,0 +1,232 @@
+{
+  "id": "diff_2_007",
+  "method": "baseline",
+  "input_text": "함수\n$f \\left( x \\right) = {\\left\\{\\begin{array}{lll}\\left( x - a \\right)^{2} &  & \\left( x < 4 \\right) \\\\ 2 x - 4 &  & \\left( x \\geq 4 \\right)\\end{array}\\right.}$\n가 실수 전체의 집합에서 연속이 되도록 하는 모든 상수 $a$의 값의 곱은?\n① $\\mathrm{6}$\t\t② $\\mathrm{9}$\t\t③ $\\mathrm{12}$\n④ $\\mathrm{15}$\t\t⑤ $\\mathrm{18}$\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "37dcf143e07bf32eb92a11d32a6f77fb64880a87f5dd870ffc54e2032fcc6d8b",
+  "reference": {
+    "answer_text": "③",
+    "kind": "choice",
+    "choice": 3,
+    "value_text": "$\\mathrm{12}$",
+    "source": {
+      "id": "diff_2_007",
+      "source_file": "모의고사_미분_문제_2.hml",
+      "source_sha256": "bdf632f0269bd027f72fcf686c276a8040aa5cb2b985b26c7a2fe65391d878af",
+      "original_number": 7,
+      "current_number": 7
+    },
+    "numeric_value": 12.0,
+    "gradable": true
+  },
+  "reference_answer_text": "③",
+  "reference_solution": "[정답] ③\n\n[해설]\n함수 $f \\left( x \\right)$가 실수 전체의 집합에서 연속이므로 $x = 4$에서 연속이다. 이때 $f \\left( 4 \\right) = 4$이고\n$\\lim_{x \\rightarrow 4 -} f \\left( x \\right)$$= \\lim_{x \\rightarrow 4 -} \\left( x - a \\right)^{2}$$= \\left( 4 - a \\right)^{2}$\n$\\lim_{x \\rightarrow 4 +} f \\left( x \\right)$$= \\lim_{x \\rightarrow 4 +} \\left( 2 x - 4 \\right)$$= 4$\n이므로\n$\\left( 4 - a \\right)^{2} = 4$,    $a^{2} - 8 a + 12 = 0$\n$\\left( a - 2 \\right) \\left( a - 6 \\right) = 0$,    $a = 2$ 또는 $a = 6$\n따라서 모든 상수 $a$의 값의 곱은 $12$이다.\n",
+  "problem_text": "함수\n$f \\left( x \\right) = {\\left\\{\\begin{array}{lll}\\left( x - a \\right)^{2} &  & \\left( x < 4 \\right) \\\\ 2 x - 4 &  & \\left( x \\geq 4 \\right)\\end{array}\\right.}$\n가 실수 전체의 집합에서 연속이 되도록 하는 모든 상수 $a$의 값의 곱은?\n① $\\mathrm{6}$\t\t② $\\mathrm{9}$\t\t③ $\\mathrm{12}$\n④ $\\mathrm{15}$\t\t⑤ $\\mathrm{18}$\n",
+  "subject": "미분",
+  "unit": "02 함수의 연속성",
+  "type": "05 연속성5 (구간정의함수)",
+  "source": "2024년(2025학년도) 평가원 고3공통 9월 > 공통범위 > 7 [3점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:19:53.425422+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:19:53.425437+00:00",
+      "usage": {
+        "prompt_token_count": null,
+        "candidates_token_count": null,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "raw": null
+      },
+      "status": "error",
+      "error_type": "ClientError",
+      "code": 429,
+      "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 5.96400867s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '5s'}]}}",
+      "latency_seconds": 1.72,
+      "execution": 1
+    },
+    {
+      "attempt": 2,
+      "started_at": "2026-11-07T13:19:55.145475+00:00",
+      "usage": {
+        "prompt_token_count": 177,
+        "candidates_token_count": 344,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 521,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 344,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 177,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 177
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 521,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "eyXvar2nFtGe1MkPitD1sQk",
+      "latency_seconds": 2.075,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $f(x)$가 실수 전체의 집합에서 연속이 되려면, 함수가 정의된 구간의 경계인 $x=4$에서 연속이어야 합니다.\n\n즉, $x=4$에서의 좌극한값, 우극한값, 그리고 함숫값이 모두 같아야 합니다.\n\n1. **우극한값 및 함숫값:**\n   $x \\geq 4$일 때 $f(x) = 2x - 4$이므로,\n   $\\lim_{x \\to 4^+} f(x) = f(4) = 2(4) - 4 = 8 - 4 = 4$\n\n2. **좌극한값:**\n   $x < 4$일 때 $f(x) = (x - a)^2$이므로,\n   $\\lim_{x \\to 4^-} f(x) = (4 - a)^2$\n\n3. **연속 조건:**\n   좌극한값과 우극한값이 같아야 하므로,\n   $(4 - a)^2 = 4$\n\n이 방정식을 풀면,\n$4 - a = 2$ 또는 $4 - a = -2$\n\n- $4 - a = 2$ 이면, $a = 2$\n- $4 - a = -2$ 이면, $a = 6$\n\n따라서 모든 상수 $a$의 값은 $2$와 $6$입니다.\n이들의 곱은 $2 \\times 6 = 12$입니다.\n\n최종정답: ③",
+  "usage": {
+    "prompt_token_count": 177,
+    "candidates_token_count": 344,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 521,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 344,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 177,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 177
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 521,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "error": {
+    "code": 429,
+    "type": "ClientError",
+    "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 5.96400867s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '5s'}]}}"
+  },
+  "response_id": "eyXvar2nFtGe1MkPitD1sQk",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:19:57 GMT",
+        "server": "envoy",
+        "content-length": "953",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1838",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "2024"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $f(x)$가 실수 전체의 집합에서 연속이 되려면, 함수가 정의된 구간의 경계인 $x=4$에서 연속이어야 합니다.\n\n즉, $x=4$에서의 좌극한값, 우극한값, 그리고 함숫값이 모두 같아야 합니다.\n\n1. **우극한값 및 함숫값:**\n   $x \\geq 4$일 때 $f(x) = 2x - 4$이므로,\n   $\\lim_{x \\to 4^+} f(x) = f(4) = 2(4) - 4 = 8 - 4 = 4$\n\n2. **좌극한값:**\n   $x < 4$일 때 $f(x) = (x - a)^2$이므로,\n   $\\lim_{x \\to 4^-} f(x) = (4 - a)^2$\n\n3. **연속 조건:**\n   좌극한값과 우극한값이 같아야 하므로,\n   $(4 - a)^2 = 4$\n\n이 방정식을 풀면,\n$4 - a = 2$ 또는 $4 - a = -2$\n\n- $4 - a = 2$ 이면, $a = 2$\n- $4 - a = -2$ 이면, $a = 6$\n\n따라서 모든 상수 $a$의 값은 $2$와 $6$입니다.\n이들의 곱은 $2 \\times 6 = 12$입니다.\n\n최종정답: ③",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0T29kajYCYDGA7p52ERy05S2Y70n8meg8chcqYTKf80vJyHU8Wk8o9l-Bz30e2oCXecxs8GneNmfnFO3RrbAY0D44vdNd3H2fWF6wkSGO_pOQvFAdr8OCiQy-OZusX-5X87sf7gEX31pu8OuZT",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "eyXvar2nFtGe1MkPitD1sQk",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 344,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 177,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 177
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 521,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 3.795,
+  "completed_at": "2026-11-07T13:19:57.220663+00:00",
+  "evaluation": {
+    "predicted_answer": "③",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "③",
+    "predicted_kind": "choice",
+    "predicted_choice": 3
+  },
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "4dafe97cc5df075872fa01e39e316faba2c4a56d961e27c9da72d571b479e193",
+    "imported_at": "2026-11-07T16:57:38.365925+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

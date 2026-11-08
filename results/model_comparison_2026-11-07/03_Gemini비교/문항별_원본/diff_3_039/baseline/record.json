@@ -1,0 +1,209 @@
+{
+  "id": "diff_3_039",
+  "method": "baseline",
+  "input_text": "함수 $f (x) = x^{3} - 3 x^{2} + k$의 극댓값이 $\\mathrm{9}$일 때, 함수 $f (x)$의 극솟값은? (단, $k$는 상수이다.)\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "3c291fbf53ce7ef2ffd91fbb15861f57d902e7ce65bd98e0efe88d2a92c059e5",
+  "reference": {
+    "answer_text": "⑤",
+    "kind": "choice",
+    "choice": 5,
+    "value_text": "$\\mathrm{5}$",
+    "source": {
+      "id": "diff_3_039",
+      "source_file": "모의고사_미분_문제_3.hml",
+      "source_sha256": "9c5d864f886ff6f2c93f9125549a8bce3fad8f18a790a887380963d1652adf8d",
+      "original_number": 39,
+      "current_number": 38
+    },
+    "numeric_value": 5.0,
+    "gradable": true
+  },
+  "reference_answer_text": "⑤",
+  "reference_solution": "[정답] ⑤\n\n[해설]\n함수 $f (x) = x^{3} - 3 x^{2} + k$이므로 $f' (x) = 3 x^{2} - 6 x = 3 x (x - 2)$이다.\n$f' (x) = 0$에서 $x = 0$ 또는 $x = 2$이므로 함수 $f (x)$의 증가와\n감소를 표로 나타내면 다음과 같다.\n\n$x$\t$\\cdots$\t$\\mathrm{0}$\t$\\cdots$\t$\\mathrm{2}$\t$\\cdots$\n$f' (x)$\t$+$\t$\\mathrm{0}$\t$-$\t$\\mathrm{0}$\t$+$\n$f (x)$\t$\\nearrow$\t$k$\t$\\searrow$\t$k - 4$\t$\\nearrow$\n\n이때 함수 $f (x)$는 $x = 0$에서 극댓값 $f (0) = k$를 가지므로 $k = 9$이다.\n따라서 함수 $f (x)$는 $x = 2$에서 극솟값 $f (2) = k - 4 = 5$를 갖는다.\n",
+  "problem_text": "함수 $f (x) = x^{3} - 3 x^{2} + k$의 극댓값이 $\\mathrm{9}$일 때, 함수 $f (x)$의 극솟값은? (단, $k$는 상수이다.)\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+  "subject": "미분",
+  "unit": "05 함수의 증가와 감소",
+  "type": "02 극대와 극소2 (삼차함수의 극대와 극소)",
+  "source": "2022년(2023학년도) 평가원 고3공통 9월 > 공통범위 > 6 [3점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:39:09.296840+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:39:09.296856+00:00",
+      "usage": {
+        "prompt_token_count": 134,
+        "candidates_token_count": 364,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 498,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 364,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 134,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 134
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 498,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "ASrvatecCKbaqtsP6_7miAY",
+      "latency_seconds": 5.03,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $f(x) = x^3 - 3x^2 + k$의 극값을 구하기 위해 먼저 도함수를 구합니다.\n$f'(x) = 3x^2 - 6x = 3x(x - 2)$\n\n$f'(x) = 0$이 되는 $x$의 값은 $x = 0$ 또는 $x = 2$입니다.\n함수 $f(x)$의 증감표를 생각해보면, $x=0$에서 극대이고 $x=2$에서 극소임을 알 수 있습니다.\n\n1. **극댓값 구하기:**\n   $x=0$일 때 극댓값은 $f(0) = 0^3 - 3(0)^2 + k = k$입니다.\n   문제에서 극댓값이 9라고 하였으므로, $k = 9$입니다.\n\n2. **극솟값 구하기:**\n   $k=9$를 대입하면 함수는 $f(x) = x^3 - 3x^2 + 9$가 됩니다.\n   $x=2$일 때 극솟값은 $f(2)$입니다.\n   $f(2) = 2^3 - 3(2)^2 + 9$\n   $f(2) = 8 - 3(4) + 9$\n   $f(2) = 8 - 12 + 9$\n   $f(2) = 5$\n\n따라서 함수 $f(x)$의 극솟값은 5입니다.\n\n최종정답: ⑤",
+  "usage": {
+    "prompt_token_count": 134,
+    "candidates_token_count": 364,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 498,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 364,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 134,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 134
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 498,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "ASrvatecCKbaqtsP6_7miAY",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:39:14 GMT",
+        "server": "envoy",
+        "content-length": "907",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1162",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "1719"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $f(x) = x^3 - 3x^2 + k$의 극값을 구하기 위해 먼저 도함수를 구합니다.\n$f'(x) = 3x^2 - 6x = 3x(x - 2)$\n\n$f'(x) = 0$이 되는 $x$의 값은 $x = 0$ 또는 $x = 2$입니다.\n함수 $f(x)$의 증감표를 생각해보면, $x=0$에서 극대이고 $x=2$에서 극소임을 알 수 있습니다.\n\n1. **극댓값 구하기:**\n   $x=0$일 때 극댓값은 $f(0) = 0^3 - 3(0)^2 + k = k$입니다.\n   문제에서 극댓값이 9라고 하였으므로, $k = 9$입니다.\n\n2. **극솟값 구하기:**\n   $k=9$를 대입하면 함수는 $f(x) = x^3 - 3x^2 + 9$가 됩니다.\n   $x=2$일 때 극솟값은 $f(2)$입니다.\n   $f(2) = 2^3 - 3(2)^2 + 9$\n   $f(2) = 8 - 3(4) + 9$\n   $f(2) = 8 - 12 + 9$\n   $f(2) = 5$\n\n따라서 함수 $f(x)$의 극솟값은 5입니다.\n\n최종정답: ⑤",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0T4tCcXMjbRuQM7Xc-_B5-fu79J7L4DcmM_v3ANzDSf_D8mOO2ADmprsLrGrtVYNtqNPeBW1U1HLf4j4xJITqEoyPX14gP7BW0U0VqbvC1cT3dEBtfx727MYfgXMy0WvIqiq5ekkxK8qV48SZG",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "ASrvatecCKbaqtsP6_7miAY",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 364,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 134,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 134
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 498,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 5.03,
+  "completed_at": "2026-11-07T13:39:14.326367+00:00",
+  "evaluation": {
+    "predicted_answer": "⑤",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "⑤",
+    "predicted_kind": "choice",
+    "predicted_choice": 5
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "322b1aeb94249b109fc12ff50cf02e6e5d405cd0c82fab3ab5629853aaece3ac",
+    "imported_at": "2026-11-07T16:57:38.389719+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

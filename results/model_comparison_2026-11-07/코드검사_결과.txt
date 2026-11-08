@@ -1,0 +1,213 @@
+test_boxed_value_maps_to_correct_option_value_not_option_index (test_answer_evaluation.AnswerEvaluationTests.test_boxed_value_maps_to_correct_option_value_not_option_index) ... ok
+test_equivalent_fraction_and_radical (test_answer_evaluation.AnswerEvaluationTests.test_equivalent_fraction_and_radical) ... ok
+test_explicit_choice_and_explicit_bare_index (test_answer_evaluation.AnswerEvaluationTests.test_explicit_choice_and_explicit_bare_index) ... ok
+test_final_marker_beats_intermediate_box_and_later_correction_wins (test_answer_evaluation.AnswerEvaluationTests.test_final_marker_beats_intermediate_box_and_later_correction_wins) ... ok
+test_no_numbers_from_working_or_options_are_guessed (test_answer_evaluation.AnswerEvaluationTests.test_no_numbers_from_working_or_options_are_guessed) ... ok
+test_reference_bold_integer_and_choice_provenance (test_answer_evaluation.AnswerEvaluationTests.test_reference_bold_integer_and_choice_provenance) ... ok
+test_unsupported_answer_remains_ungradable (test_answer_evaluation.AnswerEvaluationTests.test_unsupported_answer_remains_ungradable) ... ok
+test_untrusted_expression_never_executes (test_answer_evaluation.AnswerEvaluationTests.test_untrusted_expression_never_executes) ... ok
+test_adjacent_math_spans_do_not_create_dollar_tokens (test_bow.BowTests.test_adjacent_math_spans_do_not_create_dollar_tokens) ... ok
+test_all_supported_delimiters_and_multiline_math (test_bow.BowTests.test_all_supported_delimiters_and_multiline_math) ... ok
+test_empty_input_has_no_counts (test_bow.BowTests.test_empty_input_has_no_counts) ... ok
+test_escaped_dollar_is_not_a_math_boundary (test_bow.BowTests.test_escaped_dollar_is_not_a_math_boundary) ... ok
+test_file_reading_and_encoding (test_bow.BowTests.test_file_reading_and_encoding) ... ok
+test_kiwi_keeps_particles_and_endings (test_bow.BowTests.test_kiwi_keeps_particles_and_endings) ... ok
+test_math_boundaries_do_not_join_unrelated_korean_fragments (test_bow.BowTests.test_math_boundaries_do_not_join_unrelated_korean_fragments) ... ok
+test_nested_braces_and_unknown_commands_are_preserved (test_bow.BowTests.test_nested_braces_and_unknown_commands_are_preserved) ... ok
+test_numbers_variables_and_escaped_symbols (test_bow.BowTests.test_numbers_variables_and_escaped_symbols) ... ok
+test_same_spelling_keeps_korean_and_math_sources_separate (test_bow.BowTests.test_same_spelling_keeps_korean_and_math_sources_separate) ... ok
+test_unclosed_math_raises_instead_of_counting_as_korean (test_bow.BowTests.test_unclosed_math_raises_instead_of_counting_as_korean) ... ok
+test_user_log_problem_counts_math_and_korean_together (test_bow.BowTests.test_user_log_problem_counts_math_and_korean_together) ... ok
+test_existing_results_require_explicit_overwrite (test_dataset_pipeline.DatasetOutputTests.test_existing_results_require_explicit_overwrite) ... ok
+test_failed_replacement_restores_both_previous_outputs (test_dataset_pipeline.DatasetOutputTests.test_failed_replacement_restores_both_previous_outputs) ... ok
+test_matching_ids_and_train_only_vocabularies_with_metadata_excluded (test_dataset_pipeline.DatasetOutputTests.test_matching_ids_and_train_only_vocabularies_with_metadata_excluded) ... ok
+test_original_number_is_not_replaced_by_renumbered_position (test_dataset_pipeline.DatasetOutputTests.test_original_number_is_not_replaced_by_renumbered_position) ... ok
+test_original_number_map_skips_deleted_row (test_dataset_pipeline.DatasetOutputTests.test_original_number_map_skips_deleted_row) ... ok
+test_warning_graphic_and_bad_id_fail_before_outputs (test_dataset_pipeline.DatasetOutputTests.test_warning_graphic_and_bad_id_fail_before_outputs) ... ok
+test_duplicate_source_or_body_never_crosses_split (test_dataset_pipeline.DatasetSplitTests.test_duplicate_source_or_body_never_crosses_split) ... ok
+test_duplicate_with_conflicting_type_is_not_silently_relabelled (test_dataset_pipeline.DatasetSplitTests.test_duplicate_with_conflicting_type_is_not_silently_relabelled) ... ok
+test_seed_is_reproducible_and_input_order_does_not_change_ids (test_dataset_pipeline.DatasetSplitTests.test_seed_is_reproducible_and_input_order_does_not_change_ids) ... ok
+test_singleton_stays_in_train_and_small_types_are_represented (test_dataset_pipeline.DatasetSplitTests.test_singleton_stays_in_train_and_small_types_are_represented) ... ok
+test_type_constraints_are_reported_when_unit_target_is_impossible (test_dataset_pipeline.DatasetSplitTests.test_type_constraints_are_reported_when_unit_target_is_impossible) ... ok
+test_case_rows_and_blank_alignment_column_preserved (test_equations.EquationConversionTests.test_case_rows_and_blank_alignment_column_preserved)
+조건별 식의 행과 열, && 사이의 빈 정렬용 칸을 임의로 없애지 않는지 확인한다. ... ok
+test_empty_equations_are_reviewed (test_equations.EquationConversionTests.test_empty_equations_are_reviewed)
+빈 문자열이나 배치용 간격만 있는 입력을 정상 수식으로 세지 않는지 확인한다. ... ok
+test_empty_layout_scripts_do_not_change_fraction_scope (test_equations.EquationConversionTests.test_empty_layout_scripts_do_not_change_fraction_scope) ... ok
+test_fraction_only_consumes_adjacent_atoms (test_equations.EquationConversionTests.test_fraction_only_consumes_adjacent_atoms)
+over가 식 전체를 삼키지 않고 바로 앞뒤 한 덩어리만 분수로 만드는지 확인한다. ... ok
+test_function_powers (test_equations.EquationConversionTests.test_function_powers)
+sin 제곱과 cos 제곱의 첨자가 함수에 붙고 theta가 바깥에 남는지 확인한다. ... ok
+test_greek_case_does_not_change_symbol (test_equations.EquationConversionTests.test_greek_case_does_not_change_symbol)
+소문자 pi와 대문자 PI를 구별하고, 미지원 대문자 그리스 이름은 검토로 보내는지 확인한다. ... ok
+test_hml_alignment_preserves_rows_columns_and_empty_struts (test_equations.EquationConversionTests.test_hml_alignment_preserves_rows_columns_and_empty_struts) ... ok
+test_hml_limit_spacing_and_infinity_are_not_infimum (test_equations.EquationConversionTests.test_hml_limit_spacing_and_infinity_are_not_infimum)
+HWP INF and ASCII arrows must retain the actual limit condition. ... ok
+test_hml_styles_relations_and_direction_arrows (test_equations.EquationConversionTests.test_hml_styles_relations_and_direction_arrows) ... ok
+test_indexed_root_requires_explicit_of (test_equations.EquationConversionTests.test_indexed_root_requires_explicit_of)
+명시적인 세제곱근은 변환하되 of가 빠진 근호의 뜻은 추측하지 않는지 확인한다. ... ok
+test_interval_mixed_delimiters_are_valid (test_equations.EquationConversionTests.test_interval_mixed_delimiters_are_valid)
+닫힌 쪽과 열린 쪽이 다른 [0,1) 구간도 정상적인 괄호 조합으로 허용하는지 확인한다. ... ok
+test_invisible_delimiter_is_preserved (test_equations.EquationConversionTests.test_invisible_delimiter_is_preserved)
+RIGHT . 또는 LEFT .의 점을 마침표로 출력하지 않고 보이지 않는 괄호로 옮기는지 확인한다. ... ok
+test_limit_and_prime (test_equations.EquationConversionTests.test_limit_and_prime)
+극한의 아래첨자·분수 범위와 미분을 나타내는 프라임 한 개·두 개를 확인한다. ... ok
+test_malformed_source_is_not_repaired (test_equations.EquationConversionTests.test_malformed_source_is_not_repaired)
+남는 괄호·빠진 괄호·빠진 대상·범위가 불명확한 분수를 자동 수정하지 않는지 확인한다. ... ok
+test_nested_delimiters (test_equations.EquationConversionTests.test_nested_delimiters)
+삼각함수 괄호와 절댓값 안쪽의 괄호처럼 중첩된 짝이 유지되는지 확인한다. ... ok
+test_nested_fraction_does_not_flatten (test_equations.EquationConversionTests.test_nested_fraction_does_not_flatten)
+분자와 분모 안의 분수가 각각 유지되는지 확인한다. 단순 문자열 평탄화를 막는다. ... ok
+test_non_string_rejected (test_equations.EquationConversionTests.test_non_string_rejected)
+문자열이 아닌 입력은 원본 구문 경고와 구별하여 호출 오류인 TypeError로 알리는지 확인한다. ... ok
+test_numeric_root_shorthand_retains_fraction_scope (test_equations.EquationConversionTests.test_numeric_root_shorthand_retains_fraction_scope)
+Numeric ROOT shorthand differs from an explicit indexed root. ... ok
+test_powers_and_log_base_keep_scope (test_equations.EquationConversionTests.test_powers_and_log_base_keep_scope)
+근호가 있는 로그의 밑, 분수 지수, 여러 글자 첨자의 적용 범위를 확인한다. ... ok
+test_roman_declaration_ends_at_it (test_equations.EquationConversionTests.test_roman_declaration_ends_at_it)
+rm의 직립체 범위가 it에서 끝나고, 선분 이름의 윗줄 장식도 유지되는지 확인한다. ... ok
+test_source_is_never_modified (test_equations.EquationConversionTests.test_source_is_never_modified)
+변환을 호출한 뒤에도 원본 수식 문자열의 내용이 그대로인지 확인한다. ... ok
+test_spacing_does_not_remove_mathematical_operators (test_equations.EquationConversionTests.test_spacing_does_not_remove_mathematical_operators)
+간격 처리 중 연산자를 잃지 않고, 붙어 있는 !=와 분리된 ! =를 구별하는지 확인한다. ... ok
+test_style_restore_does_not_reset_script_tracking (test_equations.EquationConversionTests.test_style_restore_does_not_reset_script_tracking)
+it 글꼴 복귀 뒤에도 기존 첨자를 기억하고 같은 종류의 중복 첨자를 거부하는지 확인한다. ... ok
+test_unsupported_words_do_not_become_invented_commands (test_equations.EquationConversionTests.test_unsupported_words_do_not_become_invented_commands)
+모르는 명령이나 이미 LaTeX인 입력을 한글 수식인 것처럼 임의로 통과시키지 않는지 확인한다. ... ok
+test_uppercase_operator_aliases (test_equations.EquationConversionTests.test_uppercase_operator_aliases)
+실제 입력에 있는 GEQ, TIMES, CDOT 같은 대문자 명령의 명시적 대응을 확인한다. ... ok
+test_alternate_hint_runs_stay_separate_and_reused_control_is_not_new_usage (test_experiment_report.PairedReportingTests.test_alternate_hint_runs_stay_separate_and_reused_control_is_not_new_usage) ... ok
+test_exact_p_value_uses_discordant_pairs (test_experiment_report.PairedReportingTests.test_exact_p_value_uses_discordant_pairs) ... ok
+test_generation_selector_cannot_escape_run_root (test_experiment_report.PairedReportingTests.test_generation_selector_cannot_escape_run_root) ... ok
+test_missing_attempt_usage_prevents_strict_total_but_known_zero_is_zero (test_experiment_report.PairedReportingTests.test_missing_attempt_usage_prevents_strict_total_but_known_zero_is_zero) ... ok
+test_review_ratings_cannot_be_combined_with_another_experiment (test_experiment_report.PairedReportingTests.test_review_ratings_cannot_be_combined_with_another_experiment) ... ok
+test_reviewed_key_is_supplemental_and_source_hash_guarded (test_experiment_report.PairedReportingTests.test_reviewed_key_is_supplemental_and_source_hash_guarded) ... ok
+test_shared_denominator_excludes_incomplete_response (test_experiment_report.PairedReportingTests.test_shared_denominator_excludes_incomplete_response) ... ok
+test_skipped_retry_is_not_counted_as_sent_request_or_missing_usage (test_experiment_report.PairedReportingTests.test_skipped_retry_is_not_counted_as_sent_request_or_missing_usage) ... ok
+test_wilson_empty_and_boundary (test_experiment_report.PairedReportingTests.test_wilson_empty_and_boundary) ... ok
+test_default_returns_zero_and_reports_review (test_export.CLITests.test_default_returns_zero_and_reports_review)
+기본 모드는 결과 저장에 성공하면 코드 0을 주고 검토 필요 사실을 화면에 알린다. ... ok
+test_no_anchor_returns_one_and_writes_no_document (test_export.CLITests.test_no_anchor_returns_one_and_writes_no_document)
+문항 경계를 찾지 못한 파일은 코드 1로 실패하고 임의의 문항을 저장하지 않아야 한다. ... ok
+test_strict_returns_two_after_writing_review_outputs (test_export.CLITests.test_strict_returns_two_after_writing_review_outputs)
+엄격 모드의 검토 필요 종료 코드 2라도 결과와 보고서는 먼저 저장되어야 한다. ... ok
+test_body_image_requires_review (test_export.ExportTests.test_body_image_requires_review)
+본문에 이미지가 있으면 시각 자료 검토가 필요한 문항으로 보고해야 한다. ... ok
+test_existing_output_is_not_overwritten (test_export.ExportTests.test_existing_output_is_not_overwritten)
+이미 저장한 결과를 다시 실행해도 사용자가 고친 파일을 덮어쓰지 않아야 한다. ... ok
+test_original_copy_and_body_solution_separation (test_export.ExportTests.test_original_copy_and_body_solution_separation)
+원본·사본이 같고 정답과 해설이 문제 텍스트에 들어가지 않아야 한다. ... ok
+test_same_source_export_is_deterministic (test_export.ExportTests.test_same_source_export_is_deterministic)
+같은 원본을 다른 출력 위치에 저장해도 모든 결과 파일의 내용이 같아야 한다. ... ok
+test_solution_image_does_not_mark_problem_visual_or_unsupported (test_export.ExportTests.test_solution_image_does_not_mark_problem_visual_or_unsupported)
+해설에만 이미지가 있으면 본문은 여전히 텍스트 변환 지원 상태여야 한다. ... ok
+test_source_change_is_refused_before_export (test_export.ExportTests.test_source_change_is_refused_before_export)
+추출 뒤 원본 내용이 달라지면 새 출력 폴더를 만들기 전에 중단해야 한다. ... ok
+test_unsupported_equation_has_placeholder_and_exact_raw_audit (test_export.ExportTests.test_unsupported_equation_has_placeholder_and_exact_raw_audit)
+깨진 수식은 검토 표시로 나타나고 공백까지 포함한 원문은 기록에 남아야 한다. ... ok
+test_fixed_loader_preserves_ids_and_different_dimensions (test_fixed_training.FixedSplitTrainingTests.test_fixed_loader_preserves_ids_and_different_dimensions) ... ok
+test_fixed_loader_rejects_mixed_generations (test_fixed_training.FixedSplitTrainingTests.test_fixed_loader_rejects_mixed_generations) ... ok
+test_fixed_loader_rejects_reordered_ids (test_fixed_training.FixedSplitTrainingTests.test_fixed_loader_rejects_reordered_ids) ... ok
+test_fixed_loader_rejects_train_test_overlap (test_fixed_training.FixedSplitTrainingTests.test_fixed_loader_rejects_train_test_overlap) ... ok
+test_fixed_loader_rejects_vocabulary_not_train_only (test_fixed_training.FixedSplitTrainingTests.test_fixed_loader_rejects_vocabulary_not_train_only) ... ok
+test_fixed_model_learns_train_rows_without_accepting_test_targets (test_fixed_training.FixedSplitTrainingTests.test_fixed_model_learns_train_rows_without_accepting_test_targets) ... ok
+test_majority_cluster_label_ties_are_deterministic (test_fixed_training.FixedSplitTrainingTests.test_majority_cluster_label_ties_are_deterministic) ... ok
+test_empty_file_is_retained_as_a_zero_vector (test_frequency_vectors.FrequencyVectorTests.test_empty_file_is_retained_as_a_zero_vector) ... ok
+test_explicit_empty_vocabulary_does_not_create_a_new_one (test_frequency_vectors.FrequencyVectorTests.test_explicit_empty_vocabulary_does_not_create_a_new_one) ... ok
+test_frozen_vocabulary_keeps_index_zero_and_ignores_unknown_tokens (test_frequency_vectors.FrequencyVectorTests.test_frozen_vocabulary_keeps_index_zero_and_ignores_unknown_tokens) ... ok
+test_invalid_text_reports_the_offending_filename (test_frequency_vectors.FrequencyVectorTests.test_invalid_text_reports_the_offending_filename) ... ok
+test_invalid_vocabulary_cannot_create_ambiguous_indices (test_frequency_vectors.FrequencyVectorTests.test_invalid_vocabulary_cannot_create_ambiguous_indices) ... ok
+test_missing_or_empty_folder_reports_the_folder (test_frequency_vectors.FrequencyVectorTests.test_missing_or_empty_folder_reports_the_folder) ... ok
+test_mixed_files_share_exact_vocabulary_and_vectors (test_frequency_vectors.FrequencyVectorTests.test_mixed_files_share_exact_vocabulary_and_vectors) ... ok
+test_recursion_is_optional_and_duplicate_basenames_stay_distinct (test_frequency_vectors.FrequencyVectorTests.test_recursion_is_optional_and_duplicate_basenames_stay_distinct) ... ok
+test_saved_vocabulary_and_vectors_can_be_reused_for_new_problems (test_frequency_vectors.FrequencyVectorTests.test_saved_vocabulary_and_vectors_can_be_reused_for_new_problems) ... ok
+test_changed_inputs_cannot_resume_an_existing_run (test_generation_comparison.ComparisonTests.test_changed_inputs_cannot_resume_an_existing_run) ... ok
+test_errors_redact_the_api_key (test_generation_comparison.ComparisonTests.test_errors_redact_the_api_key) ... ok
+test_graceful_stop_saves_inflight_result_without_next_api_call (test_generation_comparison.ComparisonTests.test_graceful_stop_saves_inflight_result_without_next_api_call) ... {"id": "diff_1_005", "method": "baseline", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 1}
+ok
+test_imported_control_is_identical_provenanced_and_not_duplicated (test_generation_comparison.ComparisonTests.test_imported_control_is_identical_provenanced_and_not_duplicated) ... ok
+test_missing_usage_is_null_and_retry_keeps_both_attempts (test_generation_comparison.ComparisonTests.test_missing_usage_is_null_and_retry_keeps_both_attempts) ... ok
+test_pilot_then_full_resume_does_not_repeat_successful_requests (test_generation_comparison.ComparisonTests.test_pilot_then_full_resume_does_not_repeat_successful_requests) ... {"id": "diff_1_005", "method": "baseline", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 1}
+{"id": "diff_1_005", "method": "regression_hint", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 2}
+{"id": "diff_1_011", "method": "regression_hint", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 3}
+{"id": "diff_1_011", "method": "baseline", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 4}
+ok
+test_predictions_must_cover_exact_fixed_test_ids (test_generation_comparison.ComparisonTests.test_predictions_must_cover_exact_fixed_test_ids) ... ok
+test_reference_and_labels_and_actual_vectors_never_enter_prompt (test_generation_comparison.ComparisonTests.test_reference_and_labels_and_actual_vectors_never_enter_prompt) ... ok
+test_summary_separates_coverage_from_parsed_accuracy (test_generation_comparison.ComparisonTests.test_summary_separates_coverage_from_parsed_accuracy) ... ok
+test_top_tokens_are_fixed_k_frequency_sorted_with_vocabulary_ties (test_generation_comparison.ComparisonTests.test_top_tokens_are_fixed_k_frequency_sorted_with_vocabulary_ties) ... ok
+test_truncated_output_is_separate_from_an_incorrect_answer (test_generation_comparison.ComparisonTests.test_truncated_output_is_separate_from_an_incorrect_answer) ... ok
+test_audited_layout_transcription_adds_no_artificial_number (test_hml.HMLTests.test_audited_layout_transcription_adds_no_artificial_number) ... ok
+test_body_picture_is_flagged_without_solution_contamination (test_hml.HMLTests.test_body_picture_is_flagged_without_solution_contamination) ... ok
+test_classification_inheritance_and_clean_pairing (test_hml.HMLTests.test_classification_inheritance_and_clean_pairing) ... ok
+test_deleted_question_does_not_shift_original_id (test_hml.HMLTests.test_deleted_question_does_not_shift_original_id) ... ok
+test_filtered_real_corpus_has_stable_ids_and_answer_pairs (test_hml.HMLTests.test_filtered_real_corpus_has_stable_ids_and_answer_pairs) ... ok
+test_missing_classification_or_note_is_rejected (test_hml.HMLTests.test_missing_classification_or_note_is_rejected) ... ok
+test_table_conditions_and_mixed_text_tails_survive (test_hml.HMLTests.test_table_conditions_and_mixed_text_tails_survive) ... ok
+test_unconverted_equation_preserves_raw_and_warning (test_hml.HMLTests.test_unconverted_equation_preserves_raw_and_warning) ... ok
+test_archive_and_raw_equations_are_unchanged (test_hwpx.HWPXTests.test_archive_and_raw_equations_are_unchanged)
+읽는 동안 원본 파일과 수식의 공백·백틱까지 그대로 유지되는지 검사한다. ... ok
+test_body_graphic_remains_visible_as_review_marker (test_hwpx.HWPXTests.test_body_graphic_remains_visible_as_review_marker)
+본문 그림은 조용히 지우지 않고 원본 확인용 표시와 media 조각을 남긴다. ... ok
+test_condition_table_keeps_text_equations_and_order (test_hwpx.HWPXTests.test_condition_table_keeps_text_equations_and_order)
+조건 표를 출처처럼 제거하지 않고 글·수식·조건 순서를 보존한다. ... ok
+test_duplicate_hwp_equation_ids_still_have_unique_source_references (test_hwpx.HWPXTests.test_duplicate_hwp_equation_ids_still_have_unique_source_references)
+원본 id가 같은 두 수식도 내부 키와 원본 경로는 서로 달라야 한다. ... ok
+test_duplicate_note_numbers_rejected (test_hwpx.HWPXTests.test_duplicate_note_numbers_rejected)
+중복된 문제 번호를 서로 다른 정상 문제처럼 그대로 내보내지 않는다. ... ok
+test_graphic_in_solution_does_not_become_a_body_graphic (test_hwpx.HWPXTests.test_graphic_in_solution_does_not_become_a_body_graphic)
+해설 그림만 있는 문제를 본문에도 그림이 있는 것으로 잘못 읽지 않는다. ... ok
+test_mid_paragraph_note_is_ambiguous_and_rejected (test_hwpx.HWPXTests.test_mid_paragraph_note_is_ambiguous_and_rejected)
+미주 앞에 본문이 있는 모호한 문단을 임의로 잘라 처리하지 않는다. ... ok
+test_missing_spine_section_rejected (test_hwpx.HWPXTests.test_missing_spine_section_rejected)
+실제 section 중 일부가 spine에 빠졌으면 순서를 임의 보완하지 않는다. ... ok
+test_mixed_text_tails_preserve_choices_and_line_breaks (test_hwpx.HWPXTests.test_mixed_text_tails_preserve_choices_and_line_breaks)
+탭·줄바꿈 요소 뒤의 tail에도 선택지 글자가 남는지 확인한다. ... ok
+test_next_source_table_is_not_attached_to_previous_question (test_hwpx.HWPXTests.test_next_source_table_is_not_attached_to_previous_question)
+문제 사이의 출처 표가 앞 문제가 아닌 다음 문제에 연결되는지 검사한다. ... ok
+test_no_endnote_fails_instead_of_guessing_boundaries (test_hwpx.HWPXTests.test_no_endnote_fails_instead_of_guessing_boundaries)
+미주 표지가 없으면 글 속 숫자만으로 문제 경계를 추측하지 않는다. ... ok
+test_problem_anchor_after_answer_region_rejected (test_hwpx.HWPXTests.test_problem_anchor_after_answer_region_rejected)
+정답 영역이 시작된 뒤 다시 문제가 나타나는 지원 밖 배치는 거부한다. ... ok
+test_solutions_and_quick_answers_never_enter_problem_body (test_hwpx.HWPXTests.test_solutions_and_quick_answers_never_enter_problem_body)
+미주 해설·빠른 정답·수식 caption이 문제 입력으로 새어 나오지 않는다. ... ok
+test_spine_overrides_lexical_section_order (test_hwpx.HWPXTests.test_spine_overrides_lexical_section_order)
+파일명 숫자순보다 content.hpf의 spine에 지정된 읽기 순서를 따른다. ... ok
+test_daily_quota_stops_all_further_network_calls (test_rate_limited_comparison.RateLimitTests.test_daily_quota_stops_all_further_network_calls) ... ok
+test_fractional_message_delay_and_retryinfo_use_largest (test_rate_limited_comparison.RateLimitTests.test_fractional_message_delay_and_retryinfo_use_largest) ... ok
+test_global_request_start_spacing (test_rate_limited_comparison.RateLimitTests.test_global_request_start_spacing) ... ok
+test_minute_quota_is_not_misclassified_as_daily (test_rate_limited_comparison.RateLimitTests.test_minute_quota_is_not_misclassified_as_daily) ... ok
+test_service_overload_backoff_and_success_reset_preserve_quota_delay (test_rate_limited_comparison.RateLimitTests.test_service_overload_backoff_and_success_reset_preserve_quota_delay) ... ok
+test_stop_guard_prevents_unsent_request (test_rate_limited_comparison.RateLimitTests.test_stop_guard_prevents_unsent_request) ... ok
+test_structured_retryinfo_and_http_header (test_rate_limited_comparison.RateLimitTests.test_structured_retryinfo_and_http_header) ... ok
+test_blind_packet_hides_method_hint_tokens_and_automatic_grade (test_solution_review.SolutionReviewTests.test_blind_packet_hides_method_hint_tokens_and_automatic_grade) ... ok
+test_changed_output_creates_new_unreviewed_item (test_solution_review.SolutionReviewTests.test_changed_output_creates_new_unreviewed_item) ... ok
+test_correct_answer_never_auto_rates_reasoning_and_errors_excluded (test_solution_review.SolutionReviewTests.test_correct_answer_never_auto_rates_reasoning_and_errors_excluded) ... ok
+test_export_has_blind_html_csv_schema_and_private_key (test_solution_review.SolutionReviewTests.test_export_has_blind_html_csv_schema_and_private_key) ... ok
+test_imported_ai_rating_is_distinct_from_human_and_validates_hash_quotes (test_solution_review.SolutionReviewTests.test_imported_ai_rating_is_distinct_from_human_and_validates_hash_quotes) ... ok
+test_math_appropriateness_keeps_curriculum_uncertainty_separate (test_solution_review.SolutionReviewTests.test_math_appropriateness_keeps_curriculum_uncertainty_separate) ... ok
+test_quotes_reviewer_and_output_hash_are_validated (test_solution_review.SolutionReviewTests.test_quotes_reviewer_and_output_hash_are_validated) ... ok
+test_reviewed_denominator_and_ai_suggestions_remain_separate (test_solution_review.SolutionReviewTests.test_reviewed_denominator_and_ai_suggestions_remain_separate) ... ok
+test_empty_response_creates_no_successful_run (test_solver.SolverReportTests.test_empty_response_creates_no_successful_run) ... ok
+test_repeated_runs_and_same_number_from_other_documents_never_overwrite (test_solver.SolverReportTests.test_repeated_runs_and_same_number_from_other_documents_never_overwrite) ... ok
+test_report_preserves_input_and_usage_with_markdown_preview (test_solver.SolverReportTests.test_report_preserves_input_and_usage_with_markdown_preview) ... ok
+test_invalid_matrix_metadata_or_values_are_rejected (test_torch_models.TorchDataTests.test_invalid_matrix_metadata_or_values_are_rejected) ... ok
+test_json_rows_and_vocabulary_keep_their_order (test_torch_models.TorchDataTests.test_json_rows_and_vocabulary_keep_their_order) ... ok
+test_missing_or_extra_solution_filenames_are_rejected (test_torch_models.TorchDataTests.test_missing_or_extra_solution_filenames_are_rejected) ... ok
+test_shuffled_solutions_pair_by_exact_filename_with_different_dimensions (test_torch_models.TorchDataTests.test_shuffled_solutions_pair_by_exact_filename_with_different_dimensions) ... ok
+test_assignments_match_final_centers_even_at_iteration_limit (test_torch_models.TorchKMeansTests.test_assignments_match_final_centers_even_at_iteration_limit) ... ok
+test_invalid_cluster_counts_and_identical_points (test_torch_models.TorchKMeansTests.test_invalid_cluster_counts_and_identical_points) ... ok
+test_three_clear_groups_have_expected_centers_and_squared_distances (test_torch_models.TorchKMeansTests.test_three_clear_groups_have_expected_centers_and_squared_distances) ... ok
+test_changing_only_holdout_targets_cannot_change_trained_weights (test_torch_models.TorchRegressionTests.test_changing_only_holdout_targets_cannot_change_trained_weights) ... ok
+test_invalid_regression_shapes_or_hyperparameters_are_rejected (test_torch_models.TorchRegressionTests.test_invalid_regression_shapes_or_hyperparameters_are_rejected) ... ok
+test_multioutput_regression_learns_a_known_linear_mapping (test_torch_models.TorchRegressionTests.test_multioutput_regression_learns_a_known_linear_mapping) ... ok
+test_kmeans_cli_fits_train_centers_and_reports_heldout_labels (test_training_entrypoints.TrainingEntrypointTests.test_kmeans_cli_fits_train_centers_and_reports_heldout_labels) ... ok
+test_legacy_regression_options_cannot_silently_resplit (test_training_entrypoints.TrainingEntrypointTests.test_legacy_regression_options_cannot_silently_resplit) ... ok
+test_legacy_single_vector_mode_must_be_explicit (test_training_entrypoints.TrainingEntrypointTests.test_legacy_single_vector_mode_must_be_explicit) ... ok
+test_parsers_default_to_fixed_dataset_mode (test_training_entrypoints.TrainingEntrypointTests.test_parsers_default_to_fixed_dataset_mode) ... ok
+test_regression_cli_keeps_exact_supplied_test_ids_and_never_resplits (test_training_entrypoints.TrainingEntrypointTests.test_regression_cli_keeps_exact_supplied_test_ids_and_never_resplits) ... ok
+
+----------------------------------------------------------------------
+Ran 157 tests in 8.309s
+
+OK

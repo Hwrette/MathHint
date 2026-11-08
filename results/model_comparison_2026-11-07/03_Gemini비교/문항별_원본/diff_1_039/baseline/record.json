@@ -1,0 +1,202 @@
+{
+  "id": "diff_1_039",
+  "method": "baseline",
+  "input_text": "닫힌구간 $\\left[ 1 , 3 \\right]$에서 함수 $f \\left( x \\right) = 2 x^{3} - 3 x^{2} - 12 x + a$가 최댓값 $M$, 최솟값 $4$를 가질 때, $M$의 값은? (단, $a$는 상수이다.)\n① $13$\t\t② $14$\t\t③ $15$\n④ $16$\t\t⑤ $17$\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "1c1ac2dc1300c245b03cfef5575579a854d8165c1623e80d5f4a5473650d3c0f",
+  "reference": {
+    "answer_text": "③",
+    "kind": "choice",
+    "choice": 3,
+    "value_text": "$15$",
+    "source": {
+      "id": "diff_1_039",
+      "source_file": "모의고사_미분_문제_1.hml",
+      "source_sha256": "02487629c158a7d2ad3e0f0701b391a6efa7f5d517ab48c044f978924365270f",
+      "original_number": 39,
+      "current_number": 39
+    },
+    "numeric_value": 15.0,
+    "gradable": true
+  },
+  "reference_answer_text": "③",
+  "reference_solution": "[정답] ③\n\n[해설]\n$f' \\left( x \\right) = 6 x^{2} - 6 x - 12 = 6 \\left( x + 1 \\right) \\left( x - 2 \\right)$\n$f' \\left( x \\right) = 0$에서 $x = - 1$ 또는 $x = 2$\n함수 $f \\left( x \\right)$의 증가와 감소를 표로 나타내면\n\n$x$\t$\\cdots$\t$- 1$\t$\\cdots$\t$2$\t$\\cdots$\n$f' \\left( x \\right)$\t$+$\t$0$\t$-$\t$0$\t$+$\n$f \\left( x \\right)$\t$\\nearrow$\t극대\t$\\searrow$\t극소\t$\\nearrow$\n\n닫힌구간 $\\left[ 1 , 3 \\right]$에서 함수 $f \\left( x \\right)$의 최솟값은 $f \\left( 2 \\right) = 16 - 12 - 24 + a = - 20 + a = 4$\n$a = 24$\n$f \\left( x \\right) = 2 x^{3} - 3 x^{2} - 12 x + 24$이므로\n$f \\left( 1 \\right) = 2 - 3 - 12 + 24 = 11$\n$f \\left( 3 \\right) = 54 - 27 - 36 + 24 = 15$\n닫힌구간 $\\left[ 1 , 3 \\right]$에서 함수 $f \\left( x \\right)$의 최댓값은 $15$이므로 $M = 15$\n",
+  "problem_text": "닫힌구간 $\\left[ 1 , 3 \\right]$에서 함수 $f \\left( x \\right) = 2 x^{3} - 3 x^{2} - 12 x + a$가 최댓값 $M$, 최솟값 $4$를 가질 때, $M$의 값은? (단, $a$는 상수이다.)\n① $13$\t\t② $14$\t\t③ $15$\n④ $16$\t\t⑤ $17$\n",
+  "subject": "미분",
+  "unit": "05 함수의 증가와 감소",
+  "type": "03 최대와 최소3 (Mm 조건 해석)",
+  "source": "2026년 교육청 고3공통 3월 > 공통범위 > 9 [4점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:09:26.225325+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:09:26.225340+00:00",
+      "usage": {
+        "prompt_token_count": 156,
+        "candidates_token_count": 458,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 614,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 458,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 156,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 156
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 614,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "WFvvasuTNMTT_uMPlfurqAI",
+      "latency_seconds": 20.177,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $f(x) = 2x^3 - 3x^2 - 12x + a$의 최댓값과 최솟값을 구하기 위해 먼저 도함수를 구합니다.\n\n$f'(x) = 6x^2 - 6x - 12$\n$f'(x) = 6(x^2 - x - 2) = 6(x - 2)(x + 1)$\n\n$f'(x) = 0$이 되는 $x$의 값은 $x = -1$ 또는 $x = 2$입니다.\n닫힌구간 $[1, 3]$에서 $x=2$는 구간 내에 포함되지만, $x=-1$은 포함되지 않습니다.\n\n이제 구간의 양 끝점과 극점에서의 함숫값을 비교합니다.\n1) $f(1) = 2(1)^3 - 3(1)^2 - 12(1) + a = 2 - 3 - 12 + a = a - 13$\n2) $f(2) = 2(2)^3 - 3(2)^2 - 12(2) + a = 16 - 12 - 24 + a = a - 20$\n3) $f(3) = 2(3)^3 - 3(3)^2 - 12(3) + a = 54 - 27 - 36 + a = a - 9$\n\n구간 $[1, 3]$에서 함숫값들을 비교하면:\n- 최솟값은 $a - 20$입니다. 문제에서 최솟값이 $4$라고 하였으므로,\n  $a - 20 = 4 \\implies a = 24$\n\n- 최댓값 $M$은 $a - 9$입니다.\n  $M = 24 - 9 = 15$\n\n따라서 최댓값 $M$은 $15$입니다.\n\n최종정답: ③",
+  "usage": {
+    "prompt_token_count": 156,
+    "candidates_token_count": 458,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 614,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 458,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 156,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 156
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 614,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "WFvvasuTNMTT_uMPlfurqAI",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:09:46 GMT",
+        "server": "envoy",
+        "content-length": "987",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1552",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "2034"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $f(x) = 2x^3 - 3x^2 - 12x + a$의 최댓값과 최솟값을 구하기 위해 먼저 도함수를 구합니다.\n\n$f'(x) = 6x^2 - 6x - 12$\n$f'(x) = 6(x^2 - x - 2) = 6(x - 2)(x + 1)$\n\n$f'(x) = 0$이 되는 $x$의 값은 $x = -1$ 또는 $x = 2$입니다.\n닫힌구간 $[1, 3]$에서 $x=2$는 구간 내에 포함되지만, $x=-1$은 포함되지 않습니다.\n\n이제 구간의 양 끝점과 극점에서의 함숫값을 비교합니다.\n1) $f(1) = 2(1)^3 - 3(1)^2 - 12(1) + a = 2 - 3 - 12 + a = a - 13$\n2) $f(2) = 2(2)^3 - 3(2)^2 - 12(2) + a = 16 - 12 - 24 + a = a - 20$\n3) $f(3) = 2(3)^3 - 3(3)^2 - 12(3) + a = 54 - 27 - 36 + a = a - 9$\n\n구간 $[1, 3]$에서 함숫값들을 비교하면:\n- 최솟값은 $a - 20$입니다. 문제에서 최솟값이 $4$라고 하였으므로,\n  $a - 20 = 4 \\implies a = 24$\n\n- 최댓값 $M$은 $a - 9$입니다.\n  $M = 24 - 9 = 15$\n\n따라서 최댓값 $M$은 $15$입니다.\n\n최종정답: ③",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TwOpdaJOR3dIMdKvmhPIBqDzO4XzY3jWYT0ZQrY6E2V4t9RASxA-_gOkJiUvf8MMdmn2UDcTRmHm6V74eVBP-b-o-JwokwP0FAgnak6Vu75-7ey3a5to4Tq7yywdto-DNUEAkD5pAtEnVSvub",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "WFvvasuTNMTT_uMPlfurqAI",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 458,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 156,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 156
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 614,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 20.177,
+  "completed_at": "2026-11-07T17:09:46.402121+00:00",
+  "evaluation": {
+    "predicted_answer": "③",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "③",
+    "predicted_kind": "choice",
+    "predicted_choice": 3
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

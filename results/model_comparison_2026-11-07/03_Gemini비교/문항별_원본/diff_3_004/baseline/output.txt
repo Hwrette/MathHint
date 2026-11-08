@@ -1,0 +1,25 @@
+주어진 극한값들을 이용하여 문제를 해결해 보겠습니다.
+
+1. **주어진 식 분석:**
+   $\lim_{x \rightarrow 1} \frac{f(x)}{x - 1} = 8$ 이므로, $f(x) \approx 8(x-1)$ (근사적으로)
+   $\lim_{x \rightarrow 1} \frac{g(x)}{x^2 - 1} = \frac{1}{2}$ 이므로, $g(x) \approx \frac{1}{2}(x^2 - 1) = \frac{1}{2}(x-1)(x+1)$
+
+2. **구하고자 하는 식 변형:**
+   $\lim_{x \rightarrow 1} \frac{(x + 1) f(x)}{g(x)}$ 식을 주어진 극한값의 형태가 나타나도록 변형합니다.
+   $$\lim_{x \rightarrow 1} \left( \frac{f(x)}{x - 1} \cdot \frac{x^2 - 1}{g(x)} \cdot \frac{x + 1}{x^2 - 1} \cdot (x + 1) \right)$$
+   위 식을 다시 정리하면 다음과 같습니다.
+   $$\lim_{x \rightarrow 1} \left( \frac{f(x)}{x - 1} \cdot \frac{1}{\frac{g(x)}{x^2 - 1}} \cdot \frac{(x + 1)^2}{x^2 - 1} \right)$$
+   여기서 $\frac{(x + 1)^2}{x^2 - 1} = \frac{(x + 1)^2}{(x - 1)(x + 1)} = \frac{x + 1}{x - 1}$ 이 되어 극한값이 발산하는 것처럼 보일 수 있으므로, 식을 더 직관적으로 대입해 봅니다.
+
+3. **직접 대입:**
+   $\frac{f(x)}{x-1} = A(x)$ (단, $\lim_{x \to 1} A(x) = 8$)
+   $\frac{g(x)}{x^2-1} = B(x)$ (단, $\lim_{x \to 1} B(x) = \frac{1}{2}$)
+   $f(x) = (x-1)A(x)$
+   $g(x) = (x^2-1)B(x) = (x-1)(x+1)B(x)$
+
+   이를 구하고자 하는 식에 대입하면:
+   $$\lim_{x \rightarrow 1} \frac{(x + 1) \cdot (x - 1) A(x)}{(x - 1)(x + 1) B(x)}$$
+   $x \neq 1$일 때 $(x-1)$과 $(x+1)$을 약분하면:
+   $$\lim_{x \rightarrow 1} \frac{A(x)}{B(x)} = \frac{\lim_{x \to 1} A(x)}{\lim_{x \to 1} B(x)} = \frac{8}{1/2} = 16$$
+
+최종정답: 16

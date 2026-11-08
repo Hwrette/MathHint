@@ -1,0 +1,18 @@
+[정답] $22$
+
+[해설]
+$f (x) = x^{3} - 10$, $g (x) = x^{3} + k$라 하자.
+$f' (x) = 3 x^{2}$이므로
+곡선 $y = f (x)$ 위의 점 ${\mathrm{{P}}} (- 2 , - 18)$에서의
+접선의 기울기는 $f' (- 2) = 12$
+접선의 방정식은
+$y - \left( - 18 \right) = 12 \left\{ x - \left( - 2 \right) \right\}$, $y = 12 x + 6$
+점 ${\mathrm{{Q}}}$의 좌표를 $\left( \alpha , \alpha^{3} + k \right)$라 하자. (단, $\alpha$는 상수)
+$g' (x) = 3 x^{2}$이므로
+곡선 $y = g (x)$ 위의 점 ${\mathrm{{Q}}} \left( \alpha , \alpha^{3} + k \right)$에서의
+접선의 기울기는 $g' \left( \alpha \right) = 3 \alpha^{2}$
+접선의 방정식은 $y - \left( \alpha^{3} + k \right) = 3 \alpha^{2} \left( x - \alpha \right)$,
+$y = 3 \alpha^{2} x - 2 \alpha^{3} + k$
+두 접선이 일치하므로 $3 \alpha^{2} = 12$, $- 2 \alpha^{3} + k = 6$
+$\alpha = 2$이면 $k = 22$, $\alpha = - 2$이면 $k = - 10$
+$k > 0$이므로 $k = 22$

@@ -1,0 +1,21 @@
+주어진 방정식 $1 + \sqrt{2} \sin 2x = 0$을 정리하면 다음과 같습니다.
+
+$\sqrt{2} \sin 2x = -1$
+$\sin 2x = -\frac{1}{\sqrt{2}} = -\frac{\sqrt{2}}{2}$
+
+범위가 $0 \le x \le \pi$이므로, $2x$의 범위는 $0 \le 2x \le 2\pi$입니다.
+$\sin \theta = -\frac{\sqrt{2}}{2}$를 만족하는 $\theta$의 값은 $0 \le \theta \le 2\pi$ 범위에서 다음과 같습니다.
+
+$2x = \pi + \frac{\pi}{4} = \frac{5\pi}{4}$
+$2x = 2\pi - \frac{\pi}{4} = \frac{7\pi}{4}$
+
+따라서 $x$의 값은 각각 다음과 같습니다.
+$x = \frac{5\pi}{8}$
+$x = \frac{7\pi}{8}$
+
+이 두 해의 합을 구하면 다음과 같습니다.
+$\frac{5\pi}{8} + \frac{7\pi}{8} = \frac{12\pi}{8} = \frac{3\pi}{2}$
+
+따라서 정답은 ③번입니다.
+
+최종정답: ③

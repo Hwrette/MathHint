@@ -1,0 +1,9 @@
+[정답] ①
+
+[해설]
+함수 $f \left( x \right) = 4 \cos \frac{\pi}{a} x + b$의 주기가 $4$이므로
+$\frac{2 \pi}{\left| \frac{\pi}{a} \right|} = 4$
+$a > 0$이므로 $a = 2$
+함수 $f \left( x \right)$의 최솟값이 $- 1$이므로
+$- 4 + b = - 1$에서 $b = 3$
+따라서 $a + b = 5$

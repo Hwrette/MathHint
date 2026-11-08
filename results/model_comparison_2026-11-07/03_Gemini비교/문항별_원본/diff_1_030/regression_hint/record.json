@@ -1,0 +1,231 @@
+{
+  "id": "diff_1_030",
+  "method": "regression_hint",
+  "input_text": "함수 $f \\left( x \\right) = x^{3} + a x + 9$는 $x = - 1$에서 극대이다. 함수 $f \\left( x \\right)$의 극솟값은? (단, $a$는 상수이다.)\n① $6$\t\t② $7$\t\t③ $8$\n④ $9$\t\t⑤ $10$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:x\":18.868,\"latex:)\":13.557,\"latex:(\":13.547,\"latex:=\":12.572,\"latex:f\":11.99,\"latex:\\\\left\":10.628,\"latex:\\\\right\":10.341,\"latex:+\":9.096,\"latex:0\":8.438,\"latex:3\":6.419,\"latex:'\":6.357,\"latex:a\":5.621,\"kiwi:함수\":4.599,\"latex:1\":4.53,\"latex:}\":4.487,\"latex:{\":4.399,\"latex:\\\\cdots\":4.369,\"latex:-\":4.292,\"latex:2\":4.252,\"latex:^\":3.957}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "27bc54823a2318b1d5689323c7eda8547ded3fd7f502b677b1151614541ca024",
+  "reference": {
+    "answer_text": "②",
+    "kind": "choice",
+    "choice": 2,
+    "value_text": "$7$",
+    "source": {
+      "id": "diff_1_030",
+      "source_file": "모의고사_미분_문제_1.hml",
+      "source_sha256": "02487629c158a7d2ad3e0f0701b391a6efa7f5d517ab48c044f978924365270f",
+      "original_number": 30,
+      "current_number": 30
+    },
+    "numeric_value": 7.0,
+    "gradable": true
+  },
+  "reference_answer_text": "②",
+  "reference_solution": "[정답] ②\n\n[해설]\n$f \\left( x \\right) = x^{3} + a x + 9$에서\n$f' \\left( x \\right) = 3 x^{2} + a$\n$x = - 1$에서 극대이므로\n$f' \\left( - 1 \\right) = 0$,    $3 + a = 0$,    $a = - 3$\n이때 $f' \\left( x \\right) = 3 x^{2} - 3 = 3 \\left( x + 1 \\right) \\left( x - 1 \\right)$이므로 $f' \\left( x \\right) = 0$에서\n$x = - 1$ 또는 $x = 1$\n함수 $f \\left( x \\right)$의 증가와 감소를 표로 나타내면 다음과 같다.\n\n$x$\t$\\cdots$\t$- 1$\t$\\cdots$\t$1$\t$\\cdots$\n$f' \\left( x \\right)$\t$+$\t$0$\t$-$\t$0$\t$+$\n$f \\left( x \\right)$\t$\\nearrow$\t$11$\t$\\searrow$\t$7$\t$\\nearrow$\n\n따라서 함수 $f \\left( x \\right)$는 $x = 1$에서 극솟값 $7$을 갖는다.\n",
+  "problem_text": "함수 $f \\left( x \\right) = x^{3} + a x + 9$는 $x = - 1$에서 극대이다. 함수 $f \\left( x \\right)$의 극솟값은? (단, $a$는 상수이다.)\n① $6$\t\t② $7$\t\t③ $8$\n④ $9$\t\t⑤ $10$\n",
+  "subject": "미분",
+  "unit": "05 함수의 증가와 감소",
+  "type": "02 극대와 극소2 (삼차함수의 극대와 극소)",
+  "source": "2026년(2027학년도) 평가원 고3 공통 6월 > 7 [3점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:x": 18.868,
+      "latex:)": 13.557,
+      "latex:(": 13.547,
+      "latex:=": 12.572,
+      "latex:f": 11.99,
+      "latex:\\left": 10.628,
+      "latex:\\right": 10.341,
+      "latex:+": 9.096,
+      "latex:0": 8.438,
+      "latex:3": 6.419,
+      "latex:'": 6.357,
+      "latex:a": 5.621,
+      "kiwi:함수": 4.599,
+      "latex:1": 4.53,
+      "latex:}": 4.487,
+      "latex:{": 4.399,
+      "latex:\\cdots": 4.369,
+      "latex:-": 4.292,
+      "latex:2": 4.252,
+      "latex:^": 3.957
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:09:07.262118+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:09:07.262133+00:00",
+      "usage": {
+        "prompt_token_count": 376,
+        "candidates_token_count": 335,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 711,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 335,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 376,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 376
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 711,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "NVvvasemMc3Vz7IPpP6BqQM",
+      "latency_seconds": 3.535,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $f(x) = x^3 + ax + 9$가 $x = -1$에서 극대이므로, 미분계수 $f'(-1) = 0$이어야 합니다.\n\n먼저 $f(x)$를 미분하면 다음과 같습니다.\n$f'(x) = 3x^2 + a$\n\n$x = -1$에서 극대이므로 $f'(-1) = 0$을 대입합니다.\n$f'(-1) = 3(-1)^2 + a = 0$\n$3 + a = 0$\n$a = -3$\n\n따라서 함수는 $f(x) = x^3 - 3x + 9$가 됩니다.\n극값을 구하기 위해 $f'(x) = 3x^2 - 3 = 0$을 풀면,\n$3(x^2 - 1) = 0$\n$3(x - 1)(x + 1) = 0$\n$x = -1$ 또는 $x = 1$\n\n$x = -1$에서 극대이므로, 극솟값은 $x = 1$에서 가집니다.\n$f(1) = 1^3 - 3(1) + 9$\n$f(1) = 1 - 3 + 9 = 7$\n\n따라서 함수 $f(x)$의 극솟값은 $7$입니다.\n\n최종정답: ②",
+  "usage": {
+    "prompt_token_count": 376,
+    "candidates_token_count": 335,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 711,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 335,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 376,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 376
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 711,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "NVvvasemMc3Vz7IPpP6BqQM",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:09:10 GMT",
+        "server": "envoy",
+        "content-length": "829",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=955",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "1428"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $f(x) = x^3 + ax + 9$가 $x = -1$에서 극대이므로, 미분계수 $f'(-1) = 0$이어야 합니다.\n\n먼저 $f(x)$를 미분하면 다음과 같습니다.\n$f'(x) = 3x^2 + a$\n\n$x = -1$에서 극대이므로 $f'(-1) = 0$을 대입합니다.\n$f'(-1) = 3(-1)^2 + a = 0$\n$3 + a = 0$\n$a = -3$\n\n따라서 함수는 $f(x) = x^3 - 3x + 9$가 됩니다.\n극값을 구하기 위해 $f'(x) = 3x^2 - 3 = 0$을 풀면,\n$3(x^2 - 1) = 0$\n$3(x - 1)(x + 1) = 0$\n$x = -1$ 또는 $x = 1$\n\n$x = -1$에서 극대이므로, 극솟값은 $x = 1$에서 가집니다.\n$f(1) = 1^3 - 3(1) + 9$\n$f(1) = 1 - 3 + 9 = 7$\n\n따라서 함수 $f(x)$의 극솟값은 $7$입니다.\n\n최종정답: ②",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TcgO9SWsBvb-SQp98oZxvnfjDfRY7xZh2YBdHlJkTYXKIsWXIlIolXwDXZzrYG_3QzkBJDSTNCuMAfXGmXNA2orAr6Mk3ndnaJgxDshAYmLA3tV2_8dKvS8KRdDJiFF0hsUpZEwJtrNTV_VpU",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "NVvvasemMc3Vz7IPpP6BqQM",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 335,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 376,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 376
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 711,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 3.535,
+  "completed_at": "2026-11-07T17:09:10.796772+00:00",
+  "evaluation": {
+    "predicted_answer": "②",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "②",
+    "predicted_kind": "choice",
+    "predicted_choice": 2
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

@@ -1,0 +1,6 @@
+함수
+$f \left( x \right) = {\left\{\begin{array}{llll}x^{3} - a x + 2 b &  &  & \left( x < 1 \right) \\ - 3 x + b &  &  & \left( x \geq 1 \right)\end{array}\right.}$
+이 실수 전체의 집합에서 미분가능할 때, $a \times b$의 값은?
+(단, $a$와 $b$는 상수이다.)
+① $3$		② $6$		③ $9$
+④ $12$		⑤ $15$

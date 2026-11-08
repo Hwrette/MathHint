@@ -1,0 +1,10 @@
+[정답] ④
+
+[해설]
+$\sin^{2} x + \cos^{2} x = 1$이므로
+$\cos^{2} x - 1 = 2 \sin x$에서
+$\left( 1 - \sin^{2} x \right) - 1 = 2 \sin x$
+$\sin^{2} x + 2 \sin x = 0$, $\sin x \left( \sin x + 2 \right) = 0$
+$- 1 \leq \sin x \leq 1$이므로 $\sin x = 0$
+$0 < x \leq 2 \pi$에서 $x = \pi$ 또는 $x = 2 \pi$
+따라서 모든 해의 합은 $3 \pi$

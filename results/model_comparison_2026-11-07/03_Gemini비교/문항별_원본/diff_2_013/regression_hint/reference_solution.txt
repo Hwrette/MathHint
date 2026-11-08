@@ -1,0 +1,9 @@
+[정답] ③
+
+[해설]
+$\lim_{h \rightarrow 0} \frac{f \left( 1 + 2 h \right) - 4}{h}$$= 6$이고 $\lim_{h \rightarrow 0} h = 0$이므로
+$\lim_{h \rightarrow 0} \left\{ f \left( 1 + 2 h \right) - 4 \right\} = 0$, $f \left( 1 \right) = 4$
+$\lim_{h \rightarrow 0} \frac{f \left( 1 + 2 h \right) - 4}{h}$$= \lim_{h \rightarrow 0} \frac{f \left( 1 + 2 h \right) - f \left( 1 \right)}{2 h} \times 2$
+$= f' \left( 1 \right) \times 2 = 6$
+이므로 $f' \left( 1 \right) = 3$
+따라서 $f (1) + f' (1) = 4 + 3 = 7$

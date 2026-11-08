@@ -1,0 +1,231 @@
+{
+  "id": "trig_3_039",
+  "method": "regression_hint",
+  "input_text": "$0 \\leq \\theta < 2 \\pi$일 때, $x$에 대한 이차방정식\n$6 x^{2} + \\left( 4 \\cos \\theta \\right) x + \\sin \\theta = 0$\n이 실근을 갖지 않도록 하는 모든 $\\theta$의 값의 범위는 $\\alpha < \\theta < \\beta$이다. $3 \\alpha + \\beta$의 값은?\n① $\\frac{5}{6} \\pi$\t\t② $\\pi$\t\t③ $\\frac{7}{6} \\pi$\n④ $\\frac{4}{3} \\pi$\t\t⑤ $\\frac{3}{2} \\pi$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:{\":34.438,\"latex:}\":34.36,\"latex:\\\\frac\":13.966,\"latex:\\\\pi\":12.327,\"latex:2\":12.286,\"latex:-\":11.244,\"latex:4\":10.664,\"latex:=\":10.537,\"kiwi:이\":10.421,\"latex:3\":8.666,\"latex:\\\\theta\":7.536,\"latex:+\":7.461,\"latex:\\\\right\":6.752,\"latex:|\":6.713,\"latex:^\":6.612,\"latex:\\\\left\":6.281,\"latex:\\\\cos\":5.545,\"latex:x\":5.469,\"latex:5\":5.107,\"latex:)\":4.922}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "bf3c33f5ab37fda6a31399cfc10d2eda9a485f255d98d6199cfd27f4e5534078",
+  "reference": {
+    "answer_text": "④",
+    "kind": "choice",
+    "choice": 4,
+    "value_text": "$\\frac{4}{3} \\pi$",
+    "source": {
+      "id": "trig_3_039",
+      "source_file": "모의고사_삼각함수_문제_3.hml",
+      "source_sha256": "4853842eca14740e8bbc1083fae38beb51f1c6cde8e78fe6d3c398eca800b30b",
+      "original_number": 39,
+      "current_number": 39
+    },
+    "numeric_value": 4.1887902047863905,
+    "gradable": true
+  },
+  "reference_answer_text": "④",
+  "reference_solution": "[정답] ④\n\n[해설]\n실근을 갖지 않기 위해서는 이차방정식 $6 x^{2} + \\left( 4 \\cos \\theta \\right) x + \\sin \\theta = 0$의 판별식 $D < 0$이어야 한다.\n따라서 $\\frac D4=\\left(2\\cos\\theta\\right)^2-6\\sin\\theta<0$에서\n$4 \\cos^{2} \\theta - 6 \\sin \\theta < 0$, $\\left( \\cos^{2} \\theta = 1 - \\sin^{2} \\theta \\right)$\n$4 (1 - \\sin^{2} \\theta) - 6 \\sin \\theta < 0$\n$2 \\sin^{2} \\theta + 3 \\sin \\theta - 4 > 0$\n$(2 \\sin \\theta - 1) (\\sin \\theta + 2) > 0$\n$\\therefore$$\\frac{1}{2} < \\sin \\theta \\le 1$$(\\because - 1 \\le \\sin \\theta \\le 1)$\n$0 \\le \\theta < 2 \\pi$의 범위에서 ㉠을 만족하는 $\\theta$의 범위는\n$\\therefore \\frac{1}{6} \\pi < \\theta < \\frac{5}{6} \\pi$\n따라서 $\\alpha = \\frac{1}{6} \\pi , \\beta = \\frac{5}{6} \\pi$이므로 $3 \\alpha + \\beta = \\frac{4}{3} \\pi$\n",
+  "problem_text": "$0 \\leq \\theta < 2 \\pi$일 때, $x$에 대한 이차방정식\n$6 x^{2} + \\left( 4 \\cos \\theta \\right) x + \\sin \\theta = 0$\n이 실근을 갖지 않도록 하는 모든 $\\theta$의 값의 범위는 $\\alpha < \\theta < \\beta$이다. $3 \\alpha + \\beta$의 값은?\n① $\\frac{5}{6} \\pi$\t\t② $\\pi$\t\t③ $\\frac{7}{6} \\pi$\n④ $\\frac{4}{3} \\pi$\t\t⑤ $\\frac{3}{2} \\pi$\n",
+  "subject": "삼각함수",
+  "unit": "06 삼각함수의 그래프",
+  "type": "08 방부등식의 활용1 (이차함수의 활용)",
+  "source": "2018년(2019학년도) 평가원 고3이과 11월 > 11 [3점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:{": 34.438,
+      "latex:}": 34.36,
+      "latex:\\frac": 13.966,
+      "latex:\\pi": 12.327,
+      "latex:2": 12.286,
+      "latex:-": 11.244,
+      "latex:4": 10.664,
+      "latex:=": 10.537,
+      "kiwi:이": 10.421,
+      "latex:3": 8.666,
+      "latex:\\theta": 7.536,
+      "latex:+": 7.461,
+      "latex:\\right": 6.752,
+      "latex:|": 6.713,
+      "latex:^": 6.612,
+      "latex:\\left": 6.281,
+      "latex:\\cos": 5.545,
+      "latex:x": 5.469,
+      "latex:5": 5.107,
+      "latex:)": 4.922
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:17:49.850977+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:17:49.850989+00:00",
+      "usage": {
+        "prompt_token_count": 440,
+        "candidates_token_count": 512,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 952,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 512,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 440,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 440
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 952,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "QV3vaqilGd_V_PUPscXLqAI",
+      "latency_seconds": 5.071,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "이차방정식 $6x^2 + (4\\cos\\theta)x + \\sin\\theta = 0$이 실근을 갖지 않으려면, 판별식 $D < 0$이어야 합니다.\n\n이차방정식의 판별식을 $D$라 하면,\n$D = (4\\cos\\theta)^2 - 4 \\cdot 6 \\cdot \\sin\\theta < 0$\n$16\\cos^2\\theta - 24\\sin\\theta < 0$\n\n양변을 8로 나누면,\n$2\\cos^2\\theta - 3\\sin\\theta < 0$\n\n$\\cos^2\\theta = 1 - \\sin^2\\theta$를 대입하면,\n$2(1 - \\sin^2\\theta) - 3\\sin\\theta < 0$\n$2 - 2\\sin^2\\theta - 3\\sin\\theta < 0$\n$2\\sin^2\\theta + 3\\sin\\theta - 2 > 0$\n\n인수분해하면,\n$(2\\sin\\theta - 1)(\\sin\\theta + 2) > 0$\n\n여기서 모든 $\\theta$에 대하여 $-1 \\leq \\sin\\theta \\leq 1$이므로, $\\sin\\theta + 2 > 0$입니다. 따라서 부등식이 성립하려면,\n$2\\sin\\theta - 1 > 0$\n$\\sin\\theta > \\frac{1}{2}$\n\n$0 \\leq \\theta < 2\\pi$ 범위에서 $\\sin\\theta > \\frac{1}{2}$을 만족하는 $\\theta$의 범위는,\n$\\frac{\\pi}{6} < \\theta < \\frac{5}{6}\\pi$\n\n따라서 $\\alpha = \\frac{\\pi}{6}$, $\\beta = \\frac{5}{6}\\pi$입니다.\n\n구하고자 하는 값은 $3\\alpha + \\beta$이므로,\n$3\\left(\\frac{\\pi}{6}\\right) + \\frac{5}{6}\\pi = \\frac{3}{6}\\pi + \\frac{5}{6}\\pi = \\frac{8}{6}\\pi = \\frac{4}{3}\\pi$\n\n최종정답: ④",
+  "usage": {
+    "prompt_token_count": 440,
+    "candidates_token_count": 512,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 952,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 512,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 440,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 440
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 952,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "QV3vaqilGd_V_PUPscXLqAI",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:17:54 GMT",
+        "server": "envoy",
+        "content-length": "1055",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1874",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "2061"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "이차방정식 $6x^2 + (4\\cos\\theta)x + \\sin\\theta = 0$이 실근을 갖지 않으려면, 판별식 $D < 0$이어야 합니다.\n\n이차방정식의 판별식을 $D$라 하면,\n$D = (4\\cos\\theta)^2 - 4 \\cdot 6 \\cdot \\sin\\theta < 0$\n$16\\cos^2\\theta - 24\\sin\\theta < 0$\n\n양변을 8로 나누면,\n$2\\cos^2\\theta - 3\\sin\\theta < 0$\n\n$\\cos^2\\theta = 1 - \\sin^2\\theta$를 대입하면,\n$2(1 - \\sin^2\\theta) - 3\\sin\\theta < 0$\n$2 - 2\\sin^2\\theta - 3\\sin\\theta < 0$\n$2\\sin^2\\theta + 3\\sin\\theta - 2 > 0$\n\n인수분해하면,\n$(2\\sin\\theta - 1)(\\sin\\theta + 2) > 0$\n\n여기서 모든 $\\theta$에 대하여 $-1 \\leq \\sin\\theta \\leq 1$이므로, $\\sin\\theta + 2 > 0$입니다. 따라서 부등식이 성립하려면,\n$2\\sin\\theta - 1 > 0$\n$\\sin\\theta > \\frac{1}{2}$\n\n$0 \\leq \\theta < 2\\pi$ 범위에서 $\\sin\\theta > \\frac{1}{2}$을 만족하는 $\\theta$의 범위는,\n$\\frac{\\pi}{6} < \\theta < \\frac{5}{6}\\pi$\n\n따라서 $\\alpha = \\frac{\\pi}{6}$, $\\beta = \\frac{5}{6}\\pi$입니다.\n\n구하고자 하는 값은 $3\\alpha + \\beta$이므로,\n$3\\left(\\frac{\\pi}{6}\\right) + \\frac{5}{6}\\pi = \\frac{3}{6}\\pi + \\frac{5}{6}\\pi = \\frac{8}{6}\\pi = \\frac{4}{3}\\pi$\n\n최종정답: ④",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TqXyI0AEa8TIfj0yCdfS2E6pkTLZbAUX-C7JeNb328rHHa5PUmr1CWkcY72Gj6kuoiTAcSGdw9MOmZ1Ty7bd0vLOsDvPTbRCTLJsV_NtJT1fCpJLWdMhW57lCoAe0QL0MTZ3OroE-9H32RJ5v",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "QV3vaqilGd_V_PUPscXLqAI",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 512,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 440,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 440
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 952,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 5.071,
+  "completed_at": "2026-11-07T17:17:54.922030+00:00",
+  "evaluation": {
+    "predicted_answer": "④",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "④",
+    "predicted_kind": "choice",
+    "predicted_choice": 4
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

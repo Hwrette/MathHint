@@ -1,0 +1,260 @@
+{
+  "id": "diff_2_040",
+  "method": "baseline",
+  "input_text": "수직선 위를 움직이는 두 점 ${\\mathrm{{P}}}$, ${\\mathrm{{Q}}}$의 시각 $t \\quad \\left( t \\geq 0 \\right)$에서의 위치가 각각\n$x_{1} = t^{2} + t - 6$, $x_{2} = - t^{3} + 7 t^{2}$\n이다. 두 점 ${\\mathrm{{P}}}$, ${\\mathrm{{Q}}}$의 위치가 같아지는 순간 두 점 ${\\mathrm{{P}}}$, ${\\mathrm{{Q}}}$의 가속도를 각각 $p$, $q$라 할 때, $p - q$의 값은?\n① $\\mathrm{24}$\t\t② $\\mathrm{27}$\t\t③ $\\mathrm{30}$\n④ $\\mathrm{33}$\t\t⑤ $\\mathrm{36}$\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "f2750a74baeb2b88dbebea0df756a22be998aa4b7f0d11508bf307c3ea5345e3",
+  "reference": {
+    "answer_text": "①",
+    "kind": "choice",
+    "choice": 1,
+    "value_text": "$\\mathrm{24}$",
+    "source": {
+      "id": "diff_2_040",
+      "source_file": "모의고사_미분_문제_2.hml",
+      "source_sha256": "bdf632f0269bd027f72fcf686c276a8040aa5cb2b985b26c7a2fe65391d878af",
+      "original_number": 40,
+      "current_number": 40
+    },
+    "numeric_value": 24.0,
+    "gradable": true
+  },
+  "reference_answer_text": "①",
+  "reference_solution": "[정답] ①\n\n[해설]\n두 점 ${\\mathrm{{P}}}$, $\\mathrm{Q}$의 위치가 같아지는 시각 $t$는 $t \\ge 0$에서 방정식 $x_{1} = x_{2}$의 실근과 같다.\n$x_{1} - x_{2}$$= \\left( t^{2} + t - 6 \\right) - \\left( - t^{3} + 7 t^{2} \\right)$\n$= \\left( t^{2} + 1 \\right) \\left( t - 6 \\right)$\n$x_{1} - x_{2} = 0$에서    $t = 6 \\quad \\left( \\because \\quad t \\ge 0 \\right)$\n두 점 ${\\mathrm{{P}}}$, $\\mathrm{Q}$의 시각 $t$에서의 가속도를 각각 $a_{1}$, $a_{2}$라 하면\n$a_{1} = 2$, $a_{2} = - 6 t + 14$\n이므로\n$p = 2$, $q = - 22$\n$\\therefore$ $p - q = 24$\n",
+  "problem_text": "수직선 위를 움직이는 두 점 ${\\mathrm{{P}}}$, ${\\mathrm{{Q}}}$의 시각 $t \\quad \\left( t \\geq 0 \\right)$에서의 위치가 각각\n$x_{1} = t^{2} + t - 6$, $x_{2} = - t^{3} + 7 t^{2}$\n이다. 두 점 ${\\mathrm{{P}}}$, ${\\mathrm{{Q}}}$의 위치가 같아지는 순간 두 점 ${\\mathrm{{P}}}$, ${\\mathrm{{Q}}}$의 가속도를 각각 $p$, $q$라 할 때, $p - q$의 값은?\n① $\\mathrm{24}$\t\t② $\\mathrm{27}$\t\t③ $\\mathrm{30}$\n④ $\\mathrm{33}$\t\t⑤ $\\mathrm{36}$\n",
+  "subject": "미분",
+  "unit": "06 방부등식과 직선운동",
+  "type": "02 속도와 가속도의 해석1 (주어진 위치함수)",
+  "source": "2024년(2025학년도) 평가원 고3공통 9월 > 공통범위 > 11 [4점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:35:39.769119+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:20:14.041961+00:00",
+      "usage": {
+        "prompt_token_count": null,
+        "candidates_token_count": null,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "raw": null
+      },
+      "status": "error",
+      "error_type": "ClientError",
+      "code": 429,
+      "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 45.783532169s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.1-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '45s'}]}}",
+      "latency_seconds": 1.262,
+      "execution": 1
+    },
+    {
+      "attempt": 2,
+      "started_at": "2026-11-07T13:20:15.303747+00:00",
+      "usage": {
+        "prompt_token_count": null,
+        "candidates_token_count": null,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "raw": null
+      },
+      "status": "error",
+      "error_type": "ClientError",
+      "code": 429,
+      "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 44.231018242s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.1-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '44s'}]}}",
+      "latency_seconds": 0.541,
+      "execution": 1
+    },
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:35:39.769135+00:00",
+      "usage": {
+        "prompt_token_count": 220,
+        "candidates_token_count": 439,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 659,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 439,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 220,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 220
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 659,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "LynvapHiF7Kv6dkPhu6U4QU",
+      "latency_seconds": 5.042,
+      "execution": 2
+    }
+  ],
+  "status": "success",
+  "output_text": "두 점 $\\mathrm{P}, \\mathrm{Q}$의 위치가 같아지는 순간을 찾기 위해 $x_1 = x_2$ 방정식을 풉니다.\n\n$t^2 + t - 6 = -t^3 + 7t^2$\n$t^3 - 6t^2 + t - 6 = 0$\n$t^2(t - 6) + 1(t - 6) = 0$\n$(t^2 + 1)(t - 6) = 0$\n\n$t \\geq 0$이므로, 두 점의 위치가 같아지는 시각은 $t = 6$입니다.\n\n다음으로, 각 점의 속도와 가속도를 구합니다. 가속도는 위치를 시간에 대해 두 번 미분한 값입니다.\n\n**점 P의 경우:**\n$x_1 = t^2 + t - 6$\n$v_1 = \\frac{dx_1}{dt} = 2t + 1$\n$a_1 = \\frac{dv_1}{dt} = 2$\n따라서 $t=6$일 때 가속도 $p = 2$입니다.\n\n**점 Q의 경우:**\n$x_2 = -t^3 + 7t^2$\n$v_2 = \\frac{dx_2}{dt} = -3t^2 + 14t$\n$a_2 = \\frac{dv_2}{dt} = -6t + 14$\n$t=6$일 때 가속도 $q = -6(6) + 14 = -36 + 14 = -22$입니다.\n\n문제에서 요구하는 $p - q$의 값은 다음과 같습니다.\n$p - q = 2 - (-22) = 2 + 22 = 24$\n\n따라서 정답은 ①번입니다.\n\n최종정답: ①",
+  "usage": {
+    "prompt_token_count": 220,
+    "candidates_token_count": 439,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 659,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 439,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 220,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 220
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 659,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "LynvapHiF7Kv6dkPhu6U4QU",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:35:44 GMT",
+        "server": "envoy",
+        "content-length": "983",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1390",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "1947"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "두 점 $\\mathrm{P}, \\mathrm{Q}$의 위치가 같아지는 순간을 찾기 위해 $x_1 = x_2$ 방정식을 풉니다.\n\n$t^2 + t - 6 = -t^3 + 7t^2$\n$t^3 - 6t^2 + t - 6 = 0$\n$t^2(t - 6) + 1(t - 6) = 0$\n$(t^2 + 1)(t - 6) = 0$\n\n$t \\geq 0$이므로, 두 점의 위치가 같아지는 시각은 $t = 6$입니다.\n\n다음으로, 각 점의 속도와 가속도를 구합니다. 가속도는 위치를 시간에 대해 두 번 미분한 값입니다.\n\n**점 P의 경우:**\n$x_1 = t^2 + t - 6$\n$v_1 = \\frac{dx_1}{dt} = 2t + 1$\n$a_1 = \\frac{dv_1}{dt} = 2$\n따라서 $t=6$일 때 가속도 $p = 2$입니다.\n\n**점 Q의 경우:**\n$x_2 = -t^3 + 7t^2$\n$v_2 = \\frac{dx_2}{dt} = -3t^2 + 14t$\n$a_2 = \\frac{dv_2}{dt} = -6t + 14$\n$t=6$일 때 가속도 $q = -6(6) + 14 = -36 + 14 = -22$입니다.\n\n문제에서 요구하는 $p - q$의 값은 다음과 같습니다.\n$p - q = 2 - (-22) = 2 + 22 = 24$\n\n따라서 정답은 ①번입니다.\n\n최종정답: ①",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TPGgIdu8jlemQxGEGDiI7tFGD8iYDxIOibx-BhCnHRpsA0k5oHVCCTE_zy_uEEM5T4kMAzdWEV0nFUKBWn5O09VTh3efz3yIo5L3fn_FBE-tSMYBqM_xBq70EJIHctyhXIhks-aTLfxhugdks",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "LynvapHiF7Kv6dkPhu6U4QU",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 439,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 220,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 220
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 659,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 5.042,
+  "completed_at": "2026-11-07T13:35:44.811234+00:00",
+  "evaluation": {
+    "predicted_answer": "①",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "①",
+    "predicted_kind": "choice",
+    "predicted_choice": 1
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "prior_executions": [
+    {
+      "status": "api_error",
+      "started_at": "2026-11-07T13:20:14.041944+00:00",
+      "completed_at": "2026-11-07T13:20:15.844974+00:00",
+      "error": {
+        "code": 429,
+        "type": "ClientError",
+        "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 44.231018242s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.1-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '44s'}]}}"
+      },
+      "response_id": null
+    }
+  ],
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "c2bf14e689eb211ac3e69725df122aeb2f470838eac064e8cac488255149539e",
+    "imported_at": "2026-11-07T16:57:38.380248+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

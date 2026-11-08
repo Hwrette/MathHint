@@ -1,0 +1,28 @@
+[정답] $62$
+
+[해설]
+$f' \left( x \right) = 6 a x^{2} - 6 a x = 6 a x \left( x - 1 \right)$
+$f' \left( x \right) = 0$에서 $x = 0$ 또는 $x = 1$
+(ⅰ) $a > 0$인 경우
+닫힌구간 $\left[ 0 , 2 \right]$에서 함수 $f \left( x \right)$의 증가와 감소를 표로 나타내면 다음과 같다.
+
+$x$	$0$	$\cdots$	$1$	$\cdots$	$2$
+$f' \left( x \right)$		$-$	$0$	$+$
+$f \left( x \right)$	$6$	$\searrow$	$- a + 6$	$\nearrow$	$4 a + 6$
+
+닫힌구간 $\left[ 0 , 2 \right]$에서 함수 $f \left( x \right)$는 $x = 2$에서 최댓값 $4 a + 6$, $x = 1$에서 최솟값 $- a + 6$을 갖는다.
+그러므로 $4 a + 6 = 8$, $- a + 6 = - 2$
+이다. 두 방정식을 동시에 만족시키는 $a$는 존재하지 않는다.
+(ⅱ) $a < 0$인 경우
+닫힌구간 $\left[ 0 , 2 \right]$에서 함수 $f \left( x \right)$의 증가와 감소를 표로 나타내면 다음과 같다.
+
+$x$	$0$	$\cdots$	$1$	$\cdots$	$2$
+$f' \left( x \right)$		$+$	$0$	$-$
+$f \left( x \right)$	$6$	$\nearrow$	$- a + 6$	$\searrow$	$4 a + 6$
+
+닫힌구간 $\left[ 0 , 2 \right]$에서 함수 $f \left( x \right)$는 $x = 1$에서 최댓값 $- a + 6$, $x = 2$에서 최솟값 $4 a + 6$을 갖는다.
+그러므로 $- a + 6 = 8$, $4 a + 6 = - 2$
+$a = - 2$
+(ⅰ), (ⅱ)에서 $a = - 2$이므로
+$f \left( x \right) = - 4 x^{3} + 6 x^{2} + 6$
+따라서 $f \left( - 2 \right) = - 4 \times \left( - 2 \right)^{3} + 6 \times \left( - 2 \right)^{2} + 6 = 62$

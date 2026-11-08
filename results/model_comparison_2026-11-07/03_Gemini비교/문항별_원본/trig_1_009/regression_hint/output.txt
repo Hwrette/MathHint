@@ -1,0 +1,25 @@
+주어진 조건 $\sin \theta + \cos \theta = \frac{2}{5}\sqrt{10}$의 양변을 제곱하면 다음과 같습니다.
+$(\sin \theta + \cos \theta)^2 = \left(\frac{2}{5}\sqrt{10}\right)^2$
+$\sin^2 \theta + \cos^2 \theta + 2 \sin \theta \cos \theta = \frac{4 \times 10}{25}$
+$1 + 2 \sin \theta \cos \theta = \frac{40}{25} = \frac{8}{5}$
+$2 \sin \theta \cos \theta = \frac{8}{5} - 1 = \frac{3}{5}$
+
+여기서 $\sin 2\theta = 2 \sin \theta \cos \theta = \frac{3}{5}$입니다.
+$2\theta$가 제2사분면의 각이므로 $\cos 2\theta = -\sqrt{1 - \sin^2 2\theta} = -\sqrt{1 - \left(\frac{3}{5}\right)^2} = -\frac{4}{5}$입니다.
+
+배각 공식에 의해 $\cos 2\theta = \cos^2 \theta - \sin^2 \theta = (\cos \theta - \sin \theta)(\cos \theta + \sin \theta) = -\frac{4}{5}$입니다.
+$\cos \theta + \sin \theta = \frac{2}{5}\sqrt{10}$이므로,
+$(\cos \theta - \sin \theta) \times \frac{2}{5}\sqrt{10} = -\frac{4}{5}$
+$\cos \theta - \sin \theta = -\frac{4}{5} \times \frac{5}{2\sqrt{10}} = -\frac{2}{\sqrt{10}} = -\frac{\sqrt{10}}{5}$
+
+이제 두 식을 연립합니다.
+1) $\cos \theta + \sin \theta = \frac{2\sqrt{10}}{5}$
+2) $\cos \theta - \sin \theta = -\frac{\sqrt{10}}{5}$
+
+두 식을 더하면 $2 \cos \theta = \frac{\sqrt{10}}{5} \implies \cos \theta = \frac{\sqrt{10}}{10}$
+두 식을 빼면 $2 \sin \theta = \frac{3\sqrt{10}}{5} \implies \sin \theta = \frac{3\sqrt{10}}{10}$
+
+직선 $y = mx$ 위의 점 $P$에 대하여 $\tan \theta = \frac{y}{x} = m$이므로,
+$m = \tan \theta = \frac{\sin \theta}{\cos \theta} = \frac{3\sqrt{10}/10}{\sqrt{10}/10} = 3$
+
+최종정답: ④

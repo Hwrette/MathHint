@@ -1,0 +1,8 @@
+$\lim_{x \rightarrow a} \frac{f \left( x \right) \left( x - 3 \right)}{\left( x - a \right)^{2}} = 5$를 만족시키는 최고차항의 계수가 $1$인 이차함수 $f \left( x \right)$가 존재하도록 하는 모든 실수 $a$의 값의 합은?
+① $7$		② $8$		③ $9$
+④ $10$		⑤ $11$
+
+
+[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]
+{"latex:x":37.08,"latex:(":30.845,"latex:)":30.602,"latex:{":27.635,"latex:}":27.611,"latex:=":25.617,"latex:3":20.356,"latex:-":20.171,"latex:2":19.642,"latex:\\left":18.186,"latex:\\right":18.111,"latex:a":17.174,"latex:f":15.761,"latex:+":15.389,"kiwi:이":14.915,"latex:t":11.634,"latex:\\frac":11.391,"latex:\\rightarrow":10.918,"latex:_":10.808,"latex:\\lim":10.185}
+위 주요 토큰을 참고하여 풀이를 작성해줘.

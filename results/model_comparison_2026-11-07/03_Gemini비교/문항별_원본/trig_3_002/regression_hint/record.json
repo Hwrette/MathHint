@@ -1,0 +1,231 @@
+{
+  "id": "trig_3_002",
+  "method": "regression_hint",
+  "input_text": "이차방정식 ${x^{2} - k}$$= 0$이 서로 다른 두 실근 $6 \\cos \\theta$, $5 \\tan \\theta$를 가질 때, 상수 $k$의 값을 구하시오.\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:}\":15.602,\"latex:{\":15.59,\"latex:=\":9.736,\"latex:\\\\theta\":7.647,\"latex:-\":7.464,\"latex:(\":6.022,\"latex:)\":5.98,\"latex:2\":5.955,\"latex:3\":5.283,\"latex:\\\\frac\":5.201,\"latex:x\":5.104,\"latex:f\":4.921,\"kiwi:의\":4.896,\"kiwi:이\":3.759,\"latex:r\":3.497,\"latex:y\":3.317,\"latex:6\":3.284,\"latex:+\":3.265,\"latex:10\":3.164,\"kiwi:에\":2.861}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "d6039080a0fdab2bf07fe440df2ccd786ee3664fe5aa490c0b004a1c1a7b5e61",
+  "reference": {
+    "answer_text": "$\\mathbf{20}$",
+    "kind": "value",
+    "choice": null,
+    "value_text": "$\\mathbf{20}$",
+    "source": {
+      "id": "trig_3_002",
+      "source_file": "모의고사_삼각함수_문제_3.hml",
+      "source_sha256": "4853842eca14740e8bbc1083fae38beb51f1c6cde8e78fe6d3c398eca800b30b",
+      "original_number": 2,
+      "current_number": 2
+    },
+    "numeric_value": 20.0,
+    "gradable": true
+  },
+  "reference_answer_text": "$\\mathbf{20}$",
+  "reference_solution": "[정답] $\\mathbf{20}$\n\n[해설]\n이차방정식 $x^{2} - k = 0$의 두 근의 합이 $0$이므로\n$6 \\cos \\theta + 5 \\tan \\theta = 0 ,$$6 \\cos^{2} \\theta + 5 \\sin \\theta = 0$\n$\\cos^{2} \\theta = 1 - \\sin^{2} \\theta$이므로 $6 \\sin^{2} \\theta - 5 \\sin \\theta - 6 = 0$\n$(3 \\sin \\theta + 2) (2 \\sin \\theta - 3) = 0$\n$- 1 \\leq \\sin \\theta \\leq 1$이므로 $\\sin \\theta = - \\frac{2}{3}$\n이차방정식 $x^{2} - k = 0$의 두 근의 곱이 $- k$이므로\n$k = - 6 \\cos \\theta \\times 5 \\tan \\theta = - 30 \\sin \\theta = 20$\n",
+  "problem_text": "이차방정식 ${x^{2} - k}$$= 0$이 서로 다른 두 실근 $6 \\cos \\theta$, $5 \\tan \\theta$를 가질 때, 상수 $k$의 값을 구하시오.\n",
+  "subject": "삼각함수",
+  "unit": "05 삼각함수의 정의",
+  "type": "09 활용3 (삼각함수 사이의 관계)",
+  "source": "2020년 교육청 고2공통 11월 > 27 [4점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:}": 15.602,
+      "latex:{": 15.59,
+      "latex:=": 9.736,
+      "latex:\\theta": 7.647,
+      "latex:-": 7.464,
+      "latex:(": 6.022,
+      "latex:)": 5.98,
+      "latex:2": 5.955,
+      "latex:3": 5.283,
+      "latex:\\frac": 5.201,
+      "latex:x": 5.104,
+      "latex:f": 4.921,
+      "kiwi:의": 4.896,
+      "kiwi:이": 3.759,
+      "latex:r": 3.497,
+      "latex:y": 3.317,
+      "latex:6": 3.284,
+      "latex:+": 3.265,
+      "latex:10": 3.164,
+      "kiwi:에": 2.861
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:16:59.946428+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:16:59.946444+00:00",
+      "usage": {
+        "prompt_token_count": 337,
+        "candidates_token_count": 460,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 797,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 460,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 337,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 337
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 797,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "FF3vauGeAv2wsOIPq_SBgAc",
+      "latency_seconds": 9.479,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "이차방정식 $x^2 - k = 0$의 두 근이 $6 \\cos \\theta$와 $5 \\tan \\theta$이므로, 근과 계수의 관계에 의해 다음이 성립합니다.\n\n1) 두 근의 합: $6 \\cos \\theta + 5 \\tan \\theta = 0$\n2) 두 근의 곱: $(6 \\cos \\theta)(5 \\tan \\theta) = -k$\n\n먼저 두 근의 합 식을 정리합니다.\n$6 \\cos \\theta + 5 \\frac{\\sin \\theta}{\\cos \\theta} = 0$\n양변에 $\\cos \\theta$를 곱하면 ($ \\cos \\theta \\neq 0$):\n$6 \\cos^2 \\theta + 5 \\sin \\theta = 0$\n$6(1 - \\sin^2 \\theta) + 5 \\sin \\theta = 0$\n$6 - 6 \\sin^2 \\theta + 5 \\sin \\theta = 0$\n$6 \\sin^2 \\theta - 5 \\sin \\theta - 6 = 0$\n\n이를 인수분해하면:\n$(2 \\sin \\theta - 3)(3 \\sin \\theta + 2) = 0$\n$-1 \\le \\sin \\theta \\le 1$이므로, $\\sin \\theta = -\\frac{2}{3}$입니다.\n\n이제 $\\cos^2 \\theta = 1 - \\sin^2 \\theta = 1 - (-\\frac{2}{3})^2 = 1 - \\frac{4}{9} = \\frac{5}{9}$임을 이용하여 두 근의 곱을 구합니다.\n$-k = (6 \\cos \\theta)(5 \\tan \\theta) = 30 \\cos \\theta \\cdot \\frac{\\sin \\theta}{\\cos \\theta} = 30 \\sin \\theta$\n$-k = 30 \\times (-\\frac{2}{3}) = -20$\n따라서 $k = 20$입니다.\n\n최종정답: 20",
+  "usage": {
+    "prompt_token_count": 337,
+    "candidates_token_count": 460,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 797,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 460,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 337,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 337
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 797,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "FF3vauGeAv2wsOIPq_SBgAc",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:17:09 GMT",
+        "server": "envoy",
+        "content-length": "960",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1381",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "1563"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "이차방정식 $x^2 - k = 0$의 두 근이 $6 \\cos \\theta$와 $5 \\tan \\theta$이므로, 근과 계수의 관계에 의해 다음이 성립합니다.\n\n1) 두 근의 합: $6 \\cos \\theta + 5 \\tan \\theta = 0$\n2) 두 근의 곱: $(6 \\cos \\theta)(5 \\tan \\theta) = -k$\n\n먼저 두 근의 합 식을 정리합니다.\n$6 \\cos \\theta + 5 \\frac{\\sin \\theta}{\\cos \\theta} = 0$\n양변에 $\\cos \\theta$를 곱하면 ($ \\cos \\theta \\neq 0$):\n$6 \\cos^2 \\theta + 5 \\sin \\theta = 0$\n$6(1 - \\sin^2 \\theta) + 5 \\sin \\theta = 0$\n$6 - 6 \\sin^2 \\theta + 5 \\sin \\theta = 0$\n$6 \\sin^2 \\theta - 5 \\sin \\theta - 6 = 0$\n\n이를 인수분해하면:\n$(2 \\sin \\theta - 3)(3 \\sin \\theta + 2) = 0$\n$-1 \\le \\sin \\theta \\le 1$이므로, $\\sin \\theta = -\\frac{2}{3}$입니다.\n\n이제 $\\cos^2 \\theta = 1 - \\sin^2 \\theta = 1 - (-\\frac{2}{3})^2 = 1 - \\frac{4}{9} = \\frac{5}{9}$임을 이용하여 두 근의 곱을 구합니다.\n$-k = (6 \\cos \\theta)(5 \\tan \\theta) = 30 \\cos \\theta \\cdot \\frac{\\sin \\theta}{\\cos \\theta} = 30 \\sin \\theta$\n$-k = 30 \\times (-\\frac{2}{3}) = -20$\n따라서 $k = 20$입니다.\n\n최종정답: 20",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0T0UBrOsdoTv2rTja2jMlPEscK-7WRqAeh4iuaozJNvuJGJErzPPPJebOyJ3eAMOgBYlw25THa144ewNlgLl_-D5JoFjwuo559ffExFTYHyBRPgAM3Ag9CYdOGdmT0PL-5MDyQiy8hMJ3F0JRf",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "FF3vauGeAv2wsOIPq_SBgAc",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 460,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 337,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 337
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 797,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 9.479,
+  "completed_at": "2026-11-07T17:17:09.425556+00:00",
+  "evaluation": {
+    "predicted_answer": "20",
+    "correct": true,
+    "status": "correct",
+    "reason": "numeric_constant_comparison_tolerance_1e-9",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "$\\mathbf{20}$",
+    "predicted_kind": "value",
+    "predicted_numeric_value": 20.0
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

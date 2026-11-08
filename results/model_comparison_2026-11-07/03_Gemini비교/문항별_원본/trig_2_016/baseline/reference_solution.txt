@@ -1,0 +1,10 @@
+[정답] ⑤
+
+[해설]
+$\cos \left( \frac{\pi}{2} + \theta \right) = - \sin \theta$이므로
+$\sin \theta = - \frac{\sqrt{5}}{5}$
+$\tan \theta < 0$, $\sin \theta < 0$이므로 $\theta$는 제 $\mathrm{4}$사분면의 각이고, $\cos \theta > 0$이다.
+$\cos^{2} \theta$$= 1 - \sin^{2} \theta$
+$= 1 - \left( \frac{\sqrt{5}}{5} \right)^{2}$
+$= \frac{4}{5}$
+$\therefore$ $\cos \theta = \frac{2}{5} \sqrt{5}$

@@ -1,0 +1,231 @@
+{
+  "id": "diff_2_023",
+  "method": "regression_hint",
+  "input_text": "곡선 $y = x^{3} - 10$ 위의 점 $\\mathrm{P} \\left( - 2 , - 18 \\right)$에서의 접선과 곡선 $y = x^{3} + k$ 위의 점 ${\\mathrm{{Q}}}$에서의 접선이 일치할 때, 양수 $k$의 값을 구하시오.\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:-\":12.43,\"latex:=\":11.065,\"kiwi:이\":9.62,\"latex:x\":9.608,\"latex:3\":9.356,\"latex:a\":8.979,\"latex:{\":8.386,\"latex:}\":8.195,\"latex:)\":6.545,\"latex:(\":6.406,\"latex:\\\\theta\":6.212,\"latex:f\":6.096,\"kiwi:의\":5.976,\"latex:10\":5.477,\"latex:k\":5.388,\"latex:\\\\cdots\":5.246,\"latex:y\":4.73,\"latex:6\":4.26,\"latex:\\\\right\":3.758,\"latex:r\":3.715}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "a43dba5db199db44d7558f3affdb70d970adaa0c3e924fe56b5b0e8affe1a782",
+  "reference": {
+    "answer_text": "$22$",
+    "kind": "value",
+    "choice": null,
+    "value_text": "$22$",
+    "source": {
+      "id": "diff_2_023",
+      "source_file": "모의고사_미분_문제_2.hml",
+      "source_sha256": "bdf632f0269bd027f72fcf686c276a8040aa5cb2b985b26c7a2fe65391d878af",
+      "original_number": 23,
+      "current_number": 23
+    },
+    "numeric_value": 22.0,
+    "gradable": true
+  },
+  "reference_answer_text": "$22$",
+  "reference_solution": "[정답] $22$\n\n[해설]\n$f (x) = x^{3} - 10$, $g (x) = x^{3} + k$라 하자.\n$f' (x) = 3 x^{2}$이므로\n곡선 $y = f (x)$ 위의 점 ${\\mathrm{{P}}} (- 2 , - 18)$에서의\n접선의 기울기는 $f' (- 2) = 12$\n접선의 방정식은\n$y - \\left( - 18 \\right) = 12 \\left\\{ x - \\left( - 2 \\right) \\right\\}$, $y = 12 x + 6$\n점 ${\\mathrm{{Q}}}$의 좌표를 $\\left( \\alpha , \\alpha^{3} + k \\right)$라 하자. (단, $\\alpha$는 상수)\n$g' (x) = 3 x^{2}$이므로\n곡선 $y = g (x)$ 위의 점 ${\\mathrm{{Q}}} \\left( \\alpha , \\alpha^{3} + k \\right)$에서의\n접선의 기울기는 $g' \\left( \\alpha \\right) = 3 \\alpha^{2}$\n접선의 방정식은 $y - \\left( \\alpha^{3} + k \\right) = 3 \\alpha^{2} \\left( x - \\alpha \\right)$,\n$y = 3 \\alpha^{2} x - 2 \\alpha^{3} + k$\n두 접선이 일치하므로 $3 \\alpha^{2} = 12$, $- 2 \\alpha^{3} + k = 6$\n$\\alpha = 2$이면 $k = 22$, $\\alpha = - 2$이면 $k = - 10$\n$k > 0$이므로 $k = 22$\n",
+  "problem_text": "곡선 $y = x^{3} - 10$ 위의 점 $\\mathrm{P} \\left( - 2 , - 18 \\right)$에서의 접선과 곡선 $y = x^{3} + k$ 위의 점 ${\\mathrm{{Q}}}$에서의 접선이 일치할 때, 양수 $k$의 값을 구하시오.\n",
+  "subject": "미분",
+  "unit": "04 접선의 방정식",
+  "type": "01 활용1 (접선과 교점의 관계)",
+  "source": "2023년 교육청 고3공통 7월 > 공통범위 > 19 [3점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:-": 12.43,
+      "latex:=": 11.065,
+      "kiwi:이": 9.62,
+      "latex:x": 9.608,
+      "latex:3": 9.356,
+      "latex:a": 8.979,
+      "latex:{": 8.386,
+      "latex:}": 8.195,
+      "latex:)": 6.545,
+      "latex:(": 6.406,
+      "latex:\\theta": 6.212,
+      "latex:f": 6.096,
+      "kiwi:의": 5.976,
+      "latex:10": 5.477,
+      "latex:k": 5.388,
+      "latex:\\cdots": 5.246,
+      "latex:y": 4.73,
+      "latex:6": 4.26,
+      "latex:\\right": 3.758,
+      "latex:r": 3.715
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:11:50.791968+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:11:50.791981+00:00",
+      "usage": {
+        "prompt_token_count": 361,
+        "candidates_token_count": 536,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 897,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 536,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 361,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 361
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 897,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "2Vvvaob4IpToz7IP6Mrp0AI",
+      "latency_seconds": 9.027,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "1. 곡선 $f(x) = x^3 - 10$ 위의 점 $\\mathrm{P}(-2, -18)$에서의 접선의 방정식을 구합니다.\n   $f'(x) = 3x^2$이므로, $x = -2$에서의 미분계수는 $f'(-2) = 3(-2)^2 = 12$입니다.\n   따라서 접선의 방정식은 $y - (-18) = 12(x - (-2))$, 즉 $y = 12x + 24 - 18$이 되어 $y = 12x + 6$입니다.\n\n2. 곡선 $g(x) = x^3 + k$ 위의 점 $\\mathrm{Q}(a, a^3 + k)$에서의 접선이 $y = 12x + 6$과 일치해야 합니다.\n   $g'(x) = 3x^2$이므로, 점 $\\mathrm{Q}$에서의 접선의 기울기는 $3a^2 = 12$입니다.\n   $a^2 = 4$에서 $a = 2$ 또는 $a = -2$입니다.\n\n3. 접선의 방정식이 $y = 12x + 6$과 일치해야 하므로, 점 $\\mathrm{Q}$에서의 접선 식 $y - (a^3 + k) = 12(x - a)$를 정리하면 $y = 12x - 12a + a^3 + k$입니다.\n   이 식이 $y = 12x + 6$과 같아야 하므로, 상수항끼리 비교하면 $-12a + a^3 + k = 6$입니다.\n\n   - $a = 2$일 때: $-12(2) + 2^3 + k = 6 \\implies -24 + 8 + k = 6 \\implies -16 + k = 6 \\implies k = 22$\n   - $a = -2$일 때: $-12(-2) + (-2)^3 + k = 6 \\implies 24 - 8 + k = 6 \\implies 16 + k = 6 \\implies k = -10$\n\n4. 문제에서 $k$는 양수라고 하였으므로 $k = 22$입니다.\n\n최종정답: 22",
+  "usage": {
+    "prompt_token_count": 361,
+    "candidates_token_count": 536,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 897,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 536,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 361,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 361
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 897,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "2Vvvaob4IpToz7IP6Mrp0AI",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:11:59 GMT",
+        "server": "envoy",
+        "content-length": "997",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=6221",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "6789"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "1. 곡선 $f(x) = x^3 - 10$ 위의 점 $\\mathrm{P}(-2, -18)$에서의 접선의 방정식을 구합니다.\n   $f'(x) = 3x^2$이므로, $x = -2$에서의 미분계수는 $f'(-2) = 3(-2)^2 = 12$입니다.\n   따라서 접선의 방정식은 $y - (-18) = 12(x - (-2))$, 즉 $y = 12x + 24 - 18$이 되어 $y = 12x + 6$입니다.\n\n2. 곡선 $g(x) = x^3 + k$ 위의 점 $\\mathrm{Q}(a, a^3 + k)$에서의 접선이 $y = 12x + 6$과 일치해야 합니다.\n   $g'(x) = 3x^2$이므로, 점 $\\mathrm{Q}$에서의 접선의 기울기는 $3a^2 = 12$입니다.\n   $a^2 = 4$에서 $a = 2$ 또는 $a = -2$입니다.\n\n3. 접선의 방정식이 $y = 12x + 6$과 일치해야 하므로, 점 $\\mathrm{Q}$에서의 접선 식 $y - (a^3 + k) = 12(x - a)$를 정리하면 $y = 12x - 12a + a^3 + k$입니다.\n   이 식이 $y = 12x + 6$과 같아야 하므로, 상수항끼리 비교하면 $-12a + a^3 + k = 6$입니다.\n\n   - $a = 2$일 때: $-12(2) + 2^3 + k = 6 \\implies -24 + 8 + k = 6 \\implies -16 + k = 6 \\implies k = 22$\n   - $a = -2$일 때: $-12(-2) + (-2)^3 + k = 6 \\implies 24 - 8 + k = 6 \\implies 16 + k = 6 \\implies k = -10$\n\n4. 문제에서 $k$는 양수라고 하였으므로 $k = 22$입니다.\n\n최종정답: 22",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0T4i-1yQyPt8fLozgzCep5ItgJjAxgVlvVes6J6hGuTga928j56YCVe9WvZK-upoSpXWPnG6gsECtjzmP2TlYLnRbm3t_zzsIaJjhq8hof3huITOmL2nEtrk1SCnHyk-pA9-Hh73zlgGtITmTK",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "2Vvvaob4IpToz7IP6Mrp0AI",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 536,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 361,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 361
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 897,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 9.027,
+  "completed_at": "2026-11-07T17:11:59.818753+00:00",
+  "evaluation": {
+    "predicted_answer": "22",
+    "correct": true,
+    "status": "correct",
+    "reason": "numeric_constant_comparison_tolerance_1e-9",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "$22$",
+    "predicted_kind": "value",
+    "predicted_numeric_value": 22.0
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

@@ -1,0 +1,209 @@
+{
+  "id": "trig_2_003",
+  "method": "baseline",
+  "input_text": "좌표평면 위에 두 점 ${\\mathrm{{P}}} (a , b)$, $\\mathrm{Q} \\left( a^{2} , - 2 b^{2} \\right) \\quad \\left( a > 0 , b > 0 \\right)$이 있다. 두 동경 ${\\mathrm{{O P}}}$, ${\\mathrm{{O Q}}}$가 나타내는 각의 크기를 각각 $\\theta_{1}$, $\\theta_{2}$라 하자. $\\tan \\theta_{1} + \\tan \\theta_{2} = 0$일 때, $\\sin \\theta_{1}$의 값은?\n(단, ${\\mathrm{{O}}}$는 원점이고, $x$축의 양의 방향을 시초선으로 한다.)\n① $\\frac{2}{5}$\t\t② $\\frac{\\sqrt{5}}{5}$\t\t③ $\\frac{\\sqrt{6}}{5}$\n④ $\\frac{\\sqrt{7}}{5}$\t⑤ $\\frac{2 \\sqrt{2}}{5}$\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "a0169eefdb5a835921ddfdc54fc4dc24c127f79d7b24f1d2a70a5eb499d9a812",
+  "reference": {
+    "answer_text": "②",
+    "kind": "choice",
+    "choice": 2,
+    "value_text": "$\\frac{\\sqrt{5}}{5}$",
+    "source": {
+      "id": "trig_2_003",
+      "source_file": "모의고사_삼각함수_문제_2.hml",
+      "source_sha256": "2a36b54c30c9b890ee90fe84dc6c2b62847494cb5830bd51de8b1fb6877d7cc2",
+      "original_number": 3,
+      "current_number": 3
+    },
+    "numeric_value": 0.447213595499958,
+    "gradable": true
+  },
+  "reference_answer_text": "②",
+  "reference_solution": "[정답] ②\n\n[해설]\n$a > 0$이므로 $\\tan \\theta_{1} = \\frac{b}{a}$, $\\tan \\theta_{2} = - \\frac{2 b^{2}}{a^{2}}$\n$\\tan \\theta_{1} + \\tan \\theta_{2} = \\frac{b}{a} + \\left( - \\frac{2 b^{2}}{a^{2}} \\right) = \\frac{b (a - 2 b)}{a^{2}} = 0$에서\n$b > 0$이므로 $a = 2 b$\n따라서 $\\sin \\theta_{1} = \\frac{b}{\\sqrt{a^{2} + b^{2}}} = \\frac{b}{\\sqrt{5 b^{2}}} = \\frac{\\sqrt{5}}{5}$\n",
+  "problem_text": "좌표평면 위에 두 점 ${\\mathrm{{P}}} (a , b)$, $\\mathrm{Q} \\left( a^{2} , - 2 b^{2} \\right) \\quad \\left( a > 0 , b > 0 \\right)$이 있다. 두 동경 ${\\mathrm{{O P}}}$, ${\\mathrm{{O Q}}}$가 나타내는 각의 크기를 각각 $\\theta_{1}$, $\\theta_{2}$라 하자. $\\tan \\theta_{1} + \\tan \\theta_{2} = 0$일 때, $\\sin \\theta_{1}$의 값은?\n(단, ${\\mathrm{{O}}}$는 원점이고, $x$축의 양의 방향을 시초선으로 한다.)\n① $\\frac{2}{5}$\t\t② $\\frac{\\sqrt{5}}{5}$\t\t③ $\\frac{\\sqrt{6}}{5}$\n④ $\\frac{\\sqrt{7}}{5}$\t⑤ $\\frac{2 \\sqrt{2}}{5}$\n",
+  "subject": "삼각함수",
+  "unit": "05 삼각함수의 정의",
+  "type": "01 정의1 (삼각함수의 뜻)",
+  "source": "2022년 교육청 고2공통 11월 > 13 [3점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:46:26.893905+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:46:26.893921+00:00",
+      "usage": {
+        "prompt_token_count": 257,
+        "candidates_token_count": 422,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 679,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 422,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 257,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 257
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 679,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "syvvasHfG5iQ-8YP3vykuAc",
+      "latency_seconds": 9.604,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "주어진 두 점 $\\mathrm{P}(a, b)$와 $\\mathrm{Q}(a^2, -2b^2)$에 대하여, 각 동경이 나타내는 각을 $\\theta_1, \\theta_2$라 하면 탄젠트의 정의에 의해 다음과 같습니다.\n$$\\tan \\theta_1 = \\frac{b}{a}, \\quad \\tan \\theta_2 = \\frac{-2b^2}{a^2}$$\n\n문제에서 $\\tan \\theta_1 + \\tan \\theta_2 = 0$이라고 하였으므로,\n$$\\frac{b}{a} + \\left( -\\frac{2b^2}{a^2} \\right) = 0$$\n양변을 $\\frac{b}{a}$로 나눕니다($a>0, b>0$이므로 $\\frac{b}{a} \\neq 0$).\n$$1 - \\frac{2b}{a} = 0 \\implies \\frac{2b}{a} = 1 \\implies a = 2b$$\n\n이제 $\\tan \\theta_1 = \\frac{b}{a} = \\frac{b}{2b} = \\frac{1}{2}$입니다.\n$\\theta_1$은 $a>0, b>0$이므로 제1사분면의 각입니다. $\\tan \\theta_1 = \\frac{1}{2}$인 직각삼각형을 생각하면 밑변의 길이를 $2$, 높이를 $1$로 둘 수 있고, 빗변의 길이는 $\\sqrt{2^2 + 1^2} = \\sqrt{5}$가 됩니다.\n\n따라서 $\\sin \\theta_1$의 값은 다음과 같습니다.\n$$\\sin \\theta_1 = \\frac{\\text{높이}}{\\text{빗변}} = \\frac{1}{\\sqrt{5}} = \\frac{\\sqrt{5}}{5}$$\n\n최종정답: ②",
+  "usage": {
+    "prompt_token_count": 257,
+    "candidates_token_count": 422,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 679,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 422,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 257,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 257
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 679,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "syvvasHfG5iQ-8YP3vykuAc",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:46:36 GMT",
+        "server": "envoy",
+        "content-length": "1052",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=9058",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "9506"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "주어진 두 점 $\\mathrm{P}(a, b)$와 $\\mathrm{Q}(a^2, -2b^2)$에 대하여, 각 동경이 나타내는 각을 $\\theta_1, \\theta_2$라 하면 탄젠트의 정의에 의해 다음과 같습니다.\n$$\\tan \\theta_1 = \\frac{b}{a}, \\quad \\tan \\theta_2 = \\frac{-2b^2}{a^2}$$\n\n문제에서 $\\tan \\theta_1 + \\tan \\theta_2 = 0$이라고 하였으므로,\n$$\\frac{b}{a} + \\left( -\\frac{2b^2}{a^2} \\right) = 0$$\n양변을 $\\frac{b}{a}$로 나눕니다($a>0, b>0$이므로 $\\frac{b}{a} \\neq 0$).\n$$1 - \\frac{2b}{a} = 0 \\implies \\frac{2b}{a} = 1 \\implies a = 2b$$\n\n이제 $\\tan \\theta_1 = \\frac{b}{a} = \\frac{b}{2b} = \\frac{1}{2}$입니다.\n$\\theta_1$은 $a>0, b>0$이므로 제1사분면의 각입니다. $\\tan \\theta_1 = \\frac{1}{2}$인 직각삼각형을 생각하면 밑변의 길이를 $2$, 높이를 $1$로 둘 수 있고, 빗변의 길이는 $\\sqrt{2^2 + 1^2} = \\sqrt{5}$가 됩니다.\n\n따라서 $\\sin \\theta_1$의 값은 다음과 같습니다.\n$$\\sin \\theta_1 = \\frac{\\text{높이}}{\\text{빗변}} = \\frac{1}{\\sqrt{5}} = \\frac{\\sqrt{5}}{5}$$\n\n최종정답: ②",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TCvjsftnWQP3DkbVR6RVh9EDgG4oqhM3VBzdBY0-VXNPbfukG3sJojmvkfubqhWN1FaJpmhOBtPXYSGIrdgAOe2qgEl7Ou-TbQZnKN2vP6ZugIL6Z31XIoFy4lT6YlgNYwe506ztUplG-cGTV",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "syvvasHfG5iQ-8YP3vykuAc",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 422,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 257,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 257
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 679,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 9.604,
+  "completed_at": "2026-11-07T13:46:36.498351+00:00",
+  "evaluation": {
+    "predicted_answer": "②",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "②",
+    "predicted_kind": "choice",
+    "predicted_choice": 2
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "687cde4089b86c8721af0d0576b588a8f6386f45c5818fa3010c6551110bb5c3",
+    "imported_at": "2026-11-07T16:57:38.409459+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

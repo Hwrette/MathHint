@@ -1,0 +1,231 @@
+{
+  "id": "diff_2_029",
+  "method": "regression_hint",
+  "input_text": "함수 $f \\left( x \\right) = 2 x^{3} - 6 x + a$의 극솟값이 $\\mathrm{2}$일 때, 상수 $a$의 값은?\n① $6$\t\t② $7$\t\t③ $8$\n④ $9$ \t\t⑤ $10$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:x\":12.967,\"latex:=\":9.195,\"latex:a\":8.189,\"latex:)\":7.38,\"latex:(\":7.334,\"latex:f\":6.276,\"latex:\\\\right\":5.896,\"latex:\\\\left\":5.886,\"latex:3\":5.862,\"latex:+\":5.19,\"latex:}\":4.887,\"latex:0\":4.801,\"latex:{\":4.796,\"kiwi:이\":4.0,\"latex:\\\\theta\":3.79,\"latex:-\":3.678,\"latex:\\\\cdots\":3.377,\"latex:10\":3.373,\"latex:'\":2.875,\"latex:2\":2.612}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "6e3199b47f5a296851339bb567ebfedb4ad67582f502816402f98628b978a502",
+  "reference": {
+    "answer_text": "①",
+    "kind": "choice",
+    "choice": 1,
+    "value_text": "$6$",
+    "source": {
+      "id": "diff_2_029",
+      "source_file": "모의고사_미분_문제_2.hml",
+      "source_sha256": "bdf632f0269bd027f72fcf686c276a8040aa5cb2b985b26c7a2fe65391d878af",
+      "original_number": 29,
+      "current_number": 29
+    },
+    "numeric_value": 6.0,
+    "gradable": true
+  },
+  "reference_answer_text": "①",
+  "reference_solution": "[정답] ①\n\n[해설]\n$f' \\left( x \\right)$$= 6 x^{2} - 6$\n$= 6 \\left( x + 1 \\right) \\left( x - 1 \\right)$\n$f' \\left( x \\right) = 0$에서 $x = - 1$ 또는 $x = 1$\n함수 $f \\left( x \\right)$의 증가와 감소를 표로 나타내면\n\n$x$\t$\\cdots$\t$\\mathrm{- 1}$\t$\\cdots$\t$\\mathrm{1}$\t$\\cdots$\n$f' \\left( x \\right)$\t+\t$\\mathrm{0}$\t-\t$\\mathrm{0}$\t+\n$f \\left( x \\right)$\t$\\nearrow$\t$a + 4$\t$\\searrow$\t$a - 4$\t$\\nearrow$\n\n함수 $f \\left( x \\right)$는 $x = 1$에서 극솟값 $a - 4$를 갖는다.\n따라서\n$a - 4 = 2$, $a = 6$\n",
+  "problem_text": "함수 $f \\left( x \\right) = 2 x^{3} - 6 x + a$의 극솟값이 $\\mathrm{2}$일 때, 상수 $a$의 값은?\n① $6$\t\t② $7$\t\t③ $8$\n④ $9$ \t\t⑤ $10$\n",
+  "subject": "미분",
+  "unit": "05 함수의 증가와 감소",
+  "type": "02 극대와 극소2 (삼차함수의 극대와 극소)",
+  "source": "2023년 교육청 고3공통 4월(5_10시행) > 공통범위 > 4 [3점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:x": 12.967,
+      "latex:=": 9.195,
+      "latex:a": 8.189,
+      "latex:)": 7.38,
+      "latex:(": 7.334,
+      "latex:f": 6.276,
+      "latex:\\right": 5.896,
+      "latex:\\left": 5.886,
+      "latex:3": 5.862,
+      "latex:+": 5.19,
+      "latex:}": 4.887,
+      "latex:0": 4.801,
+      "latex:{": 4.796,
+      "kiwi:이": 4.0,
+      "latex:\\theta": 3.79,
+      "latex:-": 3.678,
+      "latex:\\cdots": 3.377,
+      "latex:10": 3.373,
+      "latex:'": 2.875,
+      "latex:2": 2.612
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:11:59.824003+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:11:59.824032+00:00",
+      "usage": {
+        "prompt_token_count": 351,
+        "candidates_token_count": 267,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 618,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 267,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 351,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 351
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 618,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "41vvas6oHMbg_uMP4K3vAQ",
+      "latency_seconds": 11.648,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $f(x) = 2x^3 - 6x + a$의 극값을 구하기 위해 도함수를 구하면 다음과 같습니다.\n\n$f'(x) = 6x^2 - 6$\n\n극값을 갖는 지점을 찾기 위해 $f'(x) = 0$으로 놓으면,\n$6(x^2 - 1) = 0$\n$6(x - 1)(x + 1) = 0$\n따라서 $x = 1$ 또는 $x = -1$입니다.\n\n함수 $f(x)$의 증감을 조사하면 $x = -1$에서 극댓값을 갖고, $x = 1$에서 극솟값을 갖습니다.\n문제에서 극솟값이 $2$라고 하였으므로, $f(1) = 2$가 성립해야 합니다.\n\n$f(1) = 2(1)^3 - 6(1) + a = 2$\n$2 - 6 + a = 2$\n$-4 + a = 2$\n$a = 6$\n\n따라서 상수 $a$의 값은 $6$입니다.\n\n최종정답: ①",
+  "usage": {
+    "prompt_token_count": 351,
+    "candidates_token_count": 267,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 618,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 267,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 351,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 351
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 618,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "41vvas6oHMbg_uMP4K3vAQ",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:12:11 GMT",
+        "server": "envoy",
+        "content-length": "842",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=8021",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "8496"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $f(x) = 2x^3 - 6x + a$의 극값을 구하기 위해 도함수를 구하면 다음과 같습니다.\n\n$f'(x) = 6x^2 - 6$\n\n극값을 갖는 지점을 찾기 위해 $f'(x) = 0$으로 놓으면,\n$6(x^2 - 1) = 0$\n$6(x - 1)(x + 1) = 0$\n따라서 $x = 1$ 또는 $x = -1$입니다.\n\n함수 $f(x)$의 증감을 조사하면 $x = -1$에서 극댓값을 갖고, $x = 1$에서 극솟값을 갖습니다.\n문제에서 극솟값이 $2$라고 하였으므로, $f(1) = 2$가 성립해야 합니다.\n\n$f(1) = 2(1)^3 - 6(1) + a = 2$\n$2 - 6 + a = 2$\n$-4 + a = 2$\n$a = 6$\n\n따라서 상수 $a$의 값은 $6$입니다.\n\n최종정답: ①",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TZSUDLDsw4_RYYJuCZHf9zZmYLgBk7Rsr78GLa79TV4nLgk25WjmwnBYy85v66cb_MYxXSjJGaF-b_AO5bGGEUmMkiSCzVLavkm54EudL_A5JNZ_sMNgYQ2t1EAK0nKrcTyPelDMF_LILf7ok",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "41vvas6oHMbg_uMP4K3vAQ",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 267,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 351,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 351
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 618,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 11.648,
+  "completed_at": "2026-11-07T17:12:11.471945+00:00",
+  "evaluation": {
+    "predicted_answer": "①",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "①",
+    "predicted_kind": "choice",
+    "predicted_choice": 1
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

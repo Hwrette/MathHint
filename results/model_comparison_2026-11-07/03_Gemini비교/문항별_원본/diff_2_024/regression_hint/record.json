@@ -1,0 +1,231 @@
+{
+  "id": "diff_2_024",
+  "method": "regression_hint",
+  "input_text": "최고차항의 계수가 $\\mathrm{1}$인 삼차함수 $f (x)$에 대하여 곡선 $y = f (x)$ 위의 점 $(- 2 , f (- 2))$에서의 접선과 곡선 $y = f (x)$ 위의 점 $(2 , 3)$에서의 접선이 점 $(1 , 3)$에서 만날 때, $f (0)$의 값은?\n① $\\mathrm{31}$\t\t② $\\mathrm{33}$\t\t③ $\\mathrm{35}$\n④ $\\mathrm{37}$\t\t⑤ $\\mathrm{39}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:-\":15.623,\"latex:=\":11.928,\"latex:)\":11.716,\"latex:(\":11.486,\"latex:f\":9.245,\"latex:r\":8.853,\"latex:a\":8.446,\"latex:\\\\left\":8.141,\"kiwi:이\":8.116,\"latex:+\":8.049,\"latex:\\\\right\":7.93,\"latex:1\":6.822,\"kiwi:에서\":5.012,\"latex:3\":4.954,\"latex:|\":4.52,\"latex:'\":4.395,\"latex:y\":3.503,\"latex:11\":3.224,\"latex:^\":3.213,\"kiwi:므로\":3.018}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "0e0f7d6d29686bd340a9f74b14dbf805cf9d8e3ebd756415e7c835c62a1a820f",
+  "reference": {
+    "answer_text": "③",
+    "kind": "choice",
+    "choice": 3,
+    "value_text": "$\\mathrm{35}$",
+    "source": {
+      "id": "diff_2_024",
+      "source_file": "모의고사_미분_문제_2.hml",
+      "source_sha256": "bdf632f0269bd027f72fcf686c276a8040aa5cb2b985b26c7a2fe65391d878af",
+      "original_number": 24,
+      "current_number": 24
+    },
+    "numeric_value": 35.0,
+    "gradable": true
+  },
+  "reference_answer_text": "③",
+  "reference_solution": "[정답] ③\n\n[해설]\n곡선 $y = f \\left( x \\right)$ 위의 점 $\\left( 2 , 3 \\right)$에서의 접선이 점 $\\left( 1 , 3 \\right)$을 지나므로 함수 $y = f \\left( x \\right)$의 그래프는 $x = 2$에서 직선 $y = 3$과 접한다.\n$f \\left( x \\right) = \\left( x - 2 \\right)^{2} \\left( x - a \\right) + 3$ ($a$는 상수)\n으로 놓으면    $f' \\left( x \\right) = \\left( x - 2 \\right) \\left( 3 x - 2 a - 2 \\right)$\n또한 곡선 $y = f \\left( x \\right)$ 위의 점 $\\left( - 2 , f \\left( - 2 \\right) \\right)$에서의 접선의 방정식은 $f \\left( - 2 \\right) = - 16 a - 29$, $f' \\left( - 2 \\right) = 8 a + 32$이므로\n$y = \\left( 8 a + 32 \\right) \\left( x + 2 \\right) - 16 a - 29$\n이 직선이 점 $\\left( 1 , 3 \\right)$을 지나므로 $x = 1$, $y = 3$을 대입하면\n$3 = \\left( 8 a + 32 \\right) \\times 3 - 16 a - 29$,    $a = - 8$\n$\\therefore$ $f \\left( x \\right) = \\left( x - 2 \\right)^{2} \\left( x + 8 \\right) + 3$\n$\\therefore$ $f \\left( 0 \\right) = 35$\n",
+  "problem_text": "최고차항의 계수가 $\\mathrm{1}$인 삼차함수 $f (x)$에 대하여 곡선 $y = f (x)$ 위의 점 $(- 2 , f (- 2))$에서의 접선과 곡선 $y = f (x)$ 위의 점 $(2 , 3)$에서의 접선이 점 $(1 , 3)$에서 만날 때, $f (0)$의 값은?\n① $\\mathrm{31}$\t\t② $\\mathrm{33}$\t\t③ $\\mathrm{35}$\n④ $\\mathrm{37}$\t\t⑤ $\\mathrm{39}$\n",
+  "subject": "미분",
+  "unit": "04 접선의 방정식",
+  "type": "05 활용5 (함수 구하기)",
+  "source": "2023년(2024학년도) 평가원 고3공통 9월 > 공통범위 > 10 [4점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:-": 15.623,
+      "latex:=": 11.928,
+      "latex:)": 11.716,
+      "latex:(": 11.486,
+      "latex:f": 9.245,
+      "latex:r": 8.853,
+      "latex:a": 8.446,
+      "latex:\\left": 8.141,
+      "kiwi:이": 8.116,
+      "latex:+": 8.049,
+      "latex:\\right": 7.93,
+      "latex:1": 6.822,
+      "kiwi:에서": 5.012,
+      "latex:3": 4.954,
+      "latex:|": 4.52,
+      "latex:'": 4.395,
+      "latex:y": 3.503,
+      "latex:11": 3.224,
+      "latex:^": 3.213,
+      "kiwi:므로": 3.018
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:11:51.954419+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:11:51.954431+00:00",
+      "usage": {
+        "prompt_token_count": 418,
+        "candidates_token_count": 681,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 1099,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 681,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 418,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 418
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 1099,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "3lvvaojWIMukmtkP5YTfgQY",
+      "latency_seconds": 75.782,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "삼차함수 $f(x)$의 최고차항의 계수가 1이므로 $f(x) = x^3 + ax^2 + bx + c$라 할 수 있습니다.\n\n점 $(2, 3)$에서의 접선이 점 $(1, 3)$을 지나므로, 이 접선은 $y=3$인 상수함수입니다. 따라서 $f'(2) = 0$이고 $f(2) = 3$입니다.\n$f'(x) = 3x^2 + 2ax + b$이므로, $f'(2) = 12 + 4a + b = 0$에서 $b = -4a - 12$입니다.\n$f(2) = 8 + 4a + 2b + c = 3$에 $b$를 대입하면,\n$8 + 4a + 2(-4a - 12) + c = 3 \\implies 8 + 4a - 8a - 24 + c = 3 \\implies c = 4a + 19$입니다.\n\n이제 점 $(-2, f(-2))$에서의 접선이 점 $(1, 3)$을 지난다는 조건을 이용합니다.\n$f(-2) = (-2)^3 + a(-2)^2 + b(-2) + c = -8 + 4a - 2b + c$\n$b = -4a - 12, c = 4a + 19$를 대입하면,\n$f(-2) = -8 + 4a - 2(-4a - 12) + (4a + 19) = -8 + 4a + 8a + 24 + 4a + 19 = 16a + 35$입니다.\n\n접선의 기울기는 $f'(-2) = 3(-2)^2 + 2a(-2) + b = 12 - 4a + b$입니다.\n$b = -4a - 12$를 대입하면 $f'(-2) = 12 - 4a - 4a - 12 = -8a$입니다.\n점 $(-2, 16a + 35)$를 지나고 기울기가 $-8a$인 접선의 방정식은\n$y - (16a + 35) = -8a(x + 2)$입니다.\n이 직선이 점 $(1, 3)$을 지나므로,\n$3 - (16a + 35) = -8a(1 + 2)$\n$-16a - 32 = -24a$\n$8a = 32 \\implies a = 4$입니다.\n\n$a = 4$를 $c = 4a + 19$에 대입하면,\n$f(0) = c = 4(4) + 19 = 16 + 19 = 35$입니다.\n\n최종정답: ③",
+  "usage": {
+    "prompt_token_count": 418,
+    "candidates_token_count": 681,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 1099,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 681,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 418,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 418
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1099,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "3lvvaojWIMukmtkP5YTfgQY",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:13:07 GMT",
+        "server": "envoy",
+        "content-length": "1070",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=69179",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "69655"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "삼차함수 $f(x)$의 최고차항의 계수가 1이므로 $f(x) = x^3 + ax^2 + bx + c$라 할 수 있습니다.\n\n점 $(2, 3)$에서의 접선이 점 $(1, 3)$을 지나므로, 이 접선은 $y=3$인 상수함수입니다. 따라서 $f'(2) = 0$이고 $f(2) = 3$입니다.\n$f'(x) = 3x^2 + 2ax + b$이므로, $f'(2) = 12 + 4a + b = 0$에서 $b = -4a - 12$입니다.\n$f(2) = 8 + 4a + 2b + c = 3$에 $b$를 대입하면,\n$8 + 4a + 2(-4a - 12) + c = 3 \\implies 8 + 4a - 8a - 24 + c = 3 \\implies c = 4a + 19$입니다.\n\n이제 점 $(-2, f(-2))$에서의 접선이 점 $(1, 3)$을 지난다는 조건을 이용합니다.\n$f(-2) = (-2)^3 + a(-2)^2 + b(-2) + c = -8 + 4a - 2b + c$\n$b = -4a - 12, c = 4a + 19$를 대입하면,\n$f(-2) = -8 + 4a - 2(-4a - 12) + (4a + 19) = -8 + 4a + 8a + 24 + 4a + 19 = 16a + 35$입니다.\n\n접선의 기울기는 $f'(-2) = 3(-2)^2 + 2a(-2) + b = 12 - 4a + b$입니다.\n$b = -4a - 12$를 대입하면 $f'(-2) = 12 - 4a - 4a - 12 = -8a$입니다.\n점 $(-2, 16a + 35)$를 지나고 기울기가 $-8a$인 접선의 방정식은\n$y - (16a + 35) = -8a(x + 2)$입니다.\n이 직선이 점 $(1, 3)$을 지나므로,\n$3 - (16a + 35) = -8a(1 + 2)$\n$-16a - 32 = -24a$\n$8a = 32 \\implies a = 4$입니다.\n\n$a = 4$를 $c = 4a + 19$에 대입하면,\n$f(0) = c = 4(4) + 19 = 16 + 19 = 35$입니다.\n\n최종정답: ③",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TdwRHNGkfLBCGG2P0B2obkXH7uqddnxbPk0oL038WVTqmCyrHSYQdVBu-C4OAO9blI7q8klyAErdzsadToxlh6wOEkShlhe2dabwTza_QEln-MYZ5LAy5hM8OTAsXSBKVi1hUEOiqKrmxi3yi",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "3lvvaojWIMukmtkP5YTfgQY",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 681,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 418,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 418
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1099,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 75.782,
+  "completed_at": "2026-11-07T17:13:07.736048+00:00",
+  "evaluation": {
+    "predicted_answer": "③",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "③",
+    "predicted_kind": "choice",
+    "predicted_choice": 3
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

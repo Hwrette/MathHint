@@ -1,0 +1,6 @@
+{
+  "train_pc1_vs_total_token_count_pearson_r": 0.6405813849920092,
+  "train_pc1_vs_vector_l2_norm_pearson_r": 0.8528137494156791,
+  "interpretation": "Raw counts and Euclidean distance can reflect document length as well as mathematical content.",
+  "test_used_to_choose_transform": false
+}

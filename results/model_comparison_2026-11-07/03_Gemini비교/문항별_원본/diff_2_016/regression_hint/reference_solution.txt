@@ -1,0 +1,7 @@
+[정답] $22$
+
+[해설]
+곡선 $y = f \left( x \right)$ 위의 점 $\left( 3 , 2 \right)$에서의 접선의 기울기가 $\mathrm{4}$이므로 $f \left( 3 \right) = 2$, $f' \left( 3 \right) = 4$
+$g \left( x \right) = \left( x + 2 \right) f \left( x \right)$에서
+$g' \left( x \right) = f \left( x \right) + \left( x + 2 \right) f' \left( x \right)$이므로
+$g' \left( 3 \right) = f \left( 3 \right) + 5 f' \left( 3 \right) = 2 + 5 \times 4 = 22$

@@ -1,0 +1,5 @@
+최고차항의 계수가 $\mathrm{1}$이고 $f (0) = 0$인 삼차함수 $f (x)$가
+$\lim_{x \rightarrow a} \frac{f \left( x \right) - 1}{x - a} = 3$
+을 만족시킨다. 곡선 $y = f (x)$ 위의 점 $(a , f (a))$에서의 접선의 $y$절편이 $\mathrm{4}$일 때, $f (1)$의 값은? (단, $a$는 상수이다.)
+① $\mathrm{- 1}$		② $\mathrm{- 2}$		③ $\mathrm{- 3}$
+④ $\mathrm{- 4}$		⑤ $\mathrm{- 5}$

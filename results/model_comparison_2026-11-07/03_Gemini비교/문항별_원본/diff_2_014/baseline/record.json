@@ -1,0 +1,260 @@
+{
+  "id": "diff_2_014",
+  "method": "baseline",
+  "input_text": "다항함수 $f (x)$에 대하여 함수 $g (x)$를\n$g \\left( x \\right) = \\left( x^{2} - 2 x \\right) f \\left( x \\right)$\n라 하자. $g' (0) + g' (2) = 16$일 때, $f (2) - f (0)$의 값은?\n① $\\mathrm{6}$\t\t② $\\mathrm{8}$\t\t③ $\\mathrm{10}$\n④ $\\mathrm{12}$\t\t⑤ $\\mathrm{14}$\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "15c0bca230809ac74f68179ef336810d1e4cb768f3222ae29224d1fb905261e1",
+  "reference": {
+    "answer_text": "②",
+    "kind": "choice",
+    "choice": 2,
+    "value_text": "$\\mathrm{8}$",
+    "source": {
+      "id": "diff_2_014",
+      "source_file": "모의고사_미분_문제_2.hml",
+      "source_sha256": "bdf632f0269bd027f72fcf686c276a8040aa5cb2b985b26c7a2fe65391d878af",
+      "original_number": 14,
+      "current_number": 14
+    },
+    "numeric_value": 8.0,
+    "gradable": true
+  },
+  "reference_answer_text": "②",
+  "reference_solution": "[정답] ②\n\n[해설]\n$g \\left( x \\right) = \\left( x^{2} - 2 x \\right) f \\left( x \\right)$의 양변을 $x$에 대하여 미분하면\n$g' \\left( x \\right) = \\left( 2 x - 2 \\right) f \\left( x \\right) + \\left( x^{2} - 2 x \\right) f' \\left( x \\right)$\n$g' \\left( 0 \\right) = - 2 f \\left( 0 \\right)$, $g' \\left( 2 \\right) = 2 f \\left( 2 \\right)$\n$g' \\left( 0 \\right) + g' \\left( 2 \\right) = 2 \\left\\{ - f \\left( 0 \\right) + f \\left( 2 \\right) \\right\\} = 16$\n따라서 $f \\left( 2 \\right) - f \\left( 0 \\right) = 8$\n",
+  "problem_text": "다항함수 $f (x)$에 대하여 함수 $g (x)$를\n$g \\left( x \\right) = \\left( x^{2} - 2 x \\right) f \\left( x \\right)$\n라 하자. $g' (0) + g' (2) = 16$일 때, $f (2) - f (0)$의 값은?\n① $\\mathrm{6}$\t\t② $\\mathrm{8}$\t\t③ $\\mathrm{10}$\n④ $\\mathrm{12}$\t\t⑤ $\\mathrm{14}$\n",
+  "subject": "미분",
+  "unit": "03 미분계수와 도함수",
+  "type": "05 미분법 공식4 (곱의 미분법)",
+  "source": "2023년 교육청 고2공통 11월 > 12 [3점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:32:38.476251+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:19:57.854254+00:00",
+      "usage": {
+        "prompt_token_count": null,
+        "candidates_token_count": null,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "raw": null
+      },
+      "status": "error",
+      "error_type": "ClientError",
+      "code": 429,
+      "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 1.941765063s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.1-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '1s'}]}}",
+      "latency_seconds": 1.286,
+      "execution": 1
+    },
+    {
+      "attempt": 2,
+      "started_at": "2026-11-07T13:19:59.139957+00:00",
+      "usage": {
+        "prompt_token_count": null,
+        "candidates_token_count": null,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "raw": null
+      },
+      "status": "error",
+      "error_type": "ClientError",
+      "code": 429,
+      "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 643.036151ms.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '0s'}]}}",
+      "latency_seconds": 0.343,
+      "execution": 1
+    },
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:32:38.476268+00:00",
+      "usage": {
+        "prompt_token_count": 170,
+        "candidates_token_count": 362,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 532,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 362,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 170,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 170
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 532,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "dyjvaovCBP7nz7IPqcnX8Ac",
+      "latency_seconds": 2.094,
+      "execution": 2
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $g(x) = (x^2 - 2x)f(x)$를 미분하면 곱의 미분법에 의해 다음과 같습니다.\n$g'(x) = (2x - 2)f(x) + (x^2 - 2x)f'(x)$\n\n이제 $g'(0)$과 $g'(2)$를 각각 구합니다.\n\n1) $x = 0$을 대입하면:\n$g'(0) = (2(0) - 2)f(0) + (0^2 - 2(0))f'(0)$\n$g'(0) = -2f(0) + 0 = -2f(0)$\n\n2) $x = 2$를 대입하면:\n$g'(2) = (2(2) - 2)f(2) + (2^2 - 2(2))f'(2)$\n$g'(2) = (4 - 2)f(2) + (4 - 4)f'(2)$\n$g'(2) = 2f(2) + 0 = 2f(2)$\n\n문제에서 $g'(0) + g'(2) = 16$이라고 하였으므로, 위에서 구한 식을 대입합니다.\n$-2f(0) + 2f(2) = 16$\n\n양변을 2로 나누면:\n$f(2) - f(0) = 8$\n\n따라서 $f(2) - f(0)$의 값은 8입니다.\n\n최종정답: ②",
+  "usage": {
+    "prompt_token_count": 170,
+    "candidates_token_count": 362,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 532,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 362,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 170,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 170
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 532,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "dyjvaovCBP7nz7IPqcnX8Ac",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:32:40 GMT",
+        "server": "envoy",
+        "content-length": "851",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1469",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "2049"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $g(x) = (x^2 - 2x)f(x)$를 미분하면 곱의 미분법에 의해 다음과 같습니다.\n$g'(x) = (2x - 2)f(x) + (x^2 - 2x)f'(x)$\n\n이제 $g'(0)$과 $g'(2)$를 각각 구합니다.\n\n1) $x = 0$을 대입하면:\n$g'(0) = (2(0) - 2)f(0) + (0^2 - 2(0))f'(0)$\n$g'(0) = -2f(0) + 0 = -2f(0)$\n\n2) $x = 2$를 대입하면:\n$g'(2) = (2(2) - 2)f(2) + (2^2 - 2(2))f'(2)$\n$g'(2) = (4 - 2)f(2) + (4 - 4)f'(2)$\n$g'(2) = 2f(2) + 0 = 2f(2)$\n\n문제에서 $g'(0) + g'(2) = 16$이라고 하였으므로, 위에서 구한 식을 대입합니다.\n$-2f(0) + 2f(2) = 16$\n\n양변을 2로 나누면:\n$f(2) - f(0) = 8$\n\n따라서 $f(2) - f(0)$의 값은 8입니다.\n\n최종정답: ②",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0Tdl-HJ2qBgNC0JVGMrgZHHaqwkRBBvzCG9jFTRUnSceRmpleJNcR1vqs33xaJqRUDf_QX0mbveC2ygM43XgZEnlwMRRzioV4E7pkWmswIpFFZ-q42E0mBSm4VQb74XVBuG5ieHo7lMj2VWAYl",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "dyjvaovCBP7nz7IPqcnX8Ac",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 362,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 170,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 170
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 532,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 2.094,
+  "completed_at": "2026-11-07T13:32:40.569896+00:00",
+  "evaluation": {
+    "predicted_answer": "②",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "②",
+    "predicted_kind": "choice",
+    "predicted_choice": 2
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "prior_executions": [
+    {
+      "status": "api_error",
+      "started_at": "2026-11-07T13:19:57.854237+00:00",
+      "completed_at": "2026-11-07T13:19:59.482483+00:00",
+      "error": {
+        "code": 429,
+        "type": "ClientError",
+        "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 643.036151ms.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '0s'}]}}"
+      },
+      "response_id": null
+    }
+  ],
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "ffd770bd6594514e523e8904fb7db14336754bb3bb46fc8dce30c3e84f62a7c2",
+    "imported_at": "2026-11-07T16:57:38.369478+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

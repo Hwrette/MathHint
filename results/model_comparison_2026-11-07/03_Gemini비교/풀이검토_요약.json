@@ -1,0 +1,376 @@
+{
+  "rubric_version": "mathhint-solution-review-v1",
+  "counts": {
+    "expected_responses": 160,
+    "recorded_responses": 160,
+    "eligible_solutions": 160,
+    "excluded_non_success": 0,
+    "not_recorded_yet": 0
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "review_target_digest": "177c7dcddf8ad5aed794c4c1691a5d5008f051b52aec755f601b68462563180a",
+  "source_snapshot": {
+    "path": "/workspace/experiment_results/model_comparison_2026-11-07/generation_top_tokens/responses.jsonl",
+    "generation_folder": "/workspace/experiment_results/model_comparison_2026-11-07/generation_top_tokens",
+    "sha256": "7f3c34d3909d01f6ed29560171ced63e08c11bd0b142671b1967e0190ad8801c",
+    "bytes": 1569769,
+    "loaded_at": "2026-11-07T17:26:41.983478+00:00"
+  },
+  "mathematical_criteria": [
+    "logical_validity",
+    "enough_justification",
+    "reference_consistency"
+  ],
+  "scope": "Final answer grades are not used. API errors excluded. Unreviewed solutions never enter reviewed-rate denominators. AI suggestions and human reviews are separate.",
+  "review_kinds": {
+    "human": {
+      "baseline": {
+        "total_eligible_solutions": 80,
+        "eligible_in_this_review_kind": 80,
+        "missing_review_records": 0,
+        "overall": {
+          "appropriate": 0,
+          "inappropriate": 0,
+          "uncertain": 0,
+          "unreviewed": 80,
+          "reviewed_count": 0,
+          "decisive_count": 0,
+          "eligible_count": 80,
+          "not_reviewed_count": 80,
+          "reviewed_coverage": 0.0,
+          "appropriate_rate_on_reviewed": null,
+          "appropriate_rate_on_decisive": null
+        },
+        "mathematical_appropriateness": {
+          "appropriate": 0,
+          "inappropriate": 0,
+          "uncertain": 0,
+          "unreviewed": 80,
+          "reviewed_count": 0,
+          "decisive_count": 0,
+          "eligible_count": 80,
+          "not_reviewed_count": 80,
+          "reviewed_coverage": 0.0,
+          "appropriate_rate_on_reviewed": null,
+          "appropriate_rate_on_decisive": null
+        },
+        "criteria": {
+          "logical_validity": {
+            "appropriate": 0,
+            "inappropriate": 0,
+            "uncertain": 0,
+            "unreviewed": 80,
+            "reviewed_count": 0,
+            "decisive_count": 0,
+            "eligible_count": 80,
+            "not_reviewed_count": 80,
+            "reviewed_coverage": 0.0,
+            "appropriate_rate_on_reviewed": null,
+            "appropriate_rate_on_decisive": null
+          },
+          "enough_justification": {
+            "appropriate": 0,
+            "inappropriate": 0,
+            "uncertain": 0,
+            "unreviewed": 80,
+            "reviewed_count": 0,
+            "decisive_count": 0,
+            "eligible_count": 80,
+            "not_reviewed_count": 80,
+            "reviewed_coverage": 0.0,
+            "appropriate_rate_on_reviewed": null,
+            "appropriate_rate_on_decisive": null
+          },
+          "curriculum_scope": {
+            "appropriate": 0,
+            "inappropriate": 0,
+            "uncertain": 0,
+            "unreviewed": 80,
+            "reviewed_count": 0,
+            "decisive_count": 0,
+            "eligible_count": 80,
+            "not_reviewed_count": 80,
+            "reviewed_coverage": 0.0,
+            "appropriate_rate_on_reviewed": null,
+            "appropriate_rate_on_decisive": null
+          },
+          "reference_consistency": {
+            "appropriate": 0,
+            "inappropriate": 0,
+            "uncertain": 0,
+            "unreviewed": 80,
+            "reviewed_count": 0,
+            "decisive_count": 0,
+            "eligible_count": 80,
+            "not_reviewed_count": 80,
+            "reviewed_coverage": 0.0,
+            "appropriate_rate_on_reviewed": null,
+            "appropriate_rate_on_decisive": null
+          }
+        }
+      },
+      "regression_hint": {
+        "total_eligible_solutions": 80,
+        "eligible_in_this_review_kind": 80,
+        "missing_review_records": 0,
+        "overall": {
+          "appropriate": 0,
+          "inappropriate": 0,
+          "uncertain": 0,
+          "unreviewed": 80,
+          "reviewed_count": 0,
+          "decisive_count": 0,
+          "eligible_count": 80,
+          "not_reviewed_count": 80,
+          "reviewed_coverage": 0.0,
+          "appropriate_rate_on_reviewed": null,
+          "appropriate_rate_on_decisive": null
+        },
+        "mathematical_appropriateness": {
+          "appropriate": 0,
+          "inappropriate": 0,
+          "uncertain": 0,
+          "unreviewed": 80,
+          "reviewed_count": 0,
+          "decisive_count": 0,
+          "eligible_count": 80,
+          "not_reviewed_count": 80,
+          "reviewed_coverage": 0.0,
+          "appropriate_rate_on_reviewed": null,
+          "appropriate_rate_on_decisive": null
+        },
+        "criteria": {
+          "logical_validity": {
+            "appropriate": 0,
+            "inappropriate": 0,
+            "uncertain": 0,
+            "unreviewed": 80,
+            "reviewed_count": 0,
+            "decisive_count": 0,
+            "eligible_count": 80,
+            "not_reviewed_count": 80,
+            "reviewed_coverage": 0.0,
+            "appropriate_rate_on_reviewed": null,
+            "appropriate_rate_on_decisive": null
+          },
+          "enough_justification": {
+            "appropriate": 0,
+            "inappropriate": 0,
+            "uncertain": 0,
+            "unreviewed": 80,
+            "reviewed_count": 0,
+            "decisive_count": 0,
+            "eligible_count": 80,
+            "not_reviewed_count": 80,
+            "reviewed_coverage": 0.0,
+            "appropriate_rate_on_reviewed": null,
+            "appropriate_rate_on_decisive": null
+          },
+          "curriculum_scope": {
+            "appropriate": 0,
+            "inappropriate": 0,
+            "uncertain": 0,
+            "unreviewed": 80,
+            "reviewed_count": 0,
+            "decisive_count": 0,
+            "eligible_count": 80,
+            "not_reviewed_count": 80,
+            "reviewed_coverage": 0.0,
+            "appropriate_rate_on_reviewed": null,
+            "appropriate_rate_on_decisive": null
+          },
+          "reference_consistency": {
+            "appropriate": 0,
+            "inappropriate": 0,
+            "uncertain": 0,
+            "unreviewed": 80,
+            "reviewed_count": 0,
+            "decisive_count": 0,
+            "eligible_count": 80,
+            "not_reviewed_count": 80,
+            "reviewed_coverage": 0.0,
+            "appropriate_rate_on_reviewed": null,
+            "appropriate_rate_on_decisive": null
+          }
+        }
+      }
+    },
+    "ai_suggestion": {
+      "baseline": {
+        "total_eligible_solutions": 80,
+        "eligible_in_this_review_kind": 80,
+        "missing_review_records": 0,
+        "overall": {
+          "appropriate": 0,
+          "inappropriate": 5,
+          "uncertain": 75,
+          "unreviewed": 0,
+          "reviewed_count": 80,
+          "decisive_count": 5,
+          "eligible_count": 80,
+          "not_reviewed_count": 0,
+          "reviewed_coverage": 1.0,
+          "appropriate_rate_on_reviewed": 0.0,
+          "appropriate_rate_on_decisive": 0.0
+        },
+        "mathematical_appropriateness": {
+          "appropriate": 76,
+          "inappropriate": 4,
+          "uncertain": 0,
+          "unreviewed": 0,
+          "reviewed_count": 80,
+          "decisive_count": 80,
+          "eligible_count": 80,
+          "not_reviewed_count": 0,
+          "reviewed_coverage": 1.0,
+          "appropriate_rate_on_reviewed": 0.95,
+          "appropriate_rate_on_decisive": 0.95
+        },
+        "criteria": {
+          "logical_validity": {
+            "appropriate": 76,
+            "inappropriate": 4,
+            "uncertain": 0,
+            "unreviewed": 0,
+            "reviewed_count": 80,
+            "decisive_count": 80,
+            "eligible_count": 80,
+            "not_reviewed_count": 0,
+            "reviewed_coverage": 1.0,
+            "appropriate_rate_on_reviewed": 0.95,
+            "appropriate_rate_on_decisive": 0.95
+          },
+          "enough_justification": {
+            "appropriate": 76,
+            "inappropriate": 4,
+            "uncertain": 0,
+            "unreviewed": 0,
+            "reviewed_count": 80,
+            "decisive_count": 80,
+            "eligible_count": 80,
+            "not_reviewed_count": 0,
+            "reviewed_coverage": 1.0,
+            "appropriate_rate_on_reviewed": 0.95,
+            "appropriate_rate_on_decisive": 0.95
+          },
+          "curriculum_scope": {
+            "appropriate": 0,
+            "inappropriate": 1,
+            "uncertain": 79,
+            "unreviewed": 0,
+            "reviewed_count": 80,
+            "decisive_count": 1,
+            "eligible_count": 80,
+            "not_reviewed_count": 0,
+            "reviewed_coverage": 1.0,
+            "appropriate_rate_on_reviewed": 0.0,
+            "appropriate_rate_on_decisive": 0.0
+          },
+          "reference_consistency": {
+            "appropriate": 78,
+            "inappropriate": 2,
+            "uncertain": 0,
+            "unreviewed": 0,
+            "reviewed_count": 80,
+            "decisive_count": 80,
+            "eligible_count": 80,
+            "not_reviewed_count": 0,
+            "reviewed_coverage": 1.0,
+            "appropriate_rate_on_reviewed": 0.975,
+            "appropriate_rate_on_decisive": 0.975
+          }
+        }
+      },
+      "regression_hint": {
+        "total_eligible_solutions": 80,
+        "eligible_in_this_review_kind": 80,
+        "missing_review_records": 0,
+        "overall": {
+          "appropriate": 0,
+          "inappropriate": 7,
+          "uncertain": 73,
+          "unreviewed": 0,
+          "reviewed_count": 80,
+          "decisive_count": 7,
+          "eligible_count": 80,
+          "not_reviewed_count": 0,
+          "reviewed_coverage": 1.0,
+          "appropriate_rate_on_reviewed": 0.0,
+          "appropriate_rate_on_decisive": 0.0
+        },
+        "mathematical_appropriateness": {
+          "appropriate": 71,
+          "inappropriate": 7,
+          "uncertain": 2,
+          "unreviewed": 0,
+          "reviewed_count": 80,
+          "decisive_count": 78,
+          "eligible_count": 80,
+          "not_reviewed_count": 0,
+          "reviewed_coverage": 1.0,
+          "appropriate_rate_on_reviewed": 0.8875,
+          "appropriate_rate_on_decisive": 0.9102564102564102
+        },
+        "criteria": {
+          "logical_validity": {
+            "appropriate": 71,
+            "inappropriate": 7,
+            "uncertain": 2,
+            "unreviewed": 0,
+            "reviewed_count": 80,
+            "decisive_count": 78,
+            "eligible_count": 80,
+            "not_reviewed_count": 0,
+            "reviewed_coverage": 1.0,
+            "appropriate_rate_on_reviewed": 0.8875,
+            "appropriate_rate_on_decisive": 0.9102564102564102
+          },
+          "enough_justification": {
+            "appropriate": 75,
+            "inappropriate": 5,
+            "uncertain": 0,
+            "unreviewed": 0,
+            "reviewed_count": 80,
+            "decisive_count": 80,
+            "eligible_count": 80,
+            "not_reviewed_count": 0,
+            "reviewed_coverage": 1.0,
+            "appropriate_rate_on_reviewed": 0.9375,
+            "appropriate_rate_on_decisive": 0.9375
+          },
+          "curriculum_scope": {
+            "appropriate": 0,
+            "inappropriate": 0,
+            "uncertain": 80,
+            "unreviewed": 0,
+            "reviewed_count": 80,
+            "decisive_count": 0,
+            "eligible_count": 80,
+            "not_reviewed_count": 0,
+            "reviewed_coverage": 1.0,
+            "appropriate_rate_on_reviewed": 0.0,
+            "appropriate_rate_on_decisive": null
+          },
+          "reference_consistency": {
+            "appropriate": 77,
+            "inappropriate": 3,
+            "uncertain": 0,
+            "unreviewed": 0,
+            "reviewed_count": 80,
+            "decisive_count": 80,
+            "eligible_count": 80,
+            "not_reviewed_count": 0,
+            "reviewed_coverage": 1.0,
+            "appropriate_rate_on_reviewed": 0.9625,
+            "appropriate_rate_on_decisive": 0.9625
+          }
+        }
+      }
+    }
+  },
+  "ai_import": {
+    "accepted": 160,
+    "rejected": [],
+    "note": "AI-assisted suggestions only. Exact output-hash and evidence-quote checks are not independent verification of mathematical correctness."
+  }
+}

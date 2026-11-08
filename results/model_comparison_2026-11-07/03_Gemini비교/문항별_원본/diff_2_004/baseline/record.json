@@ -1,0 +1,202 @@
+{
+  "id": "diff_2_004",
+  "method": "baseline",
+  "input_text": "두 이차함수 $f (x)$, $g (x)$가\n$\\lim_{x \\rightarrow \\infty} \\frac{f \\left( x \\right)}{g \\left( x \\right) - x^{2}} = 1$, $\\lim_{x \\rightarrow 3} \\frac{g \\left( x \\right) - f \\left( x \\right)}{x - 3} = 8$\n을 만족시킬 때, $g (5) - f (5)$의 값을 구하시오.\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "9c49a21bc9614d68d0d2dfdc07a75481ea470eeb769bc978ef0a1be5c6d83c17",
+  "reference": {
+    "answer_text": "$20$",
+    "kind": "value",
+    "choice": null,
+    "value_text": "$20$",
+    "source": {
+      "id": "diff_2_004",
+      "source_file": "모의고사_미분_문제_2.hml",
+      "source_sha256": "bdf632f0269bd027f72fcf686c276a8040aa5cb2b985b26c7a2fe65391d878af",
+      "original_number": 4,
+      "current_number": 4
+    },
+    "numeric_value": 20.0,
+    "gradable": true
+  },
+  "reference_answer_text": "$20$",
+  "reference_solution": "[정답] $20$\n\n[해설]\n두 이차함수 $f (x)$, $g (x)$의 $x^{2}$의 계수를 각각 $a$, $b \\quad \\left( a \\ne 0 , b \\ne 0 \\right)$이라 하자.\n$\\lim_{x \\rightarrow \\infty} \\frac{f \\left( x \\right)}{g \\left( x \\right) - x^{2}} = 1$이므로\n두 다항식 $f (x)$와 $g (x) - x^{2}$의 차수는 $\\mathrm{2}$이고\n$\\frac{a}{b - 1} = 1$, $a = b - 1$, $b - a = 1$이므로 $g \\left( x \\right) - f \\left( x \\right)$는 최고차항의 계수가 $\\mathrm{1}$인 이차함수이다. $\\lim_{x \\rightarrow 3} \\frac{g (x) - f (x)}{x - 3}$의 값이 존재하므로\n다항식 $g \\left( x \\right) - f \\left( x \\right)$는 $x - 3$을 인수로 갖는다.\n$g(x)-f(x)=(x-3)(x+k)\\quad(k$는 실수$)$\n$\\lim_{x \\rightarrow 3} \\frac{g \\left( x \\right) - f \\left( x \\right)}{x - 3}$$= \\lim_{x \\rightarrow 3} \\frac{\\left( x - 3 \\right) \\left( x + k \\right)}{x - 3}$\n$= \\lim_{x \\rightarrow 3} \\left( x + k \\right) = 3 + k = 8$\n$k = 5$이므로 $g \\left( x \\right) - f \\left( x \\right) = \\left( x - 3 \\right) \\left( x + 5 \\right)$\n따라서 $g \\left( 5 \\right) - f \\left( 5 \\right) = 20$\n",
+  "problem_text": "두 이차함수 $f (x)$, $g (x)$가\n$\\lim_{x \\rightarrow \\infty} \\frac{f \\left( x \\right)}{g \\left( x \\right) - x^{2}} = 1$, $\\lim_{x \\rightarrow 3} \\frac{g \\left( x \\right) - f \\left( x \\right)}{x - 3} = 8$\n을 만족시킬 때, $g (5) - f (5)$의 값을 구하시오.\n",
+  "subject": "미분",
+  "unit": "01 함수의 극한",
+  "type": "03 해석3 (함수 구하기. 차수 결정)",
+  "source": "2023년 교육청 고2공통 9월 > 26 [4점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:09:46.406069+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:09:46.406088+00:00",
+      "usage": {
+        "prompt_token_count": 156,
+        "candidates_token_count": 962,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 1118,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 962,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 156,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 156
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 1118,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "YlvvatXrHciMqtsPmpLR4Ag",
+      "latency_seconds": 11.098,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "두 이차함수 $f(x)$와 $g(x)$에 대하여 주어진 극한 조건을 차례대로 분석합니다.\n\n**1. 첫 번째 조건 분석:**\n$\\lim_{x \\rightarrow \\infty} \\frac{f(x)}{g(x) - x^2} = 1$\n이 극한값이 1로 수렴하므로, $f(x)$와 $g(x) - x^2$은 최고차항의 계수가 같고 차수가 같은 이차식이어야 합니다.\n$f(x) = ax^2 + bx + c$라 하면, $g(x) - x^2$도 $ax^2 + \\dots$ 꼴이어야 하므로 $g(x) = (a+1)x^2 + dx + e$라고 할 수 있습니다.\n극한값이 1이 되려면 $f(x)$와 $g(x) - x^2$의 최고차항 계수가 같아야 하므로, $a = a+1$이 성립해야 하는데 이는 모순입니다.\n따라서 $g(x) - x^2$은 $f(x)$와 같은 이차항을 가져야 하므로, $g(x) = x^2 + f(x) + (\\text{상수 또는 일차식})$ 형태가 아니라, $g(x) - x^2$이 $f(x)$와 같은 이차식이어야 합니다.\n즉, $g(x) = x^2 + f(x) + h(x)$라 할 때, $\\lim_{x \\rightarrow \\infty} \\frac{f(x)}{f(x) + h(x)} = 1$이 되려면 $h(x)$는 $f(x)$보다 차수가 낮아야 합니다.\n따라서 $g(x) - f(x) = x^2 + h(x)$ (단, $h(x)$는 일차 이하의 다항식)입니다.\n\n**2. 두 번째 조건 분석:**\n$\\lim_{x \\rightarrow 3} \\frac{g(x) - f(x)}{x - 3} = 8$\n이 식은 $h(x) = g(x) - f(x) - x^2$이라 할 때, $g(x) - f(x) = x^2 + h(x)$이므로\n$\\lim_{x \\rightarrow 3} \\frac{x^2 + h(x)}{x - 3} = 8$입니다.\n분모가 $x \\rightarrow 3$일 때 0으로 가므로, 분자도 $x \\rightarrow 3$일 때 0이어야 합니다.\n$3^2 + h(3) = 0 \\implies h(3) = -9$\n$h(x)$는 일차 이하의 다항식이므로 $h(x) = mx + n$이라 하면,\n$3m + n = -9 \\implies n = -9 - 3m$\n$h(x) = mx - 9 - 3m = m(x-3) - 9$\n이를 극한식에 대입하면:\n$\\lim_{x \\rightarrow 3} \\frac{x^2 + m(x-3) - 9}{x - 3} = \\lim_{x \\rightarrow 3} \\frac{(x-3)(x+3) + m(x-3)}{x - 3} = \\lim_{x \\rightarrow 3} (x + 3 + m) = 6 + m$\n이 값이 8이 되어야 하므로 $6 + m = 8 \\implies m = 2$\n따라서 $h(x) = 2(x-3) - 9 = 2x - 15$입니다.\n\n**3. 최종 계산:**\n$g(x) - f(x) = x^2 + h(x) = x^2 + 2x - 15$\n우리가 구하고자 하는 값은 $g(5) - f(5)$이므로, 위 식에 $x=5$를 대입합니다.\n$g(5) - f(5) = 5^2 + 2(5) - 15 = 25 + 10 - 15 = 20$\n\n최종정답: 20",
+  "usage": {
+    "prompt_token_count": 156,
+    "candidates_token_count": 962,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 1118,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 962,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 156,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 156
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1118,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "YlvvatXrHciMqtsPmpLR4Ag",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:09:57 GMT",
+        "server": "envoy",
+        "content-length": "1373",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=2985",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "3133"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "두 이차함수 $f(x)$와 $g(x)$에 대하여 주어진 극한 조건을 차례대로 분석합니다.\n\n**1. 첫 번째 조건 분석:**\n$\\lim_{x \\rightarrow \\infty} \\frac{f(x)}{g(x) - x^2} = 1$\n이 극한값이 1로 수렴하므로, $f(x)$와 $g(x) - x^2$은 최고차항의 계수가 같고 차수가 같은 이차식이어야 합니다.\n$f(x) = ax^2 + bx + c$라 하면, $g(x) - x^2$도 $ax^2 + \\dots$ 꼴이어야 하므로 $g(x) = (a+1)x^2 + dx + e$라고 할 수 있습니다.\n극한값이 1이 되려면 $f(x)$와 $g(x) - x^2$의 최고차항 계수가 같아야 하므로, $a = a+1$이 성립해야 하는데 이는 모순입니다.\n따라서 $g(x) - x^2$은 $f(x)$와 같은 이차항을 가져야 하므로, $g(x) = x^2 + f(x) + (\\text{상수 또는 일차식})$ 형태가 아니라, $g(x) - x^2$이 $f(x)$와 같은 이차식이어야 합니다.\n즉, $g(x) = x^2 + f(x) + h(x)$라 할 때, $\\lim_{x \\rightarrow \\infty} \\frac{f(x)}{f(x) + h(x)} = 1$이 되려면 $h(x)$는 $f(x)$보다 차수가 낮아야 합니다.\n따라서 $g(x) - f(x) = x^2 + h(x)$ (단, $h(x)$는 일차 이하의 다항식)입니다.\n\n**2. 두 번째 조건 분석:**\n$\\lim_{x \\rightarrow 3} \\frac{g(x) - f(x)}{x - 3} = 8$\n이 식은 $h(x) = g(x) - f(x) - x^2$이라 할 때, $g(x) - f(x) = x^2 + h(x)$이므로\n$\\lim_{x \\rightarrow 3} \\frac{x^2 + h(x)}{x - 3} = 8$입니다.\n분모가 $x \\rightarrow 3$일 때 0으로 가므로, 분자도 $x \\rightarrow 3$일 때 0이어야 합니다.\n$3^2 + h(3) = 0 \\implies h(3) = -9$\n$h(x)$는 일차 이하의 다항식이므로 $h(x) = mx + n$이라 하면,\n$3m + n = -9 \\implies n = -9 - 3m$\n$h(x) = mx - 9 - 3m = m(x-3) - 9$\n이를 극한식에 대입하면:\n$\\lim_{x \\rightarrow 3} \\frac{x^2 + m(x-3) - 9}{x - 3} = \\lim_{x \\rightarrow 3} \\frac{(x-3)(x+3) + m(x-3)}{x - 3} = \\lim_{x \\rightarrow 3} (x + 3 + m) = 6 + m$\n이 값이 8이 되어야 하므로 $6 + m = 8 \\implies m = 2$\n따라서 $h(x) = 2(x-3) - 9 = 2x - 15$입니다.\n\n**3. 최종 계산:**\n$g(x) - f(x) = x^2 + h(x) = x^2 + 2x - 15$\n우리가 구하고자 하는 값은 $g(5) - f(5)$이므로, 위 식에 $x=5$를 대입합니다.\n$g(5) - f(5) = 5^2 + 2(5) - 15 = 25 + 10 - 15 = 20$\n\n최종정답: 20",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TcBdqoZLNN7aVBWITg2gxsZEWKa2PeLzx_aXON28SwkWTMGKy1LXaC3oQdmLkJS5SidfZr52czS7NLN7MpPtSgCIg2VdUhn17PVb-Tq6UXYfsCR0Hbuh81_NRlv-jhuIUMTqEwWg6bmBMqhYo",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "YlvvatXrHciMqtsPmpLR4Ag",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 962,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 156,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 156
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1118,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 11.098,
+  "completed_at": "2026-11-07T17:09:57.503690+00:00",
+  "evaluation": {
+    "predicted_answer": "20",
+    "correct": true,
+    "status": "correct",
+    "reason": "numeric_constant_comparison_tolerance_1e-9",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "$20$",
+    "predicted_kind": "value",
+    "predicted_numeric_value": 20.0
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

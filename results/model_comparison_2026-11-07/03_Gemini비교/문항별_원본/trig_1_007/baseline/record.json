@@ -1,0 +1,209 @@
+{
+  "id": "trig_1_007",
+  "method": "baseline",
+  "input_text": "$\\frac{\\pi}{2} < \\theta < \\pi$인 $\\theta$에 대하여 $\\frac{\\cos \\theta}{\\tan \\theta} + \\sin \\theta = \\sqrt{3}$일 때, $\\cos \\theta$의 값은?\n① $- \\frac{\\sqrt{6}}{3}$\t② $- \\frac{\\sqrt{3}}{3}$\t③ $- \\frac{1}{3}$\n④ $\\frac{\\sqrt{3}}{3}$\t⑤ $\\frac{\\sqrt{6}}{3}$\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "136fe6ec24981b1952778386775cfcea769e1132259e2932463ae28e617bc8b5",
+  "reference": {
+    "answer_text": "①",
+    "kind": "choice",
+    "choice": 1,
+    "value_text": "$- \\frac{\\sqrt{6}}{3}$",
+    "source": {
+      "id": "trig_1_007",
+      "source_file": "모의고사_삼각함수_문제_1.hml",
+      "source_sha256": "40e5d3256beca74c23225ea16d79b402d009340fbb175e827264f20535bad869",
+      "original_number": 7,
+      "current_number": 7
+    },
+    "numeric_value": -0.8164965809277259,
+    "gradable": true
+  },
+  "reference_answer_text": "①",
+  "reference_solution": "[정답] ①\n\n[해설]\n$\\frac{\\cos \\theta}{\\tan \\theta} + \\sin \\theta = \\sqrt{3}$에서\n$\\frac{\\cos^{2} \\theta}{\\sin \\theta} + \\sin \\theta$$= \\frac{\\cos^{2} \\theta + \\sin^{2} \\theta}{\\sin \\theta}$\n$= \\frac{1}{\\sin \\theta} = \\sqrt{3}$\n$\\sin \\theta = \\frac{1}{\\sqrt{3}}$이다.\n$\\sin^{2} \\theta + \\cos^{2} \\theta = 1$이므로\n$\\frac{1}{3} + \\cos^{2} \\theta = 1$, $\\cos^{2} \\theta = \\frac{2}{3}$\n$\\frac{\\pi}{2} < \\theta < \\pi$에서 $\\cos \\theta < 0$이다.\n따라서 $\\cos \\theta = - \\frac{\\sqrt{6}}{3}$\n",
+  "problem_text": "$\\frac{\\pi}{2} < \\theta < \\pi$인 $\\theta$에 대하여 $\\frac{\\cos \\theta}{\\tan \\theta} + \\sin \\theta = \\sqrt{3}$일 때, $\\cos \\theta$의 값은?\n① $- \\frac{\\sqrt{6}}{3}$\t② $- \\frac{\\sqrt{3}}{3}$\t③ $- \\frac{1}{3}$\n④ $\\frac{\\sqrt{3}}{3}$\t⑤ $\\frac{\\sqrt{6}}{3}$\n",
+  "subject": "삼각함수",
+  "unit": "05 삼각함수의 정의",
+  "type": "06 정의6 (삼각함수 사이의 관계. 값 구하기)",
+  "source": "2025년 교육청 고2공통 6월 > 7 [3점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:41:34.708735+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:41:34.708759+00:00",
+      "usage": {
+        "prompt_token_count": 153,
+        "candidates_token_count": 463,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 616,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 463,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 153,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 153
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 616,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "kirvavO_F8up6dkPh-mZgAY",
+      "latency_seconds": 5.271,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "주어진 식 $\\frac{\\cos \\theta}{\\tan \\theta} + \\sin \\theta = \\sqrt{3}$을 삼각함수의 정의를 이용하여 정리합니다.\n\n$\\tan \\theta = \\frac{\\sin \\theta}{\\cos \\theta}$이므로, 첫 번째 항은 다음과 같습니다.\n$\\frac{\\cos \\theta}{\\tan \\theta} = \\cos \\theta \\cdot \\frac{1}{\\tan \\theta} = \\cos \\theta \\cdot \\frac{\\cos \\theta}{\\sin \\theta} = \\frac{\\cos^2 \\theta}{\\sin \\theta}$\n\n따라서 주어진 식은 다음과 같습니다.\n$\\frac{\\cos^2 \\theta}{\\sin \\theta} + \\sin \\theta = \\sqrt{3}$\n\n$\\cos^2 \\theta = 1 - \\sin^2 \\theta$를 대입하면,\n$\\frac{1 - \\sin^2 \\theta}{\\sin \\theta} + \\sin \\theta = \\sqrt{3}$\n$\\frac{1 - \\sin^2 \\theta + \\sin^2 \\theta}{\\sin \\theta} = \\sqrt{3}$\n$\\frac{1}{\\sin \\theta} = \\sqrt{3}$\n$\\sin \\theta = \\frac{1}{\\sqrt{3}} = \\frac{\\sqrt{3}}{3}$\n\n이제 $\\cos^2 \\theta = 1 - \\sin^2 \\theta$를 이용하여 $\\cos \\theta$를 구합니다.\n$\\cos^2 \\theta = 1 - \\left(\\frac{\\sqrt{3}}{3}\\right)^2 = 1 - \\frac{3}{9} = 1 - \\frac{1}{3} = \\frac{2}{3}$\n$\\cos \\theta = \\pm \\sqrt{\\frac{2}{3}} = \\pm \\frac{\\sqrt{6}}{3}$\n\n문제에서 $\\frac{\\pi}{2} < \\theta < \\pi$ (제2사분면)라고 하였으므로, $\\cos \\theta$의 값은 음수여야 합니다.\n따라서 $\\cos \\theta = -\\frac{\\sqrt{6}}{3}$입니다.\n\n최종정답: ①",
+  "usage": {
+    "prompt_token_count": 153,
+    "candidates_token_count": 463,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 616,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 463,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 153,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 153
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 616,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "kirvavO_F8up6dkPh-mZgAY",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:41:39 GMT",
+        "server": "envoy",
+        "content-length": "960",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1562",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "2029"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "주어진 식 $\\frac{\\cos \\theta}{\\tan \\theta} + \\sin \\theta = \\sqrt{3}$을 삼각함수의 정의를 이용하여 정리합니다.\n\n$\\tan \\theta = \\frac{\\sin \\theta}{\\cos \\theta}$이므로, 첫 번째 항은 다음과 같습니다.\n$\\frac{\\cos \\theta}{\\tan \\theta} = \\cos \\theta \\cdot \\frac{1}{\\tan \\theta} = \\cos \\theta \\cdot \\frac{\\cos \\theta}{\\sin \\theta} = \\frac{\\cos^2 \\theta}{\\sin \\theta}$\n\n따라서 주어진 식은 다음과 같습니다.\n$\\frac{\\cos^2 \\theta}{\\sin \\theta} + \\sin \\theta = \\sqrt{3}$\n\n$\\cos^2 \\theta = 1 - \\sin^2 \\theta$를 대입하면,\n$\\frac{1 - \\sin^2 \\theta}{\\sin \\theta} + \\sin \\theta = \\sqrt{3}$\n$\\frac{1 - \\sin^2 \\theta + \\sin^2 \\theta}{\\sin \\theta} = \\sqrt{3}$\n$\\frac{1}{\\sin \\theta} = \\sqrt{3}$\n$\\sin \\theta = \\frac{1}{\\sqrt{3}} = \\frac{\\sqrt{3}}{3}$\n\n이제 $\\cos^2 \\theta = 1 - \\sin^2 \\theta$를 이용하여 $\\cos \\theta$를 구합니다.\n$\\cos^2 \\theta = 1 - \\left(\\frac{\\sqrt{3}}{3}\\right)^2 = 1 - \\frac{3}{9} = 1 - \\frac{1}{3} = \\frac{2}{3}$\n$\\cos \\theta = \\pm \\sqrt{\\frac{2}{3}} = \\pm \\frac{\\sqrt{6}}{3}$\n\n문제에서 $\\frac{\\pi}{2} < \\theta < \\pi$ (제2사분면)라고 하였으므로, $\\cos \\theta$의 값은 음수여야 합니다.\n따라서 $\\cos \\theta = -\\frac{\\sqrt{6}}{3}$입니다.\n\n최종정답: ①",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TlwnPTHsA31XouQ8OdFmx1zXJHIx3ogfZhOjEO7dld8xx6GLb0AoTcdWgvv6E8dNKl4J6ECVbx2PJqmNRWYwtXUw6pa-PKwjte9EVGIeRnMIwJJbkpJUkP6YtTwJ9gq98FOKyC4wawjVSSKe2",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "kirvavO_F8up6dkPh-mZgAY",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 463,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 153,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 153
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 616,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 5.271,
+  "completed_at": "2026-11-07T13:41:39.979711+00:00",
+  "evaluation": {
+    "predicted_answer": "①",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "①",
+    "predicted_kind": "choice",
+    "predicted_choice": 1
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "aecd7f29e5a40aa451649900cde5e20c00d3ee4d3177026d0c67b30de50dbc7b",
+    "imported_at": "2026-11-07T16:57:38.394301+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

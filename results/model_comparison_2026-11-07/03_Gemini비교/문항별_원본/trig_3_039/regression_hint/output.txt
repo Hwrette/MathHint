@@ -1,0 +1,30 @@
+이차방정식 $6x^2 + (4\cos\theta)x + \sin\theta = 0$이 실근을 갖지 않으려면, 판별식 $D < 0$이어야 합니다.
+
+이차방정식의 판별식을 $D$라 하면,
+$D = (4\cos\theta)^2 - 4 \cdot 6 \cdot \sin\theta < 0$
+$16\cos^2\theta - 24\sin\theta < 0$
+
+양변을 8로 나누면,
+$2\cos^2\theta - 3\sin\theta < 0$
+
+$\cos^2\theta = 1 - \sin^2\theta$를 대입하면,
+$2(1 - \sin^2\theta) - 3\sin\theta < 0$
+$2 - 2\sin^2\theta - 3\sin\theta < 0$
+$2\sin^2\theta + 3\sin\theta - 2 > 0$
+
+인수분해하면,
+$(2\sin\theta - 1)(\sin\theta + 2) > 0$
+
+여기서 모든 $\theta$에 대하여 $-1 \leq \sin\theta \leq 1$이므로, $\sin\theta + 2 > 0$입니다. 따라서 부등식이 성립하려면,
+$2\sin\theta - 1 > 0$
+$\sin\theta > \frac{1}{2}$
+
+$0 \leq \theta < 2\pi$ 범위에서 $\sin\theta > \frac{1}{2}$을 만족하는 $\theta$의 범위는,
+$\frac{\pi}{6} < \theta < \frac{5}{6}\pi$
+
+따라서 $\alpha = \frac{\pi}{6}$, $\beta = \frac{5}{6}\pi$입니다.
+
+구하고자 하는 값은 $3\alpha + \beta$이므로,
+$3\left(\frac{\pi}{6}\right) + \frac{5}{6}\pi = \frac{3}{6}\pi + \frac{5}{6}\pi = \frac{8}{6}\pi = \frac{4}{3}\pi$
+
+최종정답: ④

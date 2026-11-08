@@ -1,0 +1,231 @@
+{
+  "id": "diff_3_028",
+  "method": "regression_hint",
+  "input_text": "함수\n$f \\left( x \\right) = {\\left\\{\\begin{array}{llll}x^{3} - a x + 2 b &  &  & \\left( x < 1 \\right) \\\\ - 3 x + b &  &  & \\left( x \\geq 1 \\right)\\end{array}\\right.}$\n이 실수 전체의 집합에서 미분가능할 때, $a \\times b$의 값은?\n(단, $a$와 $b$는 상수이다.)\n① $3$\t\t② $6$\t\t③ $9$\n④ $12$\t\t⑤ $15$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:x\":29.127,\"latex:-\":25.831,\"latex:(\":20.988,\"latex:)\":20.902,\"latex:\\\\right\":19.804,\"latex:\\\\left\":19.298,\"latex:=\":18.68,\"latex:1\":17.611,\"latex:3\":16.413,\"latex:+\":16.385,\"latex:f\":14.344,\"latex:\\\\lim\":10.512,\"latex:{\":9.848,\"latex:}\":9.798,\"latex:_\":9.319,\"latex:a\":9.038,\"latex:2\":8.576,\"latex:\\\\rightarrow\":8.432,\"latex:^\":8.083,\"kiwi:므로\":7.886}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "cd359318f42982a880e0abeae62f13037e528923381046d16f1e288a54bb8285",
+  "reference": {
+    "answer_text": "④",
+    "kind": "choice",
+    "choice": 4,
+    "value_text": "$12$",
+    "source": {
+      "id": "diff_3_028",
+      "source_file": "모의고사_미분_문제_3.hml",
+      "source_sha256": "9c5d864f886ff6f2c93f9125549a8bce3fad8f18a790a887380963d1652adf8d",
+      "original_number": 28,
+      "current_number": 27
+    },
+    "numeric_value": 12.0,
+    "gradable": true
+  },
+  "reference_answer_text": "④",
+  "reference_solution": "[정답] ④\n\n[해설]\n함수 $f \\left( x \\right)$가 실수 전체의 집합에서 미분가능하므로 함수 $f \\left( x \\right)$는 $x = 1$에서 미분가능하다.\n그러므로 함수 $f \\left( x \\right)$는 $x = 1$에서 연속이다.\n$\\lim_{x \\rightarrow 1 -} f \\left( x \\right) = \\lim_{x \\rightarrow 1 +} f \\left( x \\right) = f \\left( 1 \\right)$에서\n$1 - a + 2 b = - 3 + b$\n$b = a - 4$\n$\\lim_{x \\rightarrow 1 -} \\frac{f \\left( x \\right) - f \\left( 1 \\right)}{x - 1}$$= \\lim_{x \\rightarrow 1 -} \\frac{\\left( x^{3} - a x + 2 b \\right) - \\left( - 3 + b \\right)}{x - 1}$\n$= \\lim_{x \\rightarrow 1 -} \\frac{x^{3} - a x + a - 1}{x - 1}$\n$= \\lim_{x \\rightarrow 1 -} \\left( x^{2} + x + 1 - a \\right)$\n$= 3 - a$\n$\\lim_{x \\rightarrow 1 +} \\frac{f \\left( x \\right) - f \\left( 1 \\right)}{x - 1}$$= \\lim_{x \\rightarrow 1 +} \\frac{\\left( - 3 x + b \\right) - \\left( - 3 + b \\right)}{x - 1}$\n$= \\lim_{x \\rightarrow 1 +} \\frac{- 3 x + 3}{x - 1}$\n$= - 3$\n함수 $f \\left( x \\right)$가 $x = 1$에서 미분가능하므로\n$3 - a = - 3$에서 $a = 6$이고 $b = 2$\n따라서 $a \\times b = 12$\n",
+  "problem_text": "함수\n$f \\left( x \\right) = {\\left\\{\\begin{array}{llll}x^{3} - a x + 2 b &  &  & \\left( x < 1 \\right) \\\\ - 3 x + b &  &  & \\left( x \\geq 1 \\right)\\end{array}\\right.}$\n이 실수 전체의 집합에서 미분가능할 때, $a \\times b$의 값은?\n(단, $a$와 $b$는 상수이다.)\n① $3$\t\t② $6$\t\t③ $9$\n④ $12$\t\t⑤ $15$\n",
+  "subject": "미분",
+  "unit": "03 미분계수와 도함수",
+  "type": "04 미분가능조건1 (구간정의함수)",
+  "source": "2021년 교육청 고2공통 11월 > 12 [3점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:x": 29.127,
+      "latex:-": 25.831,
+      "latex:(": 20.988,
+      "latex:)": 20.902,
+      "latex:\\right": 19.804,
+      "latex:\\left": 19.298,
+      "latex:=": 18.68,
+      "latex:1": 17.611,
+      "latex:3": 16.413,
+      "latex:+": 16.385,
+      "latex:f": 14.344,
+      "latex:\\lim": 10.512,
+      "latex:{": 9.848,
+      "latex:}": 9.798,
+      "latex:_": 9.319,
+      "latex:a": 9.038,
+      "latex:2": 8.576,
+      "latex:\\rightarrow": 8.432,
+      "latex:^": 8.083,
+      "kiwi:므로": 7.886
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:14:03.990554+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:14:03.990570+00:00",
+      "usage": {
+        "prompt_token_count": 436,
+        "candidates_token_count": 404,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 840,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 404,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 436,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 436
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 840,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "Ylzvat31DojcjMcPk63SkQk",
+      "latency_seconds": 7.491,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $f(x)$가 실수 전체의 집합에서 미분가능하려면, $x=1$에서 연속이어야 하고 미분가능해야 합니다.\n\n**1. $x=1$에서 연속 조건:**\n$\\lim_{x \\to 1^-} f(x) = \\lim_{x \\to 1^+} f(x) = f(1)$ 이어야 합니다.\n$\\lim_{x \\to 1^-} (x^3 - ax + 2b) = 1 - a + 2b$\n$\\lim_{x \\to 1^+} (-3x + b) = -3 + b$\n따라서, $1 - a + 2b = -3 + b$ 이므로\n$-a + b = -4 \\quad \\cdots \\text{①}$\n\n**2. $x=1$에서 미분가능 조건:**\n각 구간의 도함수를 구하면,\n$f'(x) = \\begin{cases} 3x^2 - a & (x < 1) \\\\ -3 & (x > 1) \\end{cases}$\n$x=1$에서 좌미분계수와 우미분계수가 같아야 하므로,\n$\\lim_{x \\to 1^-} (3x^2 - a) = \\lim_{x \\to 1^+} (-3)$\n$3(1)^2 - a = -3$\n$3 - a = -3$\n$a = 6$\n\n**3. $a, b$ 값 구하기:**\n구한 $a=6$을 ①식에 대입하면,\n$-6 + b = -4$\n$b = 2$\n\n따라서 $a \\times b = 6 \\times 2 = 12$입니다.\n\n최종정답: ④",
+  "usage": {
+    "prompt_token_count": 436,
+    "candidates_token_count": 404,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 840,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 404,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 436,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 436
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 840,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "Ylzvat31DojcjMcPk63SkQk",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:14:11 GMT",
+        "server": "envoy",
+        "content-length": "978",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1250",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "2028"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $f(x)$가 실수 전체의 집합에서 미분가능하려면, $x=1$에서 연속이어야 하고 미분가능해야 합니다.\n\n**1. $x=1$에서 연속 조건:**\n$\\lim_{x \\to 1^-} f(x) = \\lim_{x \\to 1^+} f(x) = f(1)$ 이어야 합니다.\n$\\lim_{x \\to 1^-} (x^3 - ax + 2b) = 1 - a + 2b$\n$\\lim_{x \\to 1^+} (-3x + b) = -3 + b$\n따라서, $1 - a + 2b = -3 + b$ 이므로\n$-a + b = -4 \\quad \\cdots \\text{①}$\n\n**2. $x=1$에서 미분가능 조건:**\n각 구간의 도함수를 구하면,\n$f'(x) = \\begin{cases} 3x^2 - a & (x < 1) \\\\ -3 & (x > 1) \\end{cases}$\n$x=1$에서 좌미분계수와 우미분계수가 같아야 하므로,\n$\\lim_{x \\to 1^-} (3x^2 - a) = \\lim_{x \\to 1^+} (-3)$\n$3(1)^2 - a = -3$\n$3 - a = -3$\n$a = 6$\n\n**3. $a, b$ 값 구하기:**\n구한 $a=6$을 ①식에 대입하면,\n$-6 + b = -4$\n$b = 2$\n\n따라서 $a \\times b = 6 \\times 2 = 12$입니다.\n\n최종정답: ④",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0Tfm-Es6cOkwYOZhZvarDRXXzXIlVJh1zOQn1VcnJmcXnD9H3zfqafOQ4AVxIgPLHC-bcywQ_-T_tK9fv49J4wUfvJE7vTXFEWvHAj9s21wpAHxDzE0coU4QIAtCIopHv0H477i2m6w8DdAGeV",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "Ylzvat31DojcjMcPk63SkQk",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 404,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 436,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 436
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 840,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 7.491,
+  "completed_at": "2026-11-07T17:14:11.481306+00:00",
+  "evaluation": {
+    "predicted_answer": "④",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "④",
+    "predicted_kind": "choice",
+    "predicted_choice": 4
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

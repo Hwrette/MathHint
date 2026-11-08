@@ -1,0 +1,5 @@
+[정답] $3$
+
+[해설]
+함수 $f \left( x \right)$의 $x = 1$에서의 순간변화율은
+$\lim_{t \rightarrow 1} \sqrt{t^{2} + 8} = 3$

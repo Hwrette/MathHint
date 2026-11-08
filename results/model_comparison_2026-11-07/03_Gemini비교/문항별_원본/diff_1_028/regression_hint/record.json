@@ -1,0 +1,231 @@
+{
+  "id": "diff_1_028",
+  "method": "regression_hint",
+  "input_text": "점 $\\left( 0 , 1 \\right)$에서 곡선 $y = x^{3} - 2 x + 17$에 그은 접선이 점 $\\left( a , 11 \\right)$을 지날 때, $a$의 값은?\n① $1$\t\t② $2$\t\t③ $3$\n④ $4$\t\t⑤ $5$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:-\":13.097,\"latex:+\":9.712,\"latex:=\":9.704,\"latex:(\":9.085,\"latex:)\":9.085,\"latex:3\":8.612,\"latex:y\":8.099,\"latex:1\":7.878,\"latex:x\":7.558,\"latex:t\":6.289,\"latex:\\\\right\":6.188,\"latex:0\":6.011,\"latex:\\\\left\":5.92,\"latex:^\":5.19,\"kiwi:의\":4.889,\"kiwi:이\":4.293,\"latex:4\":3.9,\"latex:r\":3.794,\"kiwi:은\":3.382,\"latex:,\":3.245}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "ec6a1e300994de0f834f55e6908b33b2c0601983244bf47316f4893dd1e67bd8",
+  "reference": {
+    "answer_text": "①",
+    "kind": "choice",
+    "choice": 1,
+    "value_text": "$1$",
+    "source": {
+      "id": "diff_1_028",
+      "source_file": "모의고사_미분_문제_1.hml",
+      "source_sha256": "02487629c158a7d2ad3e0f0701b391a6efa7f5d517ab48c044f978924365270f",
+      "original_number": 28,
+      "current_number": 28
+    },
+    "numeric_value": 1.0,
+    "gradable": true
+  },
+  "reference_answer_text": "①",
+  "reference_solution": "[정답] ①\n\n[해설]\n곡선 $y = x^{3} - 2 x + 17$에서    $y' = 3 x^{2} - 2$\n점 $\\left( 0 , 1 \\right)$에서 곡선 $y = x^{3} - 2 x + 17$에 그은 접선과 곡선의 접점의 좌표를 $\\left( t , t^{3} - 2 t + 17 \\right)$이라 하면 접선의 방정식은\n$y - \\left( t^{3} - 2 t + 17 \\right) = \\left( 3 t^{2} - 2 \\right) \\left( x - t \\right)$\n$y = \\left( 3 t^{2} - 2 \\right) x - 2 t^{3} + 17$\n이 접선이 점 $\\left( 0 , 1 \\right)$을 지나므로\n$1 = - 2 t^{3} + 17$,    $t = 2$\n따라서 접선의 방정식은 $y = 10 x + 1$이고 점 $\\left( a , 11 \\right)$를 지나므로\n$11 = 10 a + 1$,    $a = 1$\n",
+  "problem_text": "점 $\\left( 0 , 1 \\right)$에서 곡선 $y = x^{3} - 2 x + 17$에 그은 접선이 점 $\\left( a , 11 \\right)$을 지날 때, $a$의 값은?\n① $1$\t\t② $2$\t\t③ $3$\n④ $4$\t\t⑤ $5$\n",
+  "subject": "미분",
+  "unit": "04 접선의 방정식",
+  "type": "07 곡선 밖의 점1 (접선의 방정식)",
+  "source": "2027년(2028학년도) 평가원 고3공통 수능 예시 문항 > 11 [3점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:-": 13.097,
+      "latex:+": 9.712,
+      "latex:=": 9.704,
+      "latex:(": 9.085,
+      "latex:)": 9.085,
+      "latex:3": 8.612,
+      "latex:y": 8.099,
+      "latex:1": 7.878,
+      "latex:x": 7.558,
+      "latex:t": 6.289,
+      "latex:\\right": 6.188,
+      "latex:0": 6.011,
+      "latex:\\left": 5.92,
+      "latex:^": 5.19,
+      "kiwi:의": 4.889,
+      "kiwi:이": 4.293,
+      "latex:4": 3.9,
+      "latex:r": 3.794,
+      "kiwi:은": 3.382,
+      "latex:,": 3.245
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:09:01.343314+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:09:01.343329+00:00",
+      "usage": {
+        "prompt_token_count": 369,
+        "candidates_token_count": 404,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 773,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 404,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 369,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 369
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 773,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "MFvvaoHVO6aq6dkPuPChgQY",
+      "latency_seconds": 5.915,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "곡선 $f(x) = x^3 - 2x + 17$ 위의 점 $(t, t^3 - 2t + 17)$에서의 접선의 방정식을 구합니다.\n먼저 도함수는 $f'(x) = 3x^2 - 2$이므로, 점 $(t, t^3 - 2t + 17)$에서의 접선의 기울기는 $3t^2 - 2$입니다.\n\n따라서 접선의 방정식은 다음과 같습니다.\n$y - (t^3 - 2t + 17) = (3t^2 - 2)(x - t)$\n$y = (3t^2 - 2)x - 3t^3 + 2t + t^3 - 2t + 17$\n$y = (3t^2 - 2)x - 2t^3 + 17$\n\n이 접선이 점 $(0, 1)$을 지나므로 $x=0, y=1$을 대입합니다.\n$1 = -2t^3 + 17$\n$2t^3 = 16$\n$t^3 = 8$\n따라서 $t = 2$입니다.\n\n$t=2$를 접선의 방정식에 대입하면,\n기울기는 $3(2)^2 - 2 = 12 - 2 = 10$이고,\n$y = 10x - 2(8) + 17 = 10x + 1$이 됩니다.\n\n이 접선이 점 $(a, 11)$을 지나므로,\n$11 = 10a + 1$\n$10 = 10a$\n$a = 1$\n\n최종정답: ①",
+  "usage": {
+    "prompt_token_count": 369,
+    "candidates_token_count": 404,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 773,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 404,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 369,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 369
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 773,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "MFvvaoHVO6aq6dkPuPChgQY",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:09:07 GMT",
+        "server": "envoy",
+        "content-length": "877",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=2259",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "2838"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "곡선 $f(x) = x^3 - 2x + 17$ 위의 점 $(t, t^3 - 2t + 17)$에서의 접선의 방정식을 구합니다.\n먼저 도함수는 $f'(x) = 3x^2 - 2$이므로, 점 $(t, t^3 - 2t + 17)$에서의 접선의 기울기는 $3t^2 - 2$입니다.\n\n따라서 접선의 방정식은 다음과 같습니다.\n$y - (t^3 - 2t + 17) = (3t^2 - 2)(x - t)$\n$y = (3t^2 - 2)x - 3t^3 + 2t + t^3 - 2t + 17$\n$y = (3t^2 - 2)x - 2t^3 + 17$\n\n이 접선이 점 $(0, 1)$을 지나므로 $x=0, y=1$을 대입합니다.\n$1 = -2t^3 + 17$\n$2t^3 = 16$\n$t^3 = 8$\n따라서 $t = 2$입니다.\n\n$t=2$를 접선의 방정식에 대입하면,\n기울기는 $3(2)^2 - 2 = 12 - 2 = 10$이고,\n$y = 10x - 2(8) + 17 = 10x + 1$이 됩니다.\n\n이 접선이 점 $(a, 11)$을 지나므로,\n$11 = 10a + 1$\n$10 = 10a$\n$a = 1$\n\n최종정답: ①",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TCUgzfYMSfKXmLfXvz8TWwX3UNGHHViSzmbgRj6_G_tjsidR5uCiu1VZEQ-bvtYMlSFabyegNT-peFVzjMb-8lI-7P8G_pJYXAMMhywTus4mn2jNKolAXo0RaAkefPtrCLoTLQR95nnui0ZNO",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "MFvvaoHVO6aq6dkPuPChgQY",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 404,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 369,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 369
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 773,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 5.915,
+  "completed_at": "2026-11-07T17:09:07.258523+00:00",
+  "evaluation": {
+    "predicted_answer": "①",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "①",
+    "predicted_kind": "choice",
+    "predicted_choice": 1
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

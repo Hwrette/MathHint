@@ -1,0 +1,208 @@
+{
+  "id": "diff_1_005",
+  "method": "baseline",
+  "input_text": "$\\lim_{x \\rightarrow a} \\frac{f \\left( x \\right) \\left( x - 3 \\right)}{\\left( x - a \\right)^{2}} = 5$를 만족시키는 최고차항의 계수가 $1$인 이차함수 $f \\left( x \\right)$가 존재하도록 하는 모든 실수 $a$의 값의 합은?\n① $7$\t\t② $8$\t\t③ $9$\n④ $10$\t\t⑤ $11$\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "bb6bb7e7a21ce354dfdb066d8fae99eb0de54094d428347e0274cb8264c192b2",
+  "reference": {
+    "answer_text": "⑤",
+    "kind": "choice",
+    "choice": 5,
+    "value_text": "$11$",
+    "source": {
+      "id": "diff_1_005",
+      "source_file": "모의고사_미분_문제_1.hml",
+      "source_sha256": "02487629c158a7d2ad3e0f0701b391a6efa7f5d517ab48c044f978924365270f",
+      "original_number": 5,
+      "current_number": 5
+    },
+    "numeric_value": 11.0,
+    "gradable": true
+  },
+  "reference_answer_text": "⑤",
+  "reference_solution": "[정답] ⑤\n\n[해설]\n$\\lim_{x \\rightarrow a} \\frac{f \\left( x \\right) \\left( x - 3 \\right)}{\\left( x - a \\right)^{2}} = 5$\t\t\t\t$\\cdots$$\\cdots$ ㉠\n이므로 $\\lim_{x \\rightarrow a} \\left\\{ f \\left( x \\right) \\left( x - 3 \\right) \\right\\} = 0$에서 $f \\left( a \\right) \\left( a - 3 \\right) = 0$\n(ⅰ) $a = 3$인 경우\n㉠에서 $\\lim_{x \\rightarrow 3} \\frac{f \\left( x \\right)}{x - 3} = 5$이므로 $\\lim_{x \\rightarrow 3} f \\left( x \\right) = f \\left( 3 \\right) = 0$\n그러므로 $f \\left( x \\right) = \\left( x - 3 \\right) \\left( x - b \\right)$ ($b$는 실수)이다.\n$\\lim_{x \\rightarrow a} \\frac{f \\left( x \\right) \\left( x - 3 \\right)}{\\left( x - a \\right)^{2}} = \\lim_{x \\rightarrow 3} \\left( x - b \\right) = 3 - b = 5$, $b = - 2$\n이므로 $f \\left( x \\right) = \\left( x - 3 \\right) \\left( x + 2 \\right)$\n(ⅱ) $a \\ne 3$이고 $f \\left( a \\right) = 0$인 경우\n$f \\left( x \\right) = \\left( x - a \\right) \\left( x - c \\right)$ ($c$는 실수)이다.\n㉠에서 $\\lim_{x \\rightarrow a} \\frac{\\left( x - c \\right) \\left( x - 3 \\right)}{x - a} = 5$이므로\n$\\lim_{x \\rightarrow a} \\left\\{ \\left( x - c \\right) \\left( x - 3 \\right) \\right\\} = \\left( a - c \\right) \\left( a - 3 \\right) = 0$, $a = c$\n이다. 그러므로 $f \\left( x \\right) = \\left( x - a \\right)^{2}$이고 ㉠에서\n$\\lim_{x \\rightarrow a} \\left( x - 3 \\right) = a - 3 = 5$, $a = 8$\n그러므로 $f \\left( x \\right) = \\left( x - 8 \\right)^{2}$\n(ⅰ), (ⅱ)에서 구하는 모든 실수 $a$의 값은 $3$, $8$\n따라서 $3 + 8 = 11$\n",
+  "problem_text": "$\\lim_{x \\rightarrow a} \\frac{f \\left( x \\right) \\left( x - 3 \\right)}{\\left( x - a \\right)^{2}} = 5$를 만족시키는 최고차항의 계수가 $1$인 이차함수 $f \\left( x \\right)$가 존재하도록 하는 모든 실수 $a$의 값의 합은?\n① $7$\t\t② $8$\t\t③ $9$\n④ $10$\t\t⑤ $11$\n",
+  "subject": "미분",
+  "unit": "01 함수의 극한",
+  "type": "04 해석4 (함수 구하기. 인수정리)",
+  "source": "2026년 교육청 고3공통 10월 > 9 [4점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:18:24.150027+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:18:24.150048+00:00",
+      "usage": {
+        "prompt_token_count": 153,
+        "candidates_token_count": 639,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 792,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 639,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 153,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 153
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 792,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "ISXvariIBtqv_PUPyKbD8QE",
+      "latency_seconds": 3.059,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "주어진 극한식 $\\lim_{x \\rightarrow a} \\frac{f(x)(x-3)}{(x-a)^2} = 5$가 존재하기 위해서는 분모가 $0$으로 갈 때 분자도 $0$으로 가야 합니다.\n\n1. **분자의 조건:**\n   $x \\rightarrow a$일 때 분모 $(x-a)^2 \\rightarrow 0$이므로, 극한값이 존재하려면 분자 $f(x)(x-3)$도 $0$으로 가야 합니다. 즉, $f(a)(a-3) = 0$이어야 합니다.\n   따라서 $f(a) = 0$이거나 $a = 3$입니다.\n\n2. **경우 1: $f(a) = 0$인 경우**\n   $f(x)$는 최고차항의 계수가 $1$인 이차함수이므로 $f(x) = (x-a)(x-k)$라고 할 수 있습니다.\n   이를 극한식에 대입하면:\n   $\\lim_{x \\rightarrow a} \\frac{(x-a)(x-k)(x-3)}{(x-a)^2} = \\lim_{x \\rightarrow a} \\frac{(x-k)(x-3)}{x-a} = 5$\n   이 극한값이 존재하려면 분자 $(x-k)(x-3)$이 $(x-a)$를 인수로 가져야 합니다.\n   즉, $k=a$이거나 $3=a$여야 합니다.\n   - $k=a$이면 $f(x) = (x-a)^2$이 되어, $\\lim_{x \\rightarrow a} \\frac{(x-a)^2(x-3)}{(x-a)^2} = a-3 = 5 \\Rightarrow a=8$\n   - $a=3$이면 $f(x) = (x-3)(x-k)$가 되어, $\\lim_{x \\rightarrow 3} \\frac{(x-3)(x-k)(x-3)}{(x-3)^2} = 3-k = 5 \\Rightarrow k=-2$\n     이때 $f(x) = (x-3)(x+2)$가 되어 조건을 만족합니다.\n\n3. **경우 2: $a=3$인 경우**\n   이미 위에서 확인했듯이 $a=3$은 가능한 값입니다.\n\n4. **경우 3: $f(a) \\neq 0$이고 $a \\neq 3$인 경우**\n   이 경우 분자가 $0$으로 가지 않으므로 극한값이 존재할 수 없습니다.\n\n따라서 가능한 $a$의 값은 $8$과 $3$입니다.\n모든 실수 $a$의 값의 합은 $8 + 3 = 11$입니다.\n\n최종정답: ⑤",
+  "usage": {
+    "prompt_token_count": 153,
+    "candidates_token_count": 639,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 792,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 639,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 153,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 153
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 792,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "ISXvariIBtqv_PUPyKbD8QE",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:18:27 GMT",
+        "server": "envoy",
+        "content-length": "1185",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=2093",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "2921"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "주어진 극한식 $\\lim_{x \\rightarrow a} \\frac{f(x)(x-3)}{(x-a)^2} = 5$가 존재하기 위해서는 분모가 $0$으로 갈 때 분자도 $0$으로 가야 합니다.\n\n1. **분자의 조건:**\n   $x \\rightarrow a$일 때 분모 $(x-a)^2 \\rightarrow 0$이므로, 극한값이 존재하려면 분자 $f(x)(x-3)$도 $0$으로 가야 합니다. 즉, $f(a)(a-3) = 0$이어야 합니다.\n   따라서 $f(a) = 0$이거나 $a = 3$입니다.\n\n2. **경우 1: $f(a) = 0$인 경우**\n   $f(x)$는 최고차항의 계수가 $1$인 이차함수이므로 $f(x) = (x-a)(x-k)$라고 할 수 있습니다.\n   이를 극한식에 대입하면:\n   $\\lim_{x \\rightarrow a} \\frac{(x-a)(x-k)(x-3)}{(x-a)^2} = \\lim_{x \\rightarrow a} \\frac{(x-k)(x-3)}{x-a} = 5$\n   이 극한값이 존재하려면 분자 $(x-k)(x-3)$이 $(x-a)$를 인수로 가져야 합니다.\n   즉, $k=a$이거나 $3=a$여야 합니다.\n   - $k=a$이면 $f(x) = (x-a)^2$이 되어, $\\lim_{x \\rightarrow a} \\frac{(x-a)^2(x-3)}{(x-a)^2} = a-3 = 5 \\Rightarrow a=8$\n   - $a=3$이면 $f(x) = (x-3)(x-k)$가 되어, $\\lim_{x \\rightarrow 3} \\frac{(x-3)(x-k)(x-3)}{(x-3)^2} = 3-k = 5 \\Rightarrow k=-2$\n     이때 $f(x) = (x-3)(x+2)$가 되어 조건을 만족합니다.\n\n3. **경우 2: $a=3$인 경우**\n   이미 위에서 확인했듯이 $a=3$은 가능한 값입니다.\n\n4. **경우 3: $f(a) \\neq 0$이고 $a \\neq 3$인 경우**\n   이 경우 분자가 $0$으로 가지 않으므로 극한값이 존재할 수 없습니다.\n\n따라서 가능한 $a$의 값은 $8$과 $3$입니다.\n모든 실수 $a$의 값의 합은 $8 + 3 = 11$입니다.\n\n최종정답: ⑤",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TQGdFec7QvM9Iuc4KQef3oYBm8LlmThfw7SuzMYCnxkz6-bTGYIEahweeqhMjtDQAxVG4d2H6eSVldjroTnYqAQaR7Pqn9A9oKIcVNQopupTgJ8nncc6KmUDs7HmQORXLXhIr751T3H3BoWvh",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "ISXvariIBtqv_PUPyKbD8QE",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 639,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 153,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 153
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 792,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 3.059,
+  "completed_at": "2026-11-07T13:18:27.209242+00:00",
+  "evaluation": {
+    "predicted_answer": "⑤",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "⑤",
+    "predicted_kind": "choice",
+    "predicted_choice": 5
+  },
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "5d5f2b334f3d4fb98c486e93295dfec10e4e28c2d87080fa5297e2927dda5c44",
+    "imported_at": "2026-11-07T16:57:38.353481+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

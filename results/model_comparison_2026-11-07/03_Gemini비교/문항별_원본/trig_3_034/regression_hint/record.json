@@ -1,0 +1,231 @@
+{
+  "id": "trig_3_034",
+  "method": "regression_hint",
+  "input_text": "${0 \\leq x \\leq 2}$에서 함수 $y = \\tan \\pi x$의 그래프와 직선 $y = - \\frac{10}{3} x + n$이 서로 다른 세 점에서 만나도록 하는 자연수 $n$의 최댓값은?\n① $2$\t\t② $3$\t\t③ $4$\n④ $5$\t\t⑤ $6$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:}\":14.683,\"latex:{\":14.639,\"latex:+\":12.865,\"latex:\\\\cos\":9.539,\"latex:6\":8.67,\"latex:x\":8.659,\"latex:=\":8.19,\"latex:2\":8.111,\"latex:3\":6.284,\"latex:-\":5.956,\"latex:0\":5.548,\"latex:_\":5.524,\"kiwi:의\":5.491,\"latex:<\":5.479,\"latex:\\\\frac\":5.306,\"latex:\\\\theta\":4.559,\"latex:1\":4.234,\"latex:)\":3.959,\"latex:(\":3.928,\"latex:y\":3.591}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "d7dc5bd358ba4a95c39638778fc68eca1af409b2846360d5eb26e4c01c32c446",
+  "reference": {
+    "answer_text": "⑤",
+    "kind": "choice",
+    "choice": 5,
+    "value_text": "$6$",
+    "source": {
+      "id": "trig_3_034",
+      "source_file": "모의고사_삼각함수_문제_3.hml",
+      "source_sha256": "4853842eca14740e8bbc1083fae38beb51f1c6cde8e78fe6d3c398eca800b30b",
+      "original_number": 34,
+      "current_number": 34
+    },
+    "numeric_value": 6.0,
+    "gradable": true
+  },
+  "reference_answer_text": "⑤",
+  "reference_solution": "[정답] ⑤\n\n[해설]\n$y = \\tan \\pi x$의 주기는 $\\frac{\\pi}{\\pi}$$= 1$이다.\n\n위의 그림과 같이 $0 \\leq x \\leq 2$에서 함수 $y = \\tan \\pi x$의 그래프와 직선 $y = - \\frac{10}{3} x + n$이 서로 다른 세 점에서 만나기 위해서는 직선 $y = - \\frac{10}{3} x + n$의 $x$절편 $\\frac{3}{10} n$이 $2$보다 작거나 같아야 한다.\n즉 $\\frac{3}{10} n \\leq 2$이므로 $n \\leq \\frac{20}{3}$이다.\n따라서 자연수 $n$의 최댓값은 $6$이다.\n",
+  "problem_text": "${0 \\leq x \\leq 2}$에서 함수 $y = \\tan \\pi x$의 그래프와 직선 $y = - \\frac{10}{3} x + n$이 서로 다른 세 점에서 만나도록 하는 자연수 $n$의 최댓값은?\n① $2$\t\t② $3$\t\t③ $4$\n④ $5$\t\t⑤ $6$\n",
+  "subject": "삼각함수",
+  "unit": "06 삼각함수의 그래프",
+  "type": "05 삼각방정식5 (실근의 개수)",
+  "source": "2020년 교육청 고2공통 6월 > 15 [4점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:}": 14.683,
+      "latex:{": 14.639,
+      "latex:+": 12.865,
+      "latex:\\cos": 9.539,
+      "latex:6": 8.67,
+      "latex:x": 8.659,
+      "latex:=": 8.19,
+      "latex:2": 8.111,
+      "latex:3": 6.284,
+      "latex:-": 5.956,
+      "latex:0": 5.548,
+      "latex:_": 5.524,
+      "kiwi:의": 5.491,
+      "latex:<": 5.479,
+      "latex:\\frac": 5.306,
+      "latex:\\theta": 4.559,
+      "latex:1": 4.234,
+      "latex:)": 3.959,
+      "latex:(": 3.928,
+      "latex:y": 3.591
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:17:39.238651+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:17:39.238663+00:00",
+      "usage": {
+        "prompt_token_count": 367,
+        "candidates_token_count": 796,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 1163,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 796,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 367,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 367
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 1163,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "N13vaqClHYnj_uMP97a94QU",
+      "latency_seconds": 6.492,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $y = \\tan \\pi x$의 그래프와 직선 $y = -\\frac{10}{3}x + n$이 $0 \\leq x \\leq 2$에서 서로 다른 세 점에서 만나야 합니다.\n\n1. **함수 $y = \\tan \\pi x$의 분석:**\n   주기는 $T = \\frac{\\pi}{\\pi} = 1$입니다.\n   $0 \\leq x \\leq 2$ 범위에서 점근선은 $x = \\frac{1}{2}, x = \\frac{3}{2}$입니다.\n   - $0 \\leq x < \\frac{1}{2}$에서 $y$는 $0$에서 $\\infty$까지 증가\n   - $\\frac{1}{2} < x < \\frac{3}{2}$에서 $y$는 $-\\infty$에서 $\\infty$까지 증가\n   - $\\frac{3}{2} < x \\leq 2$에서 $y$는 $-\\infty$에서 $0$까지 증가\n\n2. **직선 $y = -\\frac{10}{3}x + n$의 분석:**\n   이 직선은 기울기가 $-\\frac{10}{3}$이고 $y$절편이 $n$인 직선입니다.\n   세 점에서 만나려면 직선이 각 구간의 탄젠트 곡선과 교차해야 합니다.\n\n3. **교점의 조건:**\n   - $x=0$일 때 $y=0$, $x=2$일 때 $y=0$입니다.\n   - 직선이 $x=0$일 때 $y=n$이므로, $n$이 커질수록 직선은 위로 올라갑니다.\n   - $x=1$일 때 탄젠트 값은 $\\tan \\pi = 0$입니다. 직선이 $(1, 0)$을 지날 때 $0 = -\\frac{10}{3} + n$이므로 $n = \\frac{10}{3} \\approx 3.33$입니다.\n   - $n=3$일 때: 직선 $y = -\\frac{10}{3}x + 3$은 $(0.9, 0)$ 근처를 지나며, 세 구간에서 각각 교점을 가질 수 있는지 확인합니다.\n     - $x \\in (0, 0.5)$에서 $y$는 $0 \\to \\infty$, 직선은 $3 \\to 1.33$. 교점 1개.\n     - $x \\in (0.5, 1.5)$에서 $y$는 $-\\infty \\to \\infty$, 직선은 $1.33 \\to -0.33$. 교점 1개.\n     - $x \\in (1.5, 2)$에서 $y$는 $-\\infty \\to 0$, 직선은 $-2 \\to -3.66$. 교점 1개.\n     따라서 $n=3$일 때 세 점에서 만납니다.\n   - $n=4$일 때: 직선 $y = -\\frac{10}{3}x + 4$는 $x=1$에서 $y=0.66$을 지납니다. 이 경우 $x \\in (1.5, 2)$ 구간에서 교점이 생기지 않을 수 있습니다.\n\n그래프의 개형을 고려할 때, $n$이 커지면 직선이 위로 이동하여 $x \\in (1.5, 2)$ 구간에서 교점이 사라지게 됩니다. 자연수 $n$의 최댓값은 3입니다.\n\n최종정답: ②",
+  "usage": {
+    "prompt_token_count": 367,
+    "candidates_token_count": 796,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 1163,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 796,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 367,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 367
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1163,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "N13vaqClHYnj_uMP97a94QU",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:17:45 GMT",
+        "server": "envoy",
+        "content-length": "1331",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=2248",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "2871"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $y = \\tan \\pi x$의 그래프와 직선 $y = -\\frac{10}{3}x + n$이 $0 \\leq x \\leq 2$에서 서로 다른 세 점에서 만나야 합니다.\n\n1. **함수 $y = \\tan \\pi x$의 분석:**\n   주기는 $T = \\frac{\\pi}{\\pi} = 1$입니다.\n   $0 \\leq x \\leq 2$ 범위에서 점근선은 $x = \\frac{1}{2}, x = \\frac{3}{2}$입니다.\n   - $0 \\leq x < \\frac{1}{2}$에서 $y$는 $0$에서 $\\infty$까지 증가\n   - $\\frac{1}{2} < x < \\frac{3}{2}$에서 $y$는 $-\\infty$에서 $\\infty$까지 증가\n   - $\\frac{3}{2} < x \\leq 2$에서 $y$는 $-\\infty$에서 $0$까지 증가\n\n2. **직선 $y = -\\frac{10}{3}x + n$의 분석:**\n   이 직선은 기울기가 $-\\frac{10}{3}$이고 $y$절편이 $n$인 직선입니다.\n   세 점에서 만나려면 직선이 각 구간의 탄젠트 곡선과 교차해야 합니다.\n\n3. **교점의 조건:**\n   - $x=0$일 때 $y=0$, $x=2$일 때 $y=0$입니다.\n   - 직선이 $x=0$일 때 $y=n$이므로, $n$이 커질수록 직선은 위로 올라갑니다.\n   - $x=1$일 때 탄젠트 값은 $\\tan \\pi = 0$입니다. 직선이 $(1, 0)$을 지날 때 $0 = -\\frac{10}{3} + n$이므로 $n = \\frac{10}{3} \\approx 3.33$입니다.\n   - $n=3$일 때: 직선 $y = -\\frac{10}{3}x + 3$은 $(0.9, 0)$ 근처를 지나며, 세 구간에서 각각 교점을 가질 수 있는지 확인합니다.\n     - $x \\in (0, 0.5)$에서 $y$는 $0 \\to \\infty$, 직선은 $3 \\to 1.33$. 교점 1개.\n     - $x \\in (0.5, 1.5)$에서 $y$는 $-\\infty \\to \\infty$, 직선은 $1.33 \\to -0.33$. 교점 1개.\n     - $x \\in (1.5, 2)$에서 $y$는 $-\\infty \\to 0$, 직선은 $-2 \\to -3.66$. 교점 1개.\n     따라서 $n=3$일 때 세 점에서 만납니다.\n   - $n=4$일 때: 직선 $y = -\\frac{10}{3}x + 4$는 $x=1$에서 $y=0.66$을 지납니다. 이 경우 $x \\in (1.5, 2)$ 구간에서 교점이 생기지 않을 수 있습니다.\n\n그래프의 개형을 고려할 때, $n$이 커지면 직선이 위로 이동하여 $x \\in (1.5, 2)$ 구간에서 교점이 사라지게 됩니다. 자연수 $n$의 최댓값은 3입니다.\n\n최종정답: ②",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0Tg28MwN7nmCxdqmIvLlYABIqC0E7hsPbjPezQUI0mgUGw1eqaiKW9bdPxzqGIgcrbmq6XCeKwEbXb2180hWua8gBmlFUZEcrFkLSdw81b4-B5Mild2su1rP4F55OtHgsy5OruKzmZEv4VZaYK",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "N13vaqClHYnj_uMP97a94QU",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 796,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 367,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 367
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1163,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 6.492,
+  "completed_at": "2026-11-07T17:17:45.731064+00:00",
+  "evaluation": {
+    "predicted_answer": "②",
+    "correct": false,
+    "status": "incorrect",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "⑤",
+    "predicted_kind": "choice",
+    "predicted_choice": 2
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

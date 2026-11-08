@@ -1,0 +1,231 @@
+{
+  "id": "trig_1_032",
+  "method": "regression_hint",
+  "input_text": "$\\sin \\theta + 3 \\cos \\theta = 0$이고 $\\cos \\left( \\pi - \\theta \\right) > 0$일 때, $\\sin \\theta$의 값은?\n① $\\frac{3 \\sqrt{10}}{10}$\t② $\\frac{\\sqrt{10}}{5}$\t③ $0$\n④ $- \\frac{\\sqrt{10}}{5}$\t⑤ $- \\frac{3 \\sqrt{10}}{10}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:}\":33.048,\"latex:{\":32.624,\"latex:\\\\theta\":25.227,\"latex:=\":18.406,\"latex:3\":15.711,\"latex:-\":15.7,\"latex:\\\\frac\":12.163,\"latex:\\\\sin\":11.613,\"latex:^\":11.436,\"latex:+\":10.65,\"latex:x\":10.187,\"latex:\\\\tan\":9.774,\"latex:10\":9.754,\"latex:\\\\sqrt\":8.828,\"kiwi:이\":8.733,\"latex:1\":8.503,\"latex:\\\\cos\":8.386,\"latex:)\":7.59,\"latex:(\":7.53,\"latex:\\\\left\":6.276}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "40a7c219f2012766ff93918251e93055df5cff2ed44b969c74495e50fe51dada",
+  "reference": {
+    "answer_text": "①",
+    "kind": "choice",
+    "choice": 1,
+    "value_text": "$\\frac{3 \\sqrt{10}}{10}$",
+    "source": {
+      "id": "trig_1_032",
+      "source_file": "모의고사_삼각함수_문제_1.hml",
+      "source_sha256": "40e5d3256beca74c23225ea16d79b402d009340fbb175e827264f20535bad869",
+      "original_number": 32,
+      "current_number": 32
+    },
+    "numeric_value": 0.9486832980505138,
+    "gradable": true
+  },
+  "reference_answer_text": "①",
+  "reference_solution": "[정답] ①\n\n[해설]\n$\\cos \\left( \\pi - \\theta \\right) > 0$에서 $\\cos \\left( \\pi - \\theta \\right) = - \\cos \\theta$이므로\n$\\cos \\theta < 0$\n$\\sin \\theta = - 3 \\cos \\theta$이므로 $\\sin^{2} \\theta + \\cos^{2} \\theta = 1$에서\n$9 \\cos^{2} \\theta + \\cos^{2} \\theta = 1$,    $10 \\cos^{2} \\theta = 1$\n$\\cos^{2} \\theta = \\frac{1}{10}$    $\\therefore$ $\\cos \\theta = - \\frac{\\sqrt{10}}{10} \\quad \\left( \\because \\quad \\cos \\theta < 0 \\right)$\n$\\therefore$ $\\sin \\theta = - 3 \\times \\left( - \\frac{\\sqrt{10}}{10} \\right) = \\frac{3 \\sqrt{10}}{10}$\n",
+  "problem_text": "$\\sin \\theta + 3 \\cos \\theta = 0$이고 $\\cos \\left( \\pi - \\theta \\right) > 0$일 때, $\\sin \\theta$의 값은?\n① $\\frac{3 \\sqrt{10}}{10}$\t② $\\frac{\\sqrt{10}}{5}$\t③ $0$\n④ $- \\frac{\\sqrt{10}}{5}$\t⑤ $- \\frac{3 \\sqrt{10}}{10}$\n",
+  "subject": "삼각함수",
+  "unit": "06 삼각함수의 그래프",
+  "type": "01 각 변형1 (각 변형 규칙)",
+  "source": "2025년(2026학년도) 평가원 고3공통 11월 > 공통범위 > 8 [3점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:}": 33.048,
+      "latex:{": 32.624,
+      "latex:\\theta": 25.227,
+      "latex:=": 18.406,
+      "latex:3": 15.711,
+      "latex:-": 15.7,
+      "latex:\\frac": 12.163,
+      "latex:\\sin": 11.613,
+      "latex:^": 11.436,
+      "latex:+": 10.65,
+      "latex:x": 10.187,
+      "latex:\\tan": 9.774,
+      "latex:10": 9.754,
+      "latex:\\sqrt": 8.828,
+      "kiwi:이": 8.733,
+      "latex:1": 8.503,
+      "latex:\\cos": 8.386,
+      "latex:)": 7.59,
+      "latex:(": 7.53,
+      "latex:\\left": 6.276
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:15:30.738903+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:15:30.738920+00:00",
+      "usage": {
+        "prompt_token_count": 396,
+        "candidates_token_count": 348,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 744,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 348,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 396,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 396
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 744,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "tlzvasLGJpOdz7IPwLK_iQk",
+      "latency_seconds": 11.664,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "주어진 조건 $\\sin \\theta + 3 \\cos \\theta = 0$을 정리하면 다음과 같습니다.\n$\\sin \\theta = -3 \\cos \\theta$\n\n양변을 $\\cos \\theta$로 나누면(단, $\\cos \\theta \\neq 0$):\n$\\frac{\\sin \\theta}{\\cos \\theta} = -3$\n즉, $\\tan \\theta = -3$입니다.\n\n또한, 두 번째 조건 $\\cos(\\pi - \\theta) > 0$을 정리하면:\n$-\\cos \\theta > 0 \\implies \\cos \\theta < 0$입니다.\n\n$\\tan \\theta = -3$ (음수)이고 $\\cos \\theta < 0$이므로, $\\theta$는 제2사분면의 각입니다. 제2사분면에서는 $\\sin \\theta > 0$입니다.\n\n$\\tan \\theta = -3$을 이용하여 직각삼각형을 생각하면, 밑변의 길이를 $1$, 높이를 $3$으로 볼 수 있습니다. 이때 빗변의 길이는 $\\sqrt{1^2 + 3^2} = \\sqrt{10}$입니다.\n$\\theta$가 제2사분면의 각이므로 $\\sin \\theta$는 양수입니다.\n$\\sin \\theta = \\frac{\\text{높이}}{\\text{빗변}} = \\frac{3}{\\sqrt{10}}$\n\n이를 유리화하면:\n$\\sin \\theta = \\frac{3\\sqrt{10}}{10}$\n\n따라서 정답은 ①번입니다.\n\n최종정답: ①",
+  "usage": {
+    "prompt_token_count": 396,
+    "candidates_token_count": 348,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 744,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 348,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 396,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 396
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 744,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "tlzvasLGJpOdz7IPwLK_iQk",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:15:42 GMT",
+        "server": "envoy",
+        "content-length": "995",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=7746",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "8304"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "주어진 조건 $\\sin \\theta + 3 \\cos \\theta = 0$을 정리하면 다음과 같습니다.\n$\\sin \\theta = -3 \\cos \\theta$\n\n양변을 $\\cos \\theta$로 나누면(단, $\\cos \\theta \\neq 0$):\n$\\frac{\\sin \\theta}{\\cos \\theta} = -3$\n즉, $\\tan \\theta = -3$입니다.\n\n또한, 두 번째 조건 $\\cos(\\pi - \\theta) > 0$을 정리하면:\n$-\\cos \\theta > 0 \\implies \\cos \\theta < 0$입니다.\n\n$\\tan \\theta = -3$ (음수)이고 $\\cos \\theta < 0$이므로, $\\theta$는 제2사분면의 각입니다. 제2사분면에서는 $\\sin \\theta > 0$입니다.\n\n$\\tan \\theta = -3$을 이용하여 직각삼각형을 생각하면, 밑변의 길이를 $1$, 높이를 $3$으로 볼 수 있습니다. 이때 빗변의 길이는 $\\sqrt{1^2 + 3^2} = \\sqrt{10}$입니다.\n$\\theta$가 제2사분면의 각이므로 $\\sin \\theta$는 양수입니다.\n$\\sin \\theta = \\frac{\\text{높이}}{\\text{빗변}} = \\frac{3}{\\sqrt{10}}$\n\n이를 유리화하면:\n$\\sin \\theta = \\frac{3\\sqrt{10}}{10}$\n\n따라서 정답은 ①번입니다.\n\n최종정답: ①",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TVO_5cIytV5270E8mZZ_YVSTiqQe6-BOIP4-LtVL49kTu9CG4grUtjAwqgm7PFvvhKQPp6jOpcscG1SmYQlEt2fbfWbsJd0nlxBPJsy5IXKeCUDblz5S7dnR8dFXdSO-hbc7sgCSmwjuEi_rW",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "tlzvasLGJpOdz7IPwLK_iQk",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 348,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 396,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 396
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 744,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 11.664,
+  "completed_at": "2026-11-07T17:15:42.402707+00:00",
+  "evaluation": {
+    "predicted_answer": "①",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "①",
+    "predicted_kind": "choice",
+    "predicted_choice": 1
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

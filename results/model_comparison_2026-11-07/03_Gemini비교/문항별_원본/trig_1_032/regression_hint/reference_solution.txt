@@ -1,0 +1,9 @@
+[정답] ①
+
+[해설]
+$\cos \left( \pi - \theta \right) > 0$에서 $\cos \left( \pi - \theta \right) = - \cos \theta$이므로
+$\cos \theta < 0$
+$\sin \theta = - 3 \cos \theta$이므로 $\sin^{2} \theta + \cos^{2} \theta = 1$에서
+$9 \cos^{2} \theta + \cos^{2} \theta = 1$,    $10 \cos^{2} \theta = 1$
+$\cos^{2} \theta = \frac{1}{10}$    $\therefore$ $\cos \theta = - \frac{\sqrt{10}}{10} \quad \left( \because \quad \cos \theta < 0 \right)$
+$\therefore$ $\sin \theta = - 3 \times \left( - \frac{\sqrt{10}}{10} \right) = \frac{3 \sqrt{10}}{10}$

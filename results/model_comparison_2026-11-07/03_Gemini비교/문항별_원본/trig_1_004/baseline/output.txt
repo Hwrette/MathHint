@@ -1,0 +1,21 @@
+주어진 조건과 삼각함수의 관계를 이용하여 문제를 해결합니다.
+
+1. **주어진 조건 확인:**
+   $\frac{\pi}{2} < \theta < \pi$이므로, $\theta$는 제2사분면의 각입니다.
+   제2사분면에서 $\cos \theta$의 값은 **음수**입니다.
+
+2. **$\tan^2 \theta$와 $\cos \theta$의 관계식 이용:**
+   삼각함수의 기본 항등식 $1 + \tan^2 \theta = \sec^2 \theta = \frac{1}{\cos^2 \theta}$를 이용합니다.
+   문제에서 $\tan^2 \theta = 2$라고 하였으므로,
+   $1 + 2 = \frac{1}{\cos^2 \theta}$
+   $3 = \frac{1}{\cos^2 \theta}$
+   $\cos^2 \theta = \frac{1}{3}$
+
+3. **$\cos \theta$의 값 구하기:**
+   $\cos \theta = \pm \sqrt{\frac{1}{3}} = \pm \frac{1}{\sqrt{3}} = \pm \frac{\sqrt{3}}{3}$
+   앞서 확인했듯이 $\theta$가 제2사분면의 각이므로 $\cos \theta < 0$이어야 합니다.
+   따라서 $\cos \theta = -\frac{\sqrt{3}}{3}$입니다.
+
+따라서 정답은 ①번입니다.
+
+최종정답: ①

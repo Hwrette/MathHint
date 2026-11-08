@@ -1,0 +1,209 @@
+{
+  "id": "trig_2_030",
+  "method": "baseline",
+  "input_text": "$0 \\leq x < 2 \\pi$일 때, 곡선 $y = \\left| 4 \\sin 3 x + 2 \\right|$와 직선 $y = 2$가 만나는 서로 다른 점의 개수는?\n① $\\mathrm{3}$\t\t② $\\mathrm{6}$\t\t③ $\\mathrm{9}$\n④ $\\mathrm{12}$\t\t⑤ $\\mathrm{15}$\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "c51570c6348d4a8fb7e20616753a2a1b15731c3c9a2f09656f87784f3b311800",
+  "reference": {
+    "answer_text": "③",
+    "kind": "choice",
+    "choice": 3,
+    "value_text": "$\\mathrm{9}$",
+    "source": {
+      "id": "trig_2_030",
+      "source_file": "모의고사_삼각함수_문제_2.hml",
+      "source_sha256": "2a36b54c30c9b890ee90fe84dc6c2b62847494cb5830bd51de8b1fb6877d7cc2",
+      "original_number": 30,
+      "current_number": 30
+    },
+    "numeric_value": 9.0,
+    "gradable": true
+  },
+  "reference_answer_text": "③",
+  "reference_solution": "[정답] ③\n\n[해설]\n삼각함수 $y = 4 \\sin 3 x + 2$는 주기가 $\\frac{2}{3} \\pi$, 최댓값이 $6$, 최솟값이 $- 2$이므로 $0 \\le x < 2 \\pi$일 때, 곡선 $y = \\left| 4 \\sin 3 x + 2 \\right|$는 다음과 같다.\n\n따라서 $0 \\le x < 2 \\pi$일 때, 곡선 $y = \\left| 4 \\sin 3 x + 2 \\right|$와 직선 $y = 2$가 만나는 서로 다른 점의 개수는 $9$\n",
+  "problem_text": "$0 \\leq x < 2 \\pi$일 때, 곡선 $y = \\left| 4 \\sin 3 x + 2 \\right|$와 직선 $y = 2$가 만나는 서로 다른 점의 개수는?\n① $\\mathrm{3}$\t\t② $\\mathrm{6}$\t\t③ $\\mathrm{9}$\n④ $\\mathrm{12}$\t\t⑤ $\\mathrm{15}$\n",
+  "subject": "삼각함수",
+  "unit": "06 삼각함수의 그래프",
+  "type": "05 삼각방정식5 (실근의 개수)",
+  "source": "2023년 교육청 고3공통 7월 > 공통범위 > 10 [4점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:49:24.635014+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:49:24.635030+00:00",
+      "usage": {
+        "prompt_token_count": 133,
+        "candidates_token_count": 448,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 581,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 448,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 133,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 133
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 581,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "aCzvauaREZv0z7IPweHIqQI",
+      "latency_seconds": 5.122,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "주어진 방정식 $|4 \\sin 3x + 2| = 2$를 풀어야 합니다.\n절댓값 방정식 $|A| = B$ ($B \\ge 0$)는 $A = B$ 또는 $A = -B$와 동치입니다.\n\n따라서,\n1) $4 \\sin 3x + 2 = 2 \\implies 4 \\sin 3x = 0 \\implies \\sin 3x = 0$\n2) $4 \\sin 3x + 2 = -2 \\implies 4 \\sin 3x = -4 \\implies \\sin 3x = -1$\n\n범위가 $0 \\leq x < 2\\pi$이므로, $3x$의 범위는 $0 \\leq 3x < 6\\pi$입니다.\n\n**1) $\\sin 3x = 0$인 경우:**\n$3x = 0, \\pi, 2\\pi, 3\\pi, 4\\pi, 5\\pi$\n$x = 0, \\frac{\\pi}{3}, \\frac{2\\pi}{3}, \\pi, \\frac{4\\pi}{3}, \\frac{5\\pi}{3}$\n이때 점의 개수는 **6개**입니다.\n\n**2) $\\sin 3x = -1$인 경우:**\n$3x = \\frac{3\\pi}{2}, \\frac{7\\pi}{2}, \\frac{11\\pi}{2}$\n$x = \\frac{\\pi}{2}, \\frac{7\\pi}{6}, \\frac{11\\pi}{6}$\n이때 점의 개수는 **3개**입니다.\n\n위의 두 경우에서 구한 $x$값들은 서로 겹치지 않습니다. ($\\sin 3x$가 0일 때와 -1일 때는 값이 다르기 때문입니다.)\n\n따라서 전체 서로 다른 점의 개수는 $6 + 3 = 9$개입니다.\n\n최종정답: ③",
+  "usage": {
+    "prompt_token_count": 133,
+    "candidates_token_count": 448,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 581,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 448,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 133,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 133
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 581,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "aCzvauaREZv0z7IPweHIqQI",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:49:29 GMT",
+        "server": "envoy",
+        "content-length": "992",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1451",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "1621"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "주어진 방정식 $|4 \\sin 3x + 2| = 2$를 풀어야 합니다.\n절댓값 방정식 $|A| = B$ ($B \\ge 0$)는 $A = B$ 또는 $A = -B$와 동치입니다.\n\n따라서,\n1) $4 \\sin 3x + 2 = 2 \\implies 4 \\sin 3x = 0 \\implies \\sin 3x = 0$\n2) $4 \\sin 3x + 2 = -2 \\implies 4 \\sin 3x = -4 \\implies \\sin 3x = -1$\n\n범위가 $0 \\leq x < 2\\pi$이므로, $3x$의 범위는 $0 \\leq 3x < 6\\pi$입니다.\n\n**1) $\\sin 3x = 0$인 경우:**\n$3x = 0, \\pi, 2\\pi, 3\\pi, 4\\pi, 5\\pi$\n$x = 0, \\frac{\\pi}{3}, \\frac{2\\pi}{3}, \\pi, \\frac{4\\pi}{3}, \\frac{5\\pi}{3}$\n이때 점의 개수는 **6개**입니다.\n\n**2) $\\sin 3x = -1$인 경우:**\n$3x = \\frac{3\\pi}{2}, \\frac{7\\pi}{2}, \\frac{11\\pi}{2}$\n$x = \\frac{\\pi}{2}, \\frac{7\\pi}{6}, \\frac{11\\pi}{6}$\n이때 점의 개수는 **3개**입니다.\n\n위의 두 경우에서 구한 $x$값들은 서로 겹치지 않습니다. ($\\sin 3x$가 0일 때와 -1일 때는 값이 다르기 때문입니다.)\n\n따라서 전체 서로 다른 점의 개수는 $6 + 3 = 9$개입니다.\n\n최종정답: ③",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TWZBiHKqSnqHe5GmRHwt6UvbEbfiXIF1NAOdC41X6qS75bAWS6Ji1kupqFPI3XKxvj1YL7-l6ZTa6--JN47ejfJF0G3sNWQCuyGG5K7nftnzZ3bDd0z11Jwpve0PMdXxNDffC-6402PwSfFqC",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "aCzvauaREZv0z7IPweHIqQI",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 448,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 133,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 133
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 581,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 5.122,
+  "completed_at": "2026-11-07T13:49:29.757010+00:00",
+  "evaluation": {
+    "predicted_answer": "③",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "③",
+    "predicted_kind": "choice",
+    "predicted_choice": 3
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "d56f78f029c981a51c71e3d07952f18207058d26990c0d9c377e8d8a37cbfadd",
+    "imported_at": "2026-11-07T16:57:38.417231+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "model": "linear_regression",
+  "architecture": "nn.Linear(346,431)",
+  "optimizer": "Adam",
+  "loss": "MSE",
+  "epochs": 500,
+  "learning_rate": 0.01,
+  "seed": 42,
+  "split_source": "data/processed/splits/*.json",
+  "test_used_for_training_or_selection": false,
+  "initial_train_mse": 7.166752338409424,
+  "negative_prediction_policy": "clip_to_zero_without_rounding_for_nonnegative_frequency_input",
+  "metrics": {
+    "train": {
+      "raw": {
+        "mse": 0.3404415249824524,
+        "mae": 0.11402781307697296,
+        "mean_cosine_similarity": 0.9732975959777832
+      },
+      "clipped_nonnegative": {
+        "mse": 0.33311355113983154,
+        "mae": 0.09944505989551544,
+        "mean_cosine_similarity": 0.9747496843338013
+      },
+      "training_mean_baseline": {
+        "mse": 3.3413424491882324,
+        "mae": 0.47771504521369934,
+        "mean_cosine_similarity": 0.7871190309524536
+      }
+    },
+    "test": {
+      "raw": {
+        "mse": 3.356985092163086,
+        "mae": 0.6229177117347717,
+        "mean_cosine_similarity": 0.8200149536132812
+      },
+      "clipped_nonnegative": {
+        "mse": 3.0124783515930176,
+        "mae": 0.485583633184433,
+        "mean_cosine_similarity": 0.8479803204536438
+      },
+      "training_mean_baseline": {
+        "mse": 3.559432029724121,
+        "mae": 0.48431211709976196,
+        "mean_cosine_similarity": 0.7986297011375427
+      }
+    }
+  }
+}

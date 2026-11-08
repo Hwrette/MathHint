@@ -1,0 +1,8 @@
+[정답] ①
+
+[해설]
+$\sin^{2} x - 4 \sin x - 5 k + k \geq 0$
+$\sin x = t$$\left( - 1 \leq t \leq 1 \right)$이라 하면 $t^{2} - 4 t - 5 k + 5 \geq 0$
+$\left( t - 2 \right)^{2} - 5 k + 1 \geq 0$
+$f \left( t \right) = \left( t - 2 \right)^{2} - 5 k + 1$$\left( - 1 \leq t \leq 1 \right)$이라 하면 함수 $f \left( t \right)$는 $t = 1$에서 최솟값을 가지므로 $1 - 5 k + 1 \geq 0 , k \leq \frac{2}{5}$
+따라서 $k$의 최댓값은 $\frac{2}{5}$

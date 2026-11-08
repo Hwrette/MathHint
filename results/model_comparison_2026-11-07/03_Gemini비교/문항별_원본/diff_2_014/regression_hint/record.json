@@ -1,0 +1,231 @@
+{
+  "id": "diff_2_014",
+  "method": "regression_hint",
+  "input_text": "다항함수 $f (x)$에 대하여 함수 $g (x)$를\n$g \\left( x \\right) = \\left( x^{2} - 2 x \\right) f \\left( x \\right)$\n라 하자. $g' (0) + g' (2) = 16$일 때, $f (2) - f (0)$의 값은?\n① $\\mathrm{6}$\t\t② $\\mathrm{8}$\t\t③ $\\mathrm{10}$\n④ $\\mathrm{12}$\t\t⑤ $\\mathrm{14}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:)\":11.584,\"latex:(\":11.383,\"latex:x\":6.472,\"latex:=\":6.323,\"latex:g\":5.899,\"latex:2\":5.749,\"latex:'\":5.488,\"latex:-\":4.597,\"latex:9\":4.4,\"latex:|\":4.208,\"latex:f\":4.146,\"latex:4\":3.971,\"latex:\\\\theta\":3.134,\"latex:+\":3.083,\"latex:\\\\alpha\":3.052,\"kiwi:면\":2.512,\"latex:,\":2.266,\"latex:0\":2.245,\"kiwi:]\":2.138,\"latex:\\\\left\":2.114}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "51f3a8a5ecc26f046a305a5925b46be0a33e402753370caf621a71eda867cd23",
+  "reference": {
+    "answer_text": "②",
+    "kind": "choice",
+    "choice": 2,
+    "value_text": "$\\mathrm{8}$",
+    "source": {
+      "id": "diff_2_014",
+      "source_file": "모의고사_미분_문제_2.hml",
+      "source_sha256": "bdf632f0269bd027f72fcf686c276a8040aa5cb2b985b26c7a2fe65391d878af",
+      "original_number": 14,
+      "current_number": 14
+    },
+    "numeric_value": 8.0,
+    "gradable": true
+  },
+  "reference_answer_text": "②",
+  "reference_solution": "[정답] ②\n\n[해설]\n$g \\left( x \\right) = \\left( x^{2} - 2 x \\right) f \\left( x \\right)$의 양변을 $x$에 대하여 미분하면\n$g' \\left( x \\right) = \\left( 2 x - 2 \\right) f \\left( x \\right) + \\left( x^{2} - 2 x \\right) f' \\left( x \\right)$\n$g' \\left( 0 \\right) = - 2 f \\left( 0 \\right)$, $g' \\left( 2 \\right) = 2 f \\left( 2 \\right)$\n$g' \\left( 0 \\right) + g' \\left( 2 \\right) = 2 \\left\\{ - f \\left( 0 \\right) + f \\left( 2 \\right) \\right\\} = 16$\n따라서 $f \\left( 2 \\right) - f \\left( 0 \\right) = 8$\n",
+  "problem_text": "다항함수 $f (x)$에 대하여 함수 $g (x)$를\n$g \\left( x \\right) = \\left( x^{2} - 2 x \\right) f \\left( x \\right)$\n라 하자. $g' (0) + g' (2) = 16$일 때, $f (2) - f (0)$의 값은?\n① $\\mathrm{6}$\t\t② $\\mathrm{8}$\t\t③ $\\mathrm{10}$\n④ $\\mathrm{12}$\t\t⑤ $\\mathrm{14}$\n",
+  "subject": "미분",
+  "unit": "03 미분계수와 도함수",
+  "type": "05 미분법 공식4 (곱의 미분법)",
+  "source": "2023년 교육청 고2공통 11월 > 12 [3점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:)": 11.584,
+      "latex:(": 11.383,
+      "latex:x": 6.472,
+      "latex:=": 6.323,
+      "latex:g": 5.899,
+      "latex:2": 5.749,
+      "latex:'": 5.488,
+      "latex:-": 4.597,
+      "latex:9": 4.4,
+      "latex:|": 4.208,
+      "latex:f": 4.146,
+      "latex:4": 3.971,
+      "latex:\\theta": 3.134,
+      "latex:+": 3.083,
+      "latex:\\alpha": 3.052,
+      "kiwi:면": 2.512,
+      "latex:,": 2.266,
+      "latex:0": 2.245,
+      "kiwi:]": 2.138,
+      "latex:\\left": 2.114
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:10:45.622994+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:10:45.623008+00:00",
+      "usage": {
+        "prompt_token_count": 409,
+        "candidates_token_count": 331,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 740,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 331,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 409,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 409
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 740,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "lVvvasG8NPisz7IPsMXZmQk",
+      "latency_seconds": 49.638,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $g(x) = (x^2 - 2x)f(x)$를 미분하면 곱의 미분법에 의해 다음과 같습니다.\n$g'(x) = (2x - 2)f(x) + (x^2 - 2x)f'(x)$\n\n이제 $g'(0)$과 $g'(2)$를 각각 구합니다.\n\n1) $x = 0$일 때:\n$g'(0) = (2(0) - 2)f(0) + (0^2 - 2(0))f'(0)$\n$g'(0) = -2f(0)$\n\n2) $x = 2$일 때:\n$g'(2) = (2(2) - 2)f(2) + (2^2 - 2(2))f'(2)$\n$g'(2) = (4 - 2)f(2) + (4 - 4)f'(2)$\n$g'(2) = 2f(2)$\n\n문제에서 $g'(0) + g'(2) = 16$이라고 하였으므로, 위에서 구한 식을 대입하면 다음과 같습니다.\n$-2f(0) + 2f(2) = 16$\n\n양변을 2로 나누면:\n$f(2) - f(0) = 8$\n\n따라서 구하는 값은 8입니다.\n\n최종정답: ②",
+  "usage": {
+    "prompt_token_count": 409,
+    "candidates_token_count": 331,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 740,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 331,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 409,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 409
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 740,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "lVvvasG8NPisz7IPsMXZmQk",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:11:35 GMT",
+        "server": "envoy",
+        "content-length": "858",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=49387",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "49537"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $g(x) = (x^2 - 2x)f(x)$를 미분하면 곱의 미분법에 의해 다음과 같습니다.\n$g'(x) = (2x - 2)f(x) + (x^2 - 2x)f'(x)$\n\n이제 $g'(0)$과 $g'(2)$를 각각 구합니다.\n\n1) $x = 0$일 때:\n$g'(0) = (2(0) - 2)f(0) + (0^2 - 2(0))f'(0)$\n$g'(0) = -2f(0)$\n\n2) $x = 2$일 때:\n$g'(2) = (2(2) - 2)f(2) + (2^2 - 2(2))f'(2)$\n$g'(2) = (4 - 2)f(2) + (4 - 4)f'(2)$\n$g'(2) = 2f(2)$\n\n문제에서 $g'(0) + g'(2) = 16$이라고 하였으므로, 위에서 구한 식을 대입하면 다음과 같습니다.\n$-2f(0) + 2f(2) = 16$\n\n양변을 2로 나누면:\n$f(2) - f(0) = 8$\n\n따라서 구하는 값은 8입니다.\n\n최종정답: ②",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0T-Upu0siBH_biQMKWkNVTiKypd0TxrAuBFKlch4nBN66FlPEtY_bNOjXnXxCaTPK4GV49rpYv_IncDg3JyRo-JdqbPcD34f3EW62Jdiw8ll0-XyyfA-0Ztk3e4w1Y2NjnYDVwa_WJ-7zWpkmQ",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "lVvvasG8NPisz7IPsMXZmQk",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 331,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 409,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 409
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 740,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 49.638,
+  "completed_at": "2026-11-07T17:11:35.260795+00:00",
+  "evaluation": {
+    "predicted_answer": "②",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "②",
+    "predicted_kind": "choice",
+    "predicted_choice": 2
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

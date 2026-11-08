@@ -1,0 +1,30 @@
+{
+  "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+  "mode": "top_tokens",
+  "top_k": 20,
+  "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+  "vocabulary_size": 431,
+  "transmitted_coordinates": 20,
+  "mapping": {
+    "latex:}": 22.899,
+    "latex:{": 22.71,
+    "latex:x": 16.133,
+    "latex:\\pi": 11.651,
+    "latex:\\cos": 10.144,
+    "latex:=": 9.616,
+    "latex:\\frac": 9.357,
+    "latex:1": 8.294,
+    "kiwi:이": 6.985,
+    "latex:3": 6.204,
+    "latex:0": 6.081,
+    "latex:10": 5.79,
+    "kiwi:,": 5.517,
+    "latex:<": 4.907,
+    "latex:a": 4.869,
+    "latex:\\left": 4.732,
+    "latex:t": 4.684,
+    "latex:\\right": 4.649,
+    "latex:2": 3.82,
+    "latex:(": 3.118
+  }
+}

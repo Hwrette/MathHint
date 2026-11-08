@@ -1,0 +1,3 @@
+다항함수 ${f (x)}$가
+$\lim_{x \rightarrow \infty} {\frac{f (x)}{2 x^{2}}} = 1$, $\lim_{x \rightarrow 1} {\frac{f (x) - 3}{\left( x - 1 \right) \left( x - 2 \right)} = 4}$
+를 만족시킬 때, $f (4)$의 값을 구하시오.

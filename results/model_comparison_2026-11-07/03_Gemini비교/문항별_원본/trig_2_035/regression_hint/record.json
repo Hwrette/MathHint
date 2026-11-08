@@ -1,0 +1,231 @@
+{
+  "id": "trig_2_035",
+  "method": "regression_hint",
+  "input_text": "함수 $f (x) = \\sin \\frac{\\pi}{4} x$라 할 때, $0 < x < 16$에서 부등식\n$f \\left( 2 + x \\right) f \\left( 2 - x \\right) < \\frac{1}{4}$\n을 만족시키는 모든 자연수 $x$의 값의 합을 구하시오.\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:{\":30.191,\"latex:}\":30.145,\"latex:x\":23.707,\"latex:2\":16.871,\"latex:\\\\frac\":16.463,\"latex:1\":13.543,\"latex:6\":12.991,\"latex:\\\\pi\":10.366,\"latex:+\":9.141,\"latex:0\":8.698,\"latex:<\":7.56,\"latex:\\\\cos\":7.493,\"latex:|\":7.492,\"latex:a\":7.395,\"kiwi:의\":7.252,\"latex:-\":7.043,\"latex:\\\\right\":7.032,\"latex:=\":6.916,\"latex:)\":6.748,\"latex:(\":6.747}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "f6c3c960042d258026eec933633703b2023078df5e0b94100f74a50774c4eb91",
+  "reference": {
+    "answer_text": "$32$",
+    "kind": "value",
+    "choice": null,
+    "value_text": "$32$",
+    "source": {
+      "id": "trig_2_035",
+      "source_file": "모의고사_삼각함수_문제_2.hml",
+      "source_sha256": "2a36b54c30c9b890ee90fe84dc6c2b62847494cb5830bd51de8b1fb6877d7cc2",
+      "original_number": 35,
+      "current_number": 35
+    },
+    "numeric_value": 32.0,
+    "gradable": true
+  },
+  "reference_answer_text": "$32$",
+  "reference_solution": "[정답] $32$\n\n[해설]\n$f \\left( x \\right) = \\sin \\frac{\\pi}{4} x$이므로\n$f \\left( 2 + x \\right) = \\sin \\frac{\\pi}{4} \\left( 2 + x \\right) = \\cos \\frac{\\pi}{4} x$,\n$f \\left( 2 - x \\right) = \\sin \\frac{\\pi}{4} \\left( 2 - x \\right) = \\cos \\frac{\\pi}{4} x$\n부등식 $f \\left( 2 + x \\right) f \\left( 2 - x \\right) < \\frac{1}{4}$에서\n$\\cos^{2} \\frac{\\pi}{4} x < \\frac{1}{4}$\t\t\t\t$\\cdots \\cdots$ ㉠\n$\\frac{\\pi}{4} x = \\theta$라 하면 $0 < x < 16$에서 $0 < \\theta < 4 \\pi$이고, ㉠에서\n$\\cos^{2} \\theta - \\frac{1}{4} < 0$,    $\\left( \\cos \\theta + \\frac{1}{2} \\right) \\left( \\cos \\theta - \\frac{1}{2} \\right) < 0$\n$- \\frac{1}{2} < \\cos \\theta < \\frac{1}{2}$\n$\\therefore$ $\\frac{\\pi}{3} < \\theta < \\frac{2}{3} \\pi$ 또는 $\\frac{4}{3} \\pi < \\theta < \\frac{5}{3} \\pi$\n또는 $\\frac{7}{3} \\pi < \\theta < \\frac{8}{3} \\pi$ 또는 $\\frac{10}{3} \\pi < \\theta < \\frac{11}{3} \\pi$\n$\\frac{\\pi}{4} x = \\theta$이므로 $x$의 값의 범위는\n$\\frac{4}{3} < x < \\frac{8}{3}$ 또는 $\\frac{16}{3} < x < \\frac{20}{3}$\n또는 $\\frac{28}{3} < x < \\frac{32}{3}$ 또는 $\\frac{40}{3} < x < \\frac{44}{3}$\n따라서 자연수 $x$는 $2$, $6$, $10$, $14$이므로 모든 자연수 $x$의 값의 합은\n$2 + 6 + 10 + 14 = 32$\n\n[다른 풀이]\n함수 $f \\left( x \\right) = \\sin \\frac{\\pi}{4} x$의 주기가 $2 \\pi \\div \\frac{\\pi}{4} = 8$이므로 정수 $n$에 대하여 함숫값 $f \\left( n \\right)$은 다음의 $8$개의 값이 차례로 반복된다.\n\n$n$\t$0$\t$1$\t$2$\t$3$\t$4$\t$5$\t$6$\t$7$\n$f \\left( n \\right)$\t$0$\t$\\frac{\\sqrt{2}}{2}$\t$1$\t$\\frac{\\sqrt{2}}{2}$\t$0$\t$- \\frac{\\sqrt{2}}{2}$\t$- 1$\t$- \\frac{\\sqrt{2}}{2}$\n\n$g (x) = f \\left( 2 + x \\right) f \\left( 2 - x \\right)$라 하면 함수 $f$의 주기가 $8$이므로 함수 $g$의 주기도 $8$이다.\n$g (1) = f \\left( 3 \\right) f \\left( 1 \\right) = \\frac{1}{2}$\n$g (2) = f \\left( 4 \\right) f \\left( 0 \\right) = 0$\n$g (3) = f \\left( 5 \\right) f \\left( - 1 \\right) = f \\left( 5 \\right) f \\left( 7 \\right) = \\frac{1}{2}$\n$g (4) = f \\left( 6 \\right) f \\left( - 2 \\right) = f \\left( 6 \\right) f \\left( 6 \\right) = 1$\n$g (5) = f \\left( 7 \\right) f \\left( - 3 \\right) = f \\left( 7 \\right) f \\left( 5 \\right) = \\frac{1}{2}$\n$g (6) = f \\left( 8 \\right) f \\left( - 4 \\right) = f \\left( 0 \\right) f \\left( 4 \\right) = 0$\n$g (7) = f \\left( 9 \\right) f \\left( - 5 \\right) = f \\left( 1 \\right) f \\left( 3 \\right) = \\frac{1}{2}$\n$g (8) = f \\left( 10 \\right) f \\left( - 6 \\right) = f \\left( 2 \\right) f \\left( 2 \\right) = 1$\n이므로 $x = 1$, $2$, $\\cdots$, $15$인 자연수 $x$에 대하여\n$g (x) = f \\left( 2 + x \\right) f \\left( 2 - x \\right) < \\frac{1}{4}$\n인 자연수 $x$는 $2$, $6$, $10$, $14$이다.\n따라서 그 합은\n$2 + 6 + 10 + 14 = 32$\n",
+  "problem_text": "함수 $f (x) = \\sin \\frac{\\pi}{4} x$라 할 때, $0 < x < 16$에서 부등식\n$f \\left( 2 + x \\right) f \\left( 2 - x \\right) < \\frac{1}{4}$\n을 만족시키는 모든 자연수 $x$의 값의 합을 구하시오.\n",
+  "subject": "삼각함수",
+  "unit": "06 삼각함수의 그래프",
+  "type": "07 삼각부등식2 (이차식꼴)",
+  "source": "2023년(2024학년도) 평가원 고3공통 11월 > 공통범위 > 19 [3점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:{": 30.191,
+      "latex:}": 30.145,
+      "latex:x": 23.707,
+      "latex:2": 16.871,
+      "latex:\\frac": 16.463,
+      "latex:1": 13.543,
+      "latex:6": 12.991,
+      "latex:\\pi": 10.366,
+      "latex:+": 9.141,
+      "latex:0": 8.698,
+      "latex:<": 7.56,
+      "latex:\\cos": 7.493,
+      "latex:|": 7.492,
+      "latex:a": 7.395,
+      "kiwi:의": 7.252,
+      "latex:-": 7.043,
+      "latex:\\right": 7.032,
+      "latex:=": 6.916,
+      "latex:)": 6.748,
+      "latex:(": 6.747
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:16:54.681122+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:16:54.681137+00:00",
+      "usage": {
+        "prompt_token_count": 374,
+        "candidates_token_count": 983,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 1357,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 983,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 374,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 374
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 1357,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "D13vasWkE-2Y-8YPvbf5mAc",
+      "latency_seconds": 11.246,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "주어진 함수 $f(x) = \\sin \\left( \\frac{\\pi}{4} x \\right)$에 대하여 부등식 $f(2+x)f(2-x) < \\frac{1}{4}$을 풀어봅시다.\n\n먼저 $f(2+x) = \\sin \\left( \\frac{\\pi}{4}(2+x) \\right) = \\sin \\left( \\frac{\\pi}{2} + \\frac{\\pi}{4}x \\right) = \\cos \\left( \\frac{\\pi}{4}x \\right)$이고,\n$f(2-x) = \\sin \\left( \\frac{\\pi}{4}(2-x) \\right) = \\sin \\left( \\frac{\\pi}{2} - \\frac{\\pi}{4}x \\right) = \\cos \\left( \\frac{\\pi}{4}x \\right)$입니다.\n\n따라서 주어진 부등식은 다음과 같이 변형됩니다.\n$\\cos^2 \\left( \\frac{\\pi}{4}x \\right) < \\frac{1}{4}$\n\n이 부등식은 $-\\frac{1}{2} < \\cos \\left( \\frac{\\pi}{4}x \\right) < \\frac{1}{2}$과 같습니다.\n$0 < x < 16$의 범위에서 $\\theta = \\frac{\\pi}{4}x$라 하면 $0 < \\theta < 4\\pi$입니다.\n$\\cos \\theta$의 값이 $-\\frac{1}{2}$과 $\\frac{1}{2}$ 사이인 구간을 찾으면 다음과 같습니다.\n\n1) $0 < \\theta < 4\\pi$에서 $\\cos \\theta = \\frac{1}{2}$인 $\\theta$는 $\\frac{\\pi}{3}, \\frac{5\\pi}{3}, \\frac{7\\pi}{3}, \\frac{11\\pi}{3}$입니다.\n2) $0 < \\theta < 4\\pi$에서 $\\cos \\theta = -\\frac{1}{2}$인 $\\theta$는 $\\frac{2\\pi}{3}, \\frac{4\\pi}{3}, \\frac{8\\pi}{3}, \\frac{10\\pi}{3}$입니다.\n\n따라서 $-\\frac{1}{2} < \\cos \\theta < \\frac{1}{2}$을 만족하는 $\\theta$의 범위는\n$\\frac{\\pi}{3} < \\theta < \\frac{2\\pi}{3}$, $\\frac{4\\pi}{3} < \\theta < \\frac{5\\pi}{3}$, $\\frac{7\\pi}{3} < \\theta < \\frac{8\\pi}{3}$, $\\frac{10\\pi}{3} < \\theta < \\frac{11\\pi}{3}$ 입니다.\n\n$\\theta = \\frac{\\pi}{4}x$를 대입하면:\n$\\frac{\\pi}{3} < \\frac{\\pi}{4}x < \\frac{2\\pi}{3} \\implies \\frac{4}{3} < x < \\frac{8}{3} \\implies 1.33 < x < 2.66 \\implies x=2$\n$\\frac{4\\pi}{3} < \\frac{\\pi}{4}x < \\frac{5\\pi}{3} \\implies \\frac{16}{3} < x < \\frac{20}{3} \\implies 5.33 < x < 6.66 \\implies x=6$\n$\\frac{7\\pi}{3} < \\frac{\\pi}{4}x < \\frac{8\\pi}{3} \\implies \\frac{28}{3} < x < \\frac{32}{3} \\implies 9.33 < x < 10.66 \\implies x=10$\n$\\frac{10\\pi}{3} < \\frac{\\pi}{4}x < \\frac{11\\pi}{3} \\implies \\frac{40}{3} < x < \\frac{44}{3} \\implies 13.33 < x < 14.66 \\implies x=14$\n\n만족하는 자연수 $x$는 $2, 6, 10, 14$입니다.\n이들의 합은 $2 + 6 + 10 + 14 = 32$입니다.\n\n최종정답: 32",
+  "usage": {
+    "prompt_token_count": 374,
+    "candidates_token_count": 983,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 1357,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 983,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 374,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 374
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1357,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "D13vasWkE-2Y-8YPvbf5mAc",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:17:05 GMT",
+        "server": "envoy",
+        "content-length": "1185",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=2607",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "3070"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "주어진 함수 $f(x) = \\sin \\left( \\frac{\\pi}{4} x \\right)$에 대하여 부등식 $f(2+x)f(2-x) < \\frac{1}{4}$을 풀어봅시다.\n\n먼저 $f(2+x) = \\sin \\left( \\frac{\\pi}{4}(2+x) \\right) = \\sin \\left( \\frac{\\pi}{2} + \\frac{\\pi}{4}x \\right) = \\cos \\left( \\frac{\\pi}{4}x \\right)$이고,\n$f(2-x) = \\sin \\left( \\frac{\\pi}{4}(2-x) \\right) = \\sin \\left( \\frac{\\pi}{2} - \\frac{\\pi}{4}x \\right) = \\cos \\left( \\frac{\\pi}{4}x \\right)$입니다.\n\n따라서 주어진 부등식은 다음과 같이 변형됩니다.\n$\\cos^2 \\left( \\frac{\\pi}{4}x \\right) < \\frac{1}{4}$\n\n이 부등식은 $-\\frac{1}{2} < \\cos \\left( \\frac{\\pi}{4}x \\right) < \\frac{1}{2}$과 같습니다.\n$0 < x < 16$의 범위에서 $\\theta = \\frac{\\pi}{4}x$라 하면 $0 < \\theta < 4\\pi$입니다.\n$\\cos \\theta$의 값이 $-\\frac{1}{2}$과 $\\frac{1}{2}$ 사이인 구간을 찾으면 다음과 같습니다.\n\n1) $0 < \\theta < 4\\pi$에서 $\\cos \\theta = \\frac{1}{2}$인 $\\theta$는 $\\frac{\\pi}{3}, \\frac{5\\pi}{3}, \\frac{7\\pi}{3}, \\frac{11\\pi}{3}$입니다.\n2) $0 < \\theta < 4\\pi$에서 $\\cos \\theta = -\\frac{1}{2}$인 $\\theta$는 $\\frac{2\\pi}{3}, \\frac{4\\pi}{3}, \\frac{8\\pi}{3}, \\frac{10\\pi}{3}$입니다.\n\n따라서 $-\\frac{1}{2} < \\cos \\theta < \\frac{1}{2}$을 만족하는 $\\theta$의 범위는\n$\\frac{\\pi}{3} < \\theta < \\frac{2\\pi}{3}$, $\\frac{4\\pi}{3} < \\theta < \\frac{5\\pi}{3}$, $\\frac{7\\pi}{3} < \\theta < \\frac{8\\pi}{3}$, $\\frac{10\\pi}{3} < \\theta < \\frac{11\\pi}{3}$ 입니다.\n\n$\\theta = \\frac{\\pi}{4}x$를 대입하면:\n$\\frac{\\pi}{3} < \\frac{\\pi}{4}x < \\frac{2\\pi}{3} \\implies \\frac{4}{3} < x < \\frac{8}{3} \\implies 1.33 < x < 2.66 \\implies x=2$\n$\\frac{4\\pi}{3} < \\frac{\\pi}{4}x < \\frac{5\\pi}{3} \\implies \\frac{16}{3} < x < \\frac{20}{3} \\implies 5.33 < x < 6.66 \\implies x=6$\n$\\frac{7\\pi}{3} < \\frac{\\pi}{4}x < \\frac{8\\pi}{3} \\implies \\frac{28}{3} < x < \\frac{32}{3} \\implies 9.33 < x < 10.66 \\implies x=10$\n$\\frac{10\\pi}{3} < \\frac{\\pi}{4}x < \\frac{11\\pi}{3} \\implies \\frac{40}{3} < x < \\frac{44}{3} \\implies 13.33 < x < 14.66 \\implies x=14$\n\n만족하는 자연수 $x$는 $2, 6, 10, 14$입니다.\n이들의 합은 $2 + 6 + 10 + 14 = 32$입니다.\n\n최종정답: 32",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TN5Iu51OcmHvkccZtqWgPBfN6UcLNuzwyupirhEpIgAHLRmCq63LFImZn-1LB8ctVWjamTooErnrPKrULNCG_XHzAOM4Rp9vavjUvIZpNHdsMYkoD8JBXnK9rWDttm4y9IJgwVF6o-wd6jnEP",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "D13vasWkE-2Y-8YPvbf5mAc",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 983,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 374,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 374
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1357,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 11.246,
+  "completed_at": "2026-11-07T17:17:05.927483+00:00",
+  "evaluation": {
+    "predicted_answer": "32",
+    "correct": true,
+    "status": "correct",
+    "reason": "numeric_constant_comparison_tolerance_1e-9",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "$32$",
+    "predicted_kind": "value",
+    "predicted_numeric_value": 32.0
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

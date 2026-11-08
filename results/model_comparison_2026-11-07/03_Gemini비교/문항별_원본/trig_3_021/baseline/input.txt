@@ -1,0 +1,3 @@
+${0 \le x < 2 \pi}$일 때, 두 함수 $y = \sin x$와 $y = \cos \left( x + \frac{\pi}{2} \right) + 1$의 그래프가 만나는 모든 점의 $x$좌표의 합은?
+① $\frac{\pi}{2}$		② $\pi$		③ $\frac{3}{2} \pi$
+④ $2 \pi$		⑤ $\frac{5}{2} \pi$

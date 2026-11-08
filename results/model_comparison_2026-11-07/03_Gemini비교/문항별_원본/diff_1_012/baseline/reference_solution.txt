@@ -1,0 +1,8 @@
+[정답] ②
+
+[해설]
+함수 $f \left( x \right)$가 $x = 2$에서 연속이므로
+$\lim_{x \rightarrow 2 -} f \left( x \right) = \lim_{x \rightarrow 2 +} f \left( x \right) = f \left( 2 \right)$
+$\lim_{x \rightarrow 2 -} f \left( x \right) = \lim_{x \rightarrow 2 -} \left( a x^{2} - 2 \right) = 4 a - 2$
+$\lim_{x \rightarrow 2 +} f \left( x \right) = f \left( 2 \right) = 6$
+$4 a - 2 = 6$, $a = 2$

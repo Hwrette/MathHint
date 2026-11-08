@@ -1,0 +1,28 @@
+이차방정식 $6x^2 + (4\cos\theta)x + \sin\theta = 0$이 실근을 갖지 않으려면, 판별식 $D < 0$이어야 합니다.
+
+이차방정식의 판별식을 $D$라 하면, $x$의 계수가 짝수이므로 $\frac{D}{4}$를 이용합니다.
+$$\frac{D}{4} = (2\cos\theta)^2 - 6\sin\theta < 0$$
+$$4\cos^2\theta - 6\sin\theta < 0$$
+
+$\cos^2\theta = 1 - \sin^2\theta$를 대입하면,
+$$4(1 - \sin^2\theta) - 6\sin\theta < 0$$
+$$4 - 4\sin^2\theta - 6\sin\theta < 0$$
+$$-4\sin^2\theta - 6\sin\theta + 4 < 0$$
+양변을 $-2$로 나누면 부등호 방향이 바뀝니다.
+$$2\sin^2\theta + 3\sin\theta - 2 > 0$$
+
+인수분해하면,
+$$(2\sin\theta - 1)(\sin\theta + 2) > 0$$
+
+여기서 $-1 \leq \sin\theta \leq 1$이므로, 항상 $\sin\theta + 2 > 0$입니다. 따라서 부등식이 성립하려면 다음을 만족해야 합니다.
+$$2\sin\theta - 1 > 0 \implies \sin\theta > \frac{1}{2}$$
+
+$0 \leq \theta < 2\pi$ 범위에서 $\sin\theta > \frac{1}{2}$을 만족하는 $\theta$의 범위는 다음과 같습니다.
+$$\frac{\pi}{6} < \theta < \frac{5}{6}\pi$$
+
+따라서 $\alpha = \frac{\pi}{6}$, $\beta = \frac{5}{6}\pi$입니다.
+
+문제에서 요구하는 $3\alpha + \beta$의 값은
+$$3\left(\frac{\pi}{6}\right) + \frac{5}{6}\pi = \frac{\pi}{2} + \frac{5}{6}\pi = \frac{3\pi}{6} + \frac{5}{6}\pi = \frac{8}{6}\pi = \frac{4}{3}\pi$$
+
+최종정답: ④

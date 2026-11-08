@@ -1,0 +1,208 @@
+{
+  "id": "diff_1_036",
+  "method": "baseline",
+  "input_text": "양수 $a$에 대하여 함수 $f \\left( x \\right)$를\n$f \\left( x \\right) = x^{3} + 3 a x^{2} - 9 a^{2} x + 4$\n라 하자. 직선 $y = 5$가 곡선 $y = f \\left( x \\right)$에 접할 때, $f \\left( 2 \\right)$의 값은?\n① $11$\t\t② $12$\t\t③ $13$\n④ $14$\t\t⑤ $15$\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "7e6606f564cb1e008e19f348104beb93acb32e18ced47d63a7652e9fbfa6f219",
+  "reference": {
+    "answer_text": "④",
+    "kind": "choice",
+    "choice": 4,
+    "value_text": "$14$",
+    "source": {
+      "id": "diff_1_036",
+      "source_file": "모의고사_미분_문제_1.hml",
+      "source_sha256": "02487629c158a7d2ad3e0f0701b391a6efa7f5d517ab48c044f978924365270f",
+      "original_number": 36,
+      "current_number": 36
+    },
+    "numeric_value": 14.0,
+    "gradable": true
+  },
+  "reference_answer_text": "④",
+  "reference_solution": "[정답] ④\n\n[해설]\n직선 $y = 5$는 기울기가 $0$이므로 곡선 $y = f \\left( x \\right)$의 그래프와 직선 $y = 5$가 접하는 점의 $x$좌표는 $f' \\left( x \\right) = 0$을 만족시킨다.\n$f \\left( x \\right) = x^{3} + 3 a x^{2} - 9 a^{2} x + 4$에서\n$f' \\left( x \\right) = 3 x^{2} + 6 a x - 9 a^{2}$\n$f' \\left( x \\right) = 0$에서\n$3 x^{2} + 6 a x - 9 a^{2} = 0$,    $3 \\left( x - a \\right) \\left( x + 3 a \\right) = 0$\n$\\therefore$ $x = a$ 또는 $x = - 3 a$\n(ⅰ) $x = a$일 때\n$f \\left( a \\right) = a^{3} + 3 a \\times a^{2} - 9 a^{2} \\times a + 4 = - 5 a^{3} + 4$\n이때 접선의 방정식이 $y = 5$이므로\n$- 5 a^{3} + 4 = 5$,    $- 5 a^{3} = 1$,    $a^{3} = - \\frac{1}{5}$\n$a$는 양수이므로 조건을 만족시키지 않는다.\n(ⅱ) $x = - 3 a$일 때\n$f \\left( - 3 a \\right)$$= \\left( - 3 a \\right)^{3} + 3 a \\times \\left( - 3 a \\right)^{2} - 9 a^{2} \\times \\left( - 3 a \\right) + 4$\n$= - 27 a^{3} + 27 a^{3} + 27 a^{3} + 4 = 27 a^{3} + 4$\n이때 접선의 방정식이 $y = 5$이므로\n$27 a^{3} + 4 = 5$,    $27 a^{3} = 1$,    $a^{3} = \\frac{1}{27}$\n$a$가 양수이므로    $a = \\frac{1}{3}$\n(ⅰ), (ⅱ)에 의하여    $a = \\frac{1}{3}$\n$\\therefore$ $f \\left( x \\right) = x^{3} + x^{2} - x + 4$\n$\\therefore$ $f \\left( 2 \\right) = 2^{3} + 2^{2} - 2 + 4 = 14$\n",
+  "problem_text": "양수 $a$에 대하여 함수 $f \\left( x \\right)$를\n$f \\left( x \\right) = x^{3} + 3 a x^{2} - 9 a^{2} x + 4$\n라 하자. 직선 $y = 5$가 곡선 $y = f \\left( x \\right)$에 접할 때, $f \\left( 2 \\right)$의 값은?\n① $11$\t\t② $12$\t\t③ $13$\n④ $14$\t\t⑤ $15$\n",
+  "subject": "미분",
+  "unit": "05 함수의 증가와 감소",
+  "type": "02 극대와 극소2 (삼차함수의 극대와 극소)",
+  "source": "2025년(2026학년도) 평가원 고3공통 11월 > 공통범위 > 9 [4점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:19:39.736702+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:19:39.736718+00:00",
+      "usage": {
+        "prompt_token_count": 170,
+        "candidates_token_count": 589,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 759,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 589,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 170,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 170
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 759,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "bCXvatKQD9XQz7IPxt7z8QE",
+      "latency_seconds": 8.238,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $f(x) = x^3 + 3ax^2 - 9a^2x + 4$에 대하여, 직선 $y=5$가 곡선 $y=f(x)$에 접한다는 것은 어떤 $x=k$에서 $f(k)=5$이고 $f'(k)=0$임을 의미합니다.\n\n먼저 $f'(x)$를 구하면,\n$f'(x) = 3x^2 + 6ax - 9a^2$\n$f'(x) = 3(x^2 + 2ax - 3a^2) = 3(x+3a)(x-a)$\n\n$f'(x)=0$이 되는 $x$의 값은 $x = -3a$ 또는 $x = a$입니다.\n\n**경우 1: $x = a$에서 접하는 경우**\n$f(a) = a^3 + 3a(a^2) - 9a^2(a) + 4 = 5$\n$a^3 + 3a^3 - 9a^3 + 4 = 5$\n$-5a^3 = 1$\n$a^3 = -\\frac{1}{5}$\n$a$는 양수라는 조건에 모순됩니다.\n\n**경우 2: $x = -3a$에서 접하는 경우**\n$f(-3a) = (-3a)^3 + 3a(-3a)^2 - 9a^2(-3a) + 4 = 5$\n$-27a^3 + 27a^3 + 27a^3 + 4 = 5$\n$27a^3 = 1$\n$a^3 = \\frac{1}{27}$\n$a$는 양수이므로 $a = \\frac{1}{3}$입니다.\n\n이제 $a = \\frac{1}{3}$을 $f(x)$에 대입합니다.\n$f(x) = x^3 + 3(\\frac{1}{3})x^2 - 9(\\frac{1}{3})^2x + 4$\n$f(x) = x^3 + x^2 - x + 4$\n\n문제에서 요구하는 $f(2)$의 값은,\n$f(2) = 2^3 + 2^2 - 2 + 4$\n$f(2) = 8 + 4 - 2 + 4 = 14$\n\n따라서 $f(2) = 14$입니다.\n\n최종정답: ④",
+  "usage": {
+    "prompt_token_count": 170,
+    "candidates_token_count": 589,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 759,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 589,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 170,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 170
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 759,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "bCXvatKQD9XQz7IPxt7z8QE",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:19:47 GMT",
+        "server": "envoy",
+        "content-length": "1020",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=7688",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "8197"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $f(x) = x^3 + 3ax^2 - 9a^2x + 4$에 대하여, 직선 $y=5$가 곡선 $y=f(x)$에 접한다는 것은 어떤 $x=k$에서 $f(k)=5$이고 $f'(k)=0$임을 의미합니다.\n\n먼저 $f'(x)$를 구하면,\n$f'(x) = 3x^2 + 6ax - 9a^2$\n$f'(x) = 3(x^2 + 2ax - 3a^2) = 3(x+3a)(x-a)$\n\n$f'(x)=0$이 되는 $x$의 값은 $x = -3a$ 또는 $x = a$입니다.\n\n**경우 1: $x = a$에서 접하는 경우**\n$f(a) = a^3 + 3a(a^2) - 9a^2(a) + 4 = 5$\n$a^3 + 3a^3 - 9a^3 + 4 = 5$\n$-5a^3 = 1$\n$a^3 = -\\frac{1}{5}$\n$a$는 양수라는 조건에 모순됩니다.\n\n**경우 2: $x = -3a$에서 접하는 경우**\n$f(-3a) = (-3a)^3 + 3a(-3a)^2 - 9a^2(-3a) + 4 = 5$\n$-27a^3 + 27a^3 + 27a^3 + 4 = 5$\n$27a^3 = 1$\n$a^3 = \\frac{1}{27}$\n$a$는 양수이므로 $a = \\frac{1}{3}$입니다.\n\n이제 $a = \\frac{1}{3}$을 $f(x)$에 대입합니다.\n$f(x) = x^3 + 3(\\frac{1}{3})x^2 - 9(\\frac{1}{3})^2x + 4$\n$f(x) = x^3 + x^2 - x + 4$\n\n문제에서 요구하는 $f(2)$의 값은,\n$f(2) = 2^3 + 2^2 - 2 + 4$\n$f(2) = 8 + 4 - 2 + 4 = 14$\n\n따라서 $f(2) = 14$입니다.\n\n최종정답: ④",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TLhaDjCsFwFUbi0lyXOFGrVWYFNZfwRq_OWPvZLLH7B8OaUofAESm0AhDoaZ2gHus0sOs8GL_0AlsB_F5VmG48AfmYMAqB392JWowQjHENqvkpeEbSXV6sBH_BpMCXSIdkRm4DDS-pAnU9tWV",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "bCXvatKQD9XQz7IPxt7z8QE",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 589,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 170,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 170
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 759,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 8.238,
+  "completed_at": "2026-11-07T13:19:47.974502+00:00",
+  "evaluation": {
+    "predicted_answer": "④",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "④",
+    "predicted_kind": "choice",
+    "predicted_choice": 4
+  },
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "dd383be7c9fa713007ea0f491c955ac1765aeaba68d3fe6770427c386c8b958f",
+    "imported_at": "2026-11-07T16:57:38.363002+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

@@ -1,0 +1,10 @@
+함수
+$f \left( x \right) = \left\{\begin{array}{lll}7 x + a &  & \left( x \le 2 \right) \\ x^{2} + a x &  & \left( x > 2 \right)\end{array}\right.$
+가 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?
+① $9$		② $10$		③ $11$
+④ $12$		⑤ $13$
+
+
+[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]
+{"latex:x":14.137,"latex:=":9.498,"latex:+":9.198,"latex:}":9.092,"latex:{":9.062,"latex:\\right":8.505,"latex:\\left":8.448,"latex:)":7.367,"latex:(":7.206,"latex:2":6.043,"latex:-":5.845,"latex:_":5.599,"latex:\\rightarrow":4.49,"latex:\\lim":4.475,"latex:3":3.523,"latex:f":3.361,"latex:1":3.304,"kiwi:이":2.608,"latex:^":2.597,"latex:a":2.385}
+위 주요 토큰을 참고하여 풀이를 작성해줘.

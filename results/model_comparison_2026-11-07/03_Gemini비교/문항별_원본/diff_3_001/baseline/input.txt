@@ -1,0 +1,5 @@
+함수 $f (x)$가 모든 실수 $x$에 대하여
+$2 x + 1 \leq f (x) \leq (x + 1)^{2}$
+을 만족시킬 때, $\lim_{x \rightarrow 0} (x + 5) f (x)$의 값은?
+① $\mathrm{1}$		② $\mathrm{2}$		③ $\mathrm{3}$
+④ $\mathrm{4}$		⑤ $\mathrm{5}$

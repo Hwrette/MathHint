@@ -1,0 +1,209 @@
+{
+  "id": "trig_3_010",
+  "method": "baseline",
+  "input_text": "$\\sin \\theta = \\frac{1}{3}$일 때, $\\cos \\left( \\theta + \\frac{\\pi}{2} \\right)$의 값은?\n① $- \\frac{7}{9}$\t② $- \\frac{2}{3}$\t\t③ $- \\frac{5}{9}$\n④ $- \\frac{4}{9}$\t⑤ $- \\frac{1}{3}$\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "e9eb2fd440aff5ac377a6423befb177d092b411340a29bbc9be29c4af1f1c8eb",
+  "reference": {
+    "answer_text": "⑤",
+    "kind": "choice",
+    "choice": 5,
+    "value_text": "$- \\frac{1}{3}$",
+    "source": {
+      "id": "trig_3_010",
+      "source_file": "모의고사_삼각함수_문제_3.hml",
+      "source_sha256": "4853842eca14740e8bbc1083fae38beb51f1c6cde8e78fe6d3c398eca800b30b",
+      "original_number": 10,
+      "current_number": 10
+    },
+    "numeric_value": -0.3333333333333333,
+    "gradable": true
+  },
+  "reference_answer_text": "⑤",
+  "reference_solution": "[정답] ⑤\n\n[해설]\n$\\cos \\left( \\theta + \\frac{\\pi}{2} \\right)$$= - \\sin \\theta$$= - \\frac{1}{3}$\n",
+  "problem_text": "$\\sin \\theta = \\frac{1}{3}$일 때, $\\cos \\left( \\theta + \\frac{\\pi}{2} \\right)$의 값은?\n① $- \\frac{7}{9}$\t② $- \\frac{2}{3}$\t\t③ $- \\frac{5}{9}$\n④ $- \\frac{4}{9}$\t⑤ $- \\frac{1}{3}$\n",
+  "subject": "삼각함수",
+  "unit": "06 삼각함수의 그래프",
+  "type": "01 각 변형1 (각 변형 규칙)",
+  "source": "2016년 교육청 고3이과 10월 > 2 [2점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:50:38.044157+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:50:38.044172+00:00",
+      "usage": {
+        "prompt_token_count": 130,
+        "candidates_token_count": 177,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 307,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 177,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 130,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 130
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 307,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "sSzvauHOL-a01MkP2sGj2Q0",
+      "latency_seconds": 4.767,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "삼각함수의 성질을 이용하여 문제를 해결합니다.\n\n1. **삼각함수의 변환 공식 적용:**\n   $\\cos \\left( \\theta + \\frac{\\pi}{2} \\right)$는 각의 변환 공식에 의해 다음과 같이 바뀝니다.\n   $\\cos \\left( \\theta + \\frac{\\pi}{2} \\right) = -\\sin \\theta$\n\n2. **주어진 값 대입:**\n   문제에서 $\\sin \\theta = \\frac{1}{3}$이라고 주어졌으므로, 이를 위 식에 대입합니다.\n   $-\\sin \\theta = -\\left( \\frac{1}{3} \\right) = -\\frac{1}{3}$\n\n따라서 구하는 값은 $-\\frac{1}{3}$입니다.\n\n최종정답: ⑤",
+  "usage": {
+    "prompt_token_count": 130,
+    "candidates_token_count": 177,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 307,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 177,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 130,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 130
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 307,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "sSzvauHOL-a01MkP2sGj2Q0",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:50:42 GMT",
+        "server": "envoy",
+        "content-length": "818",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1042",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "1183"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "삼각함수의 성질을 이용하여 문제를 해결합니다.\n\n1. **삼각함수의 변환 공식 적용:**\n   $\\cos \\left( \\theta + \\frac{\\pi}{2} \\right)$는 각의 변환 공식에 의해 다음과 같이 바뀝니다.\n   $\\cos \\left( \\theta + \\frac{\\pi}{2} \\right) = -\\sin \\theta$\n\n2. **주어진 값 대입:**\n   문제에서 $\\sin \\theta = \\frac{1}{3}$이라고 주어졌으므로, 이를 위 식에 대입합니다.\n   $-\\sin \\theta = -\\left( \\frac{1}{3} \\right) = -\\frac{1}{3}$\n\n따라서 구하는 값은 $-\\frac{1}{3}$입니다.\n\n최종정답: ⑤",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0ThbDzD-WsxFF4xqX7Qe60KMiVe9vYGo4N3qwQAKJWAZkxAIqwLr1HJ9Y-HOGn77F_IZ9woedh3vuH0dZ648gx-aJj5Hn2yFK4dPQv0wJevIoqwf_fHc_f3vNM4GmeGKyaX_GdCmaX5o4EMUYD",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "sSzvauHOL-a01MkP2sGj2Q0",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 177,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 130,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 130
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 307,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 4.767,
+  "completed_at": "2026-11-07T13:50:42.811356+00:00",
+  "evaluation": {
+    "predicted_answer": "⑤",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "⑤",
+    "predicted_kind": "choice",
+    "predicted_choice": 5
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "a00cee0fc17edf7b1dea64e272640fb4ba6e9d5208af236481e35dec2c487beb",
+    "imported_at": "2026-11-07T16:57:38.420042+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

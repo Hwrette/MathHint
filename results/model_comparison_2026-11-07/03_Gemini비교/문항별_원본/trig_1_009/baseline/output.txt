@@ -1,0 +1,29 @@
+주어진 조건 $\sin \theta + \cos \theta = \frac{2}{5}\sqrt{10}$의 양변을 제곱하면,
+$(\sin \theta + \cos \theta)^2 = \left(\frac{2}{5}\sqrt{10}\right)^2$
+$\sin^2 \theta + \cos^2 \theta + 2 \sin \theta \cos \theta = \frac{4}{25} \times 10$
+$1 + 2 \sin \theta \cos \theta = \frac{40}{25} = \frac{8}{5}$
+$2 \sin \theta \cos \theta = \frac{8}{5} - 1 = \frac{3}{5}$
+즉, $\sin 2\theta = \frac{3}{5}$입니다.
+
+$2\theta$가 제2사분면의 각이므로 $\cos 2\theta = -\sqrt{1 - \sin^2 2\theta} = -\sqrt{1 - \left(\frac{3}{5}\right)^2} = -\frac{4}{5}$입니다.
+
+배각 공식에 의해 $\cos 2\theta = 2\cos^2 \theta - 1$이므로,
+$-\frac{4}{5} = 2\cos^2 \theta - 1$
+$2\cos^2 \theta = \frac{1}{5} \implies \cos^2 \theta = \frac{1}{10}$
+$\cos \theta = \pm \frac{1}{\sqrt{10}}$입니다.
+
+또한 $\sin 2\theta = 2 \sin \theta \cos \theta = \frac{3}{5}$이므로,
+$\sin \theta = \frac{3}{10 \cos \theta}$입니다.
+
+1) $\cos \theta = \frac{1}{\sqrt{10}}$일 때, $\sin \theta = \frac{3}{10 \times \frac{1}{\sqrt{10}}} = \frac{3}{\sqrt{10}}$
+이때 $m = \tan \theta = \frac{\sin \theta}{\cos \theta} = \frac{3/\sqrt{10}}{1/\sqrt{10}} = 3$
+
+2) $\cos \theta = -\frac{1}{\sqrt{10}}$일 때, $\sin \theta = \frac{3}{10 \times (-\frac{1}{\sqrt{10}})} = -\frac{3}{\sqrt{10}}$
+이때 $m = \tan \theta = \frac{-3/\sqrt{10}}{-1/\sqrt{10}} = 3$
+
+확인: $\sin \theta + \cos \theta = \frac{3}{\sqrt{10}} + \frac{1}{\sqrt{10}} = \frac{4}{\sqrt{10}} = \frac{4\sqrt{10}}{10} = \frac{2}{5}\sqrt{10}$ (조건 만족)
+$\sin \theta + \cos \theta = -\frac{3}{\sqrt{10}} - \frac{1}{\sqrt{10}} = -\frac{4}{\sqrt{10}} \neq \frac{2}{5}\sqrt{10}$ (조건 불만족)
+
+따라서 $m = 3$입니다.
+
+최종정답: ④

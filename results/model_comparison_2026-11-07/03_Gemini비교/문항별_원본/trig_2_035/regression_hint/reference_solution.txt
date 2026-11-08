@@ -1,0 +1,39 @@
+[정답] $32$
+
+[해설]
+$f \left( x \right) = \sin \frac{\pi}{4} x$이므로
+$f \left( 2 + x \right) = \sin \frac{\pi}{4} \left( 2 + x \right) = \cos \frac{\pi}{4} x$,
+$f \left( 2 - x \right) = \sin \frac{\pi}{4} \left( 2 - x \right) = \cos \frac{\pi}{4} x$
+부등식 $f \left( 2 + x \right) f \left( 2 - x \right) < \frac{1}{4}$에서
+$\cos^{2} \frac{\pi}{4} x < \frac{1}{4}$				$\cdots \cdots$ ㉠
+$\frac{\pi}{4} x = \theta$라 하면 $0 < x < 16$에서 $0 < \theta < 4 \pi$이고, ㉠에서
+$\cos^{2} \theta - \frac{1}{4} < 0$,    $\left( \cos \theta + \frac{1}{2} \right) \left( \cos \theta - \frac{1}{2} \right) < 0$
+$- \frac{1}{2} < \cos \theta < \frac{1}{2}$
+$\therefore$ $\frac{\pi}{3} < \theta < \frac{2}{3} \pi$ 또는 $\frac{4}{3} \pi < \theta < \frac{5}{3} \pi$
+또는 $\frac{7}{3} \pi < \theta < \frac{8}{3} \pi$ 또는 $\frac{10}{3} \pi < \theta < \frac{11}{3} \pi$
+$\frac{\pi}{4} x = \theta$이므로 $x$의 값의 범위는
+$\frac{4}{3} < x < \frac{8}{3}$ 또는 $\frac{16}{3} < x < \frac{20}{3}$
+또는 $\frac{28}{3} < x < \frac{32}{3}$ 또는 $\frac{40}{3} < x < \frac{44}{3}$
+따라서 자연수 $x$는 $2$, $6$, $10$, $14$이므로 모든 자연수 $x$의 값의 합은
+$2 + 6 + 10 + 14 = 32$
+
+[다른 풀이]
+함수 $f \left( x \right) = \sin \frac{\pi}{4} x$의 주기가 $2 \pi \div \frac{\pi}{4} = 8$이므로 정수 $n$에 대하여 함숫값 $f \left( n \right)$은 다음의 $8$개의 값이 차례로 반복된다.
+
+$n$	$0$	$1$	$2$	$3$	$4$	$5$	$6$	$7$
+$f \left( n \right)$	$0$	$\frac{\sqrt{2}}{2}$	$1$	$\frac{\sqrt{2}}{2}$	$0$	$- \frac{\sqrt{2}}{2}$	$- 1$	$- \frac{\sqrt{2}}{2}$
+
+$g (x) = f \left( 2 + x \right) f \left( 2 - x \right)$라 하면 함수 $f$의 주기가 $8$이므로 함수 $g$의 주기도 $8$이다.
+$g (1) = f \left( 3 \right) f \left( 1 \right) = \frac{1}{2}$
+$g (2) = f \left( 4 \right) f \left( 0 \right) = 0$
+$g (3) = f \left( 5 \right) f \left( - 1 \right) = f \left( 5 \right) f \left( 7 \right) = \frac{1}{2}$
+$g (4) = f \left( 6 \right) f \left( - 2 \right) = f \left( 6 \right) f \left( 6 \right) = 1$
+$g (5) = f \left( 7 \right) f \left( - 3 \right) = f \left( 7 \right) f \left( 5 \right) = \frac{1}{2}$
+$g (6) = f \left( 8 \right) f \left( - 4 \right) = f \left( 0 \right) f \left( 4 \right) = 0$
+$g (7) = f \left( 9 \right) f \left( - 5 \right) = f \left( 1 \right) f \left( 3 \right) = \frac{1}{2}$
+$g (8) = f \left( 10 \right) f \left( - 6 \right) = f \left( 2 \right) f \left( 2 \right) = 1$
+이므로 $x = 1$, $2$, $\cdots$, $15$인 자연수 $x$에 대하여
+$g (x) = f \left( 2 + x \right) f \left( 2 - x \right) < \frac{1}{4}$
+인 자연수 $x$는 $2$, $6$, $10$, $14$이다.
+따라서 그 합은
+$2 + 6 + 10 + 14 = 32$

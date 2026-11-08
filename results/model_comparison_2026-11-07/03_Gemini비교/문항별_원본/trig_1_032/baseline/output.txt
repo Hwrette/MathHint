@@ -1,0 +1,24 @@
+주어진 조건들을 하나씩 해결해 보겠습니다.
+
+**1. $\sin \theta + 3 \cos \theta = 0$ 식 정리**
+$\sin \theta = -3 \cos \theta$
+양변을 $\cos \theta$로 나누면 (단, $\cos \theta \neq 0$):
+$\frac{\sin \theta}{\cos \theta} = -3$
+즉, $\tan \theta = -3$입니다.
+
+**2. $\cos(\pi - \theta) > 0$ 조건 확인**
+삼각함수의 성질에 의해 $\cos(\pi - \theta) = -\cos \theta$입니다.
+따라서 $-\cos \theta > 0$이므로, $\cos \theta < 0$이어야 합니다.
+$\tan \theta = -3$ (음수)이고 $\cos \theta < 0$ (음수)인 사분면은 **제2사분면**입니다.
+제2사분면에서 $\sin \theta$는 양수(+) 값을 가집니다.
+
+**3. $\sin \theta$의 값 구하기**
+$\tan \theta = -3$이므로, 직각삼각형을 생각하면 밑변의 길이를 $1$, 높이를 $3$으로 볼 수 있습니다. (빗변의 길이 = $\sqrt{1^2 + 3^2} = \sqrt{10}$)
+$\sin \theta$의 절댓값은 $\frac{\text{높이}}{\text{빗변}} = \frac{3}{\sqrt{10}} = \frac{3\sqrt{10}}{10}$입니다.
+
+앞서 확인했듯이 제2사분면에서 $\sin \theta > 0$이므로,
+$\sin \theta = \frac{3\sqrt{10}}{10}$입니다.
+
+따라서 정답은 ①번입니다.
+
+최종정답: ①

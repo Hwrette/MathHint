@@ -1,0 +1,209 @@
+{
+  "id": "trig_3_039",
+  "method": "baseline",
+  "input_text": "$0 \\leq \\theta < 2 \\pi$일 때, $x$에 대한 이차방정식\n$6 x^{2} + \\left( 4 \\cos \\theta \\right) x + \\sin \\theta = 0$\n이 실근을 갖지 않도록 하는 모든 $\\theta$의 값의 범위는 $\\alpha < \\theta < \\beta$이다. $3 \\alpha + \\beta$의 값은?\n① $\\frac{5}{6} \\pi$\t\t② $\\pi$\t\t③ $\\frac{7}{6} \\pi$\n④ $\\frac{4}{3} \\pi$\t\t⑤ $\\frac{3}{2} \\pi$\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "049bfe96d6a04d9a061246f11c2a1d29a44c9a497fe4be0eb52cefd202a3a273",
+  "reference": {
+    "answer_text": "④",
+    "kind": "choice",
+    "choice": 4,
+    "value_text": "$\\frac{4}{3} \\pi$",
+    "source": {
+      "id": "trig_3_039",
+      "source_file": "모의고사_삼각함수_문제_3.hml",
+      "source_sha256": "4853842eca14740e8bbc1083fae38beb51f1c6cde8e78fe6d3c398eca800b30b",
+      "original_number": 39,
+      "current_number": 39
+    },
+    "numeric_value": 4.1887902047863905,
+    "gradable": true
+  },
+  "reference_answer_text": "④",
+  "reference_solution": "[정답] ④\n\n[해설]\n실근을 갖지 않기 위해서는 이차방정식 $6 x^{2} + \\left( 4 \\cos \\theta \\right) x + \\sin \\theta = 0$의 판별식 $D < 0$이어야 한다.\n따라서 $\\frac D4=\\left(2\\cos\\theta\\right)^2-6\\sin\\theta<0$에서\n$4 \\cos^{2} \\theta - 6 \\sin \\theta < 0$, $\\left( \\cos^{2} \\theta = 1 - \\sin^{2} \\theta \\right)$\n$4 (1 - \\sin^{2} \\theta) - 6 \\sin \\theta < 0$\n$2 \\sin^{2} \\theta + 3 \\sin \\theta - 4 > 0$\n$(2 \\sin \\theta - 1) (\\sin \\theta + 2) > 0$\n$\\therefore$$\\frac{1}{2} < \\sin \\theta \\le 1$$(\\because - 1 \\le \\sin \\theta \\le 1)$\n$0 \\le \\theta < 2 \\pi$의 범위에서 ㉠을 만족하는 $\\theta$의 범위는\n$\\therefore \\frac{1}{6} \\pi < \\theta < \\frac{5}{6} \\pi$\n따라서 $\\alpha = \\frac{1}{6} \\pi , \\beta = \\frac{5}{6} \\pi$이므로 $3 \\alpha + \\beta = \\frac{4}{3} \\pi$\n",
+  "problem_text": "$0 \\leq \\theta < 2 \\pi$일 때, $x$에 대한 이차방정식\n$6 x^{2} + \\left( 4 \\cos \\theta \\right) x + \\sin \\theta = 0$\n이 실근을 갖지 않도록 하는 모든 $\\theta$의 값의 범위는 $\\alpha < \\theta < \\beta$이다. $3 \\alpha + \\beta$의 값은?\n① $\\frac{5}{6} \\pi$\t\t② $\\pi$\t\t③ $\\frac{7}{6} \\pi$\n④ $\\frac{4}{3} \\pi$\t\t⑤ $\\frac{3}{2} \\pi$\n",
+  "subject": "삼각함수",
+  "unit": "06 삼각함수의 그래프",
+  "type": "08 방부등식의 활용1 (이차함수의 활용)",
+  "source": "2018년(2019학년도) 평가원 고3이과 11월 > 11 [3점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:53:15.795270+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:53:15.795286+00:00",
+      "usage": {
+        "prompt_token_count": 192,
+        "candidates_token_count": 564,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 756,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 564,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 192,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 192
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 756,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "Ti3vapmyLqujqtsPo7TP-AQ",
+      "latency_seconds": 4.66,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "이차방정식 $6x^2 + (4\\cos\\theta)x + \\sin\\theta = 0$이 실근을 갖지 않으려면, 판별식 $D < 0$이어야 합니다.\n\n이차방정식의 판별식을 $D$라 하면, $x$의 계수가 짝수이므로 $\\frac{D}{4}$를 이용합니다.\n$$\\frac{D}{4} = (2\\cos\\theta)^2 - 6\\sin\\theta < 0$$\n$$4\\cos^2\\theta - 6\\sin\\theta < 0$$\n\n$\\cos^2\\theta = 1 - \\sin^2\\theta$를 대입하면,\n$$4(1 - \\sin^2\\theta) - 6\\sin\\theta < 0$$\n$$4 - 4\\sin^2\\theta - 6\\sin\\theta < 0$$\n$$-4\\sin^2\\theta - 6\\sin\\theta + 4 < 0$$\n양변을 $-2$로 나누면 부등호 방향이 바뀝니다.\n$$2\\sin^2\\theta + 3\\sin\\theta - 2 > 0$$\n\n인수분해하면,\n$$(2\\sin\\theta - 1)(\\sin\\theta + 2) > 0$$\n\n여기서 $-1 \\leq \\sin\\theta \\leq 1$이므로, 항상 $\\sin\\theta + 2 > 0$입니다. 따라서 부등식이 성립하려면 다음을 만족해야 합니다.\n$$2\\sin\\theta - 1 > 0 \\implies \\sin\\theta > \\frac{1}{2}$$\n\n$0 \\leq \\theta < 2\\pi$ 범위에서 $\\sin\\theta > \\frac{1}{2}$을 만족하는 $\\theta$의 범위는 다음과 같습니다.\n$$\\frac{\\pi}{6} < \\theta < \\frac{5}{6}\\pi$$\n\n따라서 $\\alpha = \\frac{\\pi}{6}$, $\\beta = \\frac{5}{6}\\pi$입니다.\n\n문제에서 요구하는 $3\\alpha + \\beta$의 값은\n$$3\\left(\\frac{\\pi}{6}\\right) + \\frac{5}{6}\\pi = \\frac{\\pi}{2} + \\frac{5}{6}\\pi = \\frac{3\\pi}{6} + \\frac{5}{6}\\pi = \\frac{8}{6}\\pi = \\frac{4}{3}\\pi$$\n\n최종정답: ④",
+  "usage": {
+    "prompt_token_count": 192,
+    "candidates_token_count": 564,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 756,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 564,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 192,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 192
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 756,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "Ti3vapmyLqujqtsPo7TP-AQ",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:53:20 GMT",
+        "server": "envoy",
+        "content-length": "1130",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1655",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "2131"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "이차방정식 $6x^2 + (4\\cos\\theta)x + \\sin\\theta = 0$이 실근을 갖지 않으려면, 판별식 $D < 0$이어야 합니다.\n\n이차방정식의 판별식을 $D$라 하면, $x$의 계수가 짝수이므로 $\\frac{D}{4}$를 이용합니다.\n$$\\frac{D}{4} = (2\\cos\\theta)^2 - 6\\sin\\theta < 0$$\n$$4\\cos^2\\theta - 6\\sin\\theta < 0$$\n\n$\\cos^2\\theta = 1 - \\sin^2\\theta$를 대입하면,\n$$4(1 - \\sin^2\\theta) - 6\\sin\\theta < 0$$\n$$4 - 4\\sin^2\\theta - 6\\sin\\theta < 0$$\n$$-4\\sin^2\\theta - 6\\sin\\theta + 4 < 0$$\n양변을 $-2$로 나누면 부등호 방향이 바뀝니다.\n$$2\\sin^2\\theta + 3\\sin\\theta - 2 > 0$$\n\n인수분해하면,\n$$(2\\sin\\theta - 1)(\\sin\\theta + 2) > 0$$\n\n여기서 $-1 \\leq \\sin\\theta \\leq 1$이므로, 항상 $\\sin\\theta + 2 > 0$입니다. 따라서 부등식이 성립하려면 다음을 만족해야 합니다.\n$$2\\sin\\theta - 1 > 0 \\implies \\sin\\theta > \\frac{1}{2}$$\n\n$0 \\leq \\theta < 2\\pi$ 범위에서 $\\sin\\theta > \\frac{1}{2}$을 만족하는 $\\theta$의 범위는 다음과 같습니다.\n$$\\frac{\\pi}{6} < \\theta < \\frac{5}{6}\\pi$$\n\n따라서 $\\alpha = \\frac{\\pi}{6}$, $\\beta = \\frac{5}{6}\\pi$입니다.\n\n문제에서 요구하는 $3\\alpha + \\beta$의 값은\n$$3\\left(\\frac{\\pi}{6}\\right) + \\frac{5}{6}\\pi = \\frac{\\pi}{2} + \\frac{5}{6}\\pi = \\frac{3\\pi}{6} + \\frac{5}{6}\\pi = \\frac{8}{6}\\pi = \\frac{4}{3}\\pi$$\n\n최종정답: ④",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0T5Oq7cGxuZapY5PF9nXLP3R0iASUPEpHEsH0kWqzhv6AxC_Y8FsoPijtxoCfSbMVZx0cIcKc8QN7jm7B2axusTDflCh2XT9PH7ww4Xpg2aB7t7UUt_hqnAYHSXrEcNrZfHc1z0sTOhUU96zyx",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "Ti3vapmyLqujqtsPo7TP-AQ",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 564,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 192,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 192
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 756,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 4.66,
+  "completed_at": "2026-11-07T13:53:20.454994+00:00",
+  "evaluation": {
+    "predicted_answer": "④",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "④",
+    "predicted_kind": "choice",
+    "predicted_choice": 4
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "44152556136b7c61142dec491000da551bea99bb9ef492d953865560cc525d7c",
+    "imported_at": "2026-11-07T16:57:38.427744+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

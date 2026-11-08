@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "question_count": 265,
+  "train_count": 185,
+  "test_count": 80,
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "vector_dimensions": {
+    "problems": 346,
+    "solutions": 431
+  },
+  "generated_files": 808,
+  "byte_hash_differences": [],
+  "original_data_untouched": true
+}

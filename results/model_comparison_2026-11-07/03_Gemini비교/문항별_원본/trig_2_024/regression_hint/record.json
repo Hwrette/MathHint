@@ -1,0 +1,231 @@
+{
+  "id": "trig_2_024",
+  "method": "regression_hint",
+  "input_text": "${0 \\leq x < 8}$일 때, 방정식 $\\sin \\frac{\\pi x}{2} = \\frac{3}{4}$의 모든 해의 합을 구하시오.\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:{\":9.009,\"latex:}\":8.921,\"latex:x\":6.609,\"latex:=\":4.94,\"kiwi:이\":4.744,\"latex:1\":3.893,\"latex:2\":3.85,\"latex:\\\\sin\":2.791,\"latex:12\":2.445,\"kiwi:또는\":2.079,\"latex:t\":1.861,\"kiwi:[\":1.813,\"kiwi:]\":1.798,\"kiwi:의\":1.746,\"latex:)\":1.698,\"latex:(\":1.674,\"latex:\\\\pi\":1.624,\"latex:\\\\frac\":1.599,\"kiwi:,\":1.495,\"latex:f\":1.43}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "81a1a83719721d3433d42b479a32952ed78a22e17ac0e86ad83b061102b21cdf",
+  "reference": {
+    "answer_text": "$\\mathbf{12}$",
+    "kind": "value",
+    "choice": null,
+    "value_text": "$\\mathbf{12}$",
+    "source": {
+      "id": "trig_2_024",
+      "source_file": "모의고사_삼각함수_문제_2.hml",
+      "source_sha256": "2a36b54c30c9b890ee90fe84dc6c2b62847494cb5830bd51de8b1fb6877d7cc2",
+      "original_number": 24,
+      "current_number": 24
+    },
+    "numeric_value": 12.0,
+    "gradable": true
+  },
+  "reference_answer_text": "$\\mathbf{12}$",
+  "reference_solution": "[정답] $\\mathbf{12}$\n\n[해설]\n$y = \\sin \\frac{\\pi x}{2}$는 $\\frac{2 \\pi}{\\frac{\\pi}{2}}$이므로 주기는 $4$이다.\n$0 \\leq x \\leq 8$일 때 $\\sin \\frac{\\pi x}{2} = \\frac{3}{4}$을 만족시키는 해는 아래 그래프와 같이 $\\alpha , \\beta , \\gamma , \\delta$라 하자.\n\n(ⅰ) $y = \\sin \\frac{\\pi x}{2}$의 그래프와 $y = \\frac{3}{4}$의 교점의 $x$좌표를 $\\alpha$, $\\beta$라 하면 두 값의 평균은 $1$이므로 $\\frac{\\alpha + \\beta}{2} = 1$에서 $\\alpha + \\beta = 2$이다.\n(ⅱ) (ⅰ) $y = \\sin \\frac{\\pi x}{2}$의 그래프와 $y = \\frac{3}{4}$의 교점의 $x$좌표를 $\\gamma$, $\\delta$라 하면 두 값의 평균은 $5$이므로 $\\frac{\\gamma + \\delta}{2} = 5$에서 $\\alpha + \\beta = 10$이다.\n따라서 $\\alpha + \\beta + \\gamma + \\delta = 2 + 10 = 12$\n",
+  "problem_text": "${0 \\leq x < 8}$일 때, 방정식 $\\sin \\frac{\\pi x}{2} = \\frac{3}{4}$의 모든 해의 합을 구하시오.\n",
+  "subject": "삼각함수",
+  "unit": "06 삼각함수의 그래프",
+  "type": "04 삼각방정식4 (대칭성과 실근)",
+  "source": "2021년(2022학년도) 사관학교 고3공통 7월 > 공통범위 > 17 [3점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:{": 9.009,
+      "latex:}": 8.921,
+      "latex:x": 6.609,
+      "latex:=": 4.94,
+      "kiwi:이": 4.744,
+      "latex:1": 3.893,
+      "latex:2": 3.85,
+      "latex:\\sin": 2.791,
+      "latex:12": 2.445,
+      "kiwi:또는": 2.079,
+      "latex:t": 1.861,
+      "kiwi:[": 1.813,
+      "kiwi:]": 1.798,
+      "kiwi:의": 1.746,
+      "latex:)": 1.698,
+      "latex:(": 1.674,
+      "latex:\\pi": 1.624,
+      "latex:\\frac": 1.599,
+      "kiwi:,": 1.495,
+      "latex:f": 1.43
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:16:47.816660+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:16:47.816673+00:00",
+      "usage": {
+        "prompt_token_count": 326,
+        "candidates_token_count": 509,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 835,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 509,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 326,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 326
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 835,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "AF3vauGwF9bAqtsPhYah6AQ",
+      "latency_seconds": 5.938,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "주어진 방정식 $\\sin \\frac{\\pi x}{2} = \\frac{3}{4}$에서 $t = \\frac{\\pi x}{2}$라고 하면, $0 \\leq x < 8$이므로 $0 \\leq \\frac{\\pi x}{2} < 4\\pi$, 즉 $0 \\leq t < 4\\pi$입니다.\n\n방정식 $\\sin t = \\frac{3}{4}$를 만족하는 $t$의 값을 구합니다. $0 \\leq t < 2\\pi$ 범위에서 $\\sin t = \\frac{3}{4}$를 만족하는 두 근을 $\\alpha, \\beta$라고 하면, 사인 함수의 대칭성에 의해 $\\alpha + \\beta = \\pi$입니다.\n\n범위가 $0 \\leq t < 4\\pi$이므로, 해는 다음과 같습니다.\n1) $0 \\leq t < 2\\pi$ 범위에서: $t_1 = \\alpha, t_2 = \\pi - \\alpha$\n2) $2\\pi \\leq t < 4\\pi$ 범위에서: $t_3 = 2\\pi + \\alpha, t_4 = 3\\pi - \\alpha$\n\n이제 $t = \\frac{\\pi x}{2}$이므로 $x = \\frac{2t}{\\pi}$를 대입하여 $x$의 값을 구합니다.\n$x_1 = \\frac{2\\alpha}{\\pi}, x_2 = \\frac{2(\\pi - \\alpha)}{\\pi} = 2 - \\frac{2\\alpha}{\\pi}$\n$x_3 = \\frac{2(2\\pi + \\alpha)}{\\pi} = 4 + \\frac{2\\alpha}{\\pi}, x_4 = \\frac{2(3\\pi - \\alpha)}{\\pi} = 6 - \\frac{2\\alpha}{\\pi}$\n\n모든 해의 합은 다음과 같습니다.\n$x_1 + x_2 + x_3 + x_4 = \\frac{2\\alpha}{\\pi} + (2 - \\frac{2\\alpha}{\\pi}) + (4 + \\frac{2\\alpha}{\\pi}) + (6 - \\frac{2\\alpha}{\\pi})$\n$= 2 + 4 + 6 = 12$\n\n최종정답: 12",
+  "usage": {
+    "prompt_token_count": 326,
+    "candidates_token_count": 509,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 835,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 509,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 326,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 326
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 835,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "AF3vauGwF9bAqtsPhYah6AQ",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:16:53 GMT",
+        "server": "envoy",
+        "content-length": "986",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=5335",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "5892"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "주어진 방정식 $\\sin \\frac{\\pi x}{2} = \\frac{3}{4}$에서 $t = \\frac{\\pi x}{2}$라고 하면, $0 \\leq x < 8$이므로 $0 \\leq \\frac{\\pi x}{2} < 4\\pi$, 즉 $0 \\leq t < 4\\pi$입니다.\n\n방정식 $\\sin t = \\frac{3}{4}$를 만족하는 $t$의 값을 구합니다. $0 \\leq t < 2\\pi$ 범위에서 $\\sin t = \\frac{3}{4}$를 만족하는 두 근을 $\\alpha, \\beta$라고 하면, 사인 함수의 대칭성에 의해 $\\alpha + \\beta = \\pi$입니다.\n\n범위가 $0 \\leq t < 4\\pi$이므로, 해는 다음과 같습니다.\n1) $0 \\leq t < 2\\pi$ 범위에서: $t_1 = \\alpha, t_2 = \\pi - \\alpha$\n2) $2\\pi \\leq t < 4\\pi$ 범위에서: $t_3 = 2\\pi + \\alpha, t_4 = 3\\pi - \\alpha$\n\n이제 $t = \\frac{\\pi x}{2}$이므로 $x = \\frac{2t}{\\pi}$를 대입하여 $x$의 값을 구합니다.\n$x_1 = \\frac{2\\alpha}{\\pi}, x_2 = \\frac{2(\\pi - \\alpha)}{\\pi} = 2 - \\frac{2\\alpha}{\\pi}$\n$x_3 = \\frac{2(2\\pi + \\alpha)}{\\pi} = 4 + \\frac{2\\alpha}{\\pi}, x_4 = \\frac{2(3\\pi - \\alpha)}{\\pi} = 6 - \\frac{2\\alpha}{\\pi}$\n\n모든 해의 합은 다음과 같습니다.\n$x_1 + x_2 + x_3 + x_4 = \\frac{2\\alpha}{\\pi} + (2 - \\frac{2\\alpha}{\\pi}) + (4 + \\frac{2\\alpha}{\\pi}) + (6 - \\frac{2\\alpha}{\\pi})$\n$= 2 + 4 + 6 = 12$\n\n최종정답: 12",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0Tz_N_O7NXmieK8U_JexnsBwtReBZd2VrTQrssSXdUV_-kRAmAc4MrM9Zoga1vmbPsvr-AiFSsIcBoGNBVxVw4ZmRHimJm-1UsYSpBNrmivgiziLlT5twS38M41huADM8uBdu1nNV_vEairXdt",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "AF3vauGwF9bAqtsPhYah6AQ",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 509,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 326,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 326
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 835,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 5.938,
+  "completed_at": "2026-11-07T17:16:53.754423+00:00",
+  "evaluation": {
+    "predicted_answer": "12",
+    "correct": true,
+    "status": "correct",
+    "reason": "numeric_constant_comparison_tolerance_1e-9",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "$\\mathbf{12}$",
+    "predicted_kind": "value",
+    "predicted_numeric_value": 12.0
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

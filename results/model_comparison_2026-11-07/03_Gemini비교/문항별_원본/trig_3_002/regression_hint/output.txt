@@ -1,0 +1,23 @@
+이차방정식 $x^2 - k = 0$의 두 근이 $6 \cos \theta$와 $5 \tan \theta$이므로, 근과 계수의 관계에 의해 다음이 성립합니다.
+
+1) 두 근의 합: $6 \cos \theta + 5 \tan \theta = 0$
+2) 두 근의 곱: $(6 \cos \theta)(5 \tan \theta) = -k$
+
+먼저 두 근의 합 식을 정리합니다.
+$6 \cos \theta + 5 \frac{\sin \theta}{\cos \theta} = 0$
+양변에 $\cos \theta$를 곱하면 ($ \cos \theta \neq 0$):
+$6 \cos^2 \theta + 5 \sin \theta = 0$
+$6(1 - \sin^2 \theta) + 5 \sin \theta = 0$
+$6 - 6 \sin^2 \theta + 5 \sin \theta = 0$
+$6 \sin^2 \theta - 5 \sin \theta - 6 = 0$
+
+이를 인수분해하면:
+$(2 \sin \theta - 3)(3 \sin \theta + 2) = 0$
+$-1 \le \sin \theta \le 1$이므로, $\sin \theta = -\frac{2}{3}$입니다.
+
+이제 $\cos^2 \theta = 1 - \sin^2 \theta = 1 - (-\frac{2}{3})^2 = 1 - \frac{4}{9} = \frac{5}{9}$임을 이용하여 두 근의 곱을 구합니다.
+$-k = (6 \cos \theta)(5 \tan \theta) = 30 \cos \theta \cdot \frac{\sin \theta}{\cos \theta} = 30 \sin \theta$
+$-k = 30 \times (-\frac{2}{3}) = -20$
+따라서 $k = 20$입니다.
+
+최종정답: 20

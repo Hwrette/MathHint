@@ -1,0 +1,4237 @@
+{
+  "schema_version": 2,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "generation_name": "generation_top_tokens",
+  "hint": {
+    "mode": "top_tokens",
+    "top_k": 20,
+    "transform": "positive_clip_select_unrounded_desc_tie_vocab_round_3_omit_zeros"
+  },
+  "dataset_generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "temperature": 0.0,
+  "max_output_tokens": 8192,
+  "expected_questions": 80,
+  "raw_log_rows": 160,
+  "latest_condition_records": 160,
+  "methods": {
+    "baseline": {
+      "expected_questions": 80,
+      "recorded_questions": 80,
+      "successful_responses": 80,
+      "graded_responses": 80,
+      "correct": 78,
+      "incorrect": 2,
+      "ungraded_or_missing": 0,
+      "accuracy_on_graded": 0.975,
+      "accuracy_on_graded_wilson95": [
+        0.9133556701442198,
+        0.9931171067970292
+      ],
+      "confirmed_correct_per_expected_question": 0.975,
+      "grading_coverage": 1.0,
+      "usage": {
+        "prompt_token_count": {
+          "all_attempts": 116,
+          "skipped_without_request": 0,
+          "known_attempts": 80,
+          "missing_attempts": 36,
+          "known_sum": 12051,
+          "strict_total": null,
+          "successful_responses": 80,
+          "known_successful_responses": 80,
+          "successful_response_known_sum": 12051,
+          "successful_response_strict_total": 12051,
+          "missing_successful_responses": 0,
+          "successful_response_mean": 150.6375
+        },
+        "candidates_token_count": {
+          "all_attempts": 116,
+          "skipped_without_request": 0,
+          "known_attempts": 80,
+          "missing_attempts": 36,
+          "known_sum": 39769,
+          "strict_total": null,
+          "successful_responses": 80,
+          "known_successful_responses": 80,
+          "successful_response_known_sum": 39769,
+          "successful_response_strict_total": 39769,
+          "missing_successful_responses": 0,
+          "successful_response_mean": 497.1125
+        },
+        "thoughts_token_count": {
+          "all_attempts": 116,
+          "skipped_without_request": 0,
+          "known_attempts": 0,
+          "missing_attempts": 116,
+          "known_sum": null,
+          "strict_total": null,
+          "successful_responses": 80,
+          "known_successful_responses": 0,
+          "successful_response_known_sum": null,
+          "successful_response_strict_total": null,
+          "missing_successful_responses": 80,
+          "successful_response_mean": null
+        },
+        "total_token_count": {
+          "all_attempts": 116,
+          "skipped_without_request": 0,
+          "known_attempts": 80,
+          "missing_attempts": 36,
+          "known_sum": 51820,
+          "strict_total": null,
+          "successful_responses": 80,
+          "known_successful_responses": 80,
+          "successful_response_known_sum": 51820,
+          "successful_response_strict_total": 51820,
+          "missing_successful_responses": 0,
+          "successful_response_mean": 647.75
+        },
+        "cached_content_token_count": {
+          "all_attempts": 116,
+          "skipped_without_request": 0,
+          "known_attempts": 0,
+          "missing_attempts": 116,
+          "known_sum": null,
+          "strict_total": null,
+          "successful_responses": 80,
+          "known_successful_responses": 0,
+          "successful_response_known_sum": null,
+          "successful_response_strict_total": null,
+          "missing_successful_responses": 80,
+          "successful_response_mean": null
+        },
+        "tool_use_prompt_token_count": {
+          "all_attempts": 116,
+          "skipped_without_request": 0,
+          "known_attempts": 0,
+          "missing_attempts": 116,
+          "known_sum": null,
+          "strict_total": null,
+          "successful_responses": 80,
+          "known_successful_responses": 0,
+          "successful_response_known_sum": null,
+          "successful_response_strict_total": null,
+          "missing_successful_responses": 80,
+          "successful_response_mean": null
+        }
+      },
+      "reused_control_records": 77,
+      "incremental_usage": {
+        "prompt_token_count": {
+          "all_attempts": 3,
+          "skipped_without_request": 0,
+          "known_attempts": 3,
+          "missing_attempts": 0,
+          "known_sum": 450,
+          "strict_total": 450,
+          "successful_responses": 3,
+          "known_successful_responses": 3,
+          "successful_response_known_sum": 450,
+          "successful_response_strict_total": 450,
+          "missing_successful_responses": 0,
+          "successful_response_mean": 150.0
+        },
+        "candidates_token_count": {
+          "all_attempts": 3,
+          "skipped_without_request": 0,
+          "known_attempts": 3,
+          "missing_attempts": 0,
+          "known_sum": 2243,
+          "strict_total": 2243,
+          "successful_responses": 3,
+          "known_successful_responses": 3,
+          "successful_response_known_sum": 2243,
+          "successful_response_strict_total": 2243,
+          "missing_successful_responses": 0,
+          "successful_response_mean": 747.6666666666666
+        },
+        "thoughts_token_count": {
+          "all_attempts": 3,
+          "skipped_without_request": 0,
+          "known_attempts": 0,
+          "missing_attempts": 3,
+          "known_sum": null,
+          "strict_total": null,
+          "successful_responses": 3,
+          "known_successful_responses": 0,
+          "successful_response_known_sum": null,
+          "successful_response_strict_total": null,
+          "missing_successful_responses": 3,
+          "successful_response_mean": null
+        },
+        "total_token_count": {
+          "all_attempts": 3,
+          "skipped_without_request": 0,
+          "known_attempts": 3,
+          "missing_attempts": 0,
+          "known_sum": 2693,
+          "strict_total": 2693,
+          "successful_responses": 3,
+          "known_successful_responses": 3,
+          "successful_response_known_sum": 2693,
+          "successful_response_strict_total": 2693,
+          "missing_successful_responses": 0,
+          "successful_response_mean": 897.6666666666666
+        },
+        "cached_content_token_count": {
+          "all_attempts": 3,
+          "skipped_without_request": 0,
+          "known_attempts": 0,
+          "missing_attempts": 3,
+          "known_sum": null,
+          "strict_total": null,
+          "successful_responses": 3,
+          "known_successful_responses": 0,
+          "successful_response_known_sum": null,
+          "successful_response_strict_total": null,
+          "missing_successful_responses": 3,
+          "successful_response_mean": null
+        },
+        "tool_use_prompt_token_count": {
+          "all_attempts": 3,
+          "skipped_without_request": 0,
+          "known_attempts": 0,
+          "missing_attempts": 3,
+          "known_sum": null,
+          "strict_total": null,
+          "successful_responses": 3,
+          "known_successful_responses": 0,
+          "successful_response_known_sum": null,
+          "successful_response_strict_total": null,
+          "missing_successful_responses": 3,
+          "successful_response_mean": null
+        }
+      }
+    },
+    "regression_hint": {
+      "expected_questions": 80,
+      "recorded_questions": 80,
+      "successful_responses": 80,
+      "graded_responses": 80,
+      "correct": 77,
+      "incorrect": 3,
+      "ungraded_or_missing": 0,
+      "accuracy_on_graded": 0.9625,
+      "accuracy_on_graded_wilson95": [
+        0.8954527990995489,
+        0.9871654310800886
+      ],
+      "confirmed_correct_per_expected_question": 0.9625,
+      "grading_coverage": 1.0,
+      "usage": {
+        "prompt_token_count": {
+          "all_attempts": 80,
+          "skipped_without_request": 0,
+          "known_attempts": 80,
+          "missing_attempts": 0,
+          "known_sum": 31600,
+          "strict_total": 31600,
+          "successful_responses": 80,
+          "known_successful_responses": 80,
+          "successful_response_known_sum": 31600,
+          "successful_response_strict_total": 31600,
+          "missing_successful_responses": 0,
+          "successful_response_mean": 395.0
+        },
+        "candidates_token_count": {
+          "all_attempts": 80,
+          "skipped_without_request": 0,
+          "known_attempts": 80,
+          "missing_attempts": 0,
+          "known_sum": 37015,
+          "strict_total": 37015,
+          "successful_responses": 80,
+          "known_successful_responses": 80,
+          "successful_response_known_sum": 37015,
+          "successful_response_strict_total": 37015,
+          "missing_successful_responses": 0,
+          "successful_response_mean": 462.6875
+        },
+        "thoughts_token_count": {
+          "all_attempts": 80,
+          "skipped_without_request": 0,
+          "known_attempts": 0,
+          "missing_attempts": 80,
+          "known_sum": null,
+          "strict_total": null,
+          "successful_responses": 80,
+          "known_successful_responses": 0,
+          "successful_response_known_sum": null,
+          "successful_response_strict_total": null,
+          "missing_successful_responses": 80,
+          "successful_response_mean": null
+        },
+        "total_token_count": {
+          "all_attempts": 80,
+          "skipped_without_request": 0,
+          "known_attempts": 80,
+          "missing_attempts": 0,
+          "known_sum": 68615,
+          "strict_total": 68615,
+          "successful_responses": 80,
+          "known_successful_responses": 80,
+          "successful_response_known_sum": 68615,
+          "successful_response_strict_total": 68615,
+          "missing_successful_responses": 0,
+          "successful_response_mean": 857.6875
+        },
+        "cached_content_token_count": {
+          "all_attempts": 80,
+          "skipped_without_request": 0,
+          "known_attempts": 0,
+          "missing_attempts": 80,
+          "known_sum": null,
+          "strict_total": null,
+          "successful_responses": 80,
+          "known_successful_responses": 0,
+          "successful_response_known_sum": null,
+          "successful_response_strict_total": null,
+          "missing_successful_responses": 80,
+          "successful_response_mean": null
+        },
+        "tool_use_prompt_token_count": {
+          "all_attempts": 80,
+          "skipped_without_request": 0,
+          "known_attempts": 0,
+          "missing_attempts": 80,
+          "known_sum": null,
+          "strict_total": null,
+          "successful_responses": 80,
+          "known_successful_responses": 0,
+          "successful_response_known_sum": null,
+          "successful_response_strict_total": null,
+          "missing_successful_responses": 80,
+          "successful_response_mean": null
+        }
+      },
+      "reused_control_records": 0,
+      "incremental_usage": {
+        "prompt_token_count": {
+          "all_attempts": 80,
+          "skipped_without_request": 0,
+          "known_attempts": 80,
+          "missing_attempts": 0,
+          "known_sum": 31600,
+          "strict_total": 31600,
+          "successful_responses": 80,
+          "known_successful_responses": 80,
+          "successful_response_known_sum": 31600,
+          "successful_response_strict_total": 31600,
+          "missing_successful_responses": 0,
+          "successful_response_mean": 395.0
+        },
+        "candidates_token_count": {
+          "all_attempts": 80,
+          "skipped_without_request": 0,
+          "known_attempts": 80,
+          "missing_attempts": 0,
+          "known_sum": 37015,
+          "strict_total": 37015,
+          "successful_responses": 80,
+          "known_successful_responses": 80,
+          "successful_response_known_sum": 37015,
+          "successful_response_strict_total": 37015,
+          "missing_successful_responses": 0,
+          "successful_response_mean": 462.6875
+        },
+        "thoughts_token_count": {
+          "all_attempts": 80,
+          "skipped_without_request": 0,
+          "known_attempts": 0,
+          "missing_attempts": 80,
+          "known_sum": null,
+          "strict_total": null,
+          "successful_responses": 80,
+          "known_successful_responses": 0,
+          "successful_response_known_sum": null,
+          "successful_response_strict_total": null,
+          "missing_successful_responses": 80,
+          "successful_response_mean": null
+        },
+        "total_token_count": {
+          "all_attempts": 80,
+          "skipped_without_request": 0,
+          "known_attempts": 80,
+          "missing_attempts": 0,
+          "known_sum": 68615,
+          "strict_total": 68615,
+          "successful_responses": 80,
+          "known_successful_responses": 80,
+          "successful_response_known_sum": 68615,
+          "successful_response_strict_total": 68615,
+          "missing_successful_responses": 0,
+          "successful_response_mean": 857.6875
+        },
+        "cached_content_token_count": {
+          "all_attempts": 80,
+          "skipped_without_request": 0,
+          "known_attempts": 0,
+          "missing_attempts": 80,
+          "known_sum": null,
+          "strict_total": null,
+          "successful_responses": 80,
+          "known_successful_responses": 0,
+          "successful_response_known_sum": null,
+          "successful_response_strict_total": null,
+          "missing_successful_responses": 80,
+          "successful_response_mean": null
+        },
+        "tool_use_prompt_token_count": {
+          "all_attempts": 80,
+          "skipped_without_request": 0,
+          "known_attempts": 0,
+          "missing_attempts": 80,
+          "known_sum": null,
+          "strict_total": null,
+          "successful_responses": 80,
+          "known_successful_responses": 0,
+          "successful_response_known_sum": null,
+          "successful_response_strict_total": null,
+          "missing_successful_responses": 80,
+          "successful_response_mean": null
+        }
+      }
+    }
+  },
+  "control_reuse": {
+    "count": 77,
+    "ids": [
+      "diff_1_005",
+      "diff_1_011",
+      "diff_1_012",
+      "diff_1_014",
+      "diff_1_018",
+      "diff_1_022",
+      "diff_1_026",
+      "diff_1_028",
+      "diff_1_030",
+      "diff_1_036",
+      "diff_1_038",
+      "diff_2_006",
+      "diff_2_007",
+      "diff_2_010",
+      "diff_2_013",
+      "diff_2_014",
+      "diff_2_016",
+      "diff_2_018",
+      "diff_2_020",
+      "diff_2_023",
+      "diff_2_024",
+      "diff_2_029",
+      "diff_2_030",
+      "diff_2_031",
+      "diff_2_036",
+      "diff_2_037",
+      "diff_2_040",
+      "diff_2_041",
+      "diff_3_001",
+      "diff_3_004",
+      "diff_3_005",
+      "diff_3_008",
+      "diff_3_012",
+      "diff_3_022",
+      "diff_3_028",
+      "diff_3_039",
+      "diff_3_044",
+      "diff_3_048",
+      "diff_3_049",
+      "trig_1_004",
+      "trig_1_007",
+      "trig_1_009",
+      "trig_1_010",
+      "trig_1_011",
+      "trig_1_013",
+      "trig_1_018",
+      "trig_1_020",
+      "trig_1_021",
+      "trig_1_028",
+      "trig_1_032",
+      "trig_1_035",
+      "trig_1_039",
+      "trig_1_042",
+      "trig_1_043",
+      "trig_1_046",
+      "trig_2_003",
+      "trig_2_007",
+      "trig_2_014",
+      "trig_2_016",
+      "trig_2_017",
+      "trig_2_022",
+      "trig_2_024",
+      "trig_2_025",
+      "trig_2_030",
+      "trig_2_035",
+      "trig_3_002",
+      "trig_3_010",
+      "trig_3_011",
+      "trig_3_014",
+      "trig_3_015",
+      "trig_3_017",
+      "trig_3_021",
+      "trig_3_026",
+      "trig_3_034",
+      "trig_3_035",
+      "trig_3_039",
+      "trig_3_040"
+    ],
+    "source_directories": [
+      "/workspace/experiment_results/model_comparison_2026-11-07/generation"
+    ],
+    "records": [
+      {
+        "id": "diff_1_005",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:18:24.150027+00:00",
+        "completed_at": "2026-11-07T13:18:27.209242+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "5d5f2b334f3d4fb98c486e93295dfec10e4e28c2d87080fa5297e2927dda5c44",
+          "imported_at": "2026-11-07T16:57:38.353481+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_1_011",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:19:23.703005+00:00",
+        "completed_at": "2026-11-07T13:19:25.696667+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "e0ba7844a4d3fbd599559748fca41b05c5d32fb56f5070a02e310e822acb6320",
+          "imported_at": "2026-11-07T16:57:38.355389+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_1_012",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:19:23.703553+00:00",
+        "completed_at": "2026-11-07T13:19:25.804477+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "e866501381b7113f2c237fb486d2da544e7de573cd80c0e26cce27ff92e884ba",
+          "imported_at": "2026-11-07T16:57:38.356445+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_1_014",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:19:25.806830+00:00",
+        "completed_at": "2026-11-07T13:19:27.965155+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "9342ac3a58a4e846208997aecfc63f19bf7190c51819f47b1d89b00392c3bfac",
+          "imported_at": "2026-11-07T16:57:38.357344+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_1_018",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:19:26.973489+00:00",
+        "completed_at": "2026-11-07T13:19:28.382738+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "786c2f1a5f11c32efa25f90c13bbdfe93e20a349d87a80dd446feab10ec31285",
+          "imported_at": "2026-11-07T16:57:38.358268+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_1_022",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:19:28.385476+00:00",
+        "completed_at": "2026-11-07T13:19:30.520019+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "f7e008f4d10283ed32ad7fe6d4766ae95dc7b276f3ceecd2b9145bc486e8d9f0",
+          "imported_at": "2026-11-07T16:57:38.359240+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_1_026",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:19:29.467571+00:00",
+        "completed_at": "2026-11-07T13:19:31.735383+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "ab1b42085537e333c44e117a8ddebef493676a934d6d86a8b688e90ece040767",
+          "imported_at": "2026-11-07T16:57:38.360183+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_1_028",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:19:35.254326+00:00",
+        "completed_at": "2026-11-07T13:19:37.821364+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "a485cd219cd8f2b3d24b964c375c10f5a5d722d5c73d8960a75bd1c7a23a7f97",
+          "imported_at": "2026-11-07T16:57:38.361057+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_1_030",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:19:37.825053+00:00",
+        "completed_at": "2026-11-07T13:19:39.664567+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "11b18f66b99ba0a58b167a0d6f3bf12d4abdc447fb96f2d988536037c2c962bb",
+          "imported_at": "2026-11-07T16:57:38.362096+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_1_036",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:19:39.736702+00:00",
+        "completed_at": "2026-11-07T13:19:47.974502+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "dd383be7c9fa713007ea0f491c955ac1765aeaba68d3fe6770427c386c8b958f",
+          "imported_at": "2026-11-07T16:57:38.363002+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_1_038",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:24:09.451692+00:00",
+        "completed_at": "2026-11-07T13:25:48.588520+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "308803b50e621bc3624005675971dc002deea92b1bf6539fa50c7af823804d7a",
+          "imported_at": "2026-11-07T16:57:38.363958+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_2_006",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:29:11.948990+00:00",
+        "completed_at": "2026-11-07T13:29:52.281196+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "2cca3547ebe181f6f46ccad5af0199788690e582bab3b1c7642a4330cfa0e07e",
+          "imported_at": "2026-11-07T16:57:38.364954+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_2_007",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:19:53.425422+00:00",
+        "completed_at": "2026-11-07T13:19:57.220663+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "4dafe97cc5df075872fa01e39e316faba2c4a56d961e27c9da72d571b479e193",
+          "imported_at": "2026-11-07T16:57:38.365925+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_2_010",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:31:33.219405+00:00",
+        "completed_at": "2026-11-07T13:32:06.479211+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "4005d4cc74abae847f54549b206ae509f943680936510f1272d04760f18fcb4f",
+          "imported_at": "2026-11-07T16:57:38.366905+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_2_013",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:32:25.312380+00:00",
+        "completed_at": "2026-11-07T13:32:38.471833+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "e0466d654a225b21a3d6321d32613115a2970e9a637fc800d276cd98c7805eb7",
+          "imported_at": "2026-11-07T16:57:38.367887+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_2_014",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:32:38.476251+00:00",
+        "completed_at": "2026-11-07T13:32:40.569896+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "ffd770bd6594514e523e8904fb7db14336754bb3bb46fc8dce30c3e84f62a7c2",
+          "imported_at": "2026-11-07T16:57:38.369478+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_2_016",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:20:01.027306+00:00",
+        "completed_at": "2026-11-07T13:20:03.812564+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "065f348c6eb25bed84d86317f2932bfa3fe796c142af4549bd396bbb93c22ed6",
+          "imported_at": "2026-11-07T16:57:38.370511+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_2_018",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:33:43.400604+00:00",
+        "completed_at": "2026-11-07T13:33:46.505257+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "6545d2bef5abbecab2f424a7dc46a4df87b0949907b9ca17da4510a861ef7d1f",
+          "imported_at": "2026-11-07T16:57:38.371410+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_2_020",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:34:09.099678+00:00",
+        "completed_at": "2026-11-07T13:34:11.663718+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "f80389a50ad10fe7c9ec3124ee12b620fb51a7ca50c1e63eef03bf58d4c77d7a",
+          "imported_at": "2026-11-07T16:57:38.372379+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_2_023",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:34:11.666878+00:00",
+        "completed_at": "2026-11-07T13:34:20.816935+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "697a95a222e40b7b73f7a5eb0755f652d9360ee2168c2207cb1987b1fa115858",
+          "imported_at": "2026-11-07T16:57:38.373308+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_2_024",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:34:29.061117+00:00",
+        "completed_at": "2026-11-07T13:34:33.648675+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "20a543c8b9a6f7e49563812374ad7ea5064f79256e8948058c8b8a3b0fc2aaad",
+          "imported_at": "2026-11-07T16:57:38.374279+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_2_029",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:34:33.652113+00:00",
+        "completed_at": "2026-11-07T13:34:37.997459+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "b3fddbd5d1cc4e724c23cb997d02ff5a5f425c7705b890b9c6a7629d65a8b24e",
+          "imported_at": "2026-11-07T16:57:38.375227+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_2_030",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:34:42.301418+00:00",
+        "completed_at": "2026-11-07T13:34:47.961183+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "8aeb40f1f18cb5a1da0004aadf1564af336924888992a7b319f1fe9f1e10e3d4",
+          "imported_at": "2026-11-07T16:57:38.376183+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_2_031",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:34:47.965050+00:00",
+        "completed_at": "2026-11-07T13:35:01.104468+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "06c1518362cc687426eaad58fbb47094442e109a9134f282806085f373cb842d",
+          "imported_at": "2026-11-07T16:57:38.377096+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_2_036",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:35:08.425152+00:00",
+        "completed_at": "2026-11-07T13:35:27.438465+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "902092d36ad6e2b39eb62bc83df32ef1d61d7170c1f8745b9a361aadf51f6b4d",
+          "imported_at": "2026-11-07T16:57:38.378062+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_2_037",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:35:27.442464+00:00",
+        "completed_at": "2026-11-07T13:35:32.811357+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "cc729406b43f5e9c7df06acdecb7bf1263e005029a012fd18d0d6af5f07dd3da",
+          "imported_at": "2026-11-07T16:57:38.379095+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_2_040",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:35:39.769119+00:00",
+        "completed_at": "2026-11-07T13:35:44.811234+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "c2bf14e689eb211ac3e69725df122aeb2f470838eac064e8cac488255149539e",
+          "imported_at": "2026-11-07T16:57:38.380248+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_2_041",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:35:44.814721+00:00",
+        "completed_at": "2026-11-07T13:36:14.929416+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "83851ff2844a77ffbea4e92073dff3578089252741c3ba77d4fe2aba51a4f4bf",
+          "imported_at": "2026-11-07T16:57:38.381389+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_3_001",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:37:06.055079+00:00",
+        "completed_at": "2026-11-07T13:37:07.941142+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "6c816f38035863d2e8d37f686888d3cc64728af8b3d9f56f7e2d224e01dbe261",
+          "imported_at": "2026-11-07T16:57:38.382326+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_3_004",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:37:07.944437+00:00",
+        "completed_at": "2026-11-07T13:38:02.859835+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "3699a51ee05467c90615999d90add4ee9e29ba07d047b0bfaf932e47981b689e",
+          "imported_at": "2026-11-07T16:57:38.383318+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_3_005",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:38:11.904132+00:00",
+        "completed_at": "2026-11-07T13:38:15.446110+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "b2956bdc75faa5b4408c80d71fb650a6002259ccbe36c348e24038491a9dd005",
+          "imported_at": "2026-11-07T16:57:38.384173+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_3_008",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:38:15.449708+00:00",
+        "completed_at": "2026-11-07T13:38:26.767826+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "7b330ae55b62403aacf11a2336bbbb20fa322aa9be51d528b1e2ca5ffcdefdf7",
+          "imported_at": "2026-11-07T16:57:38.385138+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_3_012",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:38:44.928459+00:00",
+        "completed_at": "2026-11-07T13:38:50.288561+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "017607c3a9135b88250c016f11c29c0694ee2bd487ac8bcb4f609d1b7015f149",
+          "imported_at": "2026-11-07T16:57:38.386783+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_3_022",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:38:50.291442+00:00",
+        "completed_at": "2026-11-07T13:38:54.746580+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "86f8c70fa331a177ceb7596d8519719c5923f595b1f4cb48bb52c7508558606f",
+          "imported_at": "2026-11-07T16:57:38.387764+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_3_028",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:39:04.543401+00:00",
+        "completed_at": "2026-11-07T13:39:09.293167+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "7465eabb9687156d4fb9648082cb74934d2a879919c23603bd3cc6476de3df00",
+          "imported_at": "2026-11-07T16:57:38.388694+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_3_039",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:39:09.296840+00:00",
+        "completed_at": "2026-11-07T13:39:14.326367+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "322b1aeb94249b109fc12ff50cf02e6e5d405cd0c82fab3ab5629853aaece3ac",
+          "imported_at": "2026-11-07T16:57:38.389719+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_3_044",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:39:25.293155+00:00",
+        "completed_at": "2026-11-07T13:39:30.070204+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "dbf2fa8cc3ee16735b4f0fe5533aa4b1bdb431f37f5264ded7368c690376b950",
+          "imported_at": "2026-11-07T16:57:38.390568+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_3_048",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:39:30.073611+00:00",
+        "completed_at": "2026-11-07T13:39:34.669812+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "8e1b641f2ac07923de2d503dc41adc121c6e0cbac79b301c2e3c863e33aee7f4",
+          "imported_at": "2026-11-07T16:57:38.391520+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "diff_3_049",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:41:17.855474+00:00",
+        "completed_at": "2026-11-07T13:41:19.975457+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "7bd77989052f9dd02dd455ba572b1b442508ba9843ca031ecbb2850b3f93e7e4",
+          "imported_at": "2026-11-07T16:57:38.392388+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_1_004",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:41:19.978806+00:00",
+        "completed_at": "2026-11-07T13:41:25.355801+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "286f77885dc68d46e2e5bd5dd27d1832481739a8cad8b92b6b9ae96069edd800",
+          "imported_at": "2026-11-07T16:57:38.393272+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_1_007",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:41:34.708735+00:00",
+        "completed_at": "2026-11-07T13:41:39.979711+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "aecd7f29e5a40aa451649900cde5e20c00d3ee4d3177026d0c67b30de50dbc7b",
+          "imported_at": "2026-11-07T16:57:38.394301+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_1_009",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:41:40.032262+00:00",
+        "completed_at": "2026-11-07T13:41:50.409523+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "dc0fc3570ae1195b2a79df143fe05614c9db054c9d50d7fdccc3ae3398e2bc08",
+          "imported_at": "2026-11-07T16:57:38.395339+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_1_010",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:42:06.607342+00:00",
+        "completed_at": "2026-11-07T13:42:08.903220+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "df9e0cf7e6473c912afd14bc7bb976f6316640e424f326902c8d85d4ff39c344",
+          "imported_at": "2026-11-07T16:57:38.396331+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_1_011",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:42:08.907162+00:00",
+        "completed_at": "2026-11-07T13:42:13.748136+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "608401d9134f3050ed01486cda62fb396ae2518f6516c286751aa1a4dcf7dd97",
+          "imported_at": "2026-11-07T16:57:38.397205+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_1_013",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:42:50.368983+00:00",
+        "completed_at": "2026-11-07T13:42:52.617052+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "2d1c9580b01a1abb12a45e412fcff3861f84095fd95fe0f002f0e128387e3dc9",
+          "imported_at": "2026-11-07T16:57:38.398055+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_1_018",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:42:52.620559+00:00",
+        "completed_at": "2026-11-07T13:42:59.866537+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "5cf4ddc7734dcc1ba36fabc359c3514d05b266b862d1dac44fe1e7fa4abc7c04",
+          "imported_at": "2026-11-07T16:57:38.398945+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_1_020",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:43:12.703328+00:00",
+        "completed_at": "2026-11-07T13:43:17.276892+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "73bdecc991459ddf10f7335c2575ca7f067998cc47302b6f95f479cf640a3381",
+          "imported_at": "2026-11-07T16:57:38.400008+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_1_021",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:43:17.280166+00:00",
+        "completed_at": "2026-11-07T13:43:22.703697+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "e5e9588eab2bc441677974b8820e4d7fd1b245cac659ba345bf461ace206b1a3",
+          "imported_at": "2026-11-07T16:57:38.400966+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_1_028",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:43:32.541704+00:00",
+        "completed_at": "2026-11-07T13:43:37.185947+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "15d47a2528aa2440beee215abe831285864c637f0b893b67e357a22726f203ed",
+          "imported_at": "2026-11-07T16:57:38.401842+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_1_032",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:43:37.190632+00:00",
+        "completed_at": "2026-11-07T13:43:42.629974+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "4e5bf95b99cf4f0ac261c6b75f8727ae56a5c1e751551864080b105507f3d9fa",
+          "imported_at": "2026-11-07T16:57:38.402703+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_1_035",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:44:27.052818+00:00",
+        "completed_at": "2026-11-07T13:44:52.584749+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "d60758c7349df88c5af7a6223747f833fe34b91c491a1d94590de0fca9ca652f",
+          "imported_at": "2026-11-07T16:57:38.403654+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_1_039",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:44:52.588313+00:00",
+        "completed_at": "2026-11-07T13:44:54.467734+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "64294eb8dffc56c7532ffef39f822bffc2b8da27b0bca63163d593db801e90a7",
+          "imported_at": "2026-11-07T16:57:38.405017+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_1_042",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:45:45.012154+00:00",
+        "completed_at": "2026-11-07T13:45:47.057913+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "50230be07f68fc2d0cc4e70244fabadd8fee6a66af0ed4ac6bc548cfedd396c3",
+          "imported_at": "2026-11-07T16:57:38.406036+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_1_043",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:45:47.061697+00:00",
+        "completed_at": "2026-11-07T13:45:53.747777+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "350caceced30f0a04a1f41ef176fc2dd902f46c41cd73c4db2e3fc2ef9f9de8a",
+          "imported_at": "2026-11-07T16:57:38.407022+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_1_046",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:46:05.972421+00:00",
+        "completed_at": "2026-11-07T13:46:26.890576+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "94d80451a8b7c06ad966368ba4ea6863830e939a7b47b015154a15b665d4e3c6",
+          "imported_at": "2026-11-07T16:57:38.408489+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_2_003",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:46:26.893905+00:00",
+        "completed_at": "2026-11-07T13:46:36.498351+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "687cde4089b86c8721af0d0576b588a8f6386f45c5818fa3010c6551110bb5c3",
+          "imported_at": "2026-11-07T16:57:38.409459+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_2_007",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:47:51.834814+00:00",
+        "completed_at": "2026-11-07T13:47:54.441221+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "0bb338db7b5448ecd02ede2570ea6211d17f5f3883e8633c904726a4c8044b1b",
+          "imported_at": "2026-11-07T16:57:38.410451+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_2_014",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:47:54.444762+00:00",
+        "completed_at": "2026-11-07T13:48:09.103836+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "52b2687b3219c768bcd7abb8cf15afd42ed96f2d474449c2a952e77cb616aca5",
+          "imported_at": "2026-11-07T16:57:38.411764+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_2_016",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:48:41.865062+00:00",
+        "completed_at": "2026-11-07T13:48:47.971448+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "bd77b2b7fc38d328425813bd612477fa39a8b563ad10af6755711df48ef6c33c",
+          "imported_at": "2026-11-07T16:57:38.412605+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_2_017",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:48:47.974916+00:00",
+        "completed_at": "2026-11-07T13:48:50.273478+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "a9f99e89052d73466e83ed0faccf306d28617e14641a396821faaa8a4e0d630f",
+          "imported_at": "2026-11-07T16:57:38.413488+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_2_022",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:49:00.244929+00:00",
+        "completed_at": "2026-11-07T13:49:06.150043+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "821bb1d5ae423ece74c43ecfb16bfe8d1fcc763df0806f1c7aee76b8d8d5fdb6",
+          "imported_at": "2026-11-07T16:57:38.414327+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_2_024",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:49:06.152939+00:00",
+        "completed_at": "2026-11-07T13:49:09.938287+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "db8f3a2d2c03fbc338ba3d437e3a718d8c588a733b2237f341016189264fad0c",
+          "imported_at": "2026-11-07T16:57:38.415384+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_2_025",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:49:19.771160+00:00",
+        "completed_at": "2026-11-07T13:49:24.631577+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "4b93c0bbc9d43cdd93720103328eaa604922c1f52c9a18e9ce12057568cf0d4f",
+          "imported_at": "2026-11-07T16:57:38.416383+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_2_030",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:49:24.635014+00:00",
+        "completed_at": "2026-11-07T13:49:29.757010+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "d56f78f029c981a51c71e3d07952f18207058d26990c0d9c377e8d8a37cbfadd",
+          "imported_at": "2026-11-07T16:57:38.417231+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_2_035",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:49:41.092995+00:00",
+        "completed_at": "2026-11-07T13:50:16.472560+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "e0600f0a7af8dc2ffaf52a6112654aaff68c796bb42ad90245060cad314c2645",
+          "imported_at": "2026-11-07T16:57:38.418193+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_3_002",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:50:16.476494+00:00",
+        "completed_at": "2026-11-07T13:50:22.264819+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "eccaab583695279ce8db04065789df152c6cde23497bd2e764e111f6d0a13186",
+          "imported_at": "2026-11-07T16:57:38.419204+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_3_010",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:50:38.044157+00:00",
+        "completed_at": "2026-11-07T13:50:42.811356+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "a00cee0fc17edf7b1dea64e272640fb4ba6e9d5208af236481e35dec2c487beb",
+          "imported_at": "2026-11-07T16:57:38.420042+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_3_011",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:50:42.817917+00:00",
+        "completed_at": "2026-11-07T13:50:49.640240+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "2635d584edfdf5f758bd63b096f56ccb93c5de9f678978fc3cf6d3e3cab3ba1f",
+          "imported_at": "2026-11-07T16:57:38.420872+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_3_014",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:51:16.462311+00:00",
+        "completed_at": "2026-11-07T13:51:18.545561+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "0c103fb9ccea0ac5bbda721eda8e8c9e00d3d4a433bc00f1232563ea9616b7c5",
+          "imported_at": "2026-11-07T16:57:38.421682+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_3_015",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:51:18.549266+00:00",
+        "completed_at": "2026-11-07T13:51:23.053242+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "0856e29d1a01ca88df292aa86121d1128be9d52b3b1d3d29e1601cf116ddb2c7",
+          "imported_at": "2026-11-07T16:57:38.422537+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_3_017",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:51:40.870370+00:00",
+        "completed_at": "2026-11-07T13:52:04.934597+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "f34dc495f928276f3552673b3289a284d2e07cf5a9610d5e4bd62fdaee527d65",
+          "imported_at": "2026-11-07T16:57:38.423359+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_3_021",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:52:04.938178+00:00",
+        "completed_at": "2026-11-07T13:52:06.535540+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "355e8a4e13abf399a120d9c8bd4894bd1e3feb7595c1bee90780dff7ae1c1747",
+          "imported_at": "2026-11-07T16:57:38.424249+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_3_026",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:52:16.749003+00:00",
+        "completed_at": "2026-11-07T13:52:21.732658+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "9935e4666386d9c1963262eb1969a0af2ac578b71a9f6bbbbd956cc9aa2ce848",
+          "imported_at": "2026-11-07T16:57:38.425148+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_3_034",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:52:21.736148+00:00",
+        "completed_at": "2026-11-07T13:52:56.298581+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "9452ed3286cce26b03131c689f7b53d8853cd63f6fd60f0051cb2ea169b7f807",
+          "imported_at": "2026-11-07T16:57:38.425943+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_3_035",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:53:13.181493+00:00",
+        "completed_at": "2026-11-07T13:53:15.791182+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "708bc7832aa57e1450679f038233e6aa5ab396cb40619a85e1718102936bcc8f",
+          "imported_at": "2026-11-07T16:57:38.426795+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_3_039",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:53:15.795270+00:00",
+        "completed_at": "2026-11-07T13:53:20.454994+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "44152556136b7c61142dec491000da551bea99bb9ef492d953865560cc525d7c",
+          "imported_at": "2026-11-07T16:57:38.427744+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      },
+      {
+        "id": "trig_3_040",
+        "method": "baseline",
+        "model_version": "gemini-3.1-flash-lite",
+        "started_at": "2026-11-07T13:53:30.139125+00:00",
+        "completed_at": "2026-11-07T13:53:39.539908+00:00",
+        "provenance": {
+          "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+          "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+          "source_record_sha256": "c61a164c430867cda34371fb4857c26ea1706323a7e3bff93d93e231b6f54000",
+          "imported_at": "2026-11-07T16:57:38.428526+00:00",
+          "reason": "Identical problem-only control reused across hint policies; no new API call."
+        }
+      }
+    ],
+    "new_condition_requests_expected": 83,
+    "new_condition_records_observed": 83,
+    "accounting_note": "Reused control response tokens are informational comparison usage, not newly incurred API usage in this run."
+  },
+  "adjudicated_answer_scores": {
+    "label": "AI-assisted mathematics-based supplemental answer-key evaluation; not certified human ground truth",
+    "source_path": "audit/audited_answer_conflicts.json",
+    "source_sha256": "4ab4fe6273123cb01e8acda11d6ae2f030041a191266ec4142096801d6ff14d6",
+    "conflict_count": 1,
+    "conflicts": [
+      {
+        "id": "trig_1_010",
+        "source_file": "모의고사_삼각함수_문제_1.hml",
+        "source_sha256": "40e5d3256beca74c23225ea16d79b402d009340fbb175e827264f20535bad869",
+        "source_metadata_sha256": "40e5d3256beca74c23225ea16d79b402d009340fbb175e827264f20535bad869",
+        "original_number": 10,
+        "raw_endnote_index_zero_based": 9,
+        "raw_answer_char_text": [
+          " [정답] ④"
+        ],
+        "raw_endnote_sha256": "9e2b816c4d40accb50b4c5fd8b0ac15e8502038395021c002b4c28d924f81eb3",
+        "raw_final_equation_scripts": [
+          " left(5x-3 right) left(5x+4 right)=0",
+          " sin `t={3} over {5}",
+          " cos `t=`-{4} over {5}`",
+          " tan `t={ sin `t} over { cos `t}={3} over {5} times left(-{5} over {4} right)=`-{3} over {4}`",
+          "k times tan `t= left(-{12} over {5} right) times left(-{3} over {4} right)={9} over {5}`"
+        ],
+        "original_answer": "④",
+        "original_answer_value": "12/5",
+        "mathematically_supported_answer": "②",
+        "mathematically_supported_value": "9/5",
+        "original_written_solution_conclusion": "9/5",
+        "independent_exact_calculation": {
+          "sin_t": "3/5",
+          "cos_t": "-4/5",
+          "k": "-12/5",
+          "tan_t": "-3/4",
+          "product": "9/5"
+        },
+        "reason": "원본 HML ENDNOTE 자체의 [정답] ④가 원본 해설의 마지막 계산9/5 및 객관식 보기②와 충돌한다. 수식변환이나 메타데이터 추출 오류가 아니다.",
+        "recommended_scoring": "retain_source_answer_and_raw_data; report separate audited mathematics-based score or flag disputed key; do not count model② as definite mathematical error",
+        "reviewer_kind": "AI_assisted_independent_mathematical_audit",
+        "raw_data_modified": false
+      }
+    ],
+    "raw_data_or_responses_modified": false,
+    "evaluations": [
+      {
+        "id": "trig_1_010",
+        "method": "baseline",
+        "original_evaluation": {
+          "predicted_answer": "②",
+          "correct": false,
+          "status": "incorrect",
+          "reason": "choice_index_comparison",
+          "extraction_method": "final_answer_marker",
+          "reference_answer": "④",
+          "predicted_kind": "choice",
+          "predicted_choice": 2
+        },
+        "mathematical_review_evaluation": {
+          "predicted_answer": "②",
+          "correct": true,
+          "status": "correct",
+          "reason": "choice_index_comparison",
+          "extraction_method": "final_answer_marker",
+          "reference_answer": "②",
+          "predicted_kind": "choice",
+          "predicted_choice": 2
+        },
+        "original_answer": "④",
+        "review_answer": "②"
+      },
+      {
+        "id": "trig_1_010",
+        "method": "regression_hint",
+        "original_evaluation": {
+          "predicted_answer": "②",
+          "correct": false,
+          "status": "incorrect",
+          "reason": "choice_index_comparison",
+          "extraction_method": "final_answer_marker",
+          "reference_answer": "④",
+          "predicted_kind": "choice",
+          "predicted_choice": 2
+        },
+        "mathematical_review_evaluation": {
+          "predicted_answer": "②",
+          "correct": true,
+          "status": "correct",
+          "reason": "choice_index_comparison",
+          "extraction_method": "final_answer_marker",
+          "reference_answer": "②",
+          "predicted_kind": "choice",
+          "predicted_choice": 2
+        },
+        "original_answer": "④",
+        "review_answer": "②"
+      }
+    ],
+    "methods": {
+      "baseline": {
+        "expected_questions": 80,
+        "recorded_questions": 80,
+        "successful_responses": 80,
+        "graded_responses": 80,
+        "correct": 79,
+        "incorrect": 1,
+        "ungraded_or_missing": 0,
+        "accuracy_on_graded": 0.9875,
+        "accuracy_on_graded_wilson95": [
+          0.9325372992233133,
+          0.9977900244795476
+        ],
+        "confirmed_correct_per_expected_question": 0.9875,
+        "grading_coverage": 1.0
+      },
+      "regression_hint": {
+        "expected_questions": 80,
+        "recorded_questions": 80,
+        "successful_responses": 80,
+        "graded_responses": 80,
+        "correct": 78,
+        "incorrect": 2,
+        "ungraded_or_missing": 0,
+        "accuracy_on_graded": 0.975,
+        "accuracy_on_graded_wilson95": [
+          0.9133556701442198,
+          0.9931171067970292
+        ],
+        "confirmed_correct_per_expected_question": 0.975,
+        "grading_coverage": 1.0
+      }
+    },
+    "paired": {
+      "expected_pairs": 80,
+      "both_graded_pairs": 80,
+      "excluded_pairs": 0,
+      "both_correct": 77,
+      "baseline_only_correct": 2,
+      "regression_only_correct": 1,
+      "both_incorrect": 0,
+      "baseline_correct": 79,
+      "regression_hint_correct": 78,
+      "baseline_accuracy": 0.9875,
+      "regression_hint_accuracy": 0.975,
+      "baseline_wilson95": [
+        0.9325372992233133,
+        0.9977900244795476
+      ],
+      "regression_hint_wilson95": [
+        0.9133556701442198,
+        0.9931171067970292
+      ],
+      "accuracy_difference_hint_minus_baseline": -0.0125,
+      "exact_mcnemar_two_sided_p": 1.0,
+      "outcomes": [
+        {
+          "id": "diff_1_005",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_1_011",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_1_012",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_1_014",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_1_018",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_1_022",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_1_026",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_1_028",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_1_030",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_1_036",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_1_038",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_1_039",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_1_041",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_004",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_006",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_007",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_010",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_013",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_014",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_016",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_018",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_020",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_023",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_024",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_029",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_030",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_031",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_036",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_037",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_040",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_041",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_3_001",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_3_004",
+          "baseline_correct": true,
+          "regression_hint_correct": false,
+          "outcome": "baseline_only_correct"
+        },
+        {
+          "id": "diff_3_005",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_3_008",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_3_012",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_3_022",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_3_028",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_3_039",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_3_044",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_3_048",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_3_049",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_004",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_007",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_009",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_010",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_011",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_013",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_018",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_020",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_021",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_028",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_032",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_035",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_039",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_042",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_043",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_046",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_2_003",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_2_007",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_2_014",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_2_016",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_2_017",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_2_022",
+          "baseline_correct": false,
+          "regression_hint_correct": true,
+          "outcome": "regression_only_correct"
+        },
+        {
+          "id": "trig_2_024",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_2_025",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_2_030",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_2_035",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_3_002",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_3_010",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_3_011",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_3_014",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_3_015",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_3_017",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_3_021",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_3_026",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_3_034",
+          "baseline_correct": true,
+          "regression_hint_correct": false,
+          "outcome": "baseline_only_correct"
+        },
+        {
+          "id": "trig_3_035",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_3_039",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_3_040",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        }
+      ],
+      "paired_question_bootstrap95_difference": [
+        -0.0625,
+        0.025
+      ],
+      "bootstrap_note": "10,000 paired question resamples; seed42; sampling uncertainty, not repeat-generation variability"
+    }
+  },
+  "solution_review": {
+    "status": "included_current_snapshot",
+    "path": "/workspace/experiment_results/model_comparison_2026-11-07/solution_review/solution_review_summary.json",
+    "file_sha256": "b794f7104d44aeccd5bafa1158df173f554882a9cc57b50e7af4cb5d169535d9",
+    "review_response_snapshot_matches_current": true,
+    "summary": {
+      "rubric_version": "mathhint-solution-review-v1",
+      "counts": {
+        "expected_responses": 160,
+        "recorded_responses": 160,
+        "eligible_solutions": 160,
+        "excluded_non_success": 0,
+        "not_recorded_yet": 0
+      },
+      "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+      "review_target_digest": "177c7dcddf8ad5aed794c4c1691a5d5008f051b52aec755f601b68462563180a",
+      "source_snapshot": {
+        "path": "/workspace/experiment_results/model_comparison_2026-11-07/generation_top_tokens/responses.jsonl",
+        "generation_folder": "/workspace/experiment_results/model_comparison_2026-11-07/generation_top_tokens",
+        "sha256": "7f3c34d3909d01f6ed29560171ced63e08c11bd0b142671b1967e0190ad8801c",
+        "bytes": 1569769,
+        "loaded_at": "2026-11-07T17:26:41.983478+00:00"
+      },
+      "mathematical_criteria": [
+        "logical_validity",
+        "enough_justification",
+        "reference_consistency"
+      ],
+      "scope": "Final answer grades are not used. API errors excluded. Unreviewed solutions never enter reviewed-rate denominators. AI suggestions and human reviews are separate.",
+      "review_kinds": {
+        "human": {
+          "baseline": {
+            "total_eligible_solutions": 80,
+            "eligible_in_this_review_kind": 80,
+            "missing_review_records": 0,
+            "overall": {
+              "appropriate": 0,
+              "inappropriate": 0,
+              "uncertain": 0,
+              "unreviewed": 80,
+              "reviewed_count": 0,
+              "decisive_count": 0,
+              "eligible_count": 80,
+              "not_reviewed_count": 80,
+              "reviewed_coverage": 0.0,
+              "appropriate_rate_on_reviewed": null,
+              "appropriate_rate_on_decisive": null
+            },
+            "mathematical_appropriateness": {
+              "appropriate": 0,
+              "inappropriate": 0,
+              "uncertain": 0,
+              "unreviewed": 80,
+              "reviewed_count": 0,
+              "decisive_count": 0,
+              "eligible_count": 80,
+              "not_reviewed_count": 80,
+              "reviewed_coverage": 0.0,
+              "appropriate_rate_on_reviewed": null,
+              "appropriate_rate_on_decisive": null
+            },
+            "criteria": {
+              "logical_validity": {
+                "appropriate": 0,
+                "inappropriate": 0,
+                "uncertain": 0,
+                "unreviewed": 80,
+                "reviewed_count": 0,
+                "decisive_count": 0,
+                "eligible_count": 80,
+                "not_reviewed_count": 80,
+                "reviewed_coverage": 0.0,
+                "appropriate_rate_on_reviewed": null,
+                "appropriate_rate_on_decisive": null
+              },
+              "enough_justification": {
+                "appropriate": 0,
+                "inappropriate": 0,
+                "uncertain": 0,
+                "unreviewed": 80,
+                "reviewed_count": 0,
+                "decisive_count": 0,
+                "eligible_count": 80,
+                "not_reviewed_count": 80,
+                "reviewed_coverage": 0.0,
+                "appropriate_rate_on_reviewed": null,
+                "appropriate_rate_on_decisive": null
+              },
+              "curriculum_scope": {
+                "appropriate": 0,
+                "inappropriate": 0,
+                "uncertain": 0,
+                "unreviewed": 80,
+                "reviewed_count": 0,
+                "decisive_count": 0,
+                "eligible_count": 80,
+                "not_reviewed_count": 80,
+                "reviewed_coverage": 0.0,
+                "appropriate_rate_on_reviewed": null,
+                "appropriate_rate_on_decisive": null
+              },
+              "reference_consistency": {
+                "appropriate": 0,
+                "inappropriate": 0,
+                "uncertain": 0,
+                "unreviewed": 80,
+                "reviewed_count": 0,
+                "decisive_count": 0,
+                "eligible_count": 80,
+                "not_reviewed_count": 80,
+                "reviewed_coverage": 0.0,
+                "appropriate_rate_on_reviewed": null,
+                "appropriate_rate_on_decisive": null
+              }
+            }
+          },
+          "regression_hint": {
+            "total_eligible_solutions": 80,
+            "eligible_in_this_review_kind": 80,
+            "missing_review_records": 0,
+            "overall": {
+              "appropriate": 0,
+              "inappropriate": 0,
+              "uncertain": 0,
+              "unreviewed": 80,
+              "reviewed_count": 0,
+              "decisive_count": 0,
+              "eligible_count": 80,
+              "not_reviewed_count": 80,
+              "reviewed_coverage": 0.0,
+              "appropriate_rate_on_reviewed": null,
+              "appropriate_rate_on_decisive": null
+            },
+            "mathematical_appropriateness": {
+              "appropriate": 0,
+              "inappropriate": 0,
+              "uncertain": 0,
+              "unreviewed": 80,
+              "reviewed_count": 0,
+              "decisive_count": 0,
+              "eligible_count": 80,
+              "not_reviewed_count": 80,
+              "reviewed_coverage": 0.0,
+              "appropriate_rate_on_reviewed": null,
+              "appropriate_rate_on_decisive": null
+            },
+            "criteria": {
+              "logical_validity": {
+                "appropriate": 0,
+                "inappropriate": 0,
+                "uncertain": 0,
+                "unreviewed": 80,
+                "reviewed_count": 0,
+                "decisive_count": 0,
+                "eligible_count": 80,
+                "not_reviewed_count": 80,
+                "reviewed_coverage": 0.0,
+                "appropriate_rate_on_reviewed": null,
+                "appropriate_rate_on_decisive": null
+              },
+              "enough_justification": {
+                "appropriate": 0,
+                "inappropriate": 0,
+                "uncertain": 0,
+                "unreviewed": 80,
+                "reviewed_count": 0,
+                "decisive_count": 0,
+                "eligible_count": 80,
+                "not_reviewed_count": 80,
+                "reviewed_coverage": 0.0,
+                "appropriate_rate_on_reviewed": null,
+                "appropriate_rate_on_decisive": null
+              },
+              "curriculum_scope": {
+                "appropriate": 0,
+                "inappropriate": 0,
+                "uncertain": 0,
+                "unreviewed": 80,
+                "reviewed_count": 0,
+                "decisive_count": 0,
+                "eligible_count": 80,
+                "not_reviewed_count": 80,
+                "reviewed_coverage": 0.0,
+                "appropriate_rate_on_reviewed": null,
+                "appropriate_rate_on_decisive": null
+              },
+              "reference_consistency": {
+                "appropriate": 0,
+                "inappropriate": 0,
+                "uncertain": 0,
+                "unreviewed": 80,
+                "reviewed_count": 0,
+                "decisive_count": 0,
+                "eligible_count": 80,
+                "not_reviewed_count": 80,
+                "reviewed_coverage": 0.0,
+                "appropriate_rate_on_reviewed": null,
+                "appropriate_rate_on_decisive": null
+              }
+            }
+          }
+        },
+        "ai_suggestion": {
+          "baseline": {
+            "total_eligible_solutions": 80,
+            "eligible_in_this_review_kind": 80,
+            "missing_review_records": 0,
+            "overall": {
+              "appropriate": 0,
+              "inappropriate": 5,
+              "uncertain": 75,
+              "unreviewed": 0,
+              "reviewed_count": 80,
+              "decisive_count": 5,
+              "eligible_count": 80,
+              "not_reviewed_count": 0,
+              "reviewed_coverage": 1.0,
+              "appropriate_rate_on_reviewed": 0.0,
+              "appropriate_rate_on_decisive": 0.0
+            },
+            "mathematical_appropriateness": {
+              "appropriate": 76,
+              "inappropriate": 4,
+              "uncertain": 0,
+              "unreviewed": 0,
+              "reviewed_count": 80,
+              "decisive_count": 80,
+              "eligible_count": 80,
+              "not_reviewed_count": 0,
+              "reviewed_coverage": 1.0,
+              "appropriate_rate_on_reviewed": 0.95,
+              "appropriate_rate_on_decisive": 0.95
+            },
+            "criteria": {
+              "logical_validity": {
+                "appropriate": 76,
+                "inappropriate": 4,
+                "uncertain": 0,
+                "unreviewed": 0,
+                "reviewed_count": 80,
+                "decisive_count": 80,
+                "eligible_count": 80,
+                "not_reviewed_count": 0,
+                "reviewed_coverage": 1.0,
+                "appropriate_rate_on_reviewed": 0.95,
+                "appropriate_rate_on_decisive": 0.95
+              },
+              "enough_justification": {
+                "appropriate": 76,
+                "inappropriate": 4,
+                "uncertain": 0,
+                "unreviewed": 0,
+                "reviewed_count": 80,
+                "decisive_count": 80,
+                "eligible_count": 80,
+                "not_reviewed_count": 0,
+                "reviewed_coverage": 1.0,
+                "appropriate_rate_on_reviewed": 0.95,
+                "appropriate_rate_on_decisive": 0.95
+              },
+              "curriculum_scope": {
+                "appropriate": 0,
+                "inappropriate": 1,
+                "uncertain": 79,
+                "unreviewed": 0,
+                "reviewed_count": 80,
+                "decisive_count": 1,
+                "eligible_count": 80,
+                "not_reviewed_count": 0,
+                "reviewed_coverage": 1.0,
+                "appropriate_rate_on_reviewed": 0.0,
+                "appropriate_rate_on_decisive": 0.0
+              },
+              "reference_consistency": {
+                "appropriate": 78,
+                "inappropriate": 2,
+                "uncertain": 0,
+                "unreviewed": 0,
+                "reviewed_count": 80,
+                "decisive_count": 80,
+                "eligible_count": 80,
+                "not_reviewed_count": 0,
+                "reviewed_coverage": 1.0,
+                "appropriate_rate_on_reviewed": 0.975,
+                "appropriate_rate_on_decisive": 0.975
+              }
+            }
+          },
+          "regression_hint": {
+            "total_eligible_solutions": 80,
+            "eligible_in_this_review_kind": 80,
+            "missing_review_records": 0,
+            "overall": {
+              "appropriate": 0,
+              "inappropriate": 7,
+              "uncertain": 73,
+              "unreviewed": 0,
+              "reviewed_count": 80,
+              "decisive_count": 7,
+              "eligible_count": 80,
+              "not_reviewed_count": 0,
+              "reviewed_coverage": 1.0,
+              "appropriate_rate_on_reviewed": 0.0,
+              "appropriate_rate_on_decisive": 0.0
+            },
+            "mathematical_appropriateness": {
+              "appropriate": 71,
+              "inappropriate": 7,
+              "uncertain": 2,
+              "unreviewed": 0,
+              "reviewed_count": 80,
+              "decisive_count": 78,
+              "eligible_count": 80,
+              "not_reviewed_count": 0,
+              "reviewed_coverage": 1.0,
+              "appropriate_rate_on_reviewed": 0.8875,
+              "appropriate_rate_on_decisive": 0.9102564102564102
+            },
+            "criteria": {
+              "logical_validity": {
+                "appropriate": 71,
+                "inappropriate": 7,
+                "uncertain": 2,
+                "unreviewed": 0,
+                "reviewed_count": 80,
+                "decisive_count": 78,
+                "eligible_count": 80,
+                "not_reviewed_count": 0,
+                "reviewed_coverage": 1.0,
+                "appropriate_rate_on_reviewed": 0.8875,
+                "appropriate_rate_on_decisive": 0.9102564102564102
+              },
+              "enough_justification": {
+                "appropriate": 75,
+                "inappropriate": 5,
+                "uncertain": 0,
+                "unreviewed": 0,
+                "reviewed_count": 80,
+                "decisive_count": 80,
+                "eligible_count": 80,
+                "not_reviewed_count": 0,
+                "reviewed_coverage": 1.0,
+                "appropriate_rate_on_reviewed": 0.9375,
+                "appropriate_rate_on_decisive": 0.9375
+              },
+              "curriculum_scope": {
+                "appropriate": 0,
+                "inappropriate": 0,
+                "uncertain": 80,
+                "unreviewed": 0,
+                "reviewed_count": 80,
+                "decisive_count": 0,
+                "eligible_count": 80,
+                "not_reviewed_count": 0,
+                "reviewed_coverage": 1.0,
+                "appropriate_rate_on_reviewed": 0.0,
+                "appropriate_rate_on_decisive": null
+              },
+              "reference_consistency": {
+                "appropriate": 77,
+                "inappropriate": 3,
+                "uncertain": 0,
+                "unreviewed": 0,
+                "reviewed_count": 80,
+                "decisive_count": 80,
+                "eligible_count": 80,
+                "not_reviewed_count": 0,
+                "reviewed_coverage": 1.0,
+                "appropriate_rate_on_reviewed": 0.9625,
+                "appropriate_rate_on_decisive": 0.9625
+              }
+            }
+          }
+        }
+      },
+      "ai_import": {
+        "accepted": 160,
+        "rejected": [],
+        "note": "AI-assisted suggestions only. Exact output-hash and evidence-quote checks are not independent verification of mathematical correctness."
+      }
+    },
+    "primary_appropriateness_field": "mathematical_appropriateness",
+    "note": "AI suggestions were method-aware and are not blinded human ground truth. Human blind packets remain separate. Unreviewed solutions are not appropriate. Mathematical appropriateness uses three mathematical criteria only; curriculum scope remains separate."
+  },
+  "paired": {
+    "expected_pairs": 80,
+    "both_graded_pairs": 80,
+    "excluded_pairs": 0,
+    "both_correct": 76,
+    "baseline_only_correct": 2,
+    "regression_only_correct": 1,
+    "both_incorrect": 1,
+    "baseline_correct": 78,
+    "regression_hint_correct": 77,
+    "baseline_accuracy": 0.975,
+    "regression_hint_accuracy": 0.9625,
+    "baseline_wilson95": [
+      0.9133556701442198,
+      0.9931171067970292
+    ],
+    "regression_hint_wilson95": [
+      0.8954527990995489,
+      0.9871654310800886
+    ],
+    "accuracy_difference_hint_minus_baseline": -0.0125,
+    "exact_mcnemar_two_sided_p": 1.0,
+    "outcomes": [
+      {
+        "id": "diff_1_005",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_1_011",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_1_012",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_1_014",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_1_018",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_1_022",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_1_026",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_1_028",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_1_030",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_1_036",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_1_038",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_1_039",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_1_041",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_2_004",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_2_006",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_2_007",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_2_010",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_2_013",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_2_014",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_2_016",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_2_018",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_2_020",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_2_023",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_2_024",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_2_029",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_2_030",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_2_031",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_2_036",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_2_037",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_2_040",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_2_041",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_3_001",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_3_004",
+        "baseline_correct": true,
+        "regression_hint_correct": false,
+        "outcome": "baseline_only_correct"
+      },
+      {
+        "id": "diff_3_005",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_3_008",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_3_012",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_3_022",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_3_028",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_3_039",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_3_044",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_3_048",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "diff_3_049",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_1_004",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_1_007",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_1_009",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_1_010",
+        "baseline_correct": false,
+        "regression_hint_correct": false,
+        "outcome": "both_incorrect"
+      },
+      {
+        "id": "trig_1_011",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_1_013",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_1_018",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_1_020",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_1_021",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_1_028",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_1_032",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_1_035",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_1_039",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_1_042",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_1_043",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_1_046",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_2_003",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_2_007",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_2_014",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_2_016",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_2_017",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_2_022",
+        "baseline_correct": false,
+        "regression_hint_correct": true,
+        "outcome": "regression_only_correct"
+      },
+      {
+        "id": "trig_2_024",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_2_025",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_2_030",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_2_035",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_3_002",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_3_010",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_3_011",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_3_014",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_3_015",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_3_017",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_3_021",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_3_026",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_3_034",
+        "baseline_correct": true,
+        "regression_hint_correct": false,
+        "outcome": "baseline_only_correct"
+      },
+      {
+        "id": "trig_3_035",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_3_039",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      },
+      {
+        "id": "trig_3_040",
+        "baseline_correct": true,
+        "regression_hint_correct": true,
+        "outcome": "both_correct"
+      }
+    ],
+    "paired_question_bootstrap95_difference": [
+      -0.0625,
+      0.025
+    ],
+    "bootstrap_note": "10,000 paired question resamples; seed42; sampling uncertainty, not repeat-generation variability"
+  },
+  "paired_tokens": {
+    "prompt_token_count": {
+      "known_successful_pairs": 80,
+      "baseline_sum": 12051,
+      "regression_hint_sum": 31600,
+      "mean_difference_hint_minus_baseline": 244.3625,
+      "relative_difference": 1.6221890299560204
+    },
+    "candidates_token_count": {
+      "known_successful_pairs": 80,
+      "baseline_sum": 39769,
+      "regression_hint_sum": 37015,
+      "mean_difference_hint_minus_baseline": -34.425,
+      "relative_difference": -0.06924991827805582
+    },
+    "thoughts_token_count": {
+      "known_successful_pairs": 0,
+      "baseline_sum": null,
+      "regression_hint_sum": null,
+      "mean_difference_hint_minus_baseline": null,
+      "relative_difference": null
+    },
+    "total_token_count": {
+      "known_successful_pairs": 80,
+      "baseline_sum": 51820,
+      "regression_hint_sum": 68615,
+      "mean_difference_hint_minus_baseline": 209.9375,
+      "relative_difference": 0.3241026630644539
+    },
+    "cached_content_token_count": {
+      "known_successful_pairs": 0,
+      "baseline_sum": null,
+      "regression_hint_sum": null,
+      "mean_difference_hint_minus_baseline": null,
+      "relative_difference": null
+    },
+    "tool_use_prompt_token_count": {
+      "known_successful_pairs": 0,
+      "baseline_sum": null,
+      "regression_hint_sum": null,
+      "mean_difference_hint_minus_baseline": null,
+      "relative_difference": null
+    }
+  },
+  "per_unit": [
+    {
+      "subject": "미분",
+      "unit": "01 함수의 극한",
+      "expected_pairs": 5,
+      "both_graded_pairs": 5,
+      "excluded_pairs": 0,
+      "both_correct": 4,
+      "baseline_only_correct": 1,
+      "regression_only_correct": 0,
+      "both_incorrect": 0,
+      "baseline_correct": 5,
+      "regression_hint_correct": 4,
+      "baseline_accuracy": 1.0,
+      "regression_hint_accuracy": 0.8,
+      "baseline_wilson95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "regression_hint_wilson95": [
+        0.37553462976252533,
+        0.9637758913675698
+      ],
+      "accuracy_difference_hint_minus_baseline": -0.2,
+      "exact_mcnemar_two_sided_p": 1.0,
+      "outcomes": [
+        {
+          "id": "diff_1_005",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_004",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_3_001",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_3_004",
+          "baseline_correct": true,
+          "regression_hint_correct": false,
+          "outcome": "baseline_only_correct"
+        },
+        {
+          "id": "diff_3_005",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        }
+      ],
+      "paired_question_bootstrap95_difference": [
+        -0.6,
+        0.0
+      ],
+      "bootstrap_note": "10,000 paired question resamples; seed42; sampling uncertainty, not repeat-generation variability"
+    },
+    {
+      "subject": "미분",
+      "unit": "02 함수의 연속성",
+      "expected_pairs": 8,
+      "both_graded_pairs": 8,
+      "excluded_pairs": 0,
+      "both_correct": 8,
+      "baseline_only_correct": 0,
+      "regression_only_correct": 0,
+      "both_incorrect": 0,
+      "baseline_correct": 8,
+      "regression_hint_correct": 8,
+      "baseline_accuracy": 1.0,
+      "regression_hint_accuracy": 1.0,
+      "baseline_wilson95": [
+        0.6755924351161198,
+        1.0
+      ],
+      "regression_hint_wilson95": [
+        0.6755924351161198,
+        1.0
+      ],
+      "accuracy_difference_hint_minus_baseline": 0.0,
+      "exact_mcnemar_two_sided_p": 1.0,
+      "outcomes": [
+        {
+          "id": "diff_1_011",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_1_012",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_1_014",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_006",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_007",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_010",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_3_008",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_3_012",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        }
+      ],
+      "paired_question_bootstrap95_difference": [
+        0.0,
+        0.0
+      ],
+      "bootstrap_note": "10,000 paired question resamples; seed42; sampling uncertainty, not repeat-generation variability"
+    },
+    {
+      "subject": "미분",
+      "unit": "03 미분계수와 도함수",
+      "expected_pairs": 8,
+      "both_graded_pairs": 8,
+      "excluded_pairs": 0,
+      "both_correct": 8,
+      "baseline_only_correct": 0,
+      "regression_only_correct": 0,
+      "both_incorrect": 0,
+      "baseline_correct": 8,
+      "regression_hint_correct": 8,
+      "baseline_accuracy": 1.0,
+      "regression_hint_accuracy": 1.0,
+      "baseline_wilson95": [
+        0.6755924351161198,
+        1.0
+      ],
+      "regression_hint_wilson95": [
+        0.6755924351161198,
+        1.0
+      ],
+      "accuracy_difference_hint_minus_baseline": 0.0,
+      "exact_mcnemar_two_sided_p": 1.0,
+      "outcomes": [
+        {
+          "id": "diff_1_018",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_1_022",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_013",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_014",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_016",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_018",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_3_022",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_3_028",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        }
+      ],
+      "paired_question_bootstrap95_difference": [
+        0.0,
+        0.0
+      ],
+      "bootstrap_note": "10,000 paired question resamples; seed42; sampling uncertainty, not repeat-generation variability"
+    },
+    {
+      "subject": "미분",
+      "unit": "04 접선의 방정식",
+      "expected_pairs": 5,
+      "both_graded_pairs": 5,
+      "excluded_pairs": 0,
+      "both_correct": 5,
+      "baseline_only_correct": 0,
+      "regression_only_correct": 0,
+      "both_incorrect": 0,
+      "baseline_correct": 5,
+      "regression_hint_correct": 5,
+      "baseline_accuracy": 1.0,
+      "regression_hint_accuracy": 1.0,
+      "baseline_wilson95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "regression_hint_wilson95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "accuracy_difference_hint_minus_baseline": 0.0,
+      "exact_mcnemar_two_sided_p": 1.0,
+      "outcomes": [
+        {
+          "id": "diff_1_026",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_1_028",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_020",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_023",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_024",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        }
+      ],
+      "paired_question_bootstrap95_difference": [
+        0.0,
+        0.0
+      ],
+      "bootstrap_note": "10,000 paired question resamples; seed42; sampling uncertainty, not repeat-generation variability"
+    },
+    {
+      "subject": "미분",
+      "unit": "05 함수의 증가와 감소",
+      "expected_pairs": 9,
+      "both_graded_pairs": 9,
+      "excluded_pairs": 0,
+      "both_correct": 9,
+      "baseline_only_correct": 0,
+      "regression_only_correct": 0,
+      "both_incorrect": 0,
+      "baseline_correct": 9,
+      "regression_hint_correct": 9,
+      "baseline_accuracy": 1.0,
+      "regression_hint_accuracy": 1.0,
+      "baseline_wilson95": [
+        0.7008549515804559,
+        1.0
+      ],
+      "regression_hint_wilson95": [
+        0.7008549515804559,
+        1.0
+      ],
+      "accuracy_difference_hint_minus_baseline": 0.0,
+      "exact_mcnemar_two_sided_p": 1.0,
+      "outcomes": [
+        {
+          "id": "diff_1_030",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_1_036",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_1_038",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_1_039",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_1_041",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_029",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_030",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_031",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_3_039",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        }
+      ],
+      "paired_question_bootstrap95_difference": [
+        0.0,
+        0.0
+      ],
+      "bootstrap_note": "10,000 paired question resamples; seed42; sampling uncertainty, not repeat-generation variability"
+    },
+    {
+      "subject": "미분",
+      "unit": "06 방부등식과 직선운동",
+      "expected_pairs": 7,
+      "both_graded_pairs": 7,
+      "excluded_pairs": 0,
+      "both_correct": 7,
+      "baseline_only_correct": 0,
+      "regression_only_correct": 0,
+      "both_incorrect": 0,
+      "baseline_correct": 7,
+      "regression_hint_correct": 7,
+      "baseline_accuracy": 1.0,
+      "regression_hint_accuracy": 1.0,
+      "baseline_wilson95": [
+        0.6456695649333126,
+        1.0
+      ],
+      "regression_hint_wilson95": [
+        0.6456695649333126,
+        1.0
+      ],
+      "accuracy_difference_hint_minus_baseline": 0.0,
+      "exact_mcnemar_two_sided_p": 1.0,
+      "outcomes": [
+        {
+          "id": "diff_2_036",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_037",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_040",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_2_041",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_3_044",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_3_048",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "diff_3_049",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        }
+      ],
+      "paired_question_bootstrap95_difference": [
+        0.0,
+        0.0
+      ],
+      "bootstrap_note": "10,000 paired question resamples; seed42; sampling uncertainty, not repeat-generation variability"
+    },
+    {
+      "subject": "삼각함수",
+      "unit": "05 삼각함수의 정의",
+      "expected_pairs": 7,
+      "both_graded_pairs": 7,
+      "excluded_pairs": 0,
+      "both_correct": 6,
+      "baseline_only_correct": 0,
+      "regression_only_correct": 0,
+      "both_incorrect": 1,
+      "baseline_correct": 6,
+      "regression_hint_correct": 6,
+      "baseline_accuracy": 0.8571428571428571,
+      "regression_hint_accuracy": 0.8571428571428571,
+      "baseline_wilson95": [
+        0.4868721707256811,
+        0.9743203756552565
+      ],
+      "regression_hint_wilson95": [
+        0.4868721707256811,
+        0.9743203756552565
+      ],
+      "accuracy_difference_hint_minus_baseline": 0.0,
+      "exact_mcnemar_two_sided_p": 1.0,
+      "outcomes": [
+        {
+          "id": "trig_1_004",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_007",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_009",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_010",
+          "baseline_correct": false,
+          "regression_hint_correct": false,
+          "outcome": "both_incorrect"
+        },
+        {
+          "id": "trig_2_003",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_2_007",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_3_002",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        }
+      ],
+      "paired_question_bootstrap95_difference": [
+        0.0,
+        0.0
+      ],
+      "bootstrap_note": "10,000 paired question resamples; seed42; sampling uncertainty, not repeat-generation variability"
+    },
+    {
+      "subject": "삼각함수",
+      "unit": "06 삼각함수의 그래프",
+      "expected_pairs": 31,
+      "both_graded_pairs": 31,
+      "excluded_pairs": 0,
+      "both_correct": 29,
+      "baseline_only_correct": 1,
+      "regression_only_correct": 1,
+      "both_incorrect": 0,
+      "baseline_correct": 30,
+      "regression_hint_correct": 30,
+      "baseline_accuracy": 0.967741935483871,
+      "regression_hint_accuracy": 0.967741935483871,
+      "baseline_wilson95": [
+        0.838058948352751,
+        0.9942827784745831
+      ],
+      "regression_hint_wilson95": [
+        0.838058948352751,
+        0.9942827784745831
+      ],
+      "accuracy_difference_hint_minus_baseline": 0.0,
+      "exact_mcnemar_two_sided_p": 1.0,
+      "outcomes": [
+        {
+          "id": "trig_1_011",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_013",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_018",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_020",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_021",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_028",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_032",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_035",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_039",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_042",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_043",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_1_046",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_2_014",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_2_016",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_2_017",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_2_022",
+          "baseline_correct": false,
+          "regression_hint_correct": true,
+          "outcome": "regression_only_correct"
+        },
+        {
+          "id": "trig_2_024",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_2_025",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_2_030",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_2_035",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_3_010",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_3_011",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_3_014",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_3_015",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_3_017",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_3_021",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_3_026",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_3_034",
+          "baseline_correct": true,
+          "regression_hint_correct": false,
+          "outcome": "baseline_only_correct"
+        },
+        {
+          "id": "trig_3_035",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_3_039",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        },
+        {
+          "id": "trig_3_040",
+          "baseline_correct": true,
+          "regression_hint_correct": true,
+          "outcome": "both_correct"
+        }
+      ],
+      "paired_question_bootstrap95_difference": [
+        -0.0967741935483871,
+        0.0967741935483871
+      ],
+      "bootstrap_note": "10,000 paired question resamples; seed42; sampling uncertainty, not repeat-generation variability"
+    }
+  ],
+  "training": {
+    "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+    "train_count": 185,
+    "test_count": 80,
+    "problem_dimensions": 346,
+    "solution_dimensions": 431,
+    "regression": {
+      "model": "linear_regression",
+      "architecture": "nn.Linear(346,431)",
+      "optimizer": "Adam",
+      "loss": "MSE",
+      "epochs": 500,
+      "learning_rate": 0.01,
+      "seed": 42,
+      "split_source": "data/processed/splits/*.json",
+      "test_used_for_training_or_selection": false,
+      "initial_train_mse": 7.166752338409424,
+      "negative_prediction_policy": "clip_to_zero_without_rounding_for_nonnegative_frequency_input",
+      "metrics": {
+        "train": {
+          "raw": {
+            "mse": 0.3404415249824524,
+            "mae": 0.11402781307697296,
+            "mean_cosine_similarity": 0.9732975959777832
+          },
+          "clipped_nonnegative": {
+            "mse": 0.33311355113983154,
+            "mae": 0.09944505989551544,
+            "mean_cosine_similarity": 0.9747496843338013
+          },
+          "training_mean_baseline": {
+            "mse": 3.3413424491882324,
+            "mae": 0.47771504521369934,
+            "mean_cosine_similarity": 0.7871190309524536
+          }
+        },
+        "test": {
+          "raw": {
+            "mse": 3.356985092163086,
+            "mae": 0.6229177117347717,
+            "mean_cosine_similarity": 0.8200149536132812
+          },
+          "clipped_nonnegative": {
+            "mse": 3.0124783515930176,
+            "mae": 0.485583633184433,
+            "mean_cosine_similarity": 0.8479803204536438
+          },
+          "training_mean_baseline": {
+            "mse": 3.559432029724121,
+            "mae": 0.48431211709976196,
+            "mean_cosine_similarity": 0.7986297011375427
+          }
+        }
+      }
+    },
+    "clustering": [
+      {
+        "k": 2,
+        "nominal_target_level": "subject",
+        "fit_split": "train",
+        "feature_transform": "raw_counts",
+        "distance": "euclidean",
+        "restarts": 5,
+        "seeds": [
+          42,
+          43,
+          44,
+          45,
+          46
+        ],
+        "selected_seed": 42,
+        "selection": "lowest_training_inertia_only",
+        "train_inertia": 26746.49609375,
+        "iterations": 5,
+        "restart_train_inertias": [
+          26746.49609375,
+          26815.1953125,
+          26813.87890625,
+          26815.1953125,
+          26746.49609375
+        ],
+        "metrics": {
+          "train": {
+            "subject": {
+              "adjusted_rand_index": 0.09711371173692293,
+              "normalized_mutual_information": 0.08288381804546607,
+              "purity": 0.6594594594594595,
+              "n_labels": 2,
+              "n_occupied_clusters": 2,
+              "n": 185,
+              "accuracy_using_train_cluster_majority": 0.6594594594594595
+            },
+            "unit": {
+              "adjusted_rand_index": 0.005666413362732103,
+              "normalized_mutual_information": 0.10648334616206707,
+              "purity": 0.3837837837837838,
+              "n_labels": 8,
+              "n_occupied_clusters": 2,
+              "n": 185,
+              "accuracy_using_train_cluster_majority": 0.3837837837837838
+            },
+            "type": {
+              "adjusted_rand_index": 0.020558199590666806,
+              "normalized_mutual_information": 0.16893451232954307,
+              "purity": 0.14594594594594595,
+              "n_labels": 70,
+              "n_occupied_clusters": 2,
+              "n": 185,
+              "accuracy_using_train_cluster_majority": 0.14594594594594595
+            }
+          },
+          "test": {
+            "subject": {
+              "adjusted_rand_index": 0.09674104802935198,
+              "normalized_mutual_information": 0.10391804184415976,
+              "purity": 0.6625,
+              "n_labels": 2,
+              "n_occupied_clusters": 2,
+              "n": 80,
+              "accuracy_using_train_cluster_majority": 0.6625
+            },
+            "unit": {
+              "adjusted_rand_index": 0.001124102501877813,
+              "normalized_mutual_information": 0.14220135357231323,
+              "purity": 0.3875,
+              "n_labels": 8,
+              "n_occupied_clusters": 2,
+              "n": 80,
+              "accuracy_using_train_cluster_majority": 0.3875
+            },
+            "type": {
+              "adjusted_rand_index": 0.02041698687149512,
+              "normalized_mutual_information": 0.2221820741309011,
+              "purity": 0.1625,
+              "n_labels": 42,
+              "n_occupied_clusters": 2,
+              "n": 80,
+              "accuracy_using_train_cluster_majority": 0.1625
+            }
+          }
+        }
+      },
+      {
+        "k": 8,
+        "nominal_target_level": "unit",
+        "fit_split": "train",
+        "feature_transform": "raw_counts",
+        "distance": "euclidean",
+        "restarts": 5,
+        "seeds": [
+          42,
+          43,
+          44,
+          45,
+          46
+        ],
+        "selected_seed": 42,
+        "selection": "lowest_training_inertia_only",
+        "train_inertia": 15889.08984375,
+        "iterations": 15,
+        "restart_train_inertias": [
+          15889.08984375,
+          16852.5078125,
+          16841.544921875,
+          16178.068359375,
+          17195.6015625
+        ],
+        "metrics": {
+          "train": {
+            "subject": {
+              "adjusted_rand_index": 0.11722992639667257,
+              "normalized_mutual_information": 0.22852078162013578,
+              "purity": 0.8054054054054054,
+              "n_labels": 2,
+              "n_occupied_clusters": 8,
+              "n": 185,
+              "accuracy_using_train_cluster_majority": 0.8054054054054054
+            },
+            "unit": {
+              "adjusted_rand_index": 0.20572478595959134,
+              "normalized_mutual_information": 0.4066076230578701,
+              "purity": 0.5621621621621622,
+              "n_labels": 8,
+              "n_occupied_clusters": 8,
+              "n": 185,
+              "accuracy_using_train_cluster_majority": 0.5621621621621622
+            },
+            "type": {
+              "adjusted_rand_index": 0.19612608393047087,
+              "normalized_mutual_information": 0.5551711413247903,
+              "purity": 0.34594594594594597,
+              "n_labels": 70,
+              "n_occupied_clusters": 8,
+              "n": 185,
+              "accuracy_using_train_cluster_majority": 0.34594594594594597
+            }
+          },
+          "test": {
+            "subject": {
+              "adjusted_rand_index": 0.09610108769325114,
+              "normalized_mutual_information": 0.21357950235458883,
+              "purity": 0.8,
+              "n_labels": 2,
+              "n_occupied_clusters": 8,
+              "n": 80,
+              "accuracy_using_train_cluster_majority": 0.8
+            },
+            "unit": {
+              "adjusted_rand_index": 0.1479411620700991,
+              "normalized_mutual_information": 0.4010069498451942,
+              "purity": 0.55,
+              "n_labels": 8,
+              "n_occupied_clusters": 8,
+              "n": 80,
+              "accuracy_using_train_cluster_majority": 0.525
+            },
+            "type": {
+              "adjusted_rand_index": 0.16031886625332153,
+              "normalized_mutual_information": 0.6046383892973797,
+              "purity": 0.3625,
+              "n_labels": 42,
+              "n_occupied_clusters": 8,
+              "n": 80,
+              "accuracy_using_train_cluster_majority": 0.3625
+            }
+          }
+        }
+      },
+      {
+        "k": 70,
+        "nominal_target_level": "type",
+        "fit_split": "train",
+        "feature_transform": "raw_counts",
+        "distance": "euclidean",
+        "restarts": 5,
+        "seeds": [
+          42,
+          43,
+          44,
+          45,
+          46
+        ],
+        "selected_seed": 42,
+        "selection": "lowest_training_inertia_only",
+        "train_inertia": 5778.79833984375,
+        "iterations": 3,
+        "restart_train_inertias": [
+          5778.79833984375,
+          6242.716796875,
+          6352.74609375,
+          6594.64453125,
+          6548.453125
+        ],
+        "metrics": {
+          "train": {
+            "subject": {
+              "adjusted_rand_index": 0.024547466538041064,
+              "normalized_mutual_information": 0.24002532540208718,
+              "purity": 0.9405405405405406,
+              "n_labels": 2,
+              "n_occupied_clusters": 70,
+              "n": 185,
+              "accuracy_using_train_cluster_majority": 0.9405405405405406
+            },
+            "unit": {
+              "adjusted_rand_index": 0.07225095818828532,
+              "normalized_mutual_information": 0.5132918407938517,
+              "purity": 0.8054054054054054,
+              "n_labels": 8,
+              "n_occupied_clusters": 70,
+              "n": 185,
+              "accuracy_using_train_cluster_majority": 0.8054054054054054
+            },
+            "type": {
+              "adjusted_rand_index": 0.21700469836010405,
+              "normalized_mutual_information": 0.7812760500116851,
+              "purity": 0.6324324324324324,
+              "n_labels": 70,
+              "n_occupied_clusters": 70,
+              "n": 185,
+              "accuracy_using_train_cluster_majority": 0.6324324324324324
+            }
+          },
+          "test": {
+            "subject": {
+              "adjusted_rand_index": 0.033886131726918026,
+              "normalized_mutual_information": 0.26092129729403907,
+              "purity": 0.9,
+              "n_labels": 2,
+              "n_occupied_clusters": 34,
+              "n": 80,
+              "accuracy_using_train_cluster_majority": 0.825
+            },
+            "unit": {
+              "adjusted_rand_index": 0.08815826891515387,
+              "normalized_mutual_information": 0.5370593130383157,
+              "purity": 0.75,
+              "n_labels": 8,
+              "n_occupied_clusters": 34,
+              "n": 80,
+              "accuracy_using_train_cluster_majority": 0.525
+            },
+            "type": {
+              "adjusted_rand_index": 0.16702660128560176,
+              "normalized_mutual_information": 0.7803884557809391,
+              "purity": 0.5875,
+              "n_labels": 42,
+              "n_occupied_clusters": 34,
+              "n": 80,
+              "accuracy_using_train_cluster_majority": 0.3625
+            }
+          }
+        }
+      }
+    ],
+    "pca_variance_explained_by_two_components": 0.566263735294342,
+    "test_target_exposure": "evaluation only after fixed training configuration; no test-based tuning",
+    "torch_version": "2.15.0+cpu",
+    "training_label_prior_baselines": {
+      "subject": {
+        "training_majority_label": "미분",
+        "test_accuracy": 0.525
+      },
+      "unit": {
+        "training_majority_label": "06 삼각함수의 그래프",
+        "test_accuracy": 0.3875
+      },
+      "type": {
+        "training_majority_label": "02 극대와 극소2 (삼차함수의 극대와 극소)",
+        "test_accuracy": 0.0875
+      }
+    },
+    "raw_count_length_diagnostics": {
+      "train_pc1_vs_total_token_count_pearson_r": 0.6405813849920092,
+      "train_pc1_vs_vector_l2_norm_pearson_r": 0.8528137494156791,
+      "interpretation": "Raw counts and Euclidean distance can reflect document length as well as mathematical content.",
+      "test_used_to_choose_transform": false
+    }
+  },
+  "source_sha256": {
+    "config": "12d2ce5155b87cb396db6221b00d5727ab63b3212f23c62339b52d12d79c4852",
+    "responses": "7f3c34d3909d01f6ed29560171ced63e08c11bd0b142671b1967e0190ad8801c"
+  },
+  "limitations": [
+    "A single generation per method for 80 fixed held-out questions; repeated-run variability was not estimated.",
+    "Correctness is final-answer agreement with original answer, not verification of mathematical reasoning or curriculum compliance.",
+    "Ungradable, incomplete and missing responses are reported separately, not silently treated as wrong.",
+    "Clustering labels and original answers are never generation hints. Linear-regression hints contain predicted frequencies only.",
+    "Training has70fine types but test has42; k70 purity benefits from fragmentation and does not imply semantic separation.",
+    "Results describe raw frequency counts and Euclidean K-means; no comparison with normalized counts or embeddings was performed.",
+    "Missing usage metadata is unknown; strict token totals are null if any attempt lacks the field.",
+    "If controls are reused, comparison includes their original token usage but incremental API totals exclude imported requests; generation times may differ."
+  ]
+}

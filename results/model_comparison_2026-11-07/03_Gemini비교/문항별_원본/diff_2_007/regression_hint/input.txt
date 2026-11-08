@@ -1,0 +1,10 @@
+함수
+$f \left( x \right) = {\left\{\begin{array}{lll}\left( x - a \right)^{2} &  & \left( x < 4 \right) \\ 2 x - 4 &  & \left( x \geq 4 \right)\end{array}\right.}$
+가 실수 전체의 집합에서 연속이 되도록 하는 모든 상수 $a$의 값의 곱은?
+① $\mathrm{6}$		② $\mathrm{9}$		③ $\mathrm{12}$
+④ $\mathrm{15}$		⑤ $\mathrm{18}$
+
+
+[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]
+{"latex:2":12.056,"latex:x":11.669,"latex:}":8.2,"latex:{":8.021,"latex:a":7.639,"latex:=":7.582,"latex:)":7.257,"latex:(":7.173,"latex:6":4.559,"latex:^":4.365,"latex:f":4.162,"latex:-":3.809,"kiwi:이":3.752,"latex:\\rightarrow":3.363,"latex:\\pi":3.274,"latex:\\mathrm":2.886,"latex:\\left":2.85,"latex:\\right":2.791,"kiwi:하":2.675,"kiwi:의":2.599}
+위 주요 토큰을 참고하여 풀이를 작성해줘.

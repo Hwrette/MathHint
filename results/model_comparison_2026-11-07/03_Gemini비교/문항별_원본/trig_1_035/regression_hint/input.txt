@@ -1,0 +1,8 @@
+$2 \cos \theta + \cos \left( \frac{\pi}{2} - \theta \right) = 0$이고 $\sin \theta < 0$일 때, $\cos \theta$의 값은?
+① $- \frac{2 \sqrt{5}}{5}$	② $- \frac{\sqrt{5}}{5}$	③ $0$
+④ $\frac{\sqrt{5}}{5}$	⑤ $\frac{2 \sqrt{5}}{5}$
+
+
+[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]
+{"latex:}":20.374,"latex:{":20.265,"latex:\\theta":13.006,"latex:2":9.781,"latex:=":7.69,"latex:5":7.493,"latex:\\cos":6.497,"latex:\\frac":6.237,"latex:-":6.207,"kiwi:이":5.707,"latex:\\sin":5.408,"latex:+":4.465,"latex:x":4.454,"latex:)":4.315,"latex:(":4.288,"latex:\\right":4.274,"latex:\\left":4.128,"latex:\\sqrt":3.996,"latex:^":3.434,"latex:0":3.395}
+위 주요 토큰을 참고하여 풀이를 작성해줘.

@@ -1,0 +1,209 @@
+{
+  "id": "trig_2_016",
+  "method": "baseline",
+  "input_text": "$\\tan \\theta < 0$이고 $\\cos \\left( \\frac{\\pi}{2} + \\theta \\right) = \\frac{\\sqrt{5}}{5}$일 때, $\\cos \\theta$의 값은?\n① $- \\frac{2 \\sqrt{5}}{5}$\t② $- \\frac{\\sqrt{5}}{5}$\t③ $\\mathrm{0}$\n④ $\\frac{\\sqrt{5}}{5}$\t⑤ $\\frac{2 \\sqrt{5}}{5}$\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "1fa395ad28f47becb69924d6b6bc07b019f36f9794c309b7f40daac48352fb46",
+  "reference": {
+    "answer_text": "⑤",
+    "kind": "choice",
+    "choice": 5,
+    "value_text": "$\\frac{2 \\sqrt{5}}{5}$",
+    "source": {
+      "id": "trig_2_016",
+      "source_file": "모의고사_삼각함수_문제_2.hml",
+      "source_sha256": "2a36b54c30c9b890ee90fe84dc6c2b62847494cb5830bd51de8b1fb6877d7cc2",
+      "original_number": 16,
+      "current_number": 16
+    },
+    "numeric_value": 0.894427190999916,
+    "gradable": true
+  },
+  "reference_answer_text": "⑤",
+  "reference_solution": "[정답] ⑤\n\n[해설]\n$\\cos \\left( \\frac{\\pi}{2} + \\theta \\right) = - \\sin \\theta$이므로\n$\\sin \\theta = - \\frac{\\sqrt{5}}{5}$\n$\\tan \\theta < 0$, $\\sin \\theta < 0$이므로 $\\theta$는 제 $\\mathrm{4}$사분면의 각이고, $\\cos \\theta > 0$이다.\n$\\cos^{2} \\theta$$= 1 - \\sin^{2} \\theta$\n$= 1 - \\left( \\frac{\\sqrt{5}}{5} \\right)^{2}$\n$= \\frac{4}{5}$\n$\\therefore$ $\\cos \\theta = \\frac{2}{5} \\sqrt{5}$\n",
+  "problem_text": "$\\tan \\theta < 0$이고 $\\cos \\left( \\frac{\\pi}{2} + \\theta \\right) = \\frac{\\sqrt{5}}{5}$일 때, $\\cos \\theta$의 값은?\n① $- \\frac{2 \\sqrt{5}}{5}$\t② $- \\frac{\\sqrt{5}}{5}$\t③ $\\mathrm{0}$\n④ $\\frac{\\sqrt{5}}{5}$\t⑤ $\\frac{2 \\sqrt{5}}{5}$\n",
+  "subject": "삼각함수",
+  "unit": "06 삼각함수의 그래프",
+  "type": "01 각 변형1 (각 변형 규칙)",
+  "source": "2022년(2023학년도) 평가원 고3공통 11월 > 공통범위 > 5 [3점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:48:41.865062+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:48:41.865074+00:00",
+      "usage": {
+        "prompt_token_count": 149,
+        "candidates_token_count": 475,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 624,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 475,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 149,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 149
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 624,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "OizvapnlHrKN_PUPxPPgmQ8",
+      "latency_seconds": 6.106,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "주어진 조건을 단계별로 풀어보겠습니다.\n\n**1. $\\cos \\left( \\frac{\\pi}{2} + \\theta \\right) = \\frac{\\sqrt{5}}{5}$ 식 정리**\n삼각함수의 변환 공식에 의해 $\\cos \\left( \\frac{\\pi}{2} + \\theta \\right) = -\\sin \\theta$입니다.\n따라서,\n$-\\sin \\theta = \\frac{\\sqrt{5}}{5}$\n$\\sin \\theta = -\\frac{\\sqrt{5}}{5}$\n\n**2. $\\theta$의 위치 파악**\n*   $\\sin \\theta = -\\frac{\\sqrt{5}}{5} < 0$이므로, $\\theta$는 제3사분면 또는 제4사분면의 각입니다.\n*   문제에서 $\\tan \\theta < 0$이라고 하였습니다. 탄젠트가 음수인 사분면은 제2사분면과 제4사분면입니다.\n*   두 조건을 동시에 만족하는 사분면은 **제4사분면**입니다.\n\n**3. $\\cos \\theta$의 값 구하기**\n제4사분면에서 $\\cos \\theta$는 양수입니다.\n삼각함수의 기본 관계식 $\\sin^2 \\theta + \\cos^2 \\theta = 1$을 이용합니다.\n$\\left( -\\frac{\\sqrt{5}}{5} \\right)^2 + \\cos^2 \\theta = 1$\n$\\frac{5}{25} + \\cos^2 \\theta = 1$\n$\\frac{1}{5} + \\cos^2 \\theta = 1$\n$\\cos^2 \\theta = 1 - \\frac{1}{5} = \\frac{4}{5}$\n\n$\\theta$가 제4사분면의 각이므로 $\\cos \\theta > 0$이어야 합니다.\n$\\cos \\theta = \\sqrt{\\frac{4}{5}} = \\frac{2}{\\sqrt{5}} = \\frac{2\\sqrt{5}}{5}$\n\n따라서 구하는 값은 $\\frac{2\\sqrt{5}}{5}$입니다.\n\n최종정답: ⑤",
+  "usage": {
+    "prompt_token_count": 149,
+    "candidates_token_count": 475,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 624,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 475,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 149,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 149
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 624,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "OizvapnlHrKN_PUPxPPgmQ8",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:48:47 GMT",
+        "server": "envoy",
+        "content-length": "1065",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=5476",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "6061"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "주어진 조건을 단계별로 풀어보겠습니다.\n\n**1. $\\cos \\left( \\frac{\\pi}{2} + \\theta \\right) = \\frac{\\sqrt{5}}{5}$ 식 정리**\n삼각함수의 변환 공식에 의해 $\\cos \\left( \\frac{\\pi}{2} + \\theta \\right) = -\\sin \\theta$입니다.\n따라서,\n$-\\sin \\theta = \\frac{\\sqrt{5}}{5}$\n$\\sin \\theta = -\\frac{\\sqrt{5}}{5}$\n\n**2. $\\theta$의 위치 파악**\n*   $\\sin \\theta = -\\frac{\\sqrt{5}}{5} < 0$이므로, $\\theta$는 제3사분면 또는 제4사분면의 각입니다.\n*   문제에서 $\\tan \\theta < 0$이라고 하였습니다. 탄젠트가 음수인 사분면은 제2사분면과 제4사분면입니다.\n*   두 조건을 동시에 만족하는 사분면은 **제4사분면**입니다.\n\n**3. $\\cos \\theta$의 값 구하기**\n제4사분면에서 $\\cos \\theta$는 양수입니다.\n삼각함수의 기본 관계식 $\\sin^2 \\theta + \\cos^2 \\theta = 1$을 이용합니다.\n$\\left( -\\frac{\\sqrt{5}}{5} \\right)^2 + \\cos^2 \\theta = 1$\n$\\frac{5}{25} + \\cos^2 \\theta = 1$\n$\\frac{1}{5} + \\cos^2 \\theta = 1$\n$\\cos^2 \\theta = 1 - \\frac{1}{5} = \\frac{4}{5}$\n\n$\\theta$가 제4사분면의 각이므로 $\\cos \\theta > 0$이어야 합니다.\n$\\cos \\theta = \\sqrt{\\frac{4}{5}} = \\frac{2}{\\sqrt{5}} = \\frac{2\\sqrt{5}}{5}$\n\n따라서 구하는 값은 $\\frac{2\\sqrt{5}}{5}$입니다.\n\n최종정답: ⑤",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0T1iBivL8DUMpdFCho_YgG_P2wz7POo0Awd6PcU5odCKcyZwoaXUbvNx5cmqnkvNWL-SaFT7pB7FeNifJHM7PRUzV4RkRdzytQM-pMiqQcN-_osPhzssiLu-dqbLzSjp6DOTMXa7SeO4x4oeqx",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "OizvapnlHrKN_PUPxPPgmQ8",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 475,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 149,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 149
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 624,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 6.106,
+  "completed_at": "2026-11-07T13:48:47.971448+00:00",
+  "evaluation": {
+    "predicted_answer": "⑤",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "⑤",
+    "predicted_kind": "choice",
+    "predicted_choice": 5
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "bd77b2b7fc38d328425813bd612477fa39a8b563ad10af6755711df48ef6c33c",
+    "imported_at": "2026-11-07T16:57:38.412605+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

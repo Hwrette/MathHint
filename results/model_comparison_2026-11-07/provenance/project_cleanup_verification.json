@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "entrypoints_without_argparse": 14,
+  "python_source_files_parsed": 27,
+  "unit_tests_passed": 153,
+  "data_files_byte_identical": 808,
+  "train_count": 185,
+  "test_count": 80,
+  "regression_test_predictions_exactly_equal": true,
+  "kmeans_centers_exactly_equal": true,
+  "api_inputs_unchanged": 160,
+  "new_api_calls": 0,
+  "original_data_or_experiment_results_modified": false,
+  "reading_guide": "/workspace/MathHint/docs/code_guide_ko.md",
+  "test_log": "/workspace/experiment_results/project_cleanup_tests.txt"
+}

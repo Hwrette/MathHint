@@ -1,0 +1,231 @@
+{
+  "id": "trig_1_009",
+  "method": "regression_hint",
+  "input_text": "직선 $y = m x$ 위에 있는 원점이 아닌 점 ${\\mathrm{{P}}}$에 대하여 동경 ${\\mathrm{{O P}}}$가 나타내는 각의 크기를 $\\theta$라 하자. $2 \\theta$는 제$2$사분면의 각이고 $\\sin \\theta + \\cos \\theta = \\frac{2}{5} \\sqrt{10}$일 때, 상수 $m$의 값은?\n① $\\frac{3}{2}$\t\t② $2$\t\t③ $\\frac{5}{2}$\n④ $3$\t\t⑤ $\\frac{7}{2}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:}\":26.81,\"latex:{\":26.701,\"latex:\\\\theta\":16.989,\"latex:2\":9.615,\"latex:0\":9.138,\"kiwi:이\":8.887,\"latex:=\":7.803,\"latex:<\":6.381,\"latex:+\":5.556,\"latex:\\\\frac\":5.42,\"latex:_\":4.894,\"kiwi:,\":4.805,\"latex:10\":4.645,\"latex:^\":4.584,\"latex:a\":4.213,\"latex:\\\\cos\":4.165,\"latex:\\\\mathrm\":3.879,\"latex:\\\\sin\":3.43,\"latex:\\\\alpha\":3.317,\"latex:n\":3.14}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "879a9c498015a90ef555693785c5a79080661e803ee8aa4bc12ffe71734f98f3",
+  "reference": {
+    "answer_text": "④",
+    "kind": "choice",
+    "choice": 4,
+    "value_text": "$3$",
+    "source": {
+      "id": "trig_1_009",
+      "source_file": "모의고사_삼각함수_문제_1.hml",
+      "source_sha256": "40e5d3256beca74c23225ea16d79b402d009340fbb175e827264f20535bad869",
+      "original_number": 9,
+      "current_number": 9
+    },
+    "numeric_value": 3.0,
+    "gradable": true
+  },
+  "reference_answer_text": "④",
+  "reference_solution": "[정답] ④\n\n[해설]\n직선 $y = m x$ 위의 점 ${\\mathrm{{P}}}$에 대하여 동경 ${\\mathrm{{O P}}}$가 나타내는 각의 크기가 $\\theta$이므로\n$\\tan \\theta = m$\n$2 \\theta$가 제$2$사분면의 각이므로\n$2 n \\pi + \\frac{\\pi}{2} < 2 \\theta < 2 n \\pi + \\pi$ (단, $n$은 정수)\n$\\therefore \\quad n \\pi + \\frac{\\pi}{4} < \\theta < n \\pi + \\frac{\\pi}{2}$\n이때 $\\sin \\theta + \\cos \\theta = \\frac{2}{5} \\sqrt{10} > 0$이므로 $\\theta$는 제$1$사분면의 각이다. 즉, $n = 0$이므로 $\\frac{\\pi}{4} < \\theta < \\frac{\\pi}{2}$이고, $\\tan \\theta > 1$이다.\n$\\therefore \\quad m > 1$\t\t\t\t$\\cdots$$\\cdots$ ㉠\n$\\sin \\theta + \\cos \\theta = \\frac{2}{5} \\sqrt{10}$의 양변을 제곱하면\n$\\sin^{2} \\theta + 2 \\sin \\theta \\cos \\theta + \\cos^{2} \\theta = \\frac{8}{5}$\n$1 + 2 \\sin \\theta \\cos \\theta = \\frac{8}{5}$\n$\\therefore \\quad \\sin \\theta \\cos \\theta = \\frac{3}{10}$\n이때\n$\\tan \\theta + \\frac{1}{\\tan \\theta}$$= \\frac{\\sin \\theta}{\\cos \\theta} + \\frac{\\cos \\theta}{\\sin \\theta}$$= \\frac{\\sin^{2} \\theta + \\cos^{2} \\theta}{\\sin \\theta \\cos \\theta}$\n$= \\frac{1}{\\sin \\theta \\cos \\theta}$\n이므로\n$m + \\frac{1}{m} = \\frac{1}{\\frac{3}{10}} = \\frac{10}{3}$\n양변에 $3 m$을 곱하여 정리하면\n$3 m^{2} - 10 m + 3 = 0$,    $\\left( 3 m - 1 \\right) \\left( m - 3 \\right) = 0$\n$\\therefore \\quad m = \\frac{1}{3}$ 또는 $m = 3$\n㉠에서 $m > 1$이므로    $m = 3$\n",
+  "problem_text": "직선 $y = m x$ 위에 있는 원점이 아닌 점 ${\\mathrm{{P}}}$에 대하여 동경 ${\\mathrm{{O P}}}$가 나타내는 각의 크기를 $\\theta$라 하자. $2 \\theta$는 제$2$사분면의 각이고 $\\sin \\theta + \\cos \\theta = \\frac{2}{5} \\sqrt{10}$일 때, 상수 $m$의 값은?\n① $\\frac{3}{2}$\t\t② $2$\t\t③ $\\frac{5}{2}$\n④ $3$\t\t⑤ $\\frac{7}{2}$\n",
+  "subject": "삼각함수",
+  "unit": "05 삼각함수의 정의",
+  "type": "06 정의6 (삼각함수 사이의 관계. 값 구하기)",
+  "source": "2026년(2027학년도) 경찰대학 고3공통 7월 > 2 [3점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:}": 26.81,
+      "latex:{": 26.701,
+      "latex:\\theta": 16.989,
+      "latex:2": 9.615,
+      "latex:0": 9.138,
+      "kiwi:이": 8.887,
+      "latex:=": 7.803,
+      "latex:<": 6.381,
+      "latex:+": 5.556,
+      "latex:\\frac": 5.42,
+      "latex:_": 4.894,
+      "kiwi:,": 4.805,
+      "latex:10": 4.645,
+      "latex:^": 4.584,
+      "latex:a": 4.213,
+      "latex:\\cos": 4.165,
+      "latex:\\mathrm": 3.879,
+      "latex:\\sin": 3.43,
+      "latex:\\alpha": 3.317,
+      "latex:n": 3.14
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:14:50.588132+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:14:50.588147+00:00",
+      "usage": {
+        "prompt_token_count": 413,
+        "candidates_token_count": 660,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 1073,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 660,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 413,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 413
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 1073,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "jlzvaueBC8j7-sAPlauZ4Ak",
+      "latency_seconds": 5.701,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "주어진 조건 $\\sin \\theta + \\cos \\theta = \\frac{2}{5}\\sqrt{10}$의 양변을 제곱하면 다음과 같습니다.\n$(\\sin \\theta + \\cos \\theta)^2 = \\left(\\frac{2}{5}\\sqrt{10}\\right)^2$\n$\\sin^2 \\theta + \\cos^2 \\theta + 2 \\sin \\theta \\cos \\theta = \\frac{4 \\times 10}{25}$\n$1 + 2 \\sin \\theta \\cos \\theta = \\frac{40}{25} = \\frac{8}{5}$\n$2 \\sin \\theta \\cos \\theta = \\frac{8}{5} - 1 = \\frac{3}{5}$\n\n여기서 $\\sin 2\\theta = 2 \\sin \\theta \\cos \\theta = \\frac{3}{5}$입니다.\n$2\\theta$가 제2사분면의 각이므로 $\\cos 2\\theta = -\\sqrt{1 - \\sin^2 2\\theta} = -\\sqrt{1 - \\left(\\frac{3}{5}\\right)^2} = -\\frac{4}{5}$입니다.\n\n배각 공식에 의해 $\\cos 2\\theta = \\cos^2 \\theta - \\sin^2 \\theta = (\\cos \\theta - \\sin \\theta)(\\cos \\theta + \\sin \\theta) = -\\frac{4}{5}$입니다.\n$\\cos \\theta + \\sin \\theta = \\frac{2}{5}\\sqrt{10}$이므로,\n$(\\cos \\theta - \\sin \\theta) \\times \\frac{2}{5}\\sqrt{10} = -\\frac{4}{5}$\n$\\cos \\theta - \\sin \\theta = -\\frac{4}{5} \\times \\frac{5}{2\\sqrt{10}} = -\\frac{2}{\\sqrt{10}} = -\\frac{\\sqrt{10}}{5}$\n\n이제 두 식을 연립합니다.\n1) $\\cos \\theta + \\sin \\theta = \\frac{2\\sqrt{10}}{5}$\n2) $\\cos \\theta - \\sin \\theta = -\\frac{\\sqrt{10}}{5}$\n\n두 식을 더하면 $2 \\cos \\theta = \\frac{\\sqrt{10}}{5} \\implies \\cos \\theta = \\frac{\\sqrt{10}}{10}$\n두 식을 빼면 $2 \\sin \\theta = \\frac{3\\sqrt{10}}{5} \\implies \\sin \\theta = \\frac{3\\sqrt{10}}{10}$\n\n직선 $y = mx$ 위의 점 $P$에 대하여 $\\tan \\theta = \\frac{y}{x} = m$이므로,\n$m = \\tan \\theta = \\frac{\\sin \\theta}{\\cos \\theta} = \\frac{3\\sqrt{10}/10}{\\sqrt{10}/10} = 3$\n\n최종정답: ④",
+  "usage": {
+    "prompt_token_count": 413,
+    "candidates_token_count": 660,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 1073,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 660,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 413,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 413
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1073,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "jlzvaueBC8j7-sAPlauZ4Ak",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:14:56 GMT",
+        "server": "envoy",
+        "content-length": "1037",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=2123",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "2581"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "주어진 조건 $\\sin \\theta + \\cos \\theta = \\frac{2}{5}\\sqrt{10}$의 양변을 제곱하면 다음과 같습니다.\n$(\\sin \\theta + \\cos \\theta)^2 = \\left(\\frac{2}{5}\\sqrt{10}\\right)^2$\n$\\sin^2 \\theta + \\cos^2 \\theta + 2 \\sin \\theta \\cos \\theta = \\frac{4 \\times 10}{25}$\n$1 + 2 \\sin \\theta \\cos \\theta = \\frac{40}{25} = \\frac{8}{5}$\n$2 \\sin \\theta \\cos \\theta = \\frac{8}{5} - 1 = \\frac{3}{5}$\n\n여기서 $\\sin 2\\theta = 2 \\sin \\theta \\cos \\theta = \\frac{3}{5}$입니다.\n$2\\theta$가 제2사분면의 각이므로 $\\cos 2\\theta = -\\sqrt{1 - \\sin^2 2\\theta} = -\\sqrt{1 - \\left(\\frac{3}{5}\\right)^2} = -\\frac{4}{5}$입니다.\n\n배각 공식에 의해 $\\cos 2\\theta = \\cos^2 \\theta - \\sin^2 \\theta = (\\cos \\theta - \\sin \\theta)(\\cos \\theta + \\sin \\theta) = -\\frac{4}{5}$입니다.\n$\\cos \\theta + \\sin \\theta = \\frac{2}{5}\\sqrt{10}$이므로,\n$(\\cos \\theta - \\sin \\theta) \\times \\frac{2}{5}\\sqrt{10} = -\\frac{4}{5}$\n$\\cos \\theta - \\sin \\theta = -\\frac{4}{5} \\times \\frac{5}{2\\sqrt{10}} = -\\frac{2}{\\sqrt{10}} = -\\frac{\\sqrt{10}}{5}$\n\n이제 두 식을 연립합니다.\n1) $\\cos \\theta + \\sin \\theta = \\frac{2\\sqrt{10}}{5}$\n2) $\\cos \\theta - \\sin \\theta = -\\frac{\\sqrt{10}}{5}$\n\n두 식을 더하면 $2 \\cos \\theta = \\frac{\\sqrt{10}}{5} \\implies \\cos \\theta = \\frac{\\sqrt{10}}{10}$\n두 식을 빼면 $2 \\sin \\theta = \\frac{3\\sqrt{10}}{5} \\implies \\sin \\theta = \\frac{3\\sqrt{10}}{10}$\n\n직선 $y = mx$ 위의 점 $P$에 대하여 $\\tan \\theta = \\frac{y}{x} = m$이므로,\n$m = \\tan \\theta = \\frac{\\sin \\theta}{\\cos \\theta} = \\frac{3\\sqrt{10}/10}{\\sqrt{10}/10} = 3$\n\n최종정답: ④",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0T9uoCoMiv6T0x9NlPx7FaytM7WAGzGUWpY26nG1I9KYQhpaeGY_POnErpM6FX8NgCeKurglCUvvspKwuBo0Cq8CWFT-xWshLnKzwdfa4UIpGH2iho15DuJ-2noXS_wtUC0Acb14hF2cpoXQZW",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "jlzvaueBC8j7-sAPlauZ4Ak",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 660,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 413,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 413
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1073,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 5.701,
+  "completed_at": "2026-11-07T17:14:56.289299+00:00",
+  "evaluation": {
+    "predicted_answer": "④",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "④",
+    "predicted_kind": "choice",
+    "predicted_choice": 4
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

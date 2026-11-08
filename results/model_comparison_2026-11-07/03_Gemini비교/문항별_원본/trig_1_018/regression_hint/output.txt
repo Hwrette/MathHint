@@ -1,0 +1,26 @@
+함수 $f(x) = a \cos bx + 10 - a$에 대하여 다음 조건들을 이용합니다.
+
+1. **주기 조건**:
+   함수 $f(x) = a \cos bx + 10 - a$의 주기는 $\frac{2\pi}{|b|}$입니다.
+   문제에서 주기가 $3\pi$라고 하였으므로,
+   $\frac{2\pi}{b} = 3\pi$ ($b > 0$이므로 $|b|=b$)
+   따라서 $b = \frac{2}{3}$입니다.
+
+2. **최댓값 조건**:
+   함수 $f(x) = a \cos bx + 10 - a$의 최댓값은 $|a| + 10 - a$입니다.
+   - 만약 $a > 0$이면, 최댓값은 $a + 10 - a = 10$이 되어 문제의 조건(최댓값 18)을 만족하지 않습니다.
+   - 따라서 $a < 0$이어야 하며, 이때 최댓값은 $-a + 10 - a = 10 - 2a$입니다.
+   $10 - 2a = 18$
+   $-2a = 8$
+   $a = -4$
+
+3. **$f\left(\frac{\pi}{2}\right)$ 계산**:
+   구해진 $a = -4, b = \frac{2}{3}$를 함수식에 대입합니다.
+   $f(x) = -4 \cos\left(\frac{2}{3}x\right) + 10 - (-4) = -4 \cos\left(\frac{2}{3}x\right) + 14$
+   이제 $x = \frac{\pi}{2}$를 대입하면,
+   $f\left(\frac{\pi}{2}\right) = -4 \cos\left(\frac{2}{3} \cdot \frac{\pi}{2}\right) + 14$
+   $f\left(\frac{\pi}{2}\right) = -4 \cos\left(\frac{\pi}{3}\right) + 14$
+   $\cos\left(\frac{\pi}{3}\right) = \frac{1}{2}$이므로,
+   $f\left(\frac{\pi}{2}\right) = -4 \left(\frac{1}{2}\right) + 14 = -2 + 14 = 12$
+
+최종정답: 12

@@ -1,0 +1,208 @@
+{
+  "id": "diff_1_018",
+  "method": "baseline",
+  "input_text": "$1$이 아닌 모든 실수 $t$에 대하여 함수 $f \\left( x \\right)$에서 $x$의 값이 $1$에서 $t$까지 변할 때의 평균변화율이 $\\sqrt{t^{2} + 8}$이다. 함수 $f \\left( x \\right)$의 $x = 1$에서의 순간변화율을 구하시오.\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "523169cd770e7f5b8661ea87e866e074af9e869f75c9d1984b7e7d36f6de45e8",
+  "reference": {
+    "answer_text": "$3$",
+    "kind": "value",
+    "choice": null,
+    "value_text": "$3$",
+    "source": {
+      "id": "diff_1_018",
+      "source_file": "모의고사_미분_문제_1.hml",
+      "source_sha256": "02487629c158a7d2ad3e0f0701b391a6efa7f5d517ab48c044f978924365270f",
+      "original_number": 18,
+      "current_number": 18
+    },
+    "numeric_value": 3.0,
+    "gradable": true
+  },
+  "reference_answer_text": "$3$",
+  "reference_solution": "[정답] $3$\n\n[해설]\n함수 $f \\left( x \\right)$의 $x = 1$에서의 순간변화율은\n$\\lim_{t \\rightarrow 1} \\sqrt{t^{2} + 8} = 3$\n",
+  "problem_text": "$1$이 아닌 모든 실수 $t$에 대하여 함수 $f \\left( x \\right)$에서 $x$의 값이 $1$에서 $t$까지 변할 때의 평균변화율이 $\\sqrt{t^{2} + 8}$이다. 함수 $f \\left( x \\right)$의 $x = 1$에서의 순간변화율을 구하시오.\n",
+  "subject": "미분",
+  "unit": "03 미분계수와 도함수",
+  "type": "02 미분계수2 (평균변화율과 미분계수)",
+  "source": "2026년 교육청 고2공통 10월 > 24 [3점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:19:26.973489+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:19:26.973507+00:00",
+      "usage": {
+        "prompt_token_count": 127,
+        "candidates_token_count": 345,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 472,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 345,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 127,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 127
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 472,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "XyXvaovhD6vSjMcP8K30-Ag",
+      "latency_seconds": 1.409,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $f(x)$에서 $x$의 값이 $1$에서 $t$까지 변할 때의 평균변화율은 다음과 같이 정의됩니다.\n$$\\frac{f(t) - f(1)}{t - 1} = \\sqrt{t^2 + 8}$$\n\n이 식의 양변에 $t - 1$을 곱하면 다음과 같습니다.\n$$f(t) - f(1) = (t - 1)\\sqrt{t^2 + 8}$$\n$$f(t) = (t - 1)\\sqrt{t^2 + 8} + f(1)$$\n\n함수 $f(x)$의 $x=1$에서의 순간변화율(미분계수) $f'(1)$은 도함수의 정의에 의해 다음과 같습니다.\n$$f'(1) = \\lim_{t \\to 1} \\frac{f(t) - f(1)}{t - 1}$$\n\n문제에서 주어진 평균변화율의 식을 위 극한식에 대입하면 다음과 같습니다.\n$$f'(1) = \\lim_{t \\to 1} \\sqrt{t^2 + 8}$$\n\n이제 $t$에 $1$을 대입하여 극한값을 구합니다.\n$$f'(1) = \\sqrt{1^2 + 8} = \\sqrt{1 + 8} = \\sqrt{9} = 3$$\n\n따라서 함수 $f(x)$의 $x=1$에서의 순간변화율은 $3$입니다.\n\n최종정답: 3",
+  "usage": {
+    "prompt_token_count": 127,
+    "candidates_token_count": 345,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 472,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 345,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 127,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 127
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 472,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "XyXvaovhD6vSjMcP8K30-Ag",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:19:28 GMT",
+        "server": "envoy",
+        "content-length": "894",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1117",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "1316"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $f(x)$에서 $x$의 값이 $1$에서 $t$까지 변할 때의 평균변화율은 다음과 같이 정의됩니다.\n$$\\frac{f(t) - f(1)}{t - 1} = \\sqrt{t^2 + 8}$$\n\n이 식의 양변에 $t - 1$을 곱하면 다음과 같습니다.\n$$f(t) - f(1) = (t - 1)\\sqrt{t^2 + 8}$$\n$$f(t) = (t - 1)\\sqrt{t^2 + 8} + f(1)$$\n\n함수 $f(x)$의 $x=1$에서의 순간변화율(미분계수) $f'(1)$은 도함수의 정의에 의해 다음과 같습니다.\n$$f'(1) = \\lim_{t \\to 1} \\frac{f(t) - f(1)}{t - 1}$$\n\n문제에서 주어진 평균변화율의 식을 위 극한식에 대입하면 다음과 같습니다.\n$$f'(1) = \\lim_{t \\to 1} \\sqrt{t^2 + 8}$$\n\n이제 $t$에 $1$을 대입하여 극한값을 구합니다.\n$$f'(1) = \\sqrt{1^2 + 8} = \\sqrt{1 + 8} = \\sqrt{9} = 3$$\n\n따라서 함수 $f(x)$의 $x=1$에서의 순간변화율은 $3$입니다.\n\n최종정답: 3",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0T9u7WuKzuPC9PyziZ2fiIeNRJ2oDaKta8tSu9V49HCXRntkN93csqYnZkPf3Yeqd5snHPg39SEtVCqkfqGtoKqqi1mdR_i67gnQejin48VRzwSNh5PK9ZRqW7DSMDrtPzYvkux9d_DxXf_Q1Q",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "XyXvaovhD6vSjMcP8K30-Ag",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 345,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 127,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 127
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 472,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 1.409,
+  "completed_at": "2026-11-07T13:19:28.382738+00:00",
+  "evaluation": {
+    "predicted_answer": "3",
+    "correct": true,
+    "status": "correct",
+    "reason": "numeric_constant_comparison_tolerance_1e-9",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "$3$",
+    "predicted_kind": "value",
+    "predicted_numeric_value": 3.0
+  },
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "786c2f1a5f11c32efa25f90c13bbdfe93e20a349d87a80dd446feab10ec31285",
+    "imported_at": "2026-11-07T16:57:38.358268+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

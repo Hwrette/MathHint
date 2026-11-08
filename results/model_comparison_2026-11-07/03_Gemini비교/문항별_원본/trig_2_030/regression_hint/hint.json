@@ -1,0 +1,30 @@
+{
+  "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+  "mode": "top_tokens",
+  "top_k": 20,
+  "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+  "vocabulary_size": 431,
+  "transmitted_coordinates": 20,
+  "mapping": {
+    "latex:}": 13.3,
+    "latex:{": 13.179,
+    "latex:2": 9.877,
+    "latex:=": 8.191,
+    "latex:x": 7.634,
+    "kiwi:의": 5.656,
+    "latex:y": 5.408,
+    "kiwi:는": 5.31,
+    "latex:-": 5.246,
+    "latex:3": 4.61,
+    "latex:\\pi": 4.07,
+    "latex:t": 3.978,
+    "latex:_": 3.593,
+    "latex:)": 3.593,
+    "latex:(": 3.556,
+    "latex:\\frac": 3.502,
+    "kiwi:함수": 3.062,
+    "latex:\\times": 3.002,
+    "latex:\\mathrm": 2.947,
+    "latex:+": 2.919
+  }
+}

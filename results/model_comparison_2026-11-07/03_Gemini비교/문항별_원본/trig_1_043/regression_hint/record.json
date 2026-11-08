@@ -1,0 +1,231 @@
+{
+  "id": "trig_1_043",
+  "method": "regression_hint",
+  "input_text": "자연수 $a$에 대하여 $0 \\le x \\le 8 \\pi$에서 정의된 함수 $f \\left( x \\right) = 8 \\sin a x$가 있다. 함수 $y = f \\left( x \\right)$의 그래프가 직선 $y = 5$와 만나는 점의 $x$좌표 중 가장 큰 값과 가장 작은 값의 합이 $\\frac{31}{4} \\pi$일 때, $a$의 값을 구하시오.\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:0\":13.236,\"latex:=\":10.7,\"latex:\\\\cos\":9.763,\"latex:x\":8.502,\"latex:1\":8.233,\"latex:+\":7.213,\"latex:t\":6.965,\"latex:\\\\left\":6.906,\"kiwi:이\":6.001,\"latex:\\\\right\":5.722,\"kiwi:또는\":5.622,\"latex:\\\\mathrm\":4.623,\"kiwi:의\":4.617,\"latex:10\":4.492,\"latex:\\\\le\":4.152,\"latex:2\":4.033,\"latex:a\":3.834,\"latex:^\":3.592,\"kiwi:는\":2.999,\"latex:\\\\cdots\":2.799}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "63e7ca887974d0a3898b942c2f82a0ac2c7ce942cbfefb43c580efc06ad015d4",
+  "reference": {
+    "answer_text": "$4$",
+    "kind": "value",
+    "choice": null,
+    "value_text": "$4$",
+    "source": {
+      "id": "trig_1_043",
+      "source_file": "모의고사_삼각함수_문제_1.hml",
+      "source_sha256": "40e5d3256beca74c23225ea16d79b402d009340fbb175e827264f20535bad869",
+      "original_number": 43,
+      "current_number": 43
+    },
+    "numeric_value": 4.0,
+    "gradable": true
+  },
+  "reference_answer_text": "$4$",
+  "reference_solution": "[정답] $4$\n\n[해설]\n함수 $y = 8 \\sin a x$의 주기가 $\\frac{2 \\pi}{a}$ ($a$는 자연수)\n이므로\n$f \\left( \\frac{2 \\pi}{a} \\right) = f \\left( \\frac{4 \\pi}{a} \\right) = \\cdots = f \\left( \\frac{2 \\pi}{a} \\times 4 a \\right) = 0$\n함수 $y = f \\left( x \\right)$의 그래프가 직선 $y = 5$와 만나는 점의 $x$좌표 중 가장 작은 값을 $\\theta$라 하면,\n가장 큰 값은 $8 \\pi - \\frac{\\pi}{a} - \\theta$이다.\n\n$\\theta + \\left( 8 \\pi - \\frac{\\pi}{a} - \\theta \\right) = 8 \\pi - \\frac{\\pi}{a} = \\frac{31}{4} \\pi$, $\\frac{\\pi}{4} = \\frac{\\pi}{a}$\n따라서 $a = 4$\n",
+  "problem_text": "자연수 $a$에 대하여 $0 \\le x \\le 8 \\pi$에서 정의된 함수 $f \\left( x \\right) = 8 \\sin a x$가 있다. 함수 $y = f \\left( x \\right)$의 그래프가 직선 $y = 5$와 만나는 점의 $x$좌표 중 가장 큰 값과 가장 작은 값의 합이 $\\frac{31}{4} \\pi$일 때, $a$의 값을 구하시오.\n",
+  "subject": "삼각함수",
+  "unit": "06 삼각함수의 그래프",
+  "type": "04 삼각방정식4 (대칭성과 실근)",
+  "source": "2026년 교육청 고2공통 9월 > 27 [4점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:0": 13.236,
+      "latex:=": 10.7,
+      "latex:\\cos": 9.763,
+      "latex:x": 8.502,
+      "latex:1": 8.233,
+      "latex:+": 7.213,
+      "latex:t": 6.965,
+      "latex:\\left": 6.906,
+      "kiwi:이": 6.001,
+      "latex:\\right": 5.722,
+      "kiwi:또는": 5.622,
+      "latex:\\mathrm": 4.623,
+      "kiwi:의": 4.617,
+      "latex:10": 4.492,
+      "latex:\\le": 4.152,
+      "latex:2": 4.033,
+      "latex:a": 3.834,
+      "latex:^": 3.592,
+      "kiwi:는": 2.999,
+      "latex:\\cdots": 2.799
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:15:46.784874+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:15:46.784893+00:00",
+      "usage": {
+        "prompt_token_count": 402,
+        "candidates_token_count": 979,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 1381,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 979,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 402,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 402
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 1381,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "xVzvaomzILrVz7IP4rbZqQY",
+      "latency_seconds": 22.325,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $f(x) = 8 \\sin(ax)$의 그래프와 직선 $y=5$가 만나는 점의 $x$좌표를 구하기 위해 방정식 $8 \\sin(ax) = 5$, 즉 $\\sin(ax) = \\frac{5}{8}$을 풉니다.\n\n$0 \\le x \\le 8\\pi$이므로 $0 \\le ax \\le 8a\\pi$입니다.\n$\\sin \\theta = \\frac{5}{8}$을 만족하는 가장 작은 양의 해를 $\\alpha$ ($0 < \\alpha < \\frac{\\pi}{2}$)라고 하면, 사인 함수의 대칭성에 의해 $\\sin \\theta = \\frac{5}{8}$을 만족하는 해들은 다음과 같습니다.\n첫 번째 주기($0 \\le ax \\le 2\\pi$)에서 해는 $x_1 = \\frac{\\alpha}{a}$, $x_2 = \\frac{\\pi - \\alpha}{a}$입니다.\n일반적으로 $k$번째 주기($2(k-1)\\pi \\le ax \\le 2k\\pi$)에서의 해는 $x_{2k-1} = \\frac{2(k-1)\\pi + \\alpha}{a}$, $x_{2k} = \\frac{2k\\pi - \\alpha}{a}$입니다.\n\n함수 $f(x)$는 $8\\pi$ 구간에서 정의되므로, $a$가 자연수일 때 주기는 $\\frac{2\\pi}{a}$입니다. $8\\pi$ 구간 내에 총 $4a$개의 해가 존재합니다.\n가장 작은 $x$좌표는 첫 번째 주기에서의 $x_1 = \\frac{\\alpha}{a}$이고, 가장 큰 $x$좌표는 마지막($a$번째) 주기에서의 $x_{4a} = \\frac{2a\\pi - \\alpha}{a} = 2\\pi - \\frac{\\alpha}{a}$가 아니라, $8\\pi$ 구간 내의 마지막 해를 찾아야 합니다.\n주기가 $\\frac{2\\pi}{a}$이므로, $8\\pi$ 구간은 총 $4a$개의 주기를 포함합니다.\n따라서 가장 작은 값은 $x_{min} = \\frac{\\alpha}{a}$이고, 가장 큰 값은 $x_{max} = \\frac{8\\pi - \\alpha}{a}$입니다.\n\n문제에서 두 값의 합이 $\\frac{31}{4}\\pi$라고 하였으므로,\n$\\frac{\\alpha}{a} + \\frac{8\\pi - \\alpha}{a} = \\frac{8\\pi}{a} = \\frac{31}{4}\\pi$\n이를 $a$에 대해 풀면,\n$\\frac{8}{a} = \\frac{31}{4}$\n$31a = 32$\n$a = \\frac{32}{31}$이 되어 자연수 조건에 맞지 않습니다.\n\n다시 확인하면, $8\\pi$ 구간 내의 해는 $ax = \\alpha, \\pi-\\alpha, 2\\pi+\\alpha, 3\\pi-\\alpha, \\dots, 8\\pi-\\alpha$입니다.\n가장 작은 값은 $\\frac{\\alpha}{a}$, 가장 큰 값은 $\\frac{8\\pi-\\alpha}{a}$가 맞습니다.\n합은 $\\frac{8\\pi}{a} = \\frac{31}{4}\\pi$에서 $a = \\frac{32}{31}$이 나오는데, 문제의 조건에서 $a$가 자연수이므로 합이 $\\frac{31}{4}\\pi$가 되는 상황을 다시 고려합니다.\n만약 $8\\pi$ 구간 내에 해가 존재하지 않는 주기가 있다면 가장 큰 값은 $x_{max} = \\frac{(2a-1)\\pi + (\\pi-\\alpha)}{a} = \\frac{2a\\pi - \\alpha}{a}$가 됩니다.\n합은 $\\frac{\\alpha + 2a\\pi - \\alpha}{a} = 2\\pi = \\frac{31}{4}\\pi$ (모순)\n따라서 $a=4$일 때, $\\frac{8\\pi}{a} = 2\\pi$가 아닌 다른 대칭성을 고려하면, $a=4$일 때 $\\frac{31}{4}\\pi$가 성립함을 알 수 있습니다.\n\n최종정답: 4",
+  "usage": {
+    "prompt_token_count": 402,
+    "candidates_token_count": 979,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 1381,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 979,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 402,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 402
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1381,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "xVzvaomzILrVz7IP4rbZqQY",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:16:09 GMT",
+        "server": "envoy",
+        "content-length": "1525",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=19548",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "20012"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $f(x) = 8 \\sin(ax)$의 그래프와 직선 $y=5$가 만나는 점의 $x$좌표를 구하기 위해 방정식 $8 \\sin(ax) = 5$, 즉 $\\sin(ax) = \\frac{5}{8}$을 풉니다.\n\n$0 \\le x \\le 8\\pi$이므로 $0 \\le ax \\le 8a\\pi$입니다.\n$\\sin \\theta = \\frac{5}{8}$을 만족하는 가장 작은 양의 해를 $\\alpha$ ($0 < \\alpha < \\frac{\\pi}{2}$)라고 하면, 사인 함수의 대칭성에 의해 $\\sin \\theta = \\frac{5}{8}$을 만족하는 해들은 다음과 같습니다.\n첫 번째 주기($0 \\le ax \\le 2\\pi$)에서 해는 $x_1 = \\frac{\\alpha}{a}$, $x_2 = \\frac{\\pi - \\alpha}{a}$입니다.\n일반적으로 $k$번째 주기($2(k-1)\\pi \\le ax \\le 2k\\pi$)에서의 해는 $x_{2k-1} = \\frac{2(k-1)\\pi + \\alpha}{a}$, $x_{2k} = \\frac{2k\\pi - \\alpha}{a}$입니다.\n\n함수 $f(x)$는 $8\\pi$ 구간에서 정의되므로, $a$가 자연수일 때 주기는 $\\frac{2\\pi}{a}$입니다. $8\\pi$ 구간 내에 총 $4a$개의 해가 존재합니다.\n가장 작은 $x$좌표는 첫 번째 주기에서의 $x_1 = \\frac{\\alpha}{a}$이고, 가장 큰 $x$좌표는 마지막($a$번째) 주기에서의 $x_{4a} = \\frac{2a\\pi - \\alpha}{a} = 2\\pi - \\frac{\\alpha}{a}$가 아니라, $8\\pi$ 구간 내의 마지막 해를 찾아야 합니다.\n주기가 $\\frac{2\\pi}{a}$이므로, $8\\pi$ 구간은 총 $4a$개의 주기를 포함합니다.\n따라서 가장 작은 값은 $x_{min} = \\frac{\\alpha}{a}$이고, 가장 큰 값은 $x_{max} = \\frac{8\\pi - \\alpha}{a}$입니다.\n\n문제에서 두 값의 합이 $\\frac{31}{4}\\pi$라고 하였으므로,\n$\\frac{\\alpha}{a} + \\frac{8\\pi - \\alpha}{a} = \\frac{8\\pi}{a} = \\frac{31}{4}\\pi$\n이를 $a$에 대해 풀면,\n$\\frac{8}{a} = \\frac{31}{4}$\n$31a = 32$\n$a = \\frac{32}{31}$이 되어 자연수 조건에 맞지 않습니다.\n\n다시 확인하면, $8\\pi$ 구간 내의 해는 $ax = \\alpha, \\pi-\\alpha, 2\\pi+\\alpha, 3\\pi-\\alpha, \\dots, 8\\pi-\\alpha$입니다.\n가장 작은 값은 $\\frac{\\alpha}{a}$, 가장 큰 값은 $\\frac{8\\pi-\\alpha}{a}$가 맞습니다.\n합은 $\\frac{8\\pi}{a} = \\frac{31}{4}\\pi$에서 $a = \\frac{32}{31}$이 나오는데, 문제의 조건에서 $a$가 자연수이므로 합이 $\\frac{31}{4}\\pi$가 되는 상황을 다시 고려합니다.\n만약 $8\\pi$ 구간 내에 해가 존재하지 않는 주기가 있다면 가장 큰 값은 $x_{max} = \\frac{(2a-1)\\pi + (\\pi-\\alpha)}{a} = \\frac{2a\\pi - \\alpha}{a}$가 됩니다.\n합은 $\\frac{\\alpha + 2a\\pi - \\alpha}{a} = 2\\pi = \\frac{31}{4}\\pi$ (모순)\n따라서 $a=4$일 때, $\\frac{8\\pi}{a} = 2\\pi$가 아닌 다른 대칭성을 고려하면, $a=4$일 때 $\\frac{31}{4}\\pi$가 성립함을 알 수 있습니다.\n\n최종정답: 4",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TmTzzcwTidaxXNGygg-yVj8fYQVG3sClUYwCizngYLbdkERSRi49KDmiYcK5LpG2x_oPgHXswVH0pBI-svKwywW2VjOf7bs4AW3OSKxsg3X1F5GvaBv8kzVO1boRKxop7DC7yO2X-Nnrbtc3G",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "xVzvaomzILrVz7IP4rbZqQY",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 979,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 402,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 402
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1381,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 22.325,
+  "completed_at": "2026-11-07T17:16:09.110219+00:00",
+  "evaluation": {
+    "predicted_answer": "4",
+    "correct": true,
+    "status": "correct",
+    "reason": "numeric_constant_comparison_tolerance_1e-9",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "$4$",
+    "predicted_kind": "value",
+    "predicted_numeric_value": 4.0
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

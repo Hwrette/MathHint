@@ -1,0 +1,209 @@
+{
+  "id": "trig_1_035",
+  "method": "baseline",
+  "input_text": "$2 \\cos \\theta + \\cos \\left( \\frac{\\pi}{2} - \\theta \\right) = 0$이고 $\\sin \\theta < 0$일 때, $\\cos \\theta$의 값은?\n① $- \\frac{2 \\sqrt{5}}{5}$\t② $- \\frac{\\sqrt{5}}{5}$\t③ $0$\n④ $\\frac{\\sqrt{5}}{5}$\t⑤ $\\frac{2 \\sqrt{5}}{5}$\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "21ce3658393941e959ca7e11c0d297bbaf1ebc33b0111473a88cdf64fb21bbde",
+  "reference": {
+    "answer_text": "④",
+    "kind": "choice",
+    "choice": 4,
+    "value_text": "$\\frac{\\sqrt{5}}{5}$",
+    "source": {
+      "id": "trig_1_035",
+      "source_file": "모의고사_삼각함수_문제_1.hml",
+      "source_sha256": "40e5d3256beca74c23225ea16d79b402d009340fbb175e827264f20535bad869",
+      "original_number": 35,
+      "current_number": 35
+    },
+    "numeric_value": 0.447213595499958,
+    "gradable": true
+  },
+  "reference_answer_text": "④",
+  "reference_solution": "[정답] ④\n\n[해설]\n$\\cos \\left( \\frac{\\pi}{2} - \\theta \\right) = \\sin \\theta$이므로\n$2 \\cos \\theta + \\sin \\theta = 0$\n$2 \\cos \\theta = - \\sin \\theta$\t\t\t\t$\\cdots$$\\cdots$ ㉠\n$4 \\cos^{2} \\theta = \\sin^{2} \\theta$\n$\\sin^{2} \\theta + \\cos^{2} \\theta = 1$이므로\n$4 \\cos^{2} \\theta = 1 - \\cos^{2} \\theta$\n$\\cos^{2} \\theta = \\frac{1}{5}$\n$\\sin \\theta < 0$이므로\n㉠에 의하여 $\\cos \\theta > 0$\n따라서 $\\cos \\theta = \\frac{\\sqrt{5}}{5}$\n",
+  "problem_text": "$2 \\cos \\theta + \\cos \\left( \\frac{\\pi}{2} - \\theta \\right) = 0$이고 $\\sin \\theta < 0$일 때, $\\cos \\theta$의 값은?\n① $- \\frac{2 \\sqrt{5}}{5}$\t② $- \\frac{\\sqrt{5}}{5}$\t③ $0$\n④ $\\frac{\\sqrt{5}}{5}$\t⑤ $\\frac{2 \\sqrt{5}}{5}$\n",
+  "subject": "삼각함수",
+  "unit": "06 삼각함수의 그래프",
+  "type": "01 각 변형1 (각 변형 규칙)",
+  "source": "2026년 교육청 고3 공통 07월 > 8 [3점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:44:27.052818+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:44:27.052838+00:00",
+      "usage": {
+        "prompt_token_count": 148,
+        "candidates_token_count": 351,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 499,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 351,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 148,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 148
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 499,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "PivvaqjVO-ewjMcPuMOVkQ4",
+      "latency_seconds": 25.532,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "주어진 방정식 $2 \\cos \\theta + \\cos \\left( \\frac{\\pi}{2} - \\theta \\right) = 0$을 먼저 정리합니다.\n\n삼각함수의 성질에 의해 $\\cos \\left( \\frac{\\pi}{2} - \\theta \\right) = \\sin \\theta$이므로, 주어진 식은 다음과 같습니다.\n$2 \\cos \\theta + \\sin \\theta = 0$\n\n이를 $\\sin \\theta$에 대해 정리하면:\n$\\sin \\theta = -2 \\cos \\theta$\n\n삼각함수의 기본 항등식인 $\\sin^2 \\theta + \\cos^2 \\theta = 1$에 위 식을 대입합니다.\n$(-2 \\cos \\theta)^2 + \\cos^2 \\theta = 1$\n$4 \\cos^2 \\theta + \\cos^2 \\theta = 1$\n$5 \\cos^2 \\theta = 1$\n$\\cos^2 \\theta = \\frac{1}{5}$\n\n따라서 $\\cos \\theta = \\pm \\frac{1}{\\sqrt{5}} = \\pm \\frac{\\sqrt{5}}{5}$입니다.\n\n이제 문제에서 주어진 조건 $\\sin \\theta < 0$을 확인합니다.\n위에서 구한 $\\sin \\theta = -2 \\cos \\theta$를 조건에 대입하면:\n$-2 \\cos \\theta < 0$\n즉, $\\cos \\theta > 0$이어야 합니다.\n\n따라서 $\\cos \\theta = \\frac{\\sqrt{5}}{5}$입니다.\n\n최종정답: ④",
+  "usage": {
+    "prompt_token_count": 148,
+    "candidates_token_count": 351,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 499,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 351,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 148,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 148
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 499,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "PivvaqjVO-ewjMcPuMOVkQ4",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:44:52 GMT",
+        "server": "envoy",
+        "content-length": "926",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=21620",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "22423"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "주어진 방정식 $2 \\cos \\theta + \\cos \\left( \\frac{\\pi}{2} - \\theta \\right) = 0$을 먼저 정리합니다.\n\n삼각함수의 성질에 의해 $\\cos \\left( \\frac{\\pi}{2} - \\theta \\right) = \\sin \\theta$이므로, 주어진 식은 다음과 같습니다.\n$2 \\cos \\theta + \\sin \\theta = 0$\n\n이를 $\\sin \\theta$에 대해 정리하면:\n$\\sin \\theta = -2 \\cos \\theta$\n\n삼각함수의 기본 항등식인 $\\sin^2 \\theta + \\cos^2 \\theta = 1$에 위 식을 대입합니다.\n$(-2 \\cos \\theta)^2 + \\cos^2 \\theta = 1$\n$4 \\cos^2 \\theta + \\cos^2 \\theta = 1$\n$5 \\cos^2 \\theta = 1$\n$\\cos^2 \\theta = \\frac{1}{5}$\n\n따라서 $\\cos \\theta = \\pm \\frac{1}{\\sqrt{5}} = \\pm \\frac{\\sqrt{5}}{5}$입니다.\n\n이제 문제에서 주어진 조건 $\\sin \\theta < 0$을 확인합니다.\n위에서 구한 $\\sin \\theta = -2 \\cos \\theta$를 조건에 대입하면:\n$-2 \\cos \\theta < 0$\n즉, $\\cos \\theta > 0$이어야 합니다.\n\n따라서 $\\cos \\theta = \\frac{\\sqrt{5}}{5}$입니다.\n\n최종정답: ④",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TNWI2WmFj6Qdub8DkP973jRs0PwGkg5uv4TiGcxadxJg1PPYJHkXavx7-ub9gbLAld7qxms8QuKFg2kq6YHVoyUtfcKOJO_w1mNJRf9aOd2SARAMRHYvcWTu-sRhbqt3EryECPP4yJ3byPad2",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "PivvaqjVO-ewjMcPuMOVkQ4",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 351,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 148,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 148
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 499,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 25.532,
+  "completed_at": "2026-11-07T13:44:52.584749+00:00",
+  "evaluation": {
+    "predicted_answer": "④",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "④",
+    "predicted_kind": "choice",
+    "predicted_choice": 4
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "d60758c7349df88c5af7a6223747f833fe34b91c491a1d94590de0fca9ca652f",
+    "imported_at": "2026-11-07T16:57:38.403654+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

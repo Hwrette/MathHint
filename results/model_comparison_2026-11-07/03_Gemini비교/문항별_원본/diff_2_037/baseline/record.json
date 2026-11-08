@@ -1,0 +1,260 @@
+{
+  "id": "diff_2_037",
+  "method": "baseline",
+  "input_text": "두 곡선\n$y = 2 x^{2} - 1$, $y = x^{3} - x^{2} + k$\n가 만나는 점의 개수가 $\\mathrm{2}$가 되도록 하는 양수 $k$의 값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "dd1fff512c41081aea050729b60173cde1bb132d9cf5d6a7de513957dbcf70d3",
+  "reference": {
+    "answer_text": "③",
+    "kind": "choice",
+    "choice": 3,
+    "value_text": "$\\mathrm{3}$",
+    "source": {
+      "id": "diff_2_037",
+      "source_file": "모의고사_미분_문제_2.hml",
+      "source_sha256": "bdf632f0269bd027f72fcf686c276a8040aa5cb2b985b26c7a2fe65391d878af",
+      "original_number": 37,
+      "current_number": 37
+    },
+    "numeric_value": 3.0,
+    "gradable": true
+  },
+  "reference_answer_text": "③",
+  "reference_solution": "[정답] ③\n\n[해설]\n두 곡선 $y = 2 x^{2} - 1$, $y = x^{3} - x^{2} + k$가 만나는 점의 개수가 $2$이므로 방정식 $2 x^{2} - 1 = x^{3} - x^{2} + k$에서\n$x^{3} - 3 x^{2} + 1 = - k$\n이때 $f \\left( x \\right) = x^{3} - 3 x^{2} + 1$로 놓으면 $f' \\left( x \\right) = 3 x^{2} - 6 x$\n$f' \\left( x \\right) = 0$에서 $x = 0$ 또는 $x = 2$\n함수 $f \\left( x \\right)$의 증가와 감소를 표로 나타내면 다음과 같다.\n\n$x$\t$\\cdots$\t$0$\t$\\cdots$\t$2$\t$\\cdots$\n$f' \\left( x \\right)$\t$+$\t$0$\t$-$\t$0$\t$+$\n$f \\left( x \\right)$\t$\\nearrow$\t$1$\t$\\searrow$\t$- 3$\t$\\nearrow$\n\n따라서 함수 $f \\left( x \\right)$의 그래프는 다음 그림과 같고 양수 $k$에 대하여 직선 $y = - k$와 서로 다른 두 점에서 만나려면\n$- k = - 3$$\\therefore \\quad$$k = 3$\n",
+  "problem_text": "두 곡선\n$y = 2 x^{2} - 1$, $y = x^{3} - x^{2} + k$\n가 만나는 점의 개수가 $\\mathrm{2}$가 되도록 하는 양수 $k$의 값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+  "subject": "미분",
+  "unit": "06 방부등식과 직선운동",
+  "type": "04 방정식과 미분4 (다항함수, 방정식의 동치변형)",
+  "source": "2023년(2024학년도) 평가원 고3공통 6월 > 공통범위 > 8 [3점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:35:27.442464+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:20:12.080583+00:00",
+      "usage": {
+        "prompt_token_count": null,
+        "candidates_token_count": null,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "raw": null
+      },
+      "status": "error",
+      "error_type": "ClientError",
+      "code": 429,
+      "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 47.74936772s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.1-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '47s'}]}}",
+      "latency_seconds": 1.276,
+      "execution": 1
+    },
+    {
+      "attempt": 2,
+      "started_at": "2026-11-07T13:20:13.356798+00:00",
+      "usage": {
+        "prompt_token_count": null,
+        "candidates_token_count": null,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "raw": null
+      },
+      "status": "error",
+      "error_type": "ClientError",
+      "code": 429,
+      "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 46.0751859s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '46s'}]}}",
+      "latency_seconds": 0.683,
+      "execution": 1
+    },
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:35:27.442480+00:00",
+      "usage": {
+        "prompt_token_count": 136,
+        "candidates_token_count": 455,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 591,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 455,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 136,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 136
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 591,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "ICnvaouvAq-t6dkP_vmG6Qg",
+      "latency_seconds": 5.369,
+      "execution": 2
+    }
+  ],
+  "status": "success",
+  "output_text": "두 곡선 $y = 2x^2 - 1$과 $y = x^3 - x^2 + k$가 만나는 점의 개수가 2개가 되려면, 방정식 $2x^2 - 1 = x^3 - x^2 + k$가 서로 다른 두 실근을 가져야 합니다.\n\n이 식을 정리하면 다음과 같습니다.\n$x^3 - 3x^2 + k + 1 = 0$\n$k + 1 = -x^3 + 3x^2$\n\n이제 함수 $f(x) = -x^3 + 3x^2$의 그래프를 그려서 $y = k + 1$과의 교점의 개수를 확인합니다.\n$f'(x) = -3x^2 + 6x = -3x(x - 2)$\n$f'(x) = 0$이 되는 $x$의 값은 $x = 0$ 또는 $x = 2$입니다.\n\n각 극값을 구하면:\n- $x = 0$일 때, $f(0) = 0$ (극소값)\n- $x = 2$일 때, $f(2) = -8 + 3(4) = 4$ (극대값)\n\n함수 $f(x) = -x^3 + 3x^2$의 그래프는 $x=0$에서 극솟값 0을 갖고, $x=2$에서 극댓값 4를 갖습니다.\n직선 $y = k + 1$과 이 그래프가 만나는 점의 개수가 2개가 되려면, 직선이 극댓값이나 극솟값에 접해야 합니다.\n\n1) $k + 1 = 4$인 경우: $k = 3$\n2) $k + 1 = 0$인 경우: $k = -1$\n\n문제에서 $k$는 양수라고 하였으므로, $k = 3$이 조건을 만족합니다.\n\n최종정답: ③",
+  "usage": {
+    "prompt_token_count": 136,
+    "candidates_token_count": 455,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 591,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 455,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 136,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 136
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 591,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "ICnvaouvAq-t6dkP_vmG6Qg",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:35:32 GMT",
+        "server": "envoy",
+        "content-length": "1040",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=4742",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "5274"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "두 곡선 $y = 2x^2 - 1$과 $y = x^3 - x^2 + k$가 만나는 점의 개수가 2개가 되려면, 방정식 $2x^2 - 1 = x^3 - x^2 + k$가 서로 다른 두 실근을 가져야 합니다.\n\n이 식을 정리하면 다음과 같습니다.\n$x^3 - 3x^2 + k + 1 = 0$\n$k + 1 = -x^3 + 3x^2$\n\n이제 함수 $f(x) = -x^3 + 3x^2$의 그래프를 그려서 $y = k + 1$과의 교점의 개수를 확인합니다.\n$f'(x) = -3x^2 + 6x = -3x(x - 2)$\n$f'(x) = 0$이 되는 $x$의 값은 $x = 0$ 또는 $x = 2$입니다.\n\n각 극값을 구하면:\n- $x = 0$일 때, $f(0) = 0$ (극소값)\n- $x = 2$일 때, $f(2) = -8 + 3(4) = 4$ (극대값)\n\n함수 $f(x) = -x^3 + 3x^2$의 그래프는 $x=0$에서 극솟값 0을 갖고, $x=2$에서 극댓값 4를 갖습니다.\n직선 $y = k + 1$과 이 그래프가 만나는 점의 개수가 2개가 되려면, 직선이 극댓값이나 극솟값에 접해야 합니다.\n\n1) $k + 1 = 4$인 경우: $k = 3$\n2) $k + 1 = 0$인 경우: $k = -1$\n\n문제에서 $k$는 양수라고 하였으므로, $k = 3$이 조건을 만족합니다.\n\n최종정답: ③",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TtIbD1Qo7bYMZLgucdkNmR84_4DGaFK_1gDlBhVaZatjCcGbWnbdxQUal1H48XKDet-I2Vaf8BC0zxCYyNtaRj61rjH-TFs3NZionoqr3bzZxqlUNs4-4y46O4QwbkF_rbzOUJziLl8E3uRo7",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "ICnvaouvAq-t6dkP_vmG6Qg",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 455,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 136,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 136
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 591,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 5.369,
+  "completed_at": "2026-11-07T13:35:32.811357+00:00",
+  "evaluation": {
+    "predicted_answer": "③",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "③",
+    "predicted_kind": "choice",
+    "predicted_choice": 3
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "prior_executions": [
+    {
+      "status": "api_error",
+      "started_at": "2026-11-07T13:20:12.080570+00:00",
+      "completed_at": "2026-11-07T13:20:14.039554+00:00",
+      "error": {
+        "code": 429,
+        "type": "ClientError",
+        "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 46.0751859s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '46s'}]}}"
+      },
+      "response_id": null
+    }
+  ],
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "cc729406b43f5e9c7df06acdecb7bf1263e005029a012fd18d0d6af5f07dd3da",
+    "imported_at": "2026-11-07T16:57:38.379095+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

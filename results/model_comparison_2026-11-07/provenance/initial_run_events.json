@@ -1,0 +1,11 @@
+{
+  "initial_unthrottled_run": {
+    "ended_with": "SIGINT after observed429per-minutequota",
+    "maximum_inflight_requests_at_interruption": 3,
+    "inflight_usage": "unknown; may not have been persisted",
+    "recorded_successes_preserved": 24,
+    "recorded_error_results_preserved": 38
+  },
+  "report_scope": "successful final response usage is compared; full API billing totals are not inferred",
+  "recorded_at": "2026-11-07T13:22:56.825558+00:00"
+}

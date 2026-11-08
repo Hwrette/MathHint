@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "review": "independent_read_only_semantic_and_import_review",
+  "recorded_at": "2026-11-08T07:39:46.564809+00:00",
+  "checks": {
+    "26_package_modules_import_without_network": true,
+    "compare_main_prepares_160_inputs_without_API": true,
+    "rate_main_default_RUN_API_false_without_network": true,
+    "all_main_entrypoints_no_arguments": [
+      {
+        "file": "mathhint_preprocess/__main__.py",
+        "arguments": 0
+      },
+      {
+        "file": "mathhint_analysis/BuildComparisonViewer.py",
+        "arguments": 0
+      },
+      {
+        "file": "mathhint_analysis/AnalyzeExperiment.py",
+        "arguments": 0
+      },
+      {
+        "file": "mathhint_analysis/BuildFrequencyVectors.py",
+        "arguments": 0
+      },
+      {
+        "file": "mathhint_analysis/PrepareDataset.py",
+        "arguments": 0
+      },
+      {
+        "file": "mathhint_analysis/BagOfWord.py",
+        "arguments": 0
+      },
+      {
+        "file": "mathhint_learning/TorchRegression.py",
+        "arguments": 0
+      },
+      {
+        "file": "mathhint_learning/TorchKMeans.py",
+        "arguments": 0
+      },
+      {
+        "file": "mathhint_learning/RunTraining.py",
+        "arguments": 0
+      },
+      {
+        "file": "mathhint_solver/SolutionReview.py",
+        "arguments": 0
+      },
+      {
+        "file": "mathhint_solver/GoogleAPI.py",
+        "arguments": 0
+      },
+      {
+        "file": "mathhint_solver/CompareGeneration.py",
+        "arguments": 0
+      },
+      {
+        "file": "mathhint_solver/RateLimitedComparison.py",
+        "arguments": 0
+      },
+      {
+        "file": "scripts/validate_latex.py",
+        "arguments": 0
+      }
+    ],
+    "argparse_imports": [],
+    "tracked_data_git_diff_empty": true
+  },
+  "source_sha256": {
+    "mathhint_preprocess/models.py": "df404489f500cb3b470480248174145f2f7d5a3bc1eaabfb79cacd09ccb15497",
+    "mathhint_preprocess/segment.py": "f78b11930b4cfb7dafe6cdc7fbb7bdc100e68d5363be5ff77670d604685dac35",
+    "mathhint_preprocess/equations.py": "71636d6d1f4832b5f5132be59b4c0875abe0e8b76333c21100ff195ab3657b95",
+    "mathhint_preprocess/__main__.py": "d39509b1b935761f959b8166f6e7b03ff5c9144e80bc01e016ac543d4bf28206",
+    "mathhint_preprocess/hml.py": "4ea1f8526080e6242efa0c1fcdfe3af177ffcc5172adedbf2d2182f982885018",
+    "mathhint_preprocess/export.py": "de8cea378f99f613f753f268864cbacf905a91701fb04888a44b9d3d4a525aff",
+    "mathhint_preprocess/__init__.py": "1c79dbc94b4d82244a1db2a7ad8d71ab3b717db867560cc13d49a40c15d48f03",
+    "mathhint_preprocess/hwpx.py": "2d6a8a1d59ad711acd0d03e5067154611f934afa291e2a3fbc2012d9f5215f26",
+    "mathhint_analysis/BuildComparisonViewer.py": "3ba6e832374759b9c314c0d8af5ce7d5796d83ad3da60eb6510302755bd2212d",
+    "mathhint_analysis/AnalyzeExperiment.py": "2ad1b9083fd814f3ca6b5881f4129a7ae480fae5c8acd895dc6fff47d30d5405",
+    "mathhint_analysis/BuildFrequencyVectors.py": "9decaead5878b7d623b3d2f8701822abe614686aabcb8fbe433ff2de6a83b483",
+    "mathhint_analysis/PrepareDataset.py": "48a71f71edbab92b94475912d431dd464f37866a6a9e7ce6d2c362b8f59e98ee",
+    "mathhint_analysis/BagOfWord.py": "a81e4c55b2f8b6eb71feba2f3713b22687b070759d81a14ccd134ea238b8cad9",
+    "mathhint_analysis/__init__.py": "e89a6a506c8be985d249c873916ffd8d94d973e8bb7fdc8b8fe5d62415e8e3f2",
+    "mathhint_learning/TorchRegression.py": "17fc427837e19069f66edd36b0f8bf0ddec7e0563159047f0707df059915b5e2",
+    "mathhint_learning/TorchData.py": "aa0e11d7e9fc6c1d551327549e593d8e9935f4c3610b36f84f7e013d1c7ec775",
+    "mathhint_learning/TorchKMeans.py": "2f242d94214371e502f22e5a4c4d1c68593e5f293e9fadb46892fba30f257e39",
+    "mathhint_learning/RunTraining.py": "2e1f6c2b407f637b185c9865041882cc36ca1b57ef44cda428fe522f20bb95d1",
+    "mathhint_learning/__init__.py": "14652be416642621c85b44a473d2eb6c0ad183a3bffc564e875d76f3f3303184",
+    "mathhint_solver/GenerationReport.py": "98983cf0329726449f2fcaf319c5956dc9d6276a5f3b263ac634c906ec249b92",
+    "mathhint_solver/SolutionReview.py": "df17ba3568ff84cc7c6117c364b5829256829d9963ed365bd99f5830f51efbd0",
+    "mathhint_solver/GoogleAPI.py": "f43a75860d8ac13298b9d6fdacff82660e73de7fcea680a0c222d608ecaad81b",
+    "mathhint_solver/AnswerEvaluation.py": "caaf359aee759bed64347c886bb25a12125bb3d014fe03f6d5c8f4c99df40f52",
+    "mathhint_solver/CompareGeneration.py": "ac65f1b0f6a2352fb63a66a7f658c1fb731419428dc4a78173889f932f3bff8c",
+    "mathhint_solver/RateLimitedComparison.py": "d37f5ecf092e760834d5c463b43d4df0bf155cc9c38e6c2d5bd3e37264bb5e91",
+    "mathhint_solver/__init__.py": "4908c601a2477c5bfe2e538f946ef8f3307faddd50154ccbca104d7fb89f81d9",
+    "scripts/validate_latex.py": "7288b19ef6081f17de5f71cf8efc697c780cf411a40d27120c156b8a5b2a4e17"
+  },
+  "notes": [
+    "Source-hash guards intentionally reject resuming an old run under modified runner source; archived result reading is separate.",
+    "No API call, original data write, or frozen result mutation occurred."
+  ]
+}

@@ -1,0 +1,13 @@
+[정답] ③
+
+[해설]
+함수 $\left( f (x) + a \right)^{2}$이 실수 전체의 집합에서 연속이려면 $x = 0$에서 연속이어야 하므로
+$\lim_{x \rightarrow 0 +} \left( f (x) + a \right)^{2} = \lim_{x \rightarrow 0 -} \left( f (x) + a \right)^{2} = \left( f (0) + a \right)^{2}$
+이때 $\left( f (0) + a \right)^{2} = \left( 3 + a \right)^{2}$이고
+$\lim_{x \rightarrow 0 +} \left( f (x) + a \right)^{2}$$= \lim_{x \rightarrow 0 +} \left( - x^{2} + 3 + a \right)^{2}$
+$= \left( 3 + a \right)^{2}$
+$\lim_{x \rightarrow 0 -} \left( f (x) + a \right)^{2}$$= \lim_{x \rightarrow 0 -} \left( x - \frac{1}{2} + a \right)^{2}$
+$= \left( - \frac{1}{2} + a \right)^{2}$
+이므로    $\left( 3 + a \right)^{2} = \left( - \frac{1}{2} + a \right)^{2}$
+$9 + 6 a + a^{2} = \frac{1}{4} - a + a^{2}$,    $7 a = \frac{1}{4} - 9$
+$\therefore$ $a = - \frac{5}{4}$

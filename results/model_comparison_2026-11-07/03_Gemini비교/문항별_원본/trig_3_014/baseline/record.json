@@ -1,0 +1,209 @@
+{
+  "id": "trig_3_014",
+  "method": "baseline",
+  "input_text": "두 함수\n$f(x)=\\log_3 x+2$, $\\left. g \\left( x \\right) \\right. = 3 \\tan \\left( x + \\frac{\\pi}{6} \\right)$\n가 있다. $0 \\leq x \\leq \\frac{\\pi}{6}$에서 정의된 합성함수 $\\left( f \\circ g \\right) \\left( x \\right)$의 최댓값과 최솟값을 각각 $M$, $m$이라 할 때, $M + m$의 값을 구하시오.\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "fadd54436327c6e6b88c7ef426b0fb77d0bac42187e69ebfedc6f160ba8f596a",
+  "reference": {
+    "answer_text": "$\\mathbf{6}$",
+    "kind": "value",
+    "choice": null,
+    "value_text": "$\\mathbf{6}$",
+    "source": {
+      "id": "trig_3_014",
+      "source_file": "모의고사_삼각함수_문제_3.hml",
+      "source_sha256": "4853842eca14740e8bbc1083fae38beb51f1c6cde8e78fe6d3c398eca800b30b",
+      "original_number": 14,
+      "current_number": 14
+    },
+    "numeric_value": 6.0,
+    "gradable": true
+  },
+  "reference_answer_text": "$\\mathbf{6}$",
+  "reference_solution": "[정답] $\\mathbf{6}$\n\n[해설]\n$0 \\leq x \\leq \\frac{\\pi}{6}$에서 $\\frac{\\pi}{6} \\leq x + \\frac{\\pi}{6} \\leq \\frac{\\pi}{3}$이고 함수 $g \\left( x \\right) = 3 \\tan \\left( x + \\frac{\\pi}{6} \\right)$는 증가하므로\n$3 \\tan \\frac{\\pi}{6} \\leq 3 \\tan \\left( x + \\frac{\\pi}{6} \\right) \\leq 3 \\tan \\frac{\\pi}{3}$\n$\\sqrt{3} \\leq 3 \\tan \\left( x + \\frac{\\pi}{6} \\right) \\leq 3 \\sqrt{3}$\n$\\therefore$$\\sqrt{3} \\leq g \\left( x \\right) \\leq 3 \\sqrt{3}$\n이다. $g \\left( x \\right) = t$로 놓으면 $\\sqrt{3} \\leq t \\leq 3 \\sqrt{3}$이다.\n$\\left( f \\circ g \\right) \\left( x \\right) = f \\left( g \\left( x \\right) \\right) = f \\left( t \\right) = \\log_{3} t + 2$이고 함수 $f \\left( t \\right) = \\log_{3} t + 2$도 증가하므로\n$\\frac{1}{2} + 2 \\leq \\log_{3} t + 2 \\leq \\frac{3}{2} + 2$, $\\frac{5}{2} \\leq \\left( f \\circ g \\right) \\left( x \\right) \\leq \\frac{7}{2}$\n이다. 따라서 $M = \\frac{7}{2}$, $m = \\frac{5}{2}$이다.\n그러므로 $M + m = \\frac{7}{2} + \\frac{5}{2} = 6$이다.\n",
+  "problem_text": "두 함수\n$f(x)=\\log_3 x+2$, $\\left. g \\left( x \\right) \\right. = 3 \\tan \\left( x + \\frac{\\pi}{6} \\right)$\n가 있다. $0 \\leq x \\leq \\frac{\\pi}{6}$에서 정의된 합성함수 $\\left( f \\circ g \\right) \\left( x \\right)$의 최댓값과 최솟값을 각각 $M$, $m$이라 할 때, $M + m$의 값을 구하시오.\n",
+  "subject": "삼각함수",
+  "unit": "06 삼각함수의 그래프",
+  "type": "06 활용3 (치환을 이용한 Mm)",
+  "source": "2019년 교육청 고2문과 6월 > 27 [4점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:51:16.462311+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:51:16.462324+00:00",
+      "usage": {
+        "prompt_token_count": 162,
+        "candidates_token_count": 606,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 768,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 606,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 162,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 162
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 768,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "1CzvasHDON2fqtsP5piKmAk",
+      "latency_seconds": 2.083,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "주어진 합성함수 $(f \\circ g)(x) = f(g(x))$에 대하여, $0 \\leq x \\leq \\frac{\\pi}{6}$ 범위에서 $g(x) = 3 \\tan \\left( x + \\frac{\\pi}{6} \\right)$의 치역을 먼저 구합니다.\n\n1. **$g(x)$의 범위 구하기:**\n   $0 \\leq x \\leq \\frac{\\pi}{6}$이므로, $x + \\frac{\\pi}{6}$의 범위는 $\\frac{\\pi}{6} \\leq x + \\frac{\\pi}{6} \\leq \\frac{\\pi}{3}$입니다.\n   탄젠트 함수 $y = \\tan \\theta$는 이 구간에서 증가함수이므로,\n   - $x=0$일 때, $g(0) = 3 \\tan \\left( \\frac{\\pi}{6} \\right) = 3 \\cdot \\frac{1}{\\sqrt{3}} = \\sqrt{3}$\n   - $x=\\frac{\\pi}{6}$일 때, $g\\left(\\frac{\\pi}{6}\\right) = 3 \\tan \\left( \\frac{\\pi}{3} \\right) = 3 \\cdot \\sqrt{3} = 3\\sqrt{3}$\n   따라서 $g(x)$의 치역은 $[\\sqrt{3}, 3\\sqrt{3}]$입니다.\n\n2. **$(f \\circ g)(x)$의 최댓값과 최솟값 구하기:**\n   $f(x) = \\log_3 x + 2$는 밑이 3(>1)인 로그함수이므로 증가함수입니다.\n   따라서 $g(x)$가 최소일 때 $f(g(x))$도 최소이고, $g(x)$가 최대일 때 $f(g(x))$도 최대입니다.\n\n   - 최솟값 $m = f(\\sqrt{3}) = \\log_3 (\\sqrt{3}) + 2 = \\log_3 (3^{1/2}) + 2 = \\frac{1}{2} + 2 = \\frac{5}{2}$\n   - 최댓값 $M = f(3\\sqrt{3}) = \\log_3 (3 \\cdot 3^{1/2}) + 2 = \\log_3 (3^{3/2}) + 2 = \\frac{3}{2} + 2 = \\frac{7}{2}$\n\n3. **$M + m$ 계산:**\n   $M + m = \\frac{7}{2} + \\frac{5}{2} = \\frac{12}{2} = 6$\n\n최종정답: 6",
+  "usage": {
+    "prompt_token_count": 162,
+    "candidates_token_count": 606,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 768,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 606,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 162,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 162
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 768,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "1CzvasHDON2fqtsP5piKmAk",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:51:18 GMT",
+        "server": "envoy",
+        "content-length": "1062",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1591",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "2036"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "주어진 합성함수 $(f \\circ g)(x) = f(g(x))$에 대하여, $0 \\leq x \\leq \\frac{\\pi}{6}$ 범위에서 $g(x) = 3 \\tan \\left( x + \\frac{\\pi}{6} \\right)$의 치역을 먼저 구합니다.\n\n1. **$g(x)$의 범위 구하기:**\n   $0 \\leq x \\leq \\frac{\\pi}{6}$이므로, $x + \\frac{\\pi}{6}$의 범위는 $\\frac{\\pi}{6} \\leq x + \\frac{\\pi}{6} \\leq \\frac{\\pi}{3}$입니다.\n   탄젠트 함수 $y = \\tan \\theta$는 이 구간에서 증가함수이므로,\n   - $x=0$일 때, $g(0) = 3 \\tan \\left( \\frac{\\pi}{6} \\right) = 3 \\cdot \\frac{1}{\\sqrt{3}} = \\sqrt{3}$\n   - $x=\\frac{\\pi}{6}$일 때, $g\\left(\\frac{\\pi}{6}\\right) = 3 \\tan \\left( \\frac{\\pi}{3} \\right) = 3 \\cdot \\sqrt{3} = 3\\sqrt{3}$\n   따라서 $g(x)$의 치역은 $[\\sqrt{3}, 3\\sqrt{3}]$입니다.\n\n2. **$(f \\circ g)(x)$의 최댓값과 최솟값 구하기:**\n   $f(x) = \\log_3 x + 2$는 밑이 3(>1)인 로그함수이므로 증가함수입니다.\n   따라서 $g(x)$가 최소일 때 $f(g(x))$도 최소이고, $g(x)$가 최대일 때 $f(g(x))$도 최대입니다.\n\n   - 최솟값 $m = f(\\sqrt{3}) = \\log_3 (\\sqrt{3}) + 2 = \\log_3 (3^{1/2}) + 2 = \\frac{1}{2} + 2 = \\frac{5}{2}$\n   - 최댓값 $M = f(3\\sqrt{3}) = \\log_3 (3 \\cdot 3^{1/2}) + 2 = \\log_3 (3^{3/2}) + 2 = \\frac{3}{2} + 2 = \\frac{7}{2}$\n\n3. **$M + m$ 계산:**\n   $M + m = \\frac{7}{2} + \\frac{5}{2} = \\frac{12}{2} = 6$\n\n최종정답: 6",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TJkt16W5kB3F40Y-zvtMqqp8Fy5yzN3uCFAnd0SlqaqyXJdvqu-DVGjlUSb_61sRKIeF92-3qjrTdSnYhEN8bg0j1P2KlgxESvti4GYzF0-4Onfuj6CXAd9Jv6iyZa6BsdbZFndal6jXKCqaL",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "1CzvasHDON2fqtsP5piKmAk",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 606,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 162,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 162
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 768,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 2.083,
+  "completed_at": "2026-11-07T13:51:18.545561+00:00",
+  "evaluation": {
+    "predicted_answer": "6",
+    "correct": true,
+    "status": "correct",
+    "reason": "numeric_constant_comparison_tolerance_1e-9",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "$\\mathbf{6}$",
+    "predicted_kind": "value",
+    "predicted_numeric_value": 6.0
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "0c103fb9ccea0ac5bbda721eda8e8c9e00d3d4a433bc00f1232563ea9616b7c5",
+    "imported_at": "2026-11-07T16:57:38.421682+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

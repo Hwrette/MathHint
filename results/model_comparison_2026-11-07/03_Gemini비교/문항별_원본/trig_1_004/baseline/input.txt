@@ -1,0 +1,3 @@
+$\frac{\pi}{2} < \theta < \pi$인 $\theta$에 대하여 $\tan^{2} \theta = 2$일 때, $\cos \theta$의 값은?
+① $- \frac{\sqrt{3}}{3}$	② $- \frac{1}{3}$		③ $- \frac{1}{6}$
+④ $\frac{1}{3}$		⑤ $\frac{\sqrt{3}}{3}$

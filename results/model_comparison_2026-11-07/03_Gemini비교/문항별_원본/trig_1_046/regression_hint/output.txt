@@ -1,0 +1,23 @@
+주어진 부등식 $\cos \frac{\pi}{5} x < \sin \frac{\pi}{5} x$를 풀기 위해 $\theta = \frac{\pi}{5} x$라고 치환합니다.
+$0 < x \leq 10$이므로, $\theta$의 범위는 $0 < \theta \leq 2\pi$입니다.
+
+부등식 $\cos \theta < \sin \theta$는 양변을 $\cos \theta$로 나누거나, 그래프를 통해 해석할 수 있습니다.
+$\sin \theta - \cos \theta > 0$
+$\sqrt{2} \sin(\theta - \frac{\pi}{4}) > 0$
+$\sin(\theta - \frac{\pi}{4}) > 0$
+
+따라서 $0 < \theta - \frac{\pi}{4} < \pi$가 되어야 하므로,
+$\frac{\pi}{4} < \theta < \frac{5\pi}{4}$입니다.
+
+이제 $\theta = \frac{\pi}{5} x$를 대입하면:
+$\frac{\pi}{4} < \frac{\pi}{5} x < \frac{5\pi}{4}$
+
+각 변에 $\frac{5}{\pi}$를 곱하면:
+$\frac{5}{4} < x < \frac{25}{4}$
+$1.25 < x < 6.25$
+
+이 범위에 속하는 자연수 $x$는 $2, 3, 4, 5, 6$입니다.
+이 자연수들의 합을 구하면:
+$2 + 3 + 4 + 5 + 6 = 20$
+
+최종정답: 20

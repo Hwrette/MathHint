@@ -1,0 +1,6 @@
+양수 $a$에 대하여 함수 $f \left( x \right) = 6 \cos a x + 10$의 주기가 $4 \pi$일 때, $f \left( \frac{4}{3} \pi \right)$의 값을 구하시오.
+
+
+[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]
+{"latex:{":11.42,"latex:}":11.401,"latex:=":8.238,"latex:\\pi":6.607,"latex:3":5.768,"latex:a":5.686,"latex:x":4.719,"latex:)":4.511,"latex:(":4.419,"latex:\\left":4.348,"latex:\\right":4.222,"latex:6":3.977,"latex:\\frac":3.169,"latex:+":3.146,"latex:f":2.981,"latex:^":2.933,"kiwi:이":2.866,"latex:4":2.052,"latex:10":1.976,"kiwi:[":1.916}
+위 주요 토큰을 참고하여 풀이를 작성해줘.

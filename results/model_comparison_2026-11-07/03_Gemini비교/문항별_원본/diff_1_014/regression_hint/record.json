@@ -1,0 +1,231 @@
+{
+  "id": "diff_1_014",
+  "method": "regression_hint",
+  "input_text": "함수\n$f \\left( x \\right) = \\left\\{\\begin{array}{lll}7 x + a &  & \\left( x \\le 2 \\right) \\\\ x^{2} + a x &  & \\left( x > 2 \\right)\\end{array}\\right.$\n가 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?\n① $9$\t\t② $10$\t\t③ $11$\n④ $12$\t\t⑤ $13$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:x\":14.137,\"latex:=\":9.498,\"latex:+\":9.198,\"latex:}\":9.092,\"latex:{\":9.062,\"latex:\\\\right\":8.505,\"latex:\\\\left\":8.448,\"latex:)\":7.367,\"latex:(\":7.206,\"latex:2\":6.043,\"latex:-\":5.845,\"latex:_\":5.599,\"latex:\\\\rightarrow\":4.49,\"latex:\\\\lim\":4.475,\"latex:3\":3.523,\"latex:f\":3.361,\"latex:1\":3.304,\"kiwi:이\":2.608,\"latex:^\":2.597,\"latex:a\":2.385}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "1126f2246646bc44356eb76d5738fa2ddc853c4c59222261f12dd51a7a712f29",
+  "reference": {
+    "answer_text": "②",
+    "kind": "choice",
+    "choice": 2,
+    "value_text": "$10$",
+    "source": {
+      "id": "diff_1_014",
+      "source_file": "모의고사_미분_문제_1.hml",
+      "source_sha256": "02487629c158a7d2ad3e0f0701b391a6efa7f5d517ab48c044f978924365270f",
+      "original_number": 14,
+      "current_number": 14
+    },
+    "numeric_value": 10.0,
+    "gradable": true
+  },
+  "reference_answer_text": "②",
+  "reference_solution": "[정답] ②\n\n[해설]\n함수 $f \\left( x \\right)$가 실수 전체의 집합에서 연속이려면 $x = 2$에서 연속이어야 하므로\n$\\lim_{x \\rightarrow 2 +} {f \\left( x \\right)} = \\lim_{x \\rightarrow 2 -} {f \\left( x \\right)} = f \\left( 2 \\right)$\n$4 + 2 a = 14 + a$    $\\therefore$ $a = 10$\n",
+  "problem_text": "함수\n$f \\left( x \\right) = \\left\\{\\begin{array}{lll}7 x + a &  & \\left( x \\le 2 \\right) \\\\ x^{2} + a x &  & \\left( x > 2 \\right)\\end{array}\\right.$\n가 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?\n① $9$\t\t② $10$\t\t③ $11$\n④ $12$\t\t⑤ $13$\n",
+  "subject": "미분",
+  "unit": "02 함수의 연속성",
+  "type": "05 연속성5 (구간정의함수)",
+  "source": "2026년(2027학년도) 평가원 고3공통 9월 > 4 [3점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:x": 14.137,
+      "latex:=": 9.498,
+      "latex:+": 9.198,
+      "latex:}": 9.092,
+      "latex:{": 9.062,
+      "latex:\\right": 8.505,
+      "latex:\\left": 8.448,
+      "latex:)": 7.367,
+      "latex:(": 7.206,
+      "latex:2": 6.043,
+      "latex:-": 5.845,
+      "latex:_": 5.599,
+      "latex:\\rightarrow": 4.49,
+      "latex:\\lim": 4.475,
+      "latex:3": 3.523,
+      "latex:f": 3.361,
+      "latex:1": 3.304,
+      "kiwi:이": 2.608,
+      "latex:^": 2.597,
+      "latex:a": 2.385
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:08:40.885428+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:08:40.885442+00:00",
+      "usage": {
+        "prompt_token_count": 398,
+        "candidates_token_count": 253,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 651,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 253,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 398,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 398
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 651,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "IVvvapGQHtu-qtsP1sX9gAY",
+      "latency_seconds": 10.106,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $f(x)$가 실수 전체의 집합에서 연속이려면, 경계값인 $x=2$에서 연속이어야 합니다. 즉, 다음 조건을 만족해야 합니다.\n\n$$\\lim_{x \\to 2^-} f(x) = \\lim_{x \\to 2^+} f(x) = f(2)$$\n\n1. 좌극한값 계산 ($x \\le 2$인 경우):\n   $$\\lim_{x \\to 2^-} f(x) = 7(2) + a = 14 + a$$\n\n2. 우극한값 계산 ($x > 2$인 경우):\n   $$\\lim_{x \\to 2^+} f(x) = 2^2 + a(2) = 4 + 2a$$\n\n3. 두 값이 같아야 하므로:\n   $$14 + a = 4 + 2a$$\n\n4. 방정식 풀이:\n   $$14 - 4 = 2a - a$$\n   $$a = 10$$\n\n따라서 상수 $a$의 값은 $10$입니다.\n\n최종정답: ②",
+  "usage": {
+    "prompt_token_count": 398,
+    "candidates_token_count": 253,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 651,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 253,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 398,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 398
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 651,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "IVvvapGQHtu-qtsP1sX9gAY",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:08:50 GMT",
+        "server": "envoy",
+        "content-length": "844",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1476",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "1625"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $f(x)$가 실수 전체의 집합에서 연속이려면, 경계값인 $x=2$에서 연속이어야 합니다. 즉, 다음 조건을 만족해야 합니다.\n\n$$\\lim_{x \\to 2^-} f(x) = \\lim_{x \\to 2^+} f(x) = f(2)$$\n\n1. 좌극한값 계산 ($x \\le 2$인 경우):\n   $$\\lim_{x \\to 2^-} f(x) = 7(2) + a = 14 + a$$\n\n2. 우극한값 계산 ($x > 2$인 경우):\n   $$\\lim_{x \\to 2^+} f(x) = 2^2 + a(2) = 4 + 2a$$\n\n3. 두 값이 같아야 하므로:\n   $$14 + a = 4 + 2a$$\n\n4. 방정식 풀이:\n   $$14 - 4 = 2a - a$$\n   $$a = 10$$\n\n따라서 상수 $a$의 값은 $10$입니다.\n\n최종정답: ②",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TAhGvw6m2q1sJKDIAFdpIR4ZjJLSkQDbsB9Njv8prEJ9bOJMvg9Y1Ll6UUrklpiVdoswprMGySVwww4GuE2tx04SRqJGayecxDmb6YQ9vIM0wg70yDWldhKDptupW3pasY6xTMzMeQ3HpR7HO",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "IVvvapGQHtu-qtsP1sX9gAY",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 253,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 398,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 398
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 651,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 10.106,
+  "completed_at": "2026-11-07T17:08:50.991837+00:00",
+  "evaluation": {
+    "predicted_answer": "②",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "②",
+    "predicted_kind": "choice",
+    "predicted_choice": 2
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

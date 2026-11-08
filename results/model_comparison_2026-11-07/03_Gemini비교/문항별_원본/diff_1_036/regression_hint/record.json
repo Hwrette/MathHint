@@ -1,0 +1,231 @@
+{
+  "id": "diff_1_036",
+  "method": "regression_hint",
+  "input_text": "양수 $a$에 대하여 함수 $f \\left( x \\right)$를\n$f \\left( x \\right) = x^{3} + 3 a x^{2} - 9 a^{2} x + 4$\n라 하자. 직선 $y = 5$가 곡선 $y = f \\left( x \\right)$에 접할 때, $f \\left( 2 \\right)$의 값은?\n① $11$\t\t② $12$\t\t③ $13$\n④ $14$\t\t⑤ $15$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:x\":17.35,\"latex:-\":16.219,\"latex:=\":15.733,\"latex:{\":14.955,\"latex:}\":14.799,\"latex:)\":12.067,\"latex:(\":11.952,\"latex:2\":11.652,\"latex:1\":11.598,\"latex:^\":11.586,\"latex:3\":10.631,\"latex:+\":10.36,\"latex:\\\\left\":10.15,\"latex:\\\\right\":9.8,\"latex:t\":7.156,\"latex:f\":6.854,\"latex:a\":6.788,\"latex:4\":6.389,\"latex:\\\\times\":4.832,\"latex:\\\\mathrm\":4.681}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "d93febe733c319fc252686adc73922513e2a1df3a824b8d95001603a0501d9ef",
+  "reference": {
+    "answer_text": "④",
+    "kind": "choice",
+    "choice": 4,
+    "value_text": "$14$",
+    "source": {
+      "id": "diff_1_036",
+      "source_file": "모의고사_미분_문제_1.hml",
+      "source_sha256": "02487629c158a7d2ad3e0f0701b391a6efa7f5d517ab48c044f978924365270f",
+      "original_number": 36,
+      "current_number": 36
+    },
+    "numeric_value": 14.0,
+    "gradable": true
+  },
+  "reference_answer_text": "④",
+  "reference_solution": "[정답] ④\n\n[해설]\n직선 $y = 5$는 기울기가 $0$이므로 곡선 $y = f \\left( x \\right)$의 그래프와 직선 $y = 5$가 접하는 점의 $x$좌표는 $f' \\left( x \\right) = 0$을 만족시킨다.\n$f \\left( x \\right) = x^{3} + 3 a x^{2} - 9 a^{2} x + 4$에서\n$f' \\left( x \\right) = 3 x^{2} + 6 a x - 9 a^{2}$\n$f' \\left( x \\right) = 0$에서\n$3 x^{2} + 6 a x - 9 a^{2} = 0$,    $3 \\left( x - a \\right) \\left( x + 3 a \\right) = 0$\n$\\therefore$ $x = a$ 또는 $x = - 3 a$\n(ⅰ) $x = a$일 때\n$f \\left( a \\right) = a^{3} + 3 a \\times a^{2} - 9 a^{2} \\times a + 4 = - 5 a^{3} + 4$\n이때 접선의 방정식이 $y = 5$이므로\n$- 5 a^{3} + 4 = 5$,    $- 5 a^{3} = 1$,    $a^{3} = - \\frac{1}{5}$\n$a$는 양수이므로 조건을 만족시키지 않는다.\n(ⅱ) $x = - 3 a$일 때\n$f \\left( - 3 a \\right)$$= \\left( - 3 a \\right)^{3} + 3 a \\times \\left( - 3 a \\right)^{2} - 9 a^{2} \\times \\left( - 3 a \\right) + 4$\n$= - 27 a^{3} + 27 a^{3} + 27 a^{3} + 4 = 27 a^{3} + 4$\n이때 접선의 방정식이 $y = 5$이므로\n$27 a^{3} + 4 = 5$,    $27 a^{3} = 1$,    $a^{3} = \\frac{1}{27}$\n$a$가 양수이므로    $a = \\frac{1}{3}$\n(ⅰ), (ⅱ)에 의하여    $a = \\frac{1}{3}$\n$\\therefore$ $f \\left( x \\right) = x^{3} + x^{2} - x + 4$\n$\\therefore$ $f \\left( 2 \\right) = 2^{3} + 2^{2} - 2 + 4 = 14$\n",
+  "problem_text": "양수 $a$에 대하여 함수 $f \\left( x \\right)$를\n$f \\left( x \\right) = x^{3} + 3 a x^{2} - 9 a^{2} x + 4$\n라 하자. 직선 $y = 5$가 곡선 $y = f \\left( x \\right)$에 접할 때, $f \\left( 2 \\right)$의 값은?\n① $11$\t\t② $12$\t\t③ $13$\n④ $14$\t\t⑤ $15$\n",
+  "subject": "미분",
+  "unit": "05 함수의 증가와 감소",
+  "type": "02 극대와 극소2 (삼차함수의 극대와 극소)",
+  "source": "2025년(2026학년도) 평가원 고3공통 11월 > 공통범위 > 9 [4점]",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:x": 17.35,
+      "latex:-": 16.219,
+      "latex:=": 15.733,
+      "latex:{": 14.955,
+      "latex:}": 14.799,
+      "latex:)": 12.067,
+      "latex:(": 11.952,
+      "latex:2": 11.652,
+      "latex:1": 11.598,
+      "latex:^": 11.586,
+      "latex:3": 10.631,
+      "latex:+": 10.36,
+      "latex:\\left": 10.15,
+      "latex:\\right": 9.8,
+      "latex:t": 7.156,
+      "latex:f": 6.854,
+      "latex:a": 6.788,
+      "latex:4": 6.389,
+      "latex:\\times": 4.832,
+      "latex:\\mathrm": 4.681
+    }
+  },
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T17:09:10.799753+00:00",
+  "response_origin": "new_api_call",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T17:09:10.799765+00:00",
+      "usage": {
+        "prompt_token_count": 417,
+        "candidates_token_count": 583,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 1000,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 583,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 417,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 417
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 1000,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "P1vvatXeIZ-6qtsP-tv7qAY",
+      "latency_seconds": 10.606,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $f(x) = x^3 + 3ax^2 - 9a^2x + 4$에 대하여 직선 $y=5$가 곡선 $y=f(x)$에 접한다는 것은, 어떤 실수 $k$에 대하여 $f(k)=5$이고 $f'(k)=0$임을 의미합니다.\n\n먼저 $f'(x)$를 구하면 다음과 같습니다.\n$f'(x) = 3x^2 + 6ax - 9a^2$\n\n$f'(k) = 0$이 되는 $k$를 찾기 위해 방정식을 풉니다.\n$3(x^2 + 2ax - 3a^2) = 0$\n$3(x + 3a)(x - a) = 0$\n따라서 $k = -3a$ 또는 $k = a$입니다.\n\n**1) $k = a$인 경우:**\n$f(a) = a^3 + 3a(a^2) - 9a^2(a) + 4 = 5$\n$a^3 + 3a^3 - 9a^3 + 4 = 5$\n$-5a^3 = 1 \\implies a^3 = -1/5$\n$a$는 양수여야 하므로 이 경우는 모순입니다.\n\n**2) $k = -3a$인 경우:**\n$f(-3a) = (-3a)^3 + 3a(-3a)^2 - 9a^2(-3a) + 4 = 5$\n$-27a^3 + 27a^3 + 27a^3 + 4 = 5$\n$27a^3 = 1$\n$a^3 = \\frac{1}{27}$\n$a$는 양수이므로 $a = \\frac{1}{3}$입니다.\n\n이제 $a = \\frac{1}{3}$을 $f(x)$에 대입합니다.\n$f(x) = x^3 + 3(\\frac{1}{3})x^2 - 9(\\frac{1}{3})^2x + 4$\n$f(x) = x^3 + x^2 - x + 4$\n\n문제에서 요구하는 $f(2)$의 값은 다음과 같습니다.\n$f(2) = 2^3 + 2^2 - 2 + 4$\n$f(2) = 8 + 4 - 2 + 4 = 14$\n\n최종정답: ④",
+  "usage": {
+    "prompt_token_count": 417,
+    "candidates_token_count": 583,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 1000,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 583,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 417,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 417
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1000,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "P1vvatXeIZ-6qtsP-tv7qAY",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 17:09:21 GMT",
+        "server": "envoy",
+        "content-length": "1061",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1815",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "1982"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $f(x) = x^3 + 3ax^2 - 9a^2x + 4$에 대하여 직선 $y=5$가 곡선 $y=f(x)$에 접한다는 것은, 어떤 실수 $k$에 대하여 $f(k)=5$이고 $f'(k)=0$임을 의미합니다.\n\n먼저 $f'(x)$를 구하면 다음과 같습니다.\n$f'(x) = 3x^2 + 6ax - 9a^2$\n\n$f'(k) = 0$이 되는 $k$를 찾기 위해 방정식을 풉니다.\n$3(x^2 + 2ax - 3a^2) = 0$\n$3(x + 3a)(x - a) = 0$\n따라서 $k = -3a$ 또는 $k = a$입니다.\n\n**1) $k = a$인 경우:**\n$f(a) = a^3 + 3a(a^2) - 9a^2(a) + 4 = 5$\n$a^3 + 3a^3 - 9a^3 + 4 = 5$\n$-5a^3 = 1 \\implies a^3 = -1/5$\n$a$는 양수여야 하므로 이 경우는 모순입니다.\n\n**2) $k = -3a$인 경우:**\n$f(-3a) = (-3a)^3 + 3a(-3a)^2 - 9a^2(-3a) + 4 = 5$\n$-27a^3 + 27a^3 + 27a^3 + 4 = 5$\n$27a^3 = 1$\n$a^3 = \\frac{1}{27}$\n$a$는 양수이므로 $a = \\frac{1}{3}$입니다.\n\n이제 $a = \\frac{1}{3}$을 $f(x)$에 대입합니다.\n$f(x) = x^3 + 3(\\frac{1}{3})x^2 - 9(\\frac{1}{3})^2x + 4$\n$f(x) = x^3 + x^2 - x + 4$\n\n문제에서 요구하는 $f(2)$의 값은 다음과 같습니다.\n$f(2) = 2^3 + 2^2 - 2 + 4$\n$f(2) = 8 + 4 - 2 + 4 = 14$\n\n최종정답: ④",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TJ0uH88TDcCp-TJUGiinDMLGZP-YICP7hSQRGUL6fRbheCWUetwhEPP-iAlw-MouGGjiDOwYO4uBT3vFwfDkpyhUymDc-QZiTMPYvA3TXmWZIWex8_JLZINJzJxruKT0vof8rifiNXRURKoNI",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "P1vvatXeIZ-6qtsP-tv7qAY",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 583,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 417,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 417
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1000,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 10.606,
+  "completed_at": "2026-11-07T17:09:21.405797+00:00",
+  "evaluation": {
+    "predicted_answer": "④",
+    "correct": true,
+    "status": "correct",
+    "reason": "choice_index_comparison",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "④",
+    "predicted_kind": "choice",
+    "predicted_choice": 4
+  },
+  "rate_limited_execution_id": "2026-11-07T170833_964026+0000"
+}

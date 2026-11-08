@@ -1,0 +1,23 @@
+함수 $f(x) = 4 \sin \left( x - \frac{\pi}{3} \right) + a$의 최솟값을 구하는 과정은 다음과 같습니다.
+
+1. **최솟값 조건 이용:**
+   사인 함수 $\sin \theta$의 값의 범위는 $-1 \le \sin \theta \le 1$입니다.
+   따라서 $f(x) = 4 \sin \left( x - \frac{\pi}{3} \right) + a$의 최솟값은 $\sin$ 부분이 $-1$일 때 발생합니다.
+   최솟값은 $4 \times (-1) + a = -4 + a$입니다.
+   문제에서 최솟값이 $1$이라고 하였으므로,
+   $-4 + a = 1$
+   $a = 5$
+
+2. **함수식 완성:**
+   구해진 $a$의 값을 대입하면 함수식은 다음과 같습니다.
+   $f(x) = 4 \sin \left( x - \frac{\pi}{3} \right) + 5$
+
+3. **$f \left( \frac{\pi}{2} \right)$ 계산:**
+   $x = \frac{\pi}{2}$를 대입합니다.
+   $f \left( \frac{\pi}{2} \right) = 4 \sin \left( \frac{\pi}{2} - \frac{\pi}{3} \right) + 5$
+   괄호 안을 계산하면 $\frac{\pi}{2} - \frac{\pi}{3} = \frac{3\pi}{6} - \frac{2\pi}{6} = \frac{\pi}{6}$입니다.
+   $f \left( \frac{\pi}{2} \right) = 4 \sin \left( \frac{\pi}{6} \right) + 5$
+   $\sin \left( \frac{\pi}{6} \right) = \frac{1}{2}$이므로,
+   $f \left( \frac{\pi}{2} \right) = 4 \times \frac{1}{2} + 5 = 2 + 5 = 7$
+
+최종정답: 7

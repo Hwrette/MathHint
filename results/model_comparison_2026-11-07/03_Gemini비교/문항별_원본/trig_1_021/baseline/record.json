@@ -1,0 +1,209 @@
+{
+  "id": "trig_1_021",
+  "method": "baseline",
+  "input_text": "함수 $f \\left( x \\right) = 4 \\sin \\left( x - \\frac{\\pi}{3} \\right) + a$의 최솟값이 $1$이다. $f \\left( \\frac{\\pi}{2} \\right)$의 값을 구하시오. (단, $a$는 상수이다.)\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "dcc140524fb81c176268438fd856936ca7605d49498ca042c38bf258656e6c80",
+  "reference": {
+    "answer_text": "$7$",
+    "kind": "value",
+    "choice": null,
+    "value_text": "$7$",
+    "source": {
+      "id": "trig_1_021",
+      "source_file": "모의고사_삼각함수_문제_1.hml",
+      "source_sha256": "40e5d3256beca74c23225ea16d79b402d009340fbb175e827264f20535bad869",
+      "original_number": 21,
+      "current_number": 21
+    },
+    "numeric_value": 7.0,
+    "gradable": true
+  },
+  "reference_answer_text": "$7$",
+  "reference_solution": "[정답] $7$\n\n[해설]\n$- 1 \\le \\sin \\left( x - \\frac{\\pi}{3} \\right) \\le 1$이고\n함수 $f \\left( x \\right) = 4 \\sin \\left( x - \\frac{\\pi}{3} \\right) + a$의 최솟값이 $1$이므로\n$- 4 + a = 1$, $a = 5$\n따라서\n$f \\left( \\frac{\\pi}{2} \\right)$$= 4 \\sin \\left( \\frac{\\pi}{2} - \\frac{\\pi}{3} \\right) + 5$\n$= 4 \\sin \\frac{\\pi}{6} + 5$\n$= 4 \\times \\frac{1}{2} + 5 = 7$\n",
+  "problem_text": "함수 $f \\left( x \\right) = 4 \\sin \\left( x - \\frac{\\pi}{3} \\right) + a$의 최솟값이 $1$이다. $f \\left( \\frac{\\pi}{2} \\right)$의 값을 구하시오. (단, $a$는 상수이다.)\n",
+  "subject": "삼각함수",
+  "unit": "06 삼각함수의 그래프",
+  "type": "04 그래프4 (표준형 그래프에서 Mm)",
+  "source": "2026년 교육청 고3공통 10월 > 18 [3점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:43:17.280166+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:43:17.280182+00:00",
+      "usage": {
+        "prompt_token_count": 116,
+        "candidates_token_count": 500,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 616,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 500,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 116,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 116
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 616,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "-Crvao7yNtu-qtsP1sX9gAY",
+      "latency_seconds": 5.424,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "함수 $f(x) = 4 \\sin \\left( x - \\frac{\\pi}{3} \\right) + a$의 최솟값을 구하는 과정은 다음과 같습니다.\n\n1. **최솟값 조건 이용:**\n   사인 함수 $\\sin \\theta$의 값의 범위는 $-1 \\le \\sin \\theta \\le 1$입니다.\n   따라서 $f(x) = 4 \\sin \\left( x - \\frac{\\pi}{3} \\right) + a$의 최솟값은 $\\sin$ 부분이 $-1$일 때 발생합니다.\n   최솟값은 $4 \\times (-1) + a = -4 + a$입니다.\n   문제에서 최솟값이 $1$이라고 하였으므로,\n   $-4 + a = 1$\n   $a = 5$\n\n2. **함수식 완성:**\n   구해진 $a$의 값을 대입하면 함수식은 다음과 같습니다.\n   $f(x) = 4 \\sin \\left( x - \\frac{\\pi}{3} \\right) + 5$\n\n3. **$f \\left( \\frac{\\pi}{2} \\right)$ 계산:**\n   $x = \\frac{\\pi}{2}$를 대입합니다.\n   $f \\left( \\frac{\\pi}{2} \\right) = 4 \\sin \\left( \\frac{\\pi}{2} - \\frac{\\pi}{3} \\right) + 5$\n   괄호 안을 계산하면 $\\frac{\\pi}{2} - \\frac{\\pi}{3} = \\frac{3\\pi}{6} - \\frac{2\\pi}{6} = \\frac{\\pi}{6}$입니다.\n   $f \\left( \\frac{\\pi}{2} \\right) = 4 \\sin \\left( \\frac{\\pi}{6} \\right) + 5$\n   $\\sin \\left( \\frac{\\pi}{6} \\right) = \\frac{1}{2}$이므로,\n   $f \\left( \\frac{\\pi}{2} \\right) = 4 \\times \\frac{1}{2} + 5 = 2 + 5 = 7$\n\n최종정답: 7",
+  "usage": {
+    "prompt_token_count": 116,
+    "candidates_token_count": 500,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 616,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 500,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 116,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 116
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 616,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "-Crvao7yNtu-qtsP1sX9gAY",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:43:22 GMT",
+        "server": "envoy",
+        "content-length": "976",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1781",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "2239"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "함수 $f(x) = 4 \\sin \\left( x - \\frac{\\pi}{3} \\right) + a$의 최솟값을 구하는 과정은 다음과 같습니다.\n\n1. **최솟값 조건 이용:**\n   사인 함수 $\\sin \\theta$의 값의 범위는 $-1 \\le \\sin \\theta \\le 1$입니다.\n   따라서 $f(x) = 4 \\sin \\left( x - \\frac{\\pi}{3} \\right) + a$의 최솟값은 $\\sin$ 부분이 $-1$일 때 발생합니다.\n   최솟값은 $4 \\times (-1) + a = -4 + a$입니다.\n   문제에서 최솟값이 $1$이라고 하였으므로,\n   $-4 + a = 1$\n   $a = 5$\n\n2. **함수식 완성:**\n   구해진 $a$의 값을 대입하면 함수식은 다음과 같습니다.\n   $f(x) = 4 \\sin \\left( x - \\frac{\\pi}{3} \\right) + 5$\n\n3. **$f \\left( \\frac{\\pi}{2} \\right)$ 계산:**\n   $x = \\frac{\\pi}{2}$를 대입합니다.\n   $f \\left( \\frac{\\pi}{2} \\right) = 4 \\sin \\left( \\frac{\\pi}{2} - \\frac{\\pi}{3} \\right) + 5$\n   괄호 안을 계산하면 $\\frac{\\pi}{2} - \\frac{\\pi}{3} = \\frac{3\\pi}{6} - \\frac{2\\pi}{6} = \\frac{\\pi}{6}$입니다.\n   $f \\left( \\frac{\\pi}{2} \\right) = 4 \\sin \\left( \\frac{\\pi}{6} \\right) + 5$\n   $\\sin \\left( \\frac{\\pi}{6} \\right) = \\frac{1}{2}$이므로,\n   $f \\left( \\frac{\\pi}{2} \\right) = 4 \\times \\frac{1}{2} + 5 = 2 + 5 = 7$\n\n최종정답: 7",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0THVCscfxp_csVKp504Bg23I6FDUTIAyRfRdQe04bhLmnHsq6I43fZlsdeoy0q975olnQWaBGH3sXqR2lwR4_ETJ-K8u8F3ilcYQ42SszklgYaYFiXAOhl6DOX75WWb9TJD155V9ErD585146H",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "-Crvao7yNtu-qtsP1sX9gAY",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 500,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 116,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 116
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 616,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 5.424,
+  "completed_at": "2026-11-07T13:43:22.703697+00:00",
+  "evaluation": {
+    "predicted_answer": "7",
+    "correct": true,
+    "status": "correct",
+    "reason": "numeric_constant_comparison_tolerance_1e-9",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "$7$",
+    "predicted_kind": "value",
+    "predicted_numeric_value": 7.0
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "e5e9588eab2bc441677974b8820e4d7fd1b245cac659ba345bf461ace206b1a3",
+    "imported_at": "2026-11-07T16:57:38.400966+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

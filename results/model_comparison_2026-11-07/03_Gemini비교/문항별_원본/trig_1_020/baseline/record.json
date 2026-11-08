@@ -1,0 +1,209 @@
+{
+  "id": "trig_1_020",
+  "method": "baseline",
+  "input_text": "양수 $a$에 대하여 $\\frac{\\pi}{3} \\le x \\le \\frac{4}{3} \\pi$에서 정의된 함수\n$f \\left( x \\right) = 2 a \\cos x + a$\n의 최댓값과 최솟값의 곱이 $- 8$일 때, $a$의 값을 구하시오.\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "ef3b8d46213448989d17e09e1832d3301554bbf17905ea03ae6be207665d7d2a",
+  "reference": {
+    "answer_text": "$2$",
+    "kind": "value",
+    "choice": null,
+    "value_text": "$2$",
+    "source": {
+      "id": "trig_1_020",
+      "source_file": "모의고사_삼각함수_문제_1.hml",
+      "source_sha256": "40e5d3256beca74c23225ea16d79b402d009340fbb175e827264f20535bad869",
+      "original_number": 20,
+      "current_number": 20
+    },
+    "numeric_value": 2.0,
+    "gradable": true
+  },
+  "reference_answer_text": "$2$",
+  "reference_solution": "[정답] $2$\n\n[해설]\n$f \\left( \\frac{\\pi}{3} \\right) = 2 a \\times \\frac{1}{2} + a = 2 a$\n$f \\left( \\pi \\right) = 2 a \\times \\left( - 1 \\right) + a = - a$\n$f \\left( \\frac{4}{3} \\pi \\right) = 2 a \\times \\left( - \\frac{1}{2} \\right) + a = 0$\n함수 $y = f \\left( x \\right)$의 그래프의 개형은 다음과 같다.\n\n함수 $f \\left( x \\right)$의 최댓값은 $2 a$, 최솟값은 $- a$\n최댓값과 최솟값의 곱은\n$2 a \\times \\left( - a \\right) = - 2 a^{2} = - 8$, $a^{2} = 4$\n따라서 $a > 0$이므로 $a = 2$\n",
+  "problem_text": "양수 $a$에 대하여 $\\frac{\\pi}{3} \\le x \\le \\frac{4}{3} \\pi$에서 정의된 함수\n$f \\left( x \\right) = 2 a \\cos x + a$\n의 최댓값과 최솟값의 곱이 $- 8$일 때, $a$의 값을 구하시오.\n",
+  "subject": "삼각함수",
+  "unit": "06 삼각함수의 그래프",
+  "type": "04 그래프4 (표준형 그래프에서 Mm)",
+  "source": "2026년 교육청 고2공통 9월 > 25 [3점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:43:12.703328+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:43:12.703348+00:00",
+      "usage": {
+        "prompt_token_count": 123,
+        "candidates_token_count": 427,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 550,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 427,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 123,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 123
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 550,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "8yrvav3FM8ejqtsPhtnYqQQ",
+      "latency_seconds": 4.574,
+      "execution": 1
+    }
+  ],
+  "status": "success",
+  "output_text": "주어진 함수 $f(x) = 2a \\cos x + a$에서 $a > 0$이므로, $f(x)$의 최댓값과 최솟값은 $\\cos x$의 범위에 의해 결정됩니다.\n\n주어진 범위 $\\frac{\\pi}{3} \\le x \\le \\frac{4}{3} \\pi$에서 $\\cos x$의 값의 범위를 구하면 다음과 같습니다.\n- $x = \\frac{\\pi}{3}$일 때, $\\cos \\frac{\\pi}{3} = \\frac{1}{2}$\n- $x = \\pi$일 때, $\\cos \\pi = -1$\n- $x = \\frac{4}{3} \\pi$일 때, $\\cos \\frac{4}{3} \\pi = -\\frac{1}{2}$\n\n따라서 이 범위에서 $\\cos x$의 최솟값은 $-1$이고, 최댓값은 $\\frac{1}{2}$입니다. 즉, $-1 \\le \\cos x \\le \\frac{1}{2}$입니다.\n\n이제 $f(x) = 2a \\cos x + a$의 최댓값과 최솟값을 구합니다. $a > 0$이므로:\n- 최댓값 $M = f(\\frac{\\pi}{3}) = 2a(\\frac{1}{2}) + a = a + a = 2a$\n- 최솟값 $m = f(\\pi) = 2a(-1) + a = -2a + a = -a$\n\n문제에서 최댓값과 최솟값의 곱이 $-8$이라고 하였으므로:\n$M \\times m = (2a) \\times (-a) = -8$\n$-2a^2 = -8$\n$a^2 = 4$\n\n$a$는 양수이므로 $a = 2$입니다.\n\n최종정답: 2",
+  "usage": {
+    "prompt_token_count": 123,
+    "candidates_token_count": 427,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 550,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 427,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 123,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 123
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 550,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "8yrvav3FM8ejqtsPhtnYqQQ",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:43:17 GMT",
+        "server": "envoy",
+        "content-length": "966",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1404",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "1858"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "주어진 함수 $f(x) = 2a \\cos x + a$에서 $a > 0$이므로, $f(x)$의 최댓값과 최솟값은 $\\cos x$의 범위에 의해 결정됩니다.\n\n주어진 범위 $\\frac{\\pi}{3} \\le x \\le \\frac{4}{3} \\pi$에서 $\\cos x$의 값의 범위를 구하면 다음과 같습니다.\n- $x = \\frac{\\pi}{3}$일 때, $\\cos \\frac{\\pi}{3} = \\frac{1}{2}$\n- $x = \\pi$일 때, $\\cos \\pi = -1$\n- $x = \\frac{4}{3} \\pi$일 때, $\\cos \\frac{4}{3} \\pi = -\\frac{1}{2}$\n\n따라서 이 범위에서 $\\cos x$의 최솟값은 $-1$이고, 최댓값은 $\\frac{1}{2}$입니다. 즉, $-1 \\le \\cos x \\le \\frac{1}{2}$입니다.\n\n이제 $f(x) = 2a \\cos x + a$의 최댓값과 최솟값을 구합니다. $a > 0$이므로:\n- 최댓값 $M = f(\\frac{\\pi}{3}) = 2a(\\frac{1}{2}) + a = a + a = 2a$\n- 최솟값 $m = f(\\pi) = 2a(-1) + a = -2a + a = -a$\n\n문제에서 최댓값과 최솟값의 곱이 $-8$이라고 하였으므로:\n$M \\times m = (2a) \\times (-a) = -8$\n$-2a^2 = -8$\n$a^2 = 4$\n\n$a$는 양수이므로 $a = 2$입니다.\n\n최종정답: 2",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TCawsqgSzrH0GuJZJzrtRfVQjJs4FjYFYkPXZN2cnS6JTE_P5bkJUPyTq7rc3-FA9v89WbIi19Qh7RoRN5EsBfHXLFCCEn1B0tmcIT_uqiemmN1DmbZ_EPTDUo6j0Mo32jEGDcjvM-tyLsQ5s",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "8yrvav3FM8ejqtsPhtnYqQQ",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 427,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 123,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 123
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 550,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 4.574,
+  "completed_at": "2026-11-07T13:43:17.276892+00:00",
+  "evaluation": {
+    "predicted_answer": "2",
+    "correct": true,
+    "status": "correct",
+    "reason": "numeric_constant_comparison_tolerance_1e-9",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "$2$",
+    "predicted_kind": "value",
+    "predicted_numeric_value": 2.0
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "73bdecc991459ddf10f7335c2575ca7f067998cc47302b6f95f479cf640a3381",
+    "imported_at": "2026-11-07T16:57:38.400008+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}

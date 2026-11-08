@@ -1,0 +1,5 @@
+다항함수 $f (x)$에 대하여 함수 $g (x)$를
+$g \left( x \right) = \left( x^{2} - 2 x \right) f \left( x \right)$
+라 하자. $g' (0) + g' (2) = 16$일 때, $f (2) - f (0)$의 값은?
+① $\mathrm{6}$		② $\mathrm{8}$		③ $\mathrm{10}$
+④ $\mathrm{12}$		⑤ $\mathrm{14}$

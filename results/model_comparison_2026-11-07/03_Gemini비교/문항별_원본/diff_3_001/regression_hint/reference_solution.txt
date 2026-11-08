@@ -1,0 +1,7 @@
+[정답] ⑤
+
+[해설]
+$2 x + 1 \leq f (x) \leq (x + 1)^{2}$에서
+$\lim_{x \rightarrow 0} (2 x + 1) = \lim_{x \rightarrow 0} (x + 1)^{2} = 1$이므로
+함수의 극한의 대소 관계에 의하여 $\lim_{x \rightarrow 0} f (x) = 1$
+$\lim_{x \rightarrow 0} (x + 5) f (x) = \lim_{x \rightarrow 0} (x + 5) \times \lim_{x \rightarrow 0} f (x) = 5 \times 1 = 5$

@@ -1,0 +1,260 @@
+{
+  "id": "diff_2_030",
+  "method": "baseline",
+  "input_text": "두 상수 $a$, $b$에 대하여 삼차함수\n$f (x) = a x^{3} + b x + a$\n는 $x = 1$에서 극소이다. 함수 $f (x)$의 극솟값이 $\\mathrm{- 2}$일 때, 함수 $f (x)$의 극댓값을 구하시오.\n",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "input_sha256": "435024aaf6fa7813668233869252ac2a5af6b313a46babb6dd8634e710379130",
+  "reference": {
+    "answer_text": "$6$",
+    "kind": "value",
+    "choice": null,
+    "value_text": "$6$",
+    "source": {
+      "id": "diff_2_030",
+      "source_file": "모의고사_미분_문제_2.hml",
+      "source_sha256": "bdf632f0269bd027f72fcf686c276a8040aa5cb2b985b26c7a2fe65391d878af",
+      "original_number": 30,
+      "current_number": 30
+    },
+    "numeric_value": 6.0,
+    "gradable": true
+  },
+  "reference_answer_text": "$6$",
+  "reference_solution": "[정답] $6$\n\n[해설]\n함수 $f \\left( x \\right) = a x^{3} + b x + a$가 $x = 1$에서 극솟값 $- 2$를 가지므로\n$f \\left( 1 \\right) = - 2$, $f' \\left( 1 \\right) = 0$\n$f \\left( 1 \\right) = a + b + a = 2 a + b = - 2$\t\t$\\cdots \\cdots$ ㉠\n$f' \\left( x \\right) = 3 a x^{2} + b$에서    $f' \\left( 1 \\right) = 3 a + b = 0$\t\t$\\cdots \\cdots$ ㉡\n㉠과 ㉡을 연립하면    $a = 2$, $b = - 6$\n$\\therefore$ $f \\left( x \\right) = 2 x^{3} - 6 x + 2$, $f' \\left( x \\right) = 6 x^{2} - 6$\n$f' \\left( x \\right) = 6 x^{2} - 6 = 0$에서    $x = - 1$ 또는 $x = 1$\n함수 $f \\left( x \\right)$는 $x = - 1$에서 극댓값을 가지므로\n$f \\left( - 1 \\right) = - 2 + 6 + 2 = 6$\n",
+  "problem_text": "두 상수 $a$, $b$에 대하여 삼차함수\n$f (x) = a x^{3} + b x + a$\n는 $x = 1$에서 극소이다. 함수 $f (x)$의 극솟값이 $\\mathrm{- 2}$일 때, 함수 $f (x)$의 극댓값을 구하시오.\n",
+  "subject": "미분",
+  "unit": "05 함수의 증가와 감소",
+  "type": "02 극대와 극소2 (삼차함수의 극대와 극소)",
+  "source": "2023년(2024학년도) 평가원 고3공통 6월 > 공통범위 > 18 [3점]",
+  "hint": null,
+  "config_id": "875a4609eaf28c459b73a566310a0218e66affa7b2206b25c520829fa02b346c",
+  "started_at": "2026-11-07T13:34:42.301418+00:00",
+  "model": "gemini-3.1-flash-lite",
+  "thinking_level": "minimal",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:20:08.699253+00:00",
+      "usage": {
+        "prompt_token_count": null,
+        "candidates_token_count": null,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "raw": null
+      },
+      "status": "error",
+      "error_type": "ClientError",
+      "code": 429,
+      "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 50.801391727s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '50s'}]}}",
+      "latency_seconds": 1.586,
+      "execution": 1
+    },
+    {
+      "attempt": 2,
+      "started_at": "2026-11-07T13:20:10.285549+00:00",
+      "usage": {
+        "prompt_token_count": null,
+        "candidates_token_count": null,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "raw": null
+      },
+      "status": "error",
+      "error_type": "ClientError",
+      "code": 429,
+      "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 49.235463617s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '49s'}]}}",
+      "latency_seconds": 0.559,
+      "execution": 1
+    },
+    {
+      "attempt": 1,
+      "started_at": "2026-11-07T13:34:42.301432+00:00",
+      "usage": {
+        "prompt_token_count": 120,
+        "candidates_token_count": 461,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "total_token_count": 581,
+        "tool_use_prompt_token_count": null,
+        "raw": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 461,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 120,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 120
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 581,
+          "traffic_type": null
+        }
+      },
+      "status": "success",
+      "response_id": "9ijvap-9GZqT39IPx-SYiQc",
+      "latency_seconds": 5.66,
+      "execution": 2
+    }
+  ],
+  "status": "success",
+  "output_text": "삼차함수 $f(x) = ax^3 + bx + a$가 $x=1$에서 극소이므로, 미분계수 $f'(1) = 0$이어야 합니다.\n\n1. **도함수 구하기:**\n   $f'(x) = 3ax^2 + b$\n\n2. **$f'(1) = 0$ 조건 이용:**\n   $f'(1) = 3a(1)^2 + b = 3a + b = 0$\n   따라서 $b = -3a$입니다.\n\n3. **$f(x)$ 식에 대입:**\n   $f(x) = ax^3 - 3ax + a$\n   $f'(x) = 3ax^2 - 3a = 3a(x^2 - 1) = 3a(x-1)(x+1)$\n   $f'(x) = 0$이 되는 $x$는 $x=1$ 또는 $x=-1$입니다.\n\n4. **극솟값 조건 이용:**\n   $x=1$에서 극솟값이 $-2$이므로, $f(1) = -2$입니다.\n   $f(1) = a(1)^3 - 3a(1) + a = a - 3a + a = -a$\n   $-a = -2$ 이므로 $a = 2$입니다.\n   $a=2$이면 $b = -3(2) = -6$입니다.\n\n5. **극댓값 구하기:**\n   $f(x) = 2x^3 - 6x + 2$\n   극댓값은 $x=-1$에서 발생합니다.\n   $f(-1) = 2(-1)^3 - 6(-1) + 2$\n   $f(-1) = -2 + 6 + 2 = 6$\n\n따라서 함수 $f(x)$의 극댓값은 6입니다.\n\n최종정답: 6",
+  "usage": {
+    "prompt_token_count": 120,
+    "candidates_token_count": 461,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "total_token_count": 581,
+    "tool_use_prompt_token_count": null,
+    "raw": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 461,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 120,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 120
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 581,
+      "traffic_type": null
+    }
+  },
+  "model_version": "gemini-3.1-flash-lite",
+  "response_id": "9ijvap-9GZqT39IPx-SYiQc",
+  "finish_reasons": [
+    "FinishReason.STOP"
+  ],
+  "prompt_feedback": null,
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,X-Origin,Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 07 Nov 2026 13:34:47 GMT",
+        "server": "envoy",
+        "content-length": "920",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1539",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "x-envoy-upstream-service-time": "1994"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "삼차함수 $f(x) = ax^3 + bx + a$가 $x=1$에서 극소이므로, 미분계수 $f'(1) = 0$이어야 합니다.\n\n1. **도함수 구하기:**\n   $f'(x) = 3ax^2 + b$\n\n2. **$f'(1) = 0$ 조건 이용:**\n   $f'(1) = 3a(1)^2 + b = 3a + b = 0$\n   따라서 $b = -3a$입니다.\n\n3. **$f(x)$ 식에 대입:**\n   $f(x) = ax^3 - 3ax + a$\n   $f'(x) = 3ax^2 - 3a = 3a(x^2 - 1) = 3a(x-1)(x+1)$\n   $f'(x) = 0$이 되는 $x$는 $x=1$ 또는 $x=-1$입니다.\n\n4. **극솟값 조건 이용:**\n   $x=1$에서 극솟값이 $-2$이므로, $f(1) = -2$입니다.\n   $f(1) = a(1)^3 - 3a(1) + a = a - 3a + a = -a$\n   $-a = -2$ 이므로 $a = 2$입니다.\n   $a=2$이면 $b = -3(2) = -6$입니다.\n\n5. **극댓값 구하기:**\n   $f(x) = 2x^3 - 6x + 2$\n   극댓값은 $x=-1$에서 발생합니다.\n   $f(-1) = 2(-1)^3 - 6(-1) + 2$\n   $f(-1) = -2 + 6 + 2 = 6$\n\n따라서 함수 $f(x)$의 극댓값은 6입니다.\n\n최종정답: 6",
+              "thought": null,
+              "thought_signature": "EnMKcQFpFH0TLcSc9TcQzYXvvuAylYRFkjLKZD9csifeKwT4WdbyZ5aPBOGPjbwcUl03pqJ9RqXPq4vc4dLT4KH9RDQLpgr3iKZ612RY5-3V5zGie6cjnPDJBA0tfHagQbb3PlUnuogUehdRdeRIADJx-3fi",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.1-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "9ijvap-9GZqT39IPx-SYiQc",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 461,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 120,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 120
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 581,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "latency_seconds": 5.66,
+  "completed_at": "2026-11-07T13:34:47.961183+00:00",
+  "evaluation": {
+    "predicted_answer": "6",
+    "correct": true,
+    "status": "correct",
+    "reason": "numeric_constant_comparison_tolerance_1e-9",
+    "extraction_method": "final_answer_marker",
+    "reference_answer": "$6$",
+    "predicted_kind": "value",
+    "predicted_numeric_value": 6.0
+  },
+  "rate_limited_execution_id": "2026-11-07T132409_062453+0000",
+  "prior_executions": [
+    {
+      "status": "api_error",
+      "started_at": "2026-11-07T13:20:08.699241+00:00",
+      "completed_at": "2026-11-07T13:20:10.844840+00:00",
+      "error": {
+        "code": 429,
+        "type": "ClientError",
+        "message": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.1-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 49.235463617s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '49s'}]}}"
+      },
+      "response_id": null
+    }
+  ],
+  "response_origin": "reused_control",
+  "provenance": {
+    "source_directory": "/workspace/experiment_results/model_comparison_2026-11-07/generation",
+    "source_config_id": "a7ec3b0a080521d58043116093a2d823813f31c8ebd06d94c899a4c0a0191892",
+    "source_record_sha256": "8aeb40f1f18cb5a1da0004aadf1564af336924888992a7b319f1fe9f1e10e3d4",
+    "imported_at": "2026-11-07T16:57:38.376183+00:00",
+    "reason": "Identical problem-only control reused across hint policies; no new API call."
+  }
+}
