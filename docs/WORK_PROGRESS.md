@@ -1,16 +1,16 @@
 # MathHint 작업 진행 상태
 
-STATUS: FINAL_VERIFIED_PENDING_PUBLICATION
+STATUS: COMPLETED
 EXECUTION_ALLOWED: true
-LAST_CONFIRMED_PUBLISHED_COMMIT: 5c2bcd9
+LAST_CONFIRMED_PUBLISHED_COMMIT: 9021d239e7c29eb9b742300b12a09f87e75aeee5
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
-AUTOMATION_STATUS: REGISTERED_ENABLED_VERIFIED_BY_PEEK
+AUTOMATION_STATUS: DISABLED_AFTER_COMPLETION_VERIFIED_BY_PEEK
 FIRST_RUN_FROM_SAVED_RULE: 2026-11-09T05:58:50+09:00
 RECURRENCE: EVERY_5_HOURS
 NEXT_RUN_TIME_SERVER_FIELD: NOT_RETURNED
 ENVIRONMENT: MathHint / inherited / current_environment_id_confirmed
-REMOTE_CHECKPOINT_STATUS: PUBLISHED_THROUGH_5c2bcd9_FINAL_PENDING
-GITHUB_PREAUTHORIZATION_SETTING: APPROVED_TEMPORARY_FULL_ACCESS_RESTORE_ON_COMPLETION
+REMOTE_CHECKPOINT_STATUS: FINAL_CODE_RESULTS_PUBLISHED
+GITHUB_PREAUTHORIZATION_SETTING: RESTORED_TO_ORIGINAL_INHERIT_VERIFIED
 TIMEZONE: Asia/Seoul
 USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 
@@ -26,9 +26,9 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 | 6 저장소 정리 | 완료 | docs/cleanup_changes.md 실제삭제/통합/복구·원본보존 |
 | 7 전체 검증·보고서 | 완료 | 144testsPASS(7.665s), VerifyResults284/284, 캐시·재배치재개 신규API0 |
 
-기능/실험 검증은 모두 완료했다. 마지막 보고서·재개수정 커밋의 원격 반영, 자동화중지, 임시GitHub권한원복 확인만 남았다. API/학습을 다시 실행하지 않는다.
+전체 요구 실험·정리·검증과 코드/결과 원격 반영을 완료했다. 자동화 is_enabled=false를 재조회했고 임시 GitHub 연결 권한도 원래 inherit로 복원·재조회했다. 추가 API/학습/예약을 실행할 미완료 항목은 없다. 이 마지막 완료 기록의 커밋은 실제 Git HEAD에서 확인한다.
 
-## 이전 대기 상태의 기록 (아래 새 명세 수령 기록이 우선)
+## 이전 대기 상태의 기록 (명세 수령 전 이력이며 현재 완료 상태가 우선)
 
 `docs/FINAL_TASK_SPEC.md`의 승인 상태를 읽는다. 지금은 새 최종 지시 대기 상태이므로 취소된 작업을 실행하지 않는다. 실제 `git status`, 현재 브랜치·HEAD, 원격 상태를 확인해 문서의 기록과 차이가 있으면 사실대로 남긴다.
 
@@ -191,3 +191,12 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - FinalClustering 표준명령은160파일SHA를확인해완료결과재사용, 학습0. ThreeWayGeneration 표준main은Client금지검증에서pending0·SDK81/원본240요청·응답SHA불변. 다른임시root에서도동일검증통과.
 - 최종Report명령 실행 complete=true, 240/240. 기존결과930SHA 모두그대로이며 data/전체와구실험트리는 기준05d3cca 대비변경0이다.
 - 공식성취기준 전수대조·사람의확정풀이검토·모든실패API의실제청구비용은확인하지않았다. 보고서에이한계를분리기록했으며이번요구된비교실험미완료는없다.
+
+## 최종 완료 및 예약 중지 — 2026-11-08T17:31:10.174307+00:00
+
+- 최종 실험/보고서/재배치 재개 코드 `5c1ee3a`와 HML 보존 속성 복구 `9021d23`를 원격 main에 푸시했다. 실제 push exit0 확인. 복구브랜치도 원격에 게시됐다.
+- CSV속성을추가할때일시적으로빠뜨린기존HML -text/-diff 규칙을복원했다. 원본/처리/벡터data와기존실험은05d3cca대비변경0, 기존930파일SHA일치.
+- 자동화 update(is_enabled=false) success 및 peek의false를확인했다. 처음저장된5시간주기규칙은이력으로보존하며활성다음실행은없다. 예약자동실행기록은반환되지않았고이번작업은현재세션에서실제완료했다.
+- GitHub 임시full_access는기존inherit로복원하고get권한조회로확인했다. 전체앱기본full_access는플랫폼미지원이었으며사용자가변경한실행환경권한과구분한다.
+- 완료판정: 핵심테스트144/144, 결과무결성284/284, 성공응답240/240, C수학검토80/80(AI보조), 데이터/기존근거보존, 원격게시, 예약중지 확인.
+- 남은실험0. 사람확정판정/공식교육과정전수대조/실패API실제청구비용은실행하지않았거나확인불가인한계이며보고서에명시했다.
