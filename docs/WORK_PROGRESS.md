@@ -1,6 +1,6 @@
 # MathHint 작업 진행 상태
 
-STATUS: COMPLETED
+STATUS: REOPENED_FINAL_AUDIT
 EXECUTION_ALLOWED: true
 LAST_CONFIRMED_PUBLISHED_COMMIT: 9021d239e7c29eb9b742300b12a09f87e75aeee5
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
@@ -200,3 +200,11 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - GitHub 임시full_access는기존inherit로복원하고get권한조회로확인했다. 전체앱기본full_access는플랫폼미지원이었으며사용자가변경한실행환경권한과구분한다.
 - 완료판정: 핵심테스트144/144, 결과무결성284/284, 성공응답240/240, C수학검토80/80(AI보조), 데이터/기존근거보존, 원격게시, 예약중지 확인.
 - 남은실험0. 사람확정판정/공식교육과정전수대조/실패API실제청구비용은실행하지않았거나확인불가인한계이며보고서에명시했다.
+
+## 사용자 요청에 따른 누락 재감사 — 2026-11-08T17:38:10.407590+00:00
+
+- 사용자가 최종 결과 정리·저장소 전체 정리에 누락이 없는지 재확인을 요청했다. 독립 감사3개로 명세와 실제파일을 대조했다.
+- 핵심실험/필수수치/240입력·응답/필수그림은존재하지만 정리완료판정이너무넓었다. results/README가구실험만안내하고 삭제한RunTraining의옛outputs경로를사용하는CompareGeneration/RateLimitedComparison/SolutionReview 실행진입점이남아있다.
+- selected_cases의예측조건에서만개선제목은C도맞은trig_2_022에대해부정확하다. 유형(type)수준군집사례큐레이션과B/C토큰값비교표도보강한다. 원자료는이미존재하며재학습/API재호출은하지않는다.
+- 수정전복구브랜치 recovery/before-final-reaudit-20261108 = ade3c1f44d32aa69d0b24ed22c89aa7bbe8d5029. 기존자동화는중지상태였으며현재수동후속정리를진행한다. 원본데이터/응답/모델/기존결과를덮어쓰지않는다.
+- 재감사보완작업후핵심테스트·새정적참조·입력/응답불변해시·보고서재집계·최종푸시를다시확인하고완료표시한다.
