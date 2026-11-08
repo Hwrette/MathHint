@@ -11,9 +11,11 @@
   "environment_selection": "inherited",
   "environment_confirmed_by_peek": true,
   "expected_environment_id": "ccarenv_b64_Y2NhcmVudl81M2Y3MDM3YzM5OGM4MTkxYWM2MThhNzJmN2MzZDI4NA",
-  "spec_status": "AWAITING_USER_SPEC",
+  "spec_status": "APPROVED",
   "execution_observed": false,
   "remote_checkpoint_published": false,
   "github_permission_selection": "pending_user_selection",
-  "current_workspace_checkpoint_commit": "588d86f7d3db78641ce8e26757d7ba159df2427a"
+  "current_workspace_checkpoint_commit": "588d86f7d3db78641ce8e26757d7ba159df2427a",
+  "execution_allowed": true,
+  "spec_sha256": "18cb0a83aebf2988b476118bcb4014f5ce7c0f1f7979fdceaead42f8deafbf56"
 }

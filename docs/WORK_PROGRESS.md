@@ -1,7 +1,7 @@
 # MathHint 작업 진행 상태
 
-STATUS: AWAITING_USER_SPEC
-EXECUTION_ALLOWED: false
+STATUS: IN_PROGRESS
+EXECUTION_ALLOWED: true
 LAST_CONFIRMED_PUBLISHED_COMMIT: 05d3cca4407b6bfd86e9f34c2b604c614357a2e6
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
 AUTOMATION_STATUS: REGISTERED_ENABLED_VERIFIED_BY_PEEK
@@ -14,7 +14,7 @@ GITHUB_PREAUTHORIZATION_SETTING: WAITING_FOR_USER_SELECTION
 TIMEZONE: Asia/Seoul
 USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 
-## 다음 실행의 첫 행동
+## 이전 대기 상태의 기록 (아래 새 명세 수령 기록이 우선)
 
 `docs/FINAL_TASK_SPEC.md`의 승인 상태를 읽는다. 지금은 새 최종 지시 대기 상태이므로 취소된 작업을 실행하지 않는다. 실제 `git status`, 현재 브랜치·HEAD, 원격 상태를 확인해 문서의 기록과 차이가 있으면 사실대로 남긴다.
 
@@ -54,3 +54,24 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 ## 다음에 필요한 입력
 
 사용자의 새 최종 작업 프롬프트. 이를 `FINAL_TASK_SPEC.md`의 승인된 완료 기준으로 반영하기 전에는 프로젝트 실험을 시작하지 않는다.
+
+
+## 최종 명세 수령 및 실행 시작 — 2026-11-08T16:30:07.798220+00:00
+
+- 사용자가 첨부한 최종 텍스트 원문 전체를 `docs/FINAL_TASK_SPEC.md`에 바이트 그대로 보존했다. 원문 SHA-256: `18cb0a83aebf2988b476118bcb4014f5ce7c0f1f7979fdceaead42f8deafbf56`. SPEC_APPROVED: true.
+- 이전 새 명세 대기 및 취소 실험 중단 상태를 해제한다. 이번 명세가 이전 개별 요청을 대체한다.
+- 사용자는 의미 있는 중간 커밋과 GitHub 푸시를 명시적으로 지시했다. 연결 전체 권한 모드 변경은 별도 승인 없이 하지 않는다.
+- 로컬 시작 HEAD: `620f4ce`. 취소된 변경 3개와 untracked 소스/테스트 7개가 남아 있으며 체크포인트 ZIP으로 복구 가능하다.
+- 회귀 평가에서는 반올림하지 않는다. Gemini B/C에는 상위 20개 토큰만 사용한다. 취소된 정수·전체 벡터 초안은 그대로 실행하지 않는다.
+
+| 단계 | 상태 | 근거 / 다음 작업 |
+|---|---|---|
+| 1 구조·데이터 검증 | 진행 중 | 전체 파일과 고정 185/80 분할·학습 어휘·행 ID 점검 |
+| 2 군집화 비교 | 미시작 | curriculum/unit/subunit/type, 유클리드/구면 K-means |
+| 3 회귀 검증 | 미시작 | 기존 실수 예측/모델의 무결성 확인 후 재사용 |
+| 4 Gemini 검증·세 조건 | 미시작 | 기존 A/B 실제 입력과 설정 검증, 필요한 신규 호출만 |
+| 5 시각자료·통합 | 미시작 | `results/final_experiment/` 아래 통합 |
+| 6 저장소 정리 | 미시작 | 참조·복구 지점 검증 후 실제 삭제 |
+| 7 전체 검증·보고서 | 미시작 | 핵심 테스트와 재현 명령·수치 대조 |
+
+다음 작업: 데이터 무결성·재사용 API 입력을 확인하고, 독립적인 군집화·회귀 작업부터 진행한다. 아직 신규 최종 실험이나 API 호출은 실행하지 않았다.
