@@ -1,2 +1,5 @@
 # 회귀와 K-means는 기존 JSON만 읽으므로 Kiwi 설치가 필요하지 않습니다.
 torch>=2.0
+numpy>=1.26
+matplotlib>=3.8
+scikit-learn>=1.4

@@ -30,8 +30,7 @@ class SolverReportTests(unittest.TestCase):
                 candidates_token_count=45, total_token_count=168,
             ),
         )
-        script = root / "mathhint_solver" / "GoogleAPI.py"
-        with patch.object(solver, "__file__", str(script)), \
+        with patch.multiple(solver, ROOT=root, OUTPUT=root / "outputs/solutions"), \
                 patch.object(solver, "PROBLEM_FILE", str(problem_path)), \
                 patch.object(solver, "SYSTEM_PROMPT", prompt), \
                 patch.dict("os.environ", {"GEMINI_API_KEY": "test-only"}), \

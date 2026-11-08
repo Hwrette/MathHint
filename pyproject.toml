@@ -9,7 +9,7 @@ build-backend = "setuptools.build_meta"
 # 배포용 프로젝트 이름. Python 코드에서 import할 이름은 mathhint_preprocess다.
 name = "mathhint-preprocess"
 version = "0.1.0"
-description = "Traceable HWPX math equation conversion and per-problem text extraction"
+description = "Math problem datasets, frequency vectors, model training and generation experiments"
 requires-python = ">=3.10"
 # 기본 전처리 실행에는 Python 표준 라이브러리만 사용한다.
 dependencies = []
@@ -18,8 +18,9 @@ dependencies = []
 [project.optional-dependencies]
 analysis = ["kiwipiepy>=0.20"]
 solver = ["google-genai>=1.0", "python-dotenv>=1.0"]
-learning = ["torch>=2.0"]
-all = ["kiwipiepy>=0.20", "google-genai>=1.0", "python-dotenv>=1.0", "torch>=2.0"]
+learning = ["torch>=2.0", "numpy>=1.26", "matplotlib>=3.8", "scikit-learn>=1.4"]
+viewer = ["latex2mathml>=3.78"]
+all = ["kiwipiepy>=0.20", "google-genai>=1.0", "python-dotenv>=1.0", "torch>=2.0", "numpy>=1.26", "matplotlib>=3.8", "scikit-learn>=1.4", "latex2mathml>=3.78"]
 
 [project.scripts]
 # 설치 후 mathhint-preprocess 명령을 치면 __main__.py의 main()을 호출한다.

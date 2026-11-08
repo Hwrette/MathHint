@@ -1,14 +1,9 @@
-"""폴더 안의 텍스트에서 공통 토큰 목록과 파일별 빈도벡터를 만듭니다.
+"""TXT 폴더를 공통 어휘 순서의 빈도 벡터로 바꾼다.
 
-설치: python -m pip install kiwipiepy
-실행: python mathhint_analysis/BuildFrequencyVectors.py
-폴더 지정: python mathhint_analysis/BuildFrequencyVectors.py "문제텍스트폴더"
-
-한국어는 Kiwi, LaTeX는 기존 BagOfWord.py의 정규식으로 분석합니다.
-불용어 제거·품사 필터·숫자 치환 없이 나온 토큰을 모두 사용합니다.
+INPUT·OUTPUT·VOCABULARY를 바꾸고 실행한다.
+학습/테스트 분할까지 만들 때는 PrepareDataset.py를 사용한다.
 """
 
-import argparse  # 터미널에서 받은 폴더 경로와 옵션을 해석합니다.
 import json  # 파이썬 리스트와 딕셔너리를 JSON 파일로 저장하고 읽습니다.
 from pathlib import Path  # 파일·폴더 경로를 다룹니다.
 
@@ -20,15 +15,13 @@ else:
     from BagOfWord import Kiwi, count_tokens
 
 
-# ▶ 버튼으로 실행할 때는 여기만 원하는 폴더 경로로 바꾸면 됩니다.
-# 예: INPUT_FOLDER = "outputs/run01/문서폴더/problems"
-# 예: INPUT_FOLDER = "/Users/hwrette/Desktop/문제텍스트"
-# 처음에는 저장소에 포함된 예제 폴더로 실행되도록 설정했습니다.
-INPUT_FOLDER = "examples"
-OUTPUT_FOLDER = "outputs/frequency_vectors"
-
-# True이면 하위 폴더의 텍스트까지 읽고, False이면 지정 폴더 바로 안만 읽습니다.
+# 저장된 학습 어휘를 사용하므로 테스트 문항에서 어휘가 늘어나지 않는다.
+ROOT = Path(__file__).resolve().parents[1]
+INPUT = ROOT / "data/processed/problems"
+OUTPUT = ROOT / "outputs/frequency_vectors"
+VOCABULARY = ROOT / "data/vectors/problems/vocabulary.json"
 INCLUDE_SUBFOLDERS = False
+ENCODING = "utf-8-sig"
 
 
 def build_frequency_vectors(
@@ -148,53 +141,18 @@ def save_results(result: dict, output_folder: str | Path) -> tuple[Path, Path]:
     return vocabulary_path, vectors_path
 
 
-def main() -> None:
-    """설정한 폴더를 분석하고, 저장 위치와 벡터 크기를 터미널에 출력합니다."""
-    project_root = Path(__file__).resolve().parents[1]
-    parser = argparse.ArgumentParser(description="폴더의 한국어·LaTeX 토큰 목록과 빈도벡터 생성")
-    # nargs='?'이므로 폴더 입력을 생략해도 됩니다. ▶ 실행 시 위의 설정을 사용합니다.
-    parser.add_argument("folder", nargs="?", type=Path, help="분석할 텍스트 폴더")
-    parser.add_argument("-o", "--output", type=Path, help="결과를 저장할 폴더")
-    parser.add_argument("--recursive", action="store_true", help="하위 폴더의 .txt도 포함")
-    parser.add_argument("--encoding", default="utf-8-sig", help="텍스트 파일 인코딩")
-    parser.add_argument("--vocabulary", type=Path, help="새 문제에 사용할 기존 vocabulary.json")
-    args = parser.parse_args()
-
-    # 코드 위의 설정값은 프로젝트 루트를 기준으로 찾습니다. ~는 먼저 사용자 폴더로 바꿉니다.
-    # 터미널에서 직접 지정한 상대 경로는 터미널의 현재 폴더를 기준으로 찾습니다.
-    input_folder = args.folder if args.folder is not None else project_root / Path(INPUT_FOLDER).expanduser()
-    output_folder = args.output if args.output is not None else project_root / Path(OUTPUT_FOLDER).expanduser()
-    try:
-        vocabulary = None
-        if args.vocabulary is not None:
-            vocabulary = json.loads(args.vocabulary.expanduser().read_text(encoding="utf-8-sig"))
-            # JSON의 null이 '새 어휘 생성'으로 오인되지 않도록 목록인지 먼저 검사합니다.
-            if not isinstance(vocabulary, list):
-                raise ValueError("vocabulary.json은 JSON 리스트여야 합니다.")
-
-        print(f"입력 폴더: {input_folder.expanduser().resolve()}", flush=True)
-        print("텍스트 파일 분석 중...", flush=True)
-        result = build_frequency_vectors(
-            input_folder,
-            vocabulary=vocabulary,
-            recursive=args.recursive or INCLUDE_SUBFOLDERS,
-            encoding=args.encoding,
-        )
-        vocabulary_path, vectors_path = save_results(result, output_folder)
-    except (OSError, UnicodeError, ValueError) as error:
-        parser.error(str(error))
-
-    file_count, token_count = result["shape"]
-    print(f"분석한 파일: {file_count}개")
-    print(f"공통 토큰 목록: {token_count}개")
-    print(f"빈도벡터 크기: {file_count}행 × {token_count}열")
-    print(f"토큰 목록 저장: {vocabulary_path}")
-    print(f"빈도벡터 저장: {vectors_path}")
-    if args.vocabulary is not None:
-        ignored = sum(doc["ignored_token_count"] for doc in result["documents"])
-        print(f"기존 목록에 없어 제외한 토큰의 등장 횟수: {ignored}")
+def main():
+    vocabulary = None
+    if VOCABULARY is not None:
+        vocabulary = json.loads(Path(VOCABULARY).read_text(encoding="utf-8-sig"))
+    result = build_frequency_vectors(
+        INPUT, vocabulary=vocabulary, recursive=INCLUDE_SUBFOLDERS, encoding=ENCODING,
+    )
+    vocabulary_path, vectors_path = save_results(result, OUTPUT)
+    print(f"문항 {result['shape'][0]}개 × 어휘 {result['shape'][1]}개")
+    print(f"어휘: {vocabulary_path}")
+    print(f"빈도 벡터: {vectors_path}")
 
 
-# import로 가져왔을 때는 실행하지 않고, 직접 실행했을 때만 시작합니다.
 if __name__ == "__main__":
     main()

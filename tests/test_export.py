@@ -13,10 +13,11 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest import mock
 from xml.etree import ElementTree as ET
 import zipfile
 
-from mathhint_preprocess.__main__ import main
+from mathhint_preprocess import __main__ as preprocess
 from mathhint_preprocess.export import ExportError, export_document
 from mathhint_preprocess.models import Block, Document, Equation, Note, Problem, RawDocument, Span
 
@@ -153,7 +154,7 @@ class ExportTests(unittest.TestCase):
         self.assertEqual(first_files, second_files)
 
 
-class CLITests(unittest.TestCase):
+class EntrypointTests(unittest.TestCase):
     """작은 HWPX를 직접 만들어 명령행 전체 처리 흐름과 종료 코드를 검증한다."""
 
     def setUp(self):
@@ -199,23 +200,19 @@ class CLITests(unittest.TestCase):
             archive.writestr("Contents/content.hpf", ET.tostring(package, encoding="utf-8"))
         return path
 
-    def run_cli(self, source, output, strict=False):
-        """CLI 함수를 호출하고 종료 코드·일반 출력·오류 출력을 함께 돌려준다.
-
-        별도 터미널 프로세스를 띄우지 않아도 main에 실제와 같은 인자 목록을
-        전달할 수 있다. StringIO는 화면 출력을 메모리 문자열로 받아 검사하게 한다.
-        """
+    def run_entrypoint(self, source, output, strict=False):
+        """설정값을 바꿔 실행하고 종료 코드와 저장 결과를 확인한다."""
         stdout, stderr = io.StringIO(), io.StringIO()
-        with redirect_stdout(stdout), redirect_stderr(stderr):
-            # with 구간에서만 출력 대상을 바꾸고 구간을 벗어나면 원래 상태로 복구한다.
-            status = main([str(source), "-o", str(output)] + (["--strict"] if strict else []))
+        with mock.patch.multiple(preprocess, INPUTS=(source,), OUTPUT=output, STRICT=strict), \
+             redirect_stdout(stdout), redirect_stderr(stderr):
+            status = preprocess.main()
         return status, stdout.getvalue(), stderr.getvalue()
 
     def test_strict_returns_two_after_writing_review_outputs(self):
         """엄격 모드의 검토 필요 종료 코드 2라도 결과와 보고서는 먼저 저장되어야 한다."""
         source = self.hwpx("sqrt{")
         output = self.root / "strict_output"
-        status, stdout, stderr = self.run_cli(source, output, strict=True)
+        status, stdout, stderr = self.run_entrypoint(source, output, strict=True)
         self.assertEqual(status, 2, stderr)
         reports = list(output.glob("*/report.json"))
         self.assertEqual(len(reports), 1)
@@ -225,14 +222,14 @@ class CLITests(unittest.TestCase):
 
     def test_default_returns_zero_and_reports_review(self):
         """기본 모드는 결과 저장에 성공하면 코드 0을 주고 검토 필요 사실을 화면에 알린다."""
-        status, stdout, stderr = self.run_cli(self.hwpx("sqrt{"), self.root / "default_output")
+        status, stdout, stderr = self.run_entrypoint(self.hwpx("sqrt{"), self.root / "default_output")
         self.assertEqual(status, 0, stderr)
         self.assertIn("검토 1문항", stdout)
 
     def test_no_anchor_returns_one_and_writes_no_document(self):
         """문항 경계를 찾지 못한 파일은 코드 1로 실패하고 임의의 문항을 저장하지 않아야 한다."""
         output = self.root / "invalid_output"
-        status, stdout, stderr = self.run_cli(self.hwpx(anchored=False), output)
+        status, stdout, stderr = self.run_entrypoint(self.hwpx(anchored=False), output)
         self.assertEqual(status, 1)
         self.assertIn("endNote", stderr)
         self.assertFalse(list(output.glob("*/report.json")))

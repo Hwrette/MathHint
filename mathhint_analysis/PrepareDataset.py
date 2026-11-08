@@ -7,7 +7,6 @@
 """
 from __future__ import annotations
 
-import argparse
 from collections import Counter, defaultdict
 from collections.abc import Callable
 import hashlib
@@ -23,7 +22,22 @@ import unicodedata
 import uuid
 
 
+# 설정: 기존 데이터를 갱신할 때만 OVERWRITE를 True로 바꾼다.
 ROOT = Path(__file__).resolve().parents[1]
+INPUT = ROOT / "data/raw"
+OUTPUT = ROOT / "data/processed"
+VECTORS = ROOT / "data/vectors"
+NUMBER_MAP = ROOT / "data/provenance/question_number_map.json"
+TRANSCRIPTIONS = ROOT / "data/provenance/latex_transcriptions.json"
+TEST_FRACTION = 0.3
+SEED = 42
+OVERWRITE = False
+
+# 파일을 직접 실행해도 프로젝트의 다른 패키지를 찾을 수 있게 한다.
+if not __package__:
+    import sys
+    sys.path.insert(0, str(ROOT))
+
 TYPE_FIELDS = ("subject", "curriculum", "unit", "subunit", "type")
 REGIONS = {"problems": "problem_text", "solutions": "solution_text"}
 
@@ -47,17 +61,12 @@ def validate_records(records: list[dict], *, strict: bool = True) -> None:
         subject_code = {"미분": "diff", "삼각함수": "trig"}.get(record.get("subject"))
         if subject_code is None:
             raise ValueError(f"지원하지 않는 자료군: {record.get('subject')!r}")
-        if not isinstance(record.get("file_number"), int) or record["file_number"] < 1:
-            raise ValueError(f"파일 번호가 없습니다: {question_id}")
-        for field in ("original_number", "current_number"):
-            if not isinstance(record.get(field), int) or record[field] < 1:
-                raise ValueError(f"{field}가 없습니다: {question_id}")
         expected = f"{subject_code}_{record['file_number']}_{record['original_number']:03d}"
         if question_id != expected or question_id in seen:
             raise ValueError(f"문항 ID가 원래 번호와 다르거나 중복됩니다: {question_id!r}")
         seen.add(question_id)
         for field in (*TYPE_FIELDS, "source", "problem_text", "solution_text", "answer_text"):
-            if not isinstance(record.get(field), str) or not record[field].strip():
+            if not record.get(field, "").strip():
                 raise ValueError(f"{question_id}: {field}가 비어 있습니다.")
         if record.get("has_body_graphic"):
             raise ValueError(f"문제 본문에 그래프·그림이 남아 있습니다: {question_id}")
@@ -207,8 +216,8 @@ def _publish_pair(pairs: list[tuple[Path, Path]], *, overwrite: bool) -> None:
 
 
 def _count_function() -> Callable[[str], Counter]:
-    # Keep this optional dependency lazy so split/integrity checks need no Kiwi.
-    from .BagOfWord import Kiwi, count_tokens
+    # Kiwi는 토큰을 셀 때만 불러온다. 분할만 확인할 때는 설치하지 않아도 된다.
+    from mathhint_analysis.BagOfWord import Kiwi, count_tokens
     from importlib.metadata import version
     kiwi = Kiwi(num_workers=2)
     def count(text):
@@ -219,7 +228,7 @@ def _count_function() -> Callable[[str], Counter]:
     return count
 
 
-def _vectors(records: dict[str, dict], ids: list[str], counts: dict[str, Counter],
+def _vectors(ids: list[str], counts: dict[str, Counter],
              vocabulary: list[str], split: str, region: str, input_folder: str) -> dict:
     index = {token: i for i, token in enumerate(vocabulary)}
     documents = []
@@ -253,7 +262,7 @@ def prepare_records(records: list[dict], output_dir: str | Path, vectors_dir: st
         raise ValueError("전처리 결과와 벡터 결과 폴더는 서로 겹치면 안 됩니다.")
     for destination in (output_dir, vectors_dir):
         if destination.exists() and not overwrite:
-            raise ValueError(f"기존 결과는 덮어쓰지 않습니다: {destination} (--overwrite로 명시)")
+            raise ValueError(f"기존 결과는 덮어쓰지 않습니다: {destination} (OVERWRITE=True로 명시)")
         destination.parent.mkdir(parents=True, exist_ok=True)
     ordered = sorted(records, key=lambda record: record["id"])
     by_id = {record["id"]: record for record in ordered}
@@ -265,17 +274,13 @@ def prepare_records(records: list[dict], output_dir: str | Path, vectors_dir: st
     vector_data = {}
     for region, field in REGIONS.items():
         counts = {record["id"]: Counter(count_fn(record[field])) for record in ordered}
-        for question_id, counter in counts.items():
-            if any(not isinstance(t, str) or not isinstance(n, int) or isinstance(n, bool) or n < 0
-                   for t, n in counter.items()):
-                raise ValueError(f"올바르지 않은 토큰 빈도: {region}/{question_id}")
         vocabulary = sorted({token for question_id in split["train_ids"] for token, count in counts[question_id].items() if count})
         if not vocabulary:
             raise ValueError(f"학습 어휘가 비었습니다: {region}")
         vector_data[region] = {"vocabulary": vocabulary}
         for part in ("train", "test"):
             ids = split[part + "_ids"]
-            vector_data[region][part] = _vectors(by_id, ids, counts, vocabulary, part, region,
+            vector_data[region][part] = _vectors(ids, counts, vocabulary, part, region,
                                                   Path(os.path.relpath(output_dir / region, vectors_dir / region)).as_posix())
     fingerprint = {"seed": seed, "test_fraction": test_fraction, "tokenizer": tokenizer_info,
                    "records": [{"id": r["id"], "type_path": _type_key(r), "source": r["source"],
@@ -377,52 +382,52 @@ def load_original_number_maps(path: str | Path) -> dict[str, dict[int, int]]:
     return dict(result)
 
 
-def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--raw", type=Path, default=ROOT / "data/raw")
-    parser.add_argument("--output", type=Path, default=ROOT / "data/processed")
-    parser.add_argument("--vectors", type=Path, default=ROOT / "data/vectors")
-    parser.add_argument("--number-map", type=Path, default=ROOT / "data/provenance/question_number_map.json")
-    parser.add_argument("--transcriptions", type=Path, default=ROOT / "data/provenance/latex_transcriptions.json")
-    parser.add_argument("--test-fraction", type=float, default=0.3)
-    parser.add_argument("--seed", type=int, default=42)
-    parser.add_argument("--allow-conversion-warnings", action="store_true")
-    parser.add_argument("--overwrite", action="store_true")
-    args = parser.parse_args(argv)
+def read_records(input_folder, number_map, transcriptions_path):
+    """HML 6개에서 원래 번호·수식 전사표를 적용해 문항과 출처 기록을 읽는다."""
     from mathhint_preprocess.hml import read_hml
-    maps = load_original_number_maps(args.number_map)
-    transcriptions = json.loads(args.transcriptions.read_text(encoding="utf-8"))
-    raw = args.raw.resolve()
-    if any(raw == p.resolve() or raw in p.resolve().parents or p.resolve() in raw.parents
-           for p in (args.output, args.vectors)):
-        parser.error("결과 폴더와 원본 폴더가 겹치면 안 됩니다.")
-    paths = sorted(raw.glob("*.hml"))
+
+    maps = load_original_number_maps(number_map)
+    transcriptions = json.loads(Path(transcriptions_path).read_text(encoding="utf-8"))
+    paths = sorted(Path(input_folder).glob("*.hml"))
     if not paths:
-        parser.error(f"HML 원본이 없습니다: {raw}")
-    records = []
-    sources = []
-    try:
-        for path in paths:
-            if path.name not in maps:
-                raise ValueError(f"원래 번호 대조표가 없는 파일: {path.name}")
-            extracted = read_hml(path, original_numbers=maps[path.name], transcriptions=transcriptions)
-            if len(extracted) != len(maps[path.name]):
-                raise ValueError(f"번호 대조표와 문항 수가 다릅니다: {path.name}")
-            records.extend(extracted)
-            sources.append({"file": path.name, "sha256": hashlib.sha256(path.read_bytes()).hexdigest(), "questions": len(extracted)})
-        expected_transcriptions = {(e["question_id"], e["region"], e["raw_sha256"]) for e in transcriptions}
-        used_transcriptions = {(r["id"], e["region"], hashlib.sha256(e["raw"].encode()).hexdigest())
-                               for r in records for e in r["equations"] if "transcription_reason" in e}
-        if expected_transcriptions != used_transcriptions:
-            raise ValueError("수식 전사표에 현재 원문과 대응하지 않는 항목이 있습니다.")
-        report = prepare_records(records, args.output, args.vectors, test_fraction=args.test_fraction,
-                                 seed=args.seed, strict=not args.allow_conversion_warnings,
-                                 overwrite=args.overwrite, source_files=sources)
-    except (OSError, ValueError) as error:
-        parser.error(str(error))
-    print(json.dumps(report, ensure_ascii=False, indent=2))
+        raise ValueError(f"HML 원본이 없습니다: {input_folder}")
+    records, sources = [], []
+    for path in paths:
+        if path.name not in maps:
+            raise ValueError(f"원래 번호 대조표가 없는 파일: {path.name}")
+        extracted = read_hml(path, original_numbers=maps[path.name], transcriptions=transcriptions)
+        if len(extracted) != len(maps[path.name]):
+            raise ValueError(f"번호 대조표와 문항 수가 다릅니다: {path.name}")
+        records.extend(extracted)
+        sources.append({"file": path.name, "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+                        "questions": len(extracted)})
+    expected = {(entry["question_id"], entry["region"], entry["raw_sha256"]) for entry in transcriptions}
+    used = {(record["id"], equation["region"], hashlib.sha256(equation["raw"].encode()).hexdigest())
+            for record in records for equation in record["equations"] if "transcription_reason" in equation}
+    if expected != used:
+        raise ValueError("수식 전사표에 현재 원문과 대응하지 않는 항목이 있습니다.")
+    return records, sources
+
+
+def main():
+    # 1. 원본과 결과 폴더가 겹쳐 원본이 지워지는 일을 막는다.
+    raw = Path(INPUT).resolve()
+    if any(raw == p.resolve() or raw in p.resolve().parents or p.resolve() in raw.parents
+           for p in (Path(OUTPUT), Path(VECTORS))):
+        raise ValueError("결과 폴더와 원본 폴더가 겹치면 안 됩니다.")
+
+    # 2. HML을 문항별로 읽고 원래 ID를 붙인다.
+    records, sources = read_records(INPUT, NUMBER_MAP, TRANSCRIPTIONS)
+
+    # 3. 분류를 보존한 TXT → 학습/테스트 분할 → 학습 전용 어휘와 빈도 벡터.
+    report = prepare_records(records, OUTPUT, VECTORS, test_fraction=TEST_FRACTION,
+                             seed=SEED, overwrite=OVERWRITE, source_files=sources)
+    print(f"전체 {report['question_count']}개 / 학습 {report['train_count']}개 / 테스트 {report['test_count']}개")
+    print(f"어휘 수: {report['vector_dimensions']}")
+    print(f"문항 파일: {OUTPUT}")
+    print(f"빈도 벡터: {VECTORS}")
     return 0
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    main()
