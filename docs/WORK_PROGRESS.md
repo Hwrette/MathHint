@@ -1,15 +1,15 @@
 # MathHint 작업 진행 상태
 
-STATUS: IN_PROGRESS_READER_WORKFLOW
+STATUS: COMPLETE_READER_WORKFLOW
 EXECUTION_ALLOWED: true
-LAST_CONFIRMED_PUBLISHED_COMMIT: 2992591
+LAST_CONFIRMED_PUBLISHED_COMMIT: 99222db98f95abd0f7e57112905832ff8808155c
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
-AUTOMATION_STATUS: ENABLED_FOR_READER_WORKFLOW_VERIFIED_BY_PEEK
+AUTOMATION_STATUS: PAUSED_AFTER_READER_WORKFLOW_COMPLETION_VERIFIED_BY_PEEK
 FIRST_RUN_FROM_SAVED_RULE: 2026-11-09T05:58:50+09:00
 RECURRENCE: EVERY_5_HOURS
 NEXT_RUN_TIME_SERVER_FIELD: NOT_RETURNED
 ENVIRONMENT: MathHint / inherited / current_environment_id_confirmed
-REMOTE_CHECKPOINT_STATUS: READER_IMPLEMENTATION_PUBLISHED_WORKFLOW_VALIDATION_IN_PROGRESS
+REMOTE_CHECKPOINT_STATUS: READER_WORKFLOW_IMPLEMENTATION_AND_RESULTS_PUBLISHED
 GITHUB_PREAUTHORIZATION_SETTING: RESTORED_TO_ORIGINAL_INHERIT_VERIFIED
 TIMEZONE: Asia/Seoul
 USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
@@ -20,7 +20,7 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 |---|---|---|
 | 1 수식·Markdown 읽기 | 완료 | 265문항·80ABC·원문접기·상태구분·브라우저24/24·770문서수식12823개 |
 | 2 같은 실험의 데이터→모델→예측→보고서 | 완료 | 단일 설정/5모드·가짜자료 전구간·어휘순서/ID/SHA차단·중첩모델학습곡선SHA |
-| 3 안내·파일 정리 | 검증 완료·게시 중 | 8군집2120링크·README5모드·원본근거2150SHA불변·최종174tests/284검사 |
+| 3 안내·파일 정리 | 완료 | 8군집2120링크·README5모드·원본근거2150SHA불변·최종174tests/284검사 |
 
 이전 최종 연구는 아래 이력대로 완료된 상태이며, 현재 작업은 이후 승인된 열람·연결 보완이다. 실제 연구 재학습과 신규Gemini호출은 금지하고, 임시 가짜자료 검사만 허용한다.
 
@@ -272,3 +272,11 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 브라우저최종JS재검사24/24·770문서/12823수식실패0·외부요청0. file://는관리정책차단으로직접파일열기미검증,임시localhost에서확인했다. clean머신설치미검증이며wheel자산포함까지검증. 수식가독성검사가사람수학판정은아님.
 - 결과요약/원문읽기와모델추론/학습/API실행구분을README에명시했다. 사용자추가요청전체원문은FINAL_TASK_SPEC에남아있으며,원첨부59790바이트SHA불변이다.
 - 다음최종단계: 통합변경커밋/원격푸시확인→복구자동화중지peek확인→진행기록완료체크포인트게시. 신규연구학습/API0.
+
+## 추가 보완 최종 게시·자동화 중지 — 2026-11-08T19:13:47.042322+00:00
+
+- 전체구현/최종안내/검증결과99222db98f95abd0f7e57112905832ff8808155c를원격main에push exit0확인. 읽기화면중간2992591도게시했으며수정전복구브랜치도원격에보존돼있다.
+- 기존5시간복구자동화를update(is_enabled=false)후peek false로확인했다. next_run_time은null이고미래자동실행은활성상태가아니다. 실제자동화실행이력은도구미제공이며이작업은현재세션에서완료했다.
+- 최신요구누락없음판정은실제174tests/284결과검사/24브라우저검사/6214상대링크/2150원본SHA근거에따른다. 이전연구의핵심수치/원본감사는불변이며새Gemini호출0·연구자료재학습0이다.
+- 남은필수작업0. 사용자가다음실험을결정하면Experiment단일설정을새경로로바꾸어학습/평가/prepare를명시적으로실행한다. 불용어/TFIDF/신경망/새Gemini실험은이번에추가하지않았다.
+- 한계: 관리형브라우저file://차단으로실제화면은임시localhost검증; 별도clean머신설치는미실행(wheel자산포함검증완료); 가독성검사는수학적정확성의사람확정검토가아님. 검사용localhost서버는종료했다.
