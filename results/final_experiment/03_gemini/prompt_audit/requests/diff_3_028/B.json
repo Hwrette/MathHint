@@ -1,0 +1,72 @@
+{
+  "id": "diff_3_028",
+  "condition": "B",
+  "method": "regression_hint",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "함수\n$f \\left( x \\right) = {\\left\\{\\begin{array}{llll}x^{3} - a x + 2 b &  &  & \\left( x < 1 \\right) \\\\ - 3 x + b &  &  & \\left( x \\geq 1 \\right)\\end{array}\\right.}$\n이 실수 전체의 집합에서 미분가능할 때, $a \\times b$의 값은?\n(단, $a$와 $b$는 상수이다.)\n① $3$\t\t② $6$\t\t③ $9$\n④ $12$\t\t⑤ $15$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:x\":29.127,\"latex:-\":25.831,\"latex:(\":20.988,\"latex:)\":20.902,\"latex:\\\\right\":19.804,\"latex:\\\\left\":19.298,\"latex:=\":18.68,\"latex:1\":17.611,\"latex:3\":16.413,\"latex:+\":16.385,\"latex:f\":14.344,\"latex:\\\\lim\":10.512,\"latex:{\":9.848,\"latex:}\":9.798,\"latex:_\":9.319,\"latex:a\":9.038,\"latex:2\":8.576,\"latex:\\\\rightarrow\":8.432,\"latex:^\":8.083,\"kiwi:므로\":7.886}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "problem_text": "함수\n$f \\left( x \\right) = {\\left\\{\\begin{array}{llll}x^{3} - a x + 2 b &  &  & \\left( x < 1 \\right) \\\\ - 3 x + b &  &  & \\left( x \\geq 1 \\right)\\end{array}\\right.}$\n이 실수 전체의 집합에서 미분가능할 때, $a \\times b$의 값은?\n(단, $a$와 $b$는 상수이다.)\n① $3$\t\t② $6$\t\t③ $9$\n④ $12$\t\t⑤ $15$\n",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:x": 29.127,
+      "latex:-": 25.831,
+      "latex:(": 20.988,
+      "latex:)": 20.902,
+      "latex:\\right": 19.804,
+      "latex:\\left": 19.298,
+      "latex:=": 18.68,
+      "latex:1": 17.611,
+      "latex:3": 16.413,
+      "latex:+": 16.385,
+      "latex:f": 14.344,
+      "latex:\\lim": 10.512,
+      "latex:{": 9.848,
+      "latex:}": 9.798,
+      "latex:_": 9.319,
+      "latex:a": 9.038,
+      "latex:2": 8.576,
+      "latex:\\rightarrow": 8.432,
+      "latex:^": 8.083,
+      "kiwi:므로": 7.886
+    },
+    "source": "regression_prediction"
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n함수\n$f \\left( x \\right) = {\\left\\{\\begin{array}{llll}x^{3} - a x + 2 b &  &  & \\left( x < 1 \\right) \\\\ - 3 x + b &  &  & \\left( x \\geq 1 \\right)\\end{array}\\right.}$\n이 실수 전체의 집합에서 미분가능할 때, $a \\times b$의 값은?\n(단, $a$와 $b$는 상수이다.)\n① $3$\t\t② $6$\t\t③ $9$\n④ $12$\t\t⑤ $15$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:x\":29.127,\"latex:-\":25.831,\"latex:(\":20.988,\"latex:)\":20.902,\"latex:\\\\right\":19.804,\"latex:\\\\left\":19.298,\"latex:=\":18.68,\"latex:1\":17.611,\"latex:3\":16.413,\"latex:+\":16.385,\"latex:f\":14.344,\"latex:\\\\lim\":10.512,\"latex:{\":9.848,\"latex:}\":9.798,\"latex:_\":9.319,\"latex:a\":9.038,\"latex:2\":8.576,\"latex:\\\\rightarrow\":8.432,\"latex:^\":8.083,\"kiwi:므로\":7.886}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "함수\n$f \\left( x \\right) = {\\left\\{\\begin{array}{llll}x^{3} - a x + 2 b &  &  & \\left( x < 1 \\right) \\\\ - 3 x + b &  &  & \\left( x \\geq 1 \\right)\\end{array}\\right.}$\n이 실수 전체의 집합에서 미분가능할 때, $a \\times b$의 값은?\n(단, $a$와 $b$는 상수이다.)\n① $3$\t\t② $6$\t\t③ $9$\n④ $12$\t\t⑤ $15$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:x\":29.127,\"latex:-\":25.831,\"latex:(\":20.988,\"latex:)\":20.902,\"latex:\\\\right\":19.804,\"latex:\\\\left\":19.298,\"latex:=\":18.68,\"latex:1\":17.611,\"latex:3\":16.413,\"latex:+\":16.385,\"latex:f\":14.344,\"latex:\\\\lim\":10.512,\"latex:{\":9.848,\"latex:}\":9.798,\"latex:_\":9.319,\"latex:a\":9.038,\"latex:2\":8.576,\"latex:\\\\rightarrow\":8.432,\"latex:^\":8.083,\"kiwi:므로\":7.886}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "31897a61b2a418f7a527d9292440707177202b91f0f35fd8187d0b48f324678b",
+  "input_sha256": "cd359318f42982a880e0abeae62f13037e528923381046d16f1e288a54bb8285",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_3_028.txt",
+    "vector": "/workspace/MathHint/results/model_comparison_2026-11-07/01_회귀모델/regression_predictions.json",
+    "vocabulary": "/workspace/MathHint/data/vectors/solutions/vocabulary.json"
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

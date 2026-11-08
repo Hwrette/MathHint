@@ -1,0 +1,42 @@
+{
+  "id": "diff_1_005",
+  "condition": "A",
+  "method": "baseline",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "$\\lim_{x \\rightarrow a} \\frac{f \\left( x \\right) \\left( x - 3 \\right)}{\\left( x - a \\right)^{2}} = 5$를 만족시키는 최고차항의 계수가 $1$인 이차함수 $f \\left( x \\right)$가 존재하도록 하는 모든 실수 $a$의 값의 합은?\n① $7$\t\t② $8$\t\t③ $9$\n④ $10$\t\t⑤ $11$\n",
+  "problem_text": "$\\lim_{x \\rightarrow a} \\frac{f \\left( x \\right) \\left( x - 3 \\right)}{\\left( x - a \\right)^{2}} = 5$를 만족시키는 최고차항의 계수가 $1$인 이차함수 $f \\left( x \\right)$가 존재하도록 하는 모든 실수 $a$의 값의 합은?\n① $7$\t\t② $8$\t\t③ $9$\n④ $10$\t\t⑤ $11$\n",
+  "hint": null,
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n$\\lim_{x \\rightarrow a} \\frac{f \\left( x \\right) \\left( x - 3 \\right)}{\\left( x - a \\right)^{2}} = 5$를 만족시키는 최고차항의 계수가 $1$인 이차함수 $f \\left( x \\right)$가 존재하도록 하는 모든 실수 $a$의 값의 합은?\n① $7$\t\t② $8$\t\t③ $9$\n④ $10$\t\t⑤ $11$\n",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "$\\lim_{x \\rightarrow a} \\frac{f \\left( x \\right) \\left( x - 3 \\right)}{\\left( x - a \\right)^{2}} = 5$를 만족시키는 최고차항의 계수가 $1$인 이차함수 $f \\left( x \\right)$가 존재하도록 하는 모든 실수 $a$의 값의 합은?\n① $7$\t\t② $8$\t\t③ $9$\n④ $10$\t\t⑤ $11$\n",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "5c5ec734b7fb70f34cc789e7b30d6de7ee32b3f722ee69564b44fe19815bb438",
+  "input_sha256": "bb6bb7e7a21ce354dfdb066d8fae99eb0de54094d428347e0274cb8264c192b2",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_1_005.txt",
+    "vector": null,
+    "vocabulary": null
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

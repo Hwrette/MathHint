@@ -1,0 +1,42 @@
+{
+  "id": "trig_1_043",
+  "condition": "A",
+  "method": "baseline",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "자연수 $a$에 대하여 $0 \\le x \\le 8 \\pi$에서 정의된 함수 $f \\left( x \\right) = 8 \\sin a x$가 있다. 함수 $y = f \\left( x \\right)$의 그래프가 직선 $y = 5$와 만나는 점의 $x$좌표 중 가장 큰 값과 가장 작은 값의 합이 $\\frac{31}{4} \\pi$일 때, $a$의 값을 구하시오.\n",
+  "problem_text": "자연수 $a$에 대하여 $0 \\le x \\le 8 \\pi$에서 정의된 함수 $f \\left( x \\right) = 8 \\sin a x$가 있다. 함수 $y = f \\left( x \\right)$의 그래프가 직선 $y = 5$와 만나는 점의 $x$좌표 중 가장 큰 값과 가장 작은 값의 합이 $\\frac{31}{4} \\pi$일 때, $a$의 값을 구하시오.\n",
+  "hint": null,
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n자연수 $a$에 대하여 $0 \\le x \\le 8 \\pi$에서 정의된 함수 $f \\left( x \\right) = 8 \\sin a x$가 있다. 함수 $y = f \\left( x \\right)$의 그래프가 직선 $y = 5$와 만나는 점의 $x$좌표 중 가장 큰 값과 가장 작은 값의 합이 $\\frac{31}{4} \\pi$일 때, $a$의 값을 구하시오.\n",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "자연수 $a$에 대하여 $0 \\le x \\le 8 \\pi$에서 정의된 함수 $f \\left( x \\right) = 8 \\sin a x$가 있다. 함수 $y = f \\left( x \\right)$의 그래프가 직선 $y = 5$와 만나는 점의 $x$좌표 중 가장 큰 값과 가장 작은 값의 합이 $\\frac{31}{4} \\pi$일 때, $a$의 값을 구하시오.\n",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "7fc29c9832194074091768f0463e87f2ce5d85d4f9ca9b6b8f3c258c9d081ee8",
+  "input_sha256": "7412d5a7ea4f6c7476df0d26760db0efa11d05aa7419b7579be300f870cd931a",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/trig_1_043.txt",
+    "vector": null,
+    "vocabulary": null
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

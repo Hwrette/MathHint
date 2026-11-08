@@ -1,0 +1,42 @@
+{
+  "id": "trig_2_035",
+  "condition": "A",
+  "method": "baseline",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "함수 $f (x) = \\sin \\frac{\\pi}{4} x$라 할 때, $0 < x < 16$에서 부등식\n$f \\left( 2 + x \\right) f \\left( 2 - x \\right) < \\frac{1}{4}$\n을 만족시키는 모든 자연수 $x$의 값의 합을 구하시오.\n",
+  "problem_text": "함수 $f (x) = \\sin \\frac{\\pi}{4} x$라 할 때, $0 < x < 16$에서 부등식\n$f \\left( 2 + x \\right) f \\left( 2 - x \\right) < \\frac{1}{4}$\n을 만족시키는 모든 자연수 $x$의 값의 합을 구하시오.\n",
+  "hint": null,
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n함수 $f (x) = \\sin \\frac{\\pi}{4} x$라 할 때, $0 < x < 16$에서 부등식\n$f \\left( 2 + x \\right) f \\left( 2 - x \\right) < \\frac{1}{4}$\n을 만족시키는 모든 자연수 $x$의 값의 합을 구하시오.\n",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "함수 $f (x) = \\sin \\frac{\\pi}{4} x$라 할 때, $0 < x < 16$에서 부등식\n$f \\left( 2 + x \\right) f \\left( 2 - x \\right) < \\frac{1}{4}$\n을 만족시키는 모든 자연수 $x$의 값의 합을 구하시오.\n",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "b41d2fc9c571343ff5e7dd00acdd578b68ec4bfa51615676a8c3e6d9de0d895a",
+  "input_sha256": "fc03d48e2f7c1658ab020dafe83c7c5a343916f66e2909274477b5a239409539",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/trig_2_035.txt",
+    "vector": null,
+    "vocabulary": null
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

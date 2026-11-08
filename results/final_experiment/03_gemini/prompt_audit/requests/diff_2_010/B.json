@@ -1,0 +1,72 @@
+{
+  "id": "diff_2_010",
+  "condition": "B",
+  "method": "regression_hint",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "함수\n$f \\left( x \\right) = {\\left\\{\\begin{array}{lll}x - \\frac{1}{2} &  & \\left( x < 0 \\right) \\\\ - x^{2} + 3 &  & \\left( x \\geq 0 \\right)\\end{array}\\right.}$\n에 대하여 함수 $(f (x) + a)^{2}$이 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?\n① $- \\frac{9}{4}$\t② $- \\frac{7}{4}$\t\t③ $- \\frac{5}{4}$\n④ $- \\frac{3}{4}$\t⑤ $- \\frac{1}{4}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:}\":19.958,\"latex:{\":19.784,\"latex:x\":14.618,\"latex:-\":10.34,\"latex:\\\\left\":10.222,\"latex:\\\\right\":10.165,\"latex:=\":9.574,\"latex:2\":9.172,\"latex:)\":8.639,\"latex:(\":8.456,\"latex:^\":7.387,\"latex:+\":7.222,\"latex:a\":6.025,\"latex:t\":5.563,\"latex:4\":4.775,\"latex:3\":4.059,\"latex:f\":3.704,\"latex:\\\\frac\":3.65,\"latex:0\":3.618,\"latex:\\\\sin\":3.43}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "problem_text": "함수\n$f \\left( x \\right) = {\\left\\{\\begin{array}{lll}x - \\frac{1}{2} &  & \\left( x < 0 \\right) \\\\ - x^{2} + 3 &  & \\left( x \\geq 0 \\right)\\end{array}\\right.}$\n에 대하여 함수 $(f (x) + a)^{2}$이 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?\n① $- \\frac{9}{4}$\t② $- \\frac{7}{4}$\t\t③ $- \\frac{5}{4}$\n④ $- \\frac{3}{4}$\t⑤ $- \\frac{1}{4}$\n",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:}": 19.958,
+      "latex:{": 19.784,
+      "latex:x": 14.618,
+      "latex:-": 10.34,
+      "latex:\\left": 10.222,
+      "latex:\\right": 10.165,
+      "latex:=": 9.574,
+      "latex:2": 9.172,
+      "latex:)": 8.639,
+      "latex:(": 8.456,
+      "latex:^": 7.387,
+      "latex:+": 7.222,
+      "latex:a": 6.025,
+      "latex:t": 5.563,
+      "latex:4": 4.775,
+      "latex:3": 4.059,
+      "latex:f": 3.704,
+      "latex:\\frac": 3.65,
+      "latex:0": 3.618,
+      "latex:\\sin": 3.43
+    },
+    "source": "regression_prediction"
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n함수\n$f \\left( x \\right) = {\\left\\{\\begin{array}{lll}x - \\frac{1}{2} &  & \\left( x < 0 \\right) \\\\ - x^{2} + 3 &  & \\left( x \\geq 0 \\right)\\end{array}\\right.}$\n에 대하여 함수 $(f (x) + a)^{2}$이 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?\n① $- \\frac{9}{4}$\t② $- \\frac{7}{4}$\t\t③ $- \\frac{5}{4}$\n④ $- \\frac{3}{4}$\t⑤ $- \\frac{1}{4}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:}\":19.958,\"latex:{\":19.784,\"latex:x\":14.618,\"latex:-\":10.34,\"latex:\\\\left\":10.222,\"latex:\\\\right\":10.165,\"latex:=\":9.574,\"latex:2\":9.172,\"latex:)\":8.639,\"latex:(\":8.456,\"latex:^\":7.387,\"latex:+\":7.222,\"latex:a\":6.025,\"latex:t\":5.563,\"latex:4\":4.775,\"latex:3\":4.059,\"latex:f\":3.704,\"latex:\\\\frac\":3.65,\"latex:0\":3.618,\"latex:\\\\sin\":3.43}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "함수\n$f \\left( x \\right) = {\\left\\{\\begin{array}{lll}x - \\frac{1}{2} &  & \\left( x < 0 \\right) \\\\ - x^{2} + 3 &  & \\left( x \\geq 0 \\right)\\end{array}\\right.}$\n에 대하여 함수 $(f (x) + a)^{2}$이 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?\n① $- \\frac{9}{4}$\t② $- \\frac{7}{4}$\t\t③ $- \\frac{5}{4}$\n④ $- \\frac{3}{4}$\t⑤ $- \\frac{1}{4}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:}\":19.958,\"latex:{\":19.784,\"latex:x\":14.618,\"latex:-\":10.34,\"latex:\\\\left\":10.222,\"latex:\\\\right\":10.165,\"latex:=\":9.574,\"latex:2\":9.172,\"latex:)\":8.639,\"latex:(\":8.456,\"latex:^\":7.387,\"latex:+\":7.222,\"latex:a\":6.025,\"latex:t\":5.563,\"latex:4\":4.775,\"latex:3\":4.059,\"latex:f\":3.704,\"latex:\\\\frac\":3.65,\"latex:0\":3.618,\"latex:\\\\sin\":3.43}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "342cb3598f1a61a93d28c18d46ff7202aafbe0d293c3e7e44ff26aca92a19910",
+  "input_sha256": "d5a110b33ae976428c1731ea0a4d520b6541d3e910db4daeae9f568371944860",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_2_010.txt",
+    "vector": "/workspace/MathHint/results/model_comparison_2026-11-07/01_회귀모델/regression_predictions.json",
+    "vocabulary": "/workspace/MathHint/data/vectors/solutions/vocabulary.json"
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

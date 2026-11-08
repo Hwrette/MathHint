@@ -1,0 +1,72 @@
+{
+  "id": "trig_1_018",
+  "condition": "C",
+  "method": "oracle_hint",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "실수 $a \\quad \\left( a \\ne 0 \\right)$과 양수 $b$에 대하여 함수\n$f \\left( x \\right) = a \\cos b x + 10 - a$\n의 최댓값이 $18$이고 주기가 $3 \\pi$일 때, $f \\left( \\frac{\\pi}{2} \\right)$의 값을 구하시오.\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"kiwi:이\":14.0,\"latex:{\":12.0,\"latex:}\":12.0,\"latex:=\":10.0,\"latex:a\":10.0,\"latex:-\":8.0,\"latex:2\":7.0,\"kiwi:.\":6.0,\"latex:(\":6.0,\"latex:)\":6.0,\"latex:+\":6.0,\"latex:\\\\frac\":6.0,\"latex:\\\\left\":6.0,\"latex:\\\\right\":6.0,\"latex:x\":6.0,\"latex:10\":5.0,\"latex:3\":5.0,\"latex:\\\\pi\":5.0,\"latex:f\":5.0,\"kiwi:(\":4.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "problem_text": "실수 $a \\quad \\left( a \\ne 0 \\right)$과 양수 $b$에 대하여 함수\n$f \\left( x \\right) = a \\cos b x + 10 - a$\n의 최댓값이 $18$이고 주기가 $3 \\pi$일 때, $f \\left( \\frac{\\pi}{2} \\right)$의 값을 구하시오.\n",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "kiwi:이": 14.0,
+      "latex:{": 12.0,
+      "latex:}": 12.0,
+      "latex:=": 10.0,
+      "latex:a": 10.0,
+      "latex:-": 8.0,
+      "latex:2": 7.0,
+      "kiwi:.": 6.0,
+      "latex:(": 6.0,
+      "latex:)": 6.0,
+      "latex:+": 6.0,
+      "latex:\\frac": 6.0,
+      "latex:\\left": 6.0,
+      "latex:\\right": 6.0,
+      "latex:x": 6.0,
+      "latex:10": 5.0,
+      "latex:3": 5.0,
+      "latex:\\pi": 5.0,
+      "latex:f": 5.0,
+      "kiwi:(": 4.0
+    },
+    "source": "actual_reference"
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n실수 $a \\quad \\left( a \\ne 0 \\right)$과 양수 $b$에 대하여 함수\n$f \\left( x \\right) = a \\cos b x + 10 - a$\n의 최댓값이 $18$이고 주기가 $3 \\pi$일 때, $f \\left( \\frac{\\pi}{2} \\right)$의 값을 구하시오.\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"kiwi:이\":14.0,\"latex:{\":12.0,\"latex:}\":12.0,\"latex:=\":10.0,\"latex:a\":10.0,\"latex:-\":8.0,\"latex:2\":7.0,\"kiwi:.\":6.0,\"latex:(\":6.0,\"latex:)\":6.0,\"latex:+\":6.0,\"latex:\\\\frac\":6.0,\"latex:\\\\left\":6.0,\"latex:\\\\right\":6.0,\"latex:x\":6.0,\"latex:10\":5.0,\"latex:3\":5.0,\"latex:\\\\pi\":5.0,\"latex:f\":5.0,\"kiwi:(\":4.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "실수 $a \\quad \\left( a \\ne 0 \\right)$과 양수 $b$에 대하여 함수\n$f \\left( x \\right) = a \\cos b x + 10 - a$\n의 최댓값이 $18$이고 주기가 $3 \\pi$일 때, $f \\left( \\frac{\\pi}{2} \\right)$의 값을 구하시오.\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"kiwi:이\":14.0,\"latex:{\":12.0,\"latex:}\":12.0,\"latex:=\":10.0,\"latex:a\":10.0,\"latex:-\":8.0,\"latex:2\":7.0,\"kiwi:.\":6.0,\"latex:(\":6.0,\"latex:)\":6.0,\"latex:+\":6.0,\"latex:\\\\frac\":6.0,\"latex:\\\\left\":6.0,\"latex:\\\\right\":6.0,\"latex:x\":6.0,\"latex:10\":5.0,\"latex:3\":5.0,\"latex:\\\\pi\":5.0,\"latex:f\":5.0,\"kiwi:(\":4.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "d6392cb64940f5022a0270f23e7a4e3391fe9379059b740cb58bc4286bd84b98",
+  "input_sha256": "7d57b59837086f2047fae2de9b833edc41007ba2094d2b91716e13bbf6aeb0ca",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/trig_1_018.txt",
+    "vector": "/workspace/MathHint/data/vectors/solutions/test_vectors.json",
+    "vocabulary": "/workspace/MathHint/data/vectors/solutions/vocabulary.json"
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

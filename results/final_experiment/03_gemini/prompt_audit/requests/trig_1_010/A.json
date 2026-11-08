@@ -1,0 +1,42 @@
+{
+  "id": "trig_1_010",
+  "condition": "A",
+  "method": "baseline",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "$\\frac{\\pi}{2} < t < \\pi$인 실수 $t$에 대하여 이차방정식\n$5 x^{2} + x + k = 0 \\quad \\left( k \\right.$는 상수$\\left.  \\right)$\n가 두 실근 $\\sin t$, $\\cos t$를 가질 때, $k \\times \\tan t$의 값은?\n① $\\frac{3}{2}$\t\t② $\\frac{9}{5}$\t\t③ $\\frac{21}{10}$\n④ $\\frac{12}{5}$\t\t⑤ $\\frac{27}{10}$\n",
+  "problem_text": "$\\frac{\\pi}{2} < t < \\pi$인 실수 $t$에 대하여 이차방정식\n$5 x^{2} + x + k = 0 \\quad \\left( k \\right.$는 상수$\\left.  \\right)$\n가 두 실근 $\\sin t$, $\\cos t$를 가질 때, $k \\times \\tan t$의 값은?\n① $\\frac{3}{2}$\t\t② $\\frac{9}{5}$\t\t③ $\\frac{21}{10}$\n④ $\\frac{12}{5}$\t\t⑤ $\\frac{27}{10}$\n",
+  "hint": null,
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n$\\frac{\\pi}{2} < t < \\pi$인 실수 $t$에 대하여 이차방정식\n$5 x^{2} + x + k = 0 \\quad \\left( k \\right.$는 상수$\\left.  \\right)$\n가 두 실근 $\\sin t$, $\\cos t$를 가질 때, $k \\times \\tan t$의 값은?\n① $\\frac{3}{2}$\t\t② $\\frac{9}{5}$\t\t③ $\\frac{21}{10}$\n④ $\\frac{12}{5}$\t\t⑤ $\\frac{27}{10}$\n",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "$\\frac{\\pi}{2} < t < \\pi$인 실수 $t$에 대하여 이차방정식\n$5 x^{2} + x + k = 0 \\quad \\left( k \\right.$는 상수$\\left.  \\right)$\n가 두 실근 $\\sin t$, $\\cos t$를 가질 때, $k \\times \\tan t$의 값은?\n① $\\frac{3}{2}$\t\t② $\\frac{9}{5}$\t\t③ $\\frac{21}{10}$\n④ $\\frac{12}{5}$\t\t⑤ $\\frac{27}{10}$\n",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "c444be4e4d2d8c41858ee1f3a506fbf4ac62c7e4f85532909846af512d0ebb35",
+  "input_sha256": "8b4064fcb74f1debce12856bfcb29d81dbdf21c975b967335566a6a61cf009f2",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/trig_1_010.txt",
+    "vector": null,
+    "vocabulary": null
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

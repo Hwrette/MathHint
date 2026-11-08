@@ -1,0 +1,72 @@
+{
+  "id": "diff_2_030",
+  "condition": "C",
+  "method": "oracle_hint",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "두 상수 $a$, $b$에 대하여 삼차함수\n$f (x) = a x^{3} + b x + a$\n는 $x = 1$에서 극소이다. 함수 $f (x)$의 극솟값이 $\\mathrm{- 2}$일 때, 함수 $f (x)$의 극댓값을 구하시오.\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:=\":21.0,\"latex:x\":17.0,\"latex:2\":12.0,\"latex:(\":11.0,\"latex:)\":11.0,\"latex:-\":11.0,\"latex:\\\\left\":11.0,\"latex:\\\\right\":11.0,\"latex:f\":11.0,\"latex:+\":10.0,\"latex:1\":9.0,\"latex:6\":9.0,\"latex:a\":8.0,\"latex:b\":6.0,\"latex:'\":5.0,\"latex:^\":5.0,\"latex:{\":5.0,\"latex:}\":5.0,\"kiwi:에서\":4.0,\"latex:3\":4.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "problem_text": "두 상수 $a$, $b$에 대하여 삼차함수\n$f (x) = a x^{3} + b x + a$\n는 $x = 1$에서 극소이다. 함수 $f (x)$의 극솟값이 $\\mathrm{- 2}$일 때, 함수 $f (x)$의 극댓값을 구하시오.\n",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:=": 21.0,
+      "latex:x": 17.0,
+      "latex:2": 12.0,
+      "latex:(": 11.0,
+      "latex:)": 11.0,
+      "latex:-": 11.0,
+      "latex:\\left": 11.0,
+      "latex:\\right": 11.0,
+      "latex:f": 11.0,
+      "latex:+": 10.0,
+      "latex:1": 9.0,
+      "latex:6": 9.0,
+      "latex:a": 8.0,
+      "latex:b": 6.0,
+      "latex:'": 5.0,
+      "latex:^": 5.0,
+      "latex:{": 5.0,
+      "latex:}": 5.0,
+      "kiwi:에서": 4.0,
+      "latex:3": 4.0
+    },
+    "source": "actual_reference"
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n두 상수 $a$, $b$에 대하여 삼차함수\n$f (x) = a x^{3} + b x + a$\n는 $x = 1$에서 극소이다. 함수 $f (x)$의 극솟값이 $\\mathrm{- 2}$일 때, 함수 $f (x)$의 극댓값을 구하시오.\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:=\":21.0,\"latex:x\":17.0,\"latex:2\":12.0,\"latex:(\":11.0,\"latex:)\":11.0,\"latex:-\":11.0,\"latex:\\\\left\":11.0,\"latex:\\\\right\":11.0,\"latex:f\":11.0,\"latex:+\":10.0,\"latex:1\":9.0,\"latex:6\":9.0,\"latex:a\":8.0,\"latex:b\":6.0,\"latex:'\":5.0,\"latex:^\":5.0,\"latex:{\":5.0,\"latex:}\":5.0,\"kiwi:에서\":4.0,\"latex:3\":4.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "두 상수 $a$, $b$에 대하여 삼차함수\n$f (x) = a x^{3} + b x + a$\n는 $x = 1$에서 극소이다. 함수 $f (x)$의 극솟값이 $\\mathrm{- 2}$일 때, 함수 $f (x)$의 극댓값을 구하시오.\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:=\":21.0,\"latex:x\":17.0,\"latex:2\":12.0,\"latex:(\":11.0,\"latex:)\":11.0,\"latex:-\":11.0,\"latex:\\\\left\":11.0,\"latex:\\\\right\":11.0,\"latex:f\":11.0,\"latex:+\":10.0,\"latex:1\":9.0,\"latex:6\":9.0,\"latex:a\":8.0,\"latex:b\":6.0,\"latex:'\":5.0,\"latex:^\":5.0,\"latex:{\":5.0,\"latex:}\":5.0,\"kiwi:에서\":4.0,\"latex:3\":4.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "13df98d2ea04d73b9de8d6203ca0ea60e6246ef166e2623aafd28c6ae6d736fa",
+  "input_sha256": "9a6d7902f5cf188aa95ecf55043af69e4e51f8281821ce9293f6f580adde02e5",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_2_030.txt",
+    "vector": "/workspace/MathHint/data/vectors/solutions/test_vectors.json",
+    "vocabulary": "/workspace/MathHint/data/vectors/solutions/vocabulary.json"
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "diff_3_048",
+  "condition": "A",
+  "method": "baseline",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "모든 실수 $x$에 대하여 부등식\n$3 x^{4} - 4 x^{3} - 12 x^{2} + k \\geq 0$\n이 항상 성립하도록 하는 실수 $k$의 최솟값을 구하시오.\n",
+  "problem_text": "모든 실수 $x$에 대하여 부등식\n$3 x^{4} - 4 x^{3} - 12 x^{2} + k \\geq 0$\n이 항상 성립하도록 하는 실수 $k$의 최솟값을 구하시오.\n",
+  "hint": null,
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n모든 실수 $x$에 대하여 부등식\n$3 x^{4} - 4 x^{3} - 12 x^{2} + k \\geq 0$\n이 항상 성립하도록 하는 실수 $k$의 최솟값을 구하시오.\n",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "모든 실수 $x$에 대하여 부등식\n$3 x^{4} - 4 x^{3} - 12 x^{2} + k \\geq 0$\n이 항상 성립하도록 하는 실수 $k$의 최솟값을 구하시오.\n",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "668bd918818c5143a8d572737b65a46f867c45dea6e3d540dcaef2180ffd35ca",
+  "input_sha256": "10e9fb381bec99ae9aad58beb9498e5395c41ff9f6ce0f80e88fed21692f83a2",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_3_048.txt",
+    "vector": null,
+    "vocabulary": null
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

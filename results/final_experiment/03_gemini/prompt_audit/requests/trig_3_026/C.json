@@ -1,0 +1,72 @@
+{
+  "id": "trig_3_026",
+  "condition": "C",
+  "method": "oracle_hint",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "$0 < x < 2 \\pi$일 때, 방정식 $\\cos^{2} x - \\sin x = 1$의 모든 실근의 합은 $\\frac{q}{p} \\pi$이다. $p + q$의 값을 구하시오.\n(단, $p$, $q$는 서로소인 자연수이다.)\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:x\":12.0,\"latex:=\":11.0,\"latex:{\":10.0,\"latex:}\":10.0,\"latex:\\\\sin\":9.0,\"latex:2\":7.0,\"latex:+\":5.0,\"latex:1\":5.0,\"latex:\\\\pi\":5.0,\"latex:-\":4.0,\"latex:0\":3.0,\"latex:\\\\frac\":3.0,\"latex:^\":3.0,\"kiwi:[\":2.0,\"kiwi:]\":2.0,\"kiwi:또는\":2.0,\"kiwi:이\":2.0,\"latex:(\":2.0,\"latex:)\":2.0,\"latex:3\":2.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "problem_text": "$0 < x < 2 \\pi$일 때, 방정식 $\\cos^{2} x - \\sin x = 1$의 모든 실근의 합은 $\\frac{q}{p} \\pi$이다. $p + q$의 값을 구하시오.\n(단, $p$, $q$는 서로소인 자연수이다.)\n",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:x": 12.0,
+      "latex:=": 11.0,
+      "latex:{": 10.0,
+      "latex:}": 10.0,
+      "latex:\\sin": 9.0,
+      "latex:2": 7.0,
+      "latex:+": 5.0,
+      "latex:1": 5.0,
+      "latex:\\pi": 5.0,
+      "latex:-": 4.0,
+      "latex:0": 3.0,
+      "latex:\\frac": 3.0,
+      "latex:^": 3.0,
+      "kiwi:[": 2.0,
+      "kiwi:]": 2.0,
+      "kiwi:또는": 2.0,
+      "kiwi:이": 2.0,
+      "latex:(": 2.0,
+      "latex:)": 2.0,
+      "latex:3": 2.0
+    },
+    "source": "actual_reference"
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n$0 < x < 2 \\pi$일 때, 방정식 $\\cos^{2} x - \\sin x = 1$의 모든 실근의 합은 $\\frac{q}{p} \\pi$이다. $p + q$의 값을 구하시오.\n(단, $p$, $q$는 서로소인 자연수이다.)\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:x\":12.0,\"latex:=\":11.0,\"latex:{\":10.0,\"latex:}\":10.0,\"latex:\\\\sin\":9.0,\"latex:2\":7.0,\"latex:+\":5.0,\"latex:1\":5.0,\"latex:\\\\pi\":5.0,\"latex:-\":4.0,\"latex:0\":3.0,\"latex:\\\\frac\":3.0,\"latex:^\":3.0,\"kiwi:[\":2.0,\"kiwi:]\":2.0,\"kiwi:또는\":2.0,\"kiwi:이\":2.0,\"latex:(\":2.0,\"latex:)\":2.0,\"latex:3\":2.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "$0 < x < 2 \\pi$일 때, 방정식 $\\cos^{2} x - \\sin x = 1$의 모든 실근의 합은 $\\frac{q}{p} \\pi$이다. $p + q$의 값을 구하시오.\n(단, $p$, $q$는 서로소인 자연수이다.)\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:x\":12.0,\"latex:=\":11.0,\"latex:{\":10.0,\"latex:}\":10.0,\"latex:\\\\sin\":9.0,\"latex:2\":7.0,\"latex:+\":5.0,\"latex:1\":5.0,\"latex:\\\\pi\":5.0,\"latex:-\":4.0,\"latex:0\":3.0,\"latex:\\\\frac\":3.0,\"latex:^\":3.0,\"kiwi:[\":2.0,\"kiwi:]\":2.0,\"kiwi:또는\":2.0,\"kiwi:이\":2.0,\"latex:(\":2.0,\"latex:)\":2.0,\"latex:3\":2.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "f7bffee0e0a0a695594ea31292152b0ea51e5f05b67dc94af10d70442bcebe10",
+  "input_sha256": "3879d346a5371cee9695cd015db63cead1c7dc46f6936df6ec7db4d1f6821883",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/trig_3_026.txt",
+    "vector": "/workspace/MathHint/data/vectors/solutions/test_vectors.json",
+    "vocabulary": "/workspace/MathHint/data/vectors/solutions/vocabulary.json"
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

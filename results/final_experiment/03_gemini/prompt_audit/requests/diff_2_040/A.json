@@ -1,0 +1,42 @@
+{
+  "id": "diff_2_040",
+  "condition": "A",
+  "method": "baseline",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "수직선 위를 움직이는 두 점 ${\\mathrm{{P}}}$, ${\\mathrm{{Q}}}$의 시각 $t \\quad \\left( t \\geq 0 \\right)$에서의 위치가 각각\n$x_{1} = t^{2} + t - 6$, $x_{2} = - t^{3} + 7 t^{2}$\n이다. 두 점 ${\\mathrm{{P}}}$, ${\\mathrm{{Q}}}$의 위치가 같아지는 순간 두 점 ${\\mathrm{{P}}}$, ${\\mathrm{{Q}}}$의 가속도를 각각 $p$, $q$라 할 때, $p - q$의 값은?\n① $\\mathrm{24}$\t\t② $\\mathrm{27}$\t\t③ $\\mathrm{30}$\n④ $\\mathrm{33}$\t\t⑤ $\\mathrm{36}$\n",
+  "problem_text": "수직선 위를 움직이는 두 점 ${\\mathrm{{P}}}$, ${\\mathrm{{Q}}}$의 시각 $t \\quad \\left( t \\geq 0 \\right)$에서의 위치가 각각\n$x_{1} = t^{2} + t - 6$, $x_{2} = - t^{3} + 7 t^{2}$\n이다. 두 점 ${\\mathrm{{P}}}$, ${\\mathrm{{Q}}}$의 위치가 같아지는 순간 두 점 ${\\mathrm{{P}}}$, ${\\mathrm{{Q}}}$의 가속도를 각각 $p$, $q$라 할 때, $p - q$의 값은?\n① $\\mathrm{24}$\t\t② $\\mathrm{27}$\t\t③ $\\mathrm{30}$\n④ $\\mathrm{33}$\t\t⑤ $\\mathrm{36}$\n",
+  "hint": null,
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n수직선 위를 움직이는 두 점 ${\\mathrm{{P}}}$, ${\\mathrm{{Q}}}$의 시각 $t \\quad \\left( t \\geq 0 \\right)$에서의 위치가 각각\n$x_{1} = t^{2} + t - 6$, $x_{2} = - t^{3} + 7 t^{2}$\n이다. 두 점 ${\\mathrm{{P}}}$, ${\\mathrm{{Q}}}$의 위치가 같아지는 순간 두 점 ${\\mathrm{{P}}}$, ${\\mathrm{{Q}}}$의 가속도를 각각 $p$, $q$라 할 때, $p - q$의 값은?\n① $\\mathrm{24}$\t\t② $\\mathrm{27}$\t\t③ $\\mathrm{30}$\n④ $\\mathrm{33}$\t\t⑤ $\\mathrm{36}$\n",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "수직선 위를 움직이는 두 점 ${\\mathrm{{P}}}$, ${\\mathrm{{Q}}}$의 시각 $t \\quad \\left( t \\geq 0 \\right)$에서의 위치가 각각\n$x_{1} = t^{2} + t - 6$, $x_{2} = - t^{3} + 7 t^{2}$\n이다. 두 점 ${\\mathrm{{P}}}$, ${\\mathrm{{Q}}}$의 위치가 같아지는 순간 두 점 ${\\mathrm{{P}}}$, ${\\mathrm{{Q}}}$의 가속도를 각각 $p$, $q$라 할 때, $p - q$의 값은?\n① $\\mathrm{24}$\t\t② $\\mathrm{27}$\t\t③ $\\mathrm{30}$\n④ $\\mathrm{33}$\t\t⑤ $\\mathrm{36}$\n",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "92c1ca27bec1520d0b091a31821664e1120e3b71e1e18b0f5970c0ae90b9600e",
+  "input_sha256": "f2750a74baeb2b88dbebea0df756a22be998aa4b7f0d11508bf307c3ea5345e3",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_2_040.txt",
+    "vector": null,
+    "vocabulary": null
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

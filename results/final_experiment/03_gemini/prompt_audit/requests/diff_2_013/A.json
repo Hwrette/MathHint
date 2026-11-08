@@ -1,0 +1,42 @@
+{
+  "id": "diff_2_013",
+  "condition": "A",
+  "method": "baseline",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "다항함수 $f (x)$에 대하여 $\\lim_{h \\rightarrow 0} \\frac{f \\left( 1 + 2 h \\right) - 4}{h} = 6$일 때, $f (1) + f' (1)$의 값은?\n① $\\mathrm{5}$\t\t② $\\mathrm{6}$\t\t③ $\\mathrm{7}$\n④ $\\mathrm{8}$\t\t⑤ $\\mathrm{9}$\n",
+  "problem_text": "다항함수 $f (x)$에 대하여 $\\lim_{h \\rightarrow 0} \\frac{f \\left( 1 + 2 h \\right) - 4}{h} = 6$일 때, $f (1) + f' (1)$의 값은?\n① $\\mathrm{5}$\t\t② $\\mathrm{6}$\t\t③ $\\mathrm{7}$\n④ $\\mathrm{8}$\t\t⑤ $\\mathrm{9}$\n",
+  "hint": null,
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n다항함수 $f (x)$에 대하여 $\\lim_{h \\rightarrow 0} \\frac{f \\left( 1 + 2 h \\right) - 4}{h} = 6$일 때, $f (1) + f' (1)$의 값은?\n① $\\mathrm{5}$\t\t② $\\mathrm{6}$\t\t③ $\\mathrm{7}$\n④ $\\mathrm{8}$\t\t⑤ $\\mathrm{9}$\n",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "다항함수 $f (x)$에 대하여 $\\lim_{h \\rightarrow 0} \\frac{f \\left( 1 + 2 h \\right) - 4}{h} = 6$일 때, $f (1) + f' (1)$의 값은?\n① $\\mathrm{5}$\t\t② $\\mathrm{6}$\t\t③ $\\mathrm{7}$\n④ $\\mathrm{8}$\t\t⑤ $\\mathrm{9}$\n",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "a4fdaadda9730ca20a9dfb1a62126f7f95c9cb4e2af9b8dd9ef0372aa7e1ec45",
+  "input_sha256": "c912af5ef47c41be3832a31bb0c793135a812506988d4494d2cbaa01937a980e",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_2_013.txt",
+    "vector": null,
+    "vocabulary": null
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "diff_1_022",
+  "condition": "C",
+  "method": "oracle_hint",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "다항함수 $f \\left( x \\right)$에 대하여 함수 $g \\left( x \\right)$를\n$g \\left( x \\right) = \\left( x^{2} + x \\right) f \\left( x \\right)$\n라 하자. $\\lim_{h \\rightarrow 0} \\frac{g \\left( 1 + h \\right) - 4}{h} = 9$일 때, $f \\left( 1 \\right) \\times f' \\left( 1 \\right)$의 값은?\n① $3$\t\t② $\\frac{9}{2}$\t\t③ $6$\n④ $\\frac{15}{2}$\t\t⑤ $9$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:(\":29.0,\"latex:)\":29.0,\"latex:\\\\left\":29.0,\"latex:\\\\right\":29.0,\"latex:1\":20.0,\"latex:=\":18.0,\"latex:{\":18.0,\"latex:}\":18.0,\"latex:h\":15.0,\"latex:g\":13.0,\"latex:+\":11.0,\"latex:f\":11.0,\"latex:2\":10.0,\"latex:x\":10.0,\"kiwi:이\":9.0,\"latex:'\":9.0,\"latex:0\":9.0,\"latex:-\":6.0,\"latex:4\":6.0,\"latex:\\\\lim\":6.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "problem_text": "다항함수 $f \\left( x \\right)$에 대하여 함수 $g \\left( x \\right)$를\n$g \\left( x \\right) = \\left( x^{2} + x \\right) f \\left( x \\right)$\n라 하자. $\\lim_{h \\rightarrow 0} \\frac{g \\left( 1 + h \\right) - 4}{h} = 9$일 때, $f \\left( 1 \\right) \\times f' \\left( 1 \\right)$의 값은?\n① $3$\t\t② $\\frac{9}{2}$\t\t③ $6$\n④ $\\frac{15}{2}$\t\t⑤ $9$\n",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:(": 29.0,
+      "latex:)": 29.0,
+      "latex:\\left": 29.0,
+      "latex:\\right": 29.0,
+      "latex:1": 20.0,
+      "latex:=": 18.0,
+      "latex:{": 18.0,
+      "latex:}": 18.0,
+      "latex:h": 15.0,
+      "latex:g": 13.0,
+      "latex:+": 11.0,
+      "latex:f": 11.0,
+      "latex:2": 10.0,
+      "latex:x": 10.0,
+      "kiwi:이": 9.0,
+      "latex:'": 9.0,
+      "latex:0": 9.0,
+      "latex:-": 6.0,
+      "latex:4": 6.0,
+      "latex:\\lim": 6.0
+    },
+    "source": "actual_reference"
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n다항함수 $f \\left( x \\right)$에 대하여 함수 $g \\left( x \\right)$를\n$g \\left( x \\right) = \\left( x^{2} + x \\right) f \\left( x \\right)$\n라 하자. $\\lim_{h \\rightarrow 0} \\frac{g \\left( 1 + h \\right) - 4}{h} = 9$일 때, $f \\left( 1 \\right) \\times f' \\left( 1 \\right)$의 값은?\n① $3$\t\t② $\\frac{9}{2}$\t\t③ $6$\n④ $\\frac{15}{2}$\t\t⑤ $9$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:(\":29.0,\"latex:)\":29.0,\"latex:\\\\left\":29.0,\"latex:\\\\right\":29.0,\"latex:1\":20.0,\"latex:=\":18.0,\"latex:{\":18.0,\"latex:}\":18.0,\"latex:h\":15.0,\"latex:g\":13.0,\"latex:+\":11.0,\"latex:f\":11.0,\"latex:2\":10.0,\"latex:x\":10.0,\"kiwi:이\":9.0,\"latex:'\":9.0,\"latex:0\":9.0,\"latex:-\":6.0,\"latex:4\":6.0,\"latex:\\\\lim\":6.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "다항함수 $f \\left( x \\right)$에 대하여 함수 $g \\left( x \\right)$를\n$g \\left( x \\right) = \\left( x^{2} + x \\right) f \\left( x \\right)$\n라 하자. $\\lim_{h \\rightarrow 0} \\frac{g \\left( 1 + h \\right) - 4}{h} = 9$일 때, $f \\left( 1 \\right) \\times f' \\left( 1 \\right)$의 값은?\n① $3$\t\t② $\\frac{9}{2}$\t\t③ $6$\n④ $\\frac{15}{2}$\t\t⑤ $9$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:(\":29.0,\"latex:)\":29.0,\"latex:\\\\left\":29.0,\"latex:\\\\right\":29.0,\"latex:1\":20.0,\"latex:=\":18.0,\"latex:{\":18.0,\"latex:}\":18.0,\"latex:h\":15.0,\"latex:g\":13.0,\"latex:+\":11.0,\"latex:f\":11.0,\"latex:2\":10.0,\"latex:x\":10.0,\"kiwi:이\":9.0,\"latex:'\":9.0,\"latex:0\":9.0,\"latex:-\":6.0,\"latex:4\":6.0,\"latex:\\\\lim\":6.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "dcd6f63fe72b65419ba2a35ae2db7060f77342ba74e24c0b3076e5c0acf399bf",
+  "input_sha256": "80d7c5c78b560e43d1e94fccf547d25e9f9fdf4e6ad8b236b65686f300960548",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_1_022.txt",
+    "vector": "/workspace/MathHint/data/vectors/solutions/test_vectors.json",
+    "vocabulary": "/workspace/MathHint/data/vectors/solutions/vocabulary.json"
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

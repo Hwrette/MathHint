@@ -1,0 +1,72 @@
+{
+  "id": "trig_1_020",
+  "condition": "B",
+  "method": "regression_hint",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "양수 $a$에 대하여 $\\frac{\\pi}{3} \\le x \\le \\frac{4}{3} \\pi$에서 정의된 함수\n$f \\left( x \\right) = 2 a \\cos x + a$\n의 최댓값과 최솟값의 곱이 $- 8$일 때, $a$의 값을 구하시오.\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:{\":9.109,\"latex:}\":8.866,\"latex:+\":6.136,\"latex:=\":5.814,\"kiwi:이\":4.779,\"latex:2\":4.553,\"latex:t\":4.226,\"latex:\\\\frac\":3.878,\"latex:\\\\left\":3.656,\"latex:\\\\right\":3.595,\"latex:\\\\pi\":3.455,\"latex:y\":3.384,\"latex:)\":3.125,\"latex:(\":3.104,\"latex:a\":2.75,\"latex:6\":2.585,\"latex:x\":2.489,\"latex:3\":2.413,\"latex:f\":2.209,\"latex:\\\\cdots\":2.003}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "problem_text": "양수 $a$에 대하여 $\\frac{\\pi}{3} \\le x \\le \\frac{4}{3} \\pi$에서 정의된 함수\n$f \\left( x \\right) = 2 a \\cos x + a$\n의 최댓값과 최솟값의 곱이 $- 8$일 때, $a$의 값을 구하시오.\n",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:{": 9.109,
+      "latex:}": 8.866,
+      "latex:+": 6.136,
+      "latex:=": 5.814,
+      "kiwi:이": 4.779,
+      "latex:2": 4.553,
+      "latex:t": 4.226,
+      "latex:\\frac": 3.878,
+      "latex:\\left": 3.656,
+      "latex:\\right": 3.595,
+      "latex:\\pi": 3.455,
+      "latex:y": 3.384,
+      "latex:)": 3.125,
+      "latex:(": 3.104,
+      "latex:a": 2.75,
+      "latex:6": 2.585,
+      "latex:x": 2.489,
+      "latex:3": 2.413,
+      "latex:f": 2.209,
+      "latex:\\cdots": 2.003
+    },
+    "source": "regression_prediction"
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n양수 $a$에 대하여 $\\frac{\\pi}{3} \\le x \\le \\frac{4}{3} \\pi$에서 정의된 함수\n$f \\left( x \\right) = 2 a \\cos x + a$\n의 최댓값과 최솟값의 곱이 $- 8$일 때, $a$의 값을 구하시오.\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:{\":9.109,\"latex:}\":8.866,\"latex:+\":6.136,\"latex:=\":5.814,\"kiwi:이\":4.779,\"latex:2\":4.553,\"latex:t\":4.226,\"latex:\\\\frac\":3.878,\"latex:\\\\left\":3.656,\"latex:\\\\right\":3.595,\"latex:\\\\pi\":3.455,\"latex:y\":3.384,\"latex:)\":3.125,\"latex:(\":3.104,\"latex:a\":2.75,\"latex:6\":2.585,\"latex:x\":2.489,\"latex:3\":2.413,\"latex:f\":2.209,\"latex:\\\\cdots\":2.003}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "양수 $a$에 대하여 $\\frac{\\pi}{3} \\le x \\le \\frac{4}{3} \\pi$에서 정의된 함수\n$f \\left( x \\right) = 2 a \\cos x + a$\n의 최댓값과 최솟값의 곱이 $- 8$일 때, $a$의 값을 구하시오.\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:{\":9.109,\"latex:}\":8.866,\"latex:+\":6.136,\"latex:=\":5.814,\"kiwi:이\":4.779,\"latex:2\":4.553,\"latex:t\":4.226,\"latex:\\\\frac\":3.878,\"latex:\\\\left\":3.656,\"latex:\\\\right\":3.595,\"latex:\\\\pi\":3.455,\"latex:y\":3.384,\"latex:)\":3.125,\"latex:(\":3.104,\"latex:a\":2.75,\"latex:6\":2.585,\"latex:x\":2.489,\"latex:3\":2.413,\"latex:f\":2.209,\"latex:\\\\cdots\":2.003}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "f1b0eb7b6a7a43339203686fc455ca4396725b9c5fe0892b8e54c334b95e4e5d",
+  "input_sha256": "4c60f8f3963c78a65f95d5317e410f50663458c2c46a712e30dde38803e9f59b",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/trig_1_020.txt",
+    "vector": "/workspace/MathHint/results/model_comparison_2026-11-07/01_회귀모델/regression_predictions.json",
+    "vocabulary": "/workspace/MathHint/data/vectors/solutions/vocabulary.json"
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

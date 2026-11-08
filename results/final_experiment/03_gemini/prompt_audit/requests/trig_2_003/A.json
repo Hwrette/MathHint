@@ -1,0 +1,42 @@
+{
+  "id": "trig_2_003",
+  "condition": "A",
+  "method": "baseline",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "좌표평면 위에 두 점 ${\\mathrm{{P}}} (a , b)$, $\\mathrm{Q} \\left( a^{2} , - 2 b^{2} \\right) \\quad \\left( a > 0 , b > 0 \\right)$이 있다. 두 동경 ${\\mathrm{{O P}}}$, ${\\mathrm{{O Q}}}$가 나타내는 각의 크기를 각각 $\\theta_{1}$, $\\theta_{2}$라 하자. $\\tan \\theta_{1} + \\tan \\theta_{2} = 0$일 때, $\\sin \\theta_{1}$의 값은?\n(단, ${\\mathrm{{O}}}$는 원점이고, $x$축의 양의 방향을 시초선으로 한다.)\n① $\\frac{2}{5}$\t\t② $\\frac{\\sqrt{5}}{5}$\t\t③ $\\frac{\\sqrt{6}}{5}$\n④ $\\frac{\\sqrt{7}}{5}$\t⑤ $\\frac{2 \\sqrt{2}}{5}$\n",
+  "problem_text": "좌표평면 위에 두 점 ${\\mathrm{{P}}} (a , b)$, $\\mathrm{Q} \\left( a^{2} , - 2 b^{2} \\right) \\quad \\left( a > 0 , b > 0 \\right)$이 있다. 두 동경 ${\\mathrm{{O P}}}$, ${\\mathrm{{O Q}}}$가 나타내는 각의 크기를 각각 $\\theta_{1}$, $\\theta_{2}$라 하자. $\\tan \\theta_{1} + \\tan \\theta_{2} = 0$일 때, $\\sin \\theta_{1}$의 값은?\n(단, ${\\mathrm{{O}}}$는 원점이고, $x$축의 양의 방향을 시초선으로 한다.)\n① $\\frac{2}{5}$\t\t② $\\frac{\\sqrt{5}}{5}$\t\t③ $\\frac{\\sqrt{6}}{5}$\n④ $\\frac{\\sqrt{7}}{5}$\t⑤ $\\frac{2 \\sqrt{2}}{5}$\n",
+  "hint": null,
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n좌표평면 위에 두 점 ${\\mathrm{{P}}} (a , b)$, $\\mathrm{Q} \\left( a^{2} , - 2 b^{2} \\right) \\quad \\left( a > 0 , b > 0 \\right)$이 있다. 두 동경 ${\\mathrm{{O P}}}$, ${\\mathrm{{O Q}}}$가 나타내는 각의 크기를 각각 $\\theta_{1}$, $\\theta_{2}$라 하자. $\\tan \\theta_{1} + \\tan \\theta_{2} = 0$일 때, $\\sin \\theta_{1}$의 값은?\n(단, ${\\mathrm{{O}}}$는 원점이고, $x$축의 양의 방향을 시초선으로 한다.)\n① $\\frac{2}{5}$\t\t② $\\frac{\\sqrt{5}}{5}$\t\t③ $\\frac{\\sqrt{6}}{5}$\n④ $\\frac{\\sqrt{7}}{5}$\t⑤ $\\frac{2 \\sqrt{2}}{5}$\n",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "좌표평면 위에 두 점 ${\\mathrm{{P}}} (a , b)$, $\\mathrm{Q} \\left( a^{2} , - 2 b^{2} \\right) \\quad \\left( a > 0 , b > 0 \\right)$이 있다. 두 동경 ${\\mathrm{{O P}}}$, ${\\mathrm{{O Q}}}$가 나타내는 각의 크기를 각각 $\\theta_{1}$, $\\theta_{2}$라 하자. $\\tan \\theta_{1} + \\tan \\theta_{2} = 0$일 때, $\\sin \\theta_{1}$의 값은?\n(단, ${\\mathrm{{O}}}$는 원점이고, $x$축의 양의 방향을 시초선으로 한다.)\n① $\\frac{2}{5}$\t\t② $\\frac{\\sqrt{5}}{5}$\t\t③ $\\frac{\\sqrt{6}}{5}$\n④ $\\frac{\\sqrt{7}}{5}$\t⑤ $\\frac{2 \\sqrt{2}}{5}$\n",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "614e3fcaa4b175e7ca6bf89fb5079be4e2ec4474342a3d5fae7e2552c4dc07de",
+  "input_sha256": "a0169eefdb5a835921ddfdc54fc4dc24c127f79d7b24f1d2a70a5eb499d9a812",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/trig_2_003.txt",
+    "vector": null,
+    "vocabulary": null
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

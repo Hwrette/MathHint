@@ -1,0 +1,42 @@
+{
+  "id": "diff_2_037",
+  "condition": "A",
+  "method": "baseline",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "두 곡선\n$y = 2 x^{2} - 1$, $y = x^{3} - x^{2} + k$\n가 만나는 점의 개수가 $\\mathrm{2}$가 되도록 하는 양수 $k$의 값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+  "problem_text": "두 곡선\n$y = 2 x^{2} - 1$, $y = x^{3} - x^{2} + k$\n가 만나는 점의 개수가 $\\mathrm{2}$가 되도록 하는 양수 $k$의 값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+  "hint": null,
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n두 곡선\n$y = 2 x^{2} - 1$, $y = x^{3} - x^{2} + k$\n가 만나는 점의 개수가 $\\mathrm{2}$가 되도록 하는 양수 $k$의 값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "두 곡선\n$y = 2 x^{2} - 1$, $y = x^{3} - x^{2} + k$\n가 만나는 점의 개수가 $\\mathrm{2}$가 되도록 하는 양수 $k$의 값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "c6a168124b5f2f0975216cfcfee116db58196d300b18ece5cc3bef4e529abd07",
+  "input_sha256": "dd1fff512c41081aea050729b60173cde1bb132d9cf5d6a7de513957dbcf70d3",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_2_037.txt",
+    "vector": null,
+    "vocabulary": null
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

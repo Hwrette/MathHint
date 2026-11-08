@@ -1,0 +1,42 @@
+{
+  "id": "trig_2_007",
+  "condition": "A",
+  "method": "baseline",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "$\\frac{\\pi}{2} < \\theta < \\pi$인 $\\theta$에 대하여 $\\sin^{4} \\theta + \\cos^{4} \\theta = \\frac{23}{32}$일 때, $\\sin \\theta - \\cos \\theta$의 값은?\n① $\\frac{\\sqrt{3}}{2}$\t② $1$\t\t③ $\\frac{\\sqrt{5}}{2}$\n④ $\\frac{\\sqrt{6}}{2}$\t⑤ $\\frac{\\sqrt{7}}{2}$\n",
+  "problem_text": "$\\frac{\\pi}{2} < \\theta < \\pi$인 $\\theta$에 대하여 $\\sin^{4} \\theta + \\cos^{4} \\theta = \\frac{23}{32}$일 때, $\\sin \\theta - \\cos \\theta$의 값은?\n① $\\frac{\\sqrt{3}}{2}$\t② $1$\t\t③ $\\frac{\\sqrt{5}}{2}$\n④ $\\frac{\\sqrt{6}}{2}$\t⑤ $\\frac{\\sqrt{7}}{2}$\n",
+  "hint": null,
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n$\\frac{\\pi}{2} < \\theta < \\pi$인 $\\theta$에 대하여 $\\sin^{4} \\theta + \\cos^{4} \\theta = \\frac{23}{32}$일 때, $\\sin \\theta - \\cos \\theta$의 값은?\n① $\\frac{\\sqrt{3}}{2}$\t② $1$\t\t③ $\\frac{\\sqrt{5}}{2}$\n④ $\\frac{\\sqrt{6}}{2}$\t⑤ $\\frac{\\sqrt{7}}{2}$\n",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "$\\frac{\\pi}{2} < \\theta < \\pi$인 $\\theta$에 대하여 $\\sin^{4} \\theta + \\cos^{4} \\theta = \\frac{23}{32}$일 때, $\\sin \\theta - \\cos \\theta$의 값은?\n① $\\frac{\\sqrt{3}}{2}$\t② $1$\t\t③ $\\frac{\\sqrt{5}}{2}$\n④ $\\frac{\\sqrt{6}}{2}$\t⑤ $\\frac{\\sqrt{7}}{2}$\n",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "acba3218d73067116dbd5b4a539567756a1e2eeb02c746e442cc204cc1ac36cf",
+  "input_sha256": "60f253373a01f17093b354800766e4ea70c29bc78e0958e47042d8658bd4c27a",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/trig_2_007.txt",
+    "vector": null,
+    "vocabulary": null
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

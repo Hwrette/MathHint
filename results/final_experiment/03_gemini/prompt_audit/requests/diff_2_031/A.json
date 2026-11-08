@@ -1,0 +1,42 @@
+{
+  "id": "diff_2_031",
+  "condition": "A",
+  "method": "baseline",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "함수 $f \\left( x \\right) = x^{3} - 3 x + 2 a$의 극솟값이 $a + 3$일 때, 함수 $f \\left( x \\right)$의 극댓값은? (단, $a$는 상수이다.)\n① $\\mathrm{11}$\t\t② $\\mathrm{12}$\t\t③ $\\mathrm{13}$\n④ $\\mathrm{14}$\t\t⑤ $\\mathrm{15}$\n",
+  "problem_text": "함수 $f \\left( x \\right) = x^{3} - 3 x + 2 a$의 극솟값이 $a + 3$일 때, 함수 $f \\left( x \\right)$의 극댓값은? (단, $a$는 상수이다.)\n① $\\mathrm{11}$\t\t② $\\mathrm{12}$\t\t③ $\\mathrm{13}$\n④ $\\mathrm{14}$\t\t⑤ $\\mathrm{15}$\n",
+  "hint": null,
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n함수 $f \\left( x \\right) = x^{3} - 3 x + 2 a$의 극솟값이 $a + 3$일 때, 함수 $f \\left( x \\right)$의 극댓값은? (단, $a$는 상수이다.)\n① $\\mathrm{11}$\t\t② $\\mathrm{12}$\t\t③ $\\mathrm{13}$\n④ $\\mathrm{14}$\t\t⑤ $\\mathrm{15}$\n",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "함수 $f \\left( x \\right) = x^{3} - 3 x + 2 a$의 극솟값이 $a + 3$일 때, 함수 $f \\left( x \\right)$의 극댓값은? (단, $a$는 상수이다.)\n① $\\mathrm{11}$\t\t② $\\mathrm{12}$\t\t③ $\\mathrm{13}$\n④ $\\mathrm{14}$\t\t⑤ $\\mathrm{15}$\n",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "06a68805af222283cb8059e400f1a1eccaa7861195ea81a6115be97f4593f88c",
+  "input_sha256": "66198b4d4da60e48125cf891bc8126e1f06226a2f35ddfbb36bd9202ac2fa25f",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_2_031.txt",
+    "vector": null,
+    "vocabulary": null
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

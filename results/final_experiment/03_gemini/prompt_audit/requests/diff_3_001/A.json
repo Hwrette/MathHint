@@ -1,0 +1,42 @@
+{
+  "id": "diff_3_001",
+  "condition": "A",
+  "method": "baseline",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "함수 $f (x)$가 모든 실수 $x$에 대하여\n$2 x + 1 \\leq f (x) \\leq (x + 1)^{2}$\n을 만족시킬 때, $\\lim_{x \\rightarrow 0} (x + 5) f (x)$의 값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+  "problem_text": "함수 $f (x)$가 모든 실수 $x$에 대하여\n$2 x + 1 \\leq f (x) \\leq (x + 1)^{2}$\n을 만족시킬 때, $\\lim_{x \\rightarrow 0} (x + 5) f (x)$의 값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+  "hint": null,
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n함수 $f (x)$가 모든 실수 $x$에 대하여\n$2 x + 1 \\leq f (x) \\leq (x + 1)^{2}$\n을 만족시킬 때, $\\lim_{x \\rightarrow 0} (x + 5) f (x)$의 값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "함수 $f (x)$가 모든 실수 $x$에 대하여\n$2 x + 1 \\leq f (x) \\leq (x + 1)^{2}$\n을 만족시킬 때, $\\lim_{x \\rightarrow 0} (x + 5) f (x)$의 값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "49fd3507d2fcf5e75d25130827f27f177417b2efd863318b2fceb2d3365a4f9a",
+  "input_sha256": "bb8c9d85d0cfb5c136c6a0625858d04744077656ac9a35603731fad601e26975",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_3_001.txt",
+    "vector": null,
+    "vocabulary": null
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

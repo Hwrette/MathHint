@@ -1,0 +1,72 @@
+{
+  "id": "diff_2_024",
+  "condition": "C",
+  "method": "oracle_hint",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "최고차항의 계수가 $\\mathrm{1}$인 삼차함수 $f (x)$에 대하여 곡선 $y = f (x)$ 위의 점 $(- 2 , f (- 2))$에서의 접선과 곡선 $y = f (x)$ 위의 점 $(2 , 3)$에서의 접선이 점 $(1 , 3)$에서 만날 때, $f (0)$의 값은?\n① $\\mathrm{31}$\t\t② $\\mathrm{33}$\t\t③ $\\mathrm{35}$\n④ $\\mathrm{37}$\t\t⑤ $\\mathrm{39}$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:(\":23.0,\"latex:)\":23.0,\"latex:\\\\left\":23.0,\"latex:\\\\right\":23.0,\"latex:-\":17.0,\"latex:=\":16.0,\"latex:x\":15.0,\"latex:2\":14.0,\"latex:3\":10.0,\"latex:a\":10.0,\"latex:f\":10.0,\"latex:+\":7.0,\"kiwi:의\":6.0,\"latex:y\":6.0,\"kiwi:이\":5.0,\"latex:8\":5.0,\"kiwi:점\":4.0,\"latex:,\":4.0,\"kiwi:,\":3.0,\"kiwi:므로\":3.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "problem_text": "최고차항의 계수가 $\\mathrm{1}$인 삼차함수 $f (x)$에 대하여 곡선 $y = f (x)$ 위의 점 $(- 2 , f (- 2))$에서의 접선과 곡선 $y = f (x)$ 위의 점 $(2 , 3)$에서의 접선이 점 $(1 , 3)$에서 만날 때, $f (0)$의 값은?\n① $\\mathrm{31}$\t\t② $\\mathrm{33}$\t\t③ $\\mathrm{35}$\n④ $\\mathrm{37}$\t\t⑤ $\\mathrm{39}$\n",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:(": 23.0,
+      "latex:)": 23.0,
+      "latex:\\left": 23.0,
+      "latex:\\right": 23.0,
+      "latex:-": 17.0,
+      "latex:=": 16.0,
+      "latex:x": 15.0,
+      "latex:2": 14.0,
+      "latex:3": 10.0,
+      "latex:a": 10.0,
+      "latex:f": 10.0,
+      "latex:+": 7.0,
+      "kiwi:의": 6.0,
+      "latex:y": 6.0,
+      "kiwi:이": 5.0,
+      "latex:8": 5.0,
+      "kiwi:점": 4.0,
+      "latex:,": 4.0,
+      "kiwi:,": 3.0,
+      "kiwi:므로": 3.0
+    },
+    "source": "actual_reference"
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n최고차항의 계수가 $\\mathrm{1}$인 삼차함수 $f (x)$에 대하여 곡선 $y = f (x)$ 위의 점 $(- 2 , f (- 2))$에서의 접선과 곡선 $y = f (x)$ 위의 점 $(2 , 3)$에서의 접선이 점 $(1 , 3)$에서 만날 때, $f (0)$의 값은?\n① $\\mathrm{31}$\t\t② $\\mathrm{33}$\t\t③ $\\mathrm{35}$\n④ $\\mathrm{37}$\t\t⑤ $\\mathrm{39}$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:(\":23.0,\"latex:)\":23.0,\"latex:\\\\left\":23.0,\"latex:\\\\right\":23.0,\"latex:-\":17.0,\"latex:=\":16.0,\"latex:x\":15.0,\"latex:2\":14.0,\"latex:3\":10.0,\"latex:a\":10.0,\"latex:f\":10.0,\"latex:+\":7.0,\"kiwi:의\":6.0,\"latex:y\":6.0,\"kiwi:이\":5.0,\"latex:8\":5.0,\"kiwi:점\":4.0,\"latex:,\":4.0,\"kiwi:,\":3.0,\"kiwi:므로\":3.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "최고차항의 계수가 $\\mathrm{1}$인 삼차함수 $f (x)$에 대하여 곡선 $y = f (x)$ 위의 점 $(- 2 , f (- 2))$에서의 접선과 곡선 $y = f (x)$ 위의 점 $(2 , 3)$에서의 접선이 점 $(1 , 3)$에서 만날 때, $f (0)$의 값은?\n① $\\mathrm{31}$\t\t② $\\mathrm{33}$\t\t③ $\\mathrm{35}$\n④ $\\mathrm{37}$\t\t⑤ $\\mathrm{39}$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:(\":23.0,\"latex:)\":23.0,\"latex:\\\\left\":23.0,\"latex:\\\\right\":23.0,\"latex:-\":17.0,\"latex:=\":16.0,\"latex:x\":15.0,\"latex:2\":14.0,\"latex:3\":10.0,\"latex:a\":10.0,\"latex:f\":10.0,\"latex:+\":7.0,\"kiwi:의\":6.0,\"latex:y\":6.0,\"kiwi:이\":5.0,\"latex:8\":5.0,\"kiwi:점\":4.0,\"latex:,\":4.0,\"kiwi:,\":3.0,\"kiwi:므로\":3.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "0b0f8f3c24a199a91942f8ad4cacd5eab80e343244110de1711349ef084ce6e1",
+  "input_sha256": "995816bfc14a2424bd8d3914ccf60c3f42f4926c1d237fe9a42bc3c3dda73841",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_2_024.txt",
+    "vector": "/workspace/MathHint/data/vectors/solutions/test_vectors.json",
+    "vocabulary": "/workspace/MathHint/data/vectors/solutions/vocabulary.json"
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

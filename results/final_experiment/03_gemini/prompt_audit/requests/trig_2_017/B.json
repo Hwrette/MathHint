@@ -1,0 +1,72 @@
+{
+  "id": "trig_2_017",
+  "condition": "B",
+  "method": "regression_hint",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "$\\frac{3}{2} \\pi < \\theta < 2 \\pi$인 $\\theta$에 대하여 $\\sin \\left( - \\theta \\right) = \\frac{1}{3}$일 때, $\\tan \\theta$의 값은?\n① $- \\frac{\\sqrt{2}}{2}$\t② $- \\frac{\\sqrt{2}}{4}$\t③ $- \\frac{1}{4}$\n④ $\\frac{1}{4}$\t\t⑤ $\\frac{\\sqrt{2}}{4}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:}\":24.632,\"latex:{\":24.376,\"latex:\\\\theta\":12.209,\"latex:2\":11.584,\"latex:\\\\frac\":7.624,\"latex:=\":7.28,\"latex:\\\\sin\":4.899,\"latex:\\\\pi\":4.814,\"latex:-\":4.785,\"latex:4\":4.728,\"latex:1\":3.938,\"latex:^\":3.538,\"latex:\\\\sqrt\":3.197,\"latex:)\":2.265,\"latex:(\":2.213,\"latex:t\":2.131,\"latex:\\\\cos\":1.995,\"latex:10\":1.923,\"kiwi:]\":1.881,\"kiwi:[\":1.872}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "problem_text": "$\\frac{3}{2} \\pi < \\theta < 2 \\pi$인 $\\theta$에 대하여 $\\sin \\left( - \\theta \\right) = \\frac{1}{3}$일 때, $\\tan \\theta$의 값은?\n① $- \\frac{\\sqrt{2}}{2}$\t② $- \\frac{\\sqrt{2}}{4}$\t③ $- \\frac{1}{4}$\n④ $\\frac{1}{4}$\t\t⑤ $\\frac{\\sqrt{2}}{4}$\n",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:}": 24.632,
+      "latex:{": 24.376,
+      "latex:\\theta": 12.209,
+      "latex:2": 11.584,
+      "latex:\\frac": 7.624,
+      "latex:=": 7.28,
+      "latex:\\sin": 4.899,
+      "latex:\\pi": 4.814,
+      "latex:-": 4.785,
+      "latex:4": 4.728,
+      "latex:1": 3.938,
+      "latex:^": 3.538,
+      "latex:\\sqrt": 3.197,
+      "latex:)": 2.265,
+      "latex:(": 2.213,
+      "latex:t": 2.131,
+      "latex:\\cos": 1.995,
+      "latex:10": 1.923,
+      "kiwi:]": 1.881,
+      "kiwi:[": 1.872
+    },
+    "source": "regression_prediction"
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n$\\frac{3}{2} \\pi < \\theta < 2 \\pi$인 $\\theta$에 대하여 $\\sin \\left( - \\theta \\right) = \\frac{1}{3}$일 때, $\\tan \\theta$의 값은?\n① $- \\frac{\\sqrt{2}}{2}$\t② $- \\frac{\\sqrt{2}}{4}$\t③ $- \\frac{1}{4}$\n④ $\\frac{1}{4}$\t\t⑤ $\\frac{\\sqrt{2}}{4}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:}\":24.632,\"latex:{\":24.376,\"latex:\\\\theta\":12.209,\"latex:2\":11.584,\"latex:\\\\frac\":7.624,\"latex:=\":7.28,\"latex:\\\\sin\":4.899,\"latex:\\\\pi\":4.814,\"latex:-\":4.785,\"latex:4\":4.728,\"latex:1\":3.938,\"latex:^\":3.538,\"latex:\\\\sqrt\":3.197,\"latex:)\":2.265,\"latex:(\":2.213,\"latex:t\":2.131,\"latex:\\\\cos\":1.995,\"latex:10\":1.923,\"kiwi:]\":1.881,\"kiwi:[\":1.872}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "$\\frac{3}{2} \\pi < \\theta < 2 \\pi$인 $\\theta$에 대하여 $\\sin \\left( - \\theta \\right) = \\frac{1}{3}$일 때, $\\tan \\theta$의 값은?\n① $- \\frac{\\sqrt{2}}{2}$\t② $- \\frac{\\sqrt{2}}{4}$\t③ $- \\frac{1}{4}$\n④ $\\frac{1}{4}$\t\t⑤ $\\frac{\\sqrt{2}}{4}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:}\":24.632,\"latex:{\":24.376,\"latex:\\\\theta\":12.209,\"latex:2\":11.584,\"latex:\\\\frac\":7.624,\"latex:=\":7.28,\"latex:\\\\sin\":4.899,\"latex:\\\\pi\":4.814,\"latex:-\":4.785,\"latex:4\":4.728,\"latex:1\":3.938,\"latex:^\":3.538,\"latex:\\\\sqrt\":3.197,\"latex:)\":2.265,\"latex:(\":2.213,\"latex:t\":2.131,\"latex:\\\\cos\":1.995,\"latex:10\":1.923,\"kiwi:]\":1.881,\"kiwi:[\":1.872}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "2c6a53e0d77e79174df460b4d7fa999216da2df86cdbb880bb8500d82141a2d9",
+  "input_sha256": "f1a896b46bc863b76ee7e85fec583ddf37cc639a919e3b97282769b5d3e9e404",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/trig_2_017.txt",
+    "vector": "/workspace/MathHint/results/model_comparison_2026-11-07/01_회귀모델/regression_predictions.json",
+    "vocabulary": "/workspace/MathHint/data/vectors/solutions/vocabulary.json"
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

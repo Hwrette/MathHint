@@ -1,0 +1,72 @@
+{
+  "id": "trig_2_014",
+  "condition": "B",
+  "method": "regression_hint",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "두 상수 $a , \\quad b$에 대하여 함수 $f \\left( x \\right) = 4 \\cos \\frac{\\pi}{a} x + b$의 주기가 $4$이고 최솟값이 $- 1$일 때, $a + b$의 값은? (단, $a > 0$)\n① $5$\t\t② $7$\t\t③ $9$\n④ $11$\t\t⑤ $13$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:a\":9.851,\"latex:+\":7.815,\"latex:=\":6.484,\"latex:x\":5.599,\"latex:-\":5.231,\"latex:}\":4.785,\"latex:\\\\pi\":4.779,\"latex:{\":4.473,\"latex:t\":4.362,\"latex:\\\\therefore\":3.502,\"latex:)\":3.428,\"latex:(\":3.313,\"latex:1\":3.137,\"latex:b\":2.98,\"latex:10\":2.389,\"kiwi:이\":2.212,\"latex:4\":2.064,\"kiwi:]\":2.034,\"kiwi:[\":1.951,\"kiwi:의\":1.879}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "problem_text": "두 상수 $a , \\quad b$에 대하여 함수 $f \\left( x \\right) = 4 \\cos \\frac{\\pi}{a} x + b$의 주기가 $4$이고 최솟값이 $- 1$일 때, $a + b$의 값은? (단, $a > 0$)\n① $5$\t\t② $7$\t\t③ $9$\n④ $11$\t\t⑤ $13$\n",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:a": 9.851,
+      "latex:+": 7.815,
+      "latex:=": 6.484,
+      "latex:x": 5.599,
+      "latex:-": 5.231,
+      "latex:}": 4.785,
+      "latex:\\pi": 4.779,
+      "latex:{": 4.473,
+      "latex:t": 4.362,
+      "latex:\\therefore": 3.502,
+      "latex:)": 3.428,
+      "latex:(": 3.313,
+      "latex:1": 3.137,
+      "latex:b": 2.98,
+      "latex:10": 2.389,
+      "kiwi:이": 2.212,
+      "latex:4": 2.064,
+      "kiwi:]": 2.034,
+      "kiwi:[": 1.951,
+      "kiwi:의": 1.879
+    },
+    "source": "regression_prediction"
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n두 상수 $a , \\quad b$에 대하여 함수 $f \\left( x \\right) = 4 \\cos \\frac{\\pi}{a} x + b$의 주기가 $4$이고 최솟값이 $- 1$일 때, $a + b$의 값은? (단, $a > 0$)\n① $5$\t\t② $7$\t\t③ $9$\n④ $11$\t\t⑤ $13$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:a\":9.851,\"latex:+\":7.815,\"latex:=\":6.484,\"latex:x\":5.599,\"latex:-\":5.231,\"latex:}\":4.785,\"latex:\\\\pi\":4.779,\"latex:{\":4.473,\"latex:t\":4.362,\"latex:\\\\therefore\":3.502,\"latex:)\":3.428,\"latex:(\":3.313,\"latex:1\":3.137,\"latex:b\":2.98,\"latex:10\":2.389,\"kiwi:이\":2.212,\"latex:4\":2.064,\"kiwi:]\":2.034,\"kiwi:[\":1.951,\"kiwi:의\":1.879}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "두 상수 $a , \\quad b$에 대하여 함수 $f \\left( x \\right) = 4 \\cos \\frac{\\pi}{a} x + b$의 주기가 $4$이고 최솟값이 $- 1$일 때, $a + b$의 값은? (단, $a > 0$)\n① $5$\t\t② $7$\t\t③ $9$\n④ $11$\t\t⑤ $13$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:a\":9.851,\"latex:+\":7.815,\"latex:=\":6.484,\"latex:x\":5.599,\"latex:-\":5.231,\"latex:}\":4.785,\"latex:\\\\pi\":4.779,\"latex:{\":4.473,\"latex:t\":4.362,\"latex:\\\\therefore\":3.502,\"latex:)\":3.428,\"latex:(\":3.313,\"latex:1\":3.137,\"latex:b\":2.98,\"latex:10\":2.389,\"kiwi:이\":2.212,\"latex:4\":2.064,\"kiwi:]\":2.034,\"kiwi:[\":1.951,\"kiwi:의\":1.879}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "cba9a6b35e01b5dfe4efc05e19775ccc214ecf82dc62230158276315d4688bc9",
+  "input_sha256": "38af714662905a28e86eb1ad4c5848003aafa74c58a26e6b15041fa310975787",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/trig_2_014.txt",
+    "vector": "/workspace/MathHint/results/model_comparison_2026-11-07/01_회귀모델/regression_predictions.json",
+    "vocabulary": "/workspace/MathHint/data/vectors/solutions/vocabulary.json"
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

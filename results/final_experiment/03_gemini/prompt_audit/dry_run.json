@@ -1,0 +1,18 @@
+{
+  "requests": 240,
+  "ids": 80,
+  "conditions": [
+    "A",
+    "B",
+    "C"
+  ],
+  "mocked_sdk_calls": 240,
+  "live_api_calls": 0,
+  "all_saved_requests_match_mocked_sdk_arguments": true,
+  "json_roundtrip_preserves_latex": true,
+  "source_code_audit": {
+    "GoogleAPI.py": "Standalone legacy one-question tool sends original problem unchanged; display-only to_math_markdown runs after API. Final experiment does not use this tool or its different system setting.",
+    "CompareGeneration.py": "make_request shares SDK arguments helper and observer immediately before client.models.generate_content.",
+    "RateLimitedComparison.py": "GlobalRateLimiter only gates starts/retries; input text passed unchanged."
+  }
+}

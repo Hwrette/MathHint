@@ -1,0 +1,72 @@
+{
+  "id": "trig_3_002",
+  "condition": "C",
+  "method": "oracle_hint",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "이차방정식 ${x^{2} - k}$$= 0$이 서로 다른 두 실근 $6 \\cos \\theta$, $5 \\tan \\theta$를 가질 때, 상수 $k$의 값을 구하시오.\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:\\\\theta\":15.0,\"kiwi:이\":12.0,\"latex:-\":11.0,\"latex:=\":11.0,\"latex:2\":9.0,\"latex:\\\\sin\":9.0,\"latex:{\":9.0,\"latex:}\":9.0,\"latex:0\":7.0,\"latex:^\":6.0,\"latex:6\":5.0,\"kiwi:므로\":4.0,\"kiwi:의\":4.0,\"latex:5\":4.0,\"latex:\\\\cos\":4.0,\"latex:k\":4.0,\"latex:+\":3.0,\"latex:1\":3.0,\"latex:3\":3.0,\"kiwi:[\":2.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "problem_text": "이차방정식 ${x^{2} - k}$$= 0$이 서로 다른 두 실근 $6 \\cos \\theta$, $5 \\tan \\theta$를 가질 때, 상수 $k$의 값을 구하시오.\n",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:\\theta": 15.0,
+      "kiwi:이": 12.0,
+      "latex:-": 11.0,
+      "latex:=": 11.0,
+      "latex:2": 9.0,
+      "latex:\\sin": 9.0,
+      "latex:{": 9.0,
+      "latex:}": 9.0,
+      "latex:0": 7.0,
+      "latex:^": 6.0,
+      "latex:6": 5.0,
+      "kiwi:므로": 4.0,
+      "kiwi:의": 4.0,
+      "latex:5": 4.0,
+      "latex:\\cos": 4.0,
+      "latex:k": 4.0,
+      "latex:+": 3.0,
+      "latex:1": 3.0,
+      "latex:3": 3.0,
+      "kiwi:[": 2.0
+    },
+    "source": "actual_reference"
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n이차방정식 ${x^{2} - k}$$= 0$이 서로 다른 두 실근 $6 \\cos \\theta$, $5 \\tan \\theta$를 가질 때, 상수 $k$의 값을 구하시오.\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:\\\\theta\":15.0,\"kiwi:이\":12.0,\"latex:-\":11.0,\"latex:=\":11.0,\"latex:2\":9.0,\"latex:\\\\sin\":9.0,\"latex:{\":9.0,\"latex:}\":9.0,\"latex:0\":7.0,\"latex:^\":6.0,\"latex:6\":5.0,\"kiwi:므로\":4.0,\"kiwi:의\":4.0,\"latex:5\":4.0,\"latex:\\\\cos\":4.0,\"latex:k\":4.0,\"latex:+\":3.0,\"latex:1\":3.0,\"latex:3\":3.0,\"kiwi:[\":2.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "이차방정식 ${x^{2} - k}$$= 0$이 서로 다른 두 실근 $6 \\cos \\theta$, $5 \\tan \\theta$를 가질 때, 상수 $k$의 값을 구하시오.\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:\\\\theta\":15.0,\"kiwi:이\":12.0,\"latex:-\":11.0,\"latex:=\":11.0,\"latex:2\":9.0,\"latex:\\\\sin\":9.0,\"latex:{\":9.0,\"latex:}\":9.0,\"latex:0\":7.0,\"latex:^\":6.0,\"latex:6\":5.0,\"kiwi:므로\":4.0,\"kiwi:의\":4.0,\"latex:5\":4.0,\"latex:\\\\cos\":4.0,\"latex:k\":4.0,\"latex:+\":3.0,\"latex:1\":3.0,\"latex:3\":3.0,\"kiwi:[\":2.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "5aba98b918b30f8954d9ecb25045ca2d8d48ae7f938280bf8774b14d8036f83b",
+  "input_sha256": "089c655ab5d52a55aaaca5661c940ddd4e027a207230a2e19bebdb8d5d22aba3",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/trig_3_002.txt",
+    "vector": "/workspace/MathHint/data/vectors/solutions/test_vectors.json",
+    "vocabulary": "/workspace/MathHint/data/vectors/solutions/vocabulary.json"
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

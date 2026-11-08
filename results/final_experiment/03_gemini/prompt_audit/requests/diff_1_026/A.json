@@ -1,0 +1,42 @@
+{
+  "id": "diff_1_026",
+  "condition": "A",
+  "method": "baseline",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "양수 $t$에 대하여 함수 $f \\left( x \\right) = 2 x^{3} - 7 x^{2} + 1$의 그래프 위의 점 $\\left( t , f \\left( t \\right) \\right)$에서의 접선이 점 $\\left( 0 , 1 \\right)$을 지나도록 하는 $t$의 값은?\n① $\\frac{3}{4}$\t\t② $1$\t\t③ $\\frac{5}{4}$\n④ $\\frac{3}{2}$\t\t⑤ $\\frac{7}{4}$\n",
+  "problem_text": "양수 $t$에 대하여 함수 $f \\left( x \\right) = 2 x^{3} - 7 x^{2} + 1$의 그래프 위의 점 $\\left( t , f \\left( t \\right) \\right)$에서의 접선이 점 $\\left( 0 , 1 \\right)$을 지나도록 하는 $t$의 값은?\n① $\\frac{3}{4}$\t\t② $1$\t\t③ $\\frac{5}{4}$\n④ $\\frac{3}{2}$\t\t⑤ $\\frac{7}{4}$\n",
+  "hint": null,
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n양수 $t$에 대하여 함수 $f \\left( x \\right) = 2 x^{3} - 7 x^{2} + 1$의 그래프 위의 점 $\\left( t , f \\left( t \\right) \\right)$에서의 접선이 점 $\\left( 0 , 1 \\right)$을 지나도록 하는 $t$의 값은?\n① $\\frac{3}{4}$\t\t② $1$\t\t③ $\\frac{5}{4}$\n④ $\\frac{3}{2}$\t\t⑤ $\\frac{7}{4}$\n",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "양수 $t$에 대하여 함수 $f \\left( x \\right) = 2 x^{3} - 7 x^{2} + 1$의 그래프 위의 점 $\\left( t , f \\left( t \\right) \\right)$에서의 접선이 점 $\\left( 0 , 1 \\right)$을 지나도록 하는 $t$의 값은?\n① $\\frac{3}{4}$\t\t② $1$\t\t③ $\\frac{5}{4}$\n④ $\\frac{3}{2}$\t\t⑤ $\\frac{7}{4}$\n",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "1641690064bccc26eabba8a18736b420a22cb826404e5f790d699b1784d383ac",
+  "input_sha256": "8bbc3f712d1f8ce36f4523ef20d1c4f1e38e2af08ab4d78a25088783cf1e9993",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_1_026.txt",
+    "vector": null,
+    "vocabulary": null
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

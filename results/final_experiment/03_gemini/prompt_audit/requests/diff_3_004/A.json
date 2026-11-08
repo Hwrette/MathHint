@@ -1,0 +1,42 @@
+{
+  "id": "diff_3_004",
+  "condition": "A",
+  "method": "baseline",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "두 함수 $f (x)$, $g (x)$가\n$\\lim_{x \\rightarrow 1} \\frac{f (x)}{x - 1} = 8$, $\\lim_{x \\rightarrow 1} \\frac{g (x)}{x^{2} - 1} = \\frac{1}{2}$\n을 만족시킬 때, $\\lim_{x \\rightarrow 1} \\frac{(x + 1) f (x)}{g (x)}$의 값을 구하시오.\n",
+  "problem_text": "두 함수 $f (x)$, $g (x)$가\n$\\lim_{x \\rightarrow 1} \\frac{f (x)}{x - 1} = 8$, $\\lim_{x \\rightarrow 1} \\frac{g (x)}{x^{2} - 1} = \\frac{1}{2}$\n을 만족시킬 때, $\\lim_{x \\rightarrow 1} \\frac{(x + 1) f (x)}{g (x)}$의 값을 구하시오.\n",
+  "hint": null,
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n두 함수 $f (x)$, $g (x)$가\n$\\lim_{x \\rightarrow 1} \\frac{f (x)}{x - 1} = 8$, $\\lim_{x \\rightarrow 1} \\frac{g (x)}{x^{2} - 1} = \\frac{1}{2}$\n을 만족시킬 때, $\\lim_{x \\rightarrow 1} \\frac{(x + 1) f (x)}{g (x)}$의 값을 구하시오.\n",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "두 함수 $f (x)$, $g (x)$가\n$\\lim_{x \\rightarrow 1} \\frac{f (x)}{x - 1} = 8$, $\\lim_{x \\rightarrow 1} \\frac{g (x)}{x^{2} - 1} = \\frac{1}{2}$\n을 만족시킬 때, $\\lim_{x \\rightarrow 1} \\frac{(x + 1) f (x)}{g (x)}$의 값을 구하시오.\n",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "3373bac55300c39aac4761853ae80b6bddf2483878b1c3cf187da7543387a940",
+  "input_sha256": "c683872364706d01411009f5d2134d1fb1235763a8ee4be969010377ad61c374",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_3_004.txt",
+    "vector": null,
+    "vocabulary": null
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

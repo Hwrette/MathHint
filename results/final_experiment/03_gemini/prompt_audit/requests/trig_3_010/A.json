@@ -1,0 +1,42 @@
+{
+  "id": "trig_3_010",
+  "condition": "A",
+  "method": "baseline",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "$\\sin \\theta = \\frac{1}{3}$일 때, $\\cos \\left( \\theta + \\frac{\\pi}{2} \\right)$의 값은?\n① $- \\frac{7}{9}$\t② $- \\frac{2}{3}$\t\t③ $- \\frac{5}{9}$\n④ $- \\frac{4}{9}$\t⑤ $- \\frac{1}{3}$\n",
+  "problem_text": "$\\sin \\theta = \\frac{1}{3}$일 때, $\\cos \\left( \\theta + \\frac{\\pi}{2} \\right)$의 값은?\n① $- \\frac{7}{9}$\t② $- \\frac{2}{3}$\t\t③ $- \\frac{5}{9}$\n④ $- \\frac{4}{9}$\t⑤ $- \\frac{1}{3}$\n",
+  "hint": null,
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n$\\sin \\theta = \\frac{1}{3}$일 때, $\\cos \\left( \\theta + \\frac{\\pi}{2} \\right)$의 값은?\n① $- \\frac{7}{9}$\t② $- \\frac{2}{3}$\t\t③ $- \\frac{5}{9}$\n④ $- \\frac{4}{9}$\t⑤ $- \\frac{1}{3}$\n",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "$\\sin \\theta = \\frac{1}{3}$일 때, $\\cos \\left( \\theta + \\frac{\\pi}{2} \\right)$의 값은?\n① $- \\frac{7}{9}$\t② $- \\frac{2}{3}$\t\t③ $- \\frac{5}{9}$\n④ $- \\frac{4}{9}$\t⑤ $- \\frac{1}{3}$\n",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "36eb12954d118f4e3fc18c14a425317b02e762694021f4be3dff7ce3019fb6b8",
+  "input_sha256": "e9eb2fd440aff5ac377a6423befb177d092b411340a29bbc9be29c4af1f1c8eb",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/trig_3_010.txt",
+    "vector": null,
+    "vocabulary": null
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "trig_1_010",
+  "condition": "C",
+  "method": "oracle_hint",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "$\\frac{\\pi}{2} < t < \\pi$인 실수 $t$에 대하여 이차방정식\n$5 x^{2} + x + k = 0 \\quad \\left( k \\right.$는 상수$\\left.  \\right)$\n가 두 실근 $\\sin t$, $\\cos t$를 가질 때, $k \\times \\tan t$의 값은?\n① $\\frac{3}{2}$\t\t② $\\frac{9}{5}$\t\t③ $\\frac{21}{10}$\n④ $\\frac{12}{5}$\t\t⑤ $\\frac{27}{10}$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:{\":48.0,\"latex:}\":48.0,\"latex:t\":27.0,\"latex:\\\\frac\":20.0,\"kiwi:이\":19.0,\"latex:=\":19.0,\"latex:5\":16.0,\"latex:-\":12.0,\"latex:2\":11.0,\"latex:\\\\cos\":11.0,\"latex:\\\\sin\":11.0,\"latex:+\":10.0,\"latex:^\":8.0,\"latex:x\":8.0,\"kiwi:,\":6.0,\"kiwi:.\":6.0,\"kiwi:다\":6.0,\"latex:(\":6.0,\"latex:)\":6.0,\"latex:0\":6.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "problem_text": "$\\frac{\\pi}{2} < t < \\pi$인 실수 $t$에 대하여 이차방정식\n$5 x^{2} + x + k = 0 \\quad \\left( k \\right.$는 상수$\\left.  \\right)$\n가 두 실근 $\\sin t$, $\\cos t$를 가질 때, $k \\times \\tan t$의 값은?\n① $\\frac{3}{2}$\t\t② $\\frac{9}{5}$\t\t③ $\\frac{21}{10}$\n④ $\\frac{12}{5}$\t\t⑤ $\\frac{27}{10}$\n",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:{": 48.0,
+      "latex:}": 48.0,
+      "latex:t": 27.0,
+      "latex:\\frac": 20.0,
+      "kiwi:이": 19.0,
+      "latex:=": 19.0,
+      "latex:5": 16.0,
+      "latex:-": 12.0,
+      "latex:2": 11.0,
+      "latex:\\cos": 11.0,
+      "latex:\\sin": 11.0,
+      "latex:+": 10.0,
+      "latex:^": 8.0,
+      "latex:x": 8.0,
+      "kiwi:,": 6.0,
+      "kiwi:.": 6.0,
+      "kiwi:다": 6.0,
+      "latex:(": 6.0,
+      "latex:)": 6.0,
+      "latex:0": 6.0
+    },
+    "source": "actual_reference"
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n$\\frac{\\pi}{2} < t < \\pi$인 실수 $t$에 대하여 이차방정식\n$5 x^{2} + x + k = 0 \\quad \\left( k \\right.$는 상수$\\left.  \\right)$\n가 두 실근 $\\sin t$, $\\cos t$를 가질 때, $k \\times \\tan t$의 값은?\n① $\\frac{3}{2}$\t\t② $\\frac{9}{5}$\t\t③ $\\frac{21}{10}$\n④ $\\frac{12}{5}$\t\t⑤ $\\frac{27}{10}$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:{\":48.0,\"latex:}\":48.0,\"latex:t\":27.0,\"latex:\\\\frac\":20.0,\"kiwi:이\":19.0,\"latex:=\":19.0,\"latex:5\":16.0,\"latex:-\":12.0,\"latex:2\":11.0,\"latex:\\\\cos\":11.0,\"latex:\\\\sin\":11.0,\"latex:+\":10.0,\"latex:^\":8.0,\"latex:x\":8.0,\"kiwi:,\":6.0,\"kiwi:.\":6.0,\"kiwi:다\":6.0,\"latex:(\":6.0,\"latex:)\":6.0,\"latex:0\":6.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "$\\frac{\\pi}{2} < t < \\pi$인 실수 $t$에 대하여 이차방정식\n$5 x^{2} + x + k = 0 \\quad \\left( k \\right.$는 상수$\\left.  \\right)$\n가 두 실근 $\\sin t$, $\\cos t$를 가질 때, $k \\times \\tan t$의 값은?\n① $\\frac{3}{2}$\t\t② $\\frac{9}{5}$\t\t③ $\\frac{21}{10}$\n④ $\\frac{12}{5}$\t\t⑤ $\\frac{27}{10}$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:{\":48.0,\"latex:}\":48.0,\"latex:t\":27.0,\"latex:\\\\frac\":20.0,\"kiwi:이\":19.0,\"latex:=\":19.0,\"latex:5\":16.0,\"latex:-\":12.0,\"latex:2\":11.0,\"latex:\\\\cos\":11.0,\"latex:\\\\sin\":11.0,\"latex:+\":10.0,\"latex:^\":8.0,\"latex:x\":8.0,\"kiwi:,\":6.0,\"kiwi:.\":6.0,\"kiwi:다\":6.0,\"latex:(\":6.0,\"latex:)\":6.0,\"latex:0\":6.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "c53556c75c6e99822a3925ba829b47ba6821eb4a78c1160fff04b9408bf7b6b0",
+  "input_sha256": "dfc84fee517fd57d200d7d830cebccc8707b06d9881e5a17998d739fafe27de3",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/trig_1_010.txt",
+    "vector": "/workspace/MathHint/data/vectors/solutions/test_vectors.json",
+    "vocabulary": "/workspace/MathHint/data/vectors/solutions/vocabulary.json"
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

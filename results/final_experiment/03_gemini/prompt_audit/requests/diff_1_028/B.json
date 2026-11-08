@@ -1,0 +1,72 @@
+{
+  "id": "diff_1_028",
+  "condition": "B",
+  "method": "regression_hint",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "점 $\\left( 0 , 1 \\right)$에서 곡선 $y = x^{3} - 2 x + 17$에 그은 접선이 점 $\\left( a , 11 \\right)$을 지날 때, $a$의 값은?\n① $1$\t\t② $2$\t\t③ $3$\n④ $4$\t\t⑤ $5$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:-\":13.097,\"latex:+\":9.712,\"latex:=\":9.704,\"latex:(\":9.085,\"latex:)\":9.085,\"latex:3\":8.612,\"latex:y\":8.099,\"latex:1\":7.878,\"latex:x\":7.558,\"latex:t\":6.289,\"latex:\\\\right\":6.188,\"latex:0\":6.011,\"latex:\\\\left\":5.92,\"latex:^\":5.19,\"kiwi:의\":4.889,\"kiwi:이\":4.293,\"latex:4\":3.9,\"latex:r\":3.794,\"kiwi:은\":3.382,\"latex:,\":3.245}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "problem_text": "점 $\\left( 0 , 1 \\right)$에서 곡선 $y = x^{3} - 2 x + 17$에 그은 접선이 점 $\\left( a , 11 \\right)$을 지날 때, $a$의 값은?\n① $1$\t\t② $2$\t\t③ $3$\n④ $4$\t\t⑤ $5$\n",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:-": 13.097,
+      "latex:+": 9.712,
+      "latex:=": 9.704,
+      "latex:(": 9.085,
+      "latex:)": 9.085,
+      "latex:3": 8.612,
+      "latex:y": 8.099,
+      "latex:1": 7.878,
+      "latex:x": 7.558,
+      "latex:t": 6.289,
+      "latex:\\right": 6.188,
+      "latex:0": 6.011,
+      "latex:\\left": 5.92,
+      "latex:^": 5.19,
+      "kiwi:의": 4.889,
+      "kiwi:이": 4.293,
+      "latex:4": 3.9,
+      "latex:r": 3.794,
+      "kiwi:은": 3.382,
+      "latex:,": 3.245
+    },
+    "source": "regression_prediction"
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n점 $\\left( 0 , 1 \\right)$에서 곡선 $y = x^{3} - 2 x + 17$에 그은 접선이 점 $\\left( a , 11 \\right)$을 지날 때, $a$의 값은?\n① $1$\t\t② $2$\t\t③ $3$\n④ $4$\t\t⑤ $5$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:-\":13.097,\"latex:+\":9.712,\"latex:=\":9.704,\"latex:(\":9.085,\"latex:)\":9.085,\"latex:3\":8.612,\"latex:y\":8.099,\"latex:1\":7.878,\"latex:x\":7.558,\"latex:t\":6.289,\"latex:\\\\right\":6.188,\"latex:0\":6.011,\"latex:\\\\left\":5.92,\"latex:^\":5.19,\"kiwi:의\":4.889,\"kiwi:이\":4.293,\"latex:4\":3.9,\"latex:r\":3.794,\"kiwi:은\":3.382,\"latex:,\":3.245}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "점 $\\left( 0 , 1 \\right)$에서 곡선 $y = x^{3} - 2 x + 17$에 그은 접선이 점 $\\left( a , 11 \\right)$을 지날 때, $a$의 값은?\n① $1$\t\t② $2$\t\t③ $3$\n④ $4$\t\t⑤ $5$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:-\":13.097,\"latex:+\":9.712,\"latex:=\":9.704,\"latex:(\":9.085,\"latex:)\":9.085,\"latex:3\":8.612,\"latex:y\":8.099,\"latex:1\":7.878,\"latex:x\":7.558,\"latex:t\":6.289,\"latex:\\\\right\":6.188,\"latex:0\":6.011,\"latex:\\\\left\":5.92,\"latex:^\":5.19,\"kiwi:의\":4.889,\"kiwi:이\":4.293,\"latex:4\":3.9,\"latex:r\":3.794,\"kiwi:은\":3.382,\"latex:,\":3.245}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "5d6f40a37c98d3aa3b6b6c2f92f999be35deb665669b8c61ffc0faf40022ee9c",
+  "input_sha256": "ec6a1e300994de0f834f55e6908b33b2c0601983244bf47316f4893dd1e67bd8",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_1_028.txt",
+    "vector": "/workspace/MathHint/results/model_comparison_2026-11-07/01_회귀모델/regression_predictions.json",
+    "vocabulary": "/workspace/MathHint/data/vectors/solutions/vocabulary.json"
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

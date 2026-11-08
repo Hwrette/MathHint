@@ -1,0 +1,72 @@
+{
+  "id": "diff_1_039",
+  "condition": "B",
+  "method": "regression_hint",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "닫힌구간 $\\left[ 1 , 3 \\right]$에서 함수 $f \\left( x \\right) = 2 x^{3} - 3 x^{2} - 12 x + a$가 최댓값 $M$, 최솟값 $4$를 가질 때, $M$의 값은? (단, $a$는 상수이다.)\n① $13$\t\t② $14$\t\t③ $15$\n④ $16$\t\t⑤ $17$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:x\":18.497,\"latex:(\":15.192,\"latex:)\":15.088,\"latex:}\":12.823,\"latex:{\":12.596,\"latex:-\":11.596,\"latex:=\":9.749,\"latex:f\":9.719,\"kiwi:함수\":8.782,\"kiwi:의\":8.562,\"latex:1\":8.408,\"latex:t\":7.535,\"latex:\\\\pi\":7.268,\"latex:+\":6.885,\"kiwi:에서\":6.525,\"latex:<\":5.069,\"kiwi:.\":5.049,\"latex:\\\\frac\":5.017,\"latex:3\":4.559,\"kiwi:다\":4.039}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "problem_text": "닫힌구간 $\\left[ 1 , 3 \\right]$에서 함수 $f \\left( x \\right) = 2 x^{3} - 3 x^{2} - 12 x + a$가 최댓값 $M$, 최솟값 $4$를 가질 때, $M$의 값은? (단, $a$는 상수이다.)\n① $13$\t\t② $14$\t\t③ $15$\n④ $16$\t\t⑤ $17$\n",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:x": 18.497,
+      "latex:(": 15.192,
+      "latex:)": 15.088,
+      "latex:}": 12.823,
+      "latex:{": 12.596,
+      "latex:-": 11.596,
+      "latex:=": 9.749,
+      "latex:f": 9.719,
+      "kiwi:함수": 8.782,
+      "kiwi:의": 8.562,
+      "latex:1": 8.408,
+      "latex:t": 7.535,
+      "latex:\\pi": 7.268,
+      "latex:+": 6.885,
+      "kiwi:에서": 6.525,
+      "latex:<": 5.069,
+      "kiwi:.": 5.049,
+      "latex:\\frac": 5.017,
+      "latex:3": 4.559,
+      "kiwi:다": 4.039
+    },
+    "source": "regression_prediction"
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n닫힌구간 $\\left[ 1 , 3 \\right]$에서 함수 $f \\left( x \\right) = 2 x^{3} - 3 x^{2} - 12 x + a$가 최댓값 $M$, 최솟값 $4$를 가질 때, $M$의 값은? (단, $a$는 상수이다.)\n① $13$\t\t② $14$\t\t③ $15$\n④ $16$\t\t⑤ $17$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:x\":18.497,\"latex:(\":15.192,\"latex:)\":15.088,\"latex:}\":12.823,\"latex:{\":12.596,\"latex:-\":11.596,\"latex:=\":9.749,\"latex:f\":9.719,\"kiwi:함수\":8.782,\"kiwi:의\":8.562,\"latex:1\":8.408,\"latex:t\":7.535,\"latex:\\\\pi\":7.268,\"latex:+\":6.885,\"kiwi:에서\":6.525,\"latex:<\":5.069,\"kiwi:.\":5.049,\"latex:\\\\frac\":5.017,\"latex:3\":4.559,\"kiwi:다\":4.039}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "닫힌구간 $\\left[ 1 , 3 \\right]$에서 함수 $f \\left( x \\right) = 2 x^{3} - 3 x^{2} - 12 x + a$가 최댓값 $M$, 최솟값 $4$를 가질 때, $M$의 값은? (단, $a$는 상수이다.)\n① $13$\t\t② $14$\t\t③ $15$\n④ $16$\t\t⑤ $17$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:x\":18.497,\"latex:(\":15.192,\"latex:)\":15.088,\"latex:}\":12.823,\"latex:{\":12.596,\"latex:-\":11.596,\"latex:=\":9.749,\"latex:f\":9.719,\"kiwi:함수\":8.782,\"kiwi:의\":8.562,\"latex:1\":8.408,\"latex:t\":7.535,\"latex:\\\\pi\":7.268,\"latex:+\":6.885,\"kiwi:에서\":6.525,\"latex:<\":5.069,\"kiwi:.\":5.049,\"latex:\\\\frac\":5.017,\"latex:3\":4.559,\"kiwi:다\":4.039}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "b522d0e6eacac351230486e9ec86db6dd092b496003999ceab26874c5f968973",
+  "input_sha256": "fb6f64e073407f2f6ec5503f8269a7c67557900473f7b71c4d73664252c8bdc7",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_1_039.txt",
+    "vector": "/workspace/MathHint/results/model_comparison_2026-11-07/01_회귀모델/regression_predictions.json",
+    "vocabulary": "/workspace/MathHint/data/vectors/solutions/vocabulary.json"
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

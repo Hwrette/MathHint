@@ -1,0 +1,42 @@
+{
+  "id": "diff_3_049",
+  "condition": "A",
+  "method": "baseline",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "두 함수\n$f (x) = x^{3} - x + 6$, $\\quad g (x) = x^{2} + a$\n가 있다. $x \\geq 0$인 모든 실수 $x$에 대하여 부등식\n$f (x) \\geq g (x)$\n가 성립할 때, 실수 $a$의 최댓값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+  "problem_text": "두 함수\n$f (x) = x^{3} - x + 6$, $\\quad g (x) = x^{2} + a$\n가 있다. $x \\geq 0$인 모든 실수 $x$에 대하여 부등식\n$f (x) \\geq g (x)$\n가 성립할 때, 실수 $a$의 최댓값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+  "hint": null,
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n두 함수\n$f (x) = x^{3} - x + 6$, $\\quad g (x) = x^{2} + a$\n가 있다. $x \\geq 0$인 모든 실수 $x$에 대하여 부등식\n$f (x) \\geq g (x)$\n가 성립할 때, 실수 $a$의 최댓값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "두 함수\n$f (x) = x^{3} - x + 6$, $\\quad g (x) = x^{2} + a$\n가 있다. $x \\geq 0$인 모든 실수 $x$에 대하여 부등식\n$f (x) \\geq g (x)$\n가 성립할 때, 실수 $a$의 최댓값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "bddc5a70d6645f0c002a0ce57b93f23414f3403ef913985815d9b29d6a8a4695",
+  "input_sha256": "561a484fc3e33126907bc8ece4a8b241431b1817d5749dc05268bc9fdb0ad97e",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_3_049.txt",
+    "vector": null,
+    "vocabulary": null
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

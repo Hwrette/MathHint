@@ -209,7 +209,7 @@ def initialize_run(output: Path, config: dict, plan: list[dict]) -> str:
         if (output / "responses.jsonl").exists():
             raise ValueError("설정 없이 기존 응답 파일이 있습니다. 덮어쓰지 않습니다.")
         write_json(path, {"config_id": config_id, "created_at": utc_now(), "config": config})
-    for item in plan:
+    for item in (() if config.get("compact_storage") else plan):
         folder = output / "questions" / item["id"] / item["method"]
         folder.mkdir(parents=True, exist_ok=True)
         for filename, text in (("input.txt", item["input_text"]),
@@ -309,21 +309,36 @@ def _error_code(error: Exception) -> int | None:
         return None
 
 
-def make_request(config, api_key):
-    """주어진 모델 설정으로 Gemini를 요청하는 함수를 만든다."""
+def sdk_request_arguments(config, text):
+    """인증 정보를 제외하고 실제 generate_content에 넘길 SDK 인자를 만든다."""
+    from google.genai import types
+    return {"model": config["model"], "contents": text,
+            "config": types.GenerateContentConfig(
+                system_instruction=config["system_instruction"],
+                temperature=config["temperature"],
+                max_output_tokens=config["max_output_tokens"],
+                thinking_config=types.ThinkingConfig(thinking_level=config["thinking_level"]))}
+
+
+def request_snapshot(arguments):
+    """SDK 객체의 실제 필드와 원문 문자열을 JSON으로 보존한다. 키·헤더는 포함하지 않는다."""
+    return {"model": arguments["model"], "contents": arguments["contents"],
+            "config": arguments["config"].model_dump(mode="json", exclude_none=True)}
+
+
+def make_request(config, api_key, *, request_observer=None, client_factory=None):
+    """호출 직전에 SDK 인자를 관찰할 수 있는 공통 전송 경로다."""
     from google import genai
     from google.genai import types
+    factory = client_factory or genai.Client
 
     def request(text):
-        with genai.Client(api_key=api_key, http_options=types.HttpOptions(
+        arguments = sdk_request_arguments(config, text)
+        with factory(api_key=api_key, http_options=types.HttpOptions(
                 timeout=90_000, retry_options=types.HttpRetryOptions(attempts=1))) as client:
-            return client.models.generate_content(
-                model=config["model"], contents=text,
-                config=types.GenerateContentConfig(
-                    system_instruction=config["system_instruction"],
-                    temperature=config["temperature"],
-                    max_output_tokens=config["max_output_tokens"],
-                    thinking_config=types.ThinkingConfig(thinking_level=config["thinking_level"])))
+            if request_observer is not None:
+                request_observer(request_snapshot(arguments))
+            return client.models.generate_content(**arguments)
     return request
 
 
@@ -387,6 +402,8 @@ def save_result(output: Path, result: dict) -> None:
         stream.write(json.dumps(result, ensure_ascii=False, separators=(",", ":")) + "\n")
         stream.flush()
         os.fsync(stream.fileno())
+    if result.get("compact_storage"):
+        return
     folder = output / "questions" / result["id"] / result["method"]
     folder.mkdir(parents=True, exist_ok=True)
     (folder / "output.txt").write_text(result["output_text"], encoding="utf-8")
@@ -446,8 +463,9 @@ def render_reports(output, records, config, *, charts=True):
 
 def run_requests(output: Path, config: dict, plan: list[dict], *, api_key: str,
                  limit: int | None = None, workers: int = 3, retry_errors: bool = False,
-                 stop_file: Path | None = None, generate_function=None) -> dict:
+                 stop_file: Path | None = None, generate_function=None, report_function=None) -> dict:
     generate = generate_function or generate_one
+    render = report_function or render_reports
     config_id = initialize_run(output, config, plan)
     completed = load_completed(output, config_id)
     selected = set(config["test_ids"][:limit] if limit is not None else config["test_ids"])
@@ -504,8 +522,8 @@ def run_requests(output: Path, config: dict, plan: list[dict], *, api_key: str,
                     aborted = True
                 if not aborted and not stopped:
                     schedule()
-            render_reports(output, list(completed.values()), config, charts=False)
-    summary = render_reports(output, list(completed.values()), config)
+            render(output, list(completed.values()), config, charts=False)
+    summary = render(output, list(completed.values()), config)
     if stopped:
         raise RequestedStop("중단 요청을 확인했습니다. 진행 중 응답은 저장했고 새 API 요청은 중단했습니다.")
     if aborted:

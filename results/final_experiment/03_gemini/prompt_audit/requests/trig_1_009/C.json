@@ -1,0 +1,72 @@
+{
+  "id": "trig_1_009",
+  "condition": "C",
+  "method": "oracle_hint",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "직선 $y = m x$ 위에 있는 원점이 아닌 점 ${\\mathrm{{P}}}$에 대하여 동경 ${\\mathrm{{O P}}}$가 나타내는 각의 크기를 $\\theta$라 하자. $2 \\theta$는 제$2$사분면의 각이고 $\\sin \\theta + \\cos \\theta = \\frac{2}{5} \\sqrt{10}$일 때, 상수 $m$의 값은?\n① $\\frac{3}{2}$\t\t② $2$\t\t③ $\\frac{5}{2}$\n④ $3$\t\t⑤ $\\frac{7}{2}$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:{\":53.0,\"latex:}\":53.0,\"latex:\\\\theta\":32.0,\"latex:\\\\frac\":20.0,\"latex:=\":18.0,\"latex:2\":17.0,\"kiwi:이\":16.0,\"latex:+\":14.0,\"latex:m\":14.0,\"latex:1\":11.0,\"latex:3\":11.0,\"latex:\\\\cos\":11.0,\"latex:\\\\sin\":11.0,\"latex:\\\\pi\":10.0,\"kiwi:므로\":6.0,\"latex:10\":6.0,\"latex:<\":6.0,\"latex:n\":6.0,\"kiwi:의\":5.0,\"latex:^\":5.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "problem_text": "직선 $y = m x$ 위에 있는 원점이 아닌 점 ${\\mathrm{{P}}}$에 대하여 동경 ${\\mathrm{{O P}}}$가 나타내는 각의 크기를 $\\theta$라 하자. $2 \\theta$는 제$2$사분면의 각이고 $\\sin \\theta + \\cos \\theta = \\frac{2}{5} \\sqrt{10}$일 때, 상수 $m$의 값은?\n① $\\frac{3}{2}$\t\t② $2$\t\t③ $\\frac{5}{2}$\n④ $3$\t\t⑤ $\\frac{7}{2}$\n",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:{": 53.0,
+      "latex:}": 53.0,
+      "latex:\\theta": 32.0,
+      "latex:\\frac": 20.0,
+      "latex:=": 18.0,
+      "latex:2": 17.0,
+      "kiwi:이": 16.0,
+      "latex:+": 14.0,
+      "latex:m": 14.0,
+      "latex:1": 11.0,
+      "latex:3": 11.0,
+      "latex:\\cos": 11.0,
+      "latex:\\sin": 11.0,
+      "latex:\\pi": 10.0,
+      "kiwi:므로": 6.0,
+      "latex:10": 6.0,
+      "latex:<": 6.0,
+      "latex:n": 6.0,
+      "kiwi:의": 5.0,
+      "latex:^": 5.0
+    },
+    "source": "actual_reference"
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n직선 $y = m x$ 위에 있는 원점이 아닌 점 ${\\mathrm{{P}}}$에 대하여 동경 ${\\mathrm{{O P}}}$가 나타내는 각의 크기를 $\\theta$라 하자. $2 \\theta$는 제$2$사분면의 각이고 $\\sin \\theta + \\cos \\theta = \\frac{2}{5} \\sqrt{10}$일 때, 상수 $m$의 값은?\n① $\\frac{3}{2}$\t\t② $2$\t\t③ $\\frac{5}{2}$\n④ $3$\t\t⑤ $\\frac{7}{2}$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:{\":53.0,\"latex:}\":53.0,\"latex:\\\\theta\":32.0,\"latex:\\\\frac\":20.0,\"latex:=\":18.0,\"latex:2\":17.0,\"kiwi:이\":16.0,\"latex:+\":14.0,\"latex:m\":14.0,\"latex:1\":11.0,\"latex:3\":11.0,\"latex:\\\\cos\":11.0,\"latex:\\\\sin\":11.0,\"latex:\\\\pi\":10.0,\"kiwi:므로\":6.0,\"latex:10\":6.0,\"latex:<\":6.0,\"latex:n\":6.0,\"kiwi:의\":5.0,\"latex:^\":5.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "직선 $y = m x$ 위에 있는 원점이 아닌 점 ${\\mathrm{{P}}}$에 대하여 동경 ${\\mathrm{{O P}}}$가 나타내는 각의 크기를 $\\theta$라 하자. $2 \\theta$는 제$2$사분면의 각이고 $\\sin \\theta + \\cos \\theta = \\frac{2}{5} \\sqrt{10}$일 때, 상수 $m$의 값은?\n① $\\frac{3}{2}$\t\t② $2$\t\t③ $\\frac{5}{2}$\n④ $3$\t\t⑤ $\\frac{7}{2}$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:{\":53.0,\"latex:}\":53.0,\"latex:\\\\theta\":32.0,\"latex:\\\\frac\":20.0,\"latex:=\":18.0,\"latex:2\":17.0,\"kiwi:이\":16.0,\"latex:+\":14.0,\"latex:m\":14.0,\"latex:1\":11.0,\"latex:3\":11.0,\"latex:\\\\cos\":11.0,\"latex:\\\\sin\":11.0,\"latex:\\\\pi\":10.0,\"kiwi:므로\":6.0,\"latex:10\":6.0,\"latex:<\":6.0,\"latex:n\":6.0,\"kiwi:의\":5.0,\"latex:^\":5.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "ee6b28b56b6525858e21c9eaa790643d7eb5be9bc138ce3bc597e096a9574212",
+  "input_sha256": "3848785178824ba8ace75d436140b19d2e55744f43e4d2ce7edf0c2731f35472",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/trig_1_009.txt",
+    "vector": "/workspace/MathHint/data/vectors/solutions/test_vectors.json",
+    "vocabulary": "/workspace/MathHint/data/vectors/solutions/vocabulary.json"
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

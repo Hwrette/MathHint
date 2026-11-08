@@ -1,0 +1,42 @@
+{
+  "id": "diff_2_024",
+  "condition": "A",
+  "method": "baseline",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "최고차항의 계수가 $\\mathrm{1}$인 삼차함수 $f (x)$에 대하여 곡선 $y = f (x)$ 위의 점 $(- 2 , f (- 2))$에서의 접선과 곡선 $y = f (x)$ 위의 점 $(2 , 3)$에서의 접선이 점 $(1 , 3)$에서 만날 때, $f (0)$의 값은?\n① $\\mathrm{31}$\t\t② $\\mathrm{33}$\t\t③ $\\mathrm{35}$\n④ $\\mathrm{37}$\t\t⑤ $\\mathrm{39}$\n",
+  "problem_text": "최고차항의 계수가 $\\mathrm{1}$인 삼차함수 $f (x)$에 대하여 곡선 $y = f (x)$ 위의 점 $(- 2 , f (- 2))$에서의 접선과 곡선 $y = f (x)$ 위의 점 $(2 , 3)$에서의 접선이 점 $(1 , 3)$에서 만날 때, $f (0)$의 값은?\n① $\\mathrm{31}$\t\t② $\\mathrm{33}$\t\t③ $\\mathrm{35}$\n④ $\\mathrm{37}$\t\t⑤ $\\mathrm{39}$\n",
+  "hint": null,
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n최고차항의 계수가 $\\mathrm{1}$인 삼차함수 $f (x)$에 대하여 곡선 $y = f (x)$ 위의 점 $(- 2 , f (- 2))$에서의 접선과 곡선 $y = f (x)$ 위의 점 $(2 , 3)$에서의 접선이 점 $(1 , 3)$에서 만날 때, $f (0)$의 값은?\n① $\\mathrm{31}$\t\t② $\\mathrm{33}$\t\t③ $\\mathrm{35}$\n④ $\\mathrm{37}$\t\t⑤ $\\mathrm{39}$\n",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "최고차항의 계수가 $\\mathrm{1}$인 삼차함수 $f (x)$에 대하여 곡선 $y = f (x)$ 위의 점 $(- 2 , f (- 2))$에서의 접선과 곡선 $y = f (x)$ 위의 점 $(2 , 3)$에서의 접선이 점 $(1 , 3)$에서 만날 때, $f (0)$의 값은?\n① $\\mathrm{31}$\t\t② $\\mathrm{33}$\t\t③ $\\mathrm{35}$\n④ $\\mathrm{37}$\t\t⑤ $\\mathrm{39}$\n",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "597b69556fb3565d7dd604a3abcecc55b45955befd5f216b32df5b5d19874730",
+  "input_sha256": "2eca3f12f7f4f4ed1ded43d0fcd1750c171cc922c0b712930831f4cb5fb0dd30",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_2_024.txt",
+    "vector": null,
+    "vocabulary": null
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

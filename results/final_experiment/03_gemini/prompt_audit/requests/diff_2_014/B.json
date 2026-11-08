@@ -1,0 +1,72 @@
+{
+  "id": "diff_2_014",
+  "condition": "B",
+  "method": "regression_hint",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "다항함수 $f (x)$에 대하여 함수 $g (x)$를\n$g \\left( x \\right) = \\left( x^{2} - 2 x \\right) f \\left( x \\right)$\n라 하자. $g' (0) + g' (2) = 16$일 때, $f (2) - f (0)$의 값은?\n① $\\mathrm{6}$\t\t② $\\mathrm{8}$\t\t③ $\\mathrm{10}$\n④ $\\mathrm{12}$\t\t⑤ $\\mathrm{14}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:)\":11.584,\"latex:(\":11.383,\"latex:x\":6.472,\"latex:=\":6.323,\"latex:g\":5.899,\"latex:2\":5.749,\"latex:'\":5.488,\"latex:-\":4.597,\"latex:9\":4.4,\"latex:|\":4.208,\"latex:f\":4.146,\"latex:4\":3.971,\"latex:\\\\theta\":3.134,\"latex:+\":3.083,\"latex:\\\\alpha\":3.052,\"kiwi:면\":2.512,\"latex:,\":2.266,\"latex:0\":2.245,\"kiwi:]\":2.138,\"latex:\\\\left\":2.114}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "problem_text": "다항함수 $f (x)$에 대하여 함수 $g (x)$를\n$g \\left( x \\right) = \\left( x^{2} - 2 x \\right) f \\left( x \\right)$\n라 하자. $g' (0) + g' (2) = 16$일 때, $f (2) - f (0)$의 값은?\n① $\\mathrm{6}$\t\t② $\\mathrm{8}$\t\t③ $\\mathrm{10}$\n④ $\\mathrm{12}$\t\t⑤ $\\mathrm{14}$\n",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:)": 11.584,
+      "latex:(": 11.383,
+      "latex:x": 6.472,
+      "latex:=": 6.323,
+      "latex:g": 5.899,
+      "latex:2": 5.749,
+      "latex:'": 5.488,
+      "latex:-": 4.597,
+      "latex:9": 4.4,
+      "latex:|": 4.208,
+      "latex:f": 4.146,
+      "latex:4": 3.971,
+      "latex:\\theta": 3.134,
+      "latex:+": 3.083,
+      "latex:\\alpha": 3.052,
+      "kiwi:면": 2.512,
+      "latex:,": 2.266,
+      "latex:0": 2.245,
+      "kiwi:]": 2.138,
+      "latex:\\left": 2.114
+    },
+    "source": "regression_prediction"
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n다항함수 $f (x)$에 대하여 함수 $g (x)$를\n$g \\left( x \\right) = \\left( x^{2} - 2 x \\right) f \\left( x \\right)$\n라 하자. $g' (0) + g' (2) = 16$일 때, $f (2) - f (0)$의 값은?\n① $\\mathrm{6}$\t\t② $\\mathrm{8}$\t\t③ $\\mathrm{10}$\n④ $\\mathrm{12}$\t\t⑤ $\\mathrm{14}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:)\":11.584,\"latex:(\":11.383,\"latex:x\":6.472,\"latex:=\":6.323,\"latex:g\":5.899,\"latex:2\":5.749,\"latex:'\":5.488,\"latex:-\":4.597,\"latex:9\":4.4,\"latex:|\":4.208,\"latex:f\":4.146,\"latex:4\":3.971,\"latex:\\\\theta\":3.134,\"latex:+\":3.083,\"latex:\\\\alpha\":3.052,\"kiwi:면\":2.512,\"latex:,\":2.266,\"latex:0\":2.245,\"kiwi:]\":2.138,\"latex:\\\\left\":2.114}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "다항함수 $f (x)$에 대하여 함수 $g (x)$를\n$g \\left( x \\right) = \\left( x^{2} - 2 x \\right) f \\left( x \\right)$\n라 하자. $g' (0) + g' (2) = 16$일 때, $f (2) - f (0)$의 값은?\n① $\\mathrm{6}$\t\t② $\\mathrm{8}$\t\t③ $\\mathrm{10}$\n④ $\\mathrm{12}$\t\t⑤ $\\mathrm{14}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:)\":11.584,\"latex:(\":11.383,\"latex:x\":6.472,\"latex:=\":6.323,\"latex:g\":5.899,\"latex:2\":5.749,\"latex:'\":5.488,\"latex:-\":4.597,\"latex:9\":4.4,\"latex:|\":4.208,\"latex:f\":4.146,\"latex:4\":3.971,\"latex:\\\\theta\":3.134,\"latex:+\":3.083,\"latex:\\\\alpha\":3.052,\"kiwi:면\":2.512,\"latex:,\":2.266,\"latex:0\":2.245,\"kiwi:]\":2.138,\"latex:\\\\left\":2.114}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "4db4f7bcfa165a19cc80699339f6ffff86c8f4ca3f55251febee79c9d2bd8d9e",
+  "input_sha256": "51f3a8a5ecc26f046a305a5925b46be0a33e402753370caf621a71eda867cd23",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_2_014.txt",
+    "vector": "/workspace/MathHint/results/model_comparison_2026-11-07/01_회귀모델/regression_predictions.json",
+    "vocabulary": "/workspace/MathHint/data/vectors/solutions/vocabulary.json"
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

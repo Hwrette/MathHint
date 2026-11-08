@@ -1,0 +1,42 @@
+{
+  "id": "diff_1_022",
+  "condition": "A",
+  "method": "baseline",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "다항함수 $f \\left( x \\right)$에 대하여 함수 $g \\left( x \\right)$를\n$g \\left( x \\right) = \\left( x^{2} + x \\right) f \\left( x \\right)$\n라 하자. $\\lim_{h \\rightarrow 0} \\frac{g \\left( 1 + h \\right) - 4}{h} = 9$일 때, $f \\left( 1 \\right) \\times f' \\left( 1 \\right)$의 값은?\n① $3$\t\t② $\\frac{9}{2}$\t\t③ $6$\n④ $\\frac{15}{2}$\t\t⑤ $9$\n",
+  "problem_text": "다항함수 $f \\left( x \\right)$에 대하여 함수 $g \\left( x \\right)$를\n$g \\left( x \\right) = \\left( x^{2} + x \\right) f \\left( x \\right)$\n라 하자. $\\lim_{h \\rightarrow 0} \\frac{g \\left( 1 + h \\right) - 4}{h} = 9$일 때, $f \\left( 1 \\right) \\times f' \\left( 1 \\right)$의 값은?\n① $3$\t\t② $\\frac{9}{2}$\t\t③ $6$\n④ $\\frac{15}{2}$\t\t⑤ $9$\n",
+  "hint": null,
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n다항함수 $f \\left( x \\right)$에 대하여 함수 $g \\left( x \\right)$를\n$g \\left( x \\right) = \\left( x^{2} + x \\right) f \\left( x \\right)$\n라 하자. $\\lim_{h \\rightarrow 0} \\frac{g \\left( 1 + h \\right) - 4}{h} = 9$일 때, $f \\left( 1 \\right) \\times f' \\left( 1 \\right)$의 값은?\n① $3$\t\t② $\\frac{9}{2}$\t\t③ $6$\n④ $\\frac{15}{2}$\t\t⑤ $9$\n",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "다항함수 $f \\left( x \\right)$에 대하여 함수 $g \\left( x \\right)$를\n$g \\left( x \\right) = \\left( x^{2} + x \\right) f \\left( x \\right)$\n라 하자. $\\lim_{h \\rightarrow 0} \\frac{g \\left( 1 + h \\right) - 4}{h} = 9$일 때, $f \\left( 1 \\right) \\times f' \\left( 1 \\right)$의 값은?\n① $3$\t\t② $\\frac{9}{2}$\t\t③ $6$\n④ $\\frac{15}{2}$\t\t⑤ $9$\n",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "c2bc0b8e719678aed4f91ef0915f87984f45ee9a8f257fb43591899af982866a",
+  "input_sha256": "8a5450a57fee50d550f0598b4d21179e649ca04f79ca2b93c6d6c169bf2573f2",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_1_022.txt",
+    "vector": null,
+    "vocabulary": null
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

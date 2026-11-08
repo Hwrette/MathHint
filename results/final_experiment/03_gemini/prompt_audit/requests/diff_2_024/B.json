@@ -1,0 +1,72 @@
+{
+  "id": "diff_2_024",
+  "condition": "B",
+  "method": "regression_hint",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "최고차항의 계수가 $\\mathrm{1}$인 삼차함수 $f (x)$에 대하여 곡선 $y = f (x)$ 위의 점 $(- 2 , f (- 2))$에서의 접선과 곡선 $y = f (x)$ 위의 점 $(2 , 3)$에서의 접선이 점 $(1 , 3)$에서 만날 때, $f (0)$의 값은?\n① $\\mathrm{31}$\t\t② $\\mathrm{33}$\t\t③ $\\mathrm{35}$\n④ $\\mathrm{37}$\t\t⑤ $\\mathrm{39}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:-\":15.623,\"latex:=\":11.928,\"latex:)\":11.716,\"latex:(\":11.486,\"latex:f\":9.245,\"latex:r\":8.853,\"latex:a\":8.446,\"latex:\\\\left\":8.141,\"kiwi:이\":8.116,\"latex:+\":8.049,\"latex:\\\\right\":7.93,\"latex:1\":6.822,\"kiwi:에서\":5.012,\"latex:3\":4.954,\"latex:|\":4.52,\"latex:'\":4.395,\"latex:y\":3.503,\"latex:11\":3.224,\"latex:^\":3.213,\"kiwi:므로\":3.018}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "problem_text": "최고차항의 계수가 $\\mathrm{1}$인 삼차함수 $f (x)$에 대하여 곡선 $y = f (x)$ 위의 점 $(- 2 , f (- 2))$에서의 접선과 곡선 $y = f (x)$ 위의 점 $(2 , 3)$에서의 접선이 점 $(1 , 3)$에서 만날 때, $f (0)$의 값은?\n① $\\mathrm{31}$\t\t② $\\mathrm{33}$\t\t③ $\\mathrm{35}$\n④ $\\mathrm{37}$\t\t⑤ $\\mathrm{39}$\n",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:-": 15.623,
+      "latex:=": 11.928,
+      "latex:)": 11.716,
+      "latex:(": 11.486,
+      "latex:f": 9.245,
+      "latex:r": 8.853,
+      "latex:a": 8.446,
+      "latex:\\left": 8.141,
+      "kiwi:이": 8.116,
+      "latex:+": 8.049,
+      "latex:\\right": 7.93,
+      "latex:1": 6.822,
+      "kiwi:에서": 5.012,
+      "latex:3": 4.954,
+      "latex:|": 4.52,
+      "latex:'": 4.395,
+      "latex:y": 3.503,
+      "latex:11": 3.224,
+      "latex:^": 3.213,
+      "kiwi:므로": 3.018
+    },
+    "source": "regression_prediction"
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n최고차항의 계수가 $\\mathrm{1}$인 삼차함수 $f (x)$에 대하여 곡선 $y = f (x)$ 위의 점 $(- 2 , f (- 2))$에서의 접선과 곡선 $y = f (x)$ 위의 점 $(2 , 3)$에서의 접선이 점 $(1 , 3)$에서 만날 때, $f (0)$의 값은?\n① $\\mathrm{31}$\t\t② $\\mathrm{33}$\t\t③ $\\mathrm{35}$\n④ $\\mathrm{37}$\t\t⑤ $\\mathrm{39}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:-\":15.623,\"latex:=\":11.928,\"latex:)\":11.716,\"latex:(\":11.486,\"latex:f\":9.245,\"latex:r\":8.853,\"latex:a\":8.446,\"latex:\\\\left\":8.141,\"kiwi:이\":8.116,\"latex:+\":8.049,\"latex:\\\\right\":7.93,\"latex:1\":6.822,\"kiwi:에서\":5.012,\"latex:3\":4.954,\"latex:|\":4.52,\"latex:'\":4.395,\"latex:y\":3.503,\"latex:11\":3.224,\"latex:^\":3.213,\"kiwi:므로\":3.018}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "최고차항의 계수가 $\\mathrm{1}$인 삼차함수 $f (x)$에 대하여 곡선 $y = f (x)$ 위의 점 $(- 2 , f (- 2))$에서의 접선과 곡선 $y = f (x)$ 위의 점 $(2 , 3)$에서의 접선이 점 $(1 , 3)$에서 만날 때, $f (0)$의 값은?\n① $\\mathrm{31}$\t\t② $\\mathrm{33}$\t\t③ $\\mathrm{35}$\n④ $\\mathrm{37}$\t\t⑤ $\\mathrm{39}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:-\":15.623,\"latex:=\":11.928,\"latex:)\":11.716,\"latex:(\":11.486,\"latex:f\":9.245,\"latex:r\":8.853,\"latex:a\":8.446,\"latex:\\\\left\":8.141,\"kiwi:이\":8.116,\"latex:+\":8.049,\"latex:\\\\right\":7.93,\"latex:1\":6.822,\"kiwi:에서\":5.012,\"latex:3\":4.954,\"latex:|\":4.52,\"latex:'\":4.395,\"latex:y\":3.503,\"latex:11\":3.224,\"latex:^\":3.213,\"kiwi:므로\":3.018}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "ab30b66809e1540a4de737d50ae777dbeba191647940e0567ea5f52af480416e",
+  "input_sha256": "0e0f7d6d29686bd340a9f74b14dbf805cf9d8e3ebd756415e7c835c62a1a820f",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_2_024.txt",
+    "vector": "/workspace/MathHint/results/model_comparison_2026-11-07/01_회귀모델/regression_predictions.json",
+    "vocabulary": "/workspace/MathHint/data/vectors/solutions/vocabulary.json"
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

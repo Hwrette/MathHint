@@ -1,0 +1,42 @@
+{
+  "id": "diff_2_006",
+  "condition": "A",
+  "method": "baseline",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "함수\n$f \\left( x \\right) = {\\left\\{\\begin{array}{lll}3 x - a &  & \\left( x < 2 \\right) \\\\ x^{2} + a &  & \\left( x \\geq 2 \\right)\\end{array}\\right.}$\n가 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+  "problem_text": "함수\n$f \\left( x \\right) = {\\left\\{\\begin{array}{lll}3 x - a &  & \\left( x < 2 \\right) \\\\ x^{2} + a &  & \\left( x \\geq 2 \\right)\\end{array}\\right.}$\n가 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+  "hint": null,
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n함수\n$f \\left( x \\right) = {\\left\\{\\begin{array}{lll}3 x - a &  & \\left( x < 2 \\right) \\\\ x^{2} + a &  & \\left( x \\geq 2 \\right)\\end{array}\\right.}$\n가 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "함수\n$f \\left( x \\right) = {\\left\\{\\begin{array}{lll}3 x - a &  & \\left( x < 2 \\right) \\\\ x^{2} + a &  & \\left( x \\geq 2 \\right)\\end{array}\\right.}$\n가 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "6dc2d09c00c57b85f111e2c838be15a8715c661a69f07ff75fab982109a133fa",
+  "input_sha256": "4f10b55d8999f75de6cea9b6739cc1cd3403bf5bb8c6357f3dcdd0ea25183c4d",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_2_006.txt",
+    "vector": null,
+    "vocabulary": null
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

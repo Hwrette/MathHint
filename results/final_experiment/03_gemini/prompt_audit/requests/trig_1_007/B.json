@@ -1,0 +1,72 @@
+{
+  "id": "trig_1_007",
+  "condition": "B",
+  "method": "regression_hint",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "$\\frac{\\pi}{2} < \\theta < \\pi$인 $\\theta$에 대하여 $\\frac{\\cos \\theta}{\\tan \\theta} + \\sin \\theta = \\sqrt{3}$일 때, $\\cos \\theta$의 값은?\n① $- \\frac{\\sqrt{6}}{3}$\t② $- \\frac{\\sqrt{3}}{3}$\t③ $- \\frac{1}{3}$\n④ $\\frac{\\sqrt{3}}{3}$\t⑤ $\\frac{\\sqrt{6}}{3}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:{\":31.031,\"latex:}\":30.965,\"latex:\\\\theta\":15.208,\"latex:3\":12.113,\"latex:\\\\frac\":9.501,\"latex:=\":9.42,\"latex:\\\\cos\":8.087,\"latex:1\":5.053,\"latex:-\":4.48,\"latex:2\":4.201,\"kiwi:이\":3.928,\"latex:\\\\pi\":3.88,\"latex:\\\\sqrt\":3.875,\"latex:\\\\sin\":3.836,\"latex:+\":2.99,\"latex:|\":2.337,\"latex:^\":2.193,\"kiwi:[\":1.897,\"kiwi:]\":1.826,\"latex:)\":1.478}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "problem_text": "$\\frac{\\pi}{2} < \\theta < \\pi$인 $\\theta$에 대하여 $\\frac{\\cos \\theta}{\\tan \\theta} + \\sin \\theta = \\sqrt{3}$일 때, $\\cos \\theta$의 값은?\n① $- \\frac{\\sqrt{6}}{3}$\t② $- \\frac{\\sqrt{3}}{3}$\t③ $- \\frac{1}{3}$\n④ $\\frac{\\sqrt{3}}{3}$\t⑤ $\\frac{\\sqrt{6}}{3}$\n",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:{": 31.031,
+      "latex:}": 30.965,
+      "latex:\\theta": 15.208,
+      "latex:3": 12.113,
+      "latex:\\frac": 9.501,
+      "latex:=": 9.42,
+      "latex:\\cos": 8.087,
+      "latex:1": 5.053,
+      "latex:-": 4.48,
+      "latex:2": 4.201,
+      "kiwi:이": 3.928,
+      "latex:\\pi": 3.88,
+      "latex:\\sqrt": 3.875,
+      "latex:\\sin": 3.836,
+      "latex:+": 2.99,
+      "latex:|": 2.337,
+      "latex:^": 2.193,
+      "kiwi:[": 1.897,
+      "kiwi:]": 1.826,
+      "latex:)": 1.478
+    },
+    "source": "regression_prediction"
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n$\\frac{\\pi}{2} < \\theta < \\pi$인 $\\theta$에 대하여 $\\frac{\\cos \\theta}{\\tan \\theta} + \\sin \\theta = \\sqrt{3}$일 때, $\\cos \\theta$의 값은?\n① $- \\frac{\\sqrt{6}}{3}$\t② $- \\frac{\\sqrt{3}}{3}$\t③ $- \\frac{1}{3}$\n④ $\\frac{\\sqrt{3}}{3}$\t⑤ $\\frac{\\sqrt{6}}{3}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:{\":31.031,\"latex:}\":30.965,\"latex:\\\\theta\":15.208,\"latex:3\":12.113,\"latex:\\\\frac\":9.501,\"latex:=\":9.42,\"latex:\\\\cos\":8.087,\"latex:1\":5.053,\"latex:-\":4.48,\"latex:2\":4.201,\"kiwi:이\":3.928,\"latex:\\\\pi\":3.88,\"latex:\\\\sqrt\":3.875,\"latex:\\\\sin\":3.836,\"latex:+\":2.99,\"latex:|\":2.337,\"latex:^\":2.193,\"kiwi:[\":1.897,\"kiwi:]\":1.826,\"latex:)\":1.478}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "$\\frac{\\pi}{2} < \\theta < \\pi$인 $\\theta$에 대하여 $\\frac{\\cos \\theta}{\\tan \\theta} + \\sin \\theta = \\sqrt{3}$일 때, $\\cos \\theta$의 값은?\n① $- \\frac{\\sqrt{6}}{3}$\t② $- \\frac{\\sqrt{3}}{3}$\t③ $- \\frac{1}{3}$\n④ $\\frac{\\sqrt{3}}{3}$\t⑤ $\\frac{\\sqrt{6}}{3}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:{\":31.031,\"latex:}\":30.965,\"latex:\\\\theta\":15.208,\"latex:3\":12.113,\"latex:\\\\frac\":9.501,\"latex:=\":9.42,\"latex:\\\\cos\":8.087,\"latex:1\":5.053,\"latex:-\":4.48,\"latex:2\":4.201,\"kiwi:이\":3.928,\"latex:\\\\pi\":3.88,\"latex:\\\\sqrt\":3.875,\"latex:\\\\sin\":3.836,\"latex:+\":2.99,\"latex:|\":2.337,\"latex:^\":2.193,\"kiwi:[\":1.897,\"kiwi:]\":1.826,\"latex:)\":1.478}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "9de615786b8e7527e763f799dd79cea1f71d0517cb5dad097d870187ad19feb7",
+  "input_sha256": "417fd13e5dae53f6437380a4fceac6e0bb6a0f9c378e003737b3de2bfcf2556e",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/trig_1_007.txt",
+    "vector": "/workspace/MathHint/results/model_comparison_2026-11-07/01_회귀모델/regression_predictions.json",
+    "vocabulary": "/workspace/MathHint/data/vectors/solutions/vocabulary.json"
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

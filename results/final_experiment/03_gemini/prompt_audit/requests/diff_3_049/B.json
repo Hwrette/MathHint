@@ -1,0 +1,72 @@
+{
+  "id": "diff_3_049",
+  "condition": "B",
+  "method": "regression_hint",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "두 함수\n$f (x) = x^{3} - x + 6$, $\\quad g (x) = x^{2} + a$\n가 있다. $x \\geq 0$인 모든 실수 $x$에 대하여 부등식\n$f (x) \\geq g (x)$\n가 성립할 때, 실수 $a$의 최댓값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:x\":13.925,\"latex:{\":9.539,\"latex:}\":9.404,\"latex:4\":9.254,\"latex:0\":8.472,\"latex:2\":7.509,\"latex:(\":7.503,\"kiwi:이\":7.502,\"latex:)\":7.434,\"latex:=\":6.449,\"latex:-\":6.206,\"latex:\\\\right\":4.255,\"latex:\\\\left\":4.214,\"latex:|\":3.578,\"latex:'\":3.414,\"kiwi:다\":3.399,\"latex:3\":3.329,\"kiwi:.\":3.252,\"latex:h\":3.152,\"kiwi:,\":2.895}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "problem_text": "두 함수\n$f (x) = x^{3} - x + 6$, $\\quad g (x) = x^{2} + a$\n가 있다. $x \\geq 0$인 모든 실수 $x$에 대하여 부등식\n$f (x) \\geq g (x)$\n가 성립할 때, 실수 $a$의 최댓값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:x": 13.925,
+      "latex:{": 9.539,
+      "latex:}": 9.404,
+      "latex:4": 9.254,
+      "latex:0": 8.472,
+      "latex:2": 7.509,
+      "latex:(": 7.503,
+      "kiwi:이": 7.502,
+      "latex:)": 7.434,
+      "latex:=": 6.449,
+      "latex:-": 6.206,
+      "latex:\\right": 4.255,
+      "latex:\\left": 4.214,
+      "latex:|": 3.578,
+      "latex:'": 3.414,
+      "kiwi:다": 3.399,
+      "latex:3": 3.329,
+      "kiwi:.": 3.252,
+      "latex:h": 3.152,
+      "kiwi:,": 2.895
+    },
+    "source": "regression_prediction"
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n두 함수\n$f (x) = x^{3} - x + 6$, $\\quad g (x) = x^{2} + a$\n가 있다. $x \\geq 0$인 모든 실수 $x$에 대하여 부등식\n$f (x) \\geq g (x)$\n가 성립할 때, 실수 $a$의 최댓값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:x\":13.925,\"latex:{\":9.539,\"latex:}\":9.404,\"latex:4\":9.254,\"latex:0\":8.472,\"latex:2\":7.509,\"latex:(\":7.503,\"kiwi:이\":7.502,\"latex:)\":7.434,\"latex:=\":6.449,\"latex:-\":6.206,\"latex:\\\\right\":4.255,\"latex:\\\\left\":4.214,\"latex:|\":3.578,\"latex:'\":3.414,\"kiwi:다\":3.399,\"latex:3\":3.329,\"kiwi:.\":3.252,\"latex:h\":3.152,\"kiwi:,\":2.895}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "두 함수\n$f (x) = x^{3} - x + 6$, $\\quad g (x) = x^{2} + a$\n가 있다. $x \\geq 0$인 모든 실수 $x$에 대하여 부등식\n$f (x) \\geq g (x)$\n가 성립할 때, 실수 $a$의 최댓값은?\n① $\\mathrm{1}$\t\t② $\\mathrm{2}$\t\t③ $\\mathrm{3}$\n④ $\\mathrm{4}$\t\t⑤ $\\mathrm{5}$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:x\":13.925,\"latex:{\":9.539,\"latex:}\":9.404,\"latex:4\":9.254,\"latex:0\":8.472,\"latex:2\":7.509,\"latex:(\":7.503,\"kiwi:이\":7.502,\"latex:)\":7.434,\"latex:=\":6.449,\"latex:-\":6.206,\"latex:\\\\right\":4.255,\"latex:\\\\left\":4.214,\"latex:|\":3.578,\"latex:'\":3.414,\"kiwi:다\":3.399,\"latex:3\":3.329,\"kiwi:.\":3.252,\"latex:h\":3.152,\"kiwi:,\":2.895}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "164422533867b8adda22e552253f5cdb44be2bff11b05c6219f2b04852d12e6b",
+  "input_sha256": "300dae615d2931f0bb52888ce9751188dfab65475976929d5b2bf60b28f5fa17",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_3_049.txt",
+    "vector": "/workspace/MathHint/results/model_comparison_2026-11-07/01_회귀모델/regression_predictions.json",
+    "vocabulary": "/workspace/MathHint/data/vectors/solutions/vocabulary.json"
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

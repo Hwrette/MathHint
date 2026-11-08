@@ -1,0 +1,72 @@
+{
+  "id": "diff_1_030",
+  "condition": "B",
+  "method": "regression_hint",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "함수 $f \\left( x \\right) = x^{3} + a x + 9$는 $x = - 1$에서 극대이다. 함수 $f \\left( x \\right)$의 극솟값은? (단, $a$는 상수이다.)\n① $6$\t\t② $7$\t\t③ $8$\n④ $9$\t\t⑤ $10$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:x\":18.868,\"latex:)\":13.557,\"latex:(\":13.547,\"latex:=\":12.572,\"latex:f\":11.99,\"latex:\\\\left\":10.628,\"latex:\\\\right\":10.341,\"latex:+\":9.096,\"latex:0\":8.438,\"latex:3\":6.419,\"latex:'\":6.357,\"latex:a\":5.621,\"kiwi:함수\":4.599,\"latex:1\":4.53,\"latex:}\":4.487,\"latex:{\":4.399,\"latex:\\\\cdots\":4.369,\"latex:-\":4.292,\"latex:2\":4.252,\"latex:^\":3.957}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "problem_text": "함수 $f \\left( x \\right) = x^{3} + a x + 9$는 $x = - 1$에서 극대이다. 함수 $f \\left( x \\right)$의 극솟값은? (단, $a$는 상수이다.)\n① $6$\t\t② $7$\t\t③ $8$\n④ $9$\t\t⑤ $10$\n",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:x": 18.868,
+      "latex:)": 13.557,
+      "latex:(": 13.547,
+      "latex:=": 12.572,
+      "latex:f": 11.99,
+      "latex:\\left": 10.628,
+      "latex:\\right": 10.341,
+      "latex:+": 9.096,
+      "latex:0": 8.438,
+      "latex:3": 6.419,
+      "latex:'": 6.357,
+      "latex:a": 5.621,
+      "kiwi:함수": 4.599,
+      "latex:1": 4.53,
+      "latex:}": 4.487,
+      "latex:{": 4.399,
+      "latex:\\cdots": 4.369,
+      "latex:-": 4.292,
+      "latex:2": 4.252,
+      "latex:^": 3.957
+    },
+    "source": "regression_prediction"
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n함수 $f \\left( x \\right) = x^{3} + a x + 9$는 $x = - 1$에서 극대이다. 함수 $f \\left( x \\right)$의 극솟값은? (단, $a$는 상수이다.)\n① $6$\t\t② $7$\t\t③ $8$\n④ $9$\t\t⑤ $10$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:x\":18.868,\"latex:)\":13.557,\"latex:(\":13.547,\"latex:=\":12.572,\"latex:f\":11.99,\"latex:\\\\left\":10.628,\"latex:\\\\right\":10.341,\"latex:+\":9.096,\"latex:0\":8.438,\"latex:3\":6.419,\"latex:'\":6.357,\"latex:a\":5.621,\"kiwi:함수\":4.599,\"latex:1\":4.53,\"latex:}\":4.487,\"latex:{\":4.399,\"latex:\\\\cdots\":4.369,\"latex:-\":4.292,\"latex:2\":4.252,\"latex:^\":3.957}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "함수 $f \\left( x \\right) = x^{3} + a x + 9$는 $x = - 1$에서 극대이다. 함수 $f \\left( x \\right)$의 극솟값은? (단, $a$는 상수이다.)\n① $6$\t\t② $7$\t\t③ $8$\n④ $9$\t\t⑤ $10$\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:x\":18.868,\"latex:)\":13.557,\"latex:(\":13.547,\"latex:=\":12.572,\"latex:f\":11.99,\"latex:\\\\left\":10.628,\"latex:\\\\right\":10.341,\"latex:+\":9.096,\"latex:0\":8.438,\"latex:3\":6.419,\"latex:'\":6.357,\"latex:a\":5.621,\"kiwi:함수\":4.599,\"latex:1\":4.53,\"latex:}\":4.487,\"latex:{\":4.399,\"latex:\\\\cdots\":4.369,\"latex:-\":4.292,\"latex:2\":4.252,\"latex:^\":3.957}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "62d9ffa10ec220854a5c8226b8d7f2736768f43cfe4c7ee13ec4597f475d123c",
+  "input_sha256": "27bc54823a2318b1d5689323c7eda8547ded3fd7f502b677b1151614541ca024",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_1_030.txt",
+    "vector": "/workspace/MathHint/results/model_comparison_2026-11-07/01_회귀모델/regression_predictions.json",
+    "vocabulary": "/workspace/MathHint/data/vectors/solutions/vocabulary.json"
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}

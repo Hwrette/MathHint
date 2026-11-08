@@ -1,0 +1,72 @@
+{
+  "id": "diff_1_014",
+  "condition": "C",
+  "method": "oracle_hint",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "함수\n$f \\left( x \\right) = \\left\\{\\begin{array}{lll}7 x + a &  & \\left( x \\le 2 \\right) \\\\ x^{2} + a x &  & \\left( x > 2 \\right)\\end{array}\\right.$\n가 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?\n① $9$\t\t② $10$\t\t③ $11$\n④ $12$\t\t⑤ $13$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:x\":6.0,\"latex:2\":5.0,\"latex:=\":5.0,\"latex:(\":4.0,\"latex:)\":4.0,\"latex:\\\\left\":4.0,\"latex:\\\\right\":4.0,\"latex:f\":4.0,\"latex:{\":4.0,\"latex:}\":4.0,\"latex:+\":3.0,\"latex:a\":3.0,\"kiwi:[\":2.0,\"kiwi:]\":2.0,\"kiwi:에서\":2.0,\"kiwi:연속\":2.0,\"kiwi:이\":2.0,\"latex:\\\\lim\":2.0,\"latex:\\\\rightarrow\":2.0,\"latex:_\":2.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "problem_text": "함수\n$f \\left( x \\right) = \\left\\{\\begin{array}{lll}7 x + a &  & \\left( x \\le 2 \\right) \\\\ x^{2} + a x &  & \\left( x > 2 \\right)\\end{array}\\right.$\n가 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?\n① $9$\t\t② $10$\t\t③ $11$\n④ $12$\t\t⑤ $13$\n",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 431,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:x": 6.0,
+      "latex:2": 5.0,
+      "latex:=": 5.0,
+      "latex:(": 4.0,
+      "latex:)": 4.0,
+      "latex:\\left": 4.0,
+      "latex:\\right": 4.0,
+      "latex:f": 4.0,
+      "latex:{": 4.0,
+      "latex:}": 4.0,
+      "latex:+": 3.0,
+      "latex:a": 3.0,
+      "kiwi:[": 2.0,
+      "kiwi:]": 2.0,
+      "kiwi:에서": 2.0,
+      "kiwi:연속": 2.0,
+      "kiwi:이": 2.0,
+      "latex:\\lim": 2.0,
+      "latex:\\rightarrow": 2.0,
+      "latex:_": 2.0
+    },
+    "source": "actual_reference"
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n함수\n$f \\left( x \\right) = \\left\\{\\begin{array}{lll}7 x + a &  & \\left( x \\le 2 \\right) \\\\ x^{2} + a x &  & \\left( x > 2 \\right)\\end{array}\\right.$\n가 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?\n① $9$\t\t② $10$\t\t③ $11$\n④ $12$\t\t⑤ $13$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:x\":6.0,\"latex:2\":5.0,\"latex:=\":5.0,\"latex:(\":4.0,\"latex:)\":4.0,\"latex:\\\\left\":4.0,\"latex:\\\\right\":4.0,\"latex:f\":4.0,\"latex:{\":4.0,\"latex:}\":4.0,\"latex:+\":3.0,\"latex:a\":3.0,\"kiwi:[\":2.0,\"kiwi:]\":2.0,\"kiwi:에서\":2.0,\"kiwi:연속\":2.0,\"kiwi:이\":2.0,\"latex:\\\\lim\":2.0,\"latex:\\\\rightarrow\":2.0,\"latex:_\":2.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "함수\n$f \\left( x \\right) = \\left\\{\\begin{array}{lll}7 x + a &  & \\left( x \\le 2 \\right) \\\\ x^{2} + a x &  & \\left( x > 2 \\right)\\end{array}\\right.$\n가 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?\n① $9$\t\t② $10$\t\t③ $11$\n④ $12$\t\t⑤ $13$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:x\":6.0,\"latex:2\":5.0,\"latex:=\":5.0,\"latex:(\":4.0,\"latex:)\":4.0,\"latex:\\\\left\":4.0,\"latex:\\\\right\":4.0,\"latex:f\":4.0,\"latex:{\":4.0,\"latex:}\":4.0,\"latex:+\":3.0,\"latex:a\":3.0,\"kiwi:[\":2.0,\"kiwi:]\":2.0,\"kiwi:에서\":2.0,\"kiwi:연속\":2.0,\"kiwi:이\":2.0,\"latex:\\\\lim\":2.0,\"latex:\\\\rightarrow\":2.0,\"latex:_\":2.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "e02f3ee562b0944e65be6ecd4ea6560da471933f526cd5e32974ab991cb3a641",
+  "input_sha256": "909e992a9dbf242bccf1d95f437480dfa0664204f3cda1d1d12c1322d0af2d50",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "sources": {
+    "problem": "/workspace/MathHint/data/processed/problems/diff_1_014.txt",
+    "vector": "/workspace/MathHint/data/vectors/solutions/test_vectors.json",
+    "vocabulary": "/workspace/MathHint/data/vectors/solutions/vocabulary.json"
+  },
+  "transport": {
+    "timeout_ms": 90000,
+    "sdk_attempts": 1
+  },
+  "historical_capture_note": "A/B old successful records are reconstructed and exact-input-verified, not retroactively captured live; new C is observed immediately before SDK call.",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "json_roundtrip_preserves_latex": true,
+    "problem_is_exact_prefix": true,
+    "reference_prose_not_in_sdk_arguments": true
+  }
+}
