@@ -37,13 +37,37 @@ ARI는 우연 일치를 보정한 군집 일치도, NMI는 분류와 군집이 �
 
 ### 유클리드 · 세부단원
 
-- 학습 다수 라벨과 일치: [diff_1_011](../../../data/processed/problems/diff_1_011.txt) · 군집 7 · 실제 `10 미적분1 / 02 함수의 연속성 / 01 함수의 연속성` · 학습 다수 `10 미적분1 / 02 함수의 연속성 / 01 함수의 연속성`.
-- 서로 다른 라벨이 같은 군집: [diff_1_018](../../../data/processed/problems/diff_1_018.txt) · 군집 5 · 실제 `10 미적분1 / 03 미분계수와 도함수 / 01 미분계수` · 학습 다수 `10 미적분1 / 05 함수의 증가와 감소 / 02 함수의 극대와 극소`.
-- 같은 라벨이 여러 군집으로 분산: `09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식` 학습 37문항이 11군집으로 나뉨. 문항: trig_1_038→13, trig_1_040→18, trig_1_041→23, trig_1_044→5, trig_1_045→18, trig_1_047→4, trig_1_048→0, trig_2_021→18, trig_2_023→17, trig_2_026→4, trig_2_027→20, trig_2_028→16, trig_2_029→4, trig_2_031→5, trig_2_032→16, trig_2_033→18, trig_2_034→4, trig_2_036→2, trig_2_037→18, trig_3_016→18, trig_3_018→4, trig_3_019→4, trig_3_020→18, trig_3_022→18, trig_3_023→18, trig_3_024→4, trig_3_025→4, trig_3_027→18, trig_3_028→18, trig_3_029→4, trig_3_030→12, trig_3_031→4, trig_3_032→4, trig_3_033→2, trig_3_036→2, trig_3_037→18, trig_3_038→16.
+[이 실험의 군집 문항·그림](experiments/subunit_euclidean/README.md)
+
+- 학습 다수 라벨과 일치: [diff_1_011](../../../data/processed/problems/diff_1_011.txt) · 군집 7 · 실제 `10 미적분1 / 02 함수의 연속성 / 01 함수의 연속성`. 학습 내 같은 라벨은 10/10문항이다. 이 사례가 전체 유형의 완전 분리를 뜻하지는 않는다.
+- 서로 다른 라벨이 같은 군집: [diff_1_018](../../../data/processed/problems/diff_1_018.txt) · 실제 `10 미적분1 / 03 미분계수와 도함수 / 01 미분계수` · 군집 5의 학습 다수 `10 미적분1 / 05 함수의 증가와 감소 / 02 함수의 극대와 극소`.
+  같은 군집의 학습 문항 [diff_1_031](../../../data/processed/problems/diff_1_031.txt)의 실제 라벨은 `10 미적분1 / 05 함수의 증가와 감소 / 02 함수의 극대와 극소`이다. 대표 라벨은 테스트 문항을 보지 않고 학습에서 정했다.
+- 같은 라벨이 여러 군집으로 분산: `09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식` 학습 37문항이 11군집으로 나뉨. 예: [trig_1_038](../../../data/processed/problems/trig_1_038.txt)→13, [trig_1_040](../../../data/processed/problems/trig_1_040.txt)→18, [trig_1_041](../../../data/processed/problems/trig_1_041.txt)→23, [trig_1_044](../../../data/processed/problems/trig_1_044.txt)→5, [trig_1_045](../../../data/processed/problems/trig_1_045.txt)→18, [trig_1_047](../../../data/processed/problems/trig_1_047.txt)→4, [trig_1_048](../../../data/processed/problems/trig_1_048.txt)→0, [trig_2_021](../../../data/processed/problems/trig_2_021.txt)→18 외 29문항. 전체 ID와 군집은 [문항별 배정](cluster_members.csv), 분산 수치는 [분산도 표](label_dispersion.csv)에서 이 라벨로 확인한다.
 
 ### 코사인(구면) · 세부단원
 
-- 학습 다수 라벨과 일치: [diff_2_040](../../../data/processed/problems/diff_2_040.txt) · 군집 15 · 실제 `10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분` · 학습 다수 `10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분`.
-- 서로 다른 라벨이 같은 군집: [diff_1_018](../../../data/processed/problems/diff_1_018.txt) · 군집 23 · 실제 `10 미적분1 / 03 미분계수와 도함수 / 01 미분계수` · 학습 다수 `09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식`.
-- 같은 라벨이 여러 군집으로 분산: `09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식` 학습 37문항이 12군집으로 나뉨. 문항: trig_1_038→13, trig_1_040→16, trig_1_041→9, trig_1_044→23, trig_1_045→16, trig_1_047→0, trig_1_048→21, trig_2_021→16, trig_2_023→17, trig_2_026→4, trig_2_027→21, trig_2_028→16, trig_2_029→4, trig_2_031→5, trig_2_032→16, trig_2_033→12, trig_2_034→4, trig_2_036→2, trig_2_037→16, trig_3_016→16, trig_3_018→4, trig_3_019→4, trig_3_020→16, trig_3_022→16, trig_3_023→16, trig_3_024→4, trig_3_025→4, trig_3_027→16, trig_3_028→16, trig_3_029→4, trig_3_030→12, trig_3_031→4, trig_3_032→4, trig_3_033→3, trig_3_036→23, trig_3_037→16, trig_3_038→16.
+[이 실험의 군집 문항·그림](experiments/subunit_spherical/README.md)
+
+- 학습 다수 라벨과 일치: [diff_2_040](../../../data/processed/problems/diff_2_040.txt) · 군집 15 · 실제 `10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분`. 학습 내 같은 라벨은 8/8문항이다. 이 사례가 전체 유형의 완전 분리를 뜻하지는 않는다.
+- 서로 다른 라벨이 같은 군집: [diff_1_018](../../../data/processed/problems/diff_1_018.txt) · 실제 `10 미적분1 / 03 미분계수와 도함수 / 01 미분계수` · 군집 23의 학습 다수 `09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식`.
+  같은 군집의 학습 문항 [trig_1_044](../../../data/processed/problems/trig_1_044.txt)의 실제 라벨은 `09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식`이다. 대표 라벨은 테스트 문항을 보지 않고 학습에서 정했다.
+- 같은 라벨이 여러 군집으로 분산: `09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식` 학습 37문항이 12군집으로 나뉨. 예: [trig_1_038](../../../data/processed/problems/trig_1_038.txt)→13, [trig_1_040](../../../data/processed/problems/trig_1_040.txt)→16, [trig_1_041](../../../data/processed/problems/trig_1_041.txt)→9, [trig_1_044](../../../data/processed/problems/trig_1_044.txt)→23, [trig_1_045](../../../data/processed/problems/trig_1_045.txt)→16, [trig_1_047](../../../data/processed/problems/trig_1_047.txt)→0, [trig_1_048](../../../data/processed/problems/trig_1_048.txt)→21, [trig_2_021](../../../data/processed/problems/trig_2_021.txt)→16 외 29문항. 전체 ID와 군집은 [문항별 배정](cluster_members.csv), 분산 수치는 [분산도 표](label_dispersion.csv)에서 이 라벨로 확인한다.
+
+### 유클리드 · 문제 유형
+
+[이 실험의 군집 문항·그림](experiments/type_euclidean/README.md)
+
+- 학습 다수 라벨과 일치: [diff_1_011](../../../data/processed/problems/diff_1_011.txt) · 군집 7 · 실제 `10 미적분1 / 02 함수의 연속성 / 01 함수의 연속성 / 05 연속성5 (구간정의함수)`. 학습 내 같은 라벨은 6/6문항이다. 이 사례가 전체 유형의 완전 분리를 뜻하지는 않는다.
+- 서로 다른 라벨이 같은 군집: [diff_1_005](../../../data/processed/problems/diff_1_005.txt) · 실제 `10 미적분1 / 01 함수의 극한 / 03 극한식의 해석 / 04 해석4 (함수 구하기. 인수정리)` · 군집 65의 학습 다수 `10 미적분1 / 01 함수의 극한 / 03 극한식의 해석 / 03 해석3 (함수 구하기. 차수 결정)`.
+  같은 군집의 학습 문항 [diff_2_002](../../../data/processed/problems/diff_2_002.txt)의 실제 라벨은 `10 미적분1 / 01 함수의 극한 / 03 극한식의 해석 / 03 해석3 (함수 구하기. 차수 결정)`이다. 대표 라벨은 테스트 문항을 보지 않고 학습에서 정했다.
+- 같은 라벨이 여러 군집으로 분산: `09 대수 / 06 삼각함수의 그래프 / 01 삼각함수의 그래프 / 04 그래프4 (표준형 그래프에서 Mm)` 학습 12문항이 10군집으로 나뉨. 예: [trig_1_014](../../../data/processed/problems/trig_1_014.txt)→34, [trig_1_015](../../../data/processed/problems/trig_1_015.txt)→3, [trig_1_016](../../../data/processed/problems/trig_1_016.txt)→56, [trig_1_017](../../../data/processed/problems/trig_1_017.txt)→55, [trig_1_019](../../../data/processed/problems/trig_1_019.txt)→56, [trig_1_022](../../../data/processed/problems/trig_1_022.txt)→18, [trig_2_013](../../../data/processed/problems/trig_2_013.txt)→16, [trig_2_015](../../../data/processed/problems/trig_2_015.txt)→60 외 4문항. 전체 ID와 군집은 [문항별 배정](cluster_members.csv), 분산 수치는 [분산도 표](label_dispersion.csv)에서 이 라벨로 확인한다.
+
+### 코사인(구면) · 문제 유형
+
+[이 실험의 군집 문항·그림](experiments/type_spherical/README.md)
+
+- 학습 다수 라벨과 일치: [diff_1_011](../../../data/processed/problems/diff_1_011.txt) · 군집 7 · 실제 `10 미적분1 / 02 함수의 연속성 / 01 함수의 연속성 / 05 연속성5 (구간정의함수)`. 학습 내 같은 라벨은 8/8문항이다. 이 사례가 전체 유형의 완전 분리를 뜻하지는 않는다.
+- 서로 다른 라벨이 같은 군집: [diff_1_005](../../../data/processed/problems/diff_1_005.txt) · 실제 `10 미적분1 / 01 함수의 극한 / 03 극한식의 해석 / 04 해석4 (함수 구하기. 인수정리)` · 군집 29의 학습 다수 `10 미적분1 / 01 함수의 극한 / 03 극한식의 해석 / 03 해석3 (함수 구하기. 차수 결정)`.
+  같은 군집의 학습 문항 [diff_1_003](../../../data/processed/problems/diff_1_003.txt)의 실제 라벨은 `10 미적분1 / 01 함수의 극한 / 03 극한식의 해석 / 03 해석3 (함수 구하기. 차수 결정)`이다. 대표 라벨은 테스트 문항을 보지 않고 학습에서 정했다.
+- 같은 라벨이 여러 군집으로 분산: `09 대수 / 06 삼각함수의 그래프 / 01 삼각함수의 그래프 / 04 그래프4 (표준형 그래프에서 Mm)` 학습 12문항이 10군집으로 나뉨. 예: [trig_1_014](../../../data/processed/problems/trig_1_014.txt)→34, [trig_1_015](../../../data/processed/problems/trig_1_015.txt)→3, [trig_1_016](../../../data/processed/problems/trig_1_016.txt)→56, [trig_1_017](../../../data/processed/problems/trig_1_017.txt)→55, [trig_1_019](../../../data/processed/problems/trig_1_019.txt)→56, [trig_1_022](../../../data/processed/problems/trig_1_022.txt)→56, [trig_2_013](../../../data/processed/problems/trig_2_013.txt)→16, [trig_2_015](../../../data/processed/problems/trig_2_015.txt)→60 외 4문항. 전체 ID와 군집은 [문항별 배정](cluster_members.csv), 분산 수치는 [분산도 표](label_dispersion.csv)에서 이 라벨로 확인한다.
 

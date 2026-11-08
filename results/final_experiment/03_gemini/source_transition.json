@@ -26,6 +26,19 @@
       "predictions_sha256": "06ceb7eb8131ea6505b7f55a35724e354b6c6073275bbac4291f6fe8f0d6fd0a",
       "all_non_source_config_fields_and_input_hashes_match": true,
       "reason": "Only source code/location provenance changed; prediction bytes, model/settings/prompt/vector/input/grader fingerprints are identical."
+    },
+    {
+      "recorded_at": "2026-11-08T17:46:35.621477+00:00",
+      "source_hashes": {
+        "runner_sha256": "e66ebb2490b627a5e8b84ac1991a35633b008cbe4f02bdfe8f0ca9b16bebcd8f",
+        "shared_runner_sha256": "622139dcf1e26f4d1be0b34a8f6be6dde3d4a57527426d1d6b5cd067b2b65c22"
+      },
+      "source_locations": {
+        "predictions_source": "/workspace/MathHint/results/model_comparison_2026-11-07/01_회귀모델/regression_predictions.json"
+      },
+      "predictions_sha256": "06ceb7eb8131ea6505b7f55a35724e354b6c6073275bbac4291f6fe8f0d6fd0a",
+      "all_non_source_config_fields_and_input_hashes_match": true,
+      "reason": "Only source code/location provenance changed; prediction bytes, model/settings/prompt/vector/input/grader fingerprints are identical."
     }
   ],
   "frozen_source_commit": "4f676586562668affe7800b4163cb44fc6d20520",

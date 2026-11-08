@@ -1,10 +1,8 @@
 """실제 네트워크 없이 요청 시작 간격·RetryInfo·일일 할당량 중단을 검증한다."""
 
 import unittest
-from unittest.mock import patch
 
 from mathhint_solver.RateLimitedComparison import DailyQuotaStop, GlobalRateLimiter, quota_details
-from mathhint_solver import RateLimitedComparison as rate_limited
 
 
 class FakeClock:
@@ -25,11 +23,6 @@ class QuotaError(Exception):
 
 
 class RateLimitTests(unittest.TestCase):
-    def test_default_main_does_not_create_a_network_request(self):
-        with patch.object(rate_limited, "RUN_API", False), \
-                patch.object(rate_limited.comparison, "make_request") as request:
-            rate_limited.main()
-        request.assert_not_called()
 
     def test_global_request_start_spacing(self):
         clock = FakeClock()

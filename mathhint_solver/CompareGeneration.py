@@ -1,8 +1,7 @@
-"""고정 테스트 문항의 Gemini 풀이를 기본/회귀 벡터 조건으로 짝지어 비교한다.
+"""세 조건 실행기가 재사용하는 입력·SDK 전송·응답 저장·재개 공통 함수.
 
-실제 정답과 원본 해설은 평가·열람에만 사용하고 API 입력에는 넣지 않는다.
-이 파일은 입력과 보고서만 준비한다. 실제 API 실행은 RateLimitedComparison.py에서 한다.
-성공한 응답은 재요청하지 않으며 설정/입력 변경 시 중단한다.
+실행 진입점은 ThreeWayGeneration.py 하나다. 여기서는 API 키를 읽거나
+독립 실험을 시작하지 않는다. 성공 응답은 재요청하지 않고 입력 변경을 거부한다.
 """
 
 from __future__ import annotations
@@ -19,26 +18,8 @@ from typing import Any
 
 if __package__:
     from .AnswerEvaluation import evaluate_answer, extract_reference
-    from . import GenerationReport as report
-    from .GenerationReport import plot_comparison
 else:
     from AnswerEvaluation import evaluate_answer, extract_reference
-    import GenerationReport as report
-    from GenerationReport import plot_comparison
-
-
-# 1. 설정 — 입력 준비만 하며 이 파일에서는 API를 호출하지 않는다.
-ROOT = Path(__file__).resolve().parents[1]
-RUN_ROOT = ROOT / "outputs/model_comparison"
-PREDICTIONS = RUN_ROOT / "training/regression_predictions.json"
-OUTPUT = RUN_ROOT / "generation_top_tokens"
-MODEL = "gemini-3.1-flash-lite"
-THINKING_LEVEL = "minimal"
-TEMPERATURE = 0.0
-MAX_OUTPUT_TOKENS = 8192
-HINT_TOP_K = 20
-MAX_ATTEMPTS = 2
-BASELINE_SOURCE = None  # 같은 입력·설정의 기존 대조군을 가져올 폴더, 없으면 None
 
 
 DEFAULT_SYSTEM = (
@@ -100,25 +81,23 @@ def serialize_hint(vocabulary: list[str], vector: list[float], *, mode: str = "t
                    top_k: int = 20) -> tuple[str, dict]:
     if not vocabulary or len(set(vocabulary)) != len(vocabulary) or len(vocabulary) != len(vector):
         raise ValueError("예측 벡터와 중복 없는 어휘의 길이가 같아야 합니다.")
-    if mode not in ("top_tokens", "full_vector") or isinstance(top_k, bool) or not isinstance(top_k, int) or top_k < 1:
-        raise ValueError("hint mode는 top_tokens/full_vector, top_k는 양수여야 합니다.")
+    if mode != "top_tokens" or isinstance(top_k, bool) or not isinstance(top_k, int) or top_k < 1:
+        raise ValueError("최종 실험은 top_tokens 방식과 양수 top_k를 사용합니다.")
     clipped = []
     for value in vector:
         if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value):
             raise ValueError("회귀 예측은 유한한 실수여야 합니다.")
         clipped.append(max(0.0, float(value)))
     indices = [index for index, value in enumerate(clipped) if value > 0]
-    if mode == "top_tokens":
-        indices = sorted(indices, key=lambda index: (-clipped[index], index))[:top_k]
+    indices = sorted(indices, key=lambda index: (-clipped[index], index))[:top_k]
     mapping = {vocabulary[index]: round(clipped[index], 3) for index in indices if round(clipped[index], 3) > 0}
     payload = json.dumps(mapping, ensure_ascii=False, separators=(",", ":"))
     text = (f"\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위{top_k}개]\n"
-            + payload + "\n위 주요 토큰을 참고하여 풀이를 작성해줘." if mode == "top_tokens" else
-            "\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 토큰 빈도]\n" + payload)
+            + payload + "\n위 주요 토큰을 참고하여 풀이를 작성해줘.")
     return (text,
             {"transform": "clip_min_0_round_3_decimal_places_omit_zeros",
-             "mode": mode, "top_k": top_k if mode == "top_tokens" else None,
-             "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order" if mode == "top_tokens" else "vocabulary_order",
+             "mode": mode, "top_k": top_k,
+             "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
              "vocabulary_size": len(vocabulary), "transmitted_coordinates": len(mapping),
              "mapping": mapping})
 
@@ -189,7 +168,7 @@ def prepare_plan(project: Path, predictions_path: Path, *, model: str,
               "test_ids": test_ids, "metadata_sha256": file_hash(metadata_path),
               "predictions_sha256": file_hash(predictions_path),
               "hint_mode": hint_mode, "hint_top_k": hint_top_k,
-              "hint_transform": "positive_clip_select_unrounded_desc_tie_vocab_round_3_omit_zeros" if hint_mode == "top_tokens" else "all_coordinates_clip_min_0_round_3_omit_zeros",
+              "hint_transform": "positive_clip_select_unrounded_desc_tie_vocab_round_3_omit_zeros",
               "condition_order": "alternate_by_test_id_position", "inputs": input_hashes,
               "grading": "deterministic_final_answer_only_not_solution_quality",
               "runner_sha256": file_hash(Path(__file__)),
@@ -242,49 +221,6 @@ def load_completed(output: Path, config_id: str) -> dict[tuple[str, str], dict]:
             raise ValueError("응답 로그의 config_id가 다릅니다.")
         records[(record["id"], record["method"])] = record
     return records
-
-
-def import_baseline(source: Path, output: Path, config: dict, plan: list[dict]) -> dict:
-    """입력·모델 설정이 같은 기존 성공 대조군을 출처와 실제 시각을 보존해 가져온다."""
-    if source.resolve() == output.resolve():
-        raise ValueError("대조군 원본과 새 실행 폴더는 달라야 합니다.")
-    source_manifest = read_json(source / "config.json")
-    source_config, source_id = source_manifest["config"], source_manifest["config_id"]
-    if digest(source_config) != source_id:
-        raise ValueError("기존 대조군 설정의 해시가 일치하지 않습니다.")
-    for field in ("model", "thinking_level", "temperature", "max_output_tokens", "system_instruction",
-                  "generation_id", "train_ids", "test_ids", "grader_sha256"):
-        if source_config.get(field) != config.get(field):
-            raise ValueError(f"기존 대조군의 설정이 다릅니다: {field}")
-    config_id = initialize_run(output, config, plan)
-    current, previous = load_completed(output, config_id), load_completed(source, source_id)
-    candidates = []
-    for item in plan:
-        if item["method"] != "baseline":
-            continue
-        row = previous.get((item["id"], "baseline"))
-        if row is None or row.get("status") != "success":
-            continue
-        for field in ("input_text", "input_sha256", "system_instruction", "reference", "reference_answer_text",
-                      "reference_solution", "problem_text"):
-            if row.get(field) != item.get(field):
-                raise ValueError(f"기존 대조군의 문항 데이터가 다릅니다: {item['id']} / {field}")
-        if (item["id"], "baseline") not in current or current[(item["id"], "baseline")]["status"] != "success":
-            candidates.append(row)
-    imported = []
-    for row in candidates:
-        reused = {**row, "config_id": config_id, "response_origin": "reused_control",
-                  "provenance": {"source_directory": str(source.resolve()), "source_config_id": source_id,
-                                 "source_record_sha256": digest(row), "imported_at": utc_now(),
-                                 "reason": "Identical problem-only control reused across hint policies; no new API call."}}
-        save_result(output, reused)
-        imported.append(row["id"])
-    report = {"source_directory": str(source.resolve()), "source_config_id": source_id,
-              "destination_config_id": config_id, "imported_at": utc_now(), "imported_this_execution": imported,
-              "total_reused_controls": sum(row.get("response_origin") == "reused_control"
-                                           for row in load_completed(output, config_id).values())}
-    write_json(output / "baseline_imports.json", report)
-    return report
 
 
 def response_record(response: Any) -> dict:
@@ -410,62 +346,11 @@ def save_result(output: Path, result: dict) -> None:
     write_json(folder / "record.json", result)
 
 
-def summarize(records: list[dict], expected_ids: list[str]) -> dict:
-    summary = {"expected_questions": len(expected_ids), "methods": {}, "paired": {}}
-    for method in METHODS:
-        rows = [row for row in records if row["method"] == method]
-        successful = [row for row in rows if row["status"] == "success"]
-        graded = [row for row in successful if row["evaluation"].get("correct") is not None]
-        correct = sum(row["evaluation"].get("correct") is True for row in graded)
-        usages = {}
-        # 사용량이 누락된 시도는 별도 표시하고 알려진 합계를 전체로 오인하지 않는다.
-        for field in USAGE_FIELDS:
-            values = [attempt["usage"].get(field) for row in rows for attempt in row["attempts"]]
-            known = [value for value in values if value is not None]
-            successful_values = [row["usage"].get(field) for row in successful]
-            known_successful = [value for value in successful_values if value is not None]
-            usages[field] = {"known_attempt_sum": sum(known), "known_attempts": len(known),
-                            "missing_attempts": len(values) - len(known),
-                            "successful_response_mean": (sum(known_successful) / len(known_successful)
-                                                         if known_successful else None),
-                            "successful_response_count": len(known_successful)}
-        summary["methods"][method] = {
-            "recorded": len(rows), "successful": len(successful), "graded": len(graded),
-            "correct": correct, "incorrect": len(graded) - correct,
-            "ungradable_successes": len(successful) - len(graded),
-            "reused_controls": sum(row.get("response_origin") == "reused_control" for row in rows),
-            "api_errors_or_empty": len(rows) - len(successful),
-            "missing_requests": len(expected_ids) - len(rows),
-            "accuracy_on_graded": correct / len(graded) if graded else None,
-            "correct_per_expected_question": correct / len(expected_ids) if expected_ids else None,
-            "grading_coverage": len(graded) / len(expected_ids) if expected_ids else None,
-            "usage": usages,
-        }
-    indexed = {(row["id"], row["method"]): row for row in records}
-    pairs = [(indexed[(identifier, METHODS[0])], indexed[(identifier, METHODS[1])])
-             for identifier in expected_ids if all((identifier, method) in indexed for method in METHODS)]
-    valid = [(left, right) for left, right in pairs
-             if left["evaluation"].get("correct") is not None and right["evaluation"].get("correct") is not None]
-    summary["paired"] = {"recorded_pairs": len(pairs), "both_gradable": len(valid),
-                         "both_correct": sum(a["evaluation"]["correct"] and b["evaluation"]["correct"] for a, b in valid),
-                         "baseline_only_correct": sum(a["evaluation"]["correct"] and not b["evaluation"]["correct"] for a, b in valid),
-                         "regression_only_correct": sum(not a["evaluation"]["correct"] and b["evaluation"]["correct"] for a, b in valid),
-                         "both_incorrect": sum(not a["evaluation"]["correct"] and not b["evaluation"]["correct"] for a, b in valid)}
-    return summary
-
-
-def render_reports(output, records, config, *, charts=True):
-    """채점 집계를 화면과 파일로 정리한다."""
-    summary = summarize(records, config["test_ids"])
-    write_json(output / "summary.json", summary)
-    return report.render_reports(output, records, config, summary, METHODS, USAGE_FIELDS, charts=charts)
-
-
-def run_requests(output: Path, config: dict, plan: list[dict], *, api_key: str,
+def run_requests(output: Path, config: dict, plan: list[dict], *, api_key: str, report_function,
                  limit: int | None = None, workers: int = 3, retry_errors: bool = False,
-                 stop_file: Path | None = None, generate_function=None, report_function=None) -> dict:
+                 stop_file: Path | None = None, generate_function=None) -> dict:
     generate = generate_function or generate_one
-    render = report_function or render_reports
+    render = report_function
     config_id = initialize_run(output, config, plan)
     completed = load_completed(output, config_id)
     selected = set(config["test_ids"][:limit] if limit is not None else config["test_ids"])
@@ -529,25 +414,3 @@ def run_requests(output: Path, config: dict, plan: list[dict], *, api_key: str,
     if aborted:
         raise RuntimeError("설정/인증 관련 API 오류가 3회 연속 발생해 추가 요청을 중단했습니다.")
     return summary
-
-
-def main():
-    # 2. 고정 테스트 문항과 회귀 예측으로 두 조건의 입력 만들기
-    config, plan = prepare_plan(
-        ROOT, PREDICTIONS, model=MODEL, thinking_level=THINKING_LEVEL,
-        temperature=TEMPERATURE, max_output_tokens=MAX_OUTPUT_TOKENS,
-        attempts=MAX_ATTEMPTS, hint_top_k=HINT_TOP_K)
-    config_id = initialize_run(OUTPUT, config, plan)
-    if BASELINE_SOURCE is not None:
-        import_baseline(BASELINE_SOURCE, OUTPUT, config, plan)
-
-    # 3. 입력 파일과 현재까지 저장된 응답의 비교 화면 만들기
-    records = list(load_completed(OUTPUT, config_id).values())
-    render_reports(OUTPUT, records, config)
-    print(f"입력 준비 완료: {len(plan)}개 조건 · API 호출 0회")
-    print(f"실제 실행: RateLimitedComparison.py의 RUN_API를 True로 바꾸세요.")
-    print(f"저장 위치: {OUTPUT}")
-
-
-if __name__ == "__main__":
-    main()

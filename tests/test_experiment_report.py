@@ -5,9 +5,13 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from mathhint_analysis.ExperimentMetrics import answer_metrics, exact_mcnemar, usage_summary, wilson_interval
-from mathhint_analysis.AnalyzeThreeWay import export_tables, method_scores, paired_scores, supplemental_scores
+from mathhint_analysis.AnalyzeThreeWay import (
+    case_studies, export_tables, method_scores, paired_scores, regression_token_observation,
+    supplemental_scores, token_comparison_rows, type_case_examples,
+)
 
 
 class ReportingTests(unittest.TestCase):
@@ -111,6 +115,65 @@ class ReportingTests(unittest.TestCase):
         lower, upper = wilson_interval(80, 80)
         self.assertLess(lower, 1)
         self.assertAlmostEqual(upper, 1)
+
+    def test_transmitted_token_comparison_preserves_rank_and_missing_is_not_zero(self):
+        rows = token_comparison_rows({"latex:x": 2.001, "latex:y": 2.001},
+                                     {"latex:y": 3.0, "latex:z": 1.0})
+        indexed = {row["token"]: row for row in rows}
+        self.assertEqual((indexed["latex:x"]["B_rank"], indexed["latex:y"]["B_rank"]), (1, 2))
+        self.assertEqual(indexed["latex:y"]["presence"], "공통")
+        self.assertEqual(indexed["latex:z"]["presence"], "C만")
+        self.assertIsNone(indexed["latex:z"]["B_value"])
+        self.assertIsNone(indexed["latex:x"]["C_value"])
+
+    def test_type_cases_distinguish_match_mixture_and_dispersion_from_actual_members(self):
+        def member(identifier, label, cluster, split="train", match=False):
+            return {"id": identifier, "level": "type", "experiment": "type_spherical",
+                    "actual_label": label, "cluster": str(cluster), "split": split,
+                    "matches_train_majority": str(match)}
+        members = [member("a1", "course/unit/A", 0), member("a2", "course/unit/A", 0),
+                   member("b1", "course/unit/B", 1), member("c1", "course/unit/C", 1),
+                   member("b2", "course/unit/B", 2), member("test-a", "course/unit/A", 0, "test", True)]
+        selected = type_case_examples(members)[0]
+        self.assertEqual(selected["matched"]["id"], "test-a")
+        self.assertEqual(len({row["actual_label"] for row in selected["mixed"]}), 2)
+        self.assertEqual({row["id"] for row in selected["dispersed"]}, {"b1", "b2"})
+
+    def test_case_heading_does_not_claim_B_only_when_C_also_improves(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            metadata = root / "data/processed/metadata.json"
+            metadata.parent.mkdir(parents=True)
+            metadata.write_text(json.dumps({"records": [{"id": "q", "curriculum": "course", "unit": "unit",
+                "subunit": "sub", "type": "type", "source": "source", "original_number": 1, "current_number": 1}]}))
+            run_root = root / "results/final_experiment"
+            run_root.mkdir(parents=True)
+            question = {"id": "q", "changed_original_correctness": True}
+            for prefix, value in zip("ABC", (False, True, True)):
+                question.update({prefix + "_answer": "①" if value else "②", prefix + "_correct_original": value,
+                                 prefix + "_correct_ai_supplemental": value, prefix + "_total_tokens": 10})
+            with patch("mathhint_analysis.AnalyzeThreeWay.ROOT", root):
+                case_studies(run_root, {"complete": True}, {}, [question])
+            text = (run_root / "04_case_studies/selected_cases.md").read_text()
+            self.assertNotIn("### 예측 조건에서만 개선", text)
+            self.assertIn("B와 C가 모두 정답", text)
+
+    def test_token_interpretation_reports_exact_values_and_top20_omission(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp); folder = root / "02_regression"; folder.mkdir()
+            with (folder / "question_comparison.csv").open("w", newline="") as stream:
+                writer = csv.DictWriter(stream, fieldnames=["id", "actual_top20", "predicted_top20", "common_top20_count"])
+                writer.writeheader()
+                writer.writerows([
+                    {"id": "trig_2_016", "actual_top20": json.dumps([{"token": r"latex:\sin", "frequency": 4}]),
+                     "predicted_top20": json.dumps([{"token": r"latex:\sin", "frequency": 2.5258607864379883}]), "common_top20_count": 18},
+                    {"id": "trig_1_043", "actual_top20": json.dumps([{"token": r"latex:\pi", "frequency": 13}]),
+                     "predicted_top20": json.dumps([{"token": "latex:0", "frequency": 13.23560905456543}]), "common_top20_count": 8}])
+            text = "\n".join(regression_token_observation(root))
+            self.assertIn("2.525861", text)
+            self.assertIn("13.235609", text)
+            self.assertIn("상위20 미포함", text)
+            self.assertIn("예측 빈도0과 다르다", text)
 
 
 if __name__ == "__main__":

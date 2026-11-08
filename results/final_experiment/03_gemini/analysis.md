@@ -38,7 +38,7 @@ McNemar 검정은 같은 문제의 정오답 차이에 대한 보조 분석이�
 
 ## 실제 입력과 응답
 
-[입력 감사](prompt_audit/) · [80문항 한 행 비교](question_comparison.csv) · [정오답 또는 답이 다른 문항](changed_questions.csv) · [생성 응답](responses.jsonl) · [상세 집계](analysis.json)
+[입력 감사](prompt_audit/) · [B/C 전송 토큰 나란히 비교](prompt_audit/token_comparison.md) · [80문항 한 행 비교](question_comparison.csv) · [정오답 또는 답이 다른 문항](changed_questions.csv) · [생성 응답](responses.jsonl) · [상세 집계](analysis.json)
 
 B/C의 선택·정렬·표시·기본 지시는 같고 벡터의 출처 설명만 달라진다. B는 기존 입력과 설정이 정확히 같을 때만 재사용했다. A/B는 이전 실행을 재사용하고 C는 추가 실험이다. 저장된 C 응답은 A/B와 호출 시점이 다르다. 요청 모델과 실제 반환 model_version을 별도로 저장했으며 제공되지 않은 내부 모델 정보를 검증했다고 주장하지 않는다.
 

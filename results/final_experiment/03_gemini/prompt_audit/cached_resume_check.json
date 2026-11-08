@@ -14,5 +14,24 @@
   "prediction_location_is_provenance_only": true,
   "prediction_bytes_sha256_still_strict": true,
   "real_relocated_project_test": "Passed: actual fixed data and predictions in a temporary second root, frozen ID restored, 240 mocked SDK calls matched historical requests, and all240 saved request JSON files stayed byte-identical.",
-  "related_generation_tests": 39
+  "related_generation_tests": 39,
+  "reaudit_latest": {
+    "verified_at": "2026-11-08T17:53:38.748355+00:00",
+    "operation": "ThreeWayGeneration.main under forbidden genai.Client construction",
+    "pending_new_requests": 0,
+    "successful_conditions": 240,
+    "stored_request_count": 240,
+    "raw_response_rows": 241,
+    "actual_sdk_call_count_unchanged": 81,
+    "protected_artifacts_sha256_unchanged": 336,
+    "new_api_calls": 0,
+    "new_model_training_runs": 0,
+    "current_source_sha256": {
+      "mathhint_solver/CompareGeneration.py": "622139dcf1e26f4d1be0b34a8f6be6dde3d4a57527426d1d6b5cd067b2b65c22",
+      "mathhint_solver/RateLimitedComparison.py": "d97d5ce6a59ec8bfff5a9b3106cd2e84d19b367ad86f08de95d026fffab3d387",
+      "mathhint_solver/ThreeWayGeneration.py": "e66ebb2490b627a5e8b84ac1991a35633b008cbe4f02bdfe8f0ca9b16bebcd8f"
+    },
+    "source_recovery_ref": "recovery/before-final-reaudit-20261108",
+    "note": "Old entrypoints and unused presentation/review modules were retired; all frozen settings, request bytes and saved responses remain unchanged."
+  }
 }

@@ -8,7 +8,7 @@ from types import SimpleNamespace
 from unittest.mock import patch
 
 from mathhint_solver import CompareGeneration as comparison
-from mathhint_solver import RateLimitedComparison as rate_limited
+from mathhint_analysis.ExperimentMetrics import answer_metrics
 
 
 class ComparisonTests(unittest.TestCase):
@@ -44,6 +44,10 @@ class ComparisonTests(unittest.TestCase):
             prompt_token_count=10, candidates_token_count=20, thoughts_token_count=5, total_token_count=35),
             candidates=[SimpleNamespace(finish_reason=finish)], model_version="fixed", response_id="response")
 
+    @staticmethod
+    def no_report(output, records, config, *, charts=True):
+        return {}
+
     def test_reference_and_labels_and_actual_vectors_never_enter_prompt(self):
         self.assertEqual(len(self.plan), 4)
         for item in self.plan:
@@ -56,34 +60,6 @@ class ComparisonTests(unittest.TestCase):
         self.assertEqual([item["method"] for item in self.plan],
                          ["baseline", "regression_hint", "regression_hint", "baseline"])
 
-    def test_main_prepares_inputs_without_requesting_a_solution(self):
-        output = self.root / "prepared"
-        with patch.multiple(comparison, ROOT=self.root, PREDICTIONS=self.predictions, OUTPUT=output), \
-                patch.object(comparison, "make_request", side_effect=AssertionError("no API in prepare step")), \
-                patch.object(comparison, "render_reports", return_value={}):
-            comparison.main()
-        self.assertTrue((output / "questions" / self.ids[0] / "baseline/input.txt").is_file())
-        self.assertFalse((output / "responses.jsonl").exists())
-
-    def test_rate_limited_main_records_responses_without_replacing_global_function(self):
-        output = self.root / "executed"
-        comparison.initialize_run(output, self.config, self.plan)
-        generate = comparison.generate_one
-        limiter = SimpleNamespace(daily_exhausted=False, request=lambda function, text: function(text))
-        with patch.multiple(rate_limited, ROOT=self.root, PREDICTIONS=self.predictions,
-                            OUTPUT=output, RUN_API=True, WORKERS=1), \
-                patch.dict("os.environ", {"GEMINI_API_KEY": "fixture"}), \
-                patch.object(rate_limited, "GlobalRateLimiter", return_value=limiter), \
-                patch.object(comparison, "make_request", return_value=lambda _: self.response()), \
-                patch.object(comparison, "render_reports", return_value={}):
-            rate_limited.main()
-        records = comparison.load_completed(output, comparison.digest(self.config))
-        self.assertEqual(len(records), 4)
-        self.assertTrue(all(record["status"] == "success" for record in records.values()))
-        self.assertIs(comparison.generate_one, generate)
-        execution = next((output / "execution_runs").glob("*.json"))
-        self.assertEqual(comparison.read_json(execution)["status"], "completed")
-
     def test_top_tokens_are_fixed_k_frequency_sorted_with_vocabulary_ties(self):
         vocabulary = [f"t{index}" for index in range(25)]
         vector = [float(index % 5 + 1) for index in range(25)]
@@ -91,33 +67,8 @@ class ComparisonTests(unittest.TestCase):
         expected = sorted(range(25), key=lambda index: (-vector[index], index))[:20]
         self.assertEqual(list(audit["mapping"]), [vocabulary[index] for index in expected])
         self.assertEqual(audit["top_k"], 20)
-        _, full = comparison.serialize_hint(vocabulary, vector, mode="full_vector")
-        self.assertEqual(list(full["mapping"]), vocabulary)
-        full_config, _ = comparison.prepare_plan(self.root, self.predictions, model="fixture_model",
-            thinking_level="minimal", temperature=0., max_output_tokens=100, hint_mode="full_vector")
-        self.assertNotEqual(comparison.digest(full_config), comparison.digest(self.config))
-
-    def test_imported_control_is_identical_provenanced_and_not_duplicated(self):
-        source, output = self.root / "source", self.root / "new_run"
-        source_config, source_plan = comparison.prepare_plan(self.root, self.predictions, model="fixture_model",
-            thinking_level="minimal", temperature=0., max_output_tokens=100, hint_mode="full_vector")
-        source_id = comparison.initialize_run(source, source_config, source_plan)
-        item = next(item for item in source_plan if item["method"] == "baseline")
-        original = comparison.generate_one(item, source_config, source_id, "fixture", lambda _: self.response())
-        comparison.save_result(source, original)
-        imported = comparison.import_baseline(source, output, self.config, self.plan)
-        self.assertEqual(imported["total_reused_controls"], 1)
-        loaded = comparison.load_completed(output, comparison.digest(self.config))[(item["id"], "baseline")]
-        self.assertEqual(loaded["response_origin"], "reused_control")
-        for field in ("output_text", "usage", "attempts", "started_at", "completed_at"):
-            self.assertEqual(loaded[field], original[field])
-        self.assertEqual(loaded["provenance"]["source_record_sha256"], comparison.digest(original))
-        comparison.import_baseline(source, output, self.config, self.plan)
-        self.assertEqual(len((output / "responses.jsonl").read_text().splitlines()), 1)
-        original["input_text"] += "altered"
-        comparison.save_result(source, original)
-        with self.assertRaisesRegex(ValueError, "문항 데이터가 다릅니다"):
-            comparison.import_baseline(source, self.root / "unsafe", self.config, self.plan)
+        with self.assertRaises(ValueError):
+            comparison.serialize_hint(vocabulary, vector, mode="full_vector")
 
     def test_predictions_must_cover_exact_fixed_test_ids(self):
         data = comparison.read_json(self.predictions)
@@ -139,11 +90,12 @@ class ComparisonTests(unittest.TestCase):
         original = comparison.generate_one
         def fake(item, config, config_id, api_key):
             return original(item, config, config_id, api_key, request_function=lambda _: self.response())
-        with patch.object(comparison, "generate_one", side_effect=fake) as generate, \
-                patch.object(comparison, "render_reports", return_value={}):
-            comparison.run_requests(folder, self.config, self.plan, api_key="fixture", limit=1, workers=1)
+        with patch.object(comparison, "generate_one", side_effect=fake) as generate:
+            comparison.run_requests(folder, self.config, self.plan, api_key="fixture",
+                                    report_function=self.no_report, limit=1, workers=1)
             self.assertEqual(generate.call_count, 2)
-            comparison.run_requests(folder, self.config, self.plan, api_key="fixture", workers=1)
+            comparison.run_requests(folder, self.config, self.plan, api_key="fixture",
+                                    report_function=self.no_report, workers=1)
             self.assertEqual(generate.call_count, 4)
         self.assertEqual(len((folder / "responses.jsonl").read_text().splitlines()), 4)
 
@@ -180,10 +132,10 @@ class ComparisonTests(unittest.TestCase):
             result = original(item, config, config_id, api_key, lambda _: self.response())
             stop_file.touch()
             return result
-        with patch.object(comparison, "generate_one", side_effect=fake) as generate, \
-                patch.object(comparison, "render_reports", return_value={}):
+        with patch.object(comparison, "generate_one", side_effect=fake) as generate:
             with self.assertRaises(comparison.RequestedStop):
-                comparison.run_requests(folder, self.config, self.plan, api_key="fixture", workers=1, stop_file=stop_file)
+                comparison.run_requests(folder, self.config, self.plan, api_key="fixture",
+                                        report_function=self.no_report, workers=1, stop_file=stop_file)
             self.assertEqual(generate.call_count, 1)
         rows = comparison.load_completed(folder, comparison.digest(self.config))
         self.assertEqual(len(rows), 1)
@@ -201,12 +153,11 @@ class ComparisonTests(unittest.TestCase):
 
     def test_summary_separates_coverage_from_parsed_accuracy(self):
         row = comparison.generate_one(self.plan[0], self.config, "config", "fixture", lambda _: self.response())
-        summary = comparison.summarize([row], self.ids)
-        baseline = summary["methods"]["baseline"]
+        baseline = answer_metrics([row], len(self.ids))
         self.assertEqual(baseline["accuracy_on_graded"], 1.)
-        self.assertEqual(baseline["correct_per_expected_question"], .5)
+        self.assertEqual(baseline["confirmed_correct_per_expected_question"], .5)
         self.assertEqual(baseline["grading_coverage"], .5)
-        self.assertEqual(baseline["missing_requests"], 1)
+        self.assertEqual(baseline["ungraded_or_missing"], 1)
 
 
 if __name__ == "__main__":

@@ -2,6 +2,26 @@
 
 선정은 이미 나온 결과를 설명하기 위한 관찰이다. 이 문항을 보고 모델을 다시 선택하거나 학습하지 않았다.
 
+## 실제 문제 유형과 군집의 성공·혼합·분산
+
+아래는 세부단원이 아닌 과목/단원/세부단원/유형 전체 경로를 비교한다. 학습에서 정한 대표 라벨을 그대로 쓰며 테스트 결과로 모델을 선택하지 않는다.
+
+### type_euclidean
+
+[이 실험의 모든 군집·문항](../01_clustering/experiments/type_euclidean/clusters.md)
+- **일치 사례:** [diff_1_011](questions.md#diff_1_011)는 군집7에 배정되었고 실제 유형 `10 미적분1 / 02 함수의 연속성 / 01 함수의 연속성 / 05 연속성5 (구간정의함수)`이 학습 대표 유형과 같다. 해당 학습 군집에서 이 유형은 6/6문항이다.
+- **서로 다른 유형의 혼합:** 학습 군집21에는 5개 실제 유형이 섞였다. [trig_1_001](../../../data/processed/problems/trig_1_001.txt)의 `09 대수 / 05 삼각함수의 정의 / 01 일반각과 호도법 / 03 일반각과 호도법3 (두 동경의 위치관계)`과 [trig_1_002](../../../data/processed/problems/trig_1_002.txt)의 `09 대수 / 05 삼각함수의 정의 / 02 삼각함수의 정의 및 활용 / 01 정의1 (삼각함수의 뜻)`을 비교한다.
+- **동일 유형의 분산:** `09 대수 / 06 삼각함수의 그래프 / 01 삼각함수의 그래프 / 04 그래프4 (표준형 그래프에서 Mm)`의 학습 12문항이 10개 군집으로 나뉘었다. [trig_1_015](../../../data/processed/problems/trig_1_015.txt)→군집3 · [trig_3_007](../../../data/processed/problems/trig_3_007.txt)→군집11 · [trig_2_013](../../../data/processed/problems/trig_2_013.txt)→군집16 · [trig_1_022](../../../data/processed/problems/trig_1_022.txt)→군집18 · [trig_3_005](../../../data/processed/problems/trig_3_005.txt)→군집24 · [trig_1_014](../../../data/processed/problems/trig_1_014.txt)→군집34 · [trig_1_017](../../../data/processed/problems/trig_1_017.txt)→군집55 · [trig_1_016](../../../data/processed/problems/trig_1_016.txt)→군집56 · [trig_2_015](../../../data/processed/problems/trig_2_015.txt)→군집60 · [trig_3_008](../../../data/processed/problems/trig_3_008.txt)→군집66.
+
+### type_spherical
+
+[이 실험의 모든 군집·문항](../01_clustering/experiments/type_spherical/clusters.md)
+- **일치 사례:** [diff_1_011](questions.md#diff_1_011)는 군집7에 배정되었고 실제 유형 `10 미적분1 / 02 함수의 연속성 / 01 함수의 연속성 / 05 연속성5 (구간정의함수)`이 학습 대표 유형과 같다. 해당 학습 군집에서 이 유형은 8/8문항이다.
+- **서로 다른 유형의 혼합:** 학습 군집29에는 6개 실제 유형이 섞였다. [diff_1_001](../../../data/processed/problems/diff_1_001.txt)의 `10 미적분1 / 01 함수의 극한 / 01 좌극한과 우극한 / 07 좌극한과 우극한7 (추론)`과 [diff_1_002](../../../data/processed/problems/diff_1_002.txt)의 `10 미적분1 / 01 함수의 극한 / 02 극한의 성질과 계산 / 01 극한의 성질을 이용한 연산`을 비교한다.
+- **동일 유형의 분산:** `09 대수 / 06 삼각함수의 그래프 / 01 삼각함수의 그래프 / 04 그래프4 (표준형 그래프에서 Mm)`의 학습 12문항이 10개 군집으로 나뉘었다. [trig_1_015](../../../data/processed/problems/trig_1_015.txt)→군집3 · [trig_3_007](../../../data/processed/problems/trig_3_007.txt)→군집11 · [trig_2_013](../../../data/processed/problems/trig_2_013.txt)→군집16 · [trig_3_006](../../../data/processed/problems/trig_3_006.txt)→군집18 · [trig_3_005](../../../data/processed/problems/trig_3_005.txt)→군집24 · [trig_1_014](../../../data/processed/problems/trig_1_014.txt)→군집34 · [trig_1_017](../../../data/processed/problems/trig_1_017.txt)→군집55 · [trig_1_016](../../../data/processed/problems/trig_1_016.txt)→군집56 · [trig_2_015](../../../data/processed/problems/trig_2_015.txt)→군집60 · [trig_3_008](../../../data/processed/problems/trig_3_008.txt)→군집66.
+
+세부단원 사례와 모든 라벨의 분산도는 [군집 분석](../01_clustering/analysis.md), [라벨 분산 CSV](../01_clustering/label_dispersion.csv)에 있다.
+
 ## 조건별 정오답이 바뀐 문항
 
 - [diff_3_004](questions.md#diff_3_004): A=16 (정답) / B=32 (오답) / C=32 (오답)
@@ -12,9 +32,11 @@
 
 ## 벡터 정보와 정오답 변화 관찰
 
-### 예측 조건에서만 개선된 것으로 보이는 사례
+### 기본 조건 대비 예측 조건에서 개선된 것으로 보이는 사례
 
 [trig_2_022](questions.md#trig_2_022)
+
+위 사례 중 `trig_2_022`는 B와 C가 모두 정답이다. 예측 조건에서만 개선되었다는 뜻은 아니다.
 
 ### 예측 조건에서 악화된 것으로 보이는 사례
 

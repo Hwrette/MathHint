@@ -1,15 +1,15 @@
 # MathHint 작업 진행 상태
 
-STATUS: REOPENED_FINAL_AUDIT
+STATUS: REAUDIT_VERIFIED_PENDING_PUBLICATION
 EXECUTION_ALLOWED: true
-LAST_CONFIRMED_PUBLISHED_COMMIT: 9021d239e7c29eb9b742300b12a09f87e75aeee5
+LAST_CONFIRMED_PUBLISHED_COMMIT: c75dee8
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
-AUTOMATION_STATUS: DISABLED_AFTER_COMPLETION_VERIFIED_BY_PEEK
+AUTOMATION_STATUS: REENABLED_FOR_FINAL_AUDIT_VERIFIED_BY_PEEK
 FIRST_RUN_FROM_SAVED_RULE: 2026-11-09T05:58:50+09:00
 RECURRENCE: EVERY_5_HOURS
 NEXT_RUN_TIME_SERVER_FIELD: NOT_RETURNED
 ENVIRONMENT: MathHint / inherited / current_environment_id_confirmed
-REMOTE_CHECKPOINT_STATUS: FINAL_CODE_RESULTS_PUBLISHED
+REMOTE_CHECKPOINT_STATUS: REAUDIT_VERIFIED_PENDING_PUBLICATION
 GITHUB_PREAUTHORIZATION_SETTING: RESTORED_TO_ORIGINAL_INHERIT_VERIFIED
 TIMEZONE: Asia/Seoul
 USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
@@ -24,9 +24,9 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 | 4 Gemini 검증·세조건 | 완료 | A/B160재사용·C80성공·SDK81·최신240성공·사후감사PASS |
 | 5 시각자료·통합 | 완료 | 결과README·80행비교·사례·11절보고서·1518파일링크확인 |
 | 6 저장소 정리 | 완료 | docs/cleanup_changes.md 실제삭제/통합/복구·원본보존 |
-| 7 전체 검증·보고서 | 완료 | 144testsPASS(7.665s), VerifyResults284/284, 캐시·재배치재개 신규API0 |
+| 7 전체 검증·보고서 | 완료 | 재감사후140testsPASS(7.802s), VerifyResults284/284, 캐시·재배치재개 신규API0 |
 
-전체 요구 실험·정리·검증과 코드/결과 원격 반영을 완료했다. 자동화 is_enabled=false를 재조회했고 임시 GitHub 연결 권한도 원래 inherit로 복원·재조회했다. 추가 API/학습/예약을 실행할 미완료 항목은 없다. 이 마지막 완료 기록의 커밋은 실제 Git HEAD에서 확인한다.
+최초 완료 후 재감사에서 정리 누락을 찾아 보완했다. 실험·핵심 수치는 그대로이며 구 실행 코드·상위 결과 안내·유형 사례·입력 비교표·그림 연결을 추가 정리했다. 현재 재검증은 끝났고 보완 커밋의 원격 게시와 복구 예약 재중지 확인만 남았다. API·학습은 다시 실행하지 않는다.
 
 ## 이전 대기 상태의 기록 (명세 수령 전 이력이며 현재 완료 상태가 우선)
 
@@ -208,3 +208,15 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - selected_cases의예측조건에서만개선제목은C도맞은trig_2_022에대해부정확하다. 유형(type)수준군집사례큐레이션과B/C토큰값비교표도보강한다. 원자료는이미존재하며재학습/API재호출은하지않는다.
 - 수정전복구브랜치 recovery/before-final-reaudit-20261108 = ade3c1f44d32aa69d0b24ed22c89aa7bbe8d5029. 기존자동화는중지상태였으며현재수동후속정리를진행한다. 원본데이터/응답/모델/기존결과를덮어쓰지않는다.
 - 재감사보완작업후핵심테스트·새정적참조·입력/응답불변해시·보고서재집계·최종푸시를다시확인하고완료표시한다.
+
+- 재감사로정리미완료가확인되어기존5시간복구예약을다시활성화하고peek로확인했다. 새자동화는만들지않았다. 보완완료후다시중지한다. 원본336개핵심파일(응답/설정/240요청/81SDK/모델/벡터/수치CSV)의해시를별도로확보해이번정리에서바뀌지않는지대조한다.
+
+## 재감사 보완 구현·검증 완료 — 2026-11-08T17:53:38.748355+00:00
+
+- 실제누락: results상위안내최종링크, 옛두조건main/없는경로/보고모듈. 실제가독성부족: type사례·B/C토큰나란히비교·대표PNG직접연결·구체회귀토큰해석. 부정확한B만개선제목도수정했다. 이를구분해cleanup_changes.md한곳에통합했다.
+- CompareGeneration은공통SDK/저장/재개라이브러리, RateLimitedComparison은제한기만남긴다. 구 main/기본경로/단일대조군가져오기/두조건집계/전체벡터탐색분기는제거했다. GenerationReport.py·SolutionReview.py·구검토테스트삭제, 실제review_evidence를보호하는4개검사로전환했다.
+- 명세수령시점620f4ce대비추적파일삭제는누적24개다. 중간파생표2개는별도로구분했다. 원본930SHA검증을위한구실험931파일보존영역은의도적으로유지하고최종결과와역할을명시했다.
+- 유형별일치/혼합/동일유형분산은두거리방식모두실제ID로추가했다. 8군집README의분할PNG링크와회귀대표PNG링크를추가했다. 문서해시메타만갱신했고모델/모든CSV/벡터/PCA/PNG는그대로다.
+- B/C전송토큰비교표3문항77행을실제JSON값/순위/미전송표시로독립대조했다(공통17/12/14). 미전송을0빈도로해석하지않는다.
+- 전체test140개PASS,7.802초. 결과무결성284/284PASS·240성공완료. 336보호파일SHA불변,구930SHA불변,최종/상위/안내Markdown파일링크3941개누락0. 구실행경로참조0(역사적출처기록제외),공백검사PASS.
+- genai.Client금지상태로표준입력준비를실행해pending0·240기존요청/241응답/81SDK로그불변을확인했다. 기존학습함수금지mock으로군집캐시검증도통과했다. 신규API0·재학습0,정답수78/77/75·성공토큰합51820/68615/64795불변.

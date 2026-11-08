@@ -42,7 +42,7 @@ HML 원본 → 문항·분류·출처·원본 해설
 | 실제 요청·응답 사후 감사 | [GenerationAudit.py](../mathhint_solver/GenerationAudit.py)의 `audit_generation` |
 | 저장된 표·벡터 무결성 | [VerifyResults.py](../mathhint_analysis/VerifyResults.py)의 `verify` |
 | 최종 답 평가 | [AnswerEvaluation.py](../mathhint_solver/AnswerEvaluation.py)의 `evaluate_answer` |
-| 풀이 검토 근거 | [SolutionReview.py](../mathhint_solver/SolutionReview.py) |
+| 풀이 검토 근거 | [AnalyzeThreeWay.py](../mathhint_analysis/AnalyzeThreeWay.py)의 `review_evidence`; AI 보조 검토·응답 해시·정확 인용을 분리해 확인 |
 | 통계와 최종 결과 생성 | [ExperimentMetrics.py](../mathhint_analysis/ExperimentMetrics.py), [AnalyzeThreeWay.py](../mathhint_analysis/AnalyzeThreeWay.py) |
 
 각 모듈은 역할이 달라 별도 파일로 둔다. 수식 파서의 분기, 데이터 행 검사, API 재개·해시 검증은 실제 자료와 실험의 정확성을 지키는 기능이다.

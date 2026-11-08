@@ -3,7 +3,7 @@
 **실험 응답 확보 완료: 성공 240/240개 응답.**
 
 1. **군집별 실제 문항:** [8개 실험의 문항 배정 CSV](01_clustering/cluster_members.csv), [실험별 군집 원문 링크](01_clustering/experiments/), [군집 분석](01_clustering/analysis.md).
-2. **Gemini80문항 세 조건:** [정답·A/B/C답·정오·토큰 한 행 비교](03_gemini/question_comparison.csv), [변화 문항](03_gemini/changed_questions.csv), [실제 입력](03_gemini/prompt_audit/), [원본 응답](03_gemini/responses.jsonl).
+2. **Gemini80문항 세 조건:** [정답·A/B/C답·정오·토큰 한 행 비교](03_gemini/question_comparison.csv), [변화 문항](03_gemini/changed_questions.csv), [실제 입력](03_gemini/prompt_audit/), [B/C 토큰 나란히 비교](03_gemini/prompt_audit/token_comparison.md), [원본 응답](03_gemini/responses.jsonl).
 3. **회귀 자체의 성능:** [MSE·MAE·코사인](02_regression/summary.csv), [문항별 상위토큰·오차](02_regression/question_comparison.csv), [실제·원시·보정 벡터](02_regression/vectors.json), [회귀 분석](02_regression/analysis.md).
 4. **통합 문항 찾기:** [80문항 ID별 연결](04_case_studies/questions.md), [사례 요약](04_case_studies/selected_cases.md).
 5. **연구 전체 해석:** [최종 한국어 보고서](final_report.md).

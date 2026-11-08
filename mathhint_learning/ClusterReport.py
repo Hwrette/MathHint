@@ -179,13 +179,27 @@ def save_final_cluster_reports(root, output, target, documents, n_clusters, labe
     (target / "clusters.md").write_text("\n".join(cluster_lines) + "\n", encoding="utf-8")
     plot_final_cross_tabs(figures, counts, labels, label_codes, n_clusters)
     plot_final_composition(figures, counts, labels, label_codes, n_clusters)
-    (target / "README.md").write_text("\n".join([
-        f"# {documents[0]['experiment']} · k={n_clusters}", "", "[군집별 문항 목록](clusters.md) · [문항별 CSV](members.csv) · [군집 요약/문항 ID](cluster_summary.csv)", "",
-        "[학습 교차표](cross_tab_train.csv) · [테스트 교차표](cross_tab_test.csv) · [라벨 코드 전체 경로](label_key.csv)", "",
-        "그림은 `figures/`에 있다. 라벨이 많으면 최대 20행으로 히트맵을 나누었다. 라벨 코드는 전체 경로의 사전순 번호이며 라벨 번호와 군집 번호는 다르다.",
-        "구성비 그림은 학습 빈도 상위 8개 라벨과 기타를 사용한다. 모든 실제 라벨의 정확한 비율은 상위 폴더의 `cluster_label_distribution.csv`에 보존했다.",
-        "테스트 그림에 실제 라벨을 표시하는 것은 평가·관찰을 위한 것이며 중심 계산이나 대표 라벨 선정에 사용하지 않았다.", ""]) , encoding="utf-8")
+    save_final_cluster_readme(target, documents[0]["experiment"], n_clusters)
     return distribution, dispersion
+
+
+def save_final_cluster_readme(target, experiment, n_clusters):
+    """계산을 반복하지 않고 이미 저장된 표·분할 그림의 안내만 갱신한다."""
+    target = Path(target)
+    lines = [
+        f"# {experiment} · k={n_clusters}", "", "[군집별 문항 목록](clusters.md) · [문항별 CSV](members.csv) · [군집 요약/문항 ID](cluster_summary.csv)", "",
+        "[학습 교차표](cross_tab_train.csv) · [테스트 교차표](cross_tab_test.csv) · [라벨 코드 전체 경로](label_key.csv)", "",
+        "아래 링크에서 저장된 그림을 바로 연다. 라벨이 많으면 최대 20행으로 히트맵을 나누었다. 라벨 코드는 전체 경로의 사전순 번호이며 라벨 번호와 군집 번호는 다르다.",
+        "구성비 그림은 학습 빈도 상위 8개 라벨과 기타를 사용한다. 모든 실제 라벨의 정확한 비율은 상위 폴더의 `cluster_label_distribution.csv`에 보존했다.",
+        "테스트 그림에 실제 라벨을 표시하는 것은 평가·관찰을 위한 것이며 중심 계산이나 대표 라벨 선정에 사용하지 않았다.", "",
+        "| 구분 | 실제 분류 × 군집 히트맵 | 군집별 실제 라벨 구성 비율 |", "|---|---|---|"]
+    for part, title in (("train", "학습"), ("test", "테스트")):
+        links = []
+        for prefix in ("cross_tab", "label_composition"):
+            images = sorted((target / "figures").glob(f"{prefix}_{part}_*.png"))
+            links.append(" · ".join(f"[{i}쪽]({path.relative_to(target).as_posix()})" for i, path in enumerate(images, 1)) or "생성된 그림 없음")
+        lines.append(f"| {title} | {links[0]} | {links[1]} |")
+    (target / "README.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def plot_final_cross_tabs(folder, counts, labels, codes, k):

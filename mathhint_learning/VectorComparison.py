@@ -188,11 +188,22 @@ def _analysis(rows, summary_rows, output, project_root):
         "- [요약 지표](summary.csv), [시각자료](figures/metrics.png), [기존 학습 손실](figures/learning_curve.png)", "",
         "## 대표 문항", "", "다음은 코사인 유사도 기준의 상·하위 사례다. 수학적 풀이의 정오나 토큰 중요성을 판정한 순위는 아니다."]
     for title, selected in [("유사도가 높은 사례", list(reversed(ordered[-3:]))), ("유사도가 낮은 사례", ordered[:3])]:
-        lines += ["", "### " + title, "", "|ID|과목 / 단원 / 세부단원 / 유형|MSE|MAE|코사인|공통 토큰|", "|---|---|---:|---:|---:|---:|"]
+        lines += ["", "### " + title, "", "|ID|과목 / 단원 / 세부단원 / 유형|MSE|MAE|코사인|공통 토큰|실제·예측 토큰 그림|", "|---|---|---:|---:|---:|---:|---|"]
         for row in selected:
             relative = os.path.relpath(Path(project_root) / row["problem_path"], output) if project_root else row["problem_path"]
             label = " / ".join(row[key] for key in ("curriculum", "unit", "subunit", "type"))
-            lines.append(f"|[{row['id']}]({relative})|{label}|{row['clipped_nonnegative_mse']:.4f}|{row['clipped_nonnegative_mae']:.4f}|{row['clipped_nonnegative_cosine_similarity']:.4f}|{row['common_top20_count']}|")
+            figures = sorted((output / "figures").glob(f"top_tokens_*_{row['id']}.png"))
+            figure = f"[빈도 비교 그림]({figures[0].relative_to(output).as_posix()})" if figures else "[토큰 CSV](question_comparison.csv)"
+            lines.append(f"|[{row['id']}]({relative})|{label}|{row['clipped_nonnegative_mse']:.4f}|{row['clipped_nonnegative_mae']:.4f}|{row['clipped_nonnegative_cosine_similarity']:.4f}|{row['common_top20_count']}|{figure}|")
+    by_id = {row["id"]: row for row in rows}
+    if "trig_2_016" in by_id and "trig_1_043" in by_id:
+        good, bad = by_id["trig_2_016"], by_id["trig_1_043"]
+        actual = {r["token"].replace("\\", ""): r["frequency"] for r in json.loads(bad["actual_top20"])}
+        predicted = {r["token"].replace("\\", ""): r["frequency"] for r in json.loads(bad["predicted_top20"])}
+        lines += ["", "## 실제 토큰으로 보는 예측의 차이", "",
+            f"`trig_2_016`은 상위20개 중 {good['common_top20_count']}개가 겹친다. 실제·예측 모두 sin, cos, sqrt, theta, frac와 괄호·숫자 등 여러 수식 조각을 포함한다. [실제·예측 빈도 그림](figures/top_tokens_high_cosine_trig_2_016.png)에서 같은 토큰의 빈도 크기는 여전히 다른 것도 확인할 수 있다.", "",
+            f"반면 `trig_1_043`은 공통 토큰이 {bad['common_top20_count']}개다. 실제 상위20개에는 pi가 {actual['latex:pi']:.0f}회 등장하고 theta·frac·숫자4와8이 포함되지만, 이 토큰들은 예측 상위20개에서 빠졌다. 예측에는 0이 {predicted['latex:0']:.3f}, cos가 {predicted['latex:cos']:.3f}로 높게 나타났다. [이 문항의 빈도 비교 그림](figures/top_tokens_low_cosine_trig_1_043.png)으로 대조할 수 있다.", "",
+            "이 사례는 함께 등장하는 기호·표현의 빈도 구성은 일부 예측하지만, 문항별 수식 조각의 구성과 횟수에는 차이가 남는다는 관찰이다. 상위20개에서 빠졌다는 것은 전체 예측 벡터의 값이 0이라는 뜻이 아니다. 높은 빈도·상위토큰 일치와 수학적으로 중요한 풀이 원리의 예측을 같은 의미로 해석하지 않는다."]
     lines += ["", "## 해석과 한계", "", "확인한 사실: 보정 후 코사인은 기준선보다 높지만, 선형회귀의 MAE 개선은 나타나지 않았다. 단어 빈도는 순서와 수식 구조를 보존하지 않는다. 일반적인 연결어·기호의 높은 빈도를 예측하는 것과 문제별 풀이 원리를 예측하는 것은 다르다. 상위토큰 그림에서 차이를 직접 확인해야 한다.",
         "학습 MSE와 테스트 MSE 차이는 일반화의 제한을 보여준다. 185개 학습·80개 테스트의 한 분할만 사용했다. 이전 테스트 결과를 본 뒤 분석을 설계했으므로 전혀 관찰하지 않은 독립 최종 평가라고 주장하지 않는다. 최종 테스트를 사용한 재학습·모델 선택·어휘 추가는 하지 않았다."]
     (output / "analysis.md").write_text("\n".join(lines) + "\n", encoding="utf-8")

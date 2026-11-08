@@ -1,9 +1,12 @@
-# 저장된 실험 결과
+# 실험 결과 안내
 
-코드와 별도로 보관하는 확정 실험 결과다. 실행 중 만들어지는 `outputs/`는 임시 작업 공간이고, 검토한 결과는 이 폴더에서 Git으로 관리한다.
+현재 연구의 최종 결과는 **[final_experiment/README.md](final_experiment/README.md)**에서 확인한다. 군집화·회귀·Gemini 세 조건의 표, 그림, 문항별 자료와 최종 보고서를 한곳에서 연결한다.
 
-| 실험 | 데이터와 비교 방식 | 먼저 볼 파일 |
+| 구분 | 내용 | 먼저 볼 자료 |
 |---|---|---|
-| [고정 학습·테스트 모델 비교](model_comparison_2026-11-07/README.md) | 학습 185개·테스트 80개, 회귀·K-means·Gemini 상위 20토큰 가이드 | [3쪽 핵심 요약 PDF](model_comparison_2026-11-07/3쪽_핵심요약.pdf) |
+| **최종 연구 결과** | 과목·단원·세부단원·유형의 유클리드/구면 군집화, 실수 회귀 평가, Gemini A/B/C 각80문항 비교 | [전체 안내](final_experiment/README.md) · [군집별 문항](final_experiment/01_clustering/cluster_members.csv) · [Gemini80문항 비교](final_experiment/03_gemini/question_comparison.csv) · [최종 보고서](final_experiment/final_report.md) |
+| 기존 실험의 불변 근거 | `model_comparison_2026-11-07/`의 원본 응답160개, 학습 모델·설정·검토·출처 및 기존 결과 | [보존 자료 안내](model_comparison_2026-11-07/README.md) |
 
-각 실험 폴더에는 성능 수치, 그림, 문항별 입력·출력·정답·토큰, 실행 설정과 근거를 함께 둔다. 다음 실험은 새 폴더에 저장한다.
+기존 폴더는 재사용 결과의 근거를 확인하기 위한 보존 영역이다. 그 안의 두 조건 보고서·PDF는 당시 실험의 기록이며 현재 최종 세 조건 결과와 구분한다. 최종 해석과 수치는 `final_experiment/`를 기준으로 읽는다.
+
+실행 중 임시 결과는 Git에서 제외되는 `outputs/`에 두며, 검토·보존할 결과만 `results/`에서 관리한다. 데이터·설정이 다른 새 실험은 기존 결과를 덮어쓰지 않고 별도 폴더를 사용한다.

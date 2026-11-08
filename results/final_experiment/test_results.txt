@@ -76,6 +76,7 @@ test_unsupported_words_do_not_become_invented_commands (test_equations.EquationC
 모르는 명령이나 이미 LaTeX인 입력을 한글 수식인 것처럼 임의로 통과시키지 않는지 확인한다. ... ok
 test_uppercase_operator_aliases (test_equations.EquationConversionTests.test_uppercase_operator_aliases)
 실제 입력에 있는 GEQ, TIMES, CDOT 같은 대문자 명령의 명시적 대응을 확인한다. ... ok
+test_case_heading_does_not_claim_B_only_when_C_also_improves (test_experiment_report.ReportingTests.test_case_heading_does_not_claim_B_only_when_C_also_improves) ... ok
 test_failed_response_is_neither_a_math_error_nor_successful_usage (test_experiment_report.ReportingTests.test_failed_response_is_neither_a_math_error_nor_successful_usage) ... ok
 test_missing_usage_is_null_while_a_reported_zero_is_zero (test_experiment_report.ReportingTests.test_missing_usage_is_null_while_a_reported_zero_is_zero) ... ok
 test_pairing_excludes_api_errors_and_ungraded_responses (test_experiment_report.ReportingTests.test_pairing_excludes_api_errors_and_ungraded_responses) ... ok
@@ -84,6 +85,9 @@ test_reused_responses_are_not_new_api_usage (test_experiment_report.ReportingTes
 test_reviewed_key_preserves_original_and_checks_source (test_experiment_report.ReportingTests.test_reviewed_key_preserves_original_and_checks_source) ... ok
 test_skipped_retry_is_not_a_sent_request (test_experiment_report.ReportingTests.test_skipped_retry_is_not_a_sent_request) ... ok
 test_small_sample_statistics (test_experiment_report.ReportingTests.test_small_sample_statistics) ... ok
+test_token_interpretation_reports_exact_values_and_top20_omission (test_experiment_report.ReportingTests.test_token_interpretation_reports_exact_values_and_top20_omission) ... ok
+test_transmitted_token_comparison_preserves_rank_and_missing_is_not_zero (test_experiment_report.ReportingTests.test_transmitted_token_comparison_preserves_rank_and_missing_is_not_zero) ... ok
+test_type_cases_distinguish_match_mixture_and_dispersion_from_actual_members (test_experiment_report.ReportingTests.test_type_cases_distinguish_match_mixture_and_dispersion_from_actual_members) ... ok
 test_hierarchy_uses_course_and_disambiguates_same_names (test_final_clustering.ClusteringLabelsTests.test_hierarchy_uses_course_and_disambiguates_same_names) ... ok
 test_training_majority_is_fixed_even_if_test_majority_differs (test_final_clustering.ClusteringLabelsTests.test_training_majority_is_fixed_even_if_test_majority_differs) ... ok
 test_assignment_ignores_positive_row_lengths (test_final_clustering.SphericalKMeansTests.test_assignment_ignores_positive_row_lengths) ... ok
@@ -106,23 +110,13 @@ test_changed_inputs_cannot_resume_an_existing_run (test_generation_comparison.Co
 test_errors_redact_the_api_key (test_generation_comparison.ComparisonTests.test_errors_redact_the_api_key) ... ok
 test_graceful_stop_saves_inflight_result_without_next_api_call (test_generation_comparison.ComparisonTests.test_graceful_stop_saves_inflight_result_without_next_api_call) ... {"id": "diff_1_005", "method": "baseline", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 1}
 ok
-test_imported_control_is_identical_provenanced_and_not_duplicated (test_generation_comparison.ComparisonTests.test_imported_control_is_identical_provenanced_and_not_duplicated) ... ok
-test_main_prepares_inputs_without_requesting_a_solution (test_generation_comparison.ComparisonTests.test_main_prepares_inputs_without_requesting_a_solution) ... ok
 test_missing_usage_is_null_and_retry_keeps_both_attempts (test_generation_comparison.ComparisonTests.test_missing_usage_is_null_and_retry_keeps_both_attempts) ... ok
-test_pilot_then_full_resume_does_not_repeat_successful_requests (test_generation_comparison.ComparisonTests.test_pilot_then_full_resume_does_not_repeat_successful_requests) ... 입력 준비 완료: 4개 조건 · API 호출 0회
-실제 실행: RateLimitedComparison.py의 RUN_API를 True로 바꾸세요.
-저장 위치: /tmp/tmp3bilmhf5/prepared
-{"id": "diff_1_005", "method": "baseline", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 1}
+test_pilot_then_full_resume_does_not_repeat_successful_requests (test_generation_comparison.ComparisonTests.test_pilot_then_full_resume_does_not_repeat_successful_requests) ... {"id": "diff_1_005", "method": "baseline", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 1}
 {"id": "diff_1_005", "method": "regression_hint", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 2}
 {"id": "diff_1_011", "method": "regression_hint", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 3}
 {"id": "diff_1_011", "method": "baseline", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 4}
 ok
 test_predictions_must_cover_exact_fixed_test_ids (test_generation_comparison.ComparisonTests.test_predictions_must_cover_exact_fixed_test_ids) ... ok
-test_rate_limited_main_records_responses_without_replacing_global_function (test_generation_comparison.ComparisonTests.test_rate_limited_main_records_responses_without_replacing_global_function) ... {"id": "diff_1_005", "method": "baseline", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 1}
-{"id": "diff_1_005", "method": "regression_hint", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 2}
-{"id": "diff_1_011", "method": "regression_hint", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 3}
-{"id": "diff_1_011", "method": "baseline", "status": "success", "correct": true, "total_tokens": 35, "completed_calls": 4}
-ok
 test_reference_and_labels_and_actual_vectors_never_enter_prompt (test_generation_comparison.ComparisonTests.test_reference_and_labels_and_actual_vectors_never_enter_prompt) ... ok
 test_summary_separates_coverage_from_parsed_accuracy (test_generation_comparison.ComparisonTests.test_summary_separates_coverage_from_parsed_accuracy) ... ok
 test_top_tokens_are_fixed_k_frequency_sorted_with_vocabulary_ties (test_generation_comparison.ComparisonTests.test_top_tokens_are_fixed_k_frequency_sorted_with_vocabulary_ties) ... ok
@@ -136,21 +130,16 @@ test_missing_classification_or_note_is_rejected (test_hml.HMLTests.test_missing_
 test_table_conditions_and_mixed_text_tails_survive (test_hml.HMLTests.test_table_conditions_and_mixed_text_tails_survive) ... ok
 test_unconverted_equation_preserves_raw_and_warning (test_hml.HMLTests.test_unconverted_equation_preserves_raw_and_warning) ... ok
 test_daily_quota_stops_all_further_network_calls (test_rate_limited_comparison.RateLimitTests.test_daily_quota_stops_all_further_network_calls) ... ok
-test_default_main_does_not_create_a_network_request (test_rate_limited_comparison.RateLimitTests.test_default_main_does_not_create_a_network_request) ... ok
 test_fractional_message_delay_and_retryinfo_use_largest (test_rate_limited_comparison.RateLimitTests.test_fractional_message_delay_and_retryinfo_use_largest) ... ok
 test_global_request_start_spacing (test_rate_limited_comparison.RateLimitTests.test_global_request_start_spacing) ... ok
 test_minute_quota_is_not_misclassified_as_daily (test_rate_limited_comparison.RateLimitTests.test_minute_quota_is_not_misclassified_as_daily) ... ok
 test_service_overload_backoff_and_success_reset_preserve_quota_delay (test_rate_limited_comparison.RateLimitTests.test_service_overload_backoff_and_success_reset_preserve_quota_delay) ... ok
 test_stop_guard_prevents_unsent_request (test_rate_limited_comparison.RateLimitTests.test_stop_guard_prevents_unsent_request) ... ok
 test_structured_retryinfo_and_http_header (test_rate_limited_comparison.RateLimitTests.test_structured_retryinfo_and_http_header) ... ok
-test_blind_packet_hides_method_hint_tokens_and_automatic_grade (test_solution_review.SolutionReviewTests.test_blind_packet_hides_method_hint_tokens_and_automatic_grade) ... ok
-test_changed_output_creates_new_unreviewed_item (test_solution_review.SolutionReviewTests.test_changed_output_creates_new_unreviewed_item) ... ok
-test_correct_answer_never_auto_rates_reasoning_and_errors_excluded (test_solution_review.SolutionReviewTests.test_correct_answer_never_auto_rates_reasoning_and_errors_excluded) ... ok
-test_export_has_blind_html_csv_schema_and_private_key (test_solution_review.SolutionReviewTests.test_export_has_blind_html_csv_schema_and_private_key) ... ok
-test_imported_ai_rating_is_distinct_from_human_and_validates_hash_quotes (test_solution_review.SolutionReviewTests.test_imported_ai_rating_is_distinct_from_human_and_validates_hash_quotes) ... ok
-test_math_appropriateness_keeps_curriculum_uncertainty_separate (test_solution_review.SolutionReviewTests.test_math_appropriateness_keeps_curriculum_uncertainty_separate) ... ok
-test_quotes_reviewer_and_output_hash_are_validated (test_solution_review.SolutionReviewTests.test_quotes_reviewer_and_output_hash_are_validated) ... ok
-test_reviewed_denominator_and_ai_suggestions_remain_separate (test_solution_review.SolutionReviewTests.test_reviewed_denominator_and_ai_suggestions_remain_separate) ... ok
+test_changed_output_cannot_reuse_an_old_review (test_review_evidence.ReviewEvidenceTests.test_changed_output_cannot_reuse_an_old_review) ... ok
+test_correct_answer_and_ai_review_are_separate_from_human_confirmation (test_review_evidence.ReviewEvidenceTests.test_correct_answer_and_ai_review_are_separate_from_human_confirmation) ... ok
+test_review_quote_must_be_in_the_actual_output (test_review_evidence.ReviewEvidenceTests.test_review_quote_must_be_in_the_actual_output) ... ok
+test_unreviewed_success_and_api_error_are_not_automatically_assessed (test_review_evidence.ReviewEvidenceTests.test_unreviewed_success_and_api_error_are_not_automatically_assessed) ... ok
 test_cluster_count_and_majority_mapping_use_training_subunits_only (test_subunit_clusters.SubunitClusteringTests.test_cluster_count_and_majority_mapping_use_training_subunits_only) ... ok
 test_empty_cluster_is_exported_explicitly (test_subunit_clusters.SubunitClusteringTests.test_empty_cluster_is_exported_explicitly) ... ok
 test_same_subunit_name_in_different_units_is_not_merged (test_subunit_clusters.SubunitClusteringTests.test_same_subunit_name_in_different_units_is_not_merged) ... ok
@@ -166,8 +155,7 @@ test_reused_exact_requests_keep_output_usage_time_and_are_not_repeated (test_thr
 test_same_serialization_except_truthful_source_and_float_precision (test_three_way_generation.ThreeWayTests.test_same_serialization_except_truthful_source_and_float_precision) ... ok
 test_sdk_boundary_receives_exact_saved_contents_and_config_without_key (test_three_way_generation.ThreeWayTests.test_sdk_boundary_receives_exact_saved_contents_and_config_without_key) ... ok
 test_source_only_resume_keeps_original_identity_but_rejects_input_or_settings_changes (test_three_way_generation.ThreeWayTests.test_source_only_resume_keeps_original_identity_but_rejects_input_or_settings_changes) ... ok
-test_three_arm_resume_and_unknown_usage_use_existing_durable_engine (test_three_way_generation.ThreeWayTests.test_three_arm_resume_and_unknown_usage_use_existing_durable_engine) ... 현재는 API를 호출하지 않습니다. 입력을 확인한 뒤 RUN_API = True로 바꾸세요.
-{"id": "q1", "method": "baseline", "status": "success", "correct": true, "total_tokens": 30, "completed_calls": 1}
+test_three_arm_resume_and_unknown_usage_use_existing_durable_engine (test_three_way_generation.ThreeWayTests.test_three_arm_resume_and_unknown_usage_use_existing_durable_engine) ... {"id": "q1", "method": "baseline", "status": "success", "correct": true, "total_tokens": 30, "completed_calls": 1}
 {"id": "q1", "method": "regression_hint", "status": "success", "correct": true, "total_tokens": 30, "completed_calls": 2}
 {"id": "q1", "method": "oracle_hint", "status": "success", "correct": true, "total_tokens": 30, "completed_calls": 3}
 {"id": "q2", "method": "baseline", "status": "success", "correct": true, "total_tokens": 30, "completed_calls": 4}
@@ -185,6 +173,6 @@ test_top_tokens_use_unrounded_values_then_vocabulary_index_and_omit_zeros (test_
 test_underfilled_precision_reports_fixed_and_available_denominators (test_vector_comparison.VectorComparisonTests.test_underfilled_precision_reports_fixed_and_available_denominators) ... ok
 
 ----------------------------------------------------------------------
-Ran 144 tests in 7.665s
+Ran 140 tests in 7.802s
 
 OK

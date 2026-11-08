@@ -54,6 +54,90 @@ def read_csv(path):
         return list(csv.DictReader(stream))
 
 
+def token_comparison_rows(predicted, actual):
+    """저장된 전송 JSON의 순서·값을 비교한다. 빠진 토큰을 0으로 가정하지 않는다."""
+    b_rank = {token: i + 1 for i, token in enumerate(predicted)}
+    c_rank = {token: i + 1 for i, token in enumerate(actual)}
+    tokens = sorted(set(predicted) | set(actual), key=lambda t: (b_rank.get(t, 21), c_rank.get(t, 21), t))
+    return [{"token": token, "B_value": predicted.get(token), "B_rank": b_rank.get(token),
+             "C_value": actual.get(token), "C_rank": c_rank.get(token),
+             "presence": "공통" if token in predicted and token in actual else "B만" if token in predicted else "C만"}
+            for token in tokens]
+
+
+def prompt_token_comparison(run_root, ids):
+    folder = run_root / "03_gemini/prompt_audit"
+    lines = ["# B·C에 실제로 전송한 토큰 비교", "",
+             "고정 테스트 목록의 첫째·가운데·마지막 문항을 예시로 골랐다. 아래 값과 순위는 보존된 요청 JSON에서 읽었으며 입력 파일을 다시 쓰지 않았다.", "",
+             "A에는 문제와 공통 시스템 지시만 제공한다. B와 C는 동일한 상위20토큰 JSON 구조를 사용하고 출처 설명만 다르다. **미전송은 해당 벡터의 빈도가0이라는 뜻이 아니다.** 상위20 선택에서 제외되었거나 표시 반올림 뒤 생략된 항목일 수 있다.", "",
+             "순위는 반올림된 값을 다시 정렬한 결과가 아니라 저장된 전송 JSON의 순서다. 값은 읽기 쉽게 최대 소수3자리로 표시하며 정확한 요청 전문은 각 JSON에 있다."]
+    for identifier in dict.fromkeys([ids[0], ids[len(ids)//2], ids[-1]]):
+        paths = {condition: folder / "requests" / identifier / (condition + ".json") for condition in "ABC"}
+        if not all(path.exists() for path in paths.values()):
+            continue
+        b, c = (read_json(paths[condition])["hint"]["mapping"] for condition in "BC")
+        compared = token_comparison_rows(b, c)
+        counts = Counter(row["presence"] for row in compared)
+        lines += ["", f"## {identifier}", "",
+                  " · ".join(f"[{condition} 전체 입력](requests/{identifier}/{condition}.json)" for condition in "ABC"), "",
+                  f"B {len(b)}개 / C {len(c)}개, 공통 {counts['공통']}개, B만 {counts['B만']}개, C만 {counts['C만']}개.", "",
+                  "|토큰|B 예측 빈도|B 순위|C 실제 빈도|C 순위|포함 상태|", "|---|---:|---:|---:|---:|---|"]
+        for row in compared:
+            display = lambda value: "미전송" if value is None else f"{value:.3f}".rstrip("0").rstrip(".")
+            lines.append(f"|`{row['token']}`|{display(row['B_value'])}|{row['B_rank'] or '—'}|{display(row['C_value'])}|{row['C_rank'] or '—'}|{row['presence']}|")
+    (folder / "token_comparison.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def type_case_examples(members):
+    """기존 유형 배정에서 설명용 사례만 고른다. 군집이나 매개변수를 바꾸지 않는다."""
+    examples = []
+    for experiment in sorted({row["experiment"] for row in members if row["level"] == "type"}):
+        selected = [row for row in members if row["experiment"] == experiment]
+        train = [row for row in selected if row["split"] == "train"]
+        groups, labels = {}, {}
+        for row in train:
+            groups.setdefault(row["cluster"], []).append(row)
+            labels.setdefault(row["actual_label"], []).append(row)
+        success = [row for row in selected if row["split"] == "test" and row["matches_train_majority"] in (True, "True")]
+        def success_key(row):
+            group = groups[row["cluster"]]
+            purity = max(Counter(r["actual_label"] for r in group).values()) / len(group)
+            return (-int(len(group) >= 2), -purity, -len(group), row["id"])
+        matched = min(success, key=success_key) if success else None
+        mixed = [group for group in groups.values() if len({row["actual_label"] for row in group}) > 1]
+        mixed = min(mixed, key=lambda group: (-len({r["actual_label"] for r in group}), -len(group), int(group[0]["cluster"]))) if mixed else []
+        representatives = []
+        for label in sorted({r["actual_label"] for r in mixed}):
+            representatives.append(min((r for r in mixed if r["actual_label"] == label), key=lambda r: r["id"]))
+        dispersed = [group for group in labels.values() if len({row["cluster"] for row in group}) > 1]
+        dispersed = min(dispersed, key=lambda group: (-len({r["cluster"] for r in group}), -len(group), group[0]["actual_label"])) if dispersed else []
+        examples.append({"experiment": experiment, "matched": matched,
+                         "mixed": representatives[:2], "mixed_label_count": len({r["actual_label"] for r in mixed}),
+                         "dispersed": dispersed})
+    return examples
+
+
+def regression_token_observation(run_root):
+    rows = {row["id"]: row for row in read_csv(run_root / "02_regression/question_comparison.csv")}
+    if not all(identifier in rows for identifier in ("trig_2_016", "trig_1_043")):
+        return []
+    good, bad = rows["trig_2_016"], rows["trig_1_043"]
+    lines = ["### 실제로 맞히고 놓친 상위 토큰", "",
+             "다음은 문항별 CSV의 실제·예측 상위20토큰에서 읽은 빈도다. 예측값은 평가 때의 실수를 소수6자리로 표시했다. ‘상위20 미포함’은 예측 빈도0과 다르다.", "",
+             "|문항|토큰|실제 빈도|음수 보정 예측 빈도|상위20 비교|", "|---|---|---:|---:|---|"]
+    for row, tokens in [(good, [r"latex:\sin", r"latex:\cos", r"latex:\sqrt", r"latex:\theta", r"latex:\frac"]),
+                        (bad, [r"latex:\pi", r"latex:\theta", r"latex:\frac", "latex:0", r"latex:\cos"])]:
+        actual = {item["token"]: item["frequency"] for item in json.loads(row["actual_top20"])}
+        predicted = {item["token"]: item["frequency"] for item in json.loads(row["predicted_top20"])}
+        for token in tokens:
+            a, b = actual.get(token), predicted.get(token)
+            lines.append(f"|{row['id']}|`{token}`|{number(a,0) if a is not None else '상위20 미포함'}|{number(b,6) if b is not None else '상위20 미포함'}|{'공통' if a is not None and b is not None else '실제에만' if a is not None else '예측에만' if b is not None else '양쪽 상위20 미포함'}|")
+    lines += ["", f"**관찰:** `trig_2_016`에서는 sin·cos·sqrt·theta·frac가 양쪽 상위20에 남고 총 공통 토큰이 {good['common_top20_count']}개다. 반면 `trig_1_043`에서는 실제 상위20의 pi·theta·frac를 예측 상위20에 남기지 못하고 0·cos를 높게 예측하며 공통 토큰이 {bad['common_top20_count']}개다.", "",
+              "이 사례는 빈도 구성의 재현 차이를 보여준다. 토큰이 수학적으로 중요하다는 판정이나 순서·수식 관계를 이해했다는 증거는 아니며, 이런 토큰 차이가 Gemini 오답의 원인이라고 확정하지 않는다.", "",
+              "[높은 유사도 문항의 토큰 그림](02_regression/figures/top_tokens_high_cosine_trig_2_016.png) · [낮은 유사도 문항의 토큰 그림](02_regression/figures/top_tokens_low_cosine_trig_1_043.png)", ""]
+    return lines
+
+
 def number(value, digits=3):
     return "미제공" if value is None else f"{float(value):,.{digits}f}"
 
@@ -340,7 +424,7 @@ def gemini_markdown(result):
         for a in failed:
             lines.append(f"- `{a['id']}`: `{a['error_type'] or a['status']}` (실행 {a['execution']}, 시도 {a['attempt']}). 서버에서 처리가 끝났는지와 사용량은 응답이 없어 미확인이다. 재개 시 성공 응답을 중복 호출하지 않고 실패 문항만 제한적으로 다시 요청했다면 그 이력을 누적 보존한다.")
     lines += ["", "McNemar 검정은 같은 문제의 정오답 차이에 대한 보조 분석이다. 계획된 세 비교에 다중 비교 보정을 적용하지 않았으며 채점된 쌍이 없으면 산출하지 않는다. 작은 정답 수 차이를 일반적인 개선으로 단정하지 않는다.", "",
-              "## 실제 입력과 응답", "", "[입력 감사](prompt_audit/) · [80문항 한 행 비교](question_comparison.csv) · [정오답 또는 답이 다른 문항](changed_questions.csv) · [생성 응답](responses.jsonl) · [상세 집계](analysis.json)", "",
+              "## 실제 입력과 응답", "", "[입력 감사](prompt_audit/) · [B/C 전송 토큰 나란히 비교](prompt_audit/token_comparison.md) · [80문항 한 행 비교](question_comparison.csv) · [정오답 또는 답이 다른 문항](changed_questions.csv) · [생성 응답](responses.jsonl) · [상세 집계](analysis.json)", "",
               "B/C의 선택·정렬·표시·기본 지시는 같고 벡터의 출처 설명만 달라진다. B는 기존 입력과 설정이 정확히 같을 때만 재사용했다. A/B는 이전 실행을 재사용하고 C는 추가 실험이다. 저장된 C 응답은 A/B와 호출 시점이 다르다. 요청 모델과 실제 반환 model_version을 별도로 저장했으며 제공되지 않은 내부 모델 정보를 검증했다고 주장하지 않는다.", "",
               "응답이 보고한 model_version 분포: " + " / ".join(CONDITIONS[m]+"="+json.dumps(result["source_key"][m]["model_versions"],ensure_ascii=False) for m in METHODS) + ". 이는 반환된 식별자이며 내부 모델 동일성을 증명하지 않는다.", "",
               "## 풀이 타당성", ""]
@@ -371,7 +455,8 @@ def case_studies(run_root, result, latest, questions):
     metadata={r["id"]:r for r in read_json(ROOT/"data/processed/metadata.json")["records"]}
     regression={r["id"]:r for r in read_csv(run_root/"02_regression/question_comparison.csv")}
     assignments={}
-    for row in read_csv(run_root/"01_clustering/cluster_members.csv"):
+    members=read_csv(run_root/"01_clustering/cluster_members.csv")
+    for row in members:
         assignments.setdefault(row["id"],[]).append(row)
     lines=["# 문항 ID로 모든 결과 찾기", "", "원문을 여러 번 복사하지 않고 고정 ID로 연결했다. 군집은 숫자의 크기에 의미가 없고, 서로 다른 실험의 같은 군집 번호는 같은 그룹이 아니다.", "",
            "[군집 성공·실패 관찰](../01_clustering/analysis.md) · [회귀 성공·실패 관찰](../02_regression/analysis.md) · [Gemini 정오답 변화](../03_gemini/changed_questions.csv)", ""]
@@ -397,17 +482,42 @@ def case_studies(run_root, result, latest, questions):
     (output/"questions.md").write_text("\n".join(lines)+"\n",encoding="utf-8")
     write_csv(output/"question_index.csv",index)
     changed=[r for r in questions if r["changed_original_correctness"]]
-    notes=["# 직접 비교할 사례", "", "선정은 이미 나온 결과를 설명하기 위한 관찰이다. 이 문항을 보고 모델을 다시 선택하거나 학습하지 않았다.", "", "## 조건별 정오답이 바뀐 문항", ""]
+    notes=["# 직접 비교할 사례", "", "선정은 이미 나온 결과를 설명하기 위한 관찰이다. 이 문항을 보고 모델을 다시 선택하거나 학습하지 않았다.", "",
+           "## 실제 문제 유형과 군집의 성공·혼합·분산", "",
+           "아래는 세부단원이 아닌 과목/단원/세부단원/유형 전체 경로를 비교한다. 학습에서 정한 대표 라벨을 그대로 쓰며 테스트 결과로 모델을 선택하지 않는다."]
+    for case in type_case_examples(members):
+        experiment=case["experiment"]
+        notes += ["", f"### {experiment}", "",
+                  f"[이 실험의 모든 군집·문항](../01_clustering/experiments/{experiment}/clusters.md)"]
+        matched=case["matched"]
+        if matched:
+            group=[r for r in members if r["experiment"]==experiment and r["split"]=="train" and r["cluster"]==matched["cluster"]]
+            same=sum(r["actual_label"]==matched["actual_label"] for r in group)
+            notes.append(f"- **일치 사례:** [{matched['id']}](questions.md#{matched['id']})는 군집{matched['cluster']}에 배정되었고 실제 유형 `{matched['actual_label']}`이 학습 대표 유형과 같다. 해당 학습 군집에서 이 유형은 {same}/{len(group)}문항이다.")
+        if case["mixed"]:
+            a,b=case["mixed"]
+            notes.append(f"- **서로 다른 유형의 혼합:** 학습 군집{a['cluster']}에는 {case['mixed_label_count']}개 실제 유형이 섞였다. [{a['id']}](../../../data/processed/problems/{a['id']}.txt)의 `{a['actual_label']}`과 [{b['id']}](../../../data/processed/problems/{b['id']}.txt)의 `{b['actual_label']}`을 비교한다.")
+        dispersed=case["dispersed"]
+        if dispersed:
+            clusters=sorted({r["cluster"] for r in dispersed},key=int)
+            representatives=[min((r for r in dispersed if r["cluster"]==c),key=lambda r:r["id"]) for c in clusters]
+            links=" · ".join(f"[{r['id']}](../../../data/processed/problems/{r['id']}.txt)→군집{r['cluster']}" for r in representatives)
+            notes.append(f"- **동일 유형의 분산:** `{dispersed[0]['actual_label']}`의 학습 {len(dispersed)}문항이 {len(clusters)}개 군집으로 나뉘었다. {links}.")
+    notes += ["", "세부단원 사례와 모든 라벨의 분산도는 [군집 분석](../01_clustering/analysis.md), [라벨 분산 CSV](../01_clustering/label_dispersion.csv)에 있다.", "",
+              "## 조건별 정오답이 바뀐 문항", ""]
     for r in changed:
         i=r["id"];notes += [f"- [{i}](questions.md#{i}): "+" / ".join(f"{p}={r[p+'_answer']} ({'정답' if r[p+'_correct_original'] else '오답'})" for p in "ABC" if r[p+"_correct_original"] is not None)]
     notes += ["", "## 벡터 정보와 정오답 변화 관찰", ""]
-    categories=[("예측 조건에서만 개선된 것으로 보이는 사례",lambda r:r["A_correct_ai_supplemental"] is False and r["B_correct_ai_supplemental"] is True),
+    categories=[("기본 조건 대비 예측 조건에서 개선된 것으로 보이는 사례",lambda r:r["A_correct_ai_supplemental"] is False and r["B_correct_ai_supplemental"] is True),
         ("예측 조건에서 악화된 것으로 보이는 사례",lambda r:r["A_correct_ai_supplemental"] is True and r["B_correct_ai_supplemental"] is False),
         ("실제 해설 벡터에도 오답이 남은 사례",lambda r:r["C_correct_ai_supplemental"] is False)]
     for title,predicate in categories:
         matched=[r for r in questions if predicate(r)]
         notes += [f"### {title}", ""]
         notes += [" · ".join(f"[{r['id']}](questions.md#{r['id']})" for r in matched) if matched else ("현재 확보된 판독·보조 채점 결과에는 해당 사례가 없다." if result["complete"] else "아직 C 등 미완료 조건이 있어 전체 비교를 확정하지 않는다."), ""]
+        both=[r for r in matched if title.startswith("기본 조건 대비") and r["C_correct_ai_supplemental"] is True]
+        if both:
+            notes += ["위 사례 중 "+", ".join(f"`{r['id']}`" for r in both)+"는 B와 C가 모두 정답이다. 예측 조건에서만 개선되었다는 뜻은 아니다.", ""]
     review_path=run_root/"03_gemini/solution_review.json"
     new_review=read_json(review_path) if review_path.exists() else {}
     invalid=[r for r in new_review.get("records",[]) if r.get("math_status") in ("inappropriate","uncertain")]
@@ -471,8 +581,11 @@ def final_report(run_root, result):
             ordered=sorted(rows,key=lambda r:float(r["clipped_nonnegative_cosine_similarity"]))
             low,high=ordered[0],ordered[-1]
             lines += ["",f"예를 들어 `{high['id']}`는 코사인 {float(high['clipped_nonnegative_cosine_similarity']):.4f}·공통 토큰 {high['common_top20_count']}개인 반면 `{low['id']}`는 {float(low['clipped_nonnegative_cosine_similarity']):.4f}·{low['common_top20_count']}개다. 이 순위는 빈도 벡터의 유사도이며 수학적으로 중요한 개념을 맞혔다는 판정은 아니다."]
-    lines += ["", "코사인 유사도는 벡터 방향의 유사도이며 문제의 정답률이 아니다. 음수 보정은 BoW의 비음수 성질과 맞지만 빈도 예측 오차가 사라지는 것은 아니다. 공통 대수 기호·일반 표현의 높은 빈도가 수학적으로 필요한 순서·관계를 포착했다는 뜻도 아니다. [문항별 지표·상위 토큰](02_regression/question_comparison.csv), [실제·원시·보정 벡터](02_regression/vectors.json), [성공·실패 및 그래프](02_regression/analysis.md)를 함께 본다.", "",
+    lines += ["", "코사인 유사도는 벡터 방향의 유사도이며 문제의 정답률이 아니다. 음수 보정은 BoW의 비음수 성질과 맞지만 빈도 예측 오차가 사라지는 것은 아니다. 공통 대수 기호·일반 표현의 높은 빈도가 수학적으로 필요한 순서·관계를 포착했다는 뜻도 아니다. [문항별 지표·상위 토큰](02_regression/question_comparison.csv), [실제·원시·보정 벡터](02_regression/vectors.json), [성공·실패 및 그래프](02_regression/analysis.md)를 함께 본다.", ""]
+    lines += regression_token_observation(run_root)
+    lines += [
               "## 7. Gemini API 비교 실험 방법", "", f"테스트80문항에 A문제만, B예측 해설 상위20토큰, C실제 해설 상위20토큰을 제공한다. 요청 모델 `{config['model']}`, temperature `{config['temperature']}`, thinking `{config['thinking_level']}`, 최대 출력 `{config['max_output_tokens']}` 및 시스템 지시·정답 평가를 통제한다. B/C는 동일한 고정 학습 어휘, 양수 토큰 선택·내림차순·동률 어휘순·소수3자리 표시·프롬프트 구조를 사용하며 정보 출처 설명만 다르다. 원시 예측값은 별도로 남긴다.", "", "C는 정답 해설에서 얻은 정보가 포함되는 오라클 진단 조건이다. 정답에 직접 연결되는 토큰이 있을 수 있어 서비스 성능으로 해석하지 않는다. 고정 어휘·상위20으로 정보를 제한하므로 전체 해설을 준 것도 아니고 이론적 성능 상한도 아니다. 기존 A/B 응답은 설정·완성 입력 해시가 같은 경우에만 재사용한다. C는 이번 추가 실험이며 호출 날짜 차이 및 서비스 내부 변경 가능성은 남는다. API 직전 저장된 요청과 SDK 호출 인자는 [입력 감사](03_gemini/prompt_audit/)로 추적하고, 실제 모델 버전은 반환값 범위에서만 기록한다.", "",
+              "대표3문항의 B/C 토큰·빈도·순위 차이는 [실제 전송 토큰 비교표](03_gemini/prompt_audit/token_comparison.md)에서 확인한다. 실제 문제 유형의 일치·혼합·분산 사례는 [사례 요약](04_case_studies/selected_cases.md)에 연결했다.", "",
               "## 8. 세 조건의 풀이 성능 및 토큰 사용량 비교", ""]
     gem=gemini_markdown(result)
     table=gem[gem.index("|조건|"):gem.index("## 실제 입력과 응답")]
@@ -505,16 +618,17 @@ def build_report(run_root=RUN_ROOT):
     result["postflight_verified"]=postflight["verification_passed"] and postflight["all_expected_successful"]
     result["complete"]=result["complete"] and result["postflight_verified"]
     questions=export_tables(folder,result,latest,reviewed)
+    prompt_token_comparison(run_root,result["test_ids"])
     render_figures(folder,result,questions)
     (folder/"analysis.md").write_text(gemini_markdown(result),encoding="utf-8")
     case_studies(run_root,result,latest,questions)
     final_report(run_root,result)
     state="실험 응답 확보 완료" if result["complete"] else "부분 결과 · 미완료 항목 존재"
     index=["# MathHint 최종 실험 결과", "",f"**{state}: 성공 {result['successful_conditions']}/{result['expected_conditions']}개 응답.**", "",
-           "1. **군집별 실제 문항:** [8개 실험의 문항 배정 CSV](01_clustering/cluster_members.csv), [실험별 군집 원문 링크](01_clustering/experiments/), [군집 분석](01_clustering/analysis.md).", 
-           "2. **Gemini80문항 세 조건:** [정답·A/B/C답·정오·토큰 한 행 비교](03_gemini/question_comparison.csv), [변화 문항](03_gemini/changed_questions.csv), [실제 입력](03_gemini/prompt_audit/), [원본 응답](03_gemini/responses.jsonl).", 
-           "3. **회귀 자체의 성능:** [MSE·MAE·코사인](02_regression/summary.csv), [문항별 상위토큰·오차](02_regression/question_comparison.csv), [실제·원시·보정 벡터](02_regression/vectors.json), [회귀 분석](02_regression/analysis.md).", 
-           "4. **통합 문항 찾기:** [80문항 ID별 연결](04_case_studies/questions.md), [사례 요약](04_case_studies/selected_cases.md).", 
+           "1. **군집별 실제 문항:** [8개 실험의 문항 배정 CSV](01_clustering/cluster_members.csv), [실험별 군집 원문 링크](01_clustering/experiments/), [군집 분석](01_clustering/analysis.md).",
+           "2. **Gemini80문항 세 조건:** [정답·A/B/C답·정오·토큰 한 행 비교](03_gemini/question_comparison.csv), [변화 문항](03_gemini/changed_questions.csv), [실제 입력](03_gemini/prompt_audit/), [B/C 토큰 나란히 비교](03_gemini/prompt_audit/token_comparison.md), [원본 응답](03_gemini/responses.jsonl).",
+           "3. **회귀 자체의 성능:** [MSE·MAE·코사인](02_regression/summary.csv), [문항별 상위토큰·오차](02_regression/question_comparison.csv), [실제·원시·보정 벡터](02_regression/vectors.json), [회귀 분석](02_regression/analysis.md).",
+           "4. **통합 문항 찾기:** [80문항 ID별 연결](04_case_studies/questions.md), [사례 요약](04_case_studies/selected_cases.md).",
            "5. **연구 전체 해석:** [최종 한국어 보고서](final_report.md).", "",
            "## 표와 그림", "", "[군집 지표표](01_clustering/summary.csv) · [군집 그림](01_clustering/figures/) · [회귀 그림](02_regression/figures/) · [Gemini 집계](03_gemini/summary.csv) · [토큰 합계·평균](03_gemini/token_summary.csv) · [Gemini 그림](03_gemini/figures/)", "",
            "[전체 산출물 검증](validation.json) · [핵심 테스트 실행 로그](test_results.txt) · [독립 ML 수식 감사](independent_ml_audit.json)", "",

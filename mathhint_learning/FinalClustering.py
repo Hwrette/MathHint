@@ -301,22 +301,32 @@ def save_analysis(output, summaries, members, dispersion):
               "5개 시드 중 각 방법의 학습 목적함수로만 결과를 선택했다. 두 방법의 목적함수 값은 단위와 의미가 다르므로 서로 비교하지 않는다. 테스트 지표로 시드나 k를 선택하지 않았다.",
               "기존 테스트 성능을 관찰한 뒤 설계한 후속 비교이며, 전혀 보지 않은 독립 최종 평가로 주장하지 않는다.", "",
               "## 직접 확인할 성공·혼합·분산 사례", "", "사례는 결과를 읽기 위한 기술적 예시이며 통계적 일반화를 위한 별도 표본이 아니다.", ""]
-    for method in METHOD_NAMES:
-        relevant = [r for r in members if r["method"] == method and r["level"] == "subunit"]
-        group_counts = Counter((r["cluster"], r["actual_label"]) for r in relevant if r["split"] == "train")
-        cluster_n = Counter(r["cluster"] for r in relevant if r["split"] == "train")
-        successes = sorted([r for r in relevant if r["split"] == "test" and r["matches_train_majority"]],
-                           key=lambda r: (-group_counts[(r["cluster"], r["actual_label"])] / cluster_n[r["cluster"]], r["id"]))
-        failures = sorted([r for r in relevant if r["split"] == "test" and not r["matches_train_majority"]], key=lambda r: r["id"])
-        lines += [f"### {METHOD_NAMES[method]} · 세부단원", ""]
-        for title, candidates in (("학습 다수 라벨과 일치", successes), ("서로 다른 라벨이 같은 군집", failures)):
-            if candidates:
-                row = candidates[0]
-                lines += [f"- {title}: [{row['id']}](../../../{row['problem_path']}) · 군집 {row['cluster']} · 실제 `{row['actual_label']}` · 학습 다수 `{row['train_majority_label']}`."]
-        ds = [r for r in dispersion if r["level"] == "subunit" and r["method"] == method and r["split"] == "train"]
-        dispersed = sorted(ds, key=lambda r: (-r["occupied_clusters"], -r["n"], r["actual_label"]))[0]
-        matches = [r for r in relevant if r["actual_label"] == dispersed["actual_label"] and r["split"] == "train"]
-        lines += [f"- 같은 라벨이 여러 군집으로 분산: `{dispersed['actual_label']}` 학습 {dispersed['n']}문항이 {dispersed['occupied_clusters']}군집으로 나뉨. 문항: " + ", ".join(f"{r['id']}→{r['cluster']}" for r in matches) + ".", ""]
+    for level in ("subunit", "type"):
+        for method in METHOD_NAMES:
+            relevant = [r for r in members if r["method"] == method and r["level"] == level]
+            training = [r for r in relevant if r["split"] == "train"]
+            group_counts = Counter((r["cluster"], r["actual_label"]) for r in training)
+            cluster_n = Counter(r["cluster"] for r in training)
+            successes = sorted([r for r in relevant if r["split"] == "test" and r["matches_train_majority"]],
+                               key=lambda r: (-group_counts[(r["cluster"], r["actual_label"])] / cluster_n[r["cluster"]], r["id"]))
+            failures = sorted([r for r in relevant if r["split"] == "test" and not r["matches_train_majority"]], key=lambda r: r["id"])
+            lines += [f"### {METHOD_NAMES[method]} · {LEVEL_NAMES[level]}", "",
+                      f"[이 실험의 군집 문항·그림](experiments/{level}_{method}/README.md)", ""]
+            if successes:
+                row = successes[0]
+                lines += [f"- 학습 다수 라벨과 일치: [{row['id']}](../../../{row['problem_path']}) · 군집 {row['cluster']} · 실제 `{row['actual_label']}`. 학습 내 같은 라벨은 {group_counts[(row['cluster'], row['actual_label'])]}/{cluster_n[row['cluster']]}문항이다. 이 사례가 전체 유형의 완전 분리를 뜻하지는 않는다."]
+            if failures:
+                row = failures[0]
+                other = next((r for r in training if r["cluster"] == row["cluster"] and r["actual_label"] == row["train_majority_label"]), None)
+                lines += [f"- 서로 다른 라벨이 같은 군집: [{row['id']}](../../../{row['problem_path']}) · 실제 `{row['actual_label']}` · 군집 {row['cluster']}의 학습 다수 `{row['train_majority_label']}`."]
+                if other:
+                    lines += [f"  같은 군집의 학습 문항 [{other['id']}](../../../{other['problem_path']})의 실제 라벨은 `{other['actual_label']}`이다. 대표 라벨은 테스트 문항을 보지 않고 학습에서 정했다."]
+            ds = [r for r in dispersion if r["level"] == level and r["method"] == method and r["split"] == "train"]
+            dispersed = sorted(ds, key=lambda r: (-r["occupied_clusters"], -r["n"], r["actual_label"]))[0]
+            matches = [r for r in training if r["actual_label"] == dispersed["actual_label"]]
+            examples = ", ".join(f"[{r['id']}](../../../{r['problem_path']})→{r['cluster']}" for r in matches[:8])
+            remainder = f" 외 {len(matches) - 8}문항" if len(matches) > 8 else ""
+            lines += [f"- 같은 라벨이 여러 군집으로 분산: `{dispersed['actual_label']}` 학습 {dispersed['n']}문항이 {dispersed['occupied_clusters']}군집으로 나뉨. 예: {examples}{remainder}. 전체 ID와 군집은 [문항별 배정](cluster_members.csv), 분산 수치는 [분산도 표](label_dispersion.csv)에서 이 라벨로 확인한다.", ""]
     (output / "analysis.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     readme = ["# 군집화 결과", "", "먼저 [전체 비교표](summary.csv)와 [해석·사례](analysis.md)를 보고, [문항별 군집 배정](cluster_members.csv)을 실험명·군집 번호로 필터링하세요.", "",
               "- [ARI 비교](figures/ari_comparison.png), [NMI 비교](figures/nmi_comparison.png)",
