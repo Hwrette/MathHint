@@ -1,6 +1,6 @@
 # MathHint 작업 진행 상태
 
-STATUS: COMPLETED_AFTER_REAUDIT
+STATUS: IN_PROGRESS_READER_WORKFLOW
 EXECUTION_ALLOWED: true
 LAST_CONFIRMED_PUBLISHED_COMMIT: 289d662a8c017e61792ab6fe684292155d3013f9
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
@@ -226,3 +226,12 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 보완구현·최종산출물·누적정리문서를커밋289d662로저장하고원격main푸시exit0확인. 재감사전복구브랜치도원격에있다.
 - 기존자동화다시update(is_enabled=false)success·peek false확인. 추가미완료필수항목없음.
 - 공식근거가없는확정판정은보태지않았다. 실험새실행/새API요청없이기존결과의정리와검증만보완했다. 이전완료기록의정리누락을그대로역사에남기고이재감사결과가현재상태임을명시한다.
+
+## 결과 열람·후속 실험 연결 보완 시작 — 2026-11-08T18:36:39.431596+00:00
+
+- 사용자의 새 보완 원문 전체를FINAL_TASK_SPEC에추가했다. 우선순위: 수식/Markdown정적읽기화면→선택한데이터/체크포인트/예측/보고서연결→안내/중복정리.
+- 연구데이터새학습/불용어/TFIDF/신경망/새Gemini실험은금지다. 기존결과재사용과가짜임시자료검사만진행한다.
+- 시작HEAD 687598955fcd1d0d9cd42ab74803da63c94477d3, 작업트리clean확인. 복구브랜치 recovery/before-reader-workflow-20261108 보존. 보호원본/모델/요청/응답/핵심수치 2085파일SHA를별도로확보했다.
+- 현재부족: HTML이pre원문만표시, VectorComparison이과거모델하드코딩, 새학습출력과후속평가/LLM/보고서가단일설정으로연결되지않음.
+- 구현중: 정적오프라인뷰어와악성HTML/수식실패/좁은화면처리; 전체265문항군집읽기링크; 단일Experiment설정+얇은실행기; 모델/예측/동일차원어휘순서호환검사.
+- 다음: 실제브라우저검증·가짜자료학습→평가→입력준비→보고서경로검사·API/학습금지열람검사·보호SHA대조. 아직미완료다.

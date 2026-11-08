@@ -17,7 +17,7 @@
   "github_permission_selection": "APPROVED_USER_ALWAYS_ALLOW",
   "current_workspace_checkpoint_commit": "289d662a8c017e61792ab6fe684292155d3013f9",
   "execution_allowed": true,
-  "spec_sha256": "1ec2ca6b9af9e9c8f409f9f674c87755ae1731815932d34324ed833b67f1e40c",
+  "spec_sha256": "bad393aad10eba085ea3b635d95ab47044dd2971772b3b2398a9c427804f33dc",
   "verification_note": "Final re-audit gaps corrected and pushed. Full140 tests,284 artifact checks,336 protected hashes and930 legacy hashes unchanged,3941 local links valid. Automation disabled and peek verified false. No new API or training.",
   "last_verified_remote_commit": "289d662a8c017e61792ab6fe684292155d3013f9",
   "github_original_permission_mode": "inherit",
@@ -26,7 +26,7 @@
   "global_full_access": "UNAVAILABLE_PLATFORM_REJECTED",
   "attached_spec_original_sha256": "18cb0a83aebf2988b476118bcb4014f5ce7c0f1f7979fdceaead42f8deafbf56",
   "execution_environment_permission": "danger-full-access; network_enabled; approval_never; user_changed_environment",
-  "work_status": "COMPLETED_AFTER_REAUDIT",
+  "work_status": "IN_PROGRESS_READER_WORKFLOW",
   "paused_at": "2026-11-08T17:55:21.415494+00:00",
   "pause_verified_by_peek": true,
   "github_permission_restored": true,
@@ -37,5 +37,7 @@
   "new_successful_C": 80,
   "new_sdk_calls": 81,
   "reaudit_protected_artifacts_unchanged": 336,
-  "reaudit_file_links_checked": 3941
+  "reaudit_file_links_checked": 3941,
+  "new_research_training_allowed": false,
+  "new_gemini_calls_allowed": false
 }
