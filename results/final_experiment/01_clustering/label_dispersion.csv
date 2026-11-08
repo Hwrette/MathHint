@@ -1,0 +1,421 @@
+﻿experiment,level,method,split,actual_label,n,occupied_clusters,largest_cluster_share,cluster_entropy_bits,cluster_ids
+curriculum_euclidean,curriculum,euclidean,train,09 대수,87,2,0.5517241379310345,0.9922666387194963,"0,1"
+curriculum_euclidean,curriculum,euclidean,train,10 미적분1,98,2,0.8469387755102041,0.617448295789468,"0,1"
+curriculum_euclidean,curriculum,euclidean,test,09 대수,38,2,0.6052631578947368,0.9677884628267678,"0,1"
+curriculum_euclidean,curriculum,euclidean,test,10 미적분1,42,2,0.9047619047619048,0.4537163391869448,"0,1"
+curriculum_spherical,curriculum,spherical,train,09 대수,87,2,0.8850574712643678,0.514646431683429,"0,1"
+curriculum_spherical,curriculum,spherical,train,10 미적분1,98,2,0.7653061224489796,0.786104468844776,"0,1"
+curriculum_spherical,curriculum,spherical,test,09 대수,38,2,0.7631578947368421,0.7897492536625221,"0,1"
+curriculum_spherical,curriculum,spherical,test,10 미적분1,42,2,0.7380952380952381,0.8296071030882031,"0,1"
+unit_euclidean,unit,euclidean,train,09 대수 / 05 삼각함수의 정의,16,4,0.5625,1.5919171866886992,"0,1,2,4"
+unit_euclidean,unit,euclidean,train,09 대수 / 06 삼각함수의 그래프,71,7,0.36619718309859156,2.3078382954298244,"0,1,2,3,4,5,6"
+unit_euclidean,unit,euclidean,train,10 미적분1 / 01 함수의 극한,12,2,0.75,0.8112781244591328,"3,6"
+unit_euclidean,unit,euclidean,train,10 미적분1 / 02 함수의 연속성,18,3,0.5555555555555556,1.2326602568158205,"3,6,7"
+unit_euclidean,unit,euclidean,train,10 미적분1 / 03 미분계수와 도함수,19,4,0.42105263157894735,1.7474130395316414,"2,3,5,6"
+unit_euclidean,unit,euclidean,train,10 미적분1 / 04 접선의 방정식,11,5,0.36363636363636365,2.186704345910025,"1,2,3,4,5"
+unit_euclidean,unit,euclidean,train,10 미적분1 / 05 함수의 증가와 감소,22,4,0.7272727272727273,1.2433003685389576,"2,3,5,6"
+unit_euclidean,unit,euclidean,train,10 미적분1 / 06 방부등식과 직선운동,16,4,0.5,1.5306390622295665,"1,2,4,6"
+unit_euclidean,unit,euclidean,test,09 대수 / 05 삼각함수의 정의,7,3,0.7142857142857143,1.1488348542809166,"0,1,2"
+unit_euclidean,unit,euclidean,test,09 대수 / 06 삼각함수의 그래프,31,6,0.3225806451612903,2.2039259566390887,"0,1,2,3,4,5"
+unit_euclidean,unit,euclidean,test,10 미적분1 / 01 함수의 극한,5,3,0.4,1.5219280948873621,"3,5,6"
+unit_euclidean,unit,euclidean,test,10 미적분1 / 02 함수의 연속성,8,2,0.5,1.0,"6,7"
+unit_euclidean,unit,euclidean,test,10 미적분1 / 03 미분계수와 도함수,8,4,0.375,1.811278124459133,"3,5,6,7"
+unit_euclidean,unit,euclidean,test,10 미적분1 / 04 접선의 방정식,5,4,0.4,1.9219280948873623,"2,4,5,6"
+unit_euclidean,unit,euclidean,test,10 미적분1 / 05 함수의 증가와 감소,9,2,0.7777777777777778,0.7642045065086203,"2,5"
+unit_euclidean,unit,euclidean,test,10 미적분1 / 06 방부등식과 직선운동,7,4,0.42857142857142855,1.8423709931771084,"1,2,4,5"
+unit_spherical,unit,spherical,train,09 대수 / 05 삼각함수의 정의,16,2,0.75,0.8112781244591328,"2,4"
+unit_spherical,unit,spherical,train,09 대수 / 06 삼각함수의 그래프,71,7,0.3380281690140845,2.4797693021766745,"1,2,3,4,5,6,7"
+unit_spherical,unit,spherical,train,10 미적분1 / 01 함수의 극한,12,2,0.6666666666666666,0.9182958340544896,"3,6"
+unit_spherical,unit,spherical,train,10 미적분1 / 02 함수의 연속성,18,3,0.8888888888888888,0.6143694458867568,"0,3,6"
+unit_spherical,unit,spherical,train,10 미적분1 / 03 미분계수와 도함수,19,4,0.47368421052631576,1.6068322783181097,"0,3,6,7"
+unit_spherical,unit,spherical,train,10 미적분1 / 04 접선의 방정식,11,4,0.36363636363636365,1.9362600275315276,"2,3,6,7"
+unit_spherical,unit,spherical,train,10 미적분1 / 05 함수의 증가와 감소,22,4,0.5454545454545454,1.5828765043125572,"1,3,6,7"
+unit_spherical,unit,spherical,train,10 미적분1 / 06 방부등식과 직선운동,16,4,0.5,1.6493974703476992,"2,3,6,7"
+unit_spherical,unit,spherical,test,09 대수 / 05 삼각함수의 정의,7,3,0.42857142857142855,1.4488156357251847,"2,4,7"
+unit_spherical,unit,spherical,test,09 대수 / 06 삼각함수의 그래프,31,7,0.3225806451612903,2.5029001529016943,"1,2,3,4,5,6,7"
+unit_spherical,unit,spherical,test,10 미적분1 / 01 함수의 극한,5,2,0.6,0.9709505944546686,"3,6"
+unit_spherical,unit,spherical,test,10 미적분1 / 02 함수의 연속성,8,2,0.75,0.8112781244591328,"0,3"
+unit_spherical,unit,spherical,test,10 미적분1 / 03 미분계수와 도함수,8,4,0.375,1.9056390622295665,"0,3,6,7"
+unit_spherical,unit,spherical,test,10 미적분1 / 04 접선의 방정식,5,2,0.8,0.7219280948873623,"3,6"
+unit_spherical,unit,spherical,test,10 미적분1 / 05 함수의 증가와 감소,9,3,0.6666666666666666,1.224394445405986,"3,6,7"
+unit_spherical,unit,spherical,test,10 미적분1 / 06 방부등식과 직선운동,7,3,0.42857142857142855,1.5566567074628228,"2,3,7"
+subunit_euclidean,subunit,euclidean,train,09 대수 / 05 삼각함수의 정의 / 01 일반각과 호도법,2,2,0.5,1.0,"18,21"
+subunit_euclidean,subunit,euclidean,train,09 대수 / 05 삼각함수의 정의 / 02 삼각함수의 정의 및 활용,14,5,0.2857142857142857,2.1820058147602133,"8,10,17,21,22"
+subunit_euclidean,subunit,euclidean,train,09 대수 / 06 삼각함수의 그래프 / 01 삼각함수의 그래프,16,8,0.3125,2.649397470347699,"2,3,11,16,18,19,20,24"
+subunit_euclidean,subunit,euclidean,train,09 대수 / 06 삼각함수의 그래프 / 02 삼각함수의 그래프 활용,18,7,0.3333333333333333,2.4410685859554375,"8,10,11,17,21,22,24"
+subunit_euclidean,subunit,euclidean,train,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식,37,11,0.32432432432432434,2.7072081543318935,"0,2,4,5,12,13,16,17,18,20,23"
+subunit_euclidean,subunit,euclidean,train,10 미적분1 / 01 함수의 극한 / 01 좌극한과 우극한,1,1,1.0,-0.0,23
+subunit_euclidean,subunit,euclidean,train,10 미적분1 / 01 함수의 극한 / 02 극한의 성질과 계산,4,3,0.5,1.5,"1,9,23"
+subunit_euclidean,subunit,euclidean,train,10 미적분1 / 01 함수의 극한 / 03 극한식의 해석,6,3,0.6666666666666666,1.2516291673878228,"9,11,23"
+subunit_euclidean,subunit,euclidean,train,10 미적분1 / 01 함수의 극한 / 04 극한의 활용,1,1,1.0,-0.0,13
+subunit_euclidean,subunit,euclidean,train,10 미적분1 / 02 함수의 연속성 / 01 함수의 연속성,17,3,0.5882352941176471,1.3328204045850196,"6,7,14"
+subunit_euclidean,subunit,euclidean,train,10 미적분1 / 02 함수의 연속성 / 03 사잇값 정리,1,1,1.0,-0.0,3
+subunit_euclidean,subunit,euclidean,train,10 미적분1 / 03 미분계수와 도함수 / 01 미분계수,4,2,0.75,0.8112781244591328,"11,24"
+subunit_euclidean,subunit,euclidean,train,10 미적분1 / 03 미분계수와 도함수 / 02 도함수의 정의와 미분법 공식,9,4,0.6666666666666666,1.4466166676282082,"2,9,14,23"
+subunit_euclidean,subunit,euclidean,train,10 미적분1 / 03 미분계수와 도함수 / 03 미분법 공식의 활용,3,2,0.6666666666666666,0.9182958340544896,"9,11"
+subunit_euclidean,subunit,euclidean,train,10 미적분1 / 03 미분계수와 도함수 / 04 미분가능성과 연속성,3,3,0.3333333333333333,1.584962500721156,"3,6,14"
+subunit_euclidean,subunit,euclidean,train,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식,7,4,0.42857142857142855,1.8423709931771084,"0,2,9,21"
+subunit_euclidean,subunit,euclidean,train,10 미적분1 / 04 접선의 방정식 / 02 접선의 방정식의 활용,3,3,0.3333333333333333,1.584962500721156,"2,9,24"
+subunit_euclidean,subunit,euclidean,train,10 미적분1 / 04 접선의 방정식 / 03 평균값의 정리,1,1,1.0,-0.0,11
+subunit_euclidean,subunit,euclidean,train,10 미적분1 / 05 함수의 증가와 감소 / 01 함수의 증가와 감소,1,1,1.0,-0.0,2
+subunit_euclidean,subunit,euclidean,train,10 미적분1 / 05 함수의 증가와 감소 / 02 함수의 극대와 극소,18,5,0.5,1.7233083338141042,"3,5,9,11,23"
+subunit_euclidean,subunit,euclidean,train,10 미적분1 / 05 함수의 증가와 감소 / 03 증가감소와 극대극소의 활용,1,1,1.0,-0.0,24
+subunit_euclidean,subunit,euclidean,train,10 미적분1 / 05 함수의 증가와 감소 / 04 함수의 최대와 최소,2,2,0.5,1.0,"2,5"
+subunit_euclidean,subunit,euclidean,train,10 미적분1 / 06 방부등식과 직선운동 / 01 방정식과 미분,4,1,1.0,-0.0,2
+subunit_euclidean,subunit,euclidean,train,10 미적분1 / 06 방부등식과 직선운동 / 02 부등식과 미분,4,3,0.5,1.5,"1,2,24"
+subunit_euclidean,subunit,euclidean,train,"10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분",8,2,0.75,0.8112781244591328,"0,15"
+subunit_euclidean,subunit,euclidean,test,09 대수 / 05 삼각함수의 정의 / 01 일반각과 호도법,0,0,,,
+subunit_euclidean,subunit,euclidean,test,09 대수 / 05 삼각함수의 정의 / 02 삼각함수의 정의 및 활용,7,4,0.5714285714285714,1.6644977792004612,"2,10,17,21"
+subunit_euclidean,subunit,euclidean,test,09 대수 / 06 삼각함수의 그래프 / 01 삼각함수의 그래프,6,4,0.3333333333333333,1.9182958340544896,"2,3,5,18"
+subunit_euclidean,subunit,euclidean,test,09 대수 / 06 삼각함수의 그래프 / 02 삼각함수의 그래프 활용,8,5,0.375,2.1556390622295662,"10,17,21,22,23"
+subunit_euclidean,subunit,euclidean,test,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식,17,6,0.4117647058823529,2.1812056673346514,"2,4,5,10,18,23"
+subunit_euclidean,subunit,euclidean,test,10 미적분1 / 01 함수의 극한 / 01 좌극한과 우극한,0,0,,,
+subunit_euclidean,subunit,euclidean,test,10 미적분1 / 01 함수의 극한 / 02 극한의 성질과 계산,2,2,0.5,1.0,"1,11"
+subunit_euclidean,subunit,euclidean,test,10 미적분1 / 01 함수의 극한 / 03 극한식의 해석,3,1,1.0,-0.0,23
+subunit_euclidean,subunit,euclidean,test,10 미적분1 / 01 함수의 극한 / 04 극한의 활용,0,0,,,
+subunit_euclidean,subunit,euclidean,test,10 미적분1 / 02 함수의 연속성 / 01 함수의 연속성,8,3,0.5,1.4056390622295665,"1,7,14"
+subunit_euclidean,subunit,euclidean,test,10 미적분1 / 02 함수의 연속성 / 03 사잇값 정리,0,0,,,
+subunit_euclidean,subunit,euclidean,test,10 미적분1 / 03 미분계수와 도함수 / 01 미분계수,2,2,0.5,1.0,"5,11"
+subunit_euclidean,subunit,euclidean,test,10 미적분1 / 03 미분계수와 도함수 / 02 도함수의 정의와 미분법 공식,4,2,0.75,0.8112781244591328,"5,9"
+subunit_euclidean,subunit,euclidean,test,10 미적분1 / 03 미분계수와 도함수 / 03 미분법 공식의 활용,0,0,,,
+subunit_euclidean,subunit,euclidean,test,10 미적분1 / 03 미분계수와 도함수 / 04 미분가능성과 연속성,2,2,0.5,1.0,"7,14"
+subunit_euclidean,subunit,euclidean,test,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식,3,3,0.3333333333333333,1.584962500721156,"0,2,11"
+subunit_euclidean,subunit,euclidean,test,10 미적분1 / 04 접선의 방정식 / 02 접선의 방정식의 활용,2,2,0.5,1.0,"0,11"
+subunit_euclidean,subunit,euclidean,test,10 미적분1 / 04 접선의 방정식 / 03 평균값의 정리,0,0,,,
+subunit_euclidean,subunit,euclidean,test,10 미적분1 / 05 함수의 증가와 감소 / 01 함수의 증가와 감소,0,0,,,
+subunit_euclidean,subunit,euclidean,test,10 미적분1 / 05 함수의 증가와 감소 / 02 함수의 극대와 극소,7,4,0.42857142857142855,1.8423709931771084,"2,5,11,23"
+subunit_euclidean,subunit,euclidean,test,10 미적분1 / 05 함수의 증가와 감소 / 03 증가감소와 극대극소의 활용,0,0,,,
+subunit_euclidean,subunit,euclidean,test,10 미적분1 / 05 함수의 증가와 감소 / 04 함수의 최대와 최소,2,1,1.0,-0.0,5
+subunit_euclidean,subunit,euclidean,test,10 미적분1 / 06 방부등식과 직선운동 / 01 방정식과 미분,3,3,0.3333333333333333,1.584962500721156,"0,2,11"
+subunit_euclidean,subunit,euclidean,test,10 미적분1 / 06 방부등식과 직선운동 / 02 부등식과 미분,2,2,0.5,1.0,"2,11"
+subunit_euclidean,subunit,euclidean,test,"10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분",2,2,0.5,1.0,"0,15"
+subunit_spherical,subunit,spherical,train,09 대수 / 05 삼각함수의 정의 / 01 일반각과 호도법,2,2,0.5,1.0,"17,21"
+subunit_spherical,subunit,spherical,train,09 대수 / 05 삼각함수의 정의 / 02 삼각함수의 정의 및 활용,14,4,0.42857142857142855,1.877387064296613,"10,17,21,22"
+subunit_spherical,subunit,spherical,train,09 대수 / 06 삼각함수의 그래프 / 01 삼각함수의 그래프,16,7,0.3125,2.4772170014624826,"3,9,11,16,18,19,24"
+subunit_spherical,subunit,spherical,train,09 대수 / 06 삼각함수의 그래프 / 02 삼각함수의 그래프 활용,18,8,0.3333333333333333,2.6688388898504303,"8,10,14,16,17,20,21,22"
+subunit_spherical,subunit,spherical,train,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식,37,12,0.3783783783783784,2.708852018124083,"0,2,3,4,5,9,12,13,16,17,21,23"
+subunit_spherical,subunit,spherical,train,10 미적분1 / 01 함수의 극한 / 01 좌극한과 우극한,1,1,1.0,-0.0,1
+subunit_spherical,subunit,spherical,train,10 미적분1 / 01 함수의 극한 / 02 극한의 성질과 계산,4,3,0.5,1.5,"1,9,20"
+subunit_spherical,subunit,spherical,train,10 미적분1 / 01 함수의 극한 / 03 극한식의 해석,6,3,0.5,1.4591479170272448,"1,9,20"
+subunit_spherical,subunit,spherical,train,10 미적분1 / 01 함수의 극한 / 04 극한의 활용,1,1,1.0,-0.0,13
+subunit_spherical,subunit,spherical,train,10 미적분1 / 02 함수의 연속성 / 01 함수의 연속성,17,3,0.5882352941176471,1.2210477851797181,"6,7,14"
+subunit_spherical,subunit,spherical,train,10 미적분1 / 02 함수의 연속성 / 03 사잇값 정리,1,1,1.0,-0.0,9
+subunit_spherical,subunit,spherical,train,10 미적분1 / 03 미분계수와 도함수 / 01 미분계수,4,2,0.75,0.8112781244591328,"11,20"
+subunit_spherical,subunit,spherical,train,10 미적분1 / 03 미분계수와 도함수 / 02 도함수의 정의와 미분법 공식,9,3,0.5555555555555556,1.4355205042826666,"1,9,23"
+subunit_spherical,subunit,spherical,train,10 미적분1 / 03 미분계수와 도함수 / 03 미분법 공식의 활용,3,3,0.3333333333333333,1.584962500721156,"9,11,20"
+subunit_spherical,subunit,spherical,train,10 미적분1 / 03 미분계수와 도함수 / 04 미분가능성과 연속성,3,2,0.6666666666666666,0.9182958340544896,"9,14"
+subunit_spherical,subunit,spherical,train,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식,7,5,0.2857142857142857,2.2359263506290326,"5,9,20,21,23"
+subunit_spherical,subunit,spherical,train,10 미적분1 / 04 접선의 방정식 / 02 접선의 방정식의 활용,3,3,0.3333333333333333,1.584962500721156,"2,9,11"
+subunit_spherical,subunit,spherical,train,10 미적분1 / 04 접선의 방정식 / 03 평균값의 정리,1,1,1.0,-0.0,11
+subunit_spherical,subunit,spherical,train,10 미적분1 / 05 함수의 증가와 감소 / 01 함수의 증가와 감소,1,1,1.0,-0.0,7
+subunit_spherical,subunit,spherical,train,10 미적분1 / 05 함수의 증가와 감소 / 02 함수의 극대와 극소,18,5,0.5,1.9182958340544896,"1,5,9,11,20"
+subunit_spherical,subunit,spherical,train,10 미적분1 / 05 함수의 증가와 감소 / 03 증가감소와 극대극소의 활용,1,1,1.0,-0.0,6
+subunit_spherical,subunit,spherical,train,10 미적분1 / 05 함수의 증가와 감소 / 04 함수의 최대와 최소,2,1,1.0,-0.0,5
+subunit_spherical,subunit,spherical,train,10 미적분1 / 06 방부등식과 직선운동 / 01 방정식과 미분,4,2,0.5,1.0,"2,24"
+subunit_spherical,subunit,spherical,train,10 미적분1 / 06 방부등식과 직선운동 / 02 부등식과 미분,4,3,0.5,1.5,"1,2,20"
+subunit_spherical,subunit,spherical,train,"10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분",8,1,1.0,-0.0,15
+subunit_spherical,subunit,spherical,test,09 대수 / 05 삼각함수의 정의 / 01 일반각과 호도법,0,0,,,
+subunit_spherical,subunit,spherical,test,09 대수 / 05 삼각함수의 정의 / 02 삼각함수의 정의 및 활용,7,4,0.42857142857142855,1.8423709931771084,"10,17,21,24"
+subunit_spherical,subunit,spherical,test,09 대수 / 06 삼각함수의 그래프 / 01 삼각함수의 그래프,6,4,0.5,1.792481250360578,"1,5,6,18"
+subunit_spherical,subunit,spherical,test,09 대수 / 06 삼각함수의 그래프 / 02 삼각함수의 그래프 활용,8,4,0.5,1.75,"9,17,21,22"
+subunit_spherical,subunit,spherical,test,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식,17,10,0.29411764705882354,3.007196489685617,"0,1,2,4,5,10,16,21,23,24"
+subunit_spherical,subunit,spherical,test,10 미적분1 / 01 함수의 극한 / 01 좌극한과 우극한,0,0,,,
+subunit_spherical,subunit,spherical,test,10 미적분1 / 01 함수의 극한 / 02 극한의 성질과 계산,2,2,0.5,1.0,"1,20"
+subunit_spherical,subunit,spherical,test,10 미적분1 / 01 함수의 극한 / 03 극한식의 해석,3,1,1.0,-0.0,1
+subunit_spherical,subunit,spherical,test,10 미적분1 / 01 함수의 극한 / 04 극한의 활용,0,0,,,
+subunit_spherical,subunit,spherical,test,10 미적분1 / 02 함수의 연속성 / 01 함수의 연속성,8,2,0.5,1.0,"7,14"
+subunit_spherical,subunit,spherical,test,10 미적분1 / 02 함수의 연속성 / 03 사잇값 정리,0,0,,,
+subunit_spherical,subunit,spherical,test,10 미적분1 / 03 미분계수와 도함수 / 01 미분계수,2,2,0.5,1.0,"20,23"
+subunit_spherical,subunit,spherical,test,10 미적분1 / 03 미분계수와 도함수 / 02 도함수의 정의와 미분법 공식,4,3,0.5,1.5,"1,5,9"
+subunit_spherical,subunit,spherical,test,10 미적분1 / 03 미분계수와 도함수 / 03 미분법 공식의 활용,0,0,,,
+subunit_spherical,subunit,spherical,test,10 미적분1 / 03 미분계수와 도함수 / 04 미분가능성과 연속성,2,2,0.5,1.0,"7,14"
+subunit_spherical,subunit,spherical,test,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식,3,3,0.3333333333333333,1.584962500721156,"11,20,23"
+subunit_spherical,subunit,spherical,test,10 미적분1 / 04 접선의 방정식 / 02 접선의 방정식의 활용,2,2,0.5,1.0,"11,15"
+subunit_spherical,subunit,spherical,test,10 미적분1 / 04 접선의 방정식 / 03 평균값의 정리,0,0,,,
+subunit_spherical,subunit,spherical,test,10 미적분1 / 05 함수의 증가와 감소 / 01 함수의 증가와 감소,0,0,,,
+subunit_spherical,subunit,spherical,test,10 미적분1 / 05 함수의 증가와 감소 / 02 함수의 극대와 극소,7,3,0.5714285714285714,1.3787834934861753,"5,9,11"
+subunit_spherical,subunit,spherical,test,10 미적분1 / 05 함수의 증가와 감소 / 03 증가감소와 극대극소의 활용,0,0,,,
+subunit_spherical,subunit,spherical,test,10 미적분1 / 05 함수의 증가와 감소 / 04 함수의 최대와 최소,2,1,1.0,-0.0,5
+subunit_spherical,subunit,spherical,test,10 미적분1 / 06 방부등식과 직선운동 / 01 방정식과 미분,3,3,0.3333333333333333,1.584962500721156,"2,20,21"
+subunit_spherical,subunit,spherical,test,10 미적분1 / 06 방부등식과 직선운동 / 02 부등식과 미분,2,2,0.5,1.0,"2,11"
+subunit_spherical,subunit,spherical,test,"10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분",2,1,1.0,-0.0,15
+type_euclidean,type,euclidean,train,09 대수 / 05 삼각함수의 정의 / 01 일반각과 호도법 / 03 일반각과 호도법3 (두 동경의 위치관계),1,1,1.0,-0.0,21
+type_euclidean,type,euclidean,train,09 대수 / 05 삼각함수의 정의 / 01 일반각과 호도법 / 08 일반각과 호도법8 (추론과 해석),1,1,1.0,-0.0,26
+type_euclidean,type,euclidean,train,09 대수 / 05 삼각함수의 정의 / 02 삼각함수의 정의 및 활용 / 01 정의1 (삼각함수의 뜻),3,1,1.0,-0.0,21
+type_euclidean,type,euclidean,train,09 대수 / 05 삼각함수의 정의 / 02 삼각함수의 정의 및 활용 / 03 정의3 (부호와 함수변형규칙),1,1,1.0,-0.0,53
+type_euclidean,type,euclidean,train,09 대수 / 05 삼각함수의 정의 / 02 삼각함수의 정의 및 활용 / 06 정의6 (삼각함수 사이의 관계. 값 구하기),8,6,0.25,2.5,"8,17,22,33,41,53"
+type_euclidean,type,euclidean,train,09 대수 / 05 삼각함수의 정의 / 02 삼각함수의 정의 및 활용 / 09 활용3 (삼각함수 사이의 관계),2,1,1.0,-0.0,10
+type_euclidean,type,euclidean,train,09 대수 / 06 삼각함수의 그래프 / 01 삼각함수의 그래프 / 01 그래프1 (주기),3,3,0.3333333333333333,1.584962500721156,"19,27,31"
+type_euclidean,type,euclidean,train,09 대수 / 06 삼각함수의 그래프 / 01 삼각함수의 그래프 / 03 그래프3 (평행이동과 대칭이동),1,1,1.0,-0.0,52
+type_euclidean,type,euclidean,train,09 대수 / 06 삼각함수의 그래프 / 01 삼각함수의 그래프 / 04 그래프4 (표준형 그래프에서 Mm),12,10,0.16666666666666666,3.2516291673878226,"3,11,16,18,24,34,55,56,60,66"
+type_euclidean,type,euclidean,train,09 대수 / 06 삼각함수의 그래프 / 02 삼각함수의 그래프 활용 / 01 각 변형1 (각 변형 규칙),13,7,0.38461538461538464,2.4996981431844145,"8,10,17,22,30,39,60"
+type_euclidean,type,euclidean,train,09 대수 / 06 삼각함수의 그래프 / 02 삼각함수의 그래프 활용 / 03 각 변형3 (각 변형 규칙의 활용),1,1,1.0,-0.0,21
+type_euclidean,type,euclidean,train,09 대수 / 06 삼각함수의 그래프 / 02 삼각함수의 그래프 활용 / 05 활용2 (그래프의 활용),1,1,1.0,-0.0,21
+type_euclidean,type,euclidean,train,09 대수 / 06 삼각함수의 그래프 / 02 삼각함수의 그래프 활용 / 06 활용3 (치환을 이용한 Mm),3,3,0.3333333333333333,1.584962500721156,"24,27,68"
+type_euclidean,type,euclidean,train,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 01 삼각방정식1 (일차식꼴),1,1,1.0,-0.0,39
+type_euclidean,type,euclidean,train,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 02 삼각방정식2 (이차식꼴),5,3,0.6,1.3709505944546687,"28,50,60"
+type_euclidean,type,euclidean,train,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 03 삼각방정식3 (교점),1,1,1.0,-0.0,58
+type_euclidean,type,euclidean,train,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 04 삼각방정식4 (대칭성과 실근),13,8,0.46153846153846156,2.5073801024236357,"4,12,16,18,20,42,50,64"
+type_euclidean,type,euclidean,train,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 05 삼각방정식5 (실근의 개수),8,6,0.375,2.4056390622295662,"4,16,36,37,45,51"
+type_euclidean,type,euclidean,train,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 06 삼각부등식1 (일차식꼴),4,3,0.5,1.5,"24,42,50"
+type_euclidean,type,euclidean,train,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 07 삼각부등식2 (이차식꼴),2,2,0.5,1.0,"0,27"
+type_euclidean,type,euclidean,train,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 08 방부등식의 활용1 (이차함수의 활용),1,1,1.0,-0.0,32
+type_euclidean,type,euclidean,train,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 09 방부등식의 활용2 (부등식의 성립조건),1,1,1.0,-0.0,2
+type_euclidean,type,euclidean,train,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 11 방부등식의 활용4 (추론과 해석),1,1,1.0,-0.0,42
+type_euclidean,type,euclidean,train,10 미적분1 / 01 함수의 극한 / 01 좌극한과 우극한 / 07 좌극한과 우극한7 (추론),1,1,1.0,-0.0,62
+type_euclidean,type,euclidean,train,10 미적분1 / 01 함수의 극한 / 02 극한의 성질과 계산 / 01 극한의 성질을 이용한 연산,1,1,1.0,-0.0,64
+type_euclidean,type,euclidean,train,10 미적분1 / 01 함수의 극한 / 02 극한의 성질과 계산 / 07 부정형6 (함수의 극한의 대소 관계),2,1,1.0,-0.0,1
+type_euclidean,type,euclidean,train,10 미적분1 / 01 함수의 극한 / 02 극한의 성질과 계산 / 08 부정형7 (부정형과 극한의 성질),1,1,1.0,-0.0,29
+type_euclidean,type,euclidean,train,10 미적분1 / 01 함수의 극한 / 03 극한식의 해석 / 03 해석3 (함수 구하기. 차수 결정),4,3,0.5,1.5,"29,40,65"
+type_euclidean,type,euclidean,train,10 미적분1 / 01 함수의 극한 / 03 극한식의 해석 / 04 해석4 (함수 구하기. 인수정리),2,1,1.0,-0.0,65
+type_euclidean,type,euclidean,train,"10 미적분1 / 01 함수의 극한 / 04 극한의 활용 / 01 활용1 (좌표와 길이, 넓이)",1,1,1.0,-0.0,13
+type_euclidean,type,euclidean,train,10 미적분1 / 02 함수의 연속성 / 01 함수의 연속성 / 05 연속성5 (구간정의함수),16,6,0.375,2.311278124459133,"7,14,38,47,48,62"
+type_euclidean,type,euclidean,train,10 미적분1 / 02 함수의 연속성 / 01 함수의 연속성 / 07 연속성7 (조건항등식),1,1,1.0,-0.0,6
+type_euclidean,type,euclidean,train,10 미적분1 / 02 함수의 연속성 / 03 사잇값 정리 / 02 사잇값 정리1 (기본),1,1,1.0,-0.0,9
+type_euclidean,type,euclidean,train,10 미적분1 / 03 미분계수와 도함수 / 01 미분계수 / 01 미분계수1 (평균변화율),1,1,1.0,-0.0,24
+type_euclidean,type,euclidean,train,10 미적분1 / 03 미분계수와 도함수 / 01 미분계수 / 02 미분계수2 (평균변화율과 미분계수),2,1,1.0,-0.0,44
+type_euclidean,type,euclidean,train,"10 미적분1 / 03 미분계수와 도함수 / 01 미분계수 / 04 미분계수4 (극한식의 해석, 무한소로 갈때)",1,1,1.0,-0.0,40
+type_euclidean,type,euclidean,train,10 미적분1 / 03 미분계수와 도함수 / 02 도함수의 정의와 미분법 공식 / 02 미분법 공식1 (공식과 미분계수),2,2,0.5,1.0,"23,67"
+type_euclidean,type,euclidean,train,10 미적분1 / 03 미분계수와 도함수 / 02 도함수의 정의와 미분법 공식 / 05 미분법 공식4 (곱의 미분법),5,3,0.4,1.5219280948873621,"43,54,63"
+type_euclidean,type,euclidean,train,"10 미적분1 / 03 미분계수와 도함수 / 02 도함수의 정의와 미분법 공식 / 06 미분법 공식5 (곱의 미분법, 극한식의 해석)",2,2,0.5,1.0,"29,61"
+type_euclidean,type,euclidean,train,"10 미적분1 / 03 미분계수와 도함수 / 03 미분법 공식의 활용 / 01 활용1 (함수구하기, 인수정리)",1,1,1.0,-0.0,44
+type_euclidean,type,euclidean,train,"10 미적분1 / 03 미분계수와 도함수 / 03 미분법 공식의 활용 / 02 활용2 (함수구하기, 해석)",1,1,1.0,-0.0,61
+type_euclidean,type,euclidean,train,"10 미적분1 / 03 미분계수와 도함수 / 03 미분법 공식의 활용 / 07 활용7 (조건항등식, 미정계수법)",1,1,1.0,-0.0,9
+type_euclidean,type,euclidean,train,10 미적분1 / 03 미분계수와 도함수 / 04 미분가능성과 연속성 / 04 미분가능조건1 (구간정의함수),2,1,1.0,-0.0,14
+type_euclidean,type,euclidean,train,10 미적분1 / 03 미분계수와 도함수 / 04 미분가능성과 연속성 / 06 미분가능조건3 (곱함수),1,1,1.0,-0.0,31
+type_euclidean,type,euclidean,train,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식 / 01 접점1 (접선의 방정식),3,3,0.3333333333333333,1.584962500721156,"21,46,51"
+type_euclidean,type,euclidean,train,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식 / 03 접점3 (해석),1,1,1.0,-0.0,54
+type_euclidean,type,euclidean,train,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식 / 04 기울기1 (접선의 방정식),1,1,1.0,-0.0,51
+type_euclidean,type,euclidean,train,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식 / 07 곡선 밖의 점1 (접선의 방정식),1,1,1.0,-0.0,32
+type_euclidean,type,euclidean,train,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식 / 08 곡선 밖의 점2 (접점의 좌표),1,1,1.0,-0.0,32
+type_euclidean,type,euclidean,train,10 미적분1 / 04 접선의 방정식 / 02 접선의 방정식의 활용 / 01 활용1 (접선과 교점의 관계),2,2,0.5,1.0,"51,68"
+type_euclidean,type,euclidean,train,10 미적분1 / 04 접선의 방정식 / 02 접선의 방정식의 활용 / 05 활용5 (함수 구하기),1,1,1.0,-0.0,54
+type_euclidean,type,euclidean,train,10 미적분1 / 04 접선의 방정식 / 03 평균값의 정리 / 04 평균값의 정리3 (부등식의 해석),1,1,1.0,-0.0,68
+type_euclidean,type,euclidean,train,"10 미적분1 / 05 함수의 증가와 감소 / 01 함수의 증가와 감소 / 03 증가와 감소3 (삼차함수와 조건해석, 실수 전체)",1,1,1.0,-0.0,67
+type_euclidean,type,euclidean,train,10 미적분1 / 05 함수의 증가와 감소 / 02 함수의 극대와 극소 / 02 극대와 극소2 (삼차함수의 극대와 극소),16,5,0.375,2.0550365325772657,"36,37,40,65,68"
+type_euclidean,type,euclidean,train,10 미적분1 / 05 함수의 증가와 감소 / 02 함수의 극대와 극소 / 03 극대와 극소3 (사차함수의 극대와 극소),1,1,1.0,-0.0,36
+type_euclidean,type,euclidean,train,10 미적분1 / 05 함수의 증가와 감소 / 02 함수의 극대와 극소 / 07 극대와 극소7 (곱함수와 뺀함수),1,1,1.0,-0.0,63
+type_euclidean,type,euclidean,train,10 미적분1 / 05 함수의 증가와 감소 / 03 증가감소와 극대극소의 활용 / 04 활용4 (절댓값함수),1,1,1.0,-0.0,65
+type_euclidean,type,euclidean,train,10 미적분1 / 05 함수의 증가와 감소 / 04 함수의 최대와 최소 / 03 최대와 최소3 (Mm 조건 해석),2,2,0.5,1.0,"5,46"
+type_euclidean,type,euclidean,train,10 미적분1 / 06 방부등식과 직선운동 / 01 방정식과 미분 / 01 방정식과 미분1 (삼차방정식의 근의 판별),1,1,1.0,-0.0,57
+type_euclidean,type,euclidean,train,10 미적분1 / 06 방부등식과 직선운동 / 01 방정식과 미분 / 02 방정식과 미분2 (삼차방정식의 실근의 범위),1,1,1.0,-0.0,57
+type_euclidean,type,euclidean,train,10 미적분1 / 06 방부등식과 직선운동 / 01 방정식과 미분 / 03 방정식과 미분3 (사차방정식의 근의 판별),1,1,1.0,-0.0,57
+type_euclidean,type,euclidean,train,"10 미적분1 / 06 방부등식과 직선운동 / 01 방정식과 미분 / 04 방정식과 미분4 (다항함수, 방정식의 동치변형)",1,1,1.0,-0.0,25
+type_euclidean,type,euclidean,train,10 미적분1 / 06 방부등식과 직선운동 / 02 부등식과 미분 / 01 부등식과 미분1 (모든 실수),1,1,1.0,-0.0,2
+type_euclidean,type,euclidean,train,10 미적분1 / 06 방부등식과 직선운동 / 02 부등식과 미분 / 02 부등식과 미분2 (제한범위),1,1,1.0,-0.0,49
+type_euclidean,type,euclidean,train,10 미적분1 / 06 방부등식과 직선운동 / 02 부등식과 미분 / 03 부등식과 미분3 (부등식의 동치변형),1,1,1.0,-0.0,1
+type_euclidean,type,euclidean,train,10 미적분1 / 06 방부등식과 직선운동 / 02 부등식과 미분 / 05 부등식과 미분5 (함수 구하기),1,1,1.0,-0.0,66
+type_euclidean,type,euclidean,train,"10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분 / 02 속도와 가속도의 해석1 (주어진 위치함수)",3,2,0.6666666666666666,0.9182958340544896,"15,59"
+type_euclidean,type,euclidean,train,"10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분 / 03 속도와 가속도의 해석2 (위치함수 구하기)",1,1,1.0,-0.0,35
+type_euclidean,type,euclidean,train,"10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분 / 04 속도와 가속도의 해석3 (두 물체 사이의 거리조건)",1,1,1.0,-0.0,15
+type_euclidean,type,euclidean,train,"10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분 / 05 속도와 가속도의 해석4 (운동방향)",3,2,0.6666666666666666,0.9182958340544896,"35,69"
+type_euclidean,type,euclidean,test,09 대수 / 05 삼각함수의 정의 / 01 일반각과 호도법 / 03 일반각과 호도법3 (두 동경의 위치관계),0,0,,,
+type_euclidean,type,euclidean,test,09 대수 / 05 삼각함수의 정의 / 01 일반각과 호도법 / 08 일반각과 호도법8 (추론과 해석),0,0,,,
+type_euclidean,type,euclidean,test,09 대수 / 05 삼각함수의 정의 / 02 삼각함수의 정의 및 활용 / 01 정의1 (삼각함수의 뜻),1,1,1.0,-0.0,21
+type_euclidean,type,euclidean,test,09 대수 / 05 삼각함수의 정의 / 02 삼각함수의 정의 및 활용 / 03 정의3 (부호와 함수변형규칙),0,0,,,
+type_euclidean,type,euclidean,test,09 대수 / 05 삼각함수의 정의 / 02 삼각함수의 정의 및 활용 / 06 정의6 (삼각함수 사이의 관계. 값 구하기),4,2,0.75,0.8112781244591328,"33,39"
+type_euclidean,type,euclidean,test,09 대수 / 05 삼각함수의 정의 / 02 삼각함수의 정의 및 활용 / 09 활용3 (삼각함수 사이의 관계),2,2,0.5,1.0,"39,51"
+type_euclidean,type,euclidean,test,09 대수 / 06 삼각함수의 그래프 / 01 삼각함수의 그래프 / 01 그래프1 (주기),1,1,1.0,-0.0,37
+type_euclidean,type,euclidean,test,09 대수 / 06 삼각함수의 그래프 / 01 삼각함수의 그래프 / 03 그래프3 (평행이동과 대칭이동),0,0,,,
+type_euclidean,type,euclidean,test,09 대수 / 06 삼각함수의 그래프 / 01 삼각함수의 그래프 / 04 그래프4 (표준형 그래프에서 Mm),5,3,0.6,1.3709505944546687,"18,37,67"
+type_euclidean,type,euclidean,test,09 대수 / 06 삼각함수의 그래프 / 02 삼각함수의 그래프 활용 / 01 각 변형1 (각 변형 규칙),6,4,0.5,1.792481250360578,"17,22,39,60"
+type_euclidean,type,euclidean,test,09 대수 / 06 삼각함수의 그래프 / 02 삼각함수의 그래프 활용 / 03 각 변형3 (각 변형 규칙의 활용),1,1,1.0,-0.0,21
+type_euclidean,type,euclidean,test,09 대수 / 06 삼각함수의 그래프 / 02 삼각함수의 그래프 활용 / 05 활용2 (그래프의 활용),0,0,,,
+type_euclidean,type,euclidean,test,09 대수 / 06 삼각함수의 그래프 / 02 삼각함수의 그래프 활용 / 06 활용3 (치환을 이용한 Mm),1,1,1.0,-0.0,64
+type_euclidean,type,euclidean,test,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 01 삼각방정식1 (일차식꼴),1,1,1.0,-0.0,50
+type_euclidean,type,euclidean,test,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 02 삼각방정식2 (이차식꼴),2,1,1.0,-0.0,50
+type_euclidean,type,euclidean,test,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 03 삼각방정식3 (교점),1,1,1.0,-0.0,50
+type_euclidean,type,euclidean,test,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 04 삼각방정식4 (대칭성과 실근),6,5,0.3333333333333333,2.2516291673878226,"0,18,37,50,57"
+type_euclidean,type,euclidean,test,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 05 삼각방정식5 (실근의 개수),3,3,0.3333333333333333,1.584962500721156,"4,46,57"
+type_euclidean,type,euclidean,test,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 06 삼각부등식1 (일차식꼴),1,1,1.0,-0.0,0
+type_euclidean,type,euclidean,test,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 07 삼각부등식2 (이차식꼴),1,1,1.0,-0.0,65
+type_euclidean,type,euclidean,test,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 08 방부등식의 활용1 (이차함수의 활용),1,1,1.0,-0.0,42
+type_euclidean,type,euclidean,test,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 09 방부등식의 활용2 (부등식의 성립조건),1,1,1.0,-0.0,10
+type_euclidean,type,euclidean,test,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 11 방부등식의 활용4 (추론과 해석),0,0,,,
+type_euclidean,type,euclidean,test,10 미적분1 / 01 함수의 극한 / 01 좌극한과 우극한 / 07 좌극한과 우극한7 (추론),0,0,,,
+type_euclidean,type,euclidean,test,10 미적분1 / 01 함수의 극한 / 02 극한의 성질과 계산 / 01 극한의 성질을 이용한 연산,0,0,,,
+type_euclidean,type,euclidean,test,10 미적분1 / 01 함수의 극한 / 02 극한의 성질과 계산 / 07 부정형6 (함수의 극한의 대소 관계),1,1,1.0,-0.0,68
+type_euclidean,type,euclidean,test,10 미적분1 / 01 함수의 극한 / 02 극한의 성질과 계산 / 08 부정형7 (부정형과 극한의 성질),1,1,1.0,-0.0,61
+type_euclidean,type,euclidean,test,10 미적분1 / 01 함수의 극한 / 03 극한식의 해석 / 03 해석3 (함수 구하기. 차수 결정),2,2,0.5,1.0,"61,64"
+type_euclidean,type,euclidean,test,10 미적분1 / 01 함수의 극한 / 03 극한식의 해석 / 04 해석4 (함수 구하기. 인수정리),1,1,1.0,-0.0,65
+type_euclidean,type,euclidean,test,"10 미적분1 / 01 함수의 극한 / 04 극한의 활용 / 01 활용1 (좌표와 길이, 넓이)",0,0,,,
+type_euclidean,type,euclidean,test,10 미적분1 / 02 함수의 연속성 / 01 함수의 연속성 / 05 연속성5 (구간정의함수),8,4,0.5,1.75,"1,7,14,47"
+type_euclidean,type,euclidean,test,10 미적분1 / 02 함수의 연속성 / 01 함수의 연속성 / 07 연속성7 (조건항등식),0,0,,,
+type_euclidean,type,euclidean,test,10 미적분1 / 02 함수의 연속성 / 03 사잇값 정리 / 02 사잇값 정리1 (기본),0,0,,,
+type_euclidean,type,euclidean,test,10 미적분1 / 03 미분계수와 도함수 / 01 미분계수 / 01 미분계수1 (평균변화율),0,0,,,
+type_euclidean,type,euclidean,test,10 미적분1 / 03 미분계수와 도함수 / 01 미분계수 / 02 미분계수2 (평균변화율과 미분계수),1,1,1.0,-0.0,37
+type_euclidean,type,euclidean,test,"10 미적분1 / 03 미분계수와 도함수 / 01 미분계수 / 04 미분계수4 (극한식의 해석, 무한소로 갈때)",1,1,1.0,-0.0,44
+type_euclidean,type,euclidean,test,10 미적분1 / 03 미분계수와 도함수 / 02 도함수의 정의와 미분법 공식 / 02 미분법 공식1 (공식과 미분계수),1,1,1.0,-0.0,36
+type_euclidean,type,euclidean,test,10 미적분1 / 03 미분계수와 도함수 / 02 도함수의 정의와 미분법 공식 / 05 미분법 공식4 (곱의 미분법),2,2,0.5,1.0,"54,63"
+type_euclidean,type,euclidean,test,"10 미적분1 / 03 미분계수와 도함수 / 02 도함수의 정의와 미분법 공식 / 06 미분법 공식5 (곱의 미분법, 극한식의 해석)",1,1,1.0,-0.0,54
+type_euclidean,type,euclidean,test,"10 미적분1 / 03 미분계수와 도함수 / 03 미분법 공식의 활용 / 01 활용1 (함수구하기, 인수정리)",0,0,,,
+type_euclidean,type,euclidean,test,"10 미적분1 / 03 미분계수와 도함수 / 03 미분법 공식의 활용 / 02 활용2 (함수구하기, 해석)",0,0,,,
+type_euclidean,type,euclidean,test,"10 미적분1 / 03 미분계수와 도함수 / 03 미분법 공식의 활용 / 07 활용7 (조건항등식, 미정계수법)",0,0,,,
+type_euclidean,type,euclidean,test,10 미적분1 / 03 미분계수와 도함수 / 04 미분가능성과 연속성 / 04 미분가능조건1 (구간정의함수),2,2,0.5,1.0,"7,14"
+type_euclidean,type,euclidean,test,10 미적분1 / 03 미분계수와 도함수 / 04 미분가능성과 연속성 / 06 미분가능조건3 (곱함수),0,0,,,
+type_euclidean,type,euclidean,test,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식 / 01 접점1 (접선의 방정식),1,1,1.0,-0.0,27
+type_euclidean,type,euclidean,test,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식 / 03 접점3 (해석),1,1,1.0,-0.0,61
+type_euclidean,type,euclidean,test,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식 / 04 기울기1 (접선의 방정식),0,0,,,
+type_euclidean,type,euclidean,test,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식 / 07 곡선 밖의 점1 (접선의 방정식),1,1,1.0,-0.0,46
+type_euclidean,type,euclidean,test,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식 / 08 곡선 밖의 점2 (접점의 좌표),0,0,,,
+type_euclidean,type,euclidean,test,10 미적분1 / 04 접선의 방정식 / 02 접선의 방정식의 활용 / 01 활용1 (접선과 교점의 관계),1,1,1.0,-0.0,24
+type_euclidean,type,euclidean,test,10 미적분1 / 04 접선의 방정식 / 02 접선의 방정식의 활용 / 05 활용5 (함수 구하기),1,1,1.0,-0.0,44
+type_euclidean,type,euclidean,test,10 미적분1 / 04 접선의 방정식 / 03 평균값의 정리 / 04 평균값의 정리3 (부등식의 해석),0,0,,,
+type_euclidean,type,euclidean,test,"10 미적분1 / 05 함수의 증가와 감소 / 01 함수의 증가와 감소 / 03 증가와 감소3 (삼차함수와 조건해석, 실수 전체)",0,0,,,
+type_euclidean,type,euclidean,test,10 미적분1 / 05 함수의 증가와 감소 / 02 함수의 극대와 극소 / 02 극대와 극소2 (삼차함수의 극대와 극소),7,5,0.2857142857142857,2.2359263506290326,"36,37,46,65,68"
+type_euclidean,type,euclidean,test,10 미적분1 / 05 함수의 증가와 감소 / 02 함수의 극대와 극소 / 03 극대와 극소3 (사차함수의 극대와 극소),0,0,,,
+type_euclidean,type,euclidean,test,10 미적분1 / 05 함수의 증가와 감소 / 02 함수의 극대와 극소 / 07 극대와 극소7 (곱함수와 뺀함수),0,0,,,
+type_euclidean,type,euclidean,test,10 미적분1 / 05 함수의 증가와 감소 / 03 증가감소와 극대극소의 활용 / 04 활용4 (절댓값함수),0,0,,,
+type_euclidean,type,euclidean,test,10 미적분1 / 05 함수의 증가와 감소 / 04 함수의 최대와 최소 / 03 최대와 최소3 (Mm 조건 해석),2,2,0.5,1.0,"37,46"
+type_euclidean,type,euclidean,test,10 미적분1 / 06 방부등식과 직선운동 / 01 방정식과 미분 / 01 방정식과 미분1 (삼차방정식의 근의 판별),1,1,1.0,-0.0,68
+type_euclidean,type,euclidean,test,10 미적분1 / 06 방부등식과 직선운동 / 01 방정식과 미분 / 02 방정식과 미분2 (삼차방정식의 실근의 범위),1,1,1.0,-0.0,57
+type_euclidean,type,euclidean,test,10 미적분1 / 06 방부등식과 직선운동 / 01 방정식과 미분 / 03 방정식과 미분3 (사차방정식의 근의 판별),0,0,,,
+type_euclidean,type,euclidean,test,"10 미적분1 / 06 방부등식과 직선운동 / 01 방정식과 미분 / 04 방정식과 미분4 (다항함수, 방정식의 동치변형)",1,1,1.0,-0.0,32
+type_euclidean,type,euclidean,test,10 미적분1 / 06 방부등식과 직선운동 / 02 부등식과 미분 / 01 부등식과 미분1 (모든 실수),1,1,1.0,-0.0,57
+type_euclidean,type,euclidean,test,10 미적분1 / 06 방부등식과 직선운동 / 02 부등식과 미분 / 02 부등식과 미분2 (제한범위),0,0,,,
+type_euclidean,type,euclidean,test,10 미적분1 / 06 방부등식과 직선운동 / 02 부등식과 미분 / 03 부등식과 미분3 (부등식의 동치변형),1,1,1.0,-0.0,68
+type_euclidean,type,euclidean,test,10 미적분1 / 06 방부등식과 직선운동 / 02 부등식과 미분 / 05 부등식과 미분5 (함수 구하기),0,0,,,
+type_euclidean,type,euclidean,test,"10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분 / 02 속도와 가속도의 해석1 (주어진 위치함수)",1,1,1.0,-0.0,59
+type_euclidean,type,euclidean,test,"10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분 / 03 속도와 가속도의 해석2 (위치함수 구하기)",0,0,,,
+type_euclidean,type,euclidean,test,"10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분 / 04 속도와 가속도의 해석3 (두 물체 사이의 거리조건)",0,0,,,
+type_euclidean,type,euclidean,test,"10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분 / 05 속도와 가속도의 해석4 (운동방향)",1,1,1.0,-0.0,35
+type_spherical,type,spherical,train,09 대수 / 05 삼각함수의 정의 / 01 일반각과 호도법 / 03 일반각과 호도법3 (두 동경의 위치관계),1,1,1.0,-0.0,21
+type_spherical,type,spherical,train,09 대수 / 05 삼각함수의 정의 / 01 일반각과 호도법 / 08 일반각과 호도법8 (추론과 해석),1,1,1.0,-0.0,26
+type_spherical,type,spherical,train,09 대수 / 05 삼각함수의 정의 / 02 삼각함수의 정의 및 활용 / 01 정의1 (삼각함수의 뜻),3,1,1.0,-0.0,21
+type_spherical,type,spherical,train,09 대수 / 05 삼각함수의 정의 / 02 삼각함수의 정의 및 활용 / 03 정의3 (부호와 함수변형규칙),1,1,1.0,-0.0,26
+type_spherical,type,spherical,train,09 대수 / 05 삼각함수의 정의 / 02 삼각함수의 정의 및 활용 / 06 정의6 (삼각함수 사이의 관계. 값 구하기),8,4,0.375,1.9056390622295665,"17,22,33,41"
+type_spherical,type,spherical,train,09 대수 / 05 삼각함수의 정의 / 02 삼각함수의 정의 및 활용 / 09 활용3 (삼각함수 사이의 관계),2,2,0.5,1.0,"10,39"
+type_spherical,type,spherical,train,09 대수 / 06 삼각함수의 그래프 / 01 삼각함수의 그래프 / 01 그래프1 (주기),3,3,0.3333333333333333,1.584962500721156,"19,27,31"
+type_spherical,type,spherical,train,09 대수 / 06 삼각함수의 그래프 / 01 삼각함수의 그래프 / 03 그래프3 (평행이동과 대칭이동),1,1,1.0,-0.0,52
+type_spherical,type,spherical,train,09 대수 / 06 삼각함수의 그래프 / 01 삼각함수의 그래프 / 04 그래프4 (표준형 그래프에서 Mm),12,10,0.25,3.188721875540867,"3,11,16,18,24,34,55,56,60,66"
+type_spherical,type,spherical,train,09 대수 / 06 삼각함수의 그래프 / 02 삼각함수의 그래프 활용 / 01 각 변형1 (각 변형 규칙),13,9,0.23076923076923078,3.0269868333592873,"8,10,17,22,30,33,39,53,60"
+type_spherical,type,spherical,train,09 대수 / 06 삼각함수의 그래프 / 02 삼각함수의 그래프 활용 / 03 각 변형3 (각 변형 규칙의 활용),1,1,1.0,-0.0,21
+type_spherical,type,spherical,train,09 대수 / 06 삼각함수의 그래프 / 02 삼각함수의 그래프 활용 / 05 활용2 (그래프의 활용),1,1,1.0,-0.0,21
+type_spherical,type,spherical,train,09 대수 / 06 삼각함수의 그래프 / 02 삼각함수의 그래프 활용 / 06 활용3 (치환을 이용한 Mm),3,3,0.3333333333333333,1.584962500721156,"14,20,27"
+type_spherical,type,spherical,train,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 01 삼각방정식1 (일차식꼴),1,1,1.0,-0.0,60
+type_spherical,type,spherical,train,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 02 삼각방정식2 (이차식꼴),5,3,0.6,1.3709505944546687,"28,50,60"
+type_spherical,type,spherical,train,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 03 삼각방정식3 (교점),1,1,1.0,-0.0,58
+type_spherical,type,spherical,train,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 04 삼각방정식4 (대칭성과 실근),13,8,0.46153846153846156,2.5073801024236357,"4,12,16,40,42,50,60,64"
+type_spherical,type,spherical,train,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 05 삼각방정식5 (실근의 개수),8,5,0.375,2.1556390622295662,"3,4,16,36,45"
+type_spherical,type,spherical,train,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 06 삼각부등식1 (일차식꼴),4,3,0.5,1.5,"32,42,50"
+type_spherical,type,spherical,train,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 07 삼각부등식2 (이차식꼴),2,2,0.5,1.0,"0,27"
+type_spherical,type,spherical,train,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 08 방부등식의 활용1 (이차함수의 활용),1,1,1.0,-0.0,41
+type_spherical,type,spherical,train,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 09 방부등식의 활용2 (부등식의 성립조건),1,1,1.0,-0.0,67
+type_spherical,type,spherical,train,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 11 방부등식의 활용4 (추론과 해석),1,1,1.0,-0.0,42
+type_spherical,type,spherical,train,10 미적분1 / 01 함수의 극한 / 01 좌극한과 우극한 / 07 좌극한과 우극한7 (추론),1,1,1.0,-0.0,29
+type_spherical,type,spherical,train,10 미적분1 / 01 함수의 극한 / 02 극한의 성질과 계산 / 01 극한의 성질을 이용한 연산,1,1,1.0,-0.0,29
+type_spherical,type,spherical,train,10 미적분1 / 01 함수의 극한 / 02 극한의 성질과 계산 / 07 부정형6 (함수의 극한의 대소 관계),2,1,1.0,-0.0,1
+type_spherical,type,spherical,train,10 미적분1 / 01 함수의 극한 / 02 극한의 성질과 계산 / 08 부정형7 (부정형과 극한의 성질),1,1,1.0,-0.0,29
+type_spherical,type,spherical,train,10 미적분1 / 01 함수의 극한 / 03 극한식의 해석 / 03 해석3 (함수 구하기. 차수 결정),4,3,0.5,1.5,"1,20,29"
+type_spherical,type,spherical,train,10 미적분1 / 01 함수의 극한 / 03 극한식의 해석 / 04 해석4 (함수 구하기. 인수정리),2,2,0.5,1.0,"29,65"
+type_spherical,type,spherical,train,"10 미적분1 / 01 함수의 극한 / 04 극한의 활용 / 01 활용1 (좌표와 길이, 넓이)",1,1,1.0,-0.0,13
+type_spherical,type,spherical,train,10 미적분1 / 02 함수의 연속성 / 01 함수의 연속성 / 05 연속성5 (구간정의함수),16,6,0.5,2.077819531114783,"7,14,38,47,48,62"
+type_spherical,type,spherical,train,10 미적분1 / 02 함수의 연속성 / 01 함수의 연속성 / 07 연속성7 (조건항등식),1,1,1.0,-0.0,6
+type_spherical,type,spherical,train,10 미적분1 / 02 함수의 연속성 / 03 사잇값 정리 / 02 사잇값 정리1 (기본),1,1,1.0,-0.0,9
+type_spherical,type,spherical,train,10 미적분1 / 03 미분계수와 도함수 / 01 미분계수 / 01 미분계수1 (평균변화율),1,1,1.0,-0.0,1
+type_spherical,type,spherical,train,10 미적분1 / 03 미분계수와 도함수 / 01 미분계수 / 02 미분계수2 (평균변화율과 미분계수),2,1,1.0,-0.0,44
+type_spherical,type,spherical,train,"10 미적분1 / 03 미분계수와 도함수 / 01 미분계수 / 04 미분계수4 (극한식의 해석, 무한소로 갈때)",1,1,1.0,-0.0,20
+type_spherical,type,spherical,train,10 미적분1 / 03 미분계수와 도함수 / 02 도함수의 정의와 미분법 공식 / 02 미분법 공식1 (공식과 미분계수),2,2,0.5,1.0,"23,65"
+type_spherical,type,spherical,train,10 미적분1 / 03 미분계수와 도함수 / 02 도함수의 정의와 미분법 공식 / 05 미분법 공식4 (곱의 미분법),5,3,0.4,1.5219280948873621,"43,54,63"
+type_spherical,type,spherical,train,"10 미적분1 / 03 미분계수와 도함수 / 02 도함수의 정의와 미분법 공식 / 06 미분법 공식5 (곱의 미분법, 극한식의 해석)",2,2,0.5,1.0,"29,61"
+type_spherical,type,spherical,train,"10 미적분1 / 03 미분계수와 도함수 / 03 미분법 공식의 활용 / 01 활용1 (함수구하기, 인수정리)",1,1,1.0,-0.0,44
+type_spherical,type,spherical,train,"10 미적분1 / 03 미분계수와 도함수 / 03 미분법 공식의 활용 / 02 활용2 (함수구하기, 해석)",1,1,1.0,-0.0,61
+type_spherical,type,spherical,train,"10 미적분1 / 03 미분계수와 도함수 / 03 미분법 공식의 활용 / 07 활용7 (조건항등식, 미정계수법)",1,1,1.0,-0.0,9
+type_spherical,type,spherical,train,10 미적분1 / 03 미분계수와 도함수 / 04 미분가능성과 연속성 / 04 미분가능조건1 (구간정의함수),2,1,1.0,-0.0,14
+type_spherical,type,spherical,train,10 미적분1 / 03 미분계수와 도함수 / 04 미분가능성과 연속성 / 06 미분가능조건3 (곱함수),1,1,1.0,-0.0,31
+type_spherical,type,spherical,train,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식 / 01 접점1 (접선의 방정식),3,2,0.6666666666666666,0.9182958340544896,"21,23"
+type_spherical,type,spherical,train,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식 / 03 접점3 (해석),1,1,1.0,-0.0,54
+type_spherical,type,spherical,train,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식 / 04 기울기1 (접선의 방정식),1,1,1.0,-0.0,25
+type_spherical,type,spherical,train,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식 / 07 곡선 밖의 점1 (접선의 방정식),1,1,1.0,-0.0,32
+type_spherical,type,spherical,train,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식 / 08 곡선 밖의 점2 (접점의 좌표),1,1,1.0,-0.0,32
+type_spherical,type,spherical,train,10 미적분1 / 04 접선의 방정식 / 02 접선의 방정식의 활용 / 01 활용1 (접선과 교점의 관계),2,2,0.5,1.0,"51,68"
+type_spherical,type,spherical,train,10 미적분1 / 04 접선의 방정식 / 02 접선의 방정식의 활용 / 05 활용5 (함수 구하기),1,1,1.0,-0.0,54
+type_spherical,type,spherical,train,10 미적분1 / 04 접선의 방정식 / 03 평균값의 정리 / 04 평균값의 정리3 (부등식의 해석),1,1,1.0,-0.0,11
+type_spherical,type,spherical,train,"10 미적분1 / 05 함수의 증가와 감소 / 01 함수의 증가와 감소 / 03 증가와 감소3 (삼차함수와 조건해석, 실수 전체)",1,1,1.0,-0.0,67
+type_spherical,type,spherical,train,10 미적분1 / 05 함수의 증가와 감소 / 02 함수의 극대와 극소 / 02 극대와 극소2 (삼차함수의 극대와 극소),16,5,0.3125,2.1800365325772657,"20,36,37,40,65"
+type_spherical,type,spherical,train,10 미적분1 / 05 함수의 증가와 감소 / 02 함수의 극대와 극소 / 03 극대와 극소3 (사차함수의 극대와 극소),1,1,1.0,-0.0,36
+type_spherical,type,spherical,train,10 미적분1 / 05 함수의 증가와 감소 / 02 함수의 극대와 극소 / 07 극대와 극소7 (곱함수와 뺀함수),1,1,1.0,-0.0,63
+type_spherical,type,spherical,train,10 미적분1 / 05 함수의 증가와 감소 / 03 증가감소와 극대극소의 활용 / 04 활용4 (절댓값함수),1,1,1.0,-0.0,6
+type_spherical,type,spherical,train,10 미적분1 / 05 함수의 증가와 감소 / 04 함수의 최대와 최소 / 03 최대와 최소3 (Mm 조건 해석),2,2,0.5,1.0,"5,46"
+type_spherical,type,spherical,train,10 미적분1 / 06 방부등식과 직선운동 / 01 방정식과 미분 / 01 방정식과 미분1 (삼차방정식의 근의 판별),1,1,1.0,-0.0,57
+type_spherical,type,spherical,train,10 미적분1 / 06 방부등식과 직선운동 / 01 방정식과 미분 / 02 방정식과 미분2 (삼차방정식의 실근의 범위),1,1,1.0,-0.0,57
+type_spherical,type,spherical,train,10 미적분1 / 06 방부등식과 직선운동 / 01 방정식과 미분 / 03 방정식과 미분3 (사차방정식의 근의 판별),1,1,1.0,-0.0,57
+type_spherical,type,spherical,train,"10 미적분1 / 06 방부등식과 직선운동 / 01 방정식과 미분 / 04 방정식과 미분4 (다항함수, 방정식의 동치변형)",1,1,1.0,-0.0,25
+type_spherical,type,spherical,train,10 미적분1 / 06 방부등식과 직선운동 / 02 부등식과 미분 / 01 부등식과 미분1 (모든 실수),1,1,1.0,-0.0,2
+type_spherical,type,spherical,train,10 미적분1 / 06 방부등식과 직선운동 / 02 부등식과 미분 / 02 부등식과 미분2 (제한범위),1,1,1.0,-0.0,49
+type_spherical,type,spherical,train,10 미적분1 / 06 방부등식과 직선운동 / 02 부등식과 미분 / 03 부등식과 미분3 (부등식의 동치변형),1,1,1.0,-0.0,1
+type_spherical,type,spherical,train,10 미적분1 / 06 방부등식과 직선운동 / 02 부등식과 미분 / 05 부등식과 미분5 (함수 구하기),1,1,1.0,-0.0,66
+type_spherical,type,spherical,train,"10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분 / 02 속도와 가속도의 해석1 (주어진 위치함수)",3,1,1.0,-0.0,59
+type_spherical,type,spherical,train,"10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분 / 03 속도와 가속도의 해석2 (위치함수 구하기)",1,1,1.0,-0.0,35
+type_spherical,type,spherical,train,"10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분 / 04 속도와 가속도의 해석3 (두 물체 사이의 거리조건)",1,1,1.0,-0.0,15
+type_spherical,type,spherical,train,"10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분 / 05 속도와 가속도의 해석4 (운동방향)",3,2,0.6666666666666666,0.9182958340544896,"35,69"
+type_spherical,type,spherical,test,09 대수 / 05 삼각함수의 정의 / 01 일반각과 호도법 / 03 일반각과 호도법3 (두 동경의 위치관계),0,0,,,
+type_spherical,type,spherical,test,09 대수 / 05 삼각함수의 정의 / 01 일반각과 호도법 / 08 일반각과 호도법8 (추론과 해석),0,0,,,
+type_spherical,type,spherical,test,09 대수 / 05 삼각함수의 정의 / 02 삼각함수의 정의 및 활용 / 01 정의1 (삼각함수의 뜻),1,1,1.0,-0.0,21
+type_spherical,type,spherical,test,09 대수 / 05 삼각함수의 정의 / 02 삼각함수의 정의 및 활용 / 03 정의3 (부호와 함수변형규칙),0,0,,,
+type_spherical,type,spherical,test,09 대수 / 05 삼각함수의 정의 / 02 삼각함수의 정의 및 활용 / 06 정의6 (삼각함수 사이의 관계. 값 구하기),4,3,0.5,1.5,"17,21,33"
+type_spherical,type,spherical,test,09 대수 / 05 삼각함수의 정의 / 02 삼각함수의 정의 및 활용 / 09 활용3 (삼각함수 사이의 관계),2,2,0.5,1.0,"25,60"
+type_spherical,type,spherical,test,09 대수 / 06 삼각함수의 그래프 / 01 삼각함수의 그래프 / 01 그래프1 (주기),1,1,1.0,-0.0,65
+type_spherical,type,spherical,test,09 대수 / 06 삼각함수의 그래프 / 01 삼각함수의 그래프 / 03 그래프3 (평행이동과 대칭이동),0,0,,,
+type_spherical,type,spherical,test,09 대수 / 06 삼각함수의 그래프 / 01 삼각함수의 그래프 / 04 그래프4 (표준형 그래프에서 Mm),5,5,0.2,2.321928094887362,"6,16,55,56,65"
+type_spherical,type,spherical,test,09 대수 / 06 삼각함수의 그래프 / 02 삼각함수의 그래프 활용 / 01 각 변형1 (각 변형 규칙),6,4,0.5,1.792481250360578,"17,22,33,60"
+type_spherical,type,spherical,test,09 대수 / 06 삼각함수의 그래프 / 02 삼각함수의 그래프 활용 / 03 각 변형3 (각 변형 규칙의 활용),1,1,1.0,-0.0,21
+type_spherical,type,spherical,test,09 대수 / 06 삼각함수의 그래프 / 02 삼각함수의 그래프 활용 / 05 활용2 (그래프의 활용),0,0,,,
+type_spherical,type,spherical,test,09 대수 / 06 삼각함수의 그래프 / 02 삼각함수의 그래프 활용 / 06 활용3 (치환을 이용한 Mm),1,1,1.0,-0.0,64
+type_spherical,type,spherical,test,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 01 삼각방정식1 (일차식꼴),1,1,1.0,-0.0,50
+type_spherical,type,spherical,test,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 02 삼각방정식2 (이차식꼴),2,1,1.0,-0.0,50
+type_spherical,type,spherical,test,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 03 삼각방정식3 (교점),1,1,1.0,-0.0,50
+type_spherical,type,spherical,test,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 04 삼각방정식4 (대칭성과 실근),6,4,0.3333333333333333,1.9182958340544896,"21,42,50,65"
+type_spherical,type,spherical,test,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 05 삼각방정식5 (실근의 개수),3,3,0.3333333333333333,1.584962500721156,"16,57,68"
+type_spherical,type,spherical,test,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 06 삼각부등식1 (일차식꼴),1,1,1.0,-0.0,0
+type_spherical,type,spherical,test,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 07 삼각부등식2 (이차식꼴),1,1,1.0,-0.0,29
+type_spherical,type,spherical,test,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 08 방부등식의 활용1 (이차함수의 활용),1,1,1.0,-0.0,42
+type_spherical,type,spherical,test,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 09 방부등식의 활용2 (부등식의 성립조건),1,1,1.0,-0.0,39
+type_spherical,type,spherical,test,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식 / 11 방부등식의 활용4 (추론과 해석),0,0,,,
+type_spherical,type,spherical,test,10 미적분1 / 01 함수의 극한 / 01 좌극한과 우극한 / 07 좌극한과 우극한7 (추론),0,0,,,
+type_spherical,type,spherical,test,10 미적분1 / 01 함수의 극한 / 02 극한의 성질과 계산 / 01 극한의 성질을 이용한 연산,0,0,,,
+type_spherical,type,spherical,test,10 미적분1 / 01 함수의 극한 / 02 극한의 성질과 계산 / 07 부정형6 (함수의 극한의 대소 관계),1,1,1.0,-0.0,61
+type_spherical,type,spherical,test,10 미적분1 / 01 함수의 극한 / 02 극한의 성질과 계산 / 08 부정형7 (부정형과 극한의 성질),1,1,1.0,-0.0,61
+type_spherical,type,spherical,test,10 미적분1 / 01 함수의 극한 / 03 극한식의 해석 / 03 해석3 (함수 구하기. 차수 결정),2,2,0.5,1.0,"1,29"
+type_spherical,type,spherical,test,10 미적분1 / 01 함수의 극한 / 03 극한식의 해석 / 04 해석4 (함수 구하기. 인수정리),1,1,1.0,-0.0,29
+type_spherical,type,spherical,test,"10 미적분1 / 01 함수의 극한 / 04 극한의 활용 / 01 활용1 (좌표와 길이, 넓이)",0,0,,,
+type_spherical,type,spherical,test,10 미적분1 / 02 함수의 연속성 / 01 함수의 연속성 / 05 연속성5 (구간정의함수),8,4,0.5,1.75,"7,14,27,47"
+type_spherical,type,spherical,test,10 미적분1 / 02 함수의 연속성 / 01 함수의 연속성 / 07 연속성7 (조건항등식),0,0,,,
+type_spherical,type,spherical,test,10 미적분1 / 02 함수의 연속성 / 03 사잇값 정리 / 02 사잇값 정리1 (기본),0,0,,,
+type_spherical,type,spherical,test,10 미적분1 / 03 미분계수와 도함수 / 01 미분계수 / 01 미분계수1 (평균변화율),0,0,,,
+type_spherical,type,spherical,test,10 미적분1 / 03 미분계수와 도함수 / 01 미분계수 / 02 미분계수2 (평균변화율과 미분계수),1,1,1.0,-0.0,36
+type_spherical,type,spherical,test,"10 미적분1 / 03 미분계수와 도함수 / 01 미분계수 / 04 미분계수4 (극한식의 해석, 무한소로 갈때)",1,1,1.0,-0.0,20
+type_spherical,type,spherical,test,10 미적분1 / 03 미분계수와 도함수 / 02 도함수의 정의와 미분법 공식 / 02 미분법 공식1 (공식과 미분계수),1,1,1.0,-0.0,36
+type_spherical,type,spherical,test,10 미적분1 / 03 미분계수와 도함수 / 02 도함수의 정의와 미분법 공식 / 05 미분법 공식4 (곱의 미분법),2,2,0.5,1.0,"54,63"
+type_spherical,type,spherical,test,"10 미적분1 / 03 미분계수와 도함수 / 02 도함수의 정의와 미분법 공식 / 06 미분법 공식5 (곱의 미분법, 극한식의 해석)",1,1,1.0,-0.0,29
+type_spherical,type,spherical,test,"10 미적분1 / 03 미분계수와 도함수 / 03 미분법 공식의 활용 / 01 활용1 (함수구하기, 인수정리)",0,0,,,
+type_spherical,type,spherical,test,"10 미적분1 / 03 미분계수와 도함수 / 03 미분법 공식의 활용 / 02 활용2 (함수구하기, 해석)",0,0,,,
+type_spherical,type,spherical,test,"10 미적분1 / 03 미분계수와 도함수 / 03 미분법 공식의 활용 / 07 활용7 (조건항등식, 미정계수법)",0,0,,,
+type_spherical,type,spherical,test,10 미적분1 / 03 미분계수와 도함수 / 04 미분가능성과 연속성 / 04 미분가능조건1 (구간정의함수),2,2,0.5,1.0,"7,14"
+type_spherical,type,spherical,test,10 미적분1 / 03 미분계수와 도함수 / 04 미분가능성과 연속성 / 06 미분가능조건3 (곱함수),0,0,,,
+type_spherical,type,spherical,test,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식 / 01 접점1 (접선의 방정식),1,1,1.0,-0.0,27
+type_spherical,type,spherical,test,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식 / 03 접점3 (해석),1,1,1.0,-0.0,61
+type_spherical,type,spherical,test,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식 / 04 기울기1 (접선의 방정식),0,0,,,
+type_spherical,type,spherical,test,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식 / 07 곡선 밖의 점1 (접선의 방정식),1,1,1.0,-0.0,23
+type_spherical,type,spherical,test,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식 / 08 곡선 밖의 점2 (접점의 좌표),0,0,,,
+type_spherical,type,spherical,test,10 미적분1 / 04 접선의 방정식 / 02 접선의 방정식의 활용 / 01 활용1 (접선과 교점의 관계),1,1,1.0,-0.0,68
+type_spherical,type,spherical,test,10 미적분1 / 04 접선의 방정식 / 02 접선의 방정식의 활용 / 05 활용5 (함수 구하기),1,1,1.0,-0.0,44
+type_spherical,type,spherical,test,10 미적분1 / 04 접선의 방정식 / 03 평균값의 정리 / 04 평균값의 정리3 (부등식의 해석),0,0,,,
+type_spherical,type,spherical,test,"10 미적분1 / 05 함수의 증가와 감소 / 01 함수의 증가와 감소 / 03 증가와 감소3 (삼차함수와 조건해석, 실수 전체)",0,0,,,
+type_spherical,type,spherical,test,10 미적분1 / 05 함수의 증가와 감소 / 02 함수의 극대와 극소 / 02 극대와 극소2 (삼차함수의 극대와 극소),7,5,0.2857142857142857,2.2359263506290326,"36,37,40,46,65"
+type_spherical,type,spherical,test,10 미적분1 / 05 함수의 증가와 감소 / 02 함수의 극대와 극소 / 03 극대와 극소3 (사차함수의 극대와 극소),0,0,,,
+type_spherical,type,spherical,test,10 미적분1 / 05 함수의 증가와 감소 / 02 함수의 극대와 극소 / 07 극대와 극소7 (곱함수와 뺀함수),0,0,,,
+type_spherical,type,spherical,test,10 미적분1 / 05 함수의 증가와 감소 / 03 증가감소와 극대극소의 활용 / 04 활용4 (절댓값함수),0,0,,,
+type_spherical,type,spherical,test,10 미적분1 / 05 함수의 증가와 감소 / 04 함수의 최대와 최소 / 03 최대와 최소3 (Mm 조건 해석),2,2,0.5,1.0,"37,46"
+type_spherical,type,spherical,test,10 미적분1 / 06 방부등식과 직선운동 / 01 방정식과 미분 / 01 방정식과 미분1 (삼차방정식의 근의 판별),1,1,1.0,-0.0,20
+type_spherical,type,spherical,test,10 미적분1 / 06 방부등식과 직선운동 / 01 방정식과 미분 / 02 방정식과 미분2 (삼차방정식의 실근의 범위),1,1,1.0,-0.0,57
+type_spherical,type,spherical,test,10 미적분1 / 06 방부등식과 직선운동 / 01 방정식과 미분 / 03 방정식과 미분3 (사차방정식의 근의 판별),0,0,,,
+type_spherical,type,spherical,test,"10 미적분1 / 06 방부등식과 직선운동 / 01 방정식과 미분 / 04 방정식과 미분4 (다항함수, 방정식의 동치변형)",1,1,1.0,-0.0,21
+type_spherical,type,spherical,test,10 미적분1 / 06 방부등식과 직선운동 / 02 부등식과 미분 / 01 부등식과 미분1 (모든 실수),1,1,1.0,-0.0,2
+type_spherical,type,spherical,test,10 미적분1 / 06 방부등식과 직선운동 / 02 부등식과 미분 / 02 부등식과 미분2 (제한범위),0,0,,,
+type_spherical,type,spherical,test,10 미적분1 / 06 방부등식과 직선운동 / 02 부등식과 미분 / 03 부등식과 미분3 (부등식의 동치변형),1,1,1.0,-0.0,40
+type_spherical,type,spherical,test,10 미적분1 / 06 방부등식과 직선운동 / 02 부등식과 미분 / 05 부등식과 미분5 (함수 구하기),0,0,,,
+type_spherical,type,spherical,test,"10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분 / 02 속도와 가속도의 해석1 (주어진 위치함수)",1,1,1.0,-0.0,59
+type_spherical,type,spherical,test,"10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분 / 03 속도와 가속도의 해석2 (위치함수 구하기)",0,0,,,
+type_spherical,type,spherical,test,"10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분 / 04 속도와 가속도의 해석3 (두 물체 사이의 거리조건)",0,0,,,
+type_spherical,type,spherical,test,"10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분 / 05 속도와 가속도의 해석4 (운동방향)",1,1,1.0,-0.0,69

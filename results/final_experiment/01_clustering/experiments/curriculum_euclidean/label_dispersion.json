@@ -1,0 +1,50 @@
+[
+  {
+    "experiment": "curriculum_euclidean",
+    "level": "curriculum",
+    "method": "euclidean",
+    "split": "train",
+    "actual_label": "09 대수",
+    "n": 87,
+    "occupied_clusters": 2,
+    "largest_cluster_share": 0.5517241379310345,
+    "cluster_entropy_bits": 0.9922666387194963,
+    "cluster_ids": "0,1"
+  },
+  {
+    "experiment": "curriculum_euclidean",
+    "level": "curriculum",
+    "method": "euclidean",
+    "split": "train",
+    "actual_label": "10 미적분1",
+    "n": 98,
+    "occupied_clusters": 2,
+    "largest_cluster_share": 0.8469387755102041,
+    "cluster_entropy_bits": 0.617448295789468,
+    "cluster_ids": "0,1"
+  },
+  {
+    "experiment": "curriculum_euclidean",
+    "level": "curriculum",
+    "method": "euclidean",
+    "split": "test",
+    "actual_label": "09 대수",
+    "n": 38,
+    "occupied_clusters": 2,
+    "largest_cluster_share": 0.6052631578947368,
+    "cluster_entropy_bits": 0.9677884628267678,
+    "cluster_ids": "0,1"
+  },
+  {
+    "experiment": "curriculum_euclidean",
+    "level": "curriculum",
+    "method": "euclidean",
+    "split": "test",
+    "actual_label": "10 미적분1",
+    "n": 42,
+    "occupied_clusters": 2,
+    "largest_cluster_share": 0.9047619047619048,
+    "cluster_entropy_bits": 0.4537163391869448,
+    "cluster_ids": "0,1"
+  }
+]

@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "experiment": "curriculum_euclidean",
+      "model_reassignment_matches": true,
+      "training_only_majority_matches": true,
+      "cross_tables_match_members": true
+    },
+    {
+      "experiment": "curriculum_spherical",
+      "model_reassignment_matches": true,
+      "training_only_majority_matches": true,
+      "cross_tables_match_members": true
+    },
+    {
+      "experiment": "unit_euclidean",
+      "model_reassignment_matches": true,
+      "training_only_majority_matches": true,
+      "cross_tables_match_members": true
+    },
+    {
+      "experiment": "unit_spherical",
+      "model_reassignment_matches": true,
+      "training_only_majority_matches": true,
+      "cross_tables_match_members": true
+    },
+    {
+      "experiment": "subunit_euclidean",
+      "model_reassignment_matches": true,
+      "training_only_majority_matches": true,
+      "cross_tables_match_members": true
+    },
+    {
+      "experiment": "subunit_spherical",
+      "model_reassignment_matches": true,
+      "training_only_majority_matches": true,
+      "cross_tables_match_members": true
+    },
+    {
+      "experiment": "type_euclidean",
+      "model_reassignment_matches": true,
+      "training_only_majority_matches": true,
+      "cross_tables_match_members": true
+    },
+    {
+      "experiment": "type_spherical",
+      "model_reassignment_matches": true,
+      "training_only_majority_matches": true,
+      "cross_tables_match_members": true
+    }
+  ],
+  "legacy_model_equivalence": [
+    {
+      "experiment": "curriculum_euclidean",
+      "legacy_model_path": "results/model_comparison_2026-11-07/models/kmeans_k2_model.pt",
+      "legacy_model_sha256": "0e992990e51f54a502d9f851662c0f912115de2f84f6b0f855622e607f186ecf",
+      "same_generation": true,
+      "same_train_ids": true,
+      "same_vocabulary": true,
+      "centers_exactly_equal": true,
+      "reused_without_refitting_in_this_execution": false
+    },
+    {
+      "experiment": "unit_euclidean",
+      "legacy_model_path": "results/model_comparison_2026-11-07/models/kmeans_k8_model.pt",
+      "legacy_model_sha256": "1b5d0ceb8834cc4e76efc536b6ebd5be62c220239c69ba85ea3d578b08a2b579",
+      "same_generation": true,
+      "same_train_ids": true,
+      "same_vocabulary": true,
+      "centers_exactly_equal": true,
+      "reused_without_refitting_in_this_execution": false
+    },
+    {
+      "experiment": "type_euclidean",
+      "legacy_model_path": "results/model_comparison_2026-11-07/models/kmeans_k70_model.pt",
+      "legacy_model_sha256": "892dd7322fc3cb68922674c80044675b648a49e622f09d63dbee61adbb77ec47",
+      "same_generation": true,
+      "same_train_ids": true,
+      "same_vocabulary": true,
+      "centers_exactly_equal": true,
+      "reused_without_refitting_in_this_execution": false
+    }
+  ],
+  "legacy_note": "유클리드 k=2/8/70은 새 구면 비교 구현의 공통 조건을 확인하는 검증 실행에서 재계산했다. 기존 중심과의 정확 일치 여부를 기록하며 단순 재사용으로 보고하지 않는다. 완료 후 동일 설정 재실행은 manifest 해시를 검사해 재학습 없이 반환한다."
+}

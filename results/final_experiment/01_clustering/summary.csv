@@ -1,0 +1,17 @@
+﻿experiment,level,level_name,method,method_name,split,k,all_label_count,train_label_count,test_label_count,ari,nmi,train_majority_accuracy,occupied_clusters,n,selected_seed,training_objective_name,selected_training_objective
+curriculum_euclidean,curriculum,과목,euclidean,유클리드,train,2,2,2,2,0.09711371173692293,0.08288381804546607,0.6594594594594595,2,185,42,inertia,26746.49609375
+curriculum_euclidean,curriculum,과목,euclidean,유클리드,test,2,2,2,2,0.09674104802935198,0.10391804184415976,0.6625,2,80,42,inertia,26746.49609375
+curriculum_spherical,curriculum,과목,spherical,코사인(구면),train,2,2,2,2,0.4105770954150123,0.3380404420818621,0.8216216216216217,2,185,42,cosine_loss,31.785324096679688
+curriculum_spherical,curriculum,과목,spherical,코사인(구면),test,2,2,2,2,0.24040896125124195,0.18949631252336155,0.75,2,80,42,cosine_loss,31.785324096679688
+unit_euclidean,unit,단원,euclidean,유클리드,train,8,8,8,8,0.20572478595959134,0.40660762305787007,0.5621621621621622,8,185,42,inertia,15889.08984375
+unit_euclidean,unit,단원,euclidean,유클리드,test,8,8,8,8,0.1479411620700991,0.40100694984519425,0.525,8,80,42,inertia,15889.08984375
+unit_spherical,unit,단원,spherical,코사인(구면),train,8,8,8,8,0.2002924026077683,0.4237637753618132,0.5513513513513514,8,185,45,cosine_loss,21.38456153869629
+unit_spherical,unit,단원,spherical,코사인(구면),test,8,8,8,8,0.14697430080976098,0.42319546376927536,0.5,8,80,45,cosine_loss,21.38456153869629
+subunit_euclidean,subunit,세부단원,euclidean,유클리드,train,25,25,25,17,0.2502246252135582,0.6008193830109357,0.5945945945945946,25,185,42,inertia,10543.4794921875
+subunit_euclidean,subunit,세부단원,euclidean,유클리드,test,25,25,25,17,0.1932470981426988,0.5933653306865151,0.5,17,80,42,inertia,10543.4794921875
+subunit_spherical,subunit,세부단원,spherical,코사인(구면),train,25,25,25,17,0.25582184597723473,0.595763114128923,0.572972972972973,25,185,42,cosine_loss,15.065165519714355
+subunit_spherical,subunit,세부단원,spherical,코사인(구면),test,25,25,25,17,0.19715067075066317,0.6364667143422094,0.5125,20,80,42,cosine_loss,15.065165519714355
+type_euclidean,type,문제 유형,euclidean,유클리드,train,70,70,70,42,0.21700469836010405,0.7812760500116851,0.6324324324324324,70,185,42,inertia,5778.79833984375
+type_euclidean,type,문제 유형,euclidean,유클리드,test,70,70,70,42,0.16702660128560176,0.7803884557809391,0.3125,34,80,42,inertia,5778.79833984375
+type_spherical,type,문제 유형,spherical,코사인(구면),train,70,70,70,42,0.22262562340383352,0.7800988314045245,0.6486486486486487,70,185,42,cosine_loss,7.737277030944824
+type_spherical,type,문제 유형,spherical,코사인(구면),test,70,70,70,42,0.15073115860517436,0.7899546039321568,0.3875,37,80,42,cosine_loss,7.737277030944824

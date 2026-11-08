@@ -1,0 +1,61 @@
+{
+  "experiment": "four_hierarchy_euclidean_vs_spherical_v1",
+  "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+  "input_hashes": {
+    "data/processed/metadata.json": "cf68d42c52f247398b8a6b4e6d68fa669bed655f77120ebea3f4441ae6054000",
+    "data/processed/splits/train.json": "4ae0174a69a8b4d6ae698b445a30733e689fe1136be44bb23d656579782f49ff",
+    "data/processed/splits/test.json": "91bb385ac437d80d2b4c6a8a6940cdeef64c47907feab7f1998df09061b79c54",
+    "data/vectors/problems/vocabulary.json": "fd141aa650cc091b4d2f3ade55b7f94c85dce6f4cc9b27cb05b5959a179a798a",
+    "data/vectors/problems/train_vectors.json": "efadb158142d2fba520ca6729f1df6aeba740a29d826baf632740b3cf80ccce2",
+    "data/vectors/problems/test_vectors.json": "5c9f55772cabfa221c0c933261d0ca317cd4730f2bc18ba80dfde8d4180b5951"
+  },
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "max_iter": 100,
+  "tolerance": 0.0001,
+  "levels": {
+    "curriculum": [
+      "curriculum"
+    ],
+    "unit": [
+      "curriculum",
+      "unit"
+    ],
+    "subunit": [
+      "curriculum",
+      "unit",
+      "subunit"
+    ],
+    "type": [
+      "curriculum",
+      "unit",
+      "subunit",
+      "type"
+    ]
+  },
+  "fit_split": "train",
+  "majority_label_split": "train",
+  "training_count": 185,
+  "test_count": 80,
+  "input_vocabulary_size": 346,
+  "test_used_to_select_parameters": false,
+  "initialization": "same sorted unique raw rows and torch.randperm(seed) for both methods",
+  "selection": {
+    "euclidean": "minimum training squared Euclidean distance sum",
+    "spherical": "minimum training sum(1-cosine similarity)"
+  },
+  "transforms": {
+    "euclidean": "raw counts, arithmetic mean centers",
+    "spherical": "L2-normalized rows, normalized sum/mean centers after every update"
+  },
+  "zero_vector_policy": "L2 zero remains zero; all cosine similarities=0; ties choose lowest cluster ID",
+  "empty_cluster_policy": "reinitialize from training row farthest from its nearest center; spherical uses nonzero rows",
+  "label_majority_tie_rule": "label ascending lexical order",
+  "source_subject_warning": "subject is the source group, not course; actual course uses curriculum",
+  "torch_version": "2.15.0+cpu"
+}
