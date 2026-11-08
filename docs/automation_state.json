@@ -1,0 +1,16 @@
+{
+  "automation_id": "Automation_f0cb7c558034819182338a7e87790700",
+  "title": "MathHint 최종 정리 이어가기",
+  "is_enabled": true,
+  "schedule": "BEGIN:VEVENT\nDTSTART;TZID=Asia/Seoul:20261109T055850\nRRULE:FREQ=HOURLY;INTERVAL=5\nEND:VEVENT",
+  "timing_mode": "exact_schedule",
+  "default_timezone": "Asia/Seoul",
+  "first_run_from_saved_schedule": "2026-11-09T05:58:50+09:00",
+  "server_next_run_time": null,
+  "reset_time_available": false,
+  "environment_selection": "inherited",
+  "environment_confirmed_by_peek": true,
+  "expected_environment_id": "ccarenv_b64_Y2NhcmVudl81M2Y3MDM3YzM5OGM4MTkxYWM2MThhNzJmN2MzZDI4NA",
+  "spec_status": "AWAITING_USER_SPEC",
+  "execution_observed": false
+}
