@@ -1,20 +1,27 @@
 # MathHint 작업 진행 상태
 
-STATUS: VALIDATING_CLUSTERING_ADDITIONS
+STATUS: COMPLETE_CLUSTERING_ADDITIONS
 EXECUTION_ALLOWED: true
-LAST_CONFIRMED_PUBLISHED_COMMIT: 99222db98f95abd0f7e57112905832ff8808155c
+LAST_CONFIRMED_PUBLISHED_COMMIT: 895b288
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
 AUTOMATION_STATUS: PAUSED_AFTER_READER_WORKFLOW_COMPLETION_VERIFIED_BY_PEEK
 FIRST_RUN_FROM_SAVED_RULE: 2026-11-09T05:58:50+09:00
 RECURRENCE: EVERY_5_HOURS
 NEXT_RUN_TIME_SERVER_FIELD: NOT_RETURNED
 ENVIRONMENT: MathHint / inherited / current_environment_id_confirmed
-REMOTE_CHECKPOINT_STATUS: READER_WORKFLOW_IMPLEMENTATION_AND_RESULTS_PUBLISHED
+REMOTE_CHECKPOINT_STATUS: CLUSTERING_ADDITIONS_IMPLEMENTATION_AND_RESULTS_PUBLISHED
 GITHUB_PREAUTHORIZATION_SETTING: RESTORED_TO_ORIGINAL_INHERIT_VERIFIED
 TIMEZONE: Asia/Seoul
 USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 
-## 현재 추가 보완 상태
+## 현재 작업 완료 — 혼동행렬과 전체265 탐색
+
+- 기존test80 혼동행렬8개, 새full265 모델8개/40시드실행과43PNG를저장했다. 군집코드holdout/와full_dataset_265/를분리하고TorchKMeans는한곳에서공유한다.
+- 전체tests187/187·기존결과검사284/284·독립holdout8/full8의지표/CM/교차표/PCA검증PASS. 모든기존CSV/PNG/PT와data/회귀/Gemini/보존자료는바이트불변.
+- 기존추적2403개중2376개동일; 변경27개는요구된안내/코드이동/최소표시/무결성메타/진행기록만이다. 원래JSON의수치·배정필드는동일하고artifact_hashes만갱신했다.
+- 시작점: results/final_experiment/01_clustering/README.md → 기존A/전체B선택. 최종검증: full_dataset_265/validation.json. 자동화는기존중지상태false를peek로재확인했다. 추가API0·기존학습/군집재배정0.
+
+## 이전 읽기·연결 보완 상태
 
 | 우선순위 | 상태 | 실제 확인 내용 |
 |---|---|---|
@@ -298,3 +305,12 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 결과README2개/실험README8개링크추가. 재생성시새안내블록을보존하는작은표시helper와단위검사추가. 기존원문/API입력/응답/사용량/회귀/최종보고서는수정하지않았다.
 - 필수무결성메타만갱신: 8개experiment.json과metrics.json의artifact_hashes에서README해시/새CMPNG항목만변경. 원래metrics/config/documents/centers필드는완전동일. 상위manifest는원래항목중README9+메타9해시만갱신하고새CM8+검증1추가. 새full결과는자체manifest로분리했다.
 - 독립감사holdout8/full8의ARI/NMI/대표라벨/CM/교차표/모델배정/시드목적함수최소/PCA/비교표모두PASS. 기존중요2229파일SHA불변. 최종전체tests·모든링크·읽기화면·기존캐시검증/푸시까지아직진행중.
+
+## 혼동행렬·전체265 최종 검증 및 게시 — 2026-11-09T22:32:57.035937+00:00
+
+- 구현/모델/그림/문항/안내895b288을원격main에push exit0확인. 최종소스에서전체unittest187개PASS(9.200s,skip0). 기존VerifyResults284/284는validation쓰기만/tmp로가로채원래검증기록도그대로보존했다.
+- 기존FinalClustering명령과새holdout명령,full265 cache를fit/assign/회귀/SDK금지로실행하여모든기존/새결과SHA불변확인. 새검증보강후147파일의full cache도학습없이검증됐다. source5파일과TorchKMeans는기록된SHA그대로다.
+- 최종47Markdown/10684상대파일링크누락0,직전4526문항/군집anchor검증PASS. 실제혼동행렬·요약비교·교차표·구성비대표PNG를열어한글/축/숫자/범례/고해상도가독성확인했다. 전체이미지에대한사람의전수시각검사라고주장하지않는다.
+- 기존추적2403중2376파일바이트동일,기존모든CSV/PNG/PT/datavectors·회귀/Gemini/구931파일불변. 변경27경로는full validation의preservation.allowed_changed_files에기록. JSON은artifact_hashes만바뀌었고기존metrics/documents/config는완전동일이다.
+- 전체265의ARI/NMI는같은학습자료의탐색적일치도다. 보고서에기존test80과평가범위차이·NMI/큰k/표본수한계를명시했다. 성공유형8/8군집과혼합12문항10유형,동일삼각방정식19문항의12/13군집분산사례를원문으로연결했다.
+- 추가불용어/TF-IDF/신경망/회귀재학습/Gemini재실험없음. 미완료필수작업0. 마지막검증기록/문서커밋푸시확인후완료보고한다. 5시간복구예약은중지상태peek false로확인했으며새예약을만들지않았다.

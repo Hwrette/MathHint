@@ -97,5 +97,154 @@
     "test": 80
   },
   "labels_excluded_from_fit_features": true,
-  "test_generalization_claim": false
+  "test_generalization_claim": false,
+  "independent_audit": {
+    "verified_at": "2026-11-09T22:20:13.635724+00:00",
+    "holdout_experiments_verified": 8,
+    "holdout_matrices": [
+      {
+        "experiment": "curriculum_euclidean",
+        "n": 80,
+        "diagonal": 53,
+        "training_majority_independently_matches": true,
+        "sklearn_and_manual_cm_match": true
+      },
+      {
+        "experiment": "curriculum_spherical",
+        "n": 80,
+        "diagonal": 60,
+        "training_majority_independently_matches": true,
+        "sklearn_and_manual_cm_match": true
+      },
+      {
+        "experiment": "unit_euclidean",
+        "n": 80,
+        "diagonal": 42,
+        "training_majority_independently_matches": true,
+        "sklearn_and_manual_cm_match": true
+      },
+      {
+        "experiment": "unit_spherical",
+        "n": 80,
+        "diagonal": 40,
+        "training_majority_independently_matches": true,
+        "sklearn_and_manual_cm_match": true
+      },
+      {
+        "experiment": "subunit_euclidean",
+        "n": 80,
+        "diagonal": 40,
+        "training_majority_independently_matches": true,
+        "sklearn_and_manual_cm_match": true
+      },
+      {
+        "experiment": "subunit_spherical",
+        "n": 80,
+        "diagonal": 41,
+        "training_majority_independently_matches": true,
+        "sklearn_and_manual_cm_match": true
+      },
+      {
+        "experiment": "type_euclidean",
+        "n": 80,
+        "diagonal": 25,
+        "training_majority_independently_matches": true,
+        "sklearn_and_manual_cm_match": true
+      },
+      {
+        "experiment": "type_spherical",
+        "n": 80,
+        "diagonal": 31,
+        "training_majority_independently_matches": true,
+        "sklearn_and_manual_cm_match": true
+      }
+    ],
+    "full_experiments_verified": 8,
+    "pca_saved_projection_verified": true,
+    "all_saved_ari_nmi_cross_tabs_confusions_majorities_objectives_match": true,
+    "verification_fit_calls": 0,
+    "verification_assignment_calls": 0,
+    "verification_api_calls": 0
+  },
+  "preservation": {
+    "baseline_commit": "cb36989ee1518e1ad530a04b7bd68516da684249",
+    "original_tracked_files": 2403,
+    "byte_identical_files": 2376,
+    "allowed_changed_files": [
+      "docs/FINAL_TASK_SPEC.md",
+      "docs/WORK_PROGRESS.md",
+      "docs/automation_state.json",
+      "mathhint_analysis/AnalyzeThreeWay.py",
+      "mathhint_learning/ClusterReport.py",
+      "mathhint_learning/FinalClustering.py",
+      "results/final_experiment/01_clustering/README.md",
+      "results/final_experiment/01_clustering/experiments/curriculum_euclidean/README.md",
+      "results/final_experiment/01_clustering/experiments/curriculum_euclidean/experiment.json",
+      "results/final_experiment/01_clustering/experiments/curriculum_spherical/README.md",
+      "results/final_experiment/01_clustering/experiments/curriculum_spherical/experiment.json",
+      "results/final_experiment/01_clustering/experiments/subunit_euclidean/README.md",
+      "results/final_experiment/01_clustering/experiments/subunit_euclidean/experiment.json",
+      "results/final_experiment/01_clustering/experiments/subunit_spherical/README.md",
+      "results/final_experiment/01_clustering/experiments/subunit_spherical/experiment.json",
+      "results/final_experiment/01_clustering/experiments/type_euclidean/README.md",
+      "results/final_experiment/01_clustering/experiments/type_euclidean/experiment.json",
+      "results/final_experiment/01_clustering/experiments/type_spherical/README.md",
+      "results/final_experiment/01_clustering/experiments/type_spherical/experiment.json",
+      "results/final_experiment/01_clustering/experiments/unit_euclidean/README.md",
+      "results/final_experiment/01_clustering/experiments/unit_euclidean/experiment.json",
+      "results/final_experiment/01_clustering/experiments/unit_spherical/README.md",
+      "results/final_experiment/01_clustering/experiments/unit_spherical/experiment.json",
+      "results/final_experiment/01_clustering/manifest.json",
+      "results/final_experiment/01_clustering/metrics.json",
+      "results/final_experiment/README.md",
+      "tests/test_cluster_reader_links.py"
+    ],
+    "unexpected_changes": [],
+    "original_metric_and_assignment_json_unchanged_except_artifact_hashes": true,
+    "data_regression_gemini_archive_all_bytes_unchanged": true,
+    "original_csv_png_model_checkpoint_all_bytes_unchanged": true,
+    "navigation_rebuild_original_body_preserved": true,
+    "new_gemini_calls": 0,
+    "old_model_refits": 0,
+    "old_cluster_reassignments": 0,
+    "new_full_clustering_fits": 40
+  },
+  "link_validation": {
+    "markdown_files": 47,
+    "relative_links": 10684,
+    "question_or_cluster_anchors": 4526,
+    "issues": []
+  },
+  "tests": {
+    "passed": 187,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 9.2,
+    "log": "test_results.txt",
+    "original_result_checks_passed": 284,
+    "original_result_checks_failed": 0,
+    "original_validation_file_preserved": true
+  },
+  "cache_validation": {
+    "old_command_and_new_holdout_command_same_implementation": true,
+    "holdout_fit_and_assignment_forbidden": true,
+    "full_fit_and_api_forbidden": true,
+    "all_result_files_sha256_unchanged_after_cache_reads": true
+  },
+  "visual_inspection": {
+    "method": "Opened actual generated PNG files with local image viewer; no external rendering service",
+    "representative_images": [
+      "../experiments/unit_spherical/figures/confusion_matrix_test.png",
+      "../experiments/type_euclidean/figures/confusion_matrix_test.png",
+      "figures/ari_comparison_full.png",
+      "figures/nmi_comparison_full.png",
+      "figures/comparison_with_holdout.png",
+      "experiments/type_spherical/figures/confusion_matrix_all.png",
+      "experiments/type_spherical/figures/cross_tab_all_01.png",
+      "experiments/type_spherical/figures/label_composition_all_01.png"
+    ],
+    "korean_axis_values_legends_readable": true,
+    "type_confusion_resolution": "4554×4334; zoom the original for 70 label codes",
+    "scope": "Representative image readability checked; all image paths and numerical sources verified programmatically"
+  }
 }
