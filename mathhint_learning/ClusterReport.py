@@ -218,6 +218,17 @@ def save_final_cluster_reports(root, output, target, documents, n_clusters, labe
 def save_final_cluster_readme(target, experiment, n_clusters, *, reader_path=None):
     """계산을 반복하지 않고 이미 저장된 표·분할 그림의 안내만 갱신한다."""
     target = Path(target)
+    confusion_section = ""
+    if (target / "figures/confusion_matrix_test.png").exists():
+        saved = (target / "README.md").read_text(encoding="utf-8") if (target / "README.md").exists() else ""
+        marker = "\n## 테스트 혼동행렬\n"
+        if marker in saved:
+            confusion_section = marker + saved.split(marker, 1)[1].split("\n## ", 1)[0].rstrip("\n") + "\n"
+        else:
+            confusion_section = (marker + "\n[실제 분류 × 예측 분류 혼동행렬](figures/confusion_matrix_test.png) · "
+                                 "[전체 라벨 경로](label_key.csv)\n\n"
+                                 "테스트 문항의 실제 분류를 행으로, 학습 문항의 군집별 최빈 대표 라벨을 열로 센다. "
+                                 "기존 실제 분류 × 군집 번호 교차표와 구분하며, 대표 라벨 선정에 테스트 실제 라벨은 사용하지 않는다.\n")
     reader = Path(reader_path) if reader_path is not None else target.parent.parent.parent / "03_gemini/report.html"
     reader_link = quote(os.path.relpath(reader, target).replace(os.sep, "/"), safe="/")
     lines = [
@@ -234,7 +245,7 @@ def save_final_cluster_readme(target, experiment, n_clusters, *, reader_path=Non
             images = sorted((target / "figures").glob(f"{prefix}_{part}_*.png"))
             links.append(" · ".join(f"[{i}쪽]({path.relative_to(target).as_posix()})" for i, path in enumerate(images, 1)) or "생성된 그림 없음")
         lines.append(f"| {title} | {links[0]} | {links[1]} |")
-    (target / "README.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    (target / "README.md").write_text("\n".join(lines) + "\n" + confusion_section, encoding="utf-8")
 
 
 def refresh_cluster_reading_links(root, output, *, data_root=None, reader_path=None):
@@ -308,7 +319,7 @@ def refresh_cluster_reading_links(root, output, *, data_root=None, reader_path=N
             "unchanged_artifacts": len(unchanged)}
 
 
-def plot_final_cross_tabs(folder, counts, labels, codes, k):
+def plot_final_cross_tabs(folder, counts, labels, codes, k, *, scope_names=None, title_prefix=""):
     """유형이 많은 표는 20행 단위로 분할한다. 전체 라벨 경로는 CSV로 연결한다."""
     import numpy as np
     plt = setup_final_plots()
@@ -332,16 +343,17 @@ def plot_final_cross_tabs(folder, counts, labels, codes, k):
                     if value:
                         ax.text(j, i, str(value), ha="center", va="center", fontsize=7,
                                 color="white" if value > maximum / 2 else "black")
-            ax.set(xlabel="군집 번호 (빈 군집 제외)", ylabel="실제 분류 · 라벨 코드", title=f"{'학습' if part == 'train' else '테스트'} 분류 × 군집 · k={k} · {page}쪽")
+            scope = (scope_names or {}).get(part, "학습" if part == "train" else "테스트")
+            ax.set(xlabel="군집 번호 (빈 군집 제외)", ylabel="실제 분류 · 라벨 코드", title=f"{title_prefix}{scope} 분류 × 군집 · k={k} · {page}쪽")
             fig.colorbar(im, ax=ax, label="문항 수", shrink=.7)
             fig.savefig(folder / f"cross_tab_{part}_{page:02d}.png", dpi=180)
             plt.close(fig)
 
 
-def plot_final_composition(folder, counts, labels, codes, k):
+def plot_final_composition(folder, counts, labels, codes, k, *, source_part="train", scope_names=None, title_prefix=""):
     import numpy as np
     plt = setup_final_plots()
-    top = np.argsort(-counts["train"].sum(axis=1), kind="stable")[:8].tolist()
+    top = np.argsort(-counts[source_part].sum(axis=1), kind="stable")[:8].tolist()
     for part, matrix in counts.items():
         totals = matrix.sum(axis=0)
         for page, first in enumerate(range(0, k, 25), 1):
@@ -359,8 +371,9 @@ def plot_final_composition(folder, counts, labels, codes, k):
             for cluster, n in zip(clusters, totals[clusters]):
                 ax.text(cluster, 1.015, str(n), ha="center", va="bottom", fontsize=7)
             ax.set_xticks(clusters, clusters, fontsize=7)
+            scope = (scope_names or {}).get(part, "학습" if part == "train" else "테스트")
             ax.set(xlabel="군집 번호 · 위 숫자는 문항 수", ylabel="군집 내부 실제 라벨 비율", ylim=(0, 1.12),
-                   title=f"{'학습' if part == 'train' else '테스트'} 군집별 라벨 구성 · k={k} · {page}쪽")
+                   title=f"{title_prefix}{scope} 군집별 라벨 구성 · k={k} · {page}쪽")
             ax.legend(fontsize=6.8, loc="upper center", bbox_to_anchor=(.5, -.2), ncol=3)
             fig.savefig(folder / f"label_composition_{part}_{page:02d}.png", dpi=180, bbox_inches="tight")
             plt.close(fig)

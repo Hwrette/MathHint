@@ -1,0 +1,5 @@
+﻿experiment,level,method,cluster,actual_label,label_code,count,cluster_n,ratio,full_majority_label
+curriculum_spherical,curriculum,spherical,0,10 미적분1,L02,104,123,0.8455284552845529,10 미적분1
+curriculum_spherical,curriculum,spherical,0,09 대수,L01,19,123,0.15447154471544716,10 미적분1
+curriculum_spherical,curriculum,spherical,1,09 대수,L01,106,142,0.7464788732394366,09 대수
+curriculum_spherical,curriculum,spherical,1,10 미적분1,L02,36,142,0.2535211267605634,09 대수

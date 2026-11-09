@@ -5916,7 +5916,7 @@
     "label_dispersion.json": "f6e4bf1178344fa254816b9800e967b4e2622b0db22af8eda35f14cbd6448fab",
     "members.csv": "26a00c890507c59001afc514cf641f858e0a327f22c13f3955c0d8180b32dedb",
     "cross_tab_train.csv": "6d5f11bdcb152023ebd866ca30833ae68a16cb4abf62c5d7805cbf35afb5a31f",
-    "README.md": "2266488a9bf1a5705691a09efbd4cdcabf244c6cb64b382938281f8cc6c2cc8b",
+    "README.md": "6190e2e659328885860ef036777675d9cb8bd30192cfae1ad418c66b2970f5de",
     "cluster_summary.csv": "eb64eff2b6386746a5148332877bb4dda9be6921a535c7a2d2f4cecefdd9e774",
     "cluster_label_distribution.json": "a0aa6c30c730fc6a59173335459aed289060d899287e09b31797e59997eb5215",
     "clusters.md": "5acdaa0634f8f3ce8a3af5f83a889d0389a0d06e12095f4e724ab0a4190f47af",
@@ -5926,6 +5926,7 @@
     "figures/label_composition_test_01.png": "0c2df957a2f61034de18575ba3d84284e46ab074bb0807769854bd2a31926f77",
     "figures/cross_tab_train_01.png": "aa722710e790aef142f7b62f2e46ec16f26becdbe8092805d2a9ce6f5214b898",
     "figures/cross_tab_test_01.png": "3d4b6d76fb2a9a0fce07f7cb29fd71b15f00ba54af8ae45a6fabbc3ae4b7b646",
-    "figures/label_composition_train_01.png": "f3a3da4f2f672c6f54c7709d6a96b3a8ac55b3f31946e0d52da5f8e84e080313"
+    "figures/label_composition_train_01.png": "f3a3da4f2f672c6f54c7709d6a96b3a8ac55b3f31946e0d52da5f8e84e080313",
+    "figures/confusion_matrix_test.png": "ccfb95ed64927b8db68cdbe7869b0f3eef480f3245d3470271abdf6fb66d94f5"
   }
 }

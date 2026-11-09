@@ -1,0 +1,9 @@
+﻿experiment,level,method,k,holdout_training_count,holdout_test_n,full_fit_and_evaluation_n,holdout_test_ari,full_265_ari,holdout_test_nmi,full_265_nmi,interpretation
+curriculum_euclidean,curriculum,euclidean,2,185,80,265,0.09674104802935198,0.0948195624880126,0.10391804184415976,0.09171263114034545,different evaluation scopes; no generalization improvement claim
+curriculum_spherical,curriculum,spherical,2,185,80,265,0.24040896125124195,0.3396231596212021,0.18949631252336155,0.27262131001708445,different evaluation scopes; no generalization improvement claim
+unit_euclidean,unit,euclidean,8,185,80,265,0.1479411620700991,0.21387141336244458,0.40100694984519425,0.38541002111831174,different evaluation scopes; no generalization improvement claim
+unit_spherical,unit,spherical,8,185,80,265,0.14697430080976098,0.22411083423951933,0.42319546376927536,0.4192353130583361,different evaluation scopes; no generalization improvement claim
+subunit_euclidean,subunit,euclidean,25,185,80,265,0.1932470981426988,0.2343347771867045,0.5933653306865151,0.537225078090261,different evaluation scopes; no generalization improvement claim
+subunit_spherical,subunit,spherical,25,185,80,265,0.19715067075066317,0.2301529189137646,0.6364667143422094,0.5581157357092115,different evaluation scopes; no generalization improvement claim
+type_euclidean,type,euclidean,70,185,80,265,0.16702660128560176,0.1428679036492504,0.7803884557809391,0.6986168545593444,different evaluation scopes; no generalization improvement claim
+type_spherical,type,spherical,70,185,80,265,0.15073115860517436,0.20632935583114967,0.7899546039321568,0.7244626969172329,different evaluation scopes; no generalization improvement claim

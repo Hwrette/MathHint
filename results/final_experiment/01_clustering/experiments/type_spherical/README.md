@@ -14,3 +14,11 @@
 |---|---|---|
 | 학습 | [1쪽](figures/cross_tab_train_01.png) · [2쪽](figures/cross_tab_train_02.png) · [3쪽](figures/cross_tab_train_03.png) · [4쪽](figures/cross_tab_train_04.png) | [1쪽](figures/label_composition_train_01.png) · [2쪽](figures/label_composition_train_02.png) · [3쪽](figures/label_composition_train_03.png) |
 | 테스트 | [1쪽](figures/cross_tab_test_01.png) · [2쪽](figures/cross_tab_test_02.png) · [3쪽](figures/cross_tab_test_03.png) | [1쪽](figures/label_composition_test_01.png) · [2쪽](figures/label_composition_test_02.png) · [3쪽](figures/label_composition_test_03.png) |
+
+## 테스트 혼동행렬
+
+[실제 분류 × 예측 분류 혼동행렬](figures/confusion_matrix_test.png) · [전체 라벨 경로](label_key.csv)
+
+테스트 80문항을 행=실제 분류, 열=학습 문항의 군집별 최빈 라벨로 대응한 예측 분류로 셌다. 전체 70분류를 같은 순서의 두 축에 포함한다. 실제 미등장 28분류·예측 미등장 43분류도 0행·0열로 남긴다. 같은 분류 수준의 두 거리 방식은 축 순서와 색상 범위가 같다. 큰 행렬은 코드를 사용한 고해상도 그림이며 숫자를 생략한 칸은 0이다.
+
+기존 교차표 히트맵의 가로축은 군집 번호다. 이 혼동행렬은 가로축을 학습 대표 분류로 대응하여, 분류 간 혼동을 보여준다. 대표 라벨을 정할 때 테스트 실제 라벨을 사용하지 않았다.

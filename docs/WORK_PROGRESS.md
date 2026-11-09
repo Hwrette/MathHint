@@ -1,6 +1,6 @@
 # MathHint 작업 진행 상태
 
-STATUS: IN_PROGRESS_CLUSTERING_ADDITIONS
+STATUS: VALIDATING_CLUSTERING_ADDITIONS
 EXECUTION_ALLOWED: true
 LAST_CONFIRMED_PUBLISHED_COMMIT: 99222db98f95abd0f7e57112905832ff8808155c
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
@@ -288,3 +288,13 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 단계: (1)데이터/보존기준완료 (2)기존test80 CM구현중 (3)full265별도실행기구현중 (4)비교/사례/그림준비 (5)독립대조/이미지가독성/링크 (6)무결성메타최소갱신/최종커밋푸시.
 - 새실험코드는mathhint_learning/full_dataset_265/에두고TorchKMeans를공유한다. 기존실험코드/명령은유지한다. 공통혼동행렬 helper는별도파일로두조건이재사용한다.
 - 기존2403추적파일중안내/진행기록/공통그림최소확장/필수문서해시목록외변경을허용하지않는다. 기존모델/배정/CSV/그림/회귀/Gemini전체는바이트불변검사한다.
+
+## 군집화 추가 구현·실제실험 완료 체크포인트 — 2026-11-09T22:28:28.615146+00:00
+
+- 기존test80 CM8개완료. train-only대표라벨·sklearn/manual행렬완전일치. 대각 E/S:과목53/60·단원42/40·세부40/41·유형25/31, 각각80합. 전체라벨축2/8/25/70유지하며0행/0열명시.
+- full265별도8모델/5시드40fits완료, 모든총합265·k2/8/25/70. 결과full_dataset_265 146파일(43PNG),각실험checkpoint/별도manifest·코드/입력해시. 기존holdout/회귀학습/SDK금지상태로full만실행했다.
+- fullARI/NMI E/S:과목 .094820/.091713 대 .339623/.272621;단원 .213871/.385410 대 .224111/.419235;세부 .234335/.537225 대 .230153/.558116;유형 .142868/.698617 대 .206329/.724463. 같은자료탐색이며일반화개선주장안함.
+- 코드는holdout/run.py와full_dataset_265/로분리,기존FinalClustering는호환진입점. 상대import/ROOT이동외기존구현동일,학습알고리즘TorchKMeans불변. 공통ClusterReport그림함수에기본동작유지하는표시옵션만추가.
+- 결과README2개/실험README8개링크추가. 재생성시새안내블록을보존하는작은표시helper와단위검사추가. 기존원문/API입력/응답/사용량/회귀/최종보고서는수정하지않았다.
+- 필수무결성메타만갱신: 8개experiment.json과metrics.json의artifact_hashes에서README해시/새CMPNG항목만변경. 원래metrics/config/documents/centers필드는완전동일. 상위manifest는원래항목중README9+메타9해시만갱신하고새CM8+검증1추가. 새full결과는자체manifest로분리했다.
+- 독립감사holdout8/full8의ARI/NMI/대표라벨/CM/교차표/모델배정/시드목적함수최소/PCA/비교표모두PASS. 기존중요2229파일SHA불변. 최종전체tests·모든링크·읽기화면·기존캐시검증/푸시까지아직진행중.

@@ -669,7 +669,8 @@ def _build_final_report(run_root=RUN_ROOT, *, project_root=ROOT, data_root=None,
            "[전체 산출물 검증](validation.json) · [읽기 화면 브라우저 검증](reader_validation.json) · [핵심 테스트 로그](test_results.txt) · [독립 ML 수식 감사](independent_ml_audit.json)", "",
            "API 오류·미완료·채점불가는 오답이나 0토큰으로 합치지 않는다. 원본 정답표와 AI 보조 보정 점수는 별도다. C는 실제 해설 정보를 제공한 오라클 진단이며 서비스 성능이나 보장된 상한이 아니다. 코사인 유사도는 정답률이 아니다.", "",
            "## 화면과 안내 다시 만들기", "", "`python -m mathhint_learning.RunExperiment view`는 저장된 결과만 읽어 화면·표·안내를 다시 만든다. 학습·모델 재추론·Gemini API 호출은 하지 않으며 보존된 원본 감사 기록을 다시 쓰지 않는다. 설치와 별도 평가·학습·API 준비 명령은 [프로젝트 README](../../README.md)를 따른다.", ""]
-    (run_root/"README.md").write_text("\n".join(index),encoding="utf-8")
+    from mathhint_learning.holdout import preserve_navigation
+    (run_root/"README.md").write_text(preserve_navigation(run_root/"README.md", "\n".join(index)),encoding="utf-8")
     print(json.dumps({"output":str(run_root),"successful_conditions":result["successful_conditions"],"expected_conditions":result["expected_conditions"],"complete":result["complete"]},ensure_ascii=False))
     return result
 

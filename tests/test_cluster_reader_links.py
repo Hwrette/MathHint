@@ -123,16 +123,16 @@ class ClusterReaderLinksTests(unittest.TestCase):
             with ExitStack() as stack:
                 for name in ("mathhint_learning.ClusterReport.plot_final_cross_tabs",
                              "mathhint_learning.ClusterReport.plot_final_composition",
-                             "mathhint_learning.FinalClustering.plot_final_comparison",
-                             "mathhint_learning.FinalClustering.save_pca_views"):
+                             "mathhint_learning.holdout.run.plot_final_comparison",
+                             "mathhint_learning.holdout.run.save_pca_views"):
                     stack.enter_context(patch(name))
                 result = run(root, output, seeds=[2], max_iter=10, data_root=selected)
             self.assertEqual(result["config"]["generation_id"], "isolated-fixture")
             self.assertEqual(result["config"]["data_source"]["data_root"], str(selected))
             self.assertTrue(all(row["problem_path"].startswith("chosen data/processed/problems/")
                                 for report in result["experiments"] for row in report["documents"]))
-            with patch("mathhint_learning.FinalClustering.fit_kmeans", side_effect=AssertionError("fit forbidden")), \
-                 patch("mathhint_learning.FinalClustering.fit_spherical_kmeans", side_effect=AssertionError("fit forbidden")):
+            with patch("mathhint_learning.holdout.run.fit_kmeans", side_effect=AssertionError("fit forbidden")), \
+                 patch("mathhint_learning.holdout.run.fit_spherical_kmeans", side_effect=AssertionError("fit forbidden")):
                 self.assertEqual(run(root, output, seeds=[2], max_iter=10, data_root=selected), result)
                 write_json(selected / "vectors/problems/vocabulary.json", ["y", "x"])
                 with self.assertRaisesRegex(ValueError, "vocabulary.json"):

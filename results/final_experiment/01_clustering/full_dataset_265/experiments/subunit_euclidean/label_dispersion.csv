@@ -1,0 +1,26 @@
+﻿experiment,level,method,actual_label,n,occupied_clusters,largest_cluster_share,cluster_entropy_bits,cluster_ids
+subunit_euclidean,subunit,euclidean,09 대수 / 05 삼각함수의 정의 / 01 일반각과 호도법,2,2,0.5,1.0,"3,12"
+subunit_euclidean,subunit,euclidean,09 대수 / 05 삼각함수의 정의 / 02 삼각함수의 정의 및 활용,21,9,0.19047619047619047,2.9870900416203345,"3,7,9,10,11,12,18,20,24"
+subunit_euclidean,subunit,euclidean,09 대수 / 06 삼각함수의 그래프 / 01 삼각함수의 그래프,22,7,0.3181818181818182,2.4289300521347017,"2,4,9,13,19,20,21"
+subunit_euclidean,subunit,euclidean,09 대수 / 06 삼각함수의 그래프 / 02 삼각함수의 그래프 활용,26,10,0.23076923076923078,2.9510572775501682,"1,2,3,6,7,10,11,12,20,24"
+subunit_euclidean,subunit,euclidean,09 대수 / 06 삼각함수의 그래프 / 03 삼각방정식과 부등식,54,12,0.42592592592592593,2.4298560207997975,"3,5,6,7,8,9,12,13,16,17,20,21"
+subunit_euclidean,subunit,euclidean,10 미적분1 / 01 함수의 극한 / 01 좌극한과 우극한,1,1,1.0,-0.0,0
+subunit_euclidean,subunit,euclidean,10 미적분1 / 01 함수의 극한 / 02 극한의 성질과 계산,6,4,0.3333333333333333,1.9182958340544896,"0,4,5,16"
+subunit_euclidean,subunit,euclidean,10 미적분1 / 01 함수의 극한 / 03 극한식의 해석,9,4,0.4444444444444444,1.7527152789797047,"0,4,6,16"
+subunit_euclidean,subunit,euclidean,10 미적분1 / 01 함수의 극한 / 04 극한의 활용,1,1,1.0,-0.0,0
+subunit_euclidean,subunit,euclidean,10 미적분1 / 02 함수의 연속성 / 01 함수의 연속성,25,4,0.44,1.8254513993116461,"14,15,22,23"
+subunit_euclidean,subunit,euclidean,10 미적분1 / 02 함수의 연속성 / 03 사잇값 정리,1,1,1.0,-0.0,6
+subunit_euclidean,subunit,euclidean,10 미적분1 / 03 미분계수와 도함수 / 01 미분계수,6,4,0.3333333333333333,1.9182958340544896,"1,4,8,21"
+subunit_euclidean,subunit,euclidean,10 미적분1 / 03 미분계수와 도함수 / 02 도함수의 정의와 미분법 공식,13,4,0.5384615384615384,1.6691803368667308,"0,6,16,21"
+subunit_euclidean,subunit,euclidean,10 미적분1 / 03 미분계수와 도함수 / 03 미분법 공식의 활용,3,2,0.6666666666666666,0.9182958340544896,"4,16"
+subunit_euclidean,subunit,euclidean,10 미적분1 / 03 미분계수와 도함수 / 04 미분가능성과 연속성,5,3,0.6,1.3709505944546687,"6,14,22"
+subunit_euclidean,subunit,euclidean,10 미적분1 / 04 접선의 방정식 / 01 접선의 방정식,10,6,0.3,2.4464393446710155,"5,8,9,16,19,21"
+subunit_euclidean,subunit,euclidean,10 미적분1 / 04 접선의 방정식 / 02 접선의 방정식의 활용,5,5,0.2,2.321928094887362,"1,4,8,9,16"
+subunit_euclidean,subunit,euclidean,10 미적분1 / 04 접선의 방정식 / 03 평균값의 정리,1,1,1.0,-0.0,4
+subunit_euclidean,subunit,euclidean,10 미적분1 / 05 함수의 증가와 감소 / 01 함수의 증가와 감소,1,1,1.0,-0.0,21
+subunit_euclidean,subunit,euclidean,10 미적분1 / 05 함수의 증가와 감소 / 02 함수의 극대와 극소,25,5,0.44,1.841706277574314,"1,6,9,16,21"
+subunit_euclidean,subunit,euclidean,10 미적분1 / 05 함수의 증가와 감소 / 03 증가감소와 극대극소의 활용,1,1,1.0,-0.0,2
+subunit_euclidean,subunit,euclidean,10 미적분1 / 05 함수의 증가와 감소 / 04 함수의 최대와 최소,4,1,1.0,-0.0,21
+subunit_euclidean,subunit,euclidean,10 미적분1 / 06 방부등식과 직선운동 / 01 방정식과 미분,7,2,0.7142857142857143,0.863120568566631,"8,9"
+subunit_euclidean,subunit,euclidean,10 미적분1 / 06 방부등식과 직선운동 / 02 부등식과 미분,6,4,0.5,1.792481250360578,"4,5,6,9"
+subunit_euclidean,subunit,euclidean,"10 미적분1 / 06 방부등식과 직선운동 / 03 속도, 가속도와 미분",10,4,0.5,1.6854752972273344,"8,11,12,23"

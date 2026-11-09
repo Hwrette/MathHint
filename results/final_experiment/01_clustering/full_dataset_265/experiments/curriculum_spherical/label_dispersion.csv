@@ -1,0 +1,3 @@
+﻿experiment,level,method,actual_label,n,occupied_clusters,largest_cluster_share,cluster_entropy_bits,cluster_ids
+curriculum_spherical,curriculum,spherical,09 대수,125,2,0.848,0.6148227571490692,"0,1"
+curriculum_spherical,curriculum,spherical,10 미적분1,140,2,0.7428571428571429,0.8224042259549891,"0,1"

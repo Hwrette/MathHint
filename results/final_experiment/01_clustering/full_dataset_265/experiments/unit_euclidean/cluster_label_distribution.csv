@@ -1,0 +1,36 @@
+﻿experiment,level,method,cluster,actual_label,label_code,count,cluster_n,ratio,full_majority_label
+unit_euclidean,unit,euclidean,0,09 대수 / 06 삼각함수의 그래프,L02,31,71,0.43661971830985913,09 대수 / 06 삼각함수의 그래프
+unit_euclidean,unit,euclidean,0,10 미적분1 / 05 함수의 증가와 감소,L07,19,71,0.2676056338028169,09 대수 / 06 삼각함수의 그래프
+unit_euclidean,unit,euclidean,0,10 미적분1 / 06 방부등식과 직선운동,L08,9,71,0.1267605633802817,09 대수 / 06 삼각함수의 그래프
+unit_euclidean,unit,euclidean,0,10 미적분1 / 04 접선의 방정식,L06,6,71,0.08450704225352113,09 대수 / 06 삼각함수의 그래프
+unit_euclidean,unit,euclidean,0,10 미적분1 / 03 미분계수와 도함수,L05,4,71,0.056338028169014086,09 대수 / 06 삼각함수의 그래프
+unit_euclidean,unit,euclidean,0,09 대수 / 05 삼각함수의 정의,L01,1,71,0.014084507042253521,09 대수 / 06 삼각함수의 그래프
+unit_euclidean,unit,euclidean,0,10 미적분1 / 01 함수의 극한,L03,1,71,0.014084507042253521,09 대수 / 06 삼각함수의 그래프
+unit_euclidean,unit,euclidean,1,10 미적분1 / 06 방부등식과 직선운동,L08,6,15,0.4,10 미적분1 / 06 방부등식과 직선운동
+unit_euclidean,unit,euclidean,1,09 대수 / 05 삼각함수의 정의,L01,5,15,0.3333333333333333,10 미적분1 / 06 방부등식과 직선운동
+unit_euclidean,unit,euclidean,1,09 대수 / 06 삼각함수의 그래프,L02,3,15,0.2,10 미적분1 / 06 방부등식과 직선운동
+unit_euclidean,unit,euclidean,1,10 미적분1 / 04 접선의 방정식,L06,1,15,0.06666666666666667,10 미적분1 / 06 방부등식과 직선운동
+unit_euclidean,unit,euclidean,2,10 미적분1 / 02 함수의 연속성,L04,22,26,0.8461538461538461,10 미적분1 / 02 함수의 연속성
+unit_euclidean,unit,euclidean,2,10 미적분1 / 03 미분계수와 도함수,L05,4,26,0.15384615384615385,10 미적분1 / 02 함수의 연속성
+unit_euclidean,unit,euclidean,3,09 대수 / 06 삼각함수의 그래프,L02,20,33,0.6060606060606061,09 대수 / 06 삼각함수의 그래프
+unit_euclidean,unit,euclidean,3,09 대수 / 05 삼각함수의 정의,L01,13,33,0.3939393939393939,09 대수 / 06 삼각함수의 그래프
+unit_euclidean,unit,euclidean,4,10 미적분1 / 01 함수의 극한,L03,3,9,0.3333333333333333,10 미적분1 / 01 함수의 극한
+unit_euclidean,unit,euclidean,4,09 대수 / 06 삼각함수의 그래프,L02,2,9,0.2222222222222222,10 미적분1 / 01 함수의 극한
+unit_euclidean,unit,euclidean,4,10 미적분1 / 02 함수의 연속성,L04,2,9,0.2222222222222222,10 미적분1 / 01 함수의 극한
+unit_euclidean,unit,euclidean,4,10 미적분1 / 06 방부등식과 직선운동,L08,2,9,0.2222222222222222,10 미적분1 / 01 함수의 극한
+unit_euclidean,unit,euclidean,5,10 미적분1 / 03 미분계수와 도함수,L05,12,31,0.3870967741935484,10 미적분1 / 03 미분계수와 도함수
+unit_euclidean,unit,euclidean,5,10 미적분1 / 01 함수의 극한,L03,10,31,0.3225806451612903,10 미적분1 / 03 미분계수와 도함수
+unit_euclidean,unit,euclidean,5,09 대수 / 06 삼각함수의 그래프,L02,3,31,0.0967741935483871,10 미적분1 / 03 미분계수와 도함수
+unit_euclidean,unit,euclidean,5,10 미적분1 / 05 함수의 증가와 감소,L07,3,31,0.0967741935483871,10 미적분1 / 03 미분계수와 도함수
+unit_euclidean,unit,euclidean,5,10 미적분1 / 04 접선의 방정식,L06,2,31,0.06451612903225806,10 미적분1 / 03 미분계수와 도함수
+unit_euclidean,unit,euclidean,5,10 미적분1 / 02 함수의 연속성,L04,1,31,0.03225806451612903,10 미적분1 / 03 미분계수와 도함수
+unit_euclidean,unit,euclidean,6,09 대수 / 06 삼각함수의 그래프,L02,40,46,0.8695652173913043,09 대수 / 06 삼각함수의 그래프
+unit_euclidean,unit,euclidean,6,09 대수 / 05 삼각함수의 정의,L01,4,46,0.08695652173913043,09 대수 / 06 삼각함수의 그래프
+unit_euclidean,unit,euclidean,6,10 미적분1 / 04 접선의 방정식,L06,2,46,0.043478260869565216,09 대수 / 06 삼각함수의 그래프
+unit_euclidean,unit,euclidean,7,10 미적분1 / 05 함수의 증가와 감소,L07,9,34,0.2647058823529412,10 미적분1 / 05 함수의 증가와 감소
+unit_euclidean,unit,euclidean,7,10 미적분1 / 03 미분계수와 도함수,L05,7,34,0.20588235294117646,10 미적분1 / 05 함수의 증가와 감소
+unit_euclidean,unit,euclidean,7,10 미적분1 / 06 방부등식과 직선운동,L08,6,34,0.17647058823529413,10 미적분1 / 05 함수의 증가와 감소
+unit_euclidean,unit,euclidean,7,10 미적분1 / 04 접선의 방정식,L06,5,34,0.14705882352941177,10 미적분1 / 05 함수의 증가와 감소
+unit_euclidean,unit,euclidean,7,09 대수 / 06 삼각함수의 그래프,L02,3,34,0.08823529411764706,10 미적분1 / 05 함수의 증가와 감소
+unit_euclidean,unit,euclidean,7,10 미적분1 / 01 함수의 극한,L03,3,34,0.08823529411764706,10 미적분1 / 05 함수의 증가와 감소
+unit_euclidean,unit,euclidean,7,10 미적분1 / 02 함수의 연속성,L04,1,34,0.029411764705882353,10 미적분1 / 05 함수의 증가와 감소

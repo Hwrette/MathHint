@@ -26,7 +26,7 @@
   "global_full_access": "UNAVAILABLE_PLATFORM_REJECTED",
   "attached_spec_original_sha256": "18cb0a83aebf2988b476118bcb4014f5ce7c0f1f7979fdceaead42f8deafbf56",
   "execution_environment_permission": "danger-full-access; network_enabled; approval_never; user_changed_environment",
-  "work_status": "COMPLETE_READER_WORKFLOW",
+  "work_status": "VALIDATING_CLUSTERING_ADDITIONS",
   "paused_at": "2026-11-08T19:13:47.042322+00:00",
   "pause_verified_by_peek": true,
   "github_permission_restored": true,
@@ -38,7 +38,7 @@
   "new_sdk_calls": 81,
   "reaudit_protected_artifacts_unchanged": 336,
   "reaudit_file_links_checked": 3941,
-  "new_research_training_allowed": false,
+  "new_research_training_allowed": true,
   "new_gemini_calls_allowed": false,
   "reader_browser_checks_passed": 24,
   "reader_documents_rendered": 770,
@@ -46,5 +46,6 @@
   "supplement_protected_artifacts_unchanged": 2150,
   "supplement_new_gemini_calls": 0,
   "supplement_research_training_runs": 0,
-  "supplement_file_links_checked": 6214
+  "supplement_file_links_checked": 6214,
+  "new_model_training_scope": "Only new full_dataset_265 K-means 8 configurations; no holdout refit, regression, neural models or Gemini calls"
 }
