@@ -1,6 +1,6 @@
 # MathHint 작업 진행 상태
 
-STATUS: COMPLETE_READER_WORKFLOW
+STATUS: IN_PROGRESS_CLUSTERING_ADDITIONS
 EXECUTION_ALLOWED: true
 LAST_CONFIRMED_PUBLISHED_COMMIT: 99222db98f95abd0f7e57112905832ff8808155c
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
@@ -280,3 +280,11 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 최신요구누락없음판정은실제174tests/284결과검사/24브라우저검사/6214상대링크/2150원본SHA근거에따른다. 이전연구의핵심수치/원본감사는불변이며새Gemini호출0·연구자료재학습0이다.
 - 남은필수작업0. 사용자가다음실험을결정하면Experiment단일설정을새경로로바꾸어학습/평가/prepare를명시적으로실행한다. 불용어/TFIDF/신경망/새Gemini실험은이번에추가하지않았다.
 - 한계: 관리형브라우저file://차단으로실제화면은임시localhost검증; 별도clean머신설치는미실행(wheel자산포함검증완료); 가독성검사는수학적정확성의사람확정검토가아님. 검사용localhost서버는종료했다.
+
+## 2026-11-09 새 요청: 테스트 혼동행렬 + 전체265 탐색 (진행 중)
+
+- 시작 HEAD cb36989ee1518e1ad530a04b7bd68516da684249, Git clean. recovery/before-full265-clustering-20261109 브랜치 생성. 추적파일2403개 SHA는 /tmp/mathhint_full265_baseline.json에 확보했고 원본바이트는 Git 기준커밋에서복구가능하다.
+- 최신확정요구를FINAL_TASK_SPEC 마지막에기록했다. 이번허용학습은새별도전체265 K-means 8조건뿐이며 회귀/기존군집재학습·군집재배정·Gemini API는금지다.
+- 단계: (1)데이터/보존기준완료 (2)기존test80 CM구현중 (3)full265별도실행기구현중 (4)비교/사례/그림준비 (5)독립대조/이미지가독성/링크 (6)무결성메타최소갱신/최종커밋푸시.
+- 새실험코드는mathhint_learning/full_dataset_265/에두고TorchKMeans를공유한다. 기존실험코드/명령은유지한다. 공통혼동행렬 helper는별도파일로두조건이재사용한다.
+- 기존2403추적파일중안내/진행기록/공통그림최소확장/필수문서해시목록외변경을허용하지않는다. 기존모델/배정/CSV/그림/회귀/Gemini전체는바이트불변검사한다.
