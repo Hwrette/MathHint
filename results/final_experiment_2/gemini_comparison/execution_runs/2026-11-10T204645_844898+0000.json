@@ -1,0 +1,216 @@
+{
+  "execution_id": "2026-11-10T204645_844898+0000",
+  "config_id": "cc67f503605a3acd86112e8734b755f1c1da6e86d5cea9a3c8da1de43c3708e9",
+  "started_at": "2026-11-10T20:46:45.844955+00:00",
+  "status": "partial_complete",
+  "split": "test",
+  "policy": {
+    "interval_seconds": 10.0,
+    "workers": 1,
+    "rpm": 6,
+    "rph": 360,
+    "rpd": 320,
+    "max_new_requests": 40,
+    "max_run_seconds": 3600.0,
+    "max_wait_seconds": 120.0,
+    "max_attempts": 2,
+    "http_timeout_ms": 180000,
+    "provider_limits_confirmed": false,
+    "limits_note": "local conservative rolling-window caps; not confirmed provider quotas"
+  },
+  "transport": {
+    "http_timeout_ms": 180000,
+    "sdk_attempts": 1,
+    "timeout_error_policy": "httpx.TimeoutException to chained builtin TimeoutError; existing bounded max_attempts"
+  },
+  "preexisting_successes": 268,
+  "runner_sha256": "4a43de1f15d00490fbff885742c19f605b9602fea3711bb9d4b6471c82a3bdd0",
+  "sdk_request_capture": "immediately before generate_content",
+  "completed_at": "2026-11-10T21:05:00.573581+00:00",
+  "successful_requests": 301,
+  "failed_requests": 3,
+  "pending_count": 19,
+  "pending_requests": [
+    {
+      "id": "trig_3_014",
+      "condition": "B",
+      "method": "regression_hint",
+      "split": "test",
+      "request_sha256": "bf0ac9c68f361b0bb905c1395aabd5bde499dfb7c477d476aeb7cdbba8bb2520",
+      "last_status": "api_error"
+    },
+    {
+      "id": "trig_3_015",
+      "condition": "B",
+      "method": "regression_hint",
+      "split": "test",
+      "request_sha256": "217fa7784de2b20b4f6dc3f9e90aaeeee9e6ecc46f000161f5cc07b07e0533c8",
+      "last_status": "api_error"
+    },
+    {
+      "id": "trig_3_017",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "test",
+      "request_sha256": "a36e2dad43886e05c3ebbcd94565a100e5cea1a6de73529e4070bd9516037c68",
+      "last_status": "api_error"
+    },
+    {
+      "id": "trig_3_021",
+      "condition": "D",
+      "method": "oracle_hint",
+      "split": "test",
+      "request_sha256": "fe3d7aac98fe5aaf59a485493e6c1e2f6dcd88538e1a2ef2af66c0dc7eba8a83",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_026",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "test",
+      "request_sha256": "dfc76a1dc88b76e395580daa19a766dd8081971555ffbb83b8cb2a5c351e42b6",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_026",
+      "condition": "D",
+      "method": "oracle_hint",
+      "split": "test",
+      "request_sha256": "73671bc599b6954613a43835cf1103b92562e41b490d1eb5763634bd0d1a3db3",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_026",
+      "condition": "B",
+      "method": "regression_hint",
+      "split": "test",
+      "request_sha256": "5d5a0952b3ebd8b606a65b3ad33abbc5c97a80265e7d5a1203a651f94ab849d3",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_034",
+      "condition": "D",
+      "method": "oracle_hint",
+      "split": "test",
+      "request_sha256": "59651cccf91061c83421594c1cd22b335d1bdc776b41b68fce34bbe26b34208b",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_034",
+      "condition": "B",
+      "method": "regression_hint",
+      "split": "test",
+      "request_sha256": "34fbaddaa3a411a5c9014c97c4e6bb9c8131834feed6e55ce9cad4367aa81fb6",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_034",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "test",
+      "request_sha256": "afb8388a659f5438443f5762dcc1354ba2cd5bc0d45c628e3395ab9f297f8ff0",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_035",
+      "condition": "D",
+      "method": "oracle_hint",
+      "split": "test",
+      "request_sha256": "ef8bbe6f85c2a59f35b03ca562686990c964c8ef22a5c84543f712d31b112d7c",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_035",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "test",
+      "request_sha256": "b35c06a9dd5559d7ffb4ec1139fdfa3a45d98c2d092915e11bdb41b9df20dbfd",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_035",
+      "condition": "B",
+      "method": "regression_hint",
+      "split": "test",
+      "request_sha256": "03e3c53b53d8ebdf0ac086bbfa0bc7bc475466dc96db590fbdc956e104fcee7f",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_039",
+      "condition": "B",
+      "method": "regression_hint",
+      "split": "test",
+      "request_sha256": "e246d8b467547303455166dc60060a1607669a86091ced173a2460b5bb47b422",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_039",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "test",
+      "request_sha256": "8a4af710d74abd12b04a6e34e7f7aca395cf873d59bc4d79bb1d78f9b2a66154",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_039",
+      "condition": "D",
+      "method": "oracle_hint",
+      "split": "test",
+      "request_sha256": "fb161e5ca9bc9f8702087d8cf01b7c6cc171bf81bc888196f2a9d0f8566c3116",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_040",
+      "condition": "B",
+      "method": "regression_hint",
+      "split": "test",
+      "request_sha256": "ff568c79e48730fbf1269ceebd3abea924b816f80b20be3cdb5290acfab4c8b3",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_040",
+      "condition": "D",
+      "method": "oracle_hint",
+      "split": "test",
+      "request_sha256": "1ee846d72848c54e78356c7f72b211e92e431b4c7630631894231d79ca72529d",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_040",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "test",
+      "request_sha256": "38ec97b7690f7aff703c8e46b20789a5ddd270c4e4ab6209fa25c76f262b9c57",
+      "last_status": "not_executed"
+    }
+  ],
+  "new_request_starts": 40,
+  "limiter": {
+    "new_request_starts": 40,
+    "rolling_minute_starts": 1,
+    "rolling_hour_starts": 136,
+    "rolling_24h_starts": 253,
+    "status": "partial_complete",
+    "reason": "이번 실행의 신규 요청 예산에 도달했습니다.",
+    "daily_quota_reported": false,
+    "cooldown_remaining_seconds": 0,
+    "service_cooldown_remaining_seconds": 0,
+    "resume_cooldown_note": "absolute recorded delays restored; legacy events preserve only recorded backoff, not unrecorded provider timing; daily reset remains unconfirmed",
+    "policy": {
+      "interval_seconds": 10.0,
+      "workers": 1,
+      "rpm": 6,
+      "rph": 360,
+      "rpd": 320,
+      "max_new_requests": 40,
+      "max_run_seconds": 3600.0,
+      "max_wait_seconds": 120.0,
+      "max_attempts": 2,
+      "http_timeout_ms": 180000,
+      "provider_limits_confirmed": false,
+      "limits_note": "local conservative rolling-window caps; not confirmed provider quotas"
+    },
+    "provider_quota_confirmation": "not inferred from local caps"
+  },
+  "reason": "이번 실행의 신규 요청 예산에 도달했습니다."
+}

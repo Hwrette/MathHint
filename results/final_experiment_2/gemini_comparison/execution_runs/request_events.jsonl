@@ -260,3 +260,60 @@
 {"event":"request_start","time":"2026-11-10T20:43:51.421458+00:00","execution_id":"2026-11-10T203249_102790+0000","id":"trig_2_016","condition":"B","split":"test"}
 {"event":"request_start","time":"2026-11-10T20:44:01.421845+00:00","execution_id":"2026-11-10T203249_102790+0000","id":"trig_2_017","condition":"C","split":"test"}
 {"event":"request_start","time":"2026-11-10T20:44:11.422217+00:00","execution_id":"2026-11-10T203249_102790+0000","id":"trig_2_017","condition":"B","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:46:45.867868+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_2_017","condition":"D","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:46:55.868169+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_2_022","condition":"C","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:47:05.868415+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_2_022","condition":"B","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:47:15.868722+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_2_022","condition":"D","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:47:54.132917+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_2_024","condition":"C","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:48:04.133267+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_2_024","condition":"D","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:48:14.133786+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_2_024","condition":"B","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:48:31.146858+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_2_025","condition":"C","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:49:10.352296+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_2_025","condition":"D","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:49:52.427669+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_2_025","condition":"B","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:50:02.428061+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_2_030","condition":"D","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:50:12.428639+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_2_030","condition":"B","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:50:22.428955+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_2_030","condition":"C","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:50:32.429201+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_2_035","condition":"D","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:50:42.429475+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_2_035","condition":"C","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:51:57.725892+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_2_035","condition":"B","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:52:07.726194+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_002","condition":"D","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:52:17.726482+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_002","condition":"B","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:52:27.726800+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_002","condition":"C","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:52:37.728175+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_010","condition":"D","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:53:06.002913+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_010","condition":"B","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:53:16.003397+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_010","condition":"C","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:53:26.003698+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_011","condition":"D","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:53:39.044480+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_011","condition":"C","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:53:49.044795+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_011","condition":"B","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:53:59.045078+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_014","condition":"D","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:54:09.046315+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_014","condition":"C","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:54:19.046479+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_014","condition":"B","split":"test"}
+{"event":"service_overloaded","time":"2026-11-10T20:54:24.495991+00:00","consecutive_503":1,"backoff_seconds":30,"execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_014","condition":"B","split":"test"}
+{"event":"cooldown_updated","code":503,"cooldown_until":"2026-11-10T20:54:54.495969+00:00","source":"recorded Retry-After/RetryInfo or fallback backoff; provider reset not inferred","time":"2026-11-10T20:54:24.496958+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_014","condition":"B","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:54:54.496288+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_014","condition":"B","split":"test"}
+{"event":"service_overloaded","time":"2026-11-10T20:55:28.720667+00:00","consecutive_503":2,"backoff_seconds":60,"execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_014","condition":"B","split":"test"}
+{"event":"cooldown_updated","code":503,"cooldown_until":"2026-11-10T20:56:28.720646+00:00","source":"recorded Retry-After/RetryInfo or fallback backoff; provider reset not inferred","time":"2026-11-10T20:55:28.721525+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_014","condition":"B","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:56:28.720970+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_015","condition":"B","split":"test"}
+{"event":"service_overloaded","time":"2026-11-10T20:56:41.020215+00:00","consecutive_503":3,"backoff_seconds":120,"execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_015","condition":"B","split":"test"}
+{"event":"cooldown_updated","code":503,"cooldown_until":"2026-11-10T20:58:41.020194+00:00","source":"recorded Retry-After/RetryInfo or fallback backoff; provider reset not inferred","time":"2026-11-10T20:56:41.025253+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_015","condition":"B","split":"test"}
+{"event":"request_start","time":"2026-11-10T20:58:41.020524+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_015","condition":"B","split":"test"}
+{"event":"service_overloaded","time":"2026-11-10T20:58:44.025530+00:00","consecutive_503":4,"backoff_seconds":120,"execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_015","condition":"B","split":"test"}
+{"event":"cooldown_updated","code":503,"cooldown_until":"2026-11-10T21:00:44.025479+00:00","source":"recorded Retry-After/RetryInfo or fallback backoff; provider reset not inferred","time":"2026-11-10T20:58:44.026996+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_015","condition":"B","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:00:44.026538+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_015","condition":"C","split":"test"}
+{"event":"service_recovered","time":"2026-11-10T21:00:45.390350+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_015","condition":"C","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:00:54.026469+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_015","condition":"D","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:01:04.026701+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_017","condition":"B","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:01:14.026991+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_017","condition":"D","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:01:24.027431+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_017","condition":"C","split":"test"}
+{"event":"service_overloaded","time":"2026-11-10T21:01:28.758940+00:00","consecutive_503":1,"backoff_seconds":30,"execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_017","condition":"C","split":"test"}
+{"event":"cooldown_updated","code":503,"cooldown_until":"2026-11-10T21:01:58.758863+00:00","source":"recorded Retry-After/RetryInfo or fallback backoff; provider reset not inferred","time":"2026-11-10T21:01:28.761138+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_017","condition":"C","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:01:58.759244+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_017","condition":"C","split":"test"}
+{"event":"service_overloaded","time":"2026-11-10T21:02:41.392585+00:00","consecutive_503":2,"backoff_seconds":60,"execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_017","condition":"C","split":"test"}
+{"event":"cooldown_updated","code":503,"cooldown_until":"2026-11-10T21:03:41.392548+00:00","source":"recorded Retry-After/RetryInfo or fallback backoff; provider reset not inferred","time":"2026-11-10T21:02:41.394116+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_017","condition":"C","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:03:41.392907+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_021","condition":"C","split":"test"}
+{"event":"service_recovered","time":"2026-11-10T21:03:50.441540+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_021","condition":"C","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:03:51.393201+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_021","condition":"B","split":"test"}
+{"event":"service_overloaded","time":"2026-11-10T21:03:53.321031+00:00","consecutive_503":1,"backoff_seconds":30,"execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_021","condition":"B","split":"test"}
+{"event":"cooldown_updated","code":503,"cooldown_until":"2026-11-10T21:04:23.321011+00:00","source":"recorded Retry-After/RetryInfo or fallback backoff; provider reset not inferred","time":"2026-11-10T21:03:53.322447+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_021","condition":"B","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:04:23.323306+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_021","condition":"B","split":"test"}
+{"event":"service_recovered","time":"2026-11-10T21:05:00.327683+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_021","condition":"B","split":"test"}

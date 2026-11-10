@@ -1,239 +1,23 @@
 {
   "status": "partial_complete",
   "reason": "이번 실행의 신규 요청 예산에 도달했습니다.",
-  "updated_at": "2026-11-10T20:44:13.474998+00:00",
+  "updated_at": "2026-11-10T21:05:00.420242+00:00",
   "config_id": "cc67f503605a3acd86112e8734b755f1c1da6e86d5cea9a3c8da1de43c3708e9",
   "split": "test",
   "expected_requests": 320,
-  "successful_requests": 268,
-  "failed_requests": 0,
-  "saved_responses": 268,
-  "response_log_entries": 277,
-  "pending_count": 52,
+  "successful_requests": 301,
+  "failed_requests": 3,
+  "saved_responses": 304,
+  "response_log_entries": 313,
+  "pending_count": 19,
   "pending_requests": [
-    {
-      "id": "trig_2_017",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "test",
-      "request_sha256": "31e9db85fa142f60d9d51354f282ca5d5df3283bbb774e0e5f052664ea312e8a",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_2_022",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "test",
-      "request_sha256": "64c56b793d804f26ec36acd702e8bea6745888015a703c11e845213d45a11562",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_2_022",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "test",
-      "request_sha256": "d4b31ca783036556c67b074c37ed1d32c3f4573541bb43503517360a6150e273",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_2_022",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "test",
-      "request_sha256": "b0eb303ab68f5e7fb2364e2720d73de7548a6b36f11aa862ce29f22db474eafc",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_2_024",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "test",
-      "request_sha256": "1c7fec9b283379af5ca9dae586b47df462ca509a984c6c6df27d7ffc251c4bee",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_2_024",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "test",
-      "request_sha256": "f23db6be9d7e88a9490007b6b93d14bfab118b1628c8f99b52321ac8aa4896f1",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_2_024",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "test",
-      "request_sha256": "bd34d20fb2fb066baf95cf0ec70dbc78c21396bfaeb6efb4af53828358c19cf8",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_2_025",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "test",
-      "request_sha256": "b6cf58be5fd431e8f7bbcb0e0a9a4e7159ecdbd2fcd98113ef7d8e648f7d11d1",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_2_025",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "test",
-      "request_sha256": "34f38e87c0b92002bd24401576701431c86470a813a4ba9e7551a8b55372a8d6",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_2_025",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "test",
-      "request_sha256": "018234146ee4ce3e47da0a0132ed74c3fcd2a4b84efa2d4f1f49325d2cbc752f",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_2_030",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "test",
-      "request_sha256": "0fc9f5ed0ce4e99c4d4841e66212ddc93f69baa293c790db5a3f2993f8d60ec8",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_2_030",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "test",
-      "request_sha256": "43e6a0f674f1ffc9c9b9ef5d88f710cf786e19d7ff6ea440960ddff4ac83bdcd",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_2_030",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "test",
-      "request_sha256": "2d00463845ca074421212d682bb56ad686ae6b304109c8a4185d0ef8221a3d6b",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_2_035",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "test",
-      "request_sha256": "2149aaeb337733c0f9c767d4af954bdeae659bf31e47851da96ed90d28d9e4a2",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_2_035",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "test",
-      "request_sha256": "940b094cc6390793c87efb387844bac1e513973e64adf22ec813765a596eda26",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_2_035",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "test",
-      "request_sha256": "b389763d4e7a4be4d8facd67921c3c6c8cc89cba9650477ca4d6547c3774a16a",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_002",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "test",
-      "request_sha256": "986323b7508cb53e7fc9e9c699f67ce31e1f078dc3b4faea4a73fd16d07707fb",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_002",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "test",
-      "request_sha256": "d223c02f35421bc200d8a2f7ba3001bdd632043e5ced4b9f4a0a0fd52be76baf",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_002",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "test",
-      "request_sha256": "92347ff6fd555e1702484aae697e05221ec055c7d508ca3529130107da58898e",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_010",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "test",
-      "request_sha256": "18f1b29ab7a0787bcff86b5967bb049855e6879cbd401fe13378327629c7f1c5",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_010",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "test",
-      "request_sha256": "ca06d2706bdae2355895c559f9f8153d957dffe4656e27356705ee6ae2832058",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_010",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "test",
-      "request_sha256": "f0397a857d5c1106248b9aa55745863eb56c9cc1e3596d099be0d2b6dec47cb0",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_011",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "test",
-      "request_sha256": "80ac47493a8bf8087fb224b3a0bfab4306986402b4b91297c574af3611d83bff",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_011",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "test",
-      "request_sha256": "b666b30182ac3dac3ddd8fcc0c084a5662eee56b052cab71fd856f23133c4c89",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_011",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "test",
-      "request_sha256": "9f813e740444d34ee2ee62598e06cc390f116c37a61b21e55c1dd2749adcc532",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_014",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "test",
-      "request_sha256": "140a1432ef0251d6cca129a096ebdf114d10354215a6c897741c13426f862524",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_014",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "test",
-      "request_sha256": "946c75055dc8f0e6017d83d6d013a3bd410b29588d91bdd50450d38e596da4c0",
-      "last_status": "not_executed"
-    },
     {
       "id": "trig_3_014",
       "condition": "B",
       "method": "regression_hint",
       "split": "test",
       "request_sha256": "bf0ac9c68f361b0bb905c1395aabd5bde499dfb7c477d476aeb7cdbba8bb2520",
-      "last_status": "not_executed"
+      "last_status": "api_error"
     },
     {
       "id": "trig_3_015",
@@ -241,39 +25,7 @@
       "method": "regression_hint",
       "split": "test",
       "request_sha256": "217fa7784de2b20b4f6dc3f9e90aaeeee9e6ecc46f000161f5cc07b07e0533c8",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_015",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "test",
-      "request_sha256": "f18590587cc6aca04ba5300c1cf3d6ac3de3504b6d38b5286d7c9aaec9803c62",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_015",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "test",
-      "request_sha256": "d17bf649959a8c3b83878f84359d709dc35b2105dcb15ecff59f7a1a16c642c5",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_017",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "test",
-      "request_sha256": "12ebbeb78d984e613f970cabc34a331ece7e9f6a0b2bce54248ca68175ccdcaf",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_017",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "test",
-      "request_sha256": "259639eb7e7b451a65fbb15f9bbc3f62638dd3ee1a6218ea35c72502ad11eb31",
-      "last_status": "not_executed"
+      "last_status": "api_error"
     },
     {
       "id": "trig_3_017",
@@ -281,23 +33,7 @@
       "method": "deep_learning_hint",
       "split": "test",
       "request_sha256": "a36e2dad43886e05c3ebbcd94565a100e5cea1a6de73529e4070bd9516037c68",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_021",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "test",
-      "request_sha256": "8af2f33219e183cc0717759793550cb8aa60ba08c93d3145be921d690e272c81",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_021",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "test",
-      "request_sha256": "5c1d886654ed35ad978605873cb004a737977bb837b05bdeba73e42c12e5b3d7",
-      "last_status": "not_executed"
+      "last_status": "api_error"
     },
     {
       "id": "trig_3_021",
@@ -429,7 +165,7 @@
     }
   ],
   "reused_successes": 80,
-  "new_successes": 188,
+  "new_successes": 221,
   "safe_to_resume": true,
   "resume_command": "python -m mathhint_solver.final_experiment_2.gemini_comparison generate",
   "resume_prerequisites": "기록된 재시도 대기 및 실행 제한을 확인한 후 미완료 요청만 재실행",
@@ -443,9 +179,9 @@
   },
   "limiter": {
     "new_request_starts": 40,
-    "rolling_minute_starts": 6,
-    "rolling_hour_starts": 155,
-    "rolling_24h_starts": 213,
+    "rolling_minute_starts": 1,
+    "rolling_hour_starts": 136,
+    "rolling_24h_starts": 253,
     "status": "partial_complete",
     "reason": "이번 실행의 신규 요청 예산에 도달했습니다.",
     "daily_quota_reported": false,

@@ -4717,6 +4717,928 @@
       ],
       "alternative_solution": true,
       "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_1_046",
+      "condition": "D",
+      "response_sha256": "be2ef585312deda009c2de4de241d2816731699c56599e9a70f670b11362b2d6",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "θ=πx/5 치환과 구간 0<θ≤2π가 정확하다. 실제 풀이는 두 그래프 비교로 π/4<θ<5π/4를 구하므로 코사인으로 나누는 방법을 언급했어도 부호나 영점 오류를 범하지 않았다. x구간 (5/4,25/4)의 자연수 2부터 6과 합 20 및 최종정답이 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$0 < x \\leq 10$이므로 $0 < \\theta \\leq 2\\pi$입니다.",
+        "$\\frac{\\pi}{4} < \\theta < \\frac{5}{4}\\pi$ 입니다.",
+        "$\\frac{5}{4} < x < \\frac{25}{4}$",
+        "따라서 모든 자연수 $x$의 값의 합은 $2 + 3 + 4 + 5 + 6 = 20$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_003",
+      "condition": "B",
+      "response_sha256": "4a512d3b5875ddcd50201b5fa6f71499c4d07d6b00b15fbe03facbb6efe4b92e",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "두 동경의 탄젠트를 좌표의 비로 정확히 표현했다. a,b>0이므로 b/a로 나눌 수 있고 그 결과 a=2b를 바르게 얻었다. 제1사분면에서 탄젠트 1/2인 직각삼각형으로 사인 1/√5를 구한 과정과 최종정답 ②가 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\tan \\theta_1 = \\frac{b}{a}$",
+        "$\\tan \\theta_2 = \\frac{-2b^2}{a^2}$",
+        "$1 = \\frac{2b}{a}$",
+        "$\\sin \\theta_1 = \\frac{\\text{높이}}{\\text{빗변}} = \\frac{1}{\\sqrt{5}} = \\frac{\\sqrt{5}}{5}$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_003",
+      "condition": "D",
+      "response_sha256": "d549267910d8f1b0f98a86f46c8915430b315571c90d3de3fc9ccb7d45d4a94c",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "탄젠트 조건을 b/a-2b²/a²=0으로 옮기고 양수 조건을 사용해 a=2b를 얻은 과정이 정확하다. P=(2b,b)의 원점 거리 √5b는 b>0이므로 맞고, 사인을 b/(√5b)로 구해 유리화한 계산과 최종정답 ②도 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\frac{b}{a} + \\left( -\\frac{2b^2}{a^2} \\right) = 0$",
+        "즉, $a = 2b$가 성립합니다.",
+        "$\\sqrt{(2b)^2 + b^2} = \\sqrt{5b^2} = \\sqrt{5}b$ (단, $b>0$)입니다.",
+        "$\\sin \\theta_1 = \\frac{b}{\\sqrt{5}b} = \\frac{1}{\\sqrt{5}} = \\frac{\\sqrt{5}}{5}$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_003",
+      "condition": "C",
+      "response_sha256": "d98bda5d580adf68ba0564c7498af4ba74fdea5c61e3530c61483a3e83d61bc9",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "좌표로부터 두 탄젠트를 구하고 b/a가 0이 아님을 확인한 나눗셈으로 a=2b를 정확히 얻었다. P의 제1사분면 조건을 유지하며 비가 2:1인 직각삼각형으로 sinθ₁=1/√5를 계산했다. 값 √5/5와 최종정답 ②가 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\tan \\theta_2 = \\frac{-2b^2}{a^2}$",
+        "$1 = \\frac{2b}{a}$",
+        "따라서 $a = 2b$가 성립합니다.",
+        "따라서 $\\sin \\theta_1 = \\frac{\\text{높이}}{\\text{빗변}} = \\frac{1}{\\sqrt{5}} = \\frac{\\sqrt{5}}{5}$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_007",
+      "condition": "B",
+      "response_sha256": "5c314fa87ac89e2cddbbdde6eaebee3fe03aaba108c6eb416ffdc9c6650f1dd0",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "네제곱 합을 1-2(sinθcosθ)²로 바꾸어 곱의 제곱 9/64를 정확히 얻었다. 제2사분면에서 곱이 음수이므로 -3/8을 선택했고, 차의 제곱 7/4와 차의 양수 조건을 올바르게 결합했다. √7/2와 최종정답 ⑤가 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$1 - 2(\\sin \\theta \\cos \\theta)^2 = \\frac{23}{32}$",
+        "따라서 $\\sin \\theta \\cos \\theta = -\\frac{3}{8}$입니다.",
+        "$= 1 - 2\\left(-\\frac{3}{8}\\right) = 1 + \\frac{3}{4} = \\frac{7}{4}$",
+        "따라서 $\\sin \\theta - \\cos \\theta = \\sqrt{\\frac{7}{4}} = \\frac{\\sqrt{7}}{2}$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_007",
+      "condition": "D",
+      "response_sha256": "82c3411edee3a6bad187a54bd2f23c98a5bb2526899bf789a125dd8224289163",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "항등식 전개와 분수 계산으로 (sinθcosθ)²=9/64를 정확히 구했다. 제2사분면 조건으로 곱을 -3/8, 차를 양수로 판정하여 차의 제곱 7/4에서 양의 근 √7/2를 선택한 과정이 타당하다. 최종정답 ⑤도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$(\\sin \\theta \\cos \\theta)^{2} = \\frac{9}{64}$",
+        "따라서 $\\sin \\theta \\cos \\theta = -\\frac{3}{8}$입니다.",
+        "$= 1 - 2\\left(-\\frac{3}{8}\\right) = 1 + \\frac{3}{4} = \\frac{7}{4}$",
+        "따라서 $\\sin \\theta - \\cos \\theta = \\sqrt{\\frac{7}{4}} = \\frac{\\sqrt{7}}{2}$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_007",
+      "condition": "C",
+      "response_sha256": "2c604f3c8068f3aeab41bcbad3a150f3acb2241c90d73ed02c84a5451f19222d",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "sin⁴θ+cos⁴θ의 항등식으로부터 곱의 제곱 9/64와 곱 -3/8을 정확히 계산했다. 제곱근의 두 부호를 제시한 뒤 제2사분면에서 sinθ-cosθ>0이라는 조건으로 올바른 부호를 골랐다. 차 √7/2와 최종정답 ⑤가 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$(\\sin \\theta \\cos \\theta)^2 = \\frac{9}{64}$",
+        "따라서 $\\sin \\theta \\cos \\theta = -\\frac{3}{8}$입니다.",
+        "$\\sin \\theta - \\cos \\theta = \\pm \\sqrt{\\frac{7}{4}} = \\pm \\frac{\\sqrt{7}}{2}$입니다.",
+        "따라서 $\\sin \\theta - \\cos \\theta = \\frac{\\sqrt{7}}{2}$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_014",
+      "condition": "C",
+      "response_sha256": "06037d8f279eb741cf1cfac783feffe806daeadc97a377a76a8c1edef3269622",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "a>0이므로 코사인의 주기 2π/(π/a)=2a를 적용할 수 있고 주기 4에서 a=2를 얻는 계산이 맞다. 진폭 4에 대한 최솟값 b-4=-1에서 b=3을 정확히 구했다. 합 5와 최종정답 ①이 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$$\\text{주기} = \\frac{2\\pi}{\\frac{\\pi}{a}} = 2a$$",
+        "$$2a = 4 \\implies a = 2$$",
+        "$$-4 + b = -1 \\implies b = 3$$",
+        "$$a + b = 2 + 3 = 5$$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_014",
+      "condition": "B",
+      "response_sha256": "9cc1a7404d25e653b3b8d510a0c6e53cce99f774ac533f701074ada3dc779877",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "양수 a 조건을 반영하여 주기를 2a로 정확히 정리했다. 주기 4와 최솟값 b-4=-1의 두 조건으로 a=2,b=3을 올바르게 계산했으며 a+b=5와 최종정답 ①도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$$\\text{주기} = \\frac{2\\pi}{\\frac{\\pi}{a}} = 2a$$",
+        "$$2a = 4 \\quad \\Rightarrow \\quad a = 2$$",
+        "$$-4 + b = -1$$",
+        "$$b = -1 + 4 = 3$$",
+        "$$a + b = 2 + 3 = 5$$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_014",
+      "condition": "D",
+      "response_sha256": "2fb6b548d1e954e825f1805f99f10631f834ccb0d0a372b4624685b031740b5e",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "주기 공식의 절댓값을 a>0으로 바르게 처리해 a=2를 구했다. 코사인 진폭이 4이므로 최솟값 b-4를 사용해 b=3을 얻는 과정이 정확하다. 최종 합 5와 보기 ①이 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$$\\frac{2\\pi}{\\left| \\frac{\\pi}{a} \\right|} = 4$$",
+        "$a > 0$이므로 $\\frac{2\\pi}{\\frac{\\pi}{a}} = 2a = 4$가 되어, $a = 2$입니다.",
+        "$$-4 + b = -1$$",
+        "구하는 값은 $a + b = 2 + 3 = 5$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_016",
+      "condition": "C",
+      "response_sha256": "a0f7549218a080d9070237749f70f36c5f4c3b0277ef75b589f764213acdffe0",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "cos(π/2+θ)=-sinθ를 정확히 적용해 sinθ=-√5/5를 얻었다. 탄젠트가 음수이고 사인도 음수이므로 코사인이 양수라는 부호 판단이 맞다. 항등식으로 구한 cos²θ=4/5에서 양의 근 2√5/5를 선택한 계산과 최종정답 ⑤가 정확하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\cos \\left( \\frac{\\pi}{2} + \\theta \\right) = -\\sin \\theta$",
+        "$\\sin \\theta$가 음수이므로, $\\tan \\theta$가 음수가 되려면 $\\cos \\theta$는 양수여야 합니다.",
+        "$\\cos^2 \\theta = 1 - \\frac{1}{5} = \\frac{4}{5}$",
+        "앞서 $\\cos \\theta > 0$임을 확인했으므로, $\\cos \\theta = \\frac{2\\sqrt{5}}{5}$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_016",
+      "condition": "D",
+      "response_sha256": "260a90d147444344024cbb8c1dc449affa364c31607930a6948345e623dbb772",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "위상이동 항등식으로 사인 값을 정확히 구했고 사인 음수와 탄젠트 음수 조건의 공통 사분면을 제4사분면으로 바르게 판정했다. 코사인의 양의 부호를 유지하며 cos²θ=4/5를 구하고 유리화한 2√5/5와 최종정답 ⑤가 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$-\\sin \\theta = \\frac{\\sqrt{5}}{5}$ 에서 $\\sin \\theta = -\\frac{\\sqrt{5}}{5}$ 입니다.",
+        "따라서 두 조건을 모두 만족하는 $\\theta$는 **제4사분면**의 각입니다.",
+        "$\\cos^2 \\theta = \\frac{4}{5}$",
+        "$\\cos \\theta = \\sqrt{\\frac{4}{5}} = \\frac{2}{\\sqrt{5}} = \\frac{2\\sqrt{5}}{5}$ (단, $\\cos \\theta > 0$)"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_016",
+      "condition": "B",
+      "response_sha256": "e1c728a82b0f3d7a1faf969e2a585375fc558fd26d12893e781cc4c66b8b7bba",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "삼각함수 변환으로 sinθ=-√5/5를 정확히 얻고 tanθ<0과 결합해 cosθ>0을 올바르게 결정했다. 피타고라스 항등식의 제곱 및 분수 계산이 정확하며 양의 근 2√5/5와 최종정답 ⑤가 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$-\\sin \\theta = \\frac{\\sqrt{5}}{5}$ 에서 $\\sin \\theta = -\\frac{\\sqrt{5}}{5}$ 입니다.",
+        "$\\tan \\theta = \\frac{\\sin \\theta}{\\cos \\theta} < 0$이고, $\\sin \\theta < 0$이므로 $\\cos \\theta$는 양수여야 합니다.",
+        "$\\cos^2 \\theta = 1 - \\frac{1}{5} = \\frac{4}{5}$",
+        "$\\cos \\theta = \\sqrt{\\frac{4}{5}} = \\frac{2}{\\sqrt{5}} = \\frac{2\\sqrt{5}}{5}$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_017",
+      "condition": "C",
+      "response_sha256": "d546571088d37ca53532ae5c11b78151938c418bdccd24c2f061a1c464a65525",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "홀함수 성질로 sinθ=-1/3을 구하고 항등식으로 cos²θ=8/9를 정확히 계산했다. 원문 3π/2<θ<2π의 제4사분면 조건으로 양의 코사인을 선택하여 tanθ=-√2/4를 구한 과정과 최종정답 ②가 맞다. 참고풀이의 각 범위가 2π/3<θ<2π로 적힌 부분은 원문과 다른 오기이며, 응답은 원문 조건을 정확히 따랐고 원자료는 수정하지 않는다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$-\\sin\\theta = \\frac{1}{3}$ 이므로, $\\sin\\theta = -\\frac{1}{3}$ 입니다.",
+        "$\\cos^2\\theta = 1 - \\frac{1}{9} = \\frac{8}{9}$",
+        "문제에서 $\\frac{3}{2}\\pi < \\theta < 2\\pi$ (제4사분면)라고 하였으므로, 제4사분면에서 코사인 값은 양수입니다.",
+        "$-\\frac{1}{2\\sqrt{2}} \\times \\frac{\\sqrt{2}}{\\sqrt{2}} = -\\frac{\\sqrt{2}}{2 \\times 2} = -\\frac{\\sqrt{2}}{4}$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_017",
+      "condition": "B",
+      "response_sha256": "d2282ab8353427506ff70951a84bb105dedc02bb5559d48f1a6fd3d1501c3f03",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "sin(-θ)=-sinθ를 사용해 사인 값을 정확히 결정했다. 원문 구간 3π/2<θ<2π에 따른 양의 코사인 2√2/3과 탄젠트의 나눗셈·유리화 계산이 올바르므로 최종값 -√2/4 및 정답 ②가 맞다. 참고풀이의 2π/3이라는 각 범위 표기는 원문과 다른 오기지만 응답은 원문 제4사분면 조건을 바르게 적용했다. 원자료 변경은 하지 않는다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$-\\sin\\theta = \\frac{1}{3} \\implies \\sin\\theta = -\\frac{1}{3}$",
+        "문제에서 $\\frac{3}{2}\\pi < \\theta < 2\\pi$라고 하였으므로, $\\theta$는 제4사분면의 각입니다.",
+        "$\\cos\\theta = \\sqrt{\\frac{8}{9}} = \\frac{2\\sqrt{2}}{3}$ (단, $\\cos\\theta > 0$)",
+        "$\\tan\\theta = -\\frac{\\sqrt{2}}{2 \\times 2} = -\\frac{\\sqrt{2}}{4}$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_017",
+      "condition": "D",
+      "response_sha256": "f876d11b0023abf5eb60e92d8551332754c429bf303ea7572abf5274750d5a8e",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "홀함수 성질로 sinθ=-1/3을 얻고 항등식으로 cos²θ=8/9를 정확히 계산했다. 원문 3π/2<θ<2π의 제4사분면 조건에서 cosθ>0을 선택한 뒤 tanθ를 나누고 유리화한 결과 -√2/4와 최종정답 ②가 맞다. 참고풀이에는 구간을 2π/3<θ<2π로 적은 원문과 다른 오기가 있지만 응답은 원문을 정확히 따랐으며 원자료는 수정하지 않는다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$-\\sin\\theta = \\frac{1}{3}$ 이므로, $\\sin\\theta = -\\frac{1}{3}$ 입니다.",
+        "$\\cos^2\\theta = \\frac{8}{9}$",
+        "문제에서 $\\frac{3}{2}\\pi < \\theta < 2\\pi$ (제4사분면)라고 하였으므로, $\\cos\\theta > 0$입니다.",
+        "$\\tan\\theta = -\\frac{\\sqrt{2}}{2 \\times 2} = -\\frac{\\sqrt{2}}{4}$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_022",
+      "condition": "C",
+      "response_sha256": "daa528723af16ef8c0b03c0f445f65d38663fe2eddd761449e8cf7dacea04dca",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "sin(π+x)=-sinx와 cos²x=1-sin²x를 정확히 적용해 sinx(2sinx-1)=0을 얻었다. 0<x<2π에서 sinx=0의 내부 해 π를 포함하고 두 끝점은 제외했으며 sinx=1/2의 두 해 π/6,5π/6도 모두 구했다. 세 해의 합 2π와 최종정답 ③가 맞고 누락된 근이 없다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$2 \\cos^{2} x + \\sin x - 2 = 0$",
+        "$\\sin x (2 \\sin x - 1) = 0$",
+        "- $\\sin x = 0$인 경우: $x = \\pi$",
+        "- $\\sin x = \\frac{1}{2}$인 경우: $x = \\frac{\\pi}{6}$ 또는 $x = \\frac{5}{6}\\pi$",
+        "구한 해들의 합은 $\\pi + \\frac{\\pi}{6} + \\frac{5}{6}\\pi = \\pi + \\pi = 2\\pi$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_022",
+      "condition": "B",
+      "response_sha256": "f8fec81fede27a9c78cafffa8e18e91489a394b6e247a2e6eb1a3a6cfc5fefd0",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "원래 식의 부호와 위상을 정확히 바꾸어 -2sin²x+sinx=0을 얻고 양변에 -1을 곱해 인수분해한 과정이 타당하다. 열린 구간에서 내부 해 π를 정확히 보존했으며 π/6,5π/6의 두 해도 빠짐없이 포함했다. 따라서 세 근의 합 2π와 최종정답 ③ 모두 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$-2 \\sin^{2} x + \\sin x = 0$",
+        "$\\sin x (2 \\sin x - 1) = 0$",
+        "- $\\sin x = 0$인 경우: $x = \\pi$",
+        "- $\\sin x = \\frac{1}{2}$인 경우: $x = \\frac{\\pi}{6}$ 또는 $x = \\frac{5}{6}\\pi$",
+        "구한 해들의 합은 $\\pi + \\frac{\\pi}{6} + \\frac{5}{6}\\pi = \\pi + \\pi = 2\\pi$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_022",
+      "condition": "D",
+      "response_sha256": "d595e4524d2c1bab3e56c99c4032d08219d6c7848ddd015fd68a1e0082b729b8",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "삼각함수 변환과 인수분해가 정확하고 sinx로 나누지 않아 sinx=0의 해를 보존했다. 원래 열린 구간 0<x<2π에서 x=π를 포함하고 0,2π를 제외했으며 나머지 두 근 π/6,5π/6도 정확하다. 모든 근의 합 2π와 최종정답 ③가 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$2(1 - \\sin^{2} x) + \\sin x - 2 = 0$",
+        "$\\sin x (2 \\sin x - 1) = 0$",
+        "- $\\sin x = 0$인 경우: $x = \\pi$",
+        "- $\\sin x = \\frac{1}{2}$인 경우: $x = \\frac{\\pi}{6}$ 또는 $x = \\frac{5}{6}\\pi$",
+        "$\\pi + \\frac{\\pi}{6} + \\frac{5}{6}\\pi = \\pi + \\pi = 2\\pi$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_024",
+      "condition": "C",
+      "response_sha256": "e74443afb050ede6dfbd9762704e9c84300f1427489d66ae3197b85b036c3693",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "원래 반열린 구간 0≤x<8을 θ=πx/2로 바꾸어 0≤θ<4π로 정확히 옮겼다. 각 주기의 두 해 α,π-α 및 2π+α,3π-α를 모두 포함하여 위상 합 6π를 구했고 x=2θ/π로 환산한 합 12도 정확하다. 최종정답이 맞다. 참고풀이의 그래프 평균점 대신 위상 일반해를 이용한 유효한 방법이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$0 \\leq x < 8$이므로 $0 \\leq \\theta < 4\\pi$입니다.",
+        "$\\alpha + (\\pi - \\alpha) = \\pi$",
+        "$\\theta = 2\\pi + \\alpha$와 $\\theta = 3\\pi - \\alpha$가 해가 되며,",
+        "따라서 $\\theta$의 모든 해의 합은 $\\pi + 5\\pi = 6\\pi$입니다.",
+        "$x$의 합은 $\\frac{2}{\\pi} \\times 6\\pi = 12$입니다."
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_024",
+      "condition": "D",
+      "response_sha256": "abf8e61ae1bc1a95240478a370f8bb66694a14f1937ea39f18b9514468b6e9e2",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "치환한 각의 구간 0≤θ<4π를 정확히 잡고, 첫 주기의 두 해 α,β와 다음 주기의 두 해 α+2π,β+2π를 빠짐없이 구했다. α+β=π의 사인 대칭성을 이용하여 x좌표 네 개의 합 12를 정확히 계산했다. 끝점은 애초 사인값 3/4를 만족하지 않으므로 누락·추가가 없고 최종정답도 맞다. 위상 치환과 주기 이동을 쓴 유효한 다른 전개이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$0 \\leq x < 8$이므로 $0 \\leq \\theta < 4\\pi$입니다.",
+        "$\\alpha + \\beta = \\pi$ (대칭성) 관계가 성립합니다.",
+        "따라서 $\\theta$의 값은 $\\alpha, \\beta, \\alpha+2\\pi, \\beta+2\\pi$입니다.",
+        "합 $= \\frac{2}{\\pi}(\\pi) + \\frac{2}{\\pi}(\\pi) + 8 = 2 + 2 + 8 = 12$입니다."
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_024",
+      "condition": "B",
+      "response_sha256": "aaae56fa6ceee6e48f72c7429cfde41e428dc90ecd3a5d35c4b989b69891331c",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "원문 반열린 구간 0≤x<8을 치환하여 0≤t<4π로 정확히 옮겼다. 두 주기의 해 α,π-α와 α+2π,3π-α를 모두 포함해 t의 합 6π를 구하고 x=2t/π로 환산한 합 12가 맞다. 최종정답도 정확하며 참고풀이의 좌표 평균점 대신 위상 일반해를 이용한 유효한 다른 전개이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$0 \\leq x < 8$이므로 $0 \\leq t < 4\\pi$입니다.",
+        "$\\alpha + (\\pi - \\alpha) = \\pi$입니다.",
+        "$(\\alpha + 2\\pi) + (\\pi - \\alpha + 2\\pi) = 5\\pi$입니다.",
+        "$\\sum x = \\frac{2}{\\pi} \\times 6\\pi = 12$"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_025",
+      "condition": "C",
+      "response_sha256": "a1470fc6636ebb7a16d9bb018bef8e42f8bf9a2beba807b8146f6a2a50e3df8f",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "방정식을 cosx=√2/2로 바꾸고 원래 닫힌구간을 두 부분으로 나누어 근을 정확히 나열했다. π/4,7π/4,9π/4는 모두 포함되고 다음 근 15π/4는 3π보다 커서 제외된다. 근의 합 17π/4와 최종정답 ③이 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\cos x = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$",
+        "$x = \\frac{\\pi}{4}$와 $x = 2\\pi - \\frac{\\pi}{4} = \\frac{7}{4}\\pi$입니다.",
+        "$x = 2\\pi + \\frac{\\pi}{4} = \\frac{9}{4}\\pi$가 해가 됩니다.",
+        "$\\frac{\\pi}{4} + \\frac{7}{4}\\pi + \\frac{9}{4}\\pi = \\frac{17}{4}\\pi$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_025",
+      "condition": "D",
+      "response_sha256": "5047d8ef7355092236938a0c778eb300591fe745fb10555d53e318ca1197a379",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "cosx=√2/2의 해를 첫 주기와 뒤의 반 주기에서 빠짐없이 구했다. 원문 0≤x≤3π의 양 끝점은 해가 아니므로 근의 개수에 영향을 주지 않으며 포함된 세 근 π/4,7π/4,9π/4가 정확하다. 합 17π/4와 최종정답 ③이 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\cos x = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$",
+        "$x = \\frac{\\pi}{4}$와 $x = 2\\pi - \\frac{\\pi}{4} = \\frac{7}{4}\\pi$입니다.",
+        "$x = 2\\pi + \\frac{\\pi}{4} = \\frac{9}{4}\\pi$입니다.",
+        "$\\frac{\\pi}{4} + \\frac{7}{4}\\pi + \\frac{9}{4}\\pi = \\frac{17}{4}\\pi$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_025",
+      "condition": "B",
+      "response_sha256": "5bd75b278a25961df2ec912c70a5591a753ec634163c622e336064ff2cbede56",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "특수각의 코사인 값을 정확히 적용하여 주어진 구간 안의 세 근 π/4,7π/4,9π/4를 구했다. 15π/4가 상한을 벗어남을 명시해 추가 근을 올바르게 제외했다. 세 근의 합 17π/4와 최종정답 ③이 정확하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\cos x = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$",
+        "$x = 2\\pi + \\frac{\\pi}{4} = \\frac{9}{4}\\pi$가 해가 됩니다.",
+        "다음 해인 $2\\pi + \\frac{7}{4}\\pi = \\frac{15}{4}\\pi$는 $3\\pi$를 초과하므로 제외됩니다.",
+        "$\\frac{\\pi}{4} + \\frac{7}{4}\\pi + \\frac{9}{4}\\pi = \\frac{17}{4}\\pi$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_030",
+      "condition": "D",
+      "response_sha256": "c5052394efae7569cf7ff6cf0df13b15969c23db4012fa5b594849ac7ca86f3a",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "절댓값 방정식을 두 경우로 나누어 sin3x=0 또는 -1로 만든 과정이 정확하다. 0≤3x<6π에서 0은 포함하고 6π는 제외하여 첫 경우 6개, 둘째 경우 3개를 정확히 구했다. 두 경우의 해는 겹치지 않으므로 교점 9개와 최종정답 ③이 맞다. 참고풀이의 그래프 개형 대신 대수적으로 해를 세는 유효한 방법이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$4 \\sin 3x + 2 = 2$ 또는 $4 \\sin 3x + 2 = -2$",
+        "$\\sin 3x = 0$을 만족하는 $3x$의 값은 $0, \\pi, 2\\pi, 3\\pi, 4\\pi, 5\\pi$로 총 **6개**입니다.",
+        "$\\sin 3x = -1$을 만족하는 $3x$의 값은 $\\frac{3}{2}\\pi, \\frac{7}{2}\\pi, \\frac{11}{2}\\pi$로 총 **3개**입니다.",
+        "따라서 만나는 서로 다른 점의 개수는 $6 + 3 = 9$개입니다."
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_030",
+      "condition": "B",
+      "response_sha256": "dc4d097e9bd6cbed5a7113fcfa38d9d504ef3eab5a8b30ff4dda9dc64cf515e0",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "절댓값 방정식의 동치를 정확히 적용해 두 사인 방정식으로 나누었다. 반열린 원문 구간을 0≤3x<6π로 옮겨 sin3x=0인 여섯 해와 -1인 세 해를 정확히 나열했다. 중복 없는 아홉 x좌표가 서로 다른 교점을 이루므로 최종정답 ③이 맞다. 그래프 대신 식으로 모든 교점을 센 유효한 대안 풀이이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "절댓값 방정식 $|A| = 2$는 $A = 2$ 또는 $A = -2$와 동치입니다.",
+        "$x = 0, \\frac{\\pi}{3}, \\frac{2\\pi}{3}, \\pi, \\frac{4\\pi}{3}, \\frac{5\\pi}{3}$",
+        "$x = \\frac{\\pi}{2}, \\frac{7\\pi}{6}, \\frac{11\\pi}{6}$",
+        "위에서 구한 해들은 서로 중복되지 않습니다. 따라서 전체 서로 다른 점의 개수는 $6 + 3 = 9$개입니다."
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_030",
+      "condition": "C",
+      "response_sha256": "6601b9dafb3098f034f83d1d9c1fac67afd7d5ba3c33b6615c633e7b7427b085",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "절댓값의 양·음 두 경우를 모두 고려하여 빠진 교점이 없다. 0≤x<2π에서 sin3x=0의 6개와 sin3x=-1의 3개를 정확히 구했으며 x=0은 포함하고 2π는 제외했다. 중복 없는 9개라는 결과와 최종정답 ③이 맞다. 참고풀이의 그래프 개형 대신 두 방정식의 근을 직접 센 유효한 풀이이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "절댓값 방정식 $|A| = 2$는 $A = 2$ 또는 $A = -2$와 동치입니다.",
+        "$x = 0, \\frac{\\pi}{3}, \\frac{2\\pi}{3}, \\pi, \\frac{4\\pi}{3}, \\frac{5\\pi}{3}$으로 총 **6개**의 해가 존재합니다.",
+        "$x = \\frac{\\pi}{2}, \\frac{7\\pi}{6}, \\frac{11\\pi}{6}$으로 총 **3개**의 해가 존재합니다.",
+        "따라서 전체 서로 다른 점의 개수는 $6 + 3 = 9$개입니다."
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_035",
+      "condition": "D",
+      "response_sha256": "464b923056d50e3d8274e98d22cd6603d3057bb3c3c731eee03cdc69407823e3",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "f(2+x)와 f(2-x)가 모두 cos(πx/4)임을 정확히 계산하여 제곱 부등식으로 바꿨다. cos²θ<1/4와 동치인 -1/2<cosθ<1/2의 네 열린 구간을 0<θ<4π에서 빠짐없이 구했다. x로 환산한 네 구간의 자연수는 2,6,10,14뿐이므로 합 32와 최종정답이 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(2+x) = \\sin \\frac{\\pi}{4}(2+x) = \\sin \\left( \\frac{\\pi}{2} + \\frac{\\pi}{4}x \\right) = \\cos \\frac{\\pi}{4}x$",
+        "$f(2-x) = \\sin \\frac{\\pi}{4}(2-x) = \\sin \\left( \\frac{\\pi}{2} - \\frac{\\pi}{4}x \\right) = \\cos \\frac{\\pi}{4}x$",
+        "$\\frac{\\pi}{3} < \\theta < \\frac{2\\pi}{3}$, $\\frac{4\\pi}{3} < \\theta < \\frac{5\\pi}{3}$, $\\frac{7\\pi}{3} < \\theta < \\frac{8\\pi}{3}$, $\\frac{10\\pi}{3} < \\theta < \\frac{11\\pi}{3}$ 입니다.",
+        "만족하는 자연수 $x$는 $2, 6, 10, 14$입니다.",
+        "이들의 합은 $2 + 6 + 10 + 14 = 32$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_035",
+      "condition": "C",
+      "response_sha256": "108467f2d22953c554d9f637a1bb5698aabe3d7f970efd9b14da9a95c68581d8",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "두 평행이동한 사인 값이 모두 cos(πx/4)임을 정확히 계산해 cos²(πx/4)<1/4로 바꿨다. 각의 범위 0<θ<4π에서 코사인이 -1/2와 1/2 사이인 네 열린 구간을 올바르게 구했다. x로 환산한 각 구간에 자연수 하나씩 2,6,10,14가 있으므로 합 32와 최종정답이 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\cos^2 \\left( \\frac{\\pi}{4}x \\right) < \\frac{1}{4}$",
+        "$\\frac{\\pi}{3} < \\theta < \\frac{2\\pi}{3}$",
+        "$\\frac{10\\pi}{3} < \\theta < \\frac{11\\pi}{3}$",
+        "따라서 구하는 모든 자연수 $x$의 합은 $2 + 6 + 10 + 14 = 32$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_035",
+      "condition": "B",
+      "response_sha256": "48b25b2daeb29fd2465dadac2b4acd7d2faf2b0c634e7db03b35243dba998197",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "함수의 두 입력을 여각 사인 공식으로 정확히 바꾸고 목표 부등식을 코사인 제곱으로 정리했다. 치환한 각의 네 열린 구간과 원래 x의 구간 환산이 모두 맞다. 엄격한 부등호를 유지하며 자연수 2,6,10,14만 선택한 과정과 합 32 및 최종정답이 정확하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\cos^2 \\left( \\frac{\\pi}{4}x \\right) < \\frac{1}{4}$",
+        "$\\frac{\\pi}{3} < \\theta < \\frac{2\\pi}{3}$ 또는 $\\frac{4\\pi}{3} < \\theta < \\frac{5\\pi}{3}$ 또는 $\\frac{7\\pi}{3} < \\theta < \\frac{8\\pi}{3}$ 또는 $\\frac{10\\pi}{3} < \\theta < \\frac{11\\pi}{3}$",
+        "만족하는 자연수 $x$는 $2, 6, 10, 14$입니다.",
+        "이들의 합은 $2 + 6 + 10 + 14 = 32$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_002",
+      "condition": "D",
+      "response_sha256": "a81307e13468dc7b0886733af4548e6974a7d8d67a45154717409667606de8cb",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "근의 합과 곱을 정확히 세웠다. tanθ가 실수인 근으로 주어져 cosθ≠0이므로 cosθ를 곱하고 약분하는 과정이 정당하다. 사인에 관한 이차방정식의 인수분해와 치역에 따른 sinθ=-2/3 선택이 맞으며 곱 -k=30sinθ=-20에서 k=20을 올바르게 구했다. 최종정답도 맞고 k>0이므로 두 근은 서로 다르다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$6 \\cos^2 \\theta + 5 \\sin \\theta = 0$",
+        "$(2 \\sin \\theta - 3)(3 \\sin \\theta + 2) = 0$",
+        "$-1 \\leq \\sin \\theta \\leq 1$이므로, $\\sin \\theta = -\\frac{2}{3}$입니다.",
+        "$-k = (6 \\cos \\theta)(5 \\tan \\theta) = 30 \\cos \\theta \\cdot \\frac{\\sin \\theta}{\\cos \\theta} = 30 \\sin \\theta$",
+        "따라서 $k = 20$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_002",
+      "condition": "B",
+      "response_sha256": "3dcdc8f10cdb114901a48cf4ad5fc041c3415ec338366911829f290ea4d2ddf3",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "근의 합 0과 곱 -k를 정확히 적용했다. cosθ≠0임을 명시하고 사인 이차방정식으로 변형했으며, 치역 밖의 3/2를 제외해 sinθ=-2/3을 얻었다. 곱에서 cosθ를 약분해 k=20을 계산한 과정과 최종정답이 맞고, 이 k는 서로 다른 두 실근 조건도 만족한다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "양변에 $\\cos \\theta$를 곱하면 ($ \\cos \\theta \\neq 0$):",
+        "$(2 \\sin \\theta - 3)(3 \\sin \\theta + 2) = 0$",
+        "$\\sin \\theta$의 값은 $-1 \\le \\sin \\theta \\le 1$이어야 하므로, $\\sin \\theta = -\\frac{2}{3}$입니다.",
+        "$-k = 30 \\left( -\\frac{2}{3} \\right) = -20$",
+        "따라서 $k = 20$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_002",
+      "condition": "C",
+      "response_sha256": "c1daeb02496bcbc6952bcee5c0fe806ae652e95446cd81877d4e08d5464d9a5a",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "비에타 관계, cosθ≠0 조건을 유지한 변형, 사인 이차방정식의 인수분해가 모두 정확하다. sinθ=-2/3과 cos²θ=5/9에서 근의 곱을 계산해 k=20을 얻었고, 마지막 검산은 가능한 양의 코사인 부호를 택해 서로 다른 두 근 ±2√5가 실제로 구현됨을 보여준다. 음의 코사인을 택해도 두 근의 순서만 바뀌므로 결론과 최종정답이 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "양변에 $\\cos \\theta$를 곱하면($\\cos \\theta \\neq 0$):",
+        "$(2 \\sin \\theta - 3)(3 \\sin \\theta + 2) = 0$",
+        "$-k = 30 \\left(-\\frac{2}{3}\\right) = -20$",
+        "$k=20$일 때 $x^2 - 20 = 0$의 두 근은 $\\pm \\sqrt{20} = \\pm 2\\sqrt{5}$이다.",
+        "두 근이 서로 다르므로 조건을 만족한다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_010",
+      "condition": "D",
+      "response_sha256": "664c8592ed785163e955b3f81f78655cd6b2de236b96918abd18405ebe72c47e",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "모든 실수 θ에 성립하는 cos(θ+π/2)=-sinθ를 정확히 적용했다. 주어진 sinθ=1/3을 대입해 -1/3을 얻은 과정과 최종정답 ⑤가 맞으며 추가 사분면 가정이 필요하지 않다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\cos \\left( \\theta + \\frac{\\pi}{2} \\right) = -\\sin \\theta$",
+        "$-\\sin \\theta = -\\frac{1}{3}$",
+        "최종정답: ⑤"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_010",
+      "condition": "B",
+      "response_sha256": "45f78496310f4d84349d7ea84be25dd4db1e85e9ba500925baafde0c74068532",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "위상이동 항등식 cos(θ+π/2)=-sinθ가 정확하고 주어진 사인 값을 대입한 계산도 맞다. 목표 값은 -1/3이므로 최종정답 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\cos \\left( \\theta + \\frac{\\pi}{2} \\right) = -\\sin \\theta$",
+        "$-\\sin \\theta = -\\frac{1}{3}$",
+        "최종정답: ⑤"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_010",
+      "condition": "C",
+      "response_sha256": "45f78496310f4d84349d7ea84be25dd4db1e85e9ba500925baafde0c74068532",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "각 변환 공식을 올바르게 사용해 목표 코사인을 사인의 음수로 표현했다. sinθ=1/3에 따른 값 -1/3과 최종정답 ⑤가 정확하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\cos \\left( \\theta + \\frac{\\pi}{2} \\right) = -\\sin \\theta$",
+        "$-\\sin \\theta = -\\frac{1}{3}$",
+        "최종정답: ⑤"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_011",
+      "condition": "D",
+      "response_sha256": "aedbb38050adbf34da8a7c01e9022777b449a5f59b4d186b9b1c0a6c062b7110",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "제1사분면과 sinα=1/3에서 양수 좌표의 관계 x=2√2y를 정확히 구했다. 직선 y=x 대칭으로 좌표를 교환하고 원점 대칭으로 두 부호를 바꾼 과정이 맞다. y>0을 반영한 거리 3y와 삼각비로 sin²β=8/9, tan²γ=8을 정확히 얻어 값 80과 최종정답이 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$8y^2 = x^2$, 즉 $x = 2\\sqrt{2}y$입니다.",
+        "$\\sin \\beta = \\frac{2\\sqrt{2}y}{\\sqrt{y^2 + (2\\sqrt{2}y)^2}} = \\frac{2\\sqrt{2}y}{3y} = \\frac{2\\sqrt{2}}{3}$입니다.",
+        "$\\mathrm{R}(-y, -2\\sqrt{2}y)$입니다.",
+        "$\\tan \\gamma = \\frac{-2\\sqrt{2}y}{-y} = 2\\sqrt{2}$입니다.",
+        "$9(\\sin^2 \\beta + \\tan^2 \\gamma) = 9\\left(\\frac{8}{9} + 8\\right) = 9 \\times \\frac{8}{9} + 9 \\times 8 = 8 + 72 = 80$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_011",
+      "condition": "C",
+      "response_sha256": "9a40b08c9100fa6b25b74d34fb127aed491989751cf6e7a310b5f571240a7e01",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "원점 거리와 제1사분면 부호를 반영해 x=2√2y와 cosα=2√2/3을 정확히 구했다. 두 대칭이동에서 Q=(y,x), R=(-y,-x)를 올바르게 정했고 sinβ=cosα, tanγ=x/y를 사용한 계산도 맞다. 제곱값 8/9와 8의 합에 9를 곱한 80 및 최종정답이 정확하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$x = 2\\sqrt{2}y$입니다. (단, $x, y > 0$)",
+        "점 $\\mathrm{Q}(y, x)$를 원점에 대하여 대칭이동한 점 $\\mathrm{R}$의 좌표는 $(-y, -x)$입니다.",
+        "$\\tan \\gamma = \\frac{-x}{-y} = \\frac{x}{y}$입니다.",
+        "$9(\\frac{8}{9} + 8) = 9 \\times \\frac{8}{9} + 9 \\times 8 = 8 + 72 = 80$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_011",
+      "condition": "B",
+      "response_sha256": "8f3e5bdf07766a2556534f5300baa08f68cfcd30ad30a1ec393b44a66d68e2e9",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "극좌표로 P와 Q를 나타내어 좌표 교환에 따른 sinβ=cosα 관계를 정확히 구했다. 제1사분면에서 cosα=2√2/3을 선택한 부호 처리와 원점 대칭 후 tanγ=cotα=2√2라는 관계가 모두 맞다. 목표 식의 값 80과 최종정답이 정확하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "따라서 $\\cos\\beta = \\sin\\alpha = \\frac{1}{3}$, $\\sin\\beta = \\cos\\alpha$이다.",
+        "$\\cos\\alpha = \\frac{2\\sqrt{2}}{3}$ (제1사분면이므로 양수)이다.",
+        "$\\tan\\gamma = \\frac{-x}{-y} = \\frac{x}{y} = \\cot\\alpha$이다.",
+        "$\\tan\\gamma = \\frac{1}{\\tan\\alpha} = 2\\sqrt{2}$이다.",
+        "$9(\\sin^2\\beta + \\tan^2\\gamma) = 9\\left(\\frac{8}{9} + 8\\right) = 9 \\times \\frac{8}{9} + 9 \\times 8 = 8 + 72 = 80$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_014",
+      "condition": "D",
+      "response_sha256": "9783cfa8bcebdd024ee79e0a43f809c516a0d67704ed7106d9bd0038f99b913e",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "닫힌구간에서 각이 [π/6,π/3]에 있어 탄젠트의 극점을 지나지 않고 증가함을 정확히 적용했다. g의 치역 [√3,3√3]은 모두 양수이므로 로그 합성이 정의되며 밑 3인 로그도 증가한다. 끝점에서 m=5/2,M=7/2를 구한 계산과 합 6 및 최종정답이 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "함수 $y = \\tan \\theta$는 구간 $[\\frac{\\pi}{6}, \\frac{\\pi}{3}]$에서 증가하므로,",
+        "따라서 $g(x)$의 범위는 $\\sqrt{3} \\leq g(x) \\leq 3\\sqrt{3}$입니다.",
+        "최솟값 $m = f(\\sqrt{3}) = \\log_3 \\sqrt{3} + 2 = \\log_3 3^{1/2} + 2 = \\frac{1}{2} + 2 = \\frac{5}{2}$",
+        "최댓값 $M = f(3\\sqrt{3}) = \\log_3 (3 \\cdot 3^{1/2}) + 2 = \\log_3 3^{3/2} + 2 = \\frac{3}{2} + 2 = \\frac{7}{2}$",
+        "$M + m = \\frac{7}{2} + \\frac{5}{2} = \\frac{12}{2} = 6$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_014",
+      "condition": "C",
+      "response_sha256": "1e65f4133ee74d441e777ec2bac660e0427c8d150423109c7a9696bfa958d49e",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "원래 구간을 탄젠트 각의 닫힌구간 [π/6,π/3]으로 바르게 옮겼고 증가성과 특수각 값으로 g의 치역을 정확히 구했다. 이 치역이 양수라 로그 정의역을 만족하며, 증가하는 로그함수에 끝점 값을 대입한 M=7/2,m=5/2의 계산도 맞다. 합 6과 최종정답이 정확하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\frac{\\pi}{6} \\leq x + \\frac{\\pi}{6} \\leq \\frac{\\pi}{3}$",
+        "$\\sqrt{3} \\leq g(x) \\leq 3\\sqrt{3}$",
+        "$M = f(3\\sqrt{3}) = \\log_3 (3 \\cdot 3^{1/2}) + 2 = \\log_3 (3^{3/2}) + 2 = \\frac{3}{2} + 2 = \\frac{7}{2}$",
+        "$m = f(\\sqrt{3}) = \\log_3 (3^{1/2}) + 2 = \\frac{1}{2} + 2 = \\frac{5}{2}$",
+        "따라서 $M + m = \\frac{7}{2} + \\frac{5}{2} = \\frac{12}{2} = 6$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_015",
+      "condition": "C",
+      "response_sha256": "a33360b07fa0b9f87a9377930915d90b59aeb8a496a1cd0dc624bad8f55f952d",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "방정식을 sin2x=-√2/2로 정확히 정리하고 원래 닫힌구간에 대응하는 0≤2x≤2π에서 두 위상 5π/4,7π/4를 빠짐없이 구했다. x로 환산한 두 근 5π/8,7π/8과 합 3π/2 및 최종정답 ③이 모두 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\sin 2x = -\\frac{1}{\\sqrt{2}} = -\\frac{\\sqrt{2}}{2}$",
+        "$2x = \\frac{5}{4}\\pi$ 또는 $2x = \\frac{7}{4}\\pi$",
+        "$x = \\frac{5}{8}\\pi$ 또는 $x = \\frac{7}{8}\\pi$",
+        "$\\frac{5}{8}\\pi + \\frac{7}{8}\\pi = \\frac{12}{8}\\pi = \\frac{3}{2}\\pi$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_015",
+      "condition": "D",
+      "response_sha256": "e690f177c88e51ad180cb82e019673b9d8d078f07493805789aabec6b63b2b01",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "주어진 식의 정리와 sin2x의 음의 특수각 값이 정확하다. 0≤x≤π를 두 배 하여 0≤2x≤2π로 옮기고 두 해 5π/8,7π/8을 올바르게 구했다. 양 끝점은 원식을 만족하지 않으며 두 근의 합 3π/2와 최종정답 ③도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "범위가 $0 \\le x \\le \\pi$이므로, $2x$의 범위는 $0 \\le 2x \\le 2\\pi$입니다.",
+        "$2x = \\frac{5}{4}\\pi$ 또는 $2x = \\frac{7}{4}\\pi$",
+        "$x = \\frac{5}{8}\\pi$ 또는 $x = \\frac{7}{8}\\pi$",
+        "따라서 모든 해의 합은 $\\frac{3}{2}\\pi$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_017",
+      "condition": "B",
+      "response_sha256": "eaa763d450a51819288d254e290dc890b02faf55167bc87864a42cc55ca4f2e8",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "코사인 제곱 방정식의 네 해 π/3,2π/3,4π/3,5π/3을 원래 열린 구간에서 정확히 구했다. 사인과 코사인의 곱이 음수인 제2·제4사분면 조건과 교차해 2π/3,5π/3만 남긴 과정이 타당하다. 두 값의 합 7π/3과 최종정답 ②가 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\cos x = \\frac{1}{2}$ 일 때: $x = \\frac{\\pi}{3}, \\frac{5}{3}\\pi$",
+        "$\\cos x = -\\frac{1}{2}$ 일 때: $x = \\frac{2}{3}\\pi, \\frac{4}{3}\\pi$",
+        "따라서 $x$는 제2사분면 또는 제4사분면에 있어야 합니다.",
+        "구한 값들의 합은 $\\frac{2}{3}\\pi + \\frac{5}{3}\\pi = \\frac{7}{3}\\pi$ 입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_017",
+      "condition": "D",
+      "response_sha256": "118ab48c5734e75f1abdffbd5bbe0560e9a9fb651be2ec6f6a8faba0f0362934",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "cos²x=1/4의 네 근을 정확히 나열하고 각 근에서 sinxcosx의 부호를 바르게 확인했다. 조건을 동시에 만족하는 두 근 2π/3,5π/3만 선택했으므로 누락이나 추가가 없다. 합 7π/3과 최종정답 ②가 정확하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\cos x = \\frac{1}{2}$ 일 때: $x = \\frac{\\pi}{3}, \\frac{5\\pi}{3}$",
+        "$\\cos x = -\\frac{1}{2}$ 일 때: $x = \\frac{2\\pi}{3}, \\frac{4\\pi}{3}$",
+        "따라서 조건을 만족하는 $x$의 값은 $\\frac{2\\pi}{3}$와 $\\frac{5\\pi}{3}$입니다.",
+        "이들의 합은 $\\frac{2\\pi}{3} + \\frac{5\\pi}{3} = \\frac{7\\pi}{3}$ 입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_021",
+      "condition": "C",
+      "response_sha256": "e501389cad4ef2679f1f3fc8478cb0e7e154f363357574a0d9ff4b054ab355f6",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "교점 조건을 두 함수값의 등식으로 정확히 세우고 cos(x+π/2)=-sinx를 적용해 sinx=1/2로 정리했다. 원문 0≤x<2π에서 두 해 π/6,5π/6을 빠짐없이 구했으며 끝점들은 해가 아니다. x좌표의 합 π와 최종정답 ②가 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\cos \\left( x + \\frac{\\pi}{2} \\right) = -\\sin x$",
+        "$2 \\sin x = 1$",
+        "$x = \\frac{\\pi}{6}$ 또는 $x = \\pi - \\frac{\\pi}{6} = \\frac{5}{6}\\pi$",
+        "$\\frac{\\pi}{6} + \\frac{5}{6}\\pi = \\frac{6}{6}\\pi = \\pi$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_021",
+      "condition": "B",
+      "response_sha256": "e501389cad4ef2679f1f3fc8478cb0e7e154f363357574a0d9ff4b054ab355f6",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "위상이동 항등식과 교점 방정식의 정리가 정확하다. 반열린 원문 구간에서 sinx=1/2의 두 해 π/6과 5π/6을 올바르게 선택했고 다른 해는 없다. 합 π와 최종정답 ②가 모두 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\cos \\left( x + \\frac{\\pi}{2} \\right) = -\\sin x$",
+        "$2 \\sin x = 1$",
+        "$x = \\frac{\\pi}{6}$ 또는 $x = \\pi - \\frac{\\pi}{6} = \\frac{5}{6}\\pi$",
+        "$\\frac{\\pi}{6} + \\frac{5}{6}\\pi = \\frac{6}{6}\\pi = \\pi$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
     }
   ]
 }
