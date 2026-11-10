@@ -37,6 +37,24 @@ class APIError(Exception):
 
 
 class Final2GenerationTests(unittest.TestCase):
+    def test_completed_state_requires_no_pending_and_preserves_error_statuses(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            output = Path(temporary)
+            config = {"split": "test"}
+            item = {"id": "q", "condition": "A", "method": "baseline", "split": "test",
+                    "request_sha256": "request"}
+            for requested in ("completed", "missing_api_key", "permission_denied", "interrupted", "paused_rate_limit"):
+                with self.subTest(requested=requested):
+                    state = runner.state_record(output, config, [item], status=requested, reason="test")
+                    self.assertEqual(state["status"], "partial_complete" if requested == "completed" else requested)
+                    self.assertEqual(state["pending_count"], 1)
+                    self.assertEqual(state["successful_requests"], 0)
+            comparison.save_result(output, {**item, "config_id": comparison.digest(config),
+                "status": "success", "response_origin": "new_api_call", "compact_storage": True})
+            state = runner.state_record(output, config, [item], status="partial_complete")
+            self.assertEqual(state["status"], "completed")
+            self.assertEqual(state["pending_count"], 0)
+
     def test_longer_http_timeout_changes_only_transport_not_sdk_body_or_hash(self):
         captured, transport, observed = [], [], []
         class FakeClient:
@@ -132,6 +150,54 @@ class Final2GenerationTests(unittest.TestCase):
         self.assertEqual(stopped.exception.status, "paused_rate_limit")
         self.assertEqual(clock.seconds, 0)
         self.assertEqual(limiter.new_starts, 0)
+
+    def test_resume_respects_interval_after_the_last_recorded_start(self):
+        clock = FakeClock()
+        events = [{"event": "request_start", "time": datetime.fromtimestamp(clock.wall() - 1, timezone.utc).isoformat()}]
+        limiter = BudgetRateLimiter(events=events, clock=clock.clock, wall_clock=clock.wall, sleeper=clock.sleep)
+        limiter.acquire()
+        self.assertEqual(clock.seconds, 9)
+
+    def test_resume_restores_retry_after_and_retryinfo_for_429_and_503(self):
+        for code, timing in ((429, "header"), (429, "info"), (503, "date"), (503, "info")):
+            with self.subTest(code=code, timing=timing):
+                clock, events = FakeClock(), []
+                headers = ({"Retry-After": "90"} if timing == "header" else
+                           {"Retry-After": format_datetime(datetime.fromtimestamp(clock.wall() + 90, timezone.utc), usegmt=True)}
+                           if timing == "date" else {})
+                details = {"retryDelay": "90s"} if timing == "info" else None
+                limiter = BudgetRateLimiter(event_handler=events.append, clock=clock.clock,
+                    wall_clock=clock.wall, sleeper=clock.sleep)
+                limiter.observe_error(APIError(code, "busy", headers=headers, details=details))
+                self.assertTrue(any(event["event"] == "cooldown_updated" and event.get("cooldown_until") for event in events))
+                resumed = BudgetRateLimiter(events=events, clock=clock.clock,
+                    wall_clock=clock.wall, sleeper=clock.sleep)
+                resumed.acquire()
+                self.assertEqual(clock.seconds, 91)
+
+    def test_resumed_long_cooldown_still_stops_without_waiting(self):
+        clock, events = FakeClock(), []
+        limiter = BudgetRateLimiter(event_handler=events.append, clock=clock.clock,
+            wall_clock=clock.wall, sleeper=clock.sleep)
+        limiter.observe_error(APIError(429, "busy", headers={"Retry-After": "300"}))
+        resumed = BudgetRateLimiter(events=events, clock=clock.clock, wall_clock=clock.wall, sleeper=clock.sleep)
+        with self.assertRaises(BudgetStop) as stopped:
+            resumed.acquire()
+        self.assertEqual(stopped.exception.status, "paused_rate_limit")
+        self.assertEqual(clock.seconds, 0)
+        self.assertEqual(resumed.new_starts, 0)
+
+    def test_legacy_error_events_restore_only_the_recorded_delay(self):
+        for kind, duration_key, wait in (("quota_error", "retry_after_seconds", 46),
+                                         ("service_overloaded", "backoff_seconds", 45)):
+            with self.subTest(kind=kind):
+                clock = FakeClock()
+                events = [{"event": kind, "time": datetime.fromtimestamp(clock.wall(), timezone.utc).isoformat(), duration_key: 45}]
+                limiter = BudgetRateLimiter(events=events, clock=clock.clock,
+                    wall_clock=clock.wall, sleeper=clock.sleep)
+                limiter.acquire()
+                self.assertEqual(clock.seconds, wait)
+                self.assertIn("daily reset remains unconfirmed", limiter.snapshot()["resume_cooldown_note"])
 
     def test_503_http_date_retry_after_is_respected_above_default_backoff(self):
         clock = FakeClock()

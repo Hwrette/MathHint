@@ -28,6 +28,8 @@ def state_record(output, config, plan, *, status, reason=None, limiter=None):
                for row in plan if records.get((row["id"], row["method"]), {}).get("status") != "success"]
     if not pending:
         status, reason = "completed", "모든 조건의 성공 응답이 저장되었습니다."
+    elif status == "completed":
+        status, reason = "partial_complete", "실패 또는 미완료 요청이 남아 있어 완료로 표시하지 않습니다."
     result = {"status": status, "reason": reason, "updated_at": comparison.utc_now(),
         "config_id": comparison.digest(config), "split": config["split"],
         "expected_requests": len(plan), "successful_requests": len(successes),

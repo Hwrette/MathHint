@@ -31,6 +31,7 @@ class BudgetRateLimiter(GlobalRateLimiter):
 
     def __init__(self, policy=None, *, events=(), stop_requested=None, event_handler=None,
                  clock=time.monotonic, wall_clock=time.time, sleeper=time.sleep):
+        events = tuple(events)
         self.policy = {**DEFAULT_POLICY, **(policy or {})}
         for field in ("rpm", "rph", "rpd", "max_new_requests", "max_run_seconds", "max_wait_seconds"):
             if self.policy[field] <= 0:
@@ -44,6 +45,7 @@ class BudgetRateLimiter(GlobalRateLimiter):
         self.output_event = event_handler or (lambda _: None)
 
         def event(value):
+            value = {**value, "time": datetime.fromtimestamp(self.wall_clock(), timezone.utc).isoformat()}
             if value.get("event") == "request_start":
                 self.starts.append(self.wall_clock())
                 self.new_starts += 1
@@ -51,6 +53,33 @@ class BudgetRateLimiter(GlobalRateLimiter):
         super().__init__(max(self.policy["interval_seconds"], 60 / self.policy["rpm"]),
                          clock=clock, sleeper=sleeper, event_handler=event,
                          stop_requested=stop_requested)
+        self._restore_waits(events)
+
+    def _restore_waits(self, events):
+        """절대 시각으로 저장된 대기만 복원한다. 공급자 일일 초기화 시각은 추정하지 않는다."""
+        wall_now, monotonic_now = self.wall_clock(), self.clock()
+        if self.starts:
+            self.next_start = max(self.next_start, monotonic_now + max(0, self.starts[-1] + self.interval - wall_now))
+        quota_until = service_until = 0.0
+        for event in events:
+            kind = event.get("event")
+            if kind not in ("quota_error", "service_overloaded", "service_recovered", "cooldown_updated"):
+                continue
+            observed = datetime.fromisoformat(event["time"].replace("Z", "+00:00")).timestamp()
+            if kind == "quota_error":
+                quota_until = max(quota_until, observed + float(event["retry_after_seconds"]) + 1)
+            elif kind == "service_overloaded":
+                service_until = max(service_until, observed + float(event["backoff_seconds"]))
+            elif kind == "service_recovered":
+                service_until = 0.0
+            else:
+                until = datetime.fromisoformat(event["cooldown_until"].replace("Z", "+00:00")).timestamp()
+                if event["code"] == 429:
+                    quota_until = max(quota_until, until)
+                elif event["code"] == 503:
+                    service_until = max(service_until, until)
+        self.cooldown_until = max(self.cooldown_until, monotonic_now + max(0, quota_until - wall_now))
+        self.service_cooldown_until = max(self.service_cooldown_until, monotonic_now + max(0, service_until - wall_now))
 
     def halt(self, status, reason):
         self.stop_status, self.stop_reason = status, reason
@@ -124,6 +153,10 @@ class BudgetRateLimiter(GlobalRateLimiter):
                     self.cooldown_until = max(self.cooldown_until, until)
                 else:
                     self.service_cooldown_until = max(self.service_cooldown_until, until)
+            remaining = max(0, (self.cooldown_until if code == 429 else self.service_cooldown_until) - self.clock())
+            self.event_handler({"event": "cooldown_updated", "code": code,
+                "cooldown_until": datetime.fromtimestamp(self.wall_clock() + remaining, timezone.utc).isoformat(),
+                "source": "recorded Retry-After/RetryInfo or fallback backoff; provider reset not inferred"})
 
     def snapshot(self):
         now = self.wall_clock()
@@ -134,4 +167,6 @@ class BudgetRateLimiter(GlobalRateLimiter):
                 "status": self.stop_status, "reason": self.stop_reason,
                 "daily_quota_reported": self.daily_exhausted,
                 "cooldown_remaining_seconds": max(0, self.cooldown_until - self.clock()),
+                "service_cooldown_remaining_seconds": max(0, self.service_cooldown_until - self.clock()),
+                "resume_cooldown_note": "absolute recorded delays restored; legacy events preserve only recorded backoff, not unrecorded provider timing; daily reset remains unconfirmed",
                 "policy": self.policy, "provider_quota_confirmation": "not inferred from local caps"}

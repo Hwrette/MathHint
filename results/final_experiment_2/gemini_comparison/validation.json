@@ -1,5 +1,5 @@
 {
-  "verified_at": "2026-11-10T19:33:25.498664+00:00",
+  "verified_at": "2026-11-10T19:45:04.242256+00:00",
   "config_id": "cc67f503605a3acd86112e8734b755f1c1da6e86d5cea9a3c8da1de43c3708e9",
   "dataset_id": "1e1e467b301406d6a2df2775ad506474aaa915b342d315cdca8dc39fdf3e7345",
   "split": "test",
@@ -1370,6 +1370,166 @@
     },
     {
       "check": "sdk_capture_341",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_342",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_343",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_344",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_345",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_346",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_347",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_348",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_349",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_350",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_351",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_352",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_353",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_354",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_355",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_356",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_357",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_358",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_359",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_360",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_361",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_362",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_363",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_364",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_365",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_366",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_367",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_368",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_369",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_370",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_371",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_372",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_373",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_374",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_375",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_376",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_377",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_378",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_379",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_380",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_381",
       "passed": true
     },
     {
@@ -3041,6 +3201,18 @@
       "passed": true
     },
     {
+      "check": "usage_matches_api_fields_diff_1_011_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_011_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_011_B",
+      "passed": true
+    },
+    {
       "check": "response_identity_diff_1_011_D",
       "passed": true
     },
@@ -3089,6 +3261,18 @@
       "passed": true
     },
     {
+      "check": "usage_matches_api_fields_diff_1_012_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_012_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_012_C",
+      "passed": true
+    },
+    {
       "check": "response_identity_diff_1_012_B",
       "passed": true
     },
@@ -3114,6 +3298,18 @@
     },
     {
       "check": "usage_values_diff_1_012_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_012_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_012_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_012_D",
       "passed": true
     },
     {
@@ -3165,11 +3361,715 @@
       "passed": true
     },
     {
+      "check": "usage_matches_api_fields_diff_1_014_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_014_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_014_B",
+      "passed": true
+    },
+    {
       "check": "response_identity_diff_1_018_D",
       "passed": true
     },
     {
       "check": "usage_values_diff_1_018_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_018_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_018_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_018_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_018_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_018_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_018_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_018_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_018_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_018_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_018_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_018_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_018_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_018_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_022_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_022_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_022_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_022_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_022_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_022_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_022_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_022_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_022_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_022_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_022_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_022_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_022_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_022_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_022_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_026_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_026_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_026_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_026_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_026_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_026_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_026_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_026_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_026_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_026_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_026_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_026_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_026_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_026_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_026_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_028_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_028_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_028_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_028_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_028_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_028_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_028_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_028_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_028_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_028_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_028_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_028_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_028_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_028_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_028_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_030_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_030_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_030_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_030_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_030_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_030_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_030_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_030_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_030_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_030_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_030_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_030_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_030_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_030_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_030_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_036_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_036_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_036_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_036_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_036_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_036_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_036_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_036_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_036_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_036_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_036_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_036_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_036_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_036_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_036_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_038_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_038_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_038_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_038_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_038_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_038_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_038_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_038_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_038_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_038_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_038_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_038_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_038_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_038_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_038_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_039_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_039_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_039_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_039_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_039_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_039_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_039_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_039_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_039_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_039_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_039_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_039_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_039_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_039_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_039_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_041_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_041_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_041_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_041_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_041_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_041_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_041_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_041_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_041_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_041_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_041_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_041_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_041_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_041_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_041_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_004_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_2_004_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_2_004_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_2_004_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_2_004_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_004_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_2_004_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_2_004_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_2_004_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_2_004_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_004_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_2_004_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_2_004_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_2_004_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_2_004_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_006_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_2_006_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_2_006_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_2_006_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_2_006_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_006_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_2_006_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_2_006_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_2_006_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_2_006_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_006_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_2_006_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_2_006_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_2_006_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_2_006_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_007_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_2_007_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_2_007_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_2_007_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_2_007_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_007_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_2_007_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_2_007_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_2_007_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_2_007_B",
       "passed": true
     },
     {
@@ -3189,13 +4089,13 @@
       "passed": true
     }
   ],
-  "passed": 796,
+  "passed": 1021,
   "failed": 0,
   "complete": true,
   "experiment_complete": false,
-  "successful_requests": 88,
+  "successful_requests": 127,
   "expected_requests": 320,
-  "pending_requests": 232,
+  "pending_requests": 193,
   "live_api_calls_during_verification": 0,
   "model_training_during_verification": false,
   "limits": [

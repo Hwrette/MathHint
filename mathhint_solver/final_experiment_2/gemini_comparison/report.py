@@ -216,7 +216,8 @@ def question_rows(questions):
                 row[condition + "_" + field] = response["usage"][field]
         for first, second in (("B", "A"), ("C", "A"), ("D", "A"), ("C", "B")):
             a, b = row[first + "_total_token_count"], row[second + "_total_token_count"]
-            row[first + "_minus_" + second + "_total_tokens"] = a - b if a is not None and b is not None else None
+            both_succeeded = row[first + "_status"] == row[second + "_status"] == "success"
+            row[first + "_minus_" + second + "_total_tokens"] = a - b if both_succeeded and a is not None and b is not None else None
         rows.append(row)
     return rows
 

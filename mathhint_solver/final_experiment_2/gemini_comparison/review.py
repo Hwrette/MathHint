@@ -15,11 +15,16 @@ def text_hash(text):
 
 
 def clean_presentation_blank_lines(text):
-    """표시용 Markdown의 공백뿐인 줄만 비운다. 의미 있는 끝 두 공백은 보존한다."""
+    """표시용 불필요한 공백만 정리한다. Markdown 줄바꿈인 끝 두 공백은 보존한다."""
     result = []
     for line in text.splitlines(keepends=True):
         body = line.rstrip("\r\n")
-        result.append(line[len(body):] if body and body.isspace() else line)
+        if body and body.isspace():
+            result.append(line[len(body):])
+        elif body.endswith(" ") and not body.endswith("  "):
+            result.append(body[:-1] + line[len(body):])
+        else:
+            result.append(line)
     return "".join(result)
 
 
@@ -158,7 +163,8 @@ def select_tags(q):
         tags.append("reasoning_suspected")
         if any(row.get("evaluation", {}).get("correct") is True for row in suspected):
             tags.append("correct_but_reasoning_suspected")
-    if any(row.get("review", {}).get("review_status") == "possibly_valid_alternative" for row in by_condition.values()):
+    if any(row.get("review", {}).get("review_status") == "possibly_valid_alternative"
+           or row.get("review", {}).get("alternative_solution") is True for row in by_condition.values()):
         tags.append("possible_alternative")
     baseline_total = by_condition.get("A", {}).get("usage", {}).get("total_token_count")
     for condition in "BCD":
@@ -184,6 +190,11 @@ def write_cases(output, questions):
     output = Path(output)
     folder = output / "case_reports"
     folder.mkdir(parents=True, exist_ok=True)
+    questions = list(questions)
+    previous_index = []
+    if (folder / "index.csv").is_file():
+        with (folder / "index.csv").open(encoding="utf-8-sig", newline="") as stream:
+            previous_index = list(csv.DictReader(stream))
     index = []
     for q in questions:
         if not q["expected_generation"]:
@@ -231,4 +242,19 @@ def write_cases(output, questions):
     for row in index:
         lines.append(f"|{row['id']}|{', '.join(CASE_LABELS[tag] for tag in row['case_tags'].split(','))}|[사례]({row['case_path']}) · [수식 화면]({row['viewer']})|")
     (folder / "README.md").write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+    current_paths = {row["case_path"] for row in index}
+    known_ids = {q["id"] for q in questions}
+    for row in previous_index:
+        identifier, filename = row.get("id"), row.get("case_path")
+        if (identifier not in known_ids or filename != f"{identifier}.md" or filename in current_paths
+                or Path(filename).name != filename):
+            continue
+        path = folder / filename
+        if path.is_symlink() or not path.is_file():
+            continue
+        previous = path.read_text(encoding="utf-8")
+        header = (f"# {identifier} · 네 조건 비교\n\n"
+                  f"[수식 비교 화면](../report.html#{identifier}) · [사례 목록](README.md)\n")
+        if previous.startswith(header) and "\n자동 선별 사유: " in previous:
+            path.unlink()
     return index

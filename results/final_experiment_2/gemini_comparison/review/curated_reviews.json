@@ -1561,6 +1561,404 @@
       ],
       "alternative_solution": false,
       "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_011",
+      "condition": "B",
+      "response_sha256": "ab2666ee23ddb69c6bdd17bfbf3936272d690fc2341edf5a00ed9df6e92040ce",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계 이외에서는 각 다항식이 연속이고, x=1의 좌극한 1과 우극한 및 함숫값 a-2를 같게 두어 a=3을 얻는 과정이 타당하다. 최종 선택지 ③도 값 3에 대응한다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$$\\lim_{x \\to 1^-} f(x) = \\lim_{x \\to 1^-} (3x - 2) = 3(1) - 2 = 1$$",
+        "$$1 = a - 2$$\n$$a = 3$$",
+        "최종정답: ③"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_012",
+      "condition": "C",
+      "response_sha256": "4d37fd213dadc647f8ecff4d4696282700040b6f8bdb6f11663279201cbd21db",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계 x=2의 좌극한은 4a-2이고 우극한과 f(2)는 모두 6이다. 연속 조건 4a-2=6을 풀어 a=2로 계산한 전 과정이 타당하며 최종 선택지 ②도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\lim_{x \\to 2^-} f(x) = \\lim_{x \\to 2^-} (ax^2 - 2) = a(2)^2 - 2 = 4a - 2$",
+        "$f(2) = 3(2) = 6$",
+        "$4a - 2 = 6$\n   $4a = 8$\n   $a = 2$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_012",
+      "condition": "D",
+      "response_sha256": "172cb97820bfac2c9760553798f347884c46c0e3f49a4bc1d523f6d0370975ea",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "두 구간의 다항식은 각 구간에서 연속이다. x=2에서 좌극한 4a-2를 우극한 및 함숫값 6과 같게 놓고 a=2를 구한 계산과 최종 선택지 ②가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "1. 좌극한: $\\lim_{x \\rightarrow 2^-} f(x) = \\lim_{x \\rightarrow 2^-} (ax^2 - 2) = a(2)^2 - 2 = 4a - 2$",
+        "2. 우극한 및 함숫값: $\\lim_{x \\rightarrow 2^+} f(x) = f(2) = 3(2) = 6$",
+        "$4a - 2 = 6$\n$4a = 8$\n$a = 2$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_014",
+      "condition": "B",
+      "response_sha256": "3d9491b8657d8c59d20c72ccdaed3b76daf1ff5fb0af7a198fd9f4769d4c45a2",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "x=2에서 좌극한 및 실제 함숫값은 14+a이고 우극한은 4+2a이므로 14+a=4+2a에서 a=10을 얻는다. 응답의 두 번째 소제목에 함숫값이 함께 언급되지만 잘못된 함숫값 등식은 제시하지 않았으며, 실질적인 연속 조건과 계산 및 최종 선택지 ②는 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$$\\lim_{x \\to 2^-} f(x) = \\lim_{x \\to 2^-} (7x + a) = 7(2) + a = 14 + a$$",
+        "$$\\lim_{x \\to 2^+} f(x) = \\lim_{x \\to 2^+} (x^2 + ax) = 2^2 + a(2) = 4 + 2a$$",
+        "$$14 + a = 4 + 2a$$",
+        "$$a = 10$$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_018",
+      "condition": "D",
+      "response_sha256": "ba3592b46d6be2d3d8ef2ec9860ea0151d438df723a198bd89f669bff658dcaa",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "t≠1에서 주어진 평균변화율을 차분몫으로 정확하게 표현하고, t→1의 극한을 미분계수로 연결했다. sqrt(t^2+8)은 t=1에서 연속이므로 극한 3의 계산이 타당하며 최종 답도 3이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$$\\frac{f(t) - f(1)}{t - 1} = \\sqrt{t^2 + 8}$$",
+        "$$f'(1) = \\lim_{t \\to 1} \\frac{f(t) - f(1)}{t - 1}$$",
+        "$$f'(1) = \\sqrt{1^2 + 8} = \\sqrt{1 + 8} = \\sqrt{9} = 3$$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_018",
+      "condition": "B",
+      "response_sha256": "a39ad07cd50c5149eed22d86beff2825b4c6ccbe7db1268efe4957b035e965ad",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "주어진 평균변화율을 (f(t)-f(1))/(t-1)로 쓰고 이 차분몫의 t→1 극한을 구하여 순간변화율을 계산한 논리가 타당하다. 연속인 sqrt(t^2+8)의 극한은 3이며 중간 계산과 최종 답 3이 모두 옳다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$$\\frac{f(t) - f(1)}{t - 1} = \\sqrt{t^2 + 8}$$",
+        "$$f'(1) = \\lim_{t \\to 1} \\sqrt{t^2 + 8}$$",
+        "$$f'(1) = \\sqrt{1^2 + 8} = \\sqrt{1 + 8} = \\sqrt{9} = 3$$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_018",
+      "condition": "C",
+      "response_sha256": "2fdf176793b165fbe45d6bf8ac6381c4d17177ff3e5ca72c08a11845f0e465a6",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "t≠1의 평균변화율 식과 양변에 t-1을 곱한 식이 모두 옳다. 차분몫의 t→1 극한으로 미분계수를 구하고 연속성으로 sqrt(9)=3을 얻는 전 과정이 타당하다. 최종 답 3도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$$f(t) - f(1) = (t - 1)\\sqrt{t^2 + 8}$$",
+        "$$f'(1) = \\lim_{t \\to 1} \\frac{f(t) - f(1)}{t - 1}$$",
+        "$$f'(1) = \\sqrt{1^2 + 8} = \\sqrt{1 + 8} = \\sqrt{9} = 3$$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_022",
+      "condition": "D",
+      "response_sha256": "4cac8b40e1eab7cc6463b6fa1a66d5fd6b0fef3bde2591a521e77a0a12f91cb9",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "유한한 차분몫의 극한으로부터 분자가 0에 수렴하고, 다항함수 g의 연속성으로 g(1)=4를 얻는다. 이로써 첫 문장의 g'(1)=9 해석도 정당화된다. 곱의 미분법과 2f(1)=4를 이용하여 f(1)=2, f'(1)=3/2, 곱 3을 구한 계산이 모두 타당하며 최종 선택지 ①도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "즉, $\\lim_{h \\rightarrow 0} (g(1+h) - 4) = g(1) - 4 = 0$이므로 $g(1) = 4$입니다.",
+        "$g'(x) = (2x + 1)f(x) + (x^2 + x)f'(x)$",
+        "$9 = 3f(1) + 2f'(1)$",
+        "$f(1) \\times f'(1) = 2 \\times \\frac{3}{2} = 3$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_022",
+      "condition": "C",
+      "response_sha256": "41bd71c520e25a071269a263468252b750e4cf2e75796eb83b379b46e5d6c382",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "유한한 극한과 다항함수 g의 연속성으로 g(1)=4를 얻으므로, 첫 문장의 미분계수 해석 g'(1)=9도 뒤이은 설명으로 정당화된다. 2f(1)=4와 곱의 미분법 g'(1)=3f(1)+2f'(1)을 적용하여 f(1)=2, f'(1)=3/2, 두 값의 곱 3을 구한 모든 계산이 타당하다. 최종 선택지 ①도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$g(1) = (1^2 + 1)f(1) = 2f(1) = 4$",
+        "$g'(x) = (2x + 1)f(x) + (x^2 + x)f'(x)$",
+        "$f(1) \\times f'(1) = 2 \\times \\frac{3}{2} = 3$",
+        "최종정답: ①"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_022",
+      "condition": "B",
+      "response_sha256": "3be44bbb608984a58af7d957fd0372641eac5c2f4965ec7dbca10458658feee1",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "유한한 극한과 다항함수 g의 연속성으로 g(1)=4를 얻으므로, 첫 문장의 미분계수 해석 g'(1)=9도 뒤이은 설명으로 정당화된다. 2f(1)=4와 곱의 미분법 g'(1)=3f(1)+2f'(1)을 적용하여 f(1)=2, f'(1)=3/2, 두 값의 곱 3을 구한 모든 계산이 타당하다. 최종 선택지 ①도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$g(1) = (1^2 + 1)f(1) = 2f(1) = 4$",
+        "$g'(x) = (2x + 1)f(x) + (x^2 + x)f'(x)$",
+        "$f(1) \\times f'(1) = 2 \\times \\frac{3}{2} = 3$",
+        "최종정답: ①"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_026",
+      "condition": "B",
+      "response_sha256": "770a350ec97fdf673c137213d5c67b7baca47cf05fba3ec1d0a133314d7ce054",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수 6x^2-14x와 접선의 방정식을 정확하게 구했다. 접선이 (0,1)을 지나는 조건을 대입하고 정리하여 t^2(4t-7)=0을 얻은 계산이 타당하다. 양수 조건으로 t=0을 제외하고 t=7/4를 선택했으므로 논리와 최종 선택지 ⑤가 모두 옳다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 6x^2 - 14x$",
+        "$1 - (2t^3 - 7t^2 + 1) = (6t^2 - 14t)(0 - t)$",
+        "$t^2(4t - 7) = 0$",
+        "최종정답: ⑤"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_026",
+      "condition": "C",
+      "response_sha256": "33fdb43cdf644d89f9e9e935c6fec1d4d50d5fc5bdd19017b7fcf6b5a1b5b699",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수 6x^2-14x와 접선의 방정식을 정확하게 구했다. 접선이 (0,1)을 지나는 조건을 대입하고 정리하여 t^2(4t-7)=0을 얻은 계산이 타당하다. 양수 조건으로 t=0을 제외하고 t=7/4를 선택했으므로 논리와 최종 선택지 ⑤가 모두 옳다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 6x^2 - 14x$",
+        "$1 - (2t^3 - 7t^2 + 1) = (6t^2 - 14t)(0 - t)$",
+        "$t^2(4t - 7) = 0$",
+        "최종정답: ⑤"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_026",
+      "condition": "D",
+      "response_sha256": "596d61536b44e4c840a33c794ecf174e8180f5a257ae6e98c2a1da2dfec14413",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수 6x^2-14x와 접선의 방정식을 정확하게 구했다. 접선이 (0,1)을 지나는 조건을 대입하고 정리하여 t^2(4t-7)=0을 얻은 계산이 타당하다. 양수 조건으로 t=0을 제외하고 t=7/4를 선택했으므로 논리와 최종 선택지 ⑤가 모두 옳다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 6x^2 - 14x$",
+        "$1 - (2t^3 - 7t^2 + 1) = (6t^2 - 14t)(0 - t)$",
+        "$t^2(4t - 7) = 0$",
+        "최종정답: ⑤"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_028",
+      "condition": "B",
+      "response_sha256": "9b8d95e7f09743ce4b3363ca4e945407e91e377f00c2a0427888ae7390416af3",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "외부점 (0,1)을 접점으로 오인하지 않고 접점을 (t,f(t))로 두었다. 미분과 접선 방정식 및 (0,1) 대입에서 2t^3=16, t=2를 얻는 계산이 타당하다. 접점 (2,21), 기울기 10에서 y=10x+1을 구하고 (a,11)을 대입하여 a=1을 얻었으므로 최종 선택지 ①도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$y - (t^3 - 2t + 17) = (3t^2 - 2)(x - t)$",
+        "$2t^3 = 16$",
+        "$y = 10x + 1$",
+        "$11 = 10a + 1$",
+        "최종정답: ①"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_028",
+      "condition": "D",
+      "response_sha256": "789b65da47d244aa68edb67b941d3d879eb6c3510864a38badbb2d4f9b99eaa1",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "외부점 (0,1)을 접점으로 오인하지 않고 접점을 (t,f(t))로 두었다. 미분과 접선 방정식 및 (0,1) 대입에서 2t^3=16, t=2를 얻는 계산이 타당하다. 접점 (2,21), 기울기 10에서 y=10x+1을 구하고 (a,11)을 대입하여 a=1을 얻었으므로 최종 선택지 ①도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$y - (t^3 - 2t + 17) = (3t^2 - 2)(x - t)$",
+        "$2t^3 = 16$",
+        "$y = 10x + 1$",
+        "$11 = 10a + 1$",
+        "최종정답: ①"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_028",
+      "condition": "C",
+      "response_sha256": "934e31b198a82696ca6eae922d517013756bf6aeaa3e1132ecbba9bd67567410",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "외부점 (0,1)을 접점으로 오인하지 않고 접점을 (t,f(t))로 두었다. 미분과 접선 방정식 및 (0,1) 대입에서 2t^3=16, t=2를 얻는 계산이 타당하다. 접점 (2,21), 기울기 10에서 y=10x+1을 구하고 (a,11)을 대입하여 a=1을 얻었으므로 최종 선택지 ①도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$y - (t^3 - 2t + 17) = (3t^2 - 2)(x - t)$",
+        "$2t^3 = 16$",
+        "$y = 10x + 1$",
+        "$11 = 10a + 1$",
+        "최종정답: ①"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_030",
+      "condition": "B",
+      "response_sha256": "878f0962e3642e54cbdcc6449fb60c894fda2c48fd54dffa9d4ad725827adc1a",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "다항함수가 x=-1에서 극대라는 조건으로 f'(-1)=0을 적용하여 a=-3을 구한 과정이 타당하다. f'(x)=3(x-1)(x+1)의 인수분해도 정확하다. x=1이 극소라는 결론의 부호 설명은 생략되어 있으나 제시된 도함수는 1의 왼쪽에서 음수, 오른쪽에서 양수이므로 결론에 오류가 없다. f(1)=7의 계산과 최종 선택지 ②도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 + a$",
+        "$f'(x) = 3x^2 - 3 = 3(x^2 - 1) = 3(x - 1)(x + 1) = 0$",
+        "$f(1) = 1 - 3 + 9 = 7$",
+        "최종정답: ②"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_030",
+      "condition": "C",
+      "response_sha256": "a180552e77b75aae5a9c07e449c769145530e732b5465efc81311d47286029cd",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "다항함수가 x=-1에서 극대라는 조건으로 f'(-1)=0을 적용하여 a=-3을 구한 과정이 타당하다. f'(x)=3(x-1)(x+1)의 인수분해도 정확하다. x=1이 극소라는 결론의 부호 설명은 생략되어 있으나 제시된 도함수는 1의 왼쪽에서 음수, 오른쪽에서 양수이므로 결론에 오류가 없다. f(1)=7의 계산과 최종 선택지 ②도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 + a$",
+        "$f'(x) = 3x^2 - 3 = 3(x^2 - 1) = 3(x - 1)(x + 1) = 0$",
+        "$f(1) = 1^3 - 3(1) + 9 = 1 - 3 + 9 = 7$",
+        "최종정답: ②"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_030",
+      "condition": "D",
+      "response_sha256": "12185d027b6d5cbe668e46d673f2b454ef9d3706823c880335de85ec3bc82ac8",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "다항함수가 x=-1에서 극대라는 조건으로 f'(-1)=0을 적용하여 a=-3을 구한 과정이 타당하다. f'(x)=3(x-1)(x+1)의 인수분해도 정확하다. x=1이 극소라는 결론의 부호 설명은 생략되어 있으나 제시된 도함수는 1의 왼쪽에서 음수, 오른쪽에서 양수이므로 결론에 오류가 없다. f(1)=7의 계산과 최종 선택지 ②도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 + a$",
+        "$f'(x) = 3x^2 - 3 = 3(x^2 - 1) = 3(x - 1)(x + 1) = 0$",
+        "$f(1) = 1^3 - 3(1) + 9 = 1 - 3 + 9 = 7$",
+        "최종정답: ②"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_036",
+      "condition": "B",
+      "response_sha256": "3788b5a030a13ee8cc223b69484c43240ac731a6ce35485134531ce91206b530",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "수평선 y=5가 접한다는 조건을 f(t)=5와 f'(t)=0으로 정확하게 해석했다. 도함수의 근 a와 -3a를 모두 조사하여 a에서 접하는 경우는 a^3=-1/5라서 양수 조건과 모순임을 확인했다. -3a에서 접하는 경우 27a^3+4=5로부터 a=1/3을 구하고 f(x)=x^3+x^2-x+4, f(2)=14를 계산한 과정과 최종 선택지 ④가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$3(x + 3a)(x - a) = 0$",
+        "$-5a^3 = 1 \\implies a^3 = -1/5$",
+        "$27a^3 = 1$",
+        "$f(2) = 8 + 4 - 2 + 4 = 14$",
+        "최종정답: ④"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_036",
+      "condition": "C",
+      "response_sha256": "0cba43be370bed6e11e25bbf805e49acd83de30a5de3e8514e6aaa545da92347",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "수평선 y=5가 접한다는 조건을 f(t)=5와 f'(t)=0으로 정확하게 해석했다. 도함수의 근 a와 -3a를 모두 조사하여 a에서 접하는 경우는 a^3=-1/5라서 양수 조건과 모순임을 확인했다. -3a에서 접하는 경우 27a^3+4=5로부터 a=1/3을 구하고 f(x)=x^3+x^2-x+4, f(2)=14를 계산한 과정과 최종 선택지 ④가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 + 6ax - 9a^2 = 3(x^2 + 2ax - 3a^2) = 3(x+3a)(x-a)$",
+        "$f(a) = 5$라고 하면, $-5a^3 + 4 = 5 \\implies -5a^3 = 1 \\implies a^3 = -1/5$",
+        "$f(-3a) = 5$라고 하면, $27a^3 + 4 = 5 \\implies 27a^3 = 1 \\implies a^3 = \\frac{1}{27}$",
+        "$f(2) = 2^3 + 2^2 - 2 + 4 = 8 + 4 - 2 + 4 = 14$",
+        "최종정답: ④"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
     }
   ]
 }

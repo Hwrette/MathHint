@@ -92,6 +92,156 @@ def _api_findings(base, values):
     return lines + [""]
 
 
+def _saved_bool(value):
+    """CSV의 공란은 미판정이다. 문자열 'False'를 참으로 해석하지 않는다."""
+    return True if value is True or value == "True" else False if value is False or value == "False" else None
+
+
+def _model_findings(values):
+    selected = {r["model"]: r for r in values if r["split"] == "test"}
+    if not all(key in selected for key in ("training_mean", "regression", "deep_learning")):
+        return []
+    baseline, linear, deep = [selected[key] for key in ("training_mean", "regression", "deep_learning")]
+    lines = ["### 예측 지표가 보여 주는 차이", ""]
+    for row in (linear, deep):
+        lines.append(f"- {row['label']}: 평균 기준선 대비 P@20 차이 "
+                     f"{float(row['precision_at_20'])-float(baseline['precision_at_20']):+.6f}, "
+                     f"문항당 공통 토큰 차이 {float(row['mean_common_top20_count'])-float(baseline['mean_common_top20_count']):+.4f}개, "
+                     f"MSE 차이 {float(row['mse'])-float(baseline['mse']):+.4f}다. "
+                     "이는 문제에 따라 달라지는 예측과 고정 평균 벡터의 이 저장 테스트 비교다.")
+    differences = [(key, float(deep[key])-float(linear[key]))
+                   for key in ("mse", "mae", "cosine_similarity", "precision_at_20")]
+    labels = {"mse": "MSE", "mae": "MAE", "cosine_similarity": "코사인", "precision_at_20": "P@20"}
+    lines += ["", "MLP−선형 차이는 " + ", ".join(f"{labels[key]} {delta:+.6f}" for key, delta in differences) + "다. "
+              "MSE·MAE는 작을수록, 코사인·P@20은 클수록 좋으므로 지표마다 방향을 함께 읽어야 한다."]
+    winners = {key: ("동일" if delta == 0 else "MLP" if (delta < 0 if key in ("mse", "mae") else delta > 0) else "선형")
+               for key, delta in differences}
+    lines.append("이 테스트에서 더 좋은 값은 " + ", ".join(f"{labels[key]}: {winners[key]}" for key, _ in differences) + "다.")
+    if linear.get("n") and linear.get("n") == deep.get("n"):
+        n = int(linear["n"])
+        difference = (float(deep["mean_common_top20_count"])-float(linear["mean_common_top20_count"]))*n
+        lines.append(f"공통 {n}문항의 상위20 일치 수를 합산한 차이는 MLP−선형 {difference:+.2f}개다. "
+                     "서로 다른 고유 토큰의 수나 수학 문제 정답 수를 뜻하지 않는다.")
+    return lines + ["", "P@20은 토큰 집합의 겹침을 분모20으로 나눈 값이며 코사인도 수학 정답률이 아니다. "
+                    "이 차이에서 Gemini 정답 변화나 비선형 모델의 일반적 우월성을 도출하지 않는다.", ""]
+
+
+def _successful_pair(questions, first, second):
+    return [r for r in questions if r.get(first + "_status") == r.get(second + "_status") == "success"]
+
+
+def _api_interpretation(base, values):
+    """저장 CSV에서만 읽는 대응 정답·토큰 해석. 서로 다른 완료 집합을 빼지 않는다."""
+    questions = [r for r in rows(base / "gemini_comparison/question_comparison.csv") if r["split"] == "test"]
+    if not questions:
+        return []
+    lookup = {r["condition"]: r for r in values if r["split"] == "test"}
+    lines = ["### 정답 변화와 토큰 변화는 같은 결론인가?", ""]
+    for first, second in (("A", "B"), ("A", "C"), ("A", "D"), ("B", "C")):
+        successes = _successful_pair(questions, first, second)
+        matched = [r for r in successes if all(_saved_bool(r.get(c + "_correct_original")) is not None
+                                              for c in (first, second))]
+        states = " / ".join(f"{c} 미완료 {lookup[c]['pending_count']}·실패 {lookup[c]['failed_count']}"
+                            for c in (first, second) if c in lookup)
+        if not matched:
+            lines.append(f"- {first}→{second}: 원본 기준 공통 채점 n=0/{len(questions)}. {states}. "
+                         "정답률 차이를 아직 계산할 수 없다.")
+        else:
+            counts = [sum(_saved_bool(r[c + "_correct_original"]) is True for r in matched) for c in (first, second)]
+            gain = sum(_saved_bool(r[first + "_correct_original"]) is False
+                       and _saved_bool(r[second + "_correct_original"]) is True for r in matched)
+            loss = sum(_saved_bool(r[first + "_correct_original"]) is True
+                       and _saved_bool(r[second + "_correct_original"]) is False for r in matched)
+            lines.append(f"- {first}→{second}: 원본 기준 공통 채점 n={len(matched)}/{len(questions)} "
+                         f"(제외 {len(questions)-len(matched)}), {first} {counts[0]}/{len(matched)}→"
+                         f"{second} {counts[1]}/{len(matched)} "
+                         f"({second}−{first} {(counts[1]-counts[0])/len(matched)*100:+.2f}%p). "
+                         f"오답→정답 {gain}개, 정답→오답 {loss}개. {states}.")
+        token_parts = []
+        for field, label in (("prompt_token_count", "입력"), ("candidates_token_count", "출력"),
+                             ("total_token_count", "전체")):
+            provided = [r for r in successes if all(r.get(c + "_" + field) not in (None, "") for c in (first, second))]
+            if provided:
+                delta = sum(float(r[second + "_" + field])-float(r[first + "_" + field]) for r in provided)/len(provided)
+                token_parts.append(f"{label} {delta:+.2f}토큰(n={len(provided)})")
+            else:
+                token_parts.append(f"{label} 미제공(n=0)")
+        lines.append(f"  같은 문항의 {second}−{first} 평균 사용량 차이: " + ", ".join(token_parts) + ".")
+    supplements = [r for r in lookup.values() if r.get("accuracy_ai_supplemental") not in (None, "")]
+    if supplements:
+        lines += ["", "원본 기준과 별도로 계산한 AI 보조 정답표 기준은 " + "; ".join(
+            f"{r['condition']} {r['correct_count_ai_supplemental']}/{r['graded_count']} "
+            f"({float(r['accuracy_ai_supplemental']):.2%})" for r in supplements) + "다. "
+            "보조 기준은 원본 점수를 대체하지 않으며 사람의 정답표 확정 판정이 아니다."]
+    return lines + ["", "입력 힌트가 늘어난 조건에서도 출력과 전체 토큰의 방향은 별도로 확인한다. "
+                    "각 토큰 항목은 성공하고 해당 값이 제공된 공통 문항만 사용하므로 n이 채점 집합과 다를 수 있다. "
+                    "전체 토큰 감소와 정답 증가를 같은 효과로 취급하지 않는다. "
+                    "표본이 진행 중이면 관측된 일부 문항의 차이이며, 완료 후에도 단일 생성·과거 A 재사용·탐색적 설계의 제한이 남는다.", ""]
+
+
+def _case_findings(base, limit=6):
+    questions = [r for r in rows(base / "gemini_comparison/question_comparison.csv") if r["split"] == "test"]
+    if not questions:
+        return ["아직 저장된 문항별 비교가 없다.", ""]
+    reviews = [r for r in rows(base / "gemini_comparison/review/status.csv")
+               if r["split"] == "test" and r.get("api_status") == "success"]
+    review_by_id = {}
+    for r in reviews:
+        if r.get("math_status") == "inappropriate":
+            review_by_id.setdefault(r["id"], []).append(r)
+    comparable = [r for r in questions if sum(r.get(c + "_status") == "success"
+                  and r.get(c + "_answer") not in (None, "") for c in "ABCD") >= 2]
+    changed = [r for r in comparable if _saved_bool(r.get("changed_answers")) is True]
+    incomplete = sum(any(r.get(c + "_status") != "success" for c in "ABCD") for r in questions)
+    lines = [f"저장 성공 응답에서 답을 판독한 조건이 두 개 이상인 {len(comparable)}문항 중 동등 답 표기를 정규화한 "
+             f"최종 답 변화는 {len(changed)}문항이다. 네 조건 중 실패·미완료가 남은 문항은 {incomplete}/{len(questions)}다. "
+             "사례는 정답 변화·정답표 충돌·답과 추론의 불일치를 읽기 위한 선별이며 전체 빈도를 대표하지 않는다.", ""]
+    chosen = []
+
+    def choose(predicate):
+        row = next((r for r in questions if r not in chosen and predicate(r)), None)
+        if row is not None and len(chosen) < limit:
+            chosen.append(row)
+
+    choose(lambda r: _saved_bool(r.get("answer_key_conflict")) is True)
+    for before, after in ((False, True), (True, False)):
+        choose(lambda r: _saved_bool(r.get("answer_key_conflict")) is not True
+               and r.get("A_status") == "success" and _saved_bool(r.get("A_correct_original")) is before
+               and any(r.get(c + "_status") == "success" and _saved_bool(r.get(c + "_correct_original")) is after
+                       for c in "BC"))
+    for correct in (True, False):
+        choose(lambda r: any(_saved_bool(v.get("final_answer_correct_original")) is correct
+                             for v in review_by_id.get(r["id"], [])))
+    choose(lambda r: r in changed)
+    for q in chosen:
+        identifier = q["id"]
+        link = f"[네 풀이](gemini_comparison/report.html#{identifier})"
+        if (base / f"gemini_comparison/case_reports/{identifier}.md").exists():
+            link += f" · [사례·원문 근거](gemini_comparison/case_reports/{identifier}.md)"
+        answers = []
+        for c in "ABCD":
+            if q.get(c + "_status") != "success":
+                answers.append(f"{c} {'미완료' if q.get(c + '_status') == 'not_run' else '실패'}")
+                continue
+            grade = {True: "정답", False: "오답", None: "채점 불가"}[_saved_bool(q.get(c + "_correct_original"))]
+            answers.append(f"{c} {q.get(c + '_answer') or '답 판독 불가'}(원본 {grade})")
+        lines.append(f"- **{identifier}**: " + ", ".join(answers) + f". {link}.")
+        if _saved_bool(q.get("answer_key_conflict")) is True:
+            supplemental = [f"{c} " + {True: "정답", False: "오답", None: "채점 불가"}[
+                _saved_bool(q.get(c + "_correct_ai_supplemental"))] for c in "ABCD" if q.get(c + "_status") == "success"]
+            lines.append(f"  원본 정답 {q['original_answer']} / AI 보조 대안 {q.get('ai_supplemental_answer') or '미제공'}; "
+                         "보조 기준에서 " + ", ".join(supplemental) + ". 이 충돌을 힌트에 의한 정답 개선으로 세지 않는다.")
+        evidence = review_by_id.get(identifier, [])
+        if evidence:
+            review = next((r for r in evidence if r.get("error_step")), evidence[0])
+            lines.append(f"  {review['condition']}의 AI 보조 검토 상태 `{review['review_status']}`: "
+                         + " ".join((review.get("reason") or review.get("error_step") or "근거 설명 미제공").split())
+                         + f" (사람 확정: {review.get('human_confirmed', 'False')}).")
+    return lines + ["", "최종 답 자동채점과 위 AI 보조 풀이 검토는 별개다. 오류 의심은 형식증명이나 사람의 확정 판정이 아니며, "
+                    "검토 보류를 타당 판정으로 바꾸지 않았다. [전체 풀이 검토 상태](gemini_comparison/review/status.csv)에서 "
+                    "오류 단계·실제 인용·검토 주체를 확인할 수 있다.", ""]
+
+
 def _model_plot(base, values):
     from mathhint_learning.ClusterReport import setup_final_plots
     plt = setup_final_plots()
@@ -192,16 +342,17 @@ def report(root=ROOT):
                       f"선택 설정: `{m['selected_configuration']}`", "",
                       f"[전체 후보·개선 이유·중단·손실곡선]({name}/README.md). "
                       "검증 P@20과 오차를 기준으로 설정을 확정했으며 테스트와 API 결과는 후보 선택에 쓰지 않았다.", ""]
-    final += ["## 4. 동일 타깃 공간에서 모델은 얼마나 예측했는가?", "", *model_sections,
+    final += ["## 4. 동일 타깃 공간에서 모델은 얼마나 예측했는가?", "", *model_sections, *_model_findings(values),
               "## 5. Gemini 입력과 실행", "",
               "A는 원문만, B는 선형 예측, C는 비선형 예측, D는 실제 해설 상위20개다. D는 이전 연구 C에 해당하는 오라클이다. "
               "모든 문제 원문·DEFAULT_SYSTEM·gemini-3.1-flash-lite·temperature0·minimal·8192 설정을 통제했다. "
               "힌트는 양수/음수보정·반올림전순위·어휘순동점·셋째자리표시·0표시제외 JSON과 마지막 지시문을 공유한다. "
               "실제 모델 사용 가능 여부·인증·확인 가능한 제한은 [사전점검과 실행 상태](gemini_comparison/README.md)에 기록한다.", "",
-              *api_section, "## 6. 어떤 문항에서 도움이 되거나 방해됐는가?", "",
+              *api_section, *_api_interpretation(base, api), "## 6. 어떤 문항에서 도움이 되거나 방해됐는가?", "",
               "[문항별 네 조건 비교](gemini_comparison/question_comparison.csv), [오류·특이 사례](gemini_comparison/case_reports/README.md), "
               "[원본·생성 풀이를 함께 읽는 화면](gemini_comparison/report.html)에서 실제 답 변화와 토큰 차이를 확인한다. "
               "최종 답이 맞아도 풀이를 자동으로 타당하다고 판정하지 않았다. 검토 보류는 실제 오류 확정과 다르다.", "",
+              *_case_findings(base),
               "## 7. 결론의 범위와 후속 과제", "", *["- " + n for n in notes], "",
               "모델 P@20이 좋아진 사실만으로 Gemini 정답률·효율성 개선을 주장하지 않는다. 실제 API 대응 결과와 사용량을 따로 평가한다. "
               "어텐션 기반 표현이나 출력 제약·형식 검증은 향후 방향이며 새로운 미관측 문제에서 재검증해야 한다.", "",
