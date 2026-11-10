@@ -1,6 +1,6 @@
 # MathHint 작업 진행 상태
 
-STATUS: COMPLETE_TOKEN_ANALYSIS_STAGE1_AWAITING_USER_SELECTION
+STATUS: IN_PROGRESS_DISTANCE_TOKEN_ANALYSIS
 EXECUTION_ALLOWED: false
 LAST_CONFIRMED_PUBLISHED_COMMIT: 3a4e762df9135953505b4575246ad6f5002d136a
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
@@ -355,3 +355,11 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 
 - 명칭변경검증완료:40개이동파일중38개바이트동일. 변경2개는config경로변경이력과그manifest해시뿐이다. 모든CSV15개/PNG11개/두[]선택파일/기존validation감사원문그대로. 새경로읽기전용verify1120/1120·token tests27/27 PASS,원본data/final/구보존자료SHA불변. 모델/분석산출물재생성/API없음. 관련변경커밋/원격확인후다시사용자선정대기.
 - 독립감사추가PASS:상대링크62개정상·활성옛경로참조0·기존보호2470파일을Git3a4e762원본blob과직접대조해변경0확인. 새config는명칭변경이력외원본JSON과동일하다.
+
+## 유클리드·코사인 거리 통계 보완 시작 — 2026-11-10T11:47:36.897240+00:00
+
+- 사용자새요청은학습185×346의거리기여/정규화η²/17020쌍내부간거리와기존군집맥락분석만승인했다. 현재사용자선정대기중이던제약중이새분석만허용하며불용어/학습/API/모델재평가금지는유지한다.
+- 시작HEAD eb120c86cd06c12c5d547666aa9d0377c659b162,Git clean. 추적2625파일/기존token결과40파일SHA를/tmp/mathhint_distance_baseline.json에확보. 기존Git커밋이복구기준이며새결과는04_distance_comparison만사용한다.
+- 구현분담:geometry(기여/η²),context(쌍거리·길이·기존배정통계),report(새문서그림),독립수치감사,root실행기/보존/링크/검증. 기존CSVPNG·01~03근거·stopword두[]는쓰기금지다.
+- 출력기여율은%합100,차이C−E %p,rank_change=E순위−C순위로정의. pair pooled거리에는일반Euclidean,토큰분해에는squaredEuclidean을구분한다. 영벡터는정의불가cos통계를임의계산하지않고중단하는정책으로실제존재여부확인예정.
+- 단계:보존기준확보완료→새코드구현→실제통계→독립대조/그림/링크→필수기록/manifest→최종커밋푸시/원격확인후중단. 아직미완료이며후속모델실험은구현하지않는다.
