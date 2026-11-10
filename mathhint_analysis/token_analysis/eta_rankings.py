@@ -77,14 +77,18 @@ def _table(rows, *, df_label="학습 DF"):
     return lines
 
 
-def ranking_sections(rows, *, df_label="학습 DF"):
+def ranking_sections(rows, *, df_label="학습 DF", full_only=False):
     lines = []
     for field, anchor, title in (("raw", "raw-ranking", "A. 원시 BoW η² 내림차순"),
                                  ("normalized", "normalized-ranking", "B. L2 정규화 BoW η² 내림차순")):
         ordered = sorted_rows(rows, field)
-        lines += [f'<a name="{anchor}"></a>', "", f"## {title}", "", "### 상위 30개", "", *_table(ordered[:30], df_label=df_label), "",
-                  "<details>", f"<summary>전체 {len(rows)}개 토큰 펼치기 — {title}</summary>", "", *_table(ordered, df_label=df_label), "", "</details>", "",
-                  "[문서 처음으로](#top) · [원시 순위](#raw-ranking) · [정규화 순위](#normalized-ranking)", ""]
+        lines += [f'<a name="{anchor}"></a>', "", f"## {title}", ""]
+        if full_only:
+            lines += [f"### 전체 {len(rows)}개 토큰", "", *_table(ordered, df_label=df_label), ""]
+        else:
+            lines += ["### 상위 30개", "", *_table(ordered[:30], df_label=df_label), "",
+                      "<details>", f"<summary>전체 {len(rows)}개 토큰 펼치기 — {title}</summary>", "", *_table(ordered, df_label=df_label), "", "</details>", ""]
+        lines += ["[문서 처음으로](#top) · [원시 순위](#raw-ranking) · [정규화 순위](#normalized-ranking)", ""]
     return lines
 
 

@@ -46,7 +46,7 @@ def _rank_document(domain, name, level, level_name, rows, config):
              f"고정 {name} 어휘 **{size}개 전체**를 보여 준다. DF는 학습·테스트를 합친265문항 중 이 토큰이 등장한 문항 수다.", "",
              "[A. 원시 η² 순위](#raw-ranking) · [B. 정규화 η² 순위](#normalized-ranking) · [다른 분류 선택](README.md)", "",
              "정렬은 반올림 전 저장 CSV 값의 내림차순, 완전 동점은 기존 어휘 인덱스 순서다. 표시는 소수점4자리이며 표시값이 같아도 실제 값은 다를 수 있다. 정의되지 않은 값은 —로 표시해 맨 아래에 둔다.", ""]
-    lines += ranking_sections(rows, df_label="전체 DF")
+    lines += ranking_sections(rows, df_label="전체 DF", full_only=True)
     lines += ['<a name="interpretation"></a>', "", "## 해석과 출처", "",
               f"이 분류 수준의 전체 집단은 **{group['group_count']}개**, 문항1개인 집단은 **{group['singleton_groups']}개**다.", "",
               *_limits(config), "",
@@ -60,7 +60,7 @@ def _domain_readme(domain, name, config):
     excluded = config["ignored_test_tokens"][domain]
     lines = [f"# {name} 토큰 {size}개 · 전체265문항 η²", "", _scope(config), "",
              *(["여기서 풀이는 **원본 풀이·해설**의 `data/vectors/solutions/` 빈도 벡터를 뜻한다. Gemini가 생성한 응답을 분석한 것이 아니다.", ""] if domain == "solutions" else []),
-             "분류를 고르면 원시·정규화 상위30개와 접어 둔 전체 토큰 표를 확인할 수 있다. 좁은 화면에서는 표를 좌우로 밀어 DF·의미 열까지 읽는다.", "",
+             f"분류를 고르면 원시·정규화 순위 각각에서 **전체 {size}개 토큰이 처음부터 표시**된다. 좁은 화면에서는 표를 좌우로 밀어 DF·의미 열까지 읽는다.", "",
              *_choice_table(), "",
              f"기존 학습 어휘 {size}개와 그 인덱스를 그대로 사용했다. 테스트에만 처음 등장해 기존 벡터에 빠졌던 토큰의 등장 횟수 {excluded}회는 그대로 제외된 상태다. 어휘를 확장하거나 다시 토큰화하지 않았다.", "",
              "원시 η²와 정규화 η² 모두 전체265문항에서 직접 분산 분해한 결과다. 학습 η²와 테스트 η²를 따로 구해 평균한 값이 아니다.", "",
@@ -94,7 +94,7 @@ def build_report(root, output):
 
     lines = ["# 문제·풀이 토큰 η² · 학습+테스트 전체265문항", "", _scope(config), "",
              "여기서 풀이는 **원본 풀이·해설**의 `data/vectors/solutions/` 빈도 벡터다. Gemini 생성 응답의 토큰 통계가 아니다.", "",
-             "**문제와 풀이를 각각 선택하세요.** 각 분류에 원시·L2 정규화 순위를 모두 제공하며, 상위30개 아래에서 전체 목록을 펼칠 수 있다.", "",
+             "**문제와 풀이를 각각 선택하세요.** 각 분류의 원시·L2 정규화 순위에서 **문제346개·풀이431개 전체가 처음부터 표시**된다. 전체 목록을 바로 읽을 수 있다.", "",
              "|영역|토큰 수|과목|단원|세부단원|문제 유형|", "|---|---:|---|---|---|---|"]
     for domain, (name, folder_name) in DOMAINS.items():
         links = [f"[원시]({folder_name}/{level}.md#raw-ranking) · [정규화]({folder_name}/{level}.md#normalized-ranking)" for level in LEVELS]

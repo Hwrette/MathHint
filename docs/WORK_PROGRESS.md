@@ -1,15 +1,15 @@
 # MathHint 작업 진행 상태
 
-STATUS: COMPLETE_FULL265_PROBLEM_SOLUTION_ETA_AWAITING_USER_SELECTION
+STATUS: COMPLETE_FULL_ETA_TABLE_DISPLAY_AWAITING_USER_SELECTION
 EXECUTION_ALLOWED: false
-LAST_CONFIRMED_PUBLISHED_COMMIT: 8e05a643ca608665d88f64f9b56387ebfedaf2f0
+LAST_CONFIRMED_PUBLISHED_COMMIT: 43e91aaf69c4a783a59bcf0da9fcc1c037617530
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
 AUTOMATION_STATUS: PAUSED_AFTER_READER_WORKFLOW_COMPLETION_VERIFIED_BY_PEEK
 FIRST_RUN_FROM_SAVED_RULE: 2026-11-09T05:58:50+09:00
 RECURRENCE: EVERY_5_HOURS
 NEXT_RUN_TIME_SERVER_FIELD: NOT_RETURNED
 ENVIRONMENT: MathHint / inherited / current_environment_id_confirmed
-REMOTE_CHECKPOINT_STATUS: FULL265_PROBLEM_SOLUTION_ETA_VALIDATED_READY_FOR_PUSH_VERIFY_GIT
+REMOTE_CHECKPOINT_STATUS: FULL_ETA_TABLE_DISPLAY_VALIDATED_READY_FOR_PUSH_VERIFY_GIT
 GITHUB_PREAUTHORIZATION_SETTING: RESTORED_TO_ORIGINAL_INHERIT_VERIFIED
 TIMEZONE: Asia/Seoul
 USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
@@ -414,3 +414,17 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 시작추적2671중허용8개만변경(명세/진행2·공통표시helper2·표시테스트1·README2·manifest1),2663바이트동일. 원래CSV/JSON(허용manifest외)/PNG/분할/어휘/모델/응답/두불용어[]는모두보존했다. 새추가는통계실행/보고서모듈2개와05결과18개뿐이며삭제는없다. 검증상세는05/validation.json과verification_details.json에남겼다.
 - 전체265표는test라벨을포함하는탐색자료다. 이표를보고특징을선정하면같은test80의독립성주장에한계가있다는점을안내했다. 원본연구의학습·테스트분할이나모델평가값은바꾸지않았다. 불용어자동선정/제거·군집/회귀/NN학습·Gemini재호출은없고예약도추가하지않았다.
 - 미완료필수작업0. 관련변경만최종커밋/일반push하고원격main SHA와로컬HEAD를확인한뒤중단한다. 위게시확인커밋8e05a64는게시전실제기준이며이번최종커밋은실제Git/완료보고로확인한다. 다음단계는사용자의목록선정과명시적요청대기다.
+
+## 전체토큰표 기본표시 시작 — 2026-11-10T14:21:13.793384+00:00
+
+- 최신요청에따라05전체265의8순위문서에서상위30/접기를제거하고전체를바로표시한다. 시작HEAD43e91aa·Git clean,추적2691파일SHA를/tmp/mathhint_eta_full_open_baseline.json에확보했다.
+- 수치CSV/config/기존감사JSON/모델/원본/선택[]는보존하고표시코드2개와05의Markdown11개/manifest/작업문서만수정한다. 기본학습185표시는옵션기본값으로바이트동일유지한다. 현재수정중이며통계/모델/API는실행하지않는다.
+
+## 전체토큰표 기본표시 완료·게시준비 — 2026-11-10T14:24:58.056437+00:00
+
+- 05전체265의문제4문서/풀이4문서에서원시·정규화전체표2개만기본표시한다. 상위30미리보기와details접기를제거했고README3개안내도전체즉시표시로수정했다. 각표문제346행/풀이431행,기존6열·정렬·값·DF·의미는그대로다.
+- 독립감사에서기존43e91aa전체표와6216행셀단위/순서완전일치,상위30·details없음,153링크/앵커정상확인. 기존통계재계산은하지않았으며saved CSV/config를읽는build_report만직접호출했다.
+- 로컬markdown-it+Chromium으로8문서각2표·6열·346/431행·마지막행숨김없음을확인했다. 390px에서풀이431번째행과뒤의정규화전체표를실제로열어확인했고페이지가로넘침없음/표스크롤정상이다. 이는로컬미리보기이며실제GitHub/iPad전수검사라고주장하지않는다.
+- 공통ranking_sections에full_only옵션만추가해05생성에서만사용한다. 기본값False의기존학습185표시5개MD를임시폴더에서생성해원래파일과바이트동일확인했다. 기존학습표/수치CSV/data/모델/API/두선택[]는수정하지않았다. 불필요한새테스트/통계/모델실행/API는없다.
+- 05manifest는기존11MD해시만갱신,CSV/config/validation/verification_details해시와내용은그대로다. config.analysis_sources_sha256와verification_details의이전4표기록은43e91aa통계작성시점의역사적근거로보존했다. 현재표시소스는이번Git커밋의eta_rankings.py/full_dataset_eta_report.py이며표시변경검증은이기록과독립감사(/tmp/mathhint_full_open_audit.json·render·browser)로구분한다.
+- 시작2691추적파일중2675개불변,허용변경16개는작업문서2·표시소스2·MD11·표시manifest1이다. 새파일/삭제/실험추가는없다. 검증완료후관련변경만커밋/일반push해원격main일치를확인하고중단한다. 게시전확인기준43e91aa이며최종반영은실제Git/완료보고SHA로확인한다. 후속불용어선정/실험은사용자명시적요청대기다.
