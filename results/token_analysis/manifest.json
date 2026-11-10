@@ -2,13 +2,13 @@
   "generated_files_sha256": {
     "summary.json": "82defd894c3ba5b70b9bdd297662ad962a763ad0ba1747094ad0b95123bed480",
     "token_analysis_report.md": "b43c15f8b367656cce9f4f00c85caa0d408f06e792585ad2e321a36c87398d6c",
-    "README.md": "65549fd1c1d21b0cbebfde418da97acf3ba3975e431c5048d62387514d5ece53",
+    "README.md": "87d75a533808de5f6bd8a3c66e714c0088238e9da10cffaa6d96d5c55e35e696",
     "test_results.txt": "9da41fea5088148365c85328a8f2137f6a68b4b37591056fb46c9ddc33fb969f",
     "validation.json": "f3da0fc201941c90eedd6909142f17b2947d412de0c6e0e96d70c8b9dc6185d2",
     "config.json": "bd990dfae934ceb9380397f2c463f8b561f2952bdb279ee336d444c0e9bdf7a7",
     "01_problem_tokens/variance_by_classification.csv": "79081b47adeb0d2d65bc588472cfcf91709b73d6aa561af27f9db6b5f7be78f8",
     "01_problem_tokens/class_labels.csv": "629032fbec25d71ee15a8d0abdfea6c3253f703857060fc920073465305eb311",
-    "01_problem_tokens/README.md": "932fdd92d13ee0a25246ccb0966621fdaf60559dec48c50c420f3310906a4ca5",
+    "01_problem_tokens/README.md": "d82866cafa69aa57486acf8d87177dae4a1b20678fc1bfd71eafa17b51cca91b",
     "01_problem_tokens/class_token_means.csv": "c6e631ec2aa68ef7777f1a6af001128af94a287ee2c03e899ddec664b7ac580b",
     "01_problem_tokens/highlight_patterns.csv": "1570fc41029debaef8dd24c6c3c896a5af772e03ad1576bc87b74e9fa4d06780",
     "01_problem_tokens/key_token_statistics.csv": "110067c8aa8987eb9eb6800d11e3f64a71470b7703021ee1b9ecef8519092dc3",
@@ -36,7 +36,12 @@
     "01_problem_tokens/figures/variance_eta_scatter.png": "7eba4779f67961c66173ecda359e3801b39025959d5177c9e867c71a9edcf791",
     "02_solution_tokens/figures/top20_category_composition.png": "8e25990bdbdeb5721b00fc5ae4eea8fd4bba79d0766b3dfd121a092b843a62f7",
     "02_solution_tokens/figures/tf_top20.png": "15c46adf7f91db59f4541a65015a3e55ba5a4bf6ab0e55105f3e5ae860a40f55",
-    "02_solution_tokens/figures/problem_solution_comparison.png": "6d36c64fe7daaf475220722d909fa06d528af4e8542ef6cc72cbdbbe8cf8c2bd"
+    "02_solution_tokens/figures/problem_solution_comparison.png": "6d36c64fe7daaf475220722d909fa06d528af4e8542ef6cc72cbdbbe8cf8c2bd",
+    "01_problem_tokens/eta_rankings/README.md": "9aae1be5beacdc7fff2bbba78877f9a21b2830496b99ed65359899c270f14b38",
+    "01_problem_tokens/eta_rankings/unit.md": "fc18a42263e031ef3bafc7250512c87c718aa6f766f2692baa2d7b3a9ce19fdd",
+    "01_problem_tokens/eta_rankings/curriculum.md": "fc53d4079d7ff0f70b71d4f15cf2c2dee39d5908d7e2bf75b829f7f6f2054944",
+    "01_problem_tokens/eta_rankings/type.md": "e7616e619ef051b8a40cc302a0dd4fdf43bc94ebce12969c8e7ba6bc435f3916",
+    "01_problem_tokens/eta_rankings/subunit.md": "0d8e7e71cc224db9243278251fba3145f0caf8378903e87a19eee3efb436ac52"
   },
   "user_owned_files_excluded": [
     "stopwords/problem_stopwords.json",

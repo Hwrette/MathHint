@@ -46,12 +46,16 @@ def _write(path, lines):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     generated = "\n".join(lines).rstrip() + "\n"
-    start, end = "<!-- distance-comparison:start -->", "<!-- distance-comparison:end -->"
     existing = path.read_text(encoding="utf-8") if path.exists() else ""
-    if start in existing and end in existing:
-        block = start + existing.split(start, 1)[1].split(end, 1)[0] + end
+    blocks = []
+    for section in ("distance-comparison", "eta-rankings"):
+        start, end = f"<!-- {section}:start -->", f"<!-- {section}:end -->"
+        if start in existing and end in existing:
+            block = start + existing.split(start, 1)[1].split(end, 1)[0] + end
+            blocks.append((existing.index(start), block))
+    if blocks:
         heading, body = generated.split("\n", 1)
-        generated = heading + "\n\n" + block + "\n" + body
+        generated = heading + "\n\n" + "\n\n".join(block for _, block in sorted(blocks)) + "\n" + body
     path.write_text(generated, encoding="utf-8")
 
 

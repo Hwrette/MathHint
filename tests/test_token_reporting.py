@@ -12,10 +12,13 @@ class TokenReportingTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary:
             path = Path(temporary) / "README.md"
             block = "<!-- distance-comparison:start -->\n[거리 비교](04_distance_comparison/README.md)\n<!-- distance-comparison:end -->"
-            path.write_text("# 이전 제목\n\n" + block + "\n\n이전 본문\n")
+            rankings = "<!-- eta-rankings:start -->\n[η² 순위](01_problem_tokens/eta_rankings/README.md)\n<!-- eta-rankings:end -->"
+            path.write_text("# 이전 제목\n\n" + rankings + "\n\n" + block + "\n\n이전 본문\n")
             _write(path, ["# 새 제목", "", "기존 수치표"])
             text = path.read_text()
             self.assertIn(block, text)
+            self.assertIn(rankings, text)
+            self.assertLess(text.index(rankings), text.index(block))
             self.assertIn("기존 수치표", text)
             self.assertNotIn("이전 본문", text)
 

@@ -1,5 +1,21 @@
 # MathHint 후속 연구 1단계 · 사용자의 토큰 검토 자료
 
+<!-- eta-rankings:start -->
+
+## η² 기준 전체 346개 토큰 순위표
+
+[순위표 안내](01_problem_tokens/eta_rankings/README.md)에서 원시·정규화 η², 학습 DF와 의미를 함께 읽을 수 있다. 각 문서는 상위30개와 펼쳐 보는 전체346개를 제공한다.
+
+|분류|원시 η² 내림차순|L2 정규화 η² 내림차순|
+|---|---|---|
+|과목|[원시 순위](01_problem_tokens/eta_rankings/curriculum.md#raw-ranking)|[정규화 순위](01_problem_tokens/eta_rankings/curriculum.md#normalized-ranking)|
+|단원|[원시 순위](01_problem_tokens/eta_rankings/unit.md#raw-ranking)|[정규화 순위](01_problem_tokens/eta_rankings/unit.md#normalized-ranking)|
+|세부단원|[원시 순위](01_problem_tokens/eta_rankings/subunit.md#raw-ranking)|[정규화 순위](01_problem_tokens/eta_rankings/subunit.md#normalized-ranking)|
+|문제 유형|[원시 순위](01_problem_tokens/eta_rankings/type.md#raw-ranking)|[정규화 순위](01_problem_tokens/eta_rankings/type.md#normalized-ranking)|
+
+<!-- eta-rankings:end -->
+
+
 <!-- distance-comparison:start -->
 
 **추가 분석: [유클리드와 코사인 거리의 토큰 영향 비교](04_distance_comparison/README.md)**

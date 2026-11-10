@@ -1,5 +1,14 @@
 # 문제 토큰 · 학습185문항의 분산과 분류 연관성
 
+<!-- eta-rankings:start -->
+
+## η² 기준 전체 346개 토큰 순위표
+
+[순위표 안내](eta_rankings/README.md)에서 원시·정규화 η², 학습 DF와 의미를 함께 읽을 수 있다. 각 문서는 상위30개와 펼쳐 보는 전체346개를 제공한다.
+
+<!-- eta-rankings:end -->
+
+
 <!-- distance-comparison:start -->
 
 **추가 분석: [유클리드와 코사인 거리의 토큰 영향 비교](../04_distance_comparison/README.md)**

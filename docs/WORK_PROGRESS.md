@@ -1,15 +1,15 @@
 # MathHint 작업 진행 상태
 
-STATUS: COMPLETE_DISTANCE_TOKEN_ANALYSIS_AWAITING_USER_SELECTION
+STATUS: COMPLETE_ETA_RANKINGS_AWAITING_USER_SELECTION
 EXECUTION_ALLOWED: false
-LAST_CONFIRMED_PUBLISHED_COMMIT: eb120c86cd06c12c5d547666aa9d0377c659b162
+LAST_CONFIRMED_PUBLISHED_COMMIT: 9d027e64fa8acf2af4e1d5e3cafe5ff9731d8685
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
 AUTOMATION_STATUS: PAUSED_AFTER_READER_WORKFLOW_COMPLETION_VERIFIED_BY_PEEK
 FIRST_RUN_FROM_SAVED_RULE: 2026-11-09T05:58:50+09:00
 RECURRENCE: EVERY_5_HOURS
 NEXT_RUN_TIME_SERVER_FIELD: NOT_RETURNED
 ENVIRONMENT: MathHint / inherited / current_environment_id_confirmed
-REMOTE_CHECKPOINT_STATUS: DISTANCE_ANALYSIS_VALIDATED_READY_FOR_FINAL_PUSH_VERIFY_GIT
+REMOTE_CHECKPOINT_STATUS: ETA_RANKINGS_VALIDATED_READY_FOR_FINAL_PUSH_VERIFY_GIT
 GITHUB_PREAUTHORIZATION_SETTING: RESTORED_TO_ORIGINAL_INHERIT_VERIFIED
 TIMEZONE: Asia/Seoul
 USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
@@ -379,3 +379,19 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 근거: results/token_analysis/04_distance_comparison/{validation.json,verification_details.json,test_results.txt,config.json,manifest.json}. 새manifest는04만관리하고기존manifest에새분석전체를중복등록하지않았다. 전체변경은이번통계·표시연결·검증·작업기록에한정한다.
 - automations_peek로기존복구예약is_enabled=false/next_run_time=null을확인했다. 후속불용어/정규화군집/회귀/신경망/API실험은구현/실행/예약하지않았다. EXECUTION_ALLOWED=false는새통계가완료된후사용자선정대기라는뜻이다.
 - 이제최종관련커밋을일반push하고실제원격main SHA와로컬HEAD를대조한뒤중단한다. 위LAST_CONFIRMED_PUBLISHED_COMMIT은게시직전원격eb120c8을정직하게기록한것이며,이번게시성공은실제Git/완료보고SHA로확인한다. 마지막정상기준커밋1548223이후이번작업트리전체를검증했다. 미완료필수분석0,다음은사용자의불용어선정및별도명시적승인이다.
+
+## η² 전체 순위표 표시 보완 시작 — 2026-11-10T13:01:26.325497+00:00
+
+- 시작HEAD9d027e6·main·Git clean. 추적2665파일SHA를/tmp/mathhint_eta_rankings_baseline.json에확보했다. 데이터/통계/모델/그림/기존감사기록/두선택JSON은변경하지않는다.
+- 새표시모듈은stdlib로CSV4종을교차대조하고순위MD5개만쓴다. 새통계/모델/토큰화/API경로는없다. 단계:표시코드→MD5개/README링크→독립전체행/정렬/표/링크/보존검증→커밋/푸시/원격확인후중단.
+
+## η² 전체 순위표 완료·검증·게시 준비 — 2026-11-10T13:06:46.161173+00:00
+
+- 새결과는 01_problem_tokens/eta_rankings/의README/curriculum/unit/subunit/type Markdown5개다. 각분류에원시/정규화상위30+접기전체346의4표(30/346/30/346),6열,명시목차앵커,DF/의미,소집단/η²해석주의를제공한다. 작은화면에서는표가좌우스크롤되고긴주의설명은표뒤에배치했다.
+- 새eta_rankings.py는stdlib만사용해기존CSV4종·어휘JSON을읽고5개MD만쓴다. 원시정렬의canonical값은variance_by_classification.eta_squared,정규화는normalized_eta_comparison.normalized_eta_squared다. 다른기존CSV의원시η²는1e-12허용오차로교차대조했으며수정하지않았다. Decimal로반올림전값을정렬하고완전동점은index순,표시는4자리/undefined는—다.
+- 독립감사에서전체346×두정렬×4수준=2768행과상위30×2×4=240행의값·DF·의미·순서·누락/중복을전수확인PASS했다. 현재undefined0이며synthetic표시검사에서undefined끝배치/—·미세차이정렬·동점index·backslash/pipe를확인했다. 문서파일링크120개와모든명시앵커정상이다.
+- 기존vendor markdown-it로실제렌더하여각문서4표/모든행6열/latex:|와latex:\sin보존을확인했다. Playwright기본브라우저실행파일부재로첫launch는실패했으나설치된/usr/bin/chromium을명시해재검증성공했다. 4문서DOM·접기토글,390px미리보기의페이지넘침없음/표가로스크롤을확인했고desktop/mobile대표스크린샷을실제로열어읽었다. 이는로컬GitHub유사CSS미리보기이며실제GitHub/iPad전수시각검사라고주장하지않는다.
+- 토큰분석README와문제토큰README에내비블록만추가했다. 첫README에네분류원시/정규화직접링크표를두었다. parent reporting._write는기존거리링크와η순위링크를원래순서로보존하는최소확장이고기존표시테스트4/4 PASS다. 기존보고서를실제로재생성하지않았다.
+- parent manifest는기존README2개해시만갱신하고새MD5개항목만추가해37→42개다. 다른기존항목의해시는전부동일하며전체42개실제파일SHA와일치했다. 기존검증JSON·통계CSV·PNG·04거리결과·data/final/archive·모델/요청/응답·사용자선택two[]는불변이다. 새분석/토큰화/모델/회귀/NN/API/불용어선정·적용은없다.
+- 시작추적2665중허용7개만변경(명세/진행2·표시helper/검사2·README2·manifest1),나머지2658은바이트동일이다. MD5개와표시모듈1개만새파일로추가했으며삭제는없다. 감사/브라우저임시증거는/tmp에두고불필요한새결과JSON/그림을저장소에추가하지않았다.
+- 현재필수표시작업미완료0. 관련변경만커밋후일반push하고원격main==로컬HEAD를확인한뒤중단한다. 위LAST_CONFIRMED_PUBLISHED_COMMIT은게시전실제원격9d027e6이며이번최종커밋은Git/완료보고에서확인한다. 후속선정/실험은여전히사용자의명시적요청대기이며자동화를재개하지않는다.
