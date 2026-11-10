@@ -173,6 +173,22 @@ def _api_interpretation(base, values):
             f"{r['condition']} {r['correct_count_ai_supplemental']}/{r['graded_count']} "
             f"({float(r['accuracy_ai_supplemental']):.2%})" for r in supplements) + "다. "
             "보조 기준은 원본 점수를 대체하지 않으며 사람의 정답표 확정 판정이 아니다."]
+    if all(c in lookup and int(lookup[c].get("success_count") or 0) == int(lookup[c].get("graded_count") or 0) == len(questions)
+           for c in "ABCD"):
+        counts = {c: int(lookup[c]["correct_count"]) for c in "ABCD"}
+        if len(set(counts.values())) == 1:
+            lines += ["", f"**이 고정 테스트{len(questions)}문항에서는 네 조건의 원본 기준 정답 수가 "
+                      f"모두 {counts['A']}개로 같았다.** 선형·비선형 예측이나 실제 해설 토큰을 제공해도 전체 정답 수는 늘지 않았다."]
+            if any(_saved_bool(q.get("A_correct_original")) != _saved_bool(q.get(c + "_correct_original"))
+                   for q in questions for c in "BCD"):
+                lines.append("다만 같은 정답률이 같은 문항의 성공을 뜻하지는 않는다. 위 대응 비교의 개선·악화가 상쇄됐으며 실제 문항을 함께 읽어야 한다.")
+        if all(q.get(c + "_total_token_count") not in (None, "") for q in questions for c in "ABCD"):
+            totals = {c: sum(int(q[c + "_total_token_count"]) for q in questions) for c in "ABCD"}
+            if totals["A"] > 0 and all(totals[c] > totals["A"] for c in "BCD"):
+                lines += ["", "성공 응답의 실제 전체 토큰은 A 대비 " + ", ".join(
+                    f"{c} +{(totals[c]/totals['A']-1)*100:.2f}%" for c in "BCD") + "였다. "
+                    "입력 증가를 포함하면 세 힌트 조건 모두 토큰을 더 사용했으며, 출력 토큰 감소만으로 효율 개선이라고 판단할 수 없다. "
+                    "사용량이 미제공인 실패·재시도 비용과 외부 예측 모델의 계산 비용은 이 합계에 포함되지 않는다."]
     return lines + ["", "입력 힌트가 늘어난 조건에서도 출력과 전체 토큰의 방향은 별도로 확인한다. "
                     "각 토큰 항목은 성공하고 해당 값이 제공된 공통 문항만 사용하므로 n이 채점 집합과 다를 수 있다. "
                     "전체 토큰 감소와 정답 증가를 같은 효과로 취급하지 않는다. "
@@ -313,6 +329,7 @@ def report(root=ROOT):
         "전체265 문제·원본 풀이의 어휘를 사전에 사용했다. 가중치와 모델 선택은 원래 학습185 내부에서만 수행했지만 완전히 독립적인 미관측 일반화 평가가 아니다.",
         "검증 P@20을 먼저 고정하고 내부148/37에서 유한 후보를 개선했다. 최종 설정을 확정한 뒤185개로 재학습하고 테스트80 예측을 만들었다. API 정답률을 보고 모델을 다시 바꾸지 않는다.",
         "특정 원본 해설의 토큰 빈도는 가능한 여러 올바른 풀이 중 하나의 표현이다. 빈도 오차와 수학적 풀이의 옳고 그름은 다른 평가다.",
+        "AI 보조 검토에서 일부 원본 해설의 범위·상수 표기가 문제 원문과 다른 사례도 기록했다(trig_2_017, trig_3_039, trig_3_040). 원문은 보존하고 실제 문제 조건으로 풀이를 검토했다. 원본 해설 빈도를 수학적 타당성의 절대 기준으로 취급하지 않는다.",
         "학습185에서 빈도가0인 풀이 토큰25개는 전체 어휘에 있어도 학습 사례가 없다. 문제의 동일 BoW가 train/test에 걸친 diff_1_007·diff_1_011도 원래 분할대로 남겨 해석에 제한이 있다.",
         "BoW는 수식의 순서·분자/분모·변수 역할·논리 연결을 보존하지 못한다. 층을 늘리는 것만으로 소실된 수식 구조가 복원되지 않는다.",
         "원본 답 정오답과 풀이 과정 타당성을 분리했다. 구체적 오류 단계·근거로 충분히 확인하지 못한 생성 풀이는 검토 보류로 남기며 사람의 확정 판정으로 표시하지 않는다.",

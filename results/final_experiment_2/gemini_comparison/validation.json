@@ -1,5 +1,5 @@
 {
-  "verified_at": "2026-11-10T21:06:20.265008+00:00",
+  "verified_at": "2026-11-10T21:22:08.930399+00:00",
   "config_id": "cc67f503605a3acd86112e8734b755f1c1da6e86d5cea9a3c8da1de43c3708e9",
   "dataset_id": "1e1e467b301406d6a2df2775ad506474aaa915b342d315cdca8dc39fdf3e7345",
   "split": "test",
@@ -2310,6 +2310,98 @@
     },
     {
       "check": "sdk_capture_576",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_577",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_578",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_579",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_580",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_581",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_582",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_583",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_584",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_585",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_586",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_587",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_588",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_589",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_590",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_591",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_592",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_593",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_594",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_595",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_596",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_597",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_598",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_599",
       "passed": true
     },
     {
@@ -8221,11 +8313,35 @@
       "passed": true
     },
     {
+      "check": "usage_matches_api_fields_trig_3_014_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_3_014_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_3_014_B",
+      "passed": true
+    },
+    {
       "check": "response_identity_trig_3_015_B",
       "passed": true
     },
     {
       "check": "usage_values_trig_3_015_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_3_015_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_3_015_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_3_015_B",
       "passed": true
     },
     {
@@ -8317,6 +8433,18 @@
       "passed": true
     },
     {
+      "check": "usage_matches_api_fields_trig_3_017_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_3_017_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_3_017_C",
+      "passed": true
+    },
+    {
       "check": "response_identity_trig_3_021_C",
       "passed": true
     },
@@ -8357,6 +8485,326 @@
       "passed": true
     },
     {
+      "check": "response_identity_trig_3_021_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_3_021_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_3_021_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_3_021_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_3_021_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_026_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_3_026_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_3_026_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_3_026_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_3_026_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_026_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_3_026_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_3_026_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_3_026_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_3_026_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_026_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_3_026_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_3_026_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_3_026_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_3_026_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_034_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_3_034_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_3_034_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_3_034_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_3_034_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_034_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_3_034_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_3_034_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_3_034_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_3_034_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_034_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_3_034_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_3_034_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_3_034_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_3_034_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_035_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_3_035_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_3_035_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_3_035_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_3_035_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_035_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_3_035_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_3_035_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_3_035_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_3_035_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_035_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_3_035_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_3_035_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_3_035_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_3_035_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_039_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_3_039_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_3_039_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_3_039_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_3_039_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_039_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_3_039_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_3_039_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_3_039_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_3_039_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_039_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_3_039_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_3_039_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_3_039_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_3_039_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_040_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_3_040_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_3_040_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_3_040_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_3_040_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_040_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_3_040_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_3_040_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_3_040_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_3_040_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_040_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_3_040_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_3_040_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_3_040_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_3_040_C",
+      "passed": true
+    },
+    {
       "check": "successful_exact_requests_never_saved_twice",
       "passed": true
     },
@@ -8369,22 +8817,902 @@
       "passed": true
     },
     {
+      "check": "actual_browser_record_matches_current_html_and_assets",
+      "passed": true
+    },
+    {
       "check": "verification_leaves_inputs_models_and_response_logs_unchanged",
       "passed": true
     }
   ],
-  "passed": 2092,
+  "passed": 2205,
   "failed": 0,
   "complete": true,
-  "experiment_complete": false,
-  "successful_requests": 301,
+  "experiment_complete": true,
+  "successful_requests": 320,
   "expected_requests": 320,
-  "pending_requests": 19,
+  "pending_requests": 0,
   "live_api_calls_during_verification": 0,
   "model_training_during_verification": false,
   "actual_browser_validation": {
-    "performed": false,
-    "note": "실제 브라우저 검사는 별도 수행하며, 파일 존재 검증으로 대신하지 않는다."
+    "schema_version": 1,
+    "performed": true,
+    "passed": true,
+    "checked_at": "2026-11-10T21:20:05.614351+00:00",
+    "report_path": "results/final_experiment_2/gemini_comparison/report.html",
+    "report_sha256": "3bc8bdfdbef6fbfc7815f037c26546268f55bc77a371468ef57fed4bb6869652",
+    "assets_sha256": {
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_AMS-Regular.woff2": "0cdd387c9590a1a9f9794560022dbb59654a7d86f187aa0c81495ad42d3a7308",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Bold.woff2": "0f60d1b897938ec918c8ce073092411baf9438f6739465693ff18b0f9d20b021",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Regular.woff2": "c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Math-Italic.woff2": "7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size1-Regular.woff2": "6b47c40166b6dbe21a5dfca7718413f2147fd2399be1ba605d8ad39cedf25dfe",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size2-Regular.woff2": "d04c54219f9eaec6d4d4fd42dfb28785975a4794d6b2fc71e566b9cd6db842dd",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size3-Regular.woff2": "73d591271b1604960cb10bb90fee021670af7297017e0e98480b332d11f51995",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size4-Regular.woff2": "a4af7d414440a1c1790825cfb700cf9cf43b0f2c4b04f0ebc523011ad9853ec0",
+      "mathhint_analysis/viewer_assets/vendor/katex.min.css": "b075123b50e51a0a7819b49efa2a62bb05bc7dac04b0d65a9a3799c2211ea48f",
+      "mathhint_analysis/viewer_assets/vendor/katex.min.js": "e8d885505949f3a5f4abdd5dd0d53696bd1371ad26ffbf4f310dcd77c8cdae89",
+      "mathhint_analysis/viewer_assets/vendor/markdown-it.min.js": "38c70a1e7ca91ab40e2d9e6e60129851a717ed1c7d4acbbdd41bf9503791cf68",
+      "results/final_experiment_2/gemini_comparison/report.html": "3bc8bdfdbef6fbfc7815f037c26546268f55bc77a371468ef57fed4bb6869652",
+      "results/final_experiment_2/gemini_comparison/viewer_assets/viewer.css": "156268a9bdb2164cf76d59f7ddf2c915447cce7250a6fcfb9ad75b2f0e4c1c84",
+      "results/final_experiment_2/gemini_comparison/viewer_assets/viewer.js": "4f3754b21edc228f8e6ac13757237b3737372da8f676e350ae978f617ce1443b"
+    },
+    "viewports": [
+      {
+        "label": "desktop",
+        "width": 1600,
+        "height": 1000,
+        "card_count": 4,
+        "document_width": 1600,
+        "grid_columns": "554.438px 554.453px",
+        "comparison_columns": "395.109px 1128.89px",
+        "card_rectangles": [
+          {
+            "method": "baseline",
+            "x": 443.109375,
+            "width": 554.4375
+          },
+          {
+            "method": "regression_hint",
+            "x": 1017.546875,
+            "width": 554.453125
+          },
+          {
+            "method": "deep_learning_hint",
+            "x": 443.109375,
+            "width": 554.4375
+          },
+          {
+            "method": "oracle_hint",
+            "x": 1017.546875,
+            "width": 554.453125
+          }
+        ]
+      },
+      {
+        "label": "mobile390",
+        "width": 390,
+        "height": 844,
+        "card_count": 4,
+        "document_width": 390,
+        "grid_columns": "366px",
+        "comparison_columns": "366px",
+        "card_rectangles": [
+          {
+            "method": "baseline",
+            "x": 12,
+            "width": 366
+          },
+          {
+            "method": "regression_hint",
+            "x": 12,
+            "width": 366
+          },
+          {
+            "method": "deep_learning_hint",
+            "x": 12,
+            "width": 366
+          },
+          {
+            "method": "oracle_hint",
+            "x": 12,
+            "width": 366
+          }
+        ]
+      }
+    ],
+    "checks": {
+      "265_questions": true,
+      "test80_default": true,
+      "all320_successful": true,
+      "all320_curated_AI_reviewed": true,
+      "local_math_markdown_loaded": true,
+      "rich_markdown_actual_output": true,
+      "desktop_responsive_four_cards": true,
+      "desktop_diff005_B_correct_but_reasoning_suspect": true,
+      "desktop_key_conflict_all4": true,
+      "desktop_shared_error043_all4": true,
+      "desktop_harm034_Acorrect_BCDwrong": true,
+      "desktop_gain022_Awrong_BCDcorrect": true,
+      "desktop_ID_search": true,
+      "desktop_unit_filter": true,
+      "desktop_train_not_API_missing": true,
+      "mobile390_responsive_four_cards": true,
+      "mobile390_diff005_B_correct_but_reasoning_suspect": true,
+      "mobile390_key_conflict_all4": true,
+      "mobile390_shared_error043_all4": true,
+      "mobile390_harm034_Acorrect_BCDwrong": true,
+      "mobile390_gain022_Awrong_BCDcorrect": true,
+      "mobile390_ID_search": true,
+      "mobile390_unit_filter": true,
+      "mobile390_train_not_API_missing": true,
+      "all_inspected_files_unchanged": true,
+      "all_loaded_assets_repo_local_and_HTTP200": true,
+      "no_external_or_browser_errors": true
+    },
+    "desktop_all80": {
+      "questions_scanned": 80,
+      "four_cards_every_question": true,
+      "math_nodes_rendered_total": 9683,
+      "math_render_errors": [],
+      "horizontal_overflow_ids": [],
+      "all320_card_status_mismatches": [],
+      "all320_final_answer_mismatches": [],
+      "all320_success_review_mismatches": [],
+      "all240_actual_hint_label_mismatches": []
+    },
+    "mobile390_all80": {
+      "questions_scanned": 80,
+      "four_cards_every_question": true,
+      "math_nodes_rendered_total": 9683,
+      "math_render_errors": [],
+      "horizontal_overflow_ids": [],
+      "all320_card_status_mismatches": [],
+      "all320_final_answer_mismatches": [],
+      "all320_success_review_mismatches": [],
+      "all240_actual_hint_label_mismatches": []
+    },
+    "case_checks": {
+      "desktop": {
+        "trig_1_010": {
+          "id": "trig_1_010",
+          "reference_answer": "④",
+          "AI_supplemental_answer": "②",
+          "case_tags": [
+            "all_wrong",
+            "D_wrong",
+            "answer_key_conflict",
+            "possible_alternative"
+          ],
+          "cards": [
+            {
+              "method": "baseline",
+              "condition": "A",
+              "final_answer": "판독한 최종 답: ②",
+              "badge": "오답",
+              "review_text": "풀이 검토: 타당 가능 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "appropriate",
+              "reference_correct": false,
+              "supplemental_correct": true,
+              "supplemental_notice": [
+                "AI 보조 정답표 기준: 정답 · 사람의 확정 판정 아님"
+              ]
+            },
+            {
+              "method": "regression_hint",
+              "condition": "B",
+              "final_answer": "판독한 최종 답: ②",
+              "badge": "오답",
+              "review_text": "풀이 검토: 타당 가능 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "appropriate",
+              "reference_correct": false,
+              "supplemental_correct": true,
+              "supplemental_notice": [
+                "AI 보조 정답표 기준: 정답 · 사람의 확정 판정 아님"
+              ]
+            },
+            {
+              "method": "deep_learning_hint",
+              "condition": "C",
+              "final_answer": "판독한 최종 답: ②",
+              "badge": "오답",
+              "review_text": "풀이 검토: 타당 가능 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "appropriate",
+              "reference_correct": false,
+              "supplemental_correct": true,
+              "supplemental_notice": [
+                "AI 보조 정답표 기준: 정답 · 사람의 확정 판정 아님"
+              ]
+            },
+            {
+              "method": "oracle_hint",
+              "condition": "D",
+              "final_answer": "판독한 최종 답: ②",
+              "badge": "오답",
+              "review_text": "풀이 검토: 타당 가능 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "appropriate",
+              "reference_correct": false,
+              "supplemental_correct": true,
+              "supplemental_notice": [
+                "AI 보조 정답표 기준: 정답 · 사람의 확정 판정 아님"
+              ]
+            }
+          ]
+        },
+        "trig_1_043": {
+          "id": "trig_1_043",
+          "reference_answer": "$4$",
+          "AI_supplemental_answer": null,
+          "case_tags": [
+            "reasoning_suspected",
+            "correct_but_reasoning_suspected"
+          ],
+          "cards": [
+            {
+              "method": "baseline",
+              "condition": "A",
+              "final_answer": "판독한 최종 답: 4",
+              "badge": "정답",
+              "review_text": "풀이 검토: 오류 의심 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "inappropriate",
+              "reference_correct": true,
+              "supplemental_correct": true,
+              "supplemental_notice": []
+            },
+            {
+              "method": "regression_hint",
+              "condition": "B",
+              "final_answer": "판독한 최종 답: 4",
+              "badge": "정답",
+              "review_text": "풀이 검토: 오류 의심 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "inappropriate",
+              "reference_correct": true,
+              "supplemental_correct": true,
+              "supplemental_notice": []
+            },
+            {
+              "method": "deep_learning_hint",
+              "condition": "C",
+              "final_answer": "판독한 최종 답: 4",
+              "badge": "정답",
+              "review_text": "풀이 검토: 오류 의심 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "inappropriate",
+              "reference_correct": true,
+              "supplemental_correct": true,
+              "supplemental_notice": []
+            },
+            {
+              "method": "oracle_hint",
+              "condition": "D",
+              "final_answer": "판독한 최종 답: 4",
+              "badge": "정답",
+              "review_text": "풀이 검토: 오류 의심 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "inappropriate",
+              "reference_correct": true,
+              "supplemental_correct": true,
+              "supplemental_notice": []
+            }
+          ]
+        },
+        "trig_3_034": {
+          "id": "trig_3_034",
+          "reference_answer": "⑤",
+          "AI_supplemental_answer": null,
+          "case_tags": [
+            "A_correct_B_wrong",
+            "A_correct_C_wrong",
+            "D_wrong",
+            "changed_answers",
+            "reasoning_suspected",
+            "possible_alternative"
+          ],
+          "cards": [
+            {
+              "method": "baseline",
+              "condition": "A",
+              "final_answer": "판독한 최종 답: ⑤",
+              "badge": "정답",
+              "review_text": "풀이 검토: 타당 가능 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "appropriate",
+              "reference_correct": true,
+              "supplemental_correct": true,
+              "supplemental_notice": []
+            },
+            {
+              "method": "regression_hint",
+              "condition": "B",
+              "final_answer": "판독한 최종 답: ④",
+              "badge": "오답",
+              "review_text": "풀이 검토: 오류 의심 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "inappropriate",
+              "reference_correct": false,
+              "supplemental_correct": false,
+              "supplemental_notice": []
+            },
+            {
+              "method": "deep_learning_hint",
+              "condition": "C",
+              "final_answer": "판독한 최종 답: ④",
+              "badge": "오답",
+              "review_text": "풀이 검토: 오류 의심 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "inappropriate",
+              "reference_correct": false,
+              "supplemental_correct": false,
+              "supplemental_notice": []
+            },
+            {
+              "method": "oracle_hint",
+              "condition": "D",
+              "final_answer": "판독한 최종 답: ③",
+              "badge": "오답",
+              "review_text": "풀이 검토: 오류 의심 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "inappropriate",
+              "reference_correct": false,
+              "supplemental_correct": false,
+              "supplemental_notice": []
+            }
+          ]
+        },
+        "trig_2_022": {
+          "id": "trig_2_022",
+          "reference_answer": "③",
+          "AI_supplemental_answer": null,
+          "case_tags": [
+            "learned_hint_improvement",
+            "changed_answers",
+            "reasoning_suspected"
+          ],
+          "cards": [
+            {
+              "method": "baseline",
+              "condition": "A",
+              "final_answer": "판독한 최종 답: ①",
+              "badge": "오답",
+              "review_text": "풀이 검토: 오류 의심 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "inappropriate",
+              "reference_correct": false,
+              "supplemental_correct": false,
+              "supplemental_notice": []
+            },
+            {
+              "method": "regression_hint",
+              "condition": "B",
+              "final_answer": "판독한 최종 답: ③",
+              "badge": "정답",
+              "review_text": "풀이 검토: 타당 가능 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "appropriate",
+              "reference_correct": true,
+              "supplemental_correct": true,
+              "supplemental_notice": []
+            },
+            {
+              "method": "deep_learning_hint",
+              "condition": "C",
+              "final_answer": "판독한 최종 답: ③",
+              "badge": "정답",
+              "review_text": "풀이 검토: 타당 가능 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "appropriate",
+              "reference_correct": true,
+              "supplemental_correct": true,
+              "supplemental_notice": []
+            },
+            {
+              "method": "oracle_hint",
+              "condition": "D",
+              "final_answer": "판독한 최종 답: ③",
+              "badge": "정답",
+              "review_text": "풀이 검토: 타당 가능 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "appropriate",
+              "reference_correct": true,
+              "supplemental_correct": true,
+              "supplemental_notice": []
+            }
+          ]
+        }
+      },
+      "mobile390": {
+        "trig_1_010": {
+          "id": "trig_1_010",
+          "reference_answer": "④",
+          "AI_supplemental_answer": "②",
+          "case_tags": [
+            "all_wrong",
+            "D_wrong",
+            "answer_key_conflict",
+            "possible_alternative"
+          ],
+          "cards": [
+            {
+              "method": "baseline",
+              "condition": "A",
+              "final_answer": "판독한 최종 답: ②",
+              "badge": "오답",
+              "review_text": "풀이 검토: 타당 가능 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "appropriate",
+              "reference_correct": false,
+              "supplemental_correct": true,
+              "supplemental_notice": [
+                "AI 보조 정답표 기준: 정답 · 사람의 확정 판정 아님"
+              ]
+            },
+            {
+              "method": "regression_hint",
+              "condition": "B",
+              "final_answer": "판독한 최종 답: ②",
+              "badge": "오답",
+              "review_text": "풀이 검토: 타당 가능 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "appropriate",
+              "reference_correct": false,
+              "supplemental_correct": true,
+              "supplemental_notice": [
+                "AI 보조 정답표 기준: 정답 · 사람의 확정 판정 아님"
+              ]
+            },
+            {
+              "method": "deep_learning_hint",
+              "condition": "C",
+              "final_answer": "판독한 최종 답: ②",
+              "badge": "오답",
+              "review_text": "풀이 검토: 타당 가능 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "appropriate",
+              "reference_correct": false,
+              "supplemental_correct": true,
+              "supplemental_notice": [
+                "AI 보조 정답표 기준: 정답 · 사람의 확정 판정 아님"
+              ]
+            },
+            {
+              "method": "oracle_hint",
+              "condition": "D",
+              "final_answer": "판독한 최종 답: ②",
+              "badge": "오답",
+              "review_text": "풀이 검토: 타당 가능 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "appropriate",
+              "reference_correct": false,
+              "supplemental_correct": true,
+              "supplemental_notice": [
+                "AI 보조 정답표 기준: 정답 · 사람의 확정 판정 아님"
+              ]
+            }
+          ]
+        },
+        "trig_1_043": {
+          "id": "trig_1_043",
+          "reference_answer": "$4$",
+          "AI_supplemental_answer": null,
+          "case_tags": [
+            "reasoning_suspected",
+            "correct_but_reasoning_suspected"
+          ],
+          "cards": [
+            {
+              "method": "baseline",
+              "condition": "A",
+              "final_answer": "판독한 최종 답: 4",
+              "badge": "정답",
+              "review_text": "풀이 검토: 오류 의심 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "inappropriate",
+              "reference_correct": true,
+              "supplemental_correct": true,
+              "supplemental_notice": []
+            },
+            {
+              "method": "regression_hint",
+              "condition": "B",
+              "final_answer": "판독한 최종 답: 4",
+              "badge": "정답",
+              "review_text": "풀이 검토: 오류 의심 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "inappropriate",
+              "reference_correct": true,
+              "supplemental_correct": true,
+              "supplemental_notice": []
+            },
+            {
+              "method": "deep_learning_hint",
+              "condition": "C",
+              "final_answer": "판독한 최종 답: 4",
+              "badge": "정답",
+              "review_text": "풀이 검토: 오류 의심 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "inappropriate",
+              "reference_correct": true,
+              "supplemental_correct": true,
+              "supplemental_notice": []
+            },
+            {
+              "method": "oracle_hint",
+              "condition": "D",
+              "final_answer": "판독한 최종 답: 4",
+              "badge": "정답",
+              "review_text": "풀이 검토: 오류 의심 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "inappropriate",
+              "reference_correct": true,
+              "supplemental_correct": true,
+              "supplemental_notice": []
+            }
+          ]
+        },
+        "trig_3_034": {
+          "id": "trig_3_034",
+          "reference_answer": "⑤",
+          "AI_supplemental_answer": null,
+          "case_tags": [
+            "A_correct_B_wrong",
+            "A_correct_C_wrong",
+            "D_wrong",
+            "changed_answers",
+            "reasoning_suspected",
+            "possible_alternative"
+          ],
+          "cards": [
+            {
+              "method": "baseline",
+              "condition": "A",
+              "final_answer": "판독한 최종 답: ⑤",
+              "badge": "정답",
+              "review_text": "풀이 검토: 타당 가능 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "appropriate",
+              "reference_correct": true,
+              "supplemental_correct": true,
+              "supplemental_notice": []
+            },
+            {
+              "method": "regression_hint",
+              "condition": "B",
+              "final_answer": "판독한 최종 답: ④",
+              "badge": "오답",
+              "review_text": "풀이 검토: 오류 의심 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "inappropriate",
+              "reference_correct": false,
+              "supplemental_correct": false,
+              "supplemental_notice": []
+            },
+            {
+              "method": "deep_learning_hint",
+              "condition": "C",
+              "final_answer": "판독한 최종 답: ④",
+              "badge": "오답",
+              "review_text": "풀이 검토: 오류 의심 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "inappropriate",
+              "reference_correct": false,
+              "supplemental_correct": false,
+              "supplemental_notice": []
+            },
+            {
+              "method": "oracle_hint",
+              "condition": "D",
+              "final_answer": "판독한 최종 답: ③",
+              "badge": "오답",
+              "review_text": "풀이 검토: 오류 의심 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "inappropriate",
+              "reference_correct": false,
+              "supplemental_correct": false,
+              "supplemental_notice": []
+            }
+          ]
+        },
+        "trig_2_022": {
+          "id": "trig_2_022",
+          "reference_answer": "③",
+          "AI_supplemental_answer": null,
+          "case_tags": [
+            "learned_hint_improvement",
+            "changed_answers",
+            "reasoning_suspected"
+          ],
+          "cards": [
+            {
+              "method": "baseline",
+              "condition": "A",
+              "final_answer": "판독한 최종 답: ①",
+              "badge": "오답",
+              "review_text": "풀이 검토: 오류 의심 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "inappropriate",
+              "reference_correct": false,
+              "supplemental_correct": false,
+              "supplemental_notice": []
+            },
+            {
+              "method": "regression_hint",
+              "condition": "B",
+              "final_answer": "판독한 최종 답: ③",
+              "badge": "정답",
+              "review_text": "풀이 검토: 타당 가능 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "appropriate",
+              "reference_correct": true,
+              "supplemental_correct": true,
+              "supplemental_notice": []
+            },
+            {
+              "method": "deep_learning_hint",
+              "condition": "C",
+              "final_answer": "판독한 최종 답: ③",
+              "badge": "정답",
+              "review_text": "풀이 검토: 타당 가능 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "appropriate",
+              "reference_correct": true,
+              "supplemental_correct": true,
+              "supplemental_notice": []
+            },
+            {
+              "method": "oracle_hint",
+              "condition": "D",
+              "final_answer": "판독한 최종 답: ③",
+              "badge": "정답",
+              "review_text": "풀이 검토: 타당 가능 · 보조 검토 · AI 보조 · 사람 미확정\n\n풀이 검토 근거",
+              "math_status": "appropriate",
+              "reference_correct": true,
+              "supplemental_correct": true,
+              "supplemental_notice": []
+            }
+          ]
+        }
+      }
+    },
+    "filter_checks": {
+      "desktop": {
+        "api_error": {
+          "expected_ids": [],
+          "actual_ids": [],
+          "passed": true
+        },
+        "not_run": {
+          "expected_ids": [],
+          "actual_ids": [],
+          "passed": true
+        },
+        "review_pending": {
+          "expected_ids": [],
+          "actual_ids": [],
+          "passed": true
+        },
+        "ungraded": {
+          "expected_ids": [],
+          "actual_ids": [],
+          "passed": true
+        },
+        "possible_alternative": {
+          "expected_ids": [
+            "diff_2_004",
+            "diff_2_018",
+            "diff_2_024",
+            "diff_2_029",
+            "diff_3_001",
+            "diff_3_004",
+            "diff_3_005",
+            "diff_3_028",
+            "trig_1_004",
+            "trig_1_009",
+            "trig_1_010",
+            "trig_1_028",
+            "trig_1_046",
+            "trig_2_024",
+            "trig_2_030",
+            "trig_3_014",
+            "trig_3_017",
+            "trig_3_034",
+            "trig_3_035"
+          ],
+          "actual_ids": [
+            "diff_2_004",
+            "diff_2_018",
+            "diff_2_024",
+            "diff_2_029",
+            "diff_3_001",
+            "diff_3_004",
+            "diff_3_005",
+            "diff_3_028",
+            "trig_1_004",
+            "trig_1_009",
+            "trig_1_010",
+            "trig_1_028",
+            "trig_1_046",
+            "trig_2_024",
+            "trig_2_030",
+            "trig_3_014",
+            "trig_3_017",
+            "trig_3_034",
+            "trig_3_035"
+          ],
+          "passed": true
+        },
+        "reasoning_suspected": {
+          "expected_ids": [
+            "diff_1_005",
+            "diff_1_038",
+            "diff_1_041",
+            "diff_2_004",
+            "diff_2_024",
+            "diff_3_004",
+            "diff_3_005",
+            "diff_3_044",
+            "trig_1_013",
+            "trig_1_043",
+            "trig_2_022",
+            "trig_3_034",
+            "trig_3_035"
+          ],
+          "actual_ids": [
+            "diff_1_005",
+            "diff_1_038",
+            "diff_1_041",
+            "diff_2_004",
+            "diff_2_024",
+            "diff_3_004",
+            "diff_3_005",
+            "diff_3_044",
+            "trig_1_013",
+            "trig_1_043",
+            "trig_2_022",
+            "trig_3_034",
+            "trig_3_035"
+          ],
+          "passed": true
+        },
+        "answer_key_conflict": {
+          "expected_ids": [
+            "trig_1_010"
+          ],
+          "actual_ids": [
+            "trig_1_010"
+          ],
+          "passed": true
+        },
+        "A_correct_B_wrong": {
+          "expected_ids": [
+            "trig_3_034"
+          ],
+          "actual_ids": [
+            "trig_3_034"
+          ],
+          "passed": true
+        },
+        "A_correct_C_wrong": {
+          "expected_ids": [
+            "trig_3_034"
+          ],
+          "actual_ids": [
+            "trig_3_034"
+          ],
+          "passed": true
+        }
+      },
+      "mobile390": {
+        "api_error": {
+          "expected_ids": [],
+          "actual_ids": [],
+          "passed": true
+        },
+        "not_run": {
+          "expected_ids": [],
+          "actual_ids": [],
+          "passed": true
+        },
+        "review_pending": {
+          "expected_ids": [],
+          "actual_ids": [],
+          "passed": true
+        },
+        "ungraded": {
+          "expected_ids": [],
+          "actual_ids": [],
+          "passed": true
+        },
+        "possible_alternative": {
+          "expected_ids": [
+            "diff_2_004",
+            "diff_2_018",
+            "diff_2_024",
+            "diff_2_029",
+            "diff_3_001",
+            "diff_3_004",
+            "diff_3_005",
+            "diff_3_028",
+            "trig_1_004",
+            "trig_1_009",
+            "trig_1_010",
+            "trig_1_028",
+            "trig_1_046",
+            "trig_2_024",
+            "trig_2_030",
+            "trig_3_014",
+            "trig_3_017",
+            "trig_3_034",
+            "trig_3_035"
+          ],
+          "actual_ids": [
+            "diff_2_004",
+            "diff_2_018",
+            "diff_2_024",
+            "diff_2_029",
+            "diff_3_001",
+            "diff_3_004",
+            "diff_3_005",
+            "diff_3_028",
+            "trig_1_004",
+            "trig_1_009",
+            "trig_1_010",
+            "trig_1_028",
+            "trig_1_046",
+            "trig_2_024",
+            "trig_2_030",
+            "trig_3_014",
+            "trig_3_017",
+            "trig_3_034",
+            "trig_3_035"
+          ],
+          "passed": true
+        },
+        "reasoning_suspected": {
+          "expected_ids": [
+            "diff_1_005",
+            "diff_1_038",
+            "diff_1_041",
+            "diff_2_004",
+            "diff_2_024",
+            "diff_3_004",
+            "diff_3_005",
+            "diff_3_044",
+            "trig_1_013",
+            "trig_1_043",
+            "trig_2_022",
+            "trig_3_034",
+            "trig_3_035"
+          ],
+          "actual_ids": [
+            "diff_1_005",
+            "diff_1_038",
+            "diff_1_041",
+            "diff_2_004",
+            "diff_2_024",
+            "diff_3_004",
+            "diff_3_005",
+            "diff_3_044",
+            "trig_1_013",
+            "trig_1_043",
+            "trig_2_022",
+            "trig_3_034",
+            "trig_3_035"
+          ],
+          "passed": true
+        },
+        "answer_key_conflict": {
+          "expected_ids": [
+            "trig_1_010"
+          ],
+          "actual_ids": [
+            "trig_1_010"
+          ],
+          "passed": true
+        },
+        "A_correct_B_wrong": {
+          "expected_ids": [
+            "trig_3_034"
+          ],
+          "actual_ids": [
+            "trig_3_034"
+          ],
+          "passed": true
+        },
+        "A_correct_C_wrong": {
+          "expected_ids": [
+            "trig_3_034"
+          ],
+          "actual_ids": [
+            "trig_3_034"
+          ],
+          "passed": true
+        }
+      }
+    },
+    "network": {
+      "external_requests": 0,
+      "pageerrors": 0,
+      "consoleerrors": 0,
+      "request_failures": 0
+    },
+    "file_uri_limitation": "Direct file:// navigation is blocked by managed Chromium policy (ERR_BLOCKED_BY_ADMINISTRATOR). The actual saved report and repository-local assets were tested through a temporary loopback HTTP server with all external requests blocked.",
+    "temporary_server_shutdown": true,
+    "notes": "실제 표시 검증이며 수학적 타당성 증명과 구분한다. 보고서와 자산 해시가 달라지면 verify가 이 기록의 재사용을 거부한다."
   },
   "limits": [
     "검증 통과와 실험 완료는 구분한다. 미완료 요청은 그대로 표시한다.",

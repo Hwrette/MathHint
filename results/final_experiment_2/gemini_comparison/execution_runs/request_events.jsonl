@@ -317,3 +317,37 @@
 {"event":"cooldown_updated","code":503,"cooldown_until":"2026-11-10T21:04:23.321011+00:00","source":"recorded Retry-After/RetryInfo or fallback backoff; provider reset not inferred","time":"2026-11-10T21:03:53.322447+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_021","condition":"B","split":"test"}
 {"event":"request_start","time":"2026-11-10T21:04:23.323306+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_021","condition":"B","split":"test"}
 {"event":"service_recovered","time":"2026-11-10T21:05:00.327683+00:00","execution_id":"2026-11-10T204645_844898+0000","id":"trig_3_021","condition":"B","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:07:33.566949+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_014","condition":"B","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:07:43.567264+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_015","condition":"B","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:07:53.567543+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_017","condition":"C","split":"test"}
+{"event":"service_overloaded","time":"2026-11-10T21:07:55.060255+00:00","consecutive_503":1,"backoff_seconds":30,"execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_017","condition":"C","split":"test"}
+{"event":"cooldown_updated","code":503,"cooldown_until":"2026-11-10T21:08:25.060233+00:00","source":"recorded Retry-After/RetryInfo or fallback backoff; provider reset not inferred","time":"2026-11-10T21:07:55.061525+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_017","condition":"C","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:08:25.060632+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_017","condition":"C","split":"test"}
+{"event":"service_recovered","time":"2026-11-10T21:08:29.355734+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_017","condition":"C","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:08:35.060862+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_021","condition":"D","split":"test"}
+{"event":"service_overloaded","time":"2026-11-10T21:08:36.347493+00:00","consecutive_503":1,"backoff_seconds":30,"execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_021","condition":"D","split":"test"}
+{"event":"cooldown_updated","code":503,"cooldown_until":"2026-11-10T21:09:06.347471+00:00","source":"recorded Retry-After/RetryInfo or fallback backoff; provider reset not inferred","time":"2026-11-10T21:08:36.348465+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_021","condition":"D","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:09:06.347809+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_021","condition":"D","split":"test"}
+{"event":"service_recovered","time":"2026-11-10T21:09:08.245198+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_021","condition":"D","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:09:16.348330+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_026","condition":"C","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:09:26.348732+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_026","condition":"D","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:09:36.349014+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_026","condition":"B","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:09:46.349301+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_034","condition":"D","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:10:04.289222+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_034","condition":"B","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:10:27.927754+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_034","condition":"C","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:11:02.416641+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_035","condition":"D","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:11:12.416998+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_035","condition":"C","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:11:29.390474+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_035","condition":"B","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:11:44.623478+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_039","condition":"B","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:11:54.623845+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_039","condition":"C","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:12:10.123636+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_039","condition":"D","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:12:20.123933+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_040","condition":"B","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:12:36.881318+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_040","condition":"D","split":"test"}
+{"event":"service_overloaded","time":"2026-11-10T21:12:37.672380+00:00","consecutive_503":1,"backoff_seconds":30,"execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_040","condition":"D","split":"test"}
+{"event":"cooldown_updated","code":503,"cooldown_until":"2026-11-10T21:13:07.672357+00:00","source":"recorded Retry-After/RetryInfo or fallback backoff; provider reset not inferred","time":"2026-11-10T21:12:37.673669+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_040","condition":"D","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:13:07.672704+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_040","condition":"D","split":"test"}
+{"event":"service_overloaded","time":"2026-11-10T21:13:09.323091+00:00","consecutive_503":2,"backoff_seconds":60,"execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_040","condition":"D","split":"test"}
+{"event":"cooldown_updated","code":503,"cooldown_until":"2026-11-10T21:14:09.323066+00:00","source":"recorded Retry-After/RetryInfo or fallback backoff; provider reset not inferred","time":"2026-11-10T21:13:09.324084+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_040","condition":"D","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:14:09.323417+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_040","condition":"C","split":"test"}
+{"event":"service_recovered","time":"2026-11-10T21:14:30.420191+00:00","execution_id":"2026-11-10T210733_541126+0000","id":"trig_3_040","condition":"C","split":"test"}
+{"event":"request_start","time":"2026-11-10T21:14:59.971150+00:00","execution_id":"2026-11-10T211459_946007+0000","id":"trig_3_040","condition":"D","split":"test"}

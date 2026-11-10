@@ -5639,6 +5639,382 @@
       ],
       "alternative_solution": false,
       "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_014",
+      "condition": "B",
+      "response_sha256": "3d3ff573045595cefa94455b0bd0ac73360532286a947ceb360473de3791c015",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "탄젠트 각의 범위가 [π/6,π/3]이라 극점이 없고 값이 양수이므로 로그의 곱 분해가 유효하다. 합성을 log₃(tan(x+π/6))+3으로 정확히 정리했고 탄젠트 및 로그의 증가성으로 최댓값 7/2, 최솟값 5/2를 바르게 구했다. 합 6과 최종정답이 맞으며 g 자체의 치역을 구하는 참고풀이와 달리 로그 성질을 먼저 쓴 유효한 전개이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$(f \\circ g)(x) = 1 + \\log_3 (\\tan(x + \\frac{\\pi}{6})) + 2 = \\log_3 (\\tan(x + \\frac{\\pi}{6})) + 3$입니다.",
+        "따라서 $\\frac{\\sqrt{3}}{3} \\leq t \\leq \\sqrt{3}$입니다.",
+        "$M = \\log_3 (\\sqrt{3}) + 3 = \\log_3 (3^{1/2}) + 3 = \\frac{1}{2} + 3 = \\frac{7}{2}$",
+        "$m = \\log_3 (\\frac{\\sqrt{3}}{3}) + 3 = \\log_3 (3^{1/2} \\cdot 3^{-1}) + 3 = \\log_3 (3^{-1/2}) + 3 = -\\frac{1}{2} + 3 = \\frac{5}{2}$",
+        "따라서 $M + m = \\frac{7}{2} + \\frac{5}{2} = \\frac{12}{2} = 6$입니다."
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_015",
+      "condition": "B",
+      "response_sha256": "f030f336fe1bafe351c0e4365e9e9a0ca2cb54a57590b2d3acca85f8e59cdaca",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "원식을 sin2x=-√2/2로 정확히 정리하고 닫힌 원문 구간을 0≤2x≤2π로 옮겼다. 해당 위상의 두 해를 5π/4,7π/4로 구해 x좌표 5π/8,7π/8로 정확히 환산했다. 두 근의 합 3π/2와 최종정답 ③이 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\sin 2x = -\\frac{1}{\\sqrt{2}} = -\\frac{\\sqrt{2}}{2}$",
+        "범위가 $0 \\le x \\le \\pi$이므로, $2x$의 범위는 $0 \\le 2x \\le 2\\pi$입니다.",
+        "$x = \\frac{5}{8}\\pi$ 또는 $x = \\frac{7}{8}\\pi$",
+        "따라서 모든 해의 합은 $\\frac{3}{2}\\pi$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_017",
+      "condition": "C",
+      "response_sha256": "02fde8075f913676a2056cd1e2cce03dcdfc09e08615a0a86a87e5401b64e2f1",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "코사인 제곱 방정식의 네 근을 원문 열린 구간에서 정확히 구했다. 곱의 부호 조건을 sin2x<0으로 바꾸고 0<2x<4π의 두 음수 구간을 정확히 구해 x의 제2·제4사분면 구간으로 환산했다. 공통근 2π/3,5π/3과 합 7π/3 및 최종정답 ②가 맞다. 참고풀이의 부호표 대신 배각 사인 부등식을 이용한 유효한 전개이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\sin x \\cos x = \\frac{1}{2} \\sin 2x < 0$이므로 $\\sin 2x < 0$이어야 합니다.",
+        "$\\pi < 2x < 2\\pi$ 또는 $3\\pi < 2x < 4\\pi$",
+        "즉, $\\frac{\\pi}{2} < x < \\pi$ 또는 $\\frac{3\\pi}{2} < x < 2\\pi$입니다.",
+        "따라서 조건을 만족하는 $x$는 $\\frac{2\\pi}{3}$와 $\\frac{5\\pi}{3}$입니다.",
+        "이들의 합은 $\\frac{2\\pi}{3} + \\frac{5\\pi}{3} = \\frac{7\\pi}{3}$입니다."
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_021",
+      "condition": "D",
+      "response_sha256": "570deb03f0efc79e1f49814a46bbb7240cb1d10310713d0a1155fbf91006e1ec",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "두 그래프의 교점을 함수값의 등식으로 세우고 cos(x+π/2)=-sinx를 바르게 적용했다. sinx=1/2의 두 해 π/6,5π/6을 원문 반열린 구간에서 정확히 구했으며 양 끝점은 해가 아니다. 모든 교점의 x좌표 합 π와 최종정답 ②가 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\cos \\left( x + \\frac{\\pi}{2} \\right) = -\\sin x$",
+        "$2 \\sin x = 1$",
+        "$x = \\frac{\\pi}{6}$ 또는 $x = \\pi - \\frac{\\pi}{6} = \\frac{5}{6}\\pi$",
+        "$\\frac{\\pi}{6} + \\frac{5}{6}\\pi = \\frac{6}{6}\\pi = \\pi$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_026",
+      "condition": "C",
+      "response_sha256": "0bc10f0226698191953e853ce7da9f7ad23288cd6278d6f7e39bca111a199662",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "cos²x=1-sin²x를 대입한 정리와 sinx(sinx+1)=0의 인수분해가 정확하다. 원문 열린 구간에서 sinx=0의 내부 해 π와 sinx=-1의 해 3π/2를 모두 포함하고 두 끝점은 제외했다. 합 5π/2의 기약분수에서 p=2,q=5를 선택한 과정과 최종답 7이 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\sin x (\\sin x + 1) = 0$",
+        "- $\\sin x = 0$인 경우: $x = \\pi$",
+        "- $\\sin x = -1$인 경우: $x = \\frac{3}{2}\\pi$",
+        "구한 실근의 합은 $\\pi + \\frac{3}{2}\\pi = \\frac{5}{2}\\pi$입니다.",
+        "$p + q = 2 + 5 = 7$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_026",
+      "condition": "D",
+      "response_sha256": "0b224e14aefd56f97172c40b868e2eaa77e8e02d28461a610211edc346e5943f",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "삼각함수 항등식으로 방정식을 사인에 관한 이차식으로 정확히 바꾸고 두 인수의 해를 모두 보존했다. 0<x<2π에서 실제 두 해 π,3π/2가 맞고 합은 5π/2이다. 서로소 자연수 p=2,q=5와 p+q=7 및 최종정답이 정확하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\sin^{2} x + \\sin x = 0$",
+        "$\\sin x (\\sin x + 1) = 0$",
+        "- $\\sin x = 0$인 경우: $x = \\pi$",
+        "- $\\sin x = -1$인 경우: $x = \\frac{3}{2}\\pi$",
+        "따라서 $p + q = 2 + 5 = 7$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_026",
+      "condition": "B",
+      "response_sha256": "03fd93338101a5816cf2a71791256c4ed1c2b5e7fb5f03010cd302c60a149945",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "원식을 sinx(sinx+1)=0으로 동치변형한 과정이 정확하다. 인수분해로 sinx=0의 해를 놓치지 않았고 원문 열린 구간의 두 해 π,3π/2를 정확히 구했다. 합 5π/2와 p=2,q=5 및 최종답 7이 모두 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\sin x (\\sin x + 1) = 0$",
+        "- $\\sin x = 0$인 경우: $x = \\pi$",
+        "- $\\sin x = -1$인 경우: $x = \\frac{3}{2}\\pi$",
+        "모든 실근의 합은 $\\pi + \\frac{3}{2}\\pi = \\frac{5}{2}\\pi$입니다.",
+        "따라서 $p + q = 2 + 5 = 7$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_034",
+      "condition": "D",
+      "response_sha256": "f260908b99c222319270d50b8d74ba3a9daa70e1897d5f0f8dbbe0dda093decd",
+      "review_status": "suspected_error",
+      "math_status": "inappropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "탄젠트의 세 가지와 점근선은 맞게 파악했지만 마지막 구간 (3/2,2]의 교점 조건을 점근선 위치의 직선값 n-5<0으로 둔 것은 틀렸다. H(x)=tan(πx)+(10/3)x는 각 가지에서 엄격히 증가하고 마지막 가지의 치역은 (-∞,20/3]이므로 교점 존재 조건은 n≤20/3이다. 반례 n=6에서는 첫 두 가지에 각각 한 근이 있고 마지막 가지에서도 H(3/2+)=-∞<6<H(2)=20/3이어서 근이 하나 존재한다. 따라서 세 교점이 생기며 실제 자연수 최댓값은 6(⑤)이고 응답의 4(③)는 틀렸다. 검산에서 기울기 있는 직선을 y=4로 바꿔 쓴 설명도 원래 교점을 검증하지 못한다.",
+      "error_step": "세 번째 구간에서 교점이 생기는 조건을 n-5<0, 즉 n<5라고 정한 단계.",
+      "evidence_quotes": [
+        "교점이 생기려면 $n-5 < 0$ 즉, $n < 5$여야 합니다.",
+        "$x \\in (1.5, 2)$: $y=4$와 $y=\\tan \\pi x$는 1점.",
+        "구체적으로 $n=5$이면 $x=1.5$ 근처에서 교점이 발생하지 않거나 경계 조건을 만족하지 못합니다.",
+        "따라서 자연수 $n$의 최댓값은 4입니다.",
+        "최종정답: ③"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_034",
+      "condition": "B",
+      "response_sha256": "295a11935e7f9e7ee8304d1896f696dcd35f2dcd4e1d4d9315f75fc5881f4295",
+      "review_status": "suspected_error",
+      "math_status": "inappropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "세 구간에서 증가하는 탄젠트와 감소하는 직선을 고려한 시작은 맞지만 마지막 구간에서 x=2의 직선값이 양수여야 한다는 교점 조건은 반대이다. 차 H(x)-n=tan(πx)+(10/3)x-n는 각 가지에서 엄격히 증가하고 마지막 가지에서 -∞부터 20/3-n까지 이르므로 교점 조건은 n≤20/3이다. n=6일 때 끝점 차가 2/3>0이므로 마지막 가지에도 한 교점이 있고, 첫 두 가지에도 각각 한 점이 있어 총 세 점이다. 따라서 n=6이면 조건을 잃는다는 주장은 거짓이며 실제 최댓값은 6(⑤), 응답의 5(④)는 오답이다. 증가하는 탄젠트와 음의 기울기 직선은 접할 수도 없다.",
+      "error_step": "세 번째 구간의 교점 조건으로 x=2에서 직선의 y값이 0보다 커야 한다고 단정한 단계.",
+      "evidence_quotes": [
+        "세 번째 구간 $(\\frac{3}{2}, 2]$에서 교점이 생기려면 $x=2$일 때 직선의 $y$값이 $0$보다 커야 합니다.",
+        "직선이 탄젠트 곡선과 접하는 경우를 고려해야 합니다.",
+        "$n=6$이 되면 교점의 개수가 달라지거나 범위를 벗어나게 됩니다.",
+        "따라서 조건을 만족하는 자연수 $n$의 최댓값은 5입니다.",
+        "최종정답: ④"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_034",
+      "condition": "C",
+      "response_sha256": "c8b1e47db92c939d1aecefe17724fa113a6a21bbeeb3d2ed1cd0cd3c86b3b7dd",
+      "review_status": "suspected_error",
+      "math_status": "inappropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "탄젠트의 가지와 점근선은 맞게 나눴지만 n=6에서 첫 가지 교점이 사라질 수 있다는 주장은 틀렸다. H(x)=tan(πx)+(10/3)x는 각 가지에서 엄격히 증가하고 첫 가지의 치역은 [0,∞), 가운데는 전체 실수, 마지막은 (-∞,20/3]이다. 따라서 n=6은 각 가지에 하나씩 총 세 근을 가지는 명백한 반례이다. 세 교점 조건은 자연수 n≤20/3이므로 최댓값은 6(⑤)이며 응답의 5(④)는 오답이다. 그래프를 그렸다는 언급으로 n=6을 제외한 단계는 정당화되지 않는다.",
+      "error_step": "n=6에서 직선이 위로 이동하면 첫 번째 탄젠트 가지 [0,1/2)의 교점이 사라진다고 판단한 단계.",
+      "evidence_quotes": [
+        "$n=6$일 때:",
+        "직선이 너무 위로 올라가면 $x \\in [0, 0.5)$ 구간에서 교점이 사라지거나 개수가 줄어들게 됩니다.",
+        "그래프를 그려보면 $n=5$까지는 세 점에서 만날 수 있으나, $n=6$이 되면 교점의 개수가 변하게 됩니다. 따라서 자연수 $n$의 최댓값은 5입니다.",
+        "최종정답: ④"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_035",
+      "condition": "D",
+      "response_sha256": "7eba994e0e165075e7d4848f6de646225e7d73ac9b827dd6b69c28b410c853df",
+      "review_status": "suspected_error",
+      "math_status": "inappropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "치역 계산과 k=3/4에서 세 근이라는 개수 및 최종답 30은 맞다. 그러나 이때 원래 함수의 최댓값 지점에서 y=3/4와 만난다는 설명은 거짓이다. 원래 함수 cosx+1/4의 최대 지점은 구간 안에서 x=0이고 그 절댓값 함수값도 5/4이므로 y=3/4와 만나지 않는다. 실제 세 근은 cosx=1/2의 두 근 π/3,5π/3과 cosx=-1의 근 π이다. 따라서 최종답의 정확성과 별개로 교점 위치를 설명한 단계에 오류가 있다.",
+      "error_step": "k=3/4일 때 꺾어 올린 꼭짓점뿐 아니라 원래 함수의 최댓값 지점에서 만난다고 서술한 단계.",
+      "evidence_quotes": [
+        "$k = \\frac{5}{4}$일 때: $x=0$에서 1개의 실근을 갖습니다.",
+        "$k = \\frac{3}{4}$일 때: 꺾어 올린 부분의 꼭짓점과 원래 함수의 최댓값 지점에서 만나게 되어 총 3개의 실근을 갖습니다.",
+        "따라서 서로 다른 3개의 실근을 갖게 하는 $k$의 값은 $\\alpha = \\frac{3}{4}$입니다.",
+        "최종정답: 30"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_035",
+      "condition": "C",
+      "response_sha256": "3d17442be630f4fdf49b4741163deb21aa61f4e93935ef8ce393a31b13c40ba5",
+      "review_status": "suspected_error",
+      "math_status": "inappropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "최종 α=3/4와 답 30은 맞지만 k=5/4에서도 서로 다른 세 근을 갖는다고 한 개수 판정이 틀렸다. |cosx+1/4|=5/4이면 cosx=1 또는 -3/2인데 후자는 불가능하고 0≤x<2π에서 전자는 x=0 하나뿐이다. 또한 k=3/4의 나머지 두 근은 두 영점 사이가 아니라 cosx=1/2인 바깥쪽 두 근이다. 응답은 잘못된 후보 두 개를 만든 뒤 일반적인 문제 관행으로 하나를 선택해 α의 유일성을 입증하지 못했다.",
+      "error_step": "k=5/4에서 x=0 외에 두 교점이 더 있어 총 3개의 실근이라고 판단한 단계.",
+      "evidence_quotes": [
+        "$k = \\frac{3}{4}$일 때: $x=\\pi$에서 1개, 그리고 $\\cos x = -\\frac{1}{4}$인 지점들 사이의 곡선과 만나는 점 2개로 총 3개의 실근을 갖습니다.",
+        "$k = \\frac{5}{4}$일 때: $x=0$에서 1개, 그리고 다른 구간에서 2개의 점과 만나 총 3개의 실근을 갖습니다.",
+        "문제에서 요구하는 $\\alpha$는 이 중 하나인데, 일반적으로 이러한 문제에서 $k$의 값은 그래프의 꺾이는 지점이나 극댓값을 의미합니다.",
+        "최종정답: 30"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_035",
+      "condition": "B",
+      "response_sha256": "fa907626e6b12eee1e1a737ebe2c2e6774235b0624efca30311dc76617c19317",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "절댓값 함수의 치역을 정확히 구하고 임계 높이별 근 수를 대수적으로 확인했다. k=5/4에서 원문 반열린 구간의 근은 x=0 하나이고, k=3/4에서는 cosx=1/2의 두 근과 cosx=-1의 한 근으로 정확히 세 근이다. α=3/4와 40α=30 및 최종정답이 맞다. 참고풀이의 그래프 판독 대신 두 코사인 방정식의 근을 직접 세는 유효한 방법이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\cos x = 1$일 때 $x = 0$ (1개)",
+        "$\\cos x = -\\frac{3}{2}$ (해 없음)",
+        "$\\cos x + \\frac{1}{4} = \\frac{3}{4} \\implies \\cos x = \\frac{1}{2}$ (2개: $x = \\frac{\\pi}{3}, \\frac{5\\pi}{3}$)",
+        "$\\cos x + \\frac{1}{4} = -\\frac{3}{4} \\implies \\cos x = -1$ (1개: $x = \\pi$)",
+        "이 경우 실근은 총 $2 + 1 = 3$개가 된다.",
+        "최종정답: 30"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_039",
+      "condition": "B",
+      "response_sha256": "1aced31042396abe1ac2b22cec8458e7f16a82c17d777ad578b1f36eb1548571",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "실근이 없을 조건 D<0을 정확히 세우고 음수 -2로 나눌 때 부등호를 뒤집어 2sin²θ+3sinθ-2>0을 바르게 얻었다. sinθ+2>0을 사용해 sinθ>1/2로 정리하고 열린 두 경계 π/6,5π/6을 정확히 구했다. 3α+β=4π/3과 최종정답 ④가 맞다. 참고풀이 중 상수항 -4 표기는 전개·인수분해와 맞지 않는 원자료 오기이며 응답의 -2가 원문에 맞고 원자료는 수정하지 않는다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$$\\frac{D}{4} = (2\\cos\\theta)^2 - 6\\sin\\theta < 0$$",
+        "$$2\\sin^2\\theta + 3\\sin\\theta - 2 > 0$$",
+        "$$(2\\sin\\theta - 1)(\\sin\\theta + 2) > 0$$",
+        "$$\\frac{\\pi}{6} < \\theta < \\frac{5}{6}\\pi$$",
+        "최종정답: ④"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_039",
+      "condition": "C",
+      "response_sha256": "6e63733020c408f0bf2d2e6dd3b63e0af93dbe84c7cee06014c0d3d0fcc537b8",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "판별식 계산과 사인에 관한 부등식 변형이 정확하다. 사인의 치역으로 sinθ+2를 양수로 처리하여 sinθ>1/2를 얻었고, 실근이 없어야 하므로 D=0인 양 끝점을 제외한 범위도 맞다. 합 4π/3과 최종정답 ④가 정확하다. 참고풀이의 중간 상수항 -4는 원문 전개와 충돌하는 오기지만 응답은 올바른 -2를 사용했으며 원자료 변경은 하지 않는다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$$4 - 4\\sin^2\\theta - 6\\sin\\theta < 0$$",
+        "$$2\\sin^2\\theta + 3\\sin\\theta - 2 > 0$$",
+        "$$2\\sin\\theta - 1 > 0 \\implies \\sin\\theta > \\frac{1}{2}$$",
+        "$$\\frac{\\pi}{6} < \\theta < \\frac{5}{6}\\pi$$",
+        "최종정답: ④"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_039",
+      "condition": "D",
+      "response_sha256": "1fb0ed26076a026ad18d2b13b7cf7870c78490a2805daac4b1ab0199b3ae7a1b",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "원래 이차방정식의 전체 판별식 16cos²θ-24sinθ를 정확히 계산했다. 양수 8로 나눈 뒤 항등식을 사용한 부등식과 인수분해가 모두 맞고, sinθ>1/2의 열린 범위에서 α=π/6,β=5π/6을 구했다. 최종값 4π/3과 정답 ④가 맞다. 참고풀이의 상수항 -4는 오기이며 응답의 -2가 원문에 맞고 원자료는 그대로 보존한다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$D = (4\\cos\\theta)^2 - 4 \\cdot 6 \\cdot \\sin\\theta < 0$",
+        "$2\\cos^2\\theta - 3\\sin\\theta < 0$",
+        "$2\\sin^2\\theta + 3\\sin\\theta - 2 > 0$",
+        "$\\frac{\\pi}{6} < \\theta < \\frac{5}{6}\\pi$",
+        "최종정답: ④"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_040",
+      "condition": "B",
+      "response_sha256": "921a6fadccfe19f98f073aa9c1c02b219c9d94f2c61c8f4b1c5410d39f2a2bad",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "원문 상수항 +5를 유지하며 t=sinx의 전체 치역 [-1,1]에서 이차식 t²-4t+5의 최솟값을 구한 과정이 정확하다. 이 식은 해당 구간에서 감소하므로 t=1에서 최솟값 2를 갖고, 이 값이 실제 x=π/2에서 달성되어 5k≤2는 필요충분하다. 최댓값 2/5와 최종정답 ①이 맞다. 참고풀이 첫 줄의 +k는 원문의 +5와 다른 오기이며 응답은 원문을 정확히 따랐고 원자료는 수정하지 않는다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(t) = t^2 - 4t + 5 \\geq 5k$",
+        "$f(t) = t^2 - 4t + 5 = (t - 2)^2 + 1$",
+        "$f(1) = 1^2 - 4(1) + 5 = 1 - 4 + 5 = 2$",
+        "$5k \\leq 2$",
+        "따라서 실수 $k$의 최댓값은 $\\frac{2}{5}$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_040",
+      "condition": "D",
+      "response_sha256": "fcc8ffed9244b36e9b47515d35c35b7392bd4bc2a267cba420bd828de90600f1",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "원문 상수항 +5를 유지하고 t=sinx의 치역 [-1,1]로 치환한 과정이 정확하다. 완전제곱식 (t-2)²+1-5k는 이 구간에서 감소하므로 t=1에서 최솟값 2-5k가 생긴다. t=1은 x=π/2에서 실제 달성되므로 k≤2/5가 필요충분하고 최댓값 2/5 및 최종정답 ①이 맞다. 참고풀이 첫 줄의 +k는 원문 +5와 다른 오기이며 응답은 원문을 정확히 따랐고 원자료는 수정하지 않는다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(t) = t^2 - 4t + 5 - 5k \\geq 0$",
+        "$f(t) = (t - 2)^2 + 1 - 5k$",
+        "따라서 $-1 \\leq t \\leq 1$ 범위에서 $f(t)$의 최솟값은 $t=1$일 때 발생합니다.",
+        "$2 - 5k \\geq 0$",
+        "따라서 실수 $k$의 최댓값은 $\\frac{2}{5}$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_040",
+      "condition": "C",
+      "response_sha256": "ab2c14213b63e87747385e41e0ba33daa65caa49c8656fdc0983a8bb221b354f",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "원래 부등식의 +5를 정확히 보존하여 t²-4t+5≥5k로 정리했다. 완전제곱과 축 t=2의 위치를 바르게 사용해 [-1,1]의 최솟값 f(1)=2를 얻었다. 사인 치역의 끝값 1이 원래 구간 안에서 달성되므로 2≥5k는 정확한 조건이며 최댓값 2/5와 최종정답 ①이 맞다. 참고풀이 첫 줄의 +k 표기는 원문과 다른 오기지만 응답은 원문 +5를 바르게 사용했고 원자료 변경은 하지 않는다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(t) = t^2 - 4t + 5 \\geq 5k$",
+        "$f(t) = t^2 - 4t + 5 = (t - 2)^2 + 1$",
+        "$f(1) = 1^2 - 4(1) + 5 = 1 - 4 + 5 = 2$",
+        "즉, $2 \\geq 5k$가 성립해야 합니다.",
+        "따라서 실수 $k$의 최댓값은 $\\frac{2}{5}$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
     }
   ]
 }

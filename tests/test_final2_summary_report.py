@@ -73,6 +73,26 @@ class SummaryInterpretationTests(unittest.TestCase):
             self.assertIn("공통 채점 n=0/1", text)
             self.assertIn("전체 -20.00토큰(n=1)", text)
 
+    def test_complete_equal_accuracy_keeps_swapped_answers_and_input_cost_visible(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            base = Path(temporary)
+            questions = [question("gain", False, True), question("loss", True, False)]
+            for row in questions:
+                for condition in "BCD":
+                    row.update({condition + "_status": "success",
+                                condition + "_correct_original": row["B_correct_original"],
+                                condition + "_prompt_token_count": 130,
+                                condition + "_candidates_token_count": 170,
+                                condition + "_total_token_count": 300})
+            save_csv(base / "gemini_comparison/question_comparison.csv", questions)
+            values = [dict(split="test", condition=c, success_count=2, graded_count=2,
+                           correct_count=1, pending_count=0, failed_count=0) for c in "ABCD"]
+            text = "\n".join(report._api_interpretation(base, values))
+            self.assertIn("정답 수가 모두 1개로 같았다", text)
+            self.assertIn("개선·악화가 상쇄", text)
+            self.assertIn("B +50.00%, C +50.00%, D +50.00%", text)
+            self.assertIn("실패·재시도 비용", text)
+
     def test_cases_use_canonical_change_flags_and_separate_key_conflict_and_review(self):
         with tempfile.TemporaryDirectory() as temporary:
             base = Path(temporary)

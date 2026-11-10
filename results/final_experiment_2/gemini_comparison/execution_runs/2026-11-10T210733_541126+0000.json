@@ -1,0 +1,72 @@
+{
+  "execution_id": "2026-11-10T210733_541126+0000",
+  "config_id": "cc67f503605a3acd86112e8734b755f1c1da6e86d5cea9a3c8da1de43c3708e9",
+  "started_at": "2026-11-10T21:07:33.541207+00:00",
+  "status": "partial_complete",
+  "split": "test",
+  "policy": {
+    "interval_seconds": 10.0,
+    "workers": 1,
+    "rpm": 6,
+    "rph": 360,
+    "rpd": 320,
+    "max_new_requests": 40,
+    "max_run_seconds": 3600.0,
+    "max_wait_seconds": 120.0,
+    "max_attempts": 2,
+    "http_timeout_ms": 180000,
+    "provider_limits_confirmed": false,
+    "limits_note": "local conservative rolling-window caps; not confirmed provider quotas"
+  },
+  "transport": {
+    "http_timeout_ms": 180000,
+    "sdk_attempts": 1,
+    "timeout_error_policy": "httpx.TimeoutException to chained builtin TimeoutError; existing bounded max_attempts"
+  },
+  "preexisting_successes": 301,
+  "runner_sha256": "4a43de1f15d00490fbff885742c19f605b9602fea3711bb9d4b6471c82a3bdd0",
+  "sdk_request_capture": "immediately before generate_content",
+  "completed_at": "2026-11-10T21:14:30.542312+00:00",
+  "successful_requests": 319,
+  "failed_requests": 1,
+  "pending_count": 1,
+  "pending_requests": [
+    {
+      "id": "trig_3_040",
+      "condition": "D",
+      "method": "oracle_hint",
+      "split": "test",
+      "request_sha256": "1ee846d72848c54e78356c7f72b211e92e431b4c7630631894231d79ca72529d",
+      "last_status": "api_error"
+    }
+  ],
+  "new_request_starts": 22,
+  "limiter": {
+    "new_request_starts": 22,
+    "rolling_minute_starts": 1,
+    "rolling_hour_starts": 128,
+    "rolling_24h_starts": 275,
+    "status": null,
+    "reason": null,
+    "daily_quota_reported": false,
+    "cooldown_remaining_seconds": 0,
+    "service_cooldown_remaining_seconds": 0,
+    "resume_cooldown_note": "absolute recorded delays restored; legacy events preserve only recorded backoff, not unrecorded provider timing; daily reset remains unconfirmed",
+    "policy": {
+      "interval_seconds": 10.0,
+      "workers": 1,
+      "rpm": 6,
+      "rph": 360,
+      "rpd": 320,
+      "max_new_requests": 40,
+      "max_run_seconds": 3600.0,
+      "max_wait_seconds": 120.0,
+      "max_attempts": 2,
+      "http_timeout_ms": 180000,
+      "provider_limits_confirmed": false,
+      "limits_note": "local conservative rolling-window caps; not confirmed provider quotas"
+    },
+    "provider_quota_confirmation": "not inferred from local caps"
+  },
+  "reason": "모든 문항·조건의 성공 응답을 저장했습니다."
+}
