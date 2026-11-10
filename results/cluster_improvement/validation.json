@@ -1,0 +1,4579 @@
+{
+  "passed": 1120,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "fixed_185_80",
+      "passed": true
+    },
+    {
+      "check": "problems_unchanged_indices",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_0_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_1_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_2_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_3_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_4_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_5_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_6_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_7_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_8_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_9_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_10_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_11_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_12_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_13_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_14_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_15_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_16_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_17_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_18_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_19_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_20_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_21_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_22_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_23_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_24_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_25_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_26_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_27_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_28_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_29_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_30_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_31_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_32_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_33_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_34_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_35_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_36_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_37_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_38_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_39_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_40_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_41_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_42_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_43_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_44_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_45_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_46_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_47_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_48_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_49_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_50_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_51_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_52_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_53_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_54_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_55_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_56_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_57_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_58_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_59_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_60_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_61_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_62_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_63_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_64_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_65_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_66_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_67_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_68_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_69_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_70_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_71_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_72_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_73_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_74_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_75_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_76_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_77_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_78_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_79_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_80_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_81_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_82_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_83_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_84_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_85_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_86_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_87_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_88_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_89_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_90_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_91_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_92_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_93_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_94_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_95_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_96_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_97_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_98_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_99_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_100_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_101_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_102_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_103_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_104_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_105_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_106_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_107_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_108_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_109_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_110_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_111_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_112_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_113_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_114_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_115_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_116_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_117_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_118_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_119_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_120_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_121_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_122_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_123_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_124_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_125_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_126_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_127_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_128_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_129_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_130_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_131_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_132_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_133_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_134_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_135_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_136_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_137_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_138_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_139_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_140_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_141_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_142_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_143_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_144_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_145_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_146_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_147_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_148_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_149_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_150_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_151_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_152_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_153_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_154_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_155_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_156_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_157_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_158_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_159_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_160_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_161_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_162_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_163_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_164_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_165_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_166_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_167_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_168_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_169_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_170_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_171_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_172_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_173_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_174_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_175_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_176_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_177_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_178_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_179_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_180_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_181_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_182_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_183_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_184_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_185_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_186_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_187_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_188_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_189_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_190_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_191_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_192_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_193_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_194_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_195_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_196_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_197_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_198_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_199_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_200_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_201_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_202_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_203_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_204_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_205_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_206_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_207_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_208_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_209_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_210_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_211_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_212_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_213_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_214_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_215_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_216_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_217_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_218_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_219_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_220_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_221_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_222_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_223_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_224_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_225_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_226_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_227_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_228_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_229_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_230_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_231_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_232_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_233_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_234_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_235_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_236_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_237_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_238_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_239_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_240_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_241_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_242_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_243_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_244_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_245_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_246_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_247_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_248_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_249_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_250_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_251_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_252_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_253_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_254_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_255_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_256_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_257_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_258_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_259_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_260_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_261_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_262_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_263_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_264_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_265_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_266_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_267_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_268_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_269_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_270_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_271_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_272_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_273_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_274_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_275_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_276_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_277_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_278_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_279_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_280_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_281_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_282_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_283_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_284_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_285_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_286_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_287_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_288_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_289_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_290_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_291_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_292_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_293_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_294_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_295_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_296_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_297_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_298_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_299_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_300_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_301_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_302_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_303_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_304_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_305_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_306_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_307_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_308_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_309_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_310_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_311_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_312_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_313_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_314_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_315_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_316_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_317_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_318_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_319_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_320_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_321_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_322_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_323_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_324_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_325_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_326_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_327_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_328_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_329_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_330_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_331_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_332_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_333_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_334_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_335_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_336_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_337_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_338_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_339_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_340_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_341_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_342_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_343_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_344_moments",
+      "passed": true
+    },
+    {
+      "check": "problems_coordinate_345_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_unchanged_indices",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_0_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_1_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_2_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_3_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_4_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_5_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_6_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_7_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_8_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_9_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_10_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_11_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_12_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_13_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_14_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_15_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_16_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_17_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_18_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_19_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_20_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_21_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_22_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_23_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_24_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_25_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_26_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_27_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_28_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_29_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_30_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_31_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_32_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_33_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_34_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_35_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_36_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_37_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_38_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_39_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_40_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_41_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_42_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_43_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_44_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_45_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_46_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_47_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_48_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_49_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_50_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_51_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_52_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_53_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_54_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_55_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_56_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_57_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_58_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_59_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_60_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_61_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_62_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_63_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_64_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_65_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_66_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_67_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_68_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_69_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_70_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_71_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_72_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_73_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_74_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_75_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_76_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_77_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_78_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_79_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_80_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_81_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_82_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_83_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_84_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_85_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_86_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_87_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_88_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_89_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_90_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_91_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_92_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_93_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_94_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_95_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_96_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_97_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_98_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_99_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_100_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_101_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_102_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_103_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_104_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_105_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_106_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_107_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_108_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_109_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_110_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_111_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_112_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_113_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_114_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_115_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_116_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_117_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_118_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_119_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_120_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_121_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_122_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_123_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_124_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_125_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_126_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_127_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_128_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_129_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_130_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_131_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_132_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_133_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_134_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_135_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_136_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_137_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_138_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_139_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_140_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_141_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_142_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_143_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_144_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_145_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_146_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_147_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_148_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_149_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_150_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_151_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_152_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_153_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_154_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_155_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_156_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_157_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_158_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_159_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_160_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_161_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_162_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_163_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_164_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_165_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_166_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_167_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_168_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_169_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_170_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_171_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_172_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_173_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_174_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_175_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_176_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_177_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_178_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_179_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_180_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_181_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_182_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_183_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_184_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_185_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_186_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_187_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_188_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_189_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_190_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_191_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_192_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_193_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_194_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_195_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_196_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_197_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_198_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_199_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_200_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_201_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_202_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_203_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_204_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_205_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_206_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_207_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_208_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_209_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_210_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_211_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_212_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_213_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_214_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_215_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_216_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_217_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_218_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_219_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_220_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_221_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_222_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_223_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_224_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_225_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_226_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_227_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_228_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_229_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_230_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_231_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_232_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_233_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_234_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_235_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_236_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_237_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_238_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_239_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_240_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_241_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_242_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_243_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_244_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_245_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_246_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_247_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_248_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_249_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_250_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_251_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_252_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_253_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_254_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_255_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_256_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_257_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_258_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_259_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_260_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_261_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_262_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_263_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_264_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_265_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_266_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_267_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_268_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_269_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_270_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_271_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_272_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_273_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_274_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_275_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_276_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_277_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_278_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_279_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_280_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_281_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_282_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_283_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_284_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_285_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_286_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_287_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_288_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_289_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_290_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_291_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_292_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_293_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_294_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_295_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_296_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_297_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_298_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_299_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_300_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_301_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_302_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_303_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_304_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_305_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_306_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_307_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_308_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_309_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_310_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_311_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_312_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_313_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_314_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_315_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_316_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_317_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_318_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_319_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_320_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_321_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_322_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_323_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_324_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_325_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_326_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_327_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_328_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_329_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_330_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_331_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_332_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_333_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_334_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_335_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_336_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_337_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_338_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_339_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_340_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_341_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_342_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_343_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_344_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_345_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_346_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_347_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_348_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_349_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_350_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_351_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_352_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_353_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_354_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_355_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_356_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_357_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_358_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_359_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_360_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_361_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_362_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_363_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_364_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_365_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_366_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_367_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_368_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_369_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_370_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_371_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_372_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_373_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_374_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_375_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_376_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_377_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_378_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_379_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_380_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_381_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_382_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_383_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_384_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_385_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_386_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_387_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_388_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_389_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_390_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_391_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_392_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_393_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_394_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_395_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_396_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_397_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_398_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_399_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_400_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_401_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_402_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_403_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_404_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_405_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_406_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_407_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_408_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_409_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_410_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_411_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_412_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_413_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_414_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_415_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_416_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_417_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_418_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_419_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_420_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_421_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_422_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_423_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_424_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_425_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_426_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_427_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_428_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_429_moments",
+      "passed": true
+    },
+    {
+      "check": "solutions_coordinate_430_moments",
+      "passed": true
+    },
+    {
+      "check": "four_levels_346_coordinates",
+      "passed": true
+    },
+    {
+      "check": "curriculum_independent_group_projection",
+      "passed": true
+    },
+    {
+      "check": "curriculum_group_paths_and_sizes",
+      "passed": true
+    },
+    {
+      "check": "curriculum_all_class_token_means_and_df",
+      "passed": true
+    },
+    {
+      "check": "unit_independent_group_projection",
+      "passed": true
+    },
+    {
+      "check": "unit_group_paths_and_sizes",
+      "passed": true
+    },
+    {
+      "check": "unit_all_class_token_means_and_df",
+      "passed": true
+    },
+    {
+      "check": "subunit_independent_group_projection",
+      "passed": true
+    },
+    {
+      "check": "subunit_group_paths_and_sizes",
+      "passed": true
+    },
+    {
+      "check": "subunit_all_class_token_means_and_df",
+      "passed": true
+    },
+    {
+      "check": "type_independent_group_projection",
+      "passed": true
+    },
+    {
+      "check": "type_group_paths_and_sizes",
+      "passed": true
+    },
+    {
+      "check": "type_all_class_token_means_and_df",
+      "passed": true
+    },
+    {
+      "check": "redundancy_343_345",
+      "passed": true
+    },
+    {
+      "check": "redundancy_303_311",
+      "passed": true
+    },
+    {
+      "check": "redundancy_226_227",
+      "passed": true
+    },
+    {
+      "check": "redundancy_224_231",
+      "passed": true
+    },
+    {
+      "check": "redundancy_305_312",
+      "passed": true
+    },
+    {
+      "check": "redundancy_0_3",
+      "passed": true
+    },
+    {
+      "check": "redundancy_8_12",
+      "passed": true
+    },
+    {
+      "check": "redundancy_8_13",
+      "passed": true
+    },
+    {
+      "check": "redundancy_8_14",
+      "passed": true
+    },
+    {
+      "check": "redundancy_8_15",
+      "passed": true
+    },
+    {
+      "check": "redundancy_8_16",
+      "passed": true
+    },
+    {
+      "check": "redundancy_12_13",
+      "passed": true
+    },
+    {
+      "check": "redundancy_12_14",
+      "passed": true
+    },
+    {
+      "check": "redundancy_12_15",
+      "passed": true
+    },
+    {
+      "check": "redundancy_12_16",
+      "passed": true
+    },
+    {
+      "check": "redundancy_13_14",
+      "passed": true
+    },
+    {
+      "check": "redundancy_13_15",
+      "passed": true
+    },
+    {
+      "check": "redundancy_13_16",
+      "passed": true
+    },
+    {
+      "check": "redundancy_14_15",
+      "passed": true
+    },
+    {
+      "check": "redundancy_14_16",
+      "passed": true
+    },
+    {
+      "check": "redundancy_15_16",
+      "passed": true
+    },
+    {
+      "check": "redundancy_46_134",
+      "passed": true
+    },
+    {
+      "check": "redundancy_290_292",
+      "passed": true
+    },
+    {
+      "check": "redundancy_290_297",
+      "passed": true
+    },
+    {
+      "check": "redundancy_292_297",
+      "passed": true
+    },
+    {
+      "check": "redundancy_93_138",
+      "passed": true
+    },
+    {
+      "check": "redundancy_17_18",
+      "passed": true
+    },
+    {
+      "check": "redundancy_18_20",
+      "passed": true
+    },
+    {
+      "check": "redundancy_27_62",
+      "passed": true
+    },
+    {
+      "check": "redundancy_27_79",
+      "passed": true
+    },
+    {
+      "check": "redundancy_62_79",
+      "passed": true
+    },
+    {
+      "check": "redundancy_6_17",
+      "passed": true
+    },
+    {
+      "check": "redundancy_6_20",
+      "passed": true
+    },
+    {
+      "check": "redundancy_7_17",
+      "passed": true
+    },
+    {
+      "check": "redundancy_7_20",
+      "passed": true
+    },
+    {
+      "check": "redundancy_17_37",
+      "passed": true
+    },
+    {
+      "check": "redundancy_17_107",
+      "passed": true
+    },
+    {
+      "check": "redundancy_20_37",
+      "passed": true
+    },
+    {
+      "check": "redundancy_20_107",
+      "passed": true
+    },
+    {
+      "check": "redundancy_328_332",
+      "passed": true
+    },
+    {
+      "check": "redundancy_17_41",
+      "passed": true
+    },
+    {
+      "check": "redundancy_17_91",
+      "passed": true
+    },
+    {
+      "check": "redundancy_17_155",
+      "passed": true
+    },
+    {
+      "check": "redundancy_20_41",
+      "passed": true
+    },
+    {
+      "check": "redundancy_20_91",
+      "passed": true
+    },
+    {
+      "check": "redundancy_20_155",
+      "passed": true
+    },
+    {
+      "check": "redundancy_6_18",
+      "passed": true
+    },
+    {
+      "check": "redundancy_7_18",
+      "passed": true
+    },
+    {
+      "check": "redundancy_18_37",
+      "passed": true
+    },
+    {
+      "check": "redundancy_18_107",
+      "passed": true
+    },
+    {
+      "check": "redundancy_18_41",
+      "passed": true
+    },
+    {
+      "check": "redundancy_18_91",
+      "passed": true
+    },
+    {
+      "check": "redundancy_18_155",
+      "passed": true
+    },
+    {
+      "check": "redundancy_60_288",
+      "passed": true
+    },
+    {
+      "check": "redundancy_61_288",
+      "passed": true
+    },
+    {
+      "check": "redundancy_88_288",
+      "passed": true
+    },
+    {
+      "check": "redundancy_96_288",
+      "passed": true
+    },
+    {
+      "check": "redundancy_118_288",
+      "passed": true
+    },
+    {
+      "check": "redundancy_164_288",
+      "passed": true
+    },
+    {
+      "check": "redundancy_6_7",
+      "passed": true
+    },
+    {
+      "check": "redundancy_6_37",
+      "passed": true
+    },
+    {
+      "check": "redundancy_6_107",
+      "passed": true
+    },
+    {
+      "check": "redundancy_7_37",
+      "passed": true
+    },
+    {
+      "check": "redundancy_7_107",
+      "passed": true
+    },
+    {
+      "check": "redundancy_37_107",
+      "passed": true
+    },
+    {
+      "check": "redundancy_130_158",
+      "passed": true
+    },
+    {
+      "check": "redundancy_73_289",
+      "passed": true
+    },
+    {
+      "check": "redundancy_73_321",
+      "passed": true
+    },
+    {
+      "check": "redundancy_289_321",
+      "passed": true
+    },
+    {
+      "check": "redundancy_6_41",
+      "passed": true
+    },
+    {
+      "check": "redundancy_6_91",
+      "passed": true
+    },
+    {
+      "check": "redundancy_6_155",
+      "passed": true
+    },
+    {
+      "check": "redundancy_7_41",
+      "passed": true
+    },
+    {
+      "check": "redundancy_7_91",
+      "passed": true
+    },
+    {
+      "check": "redundancy_7_155",
+      "passed": true
+    },
+    {
+      "check": "redundancy_37_41",
+      "passed": true
+    },
+    {
+      "check": "redundancy_37_91",
+      "passed": true
+    },
+    {
+      "check": "redundancy_37_155",
+      "passed": true
+    },
+    {
+      "check": "redundancy_41_107",
+      "passed": true
+    },
+    {
+      "check": "redundancy_91_107",
+      "passed": true
+    },
+    {
+      "check": "redundancy_107_155",
+      "passed": true
+    },
+    {
+      "check": "redundancy_209_223",
+      "passed": true
+    },
+    {
+      "check": "redundancy_58_105",
+      "passed": true
+    },
+    {
+      "check": "redundancy_58_106",
+      "passed": true
+    },
+    {
+      "check": "redundancy_58_163",
+      "passed": true
+    },
+    {
+      "check": "redundancy_58_212",
+      "passed": true
+    },
+    {
+      "check": "redundancy_105_106",
+      "passed": true
+    },
+    {
+      "check": "redundancy_105_163",
+      "passed": true
+    },
+    {
+      "check": "redundancy_105_212",
+      "passed": true
+    },
+    {
+      "check": "redundancy_106_163",
+      "passed": true
+    },
+    {
+      "check": "redundancy_106_212",
+      "passed": true
+    },
+    {
+      "check": "redundancy_163_212",
+      "passed": true
+    },
+    {
+      "check": "redundancy_122_136",
+      "passed": true
+    },
+    {
+      "check": "redundancy_99_157",
+      "passed": true
+    },
+    {
+      "check": "redundancy_36_115",
+      "passed": true
+    },
+    {
+      "check": "redundancy_117_283",
+      "passed": true
+    },
+    {
+      "check": "redundancy_222_283",
+      "passed": true
+    },
+    {
+      "check": "redundancy_100_111",
+      "passed": true
+    },
+    {
+      "check": "redundancy_111_196",
+      "passed": true
+    },
+    {
+      "check": "redundancy_94_214",
+      "passed": true
+    },
+    {
+      "check": "redundancy_144_198",
+      "passed": true
+    },
+    {
+      "check": "redundancy_41_91",
+      "passed": true
+    },
+    {
+      "check": "redundancy_41_155",
+      "passed": true
+    },
+    {
+      "check": "redundancy_91_155",
+      "passed": true
+    },
+    {
+      "check": "redundancy_109_139",
+      "passed": true
+    },
+    {
+      "check": "redundancy_44_173",
+      "passed": true
+    },
+    {
+      "check": "redundancy_86_152",
+      "passed": true
+    },
+    {
+      "check": "redundancy_294_295",
+      "passed": true
+    },
+    {
+      "check": "redundancy_114_182",
+      "passed": true
+    },
+    {
+      "check": "redundancy_117_222",
+      "passed": true
+    },
+    {
+      "check": "redundancy_19_21",
+      "passed": true
+    },
+    {
+      "check": "redundancy_100_196",
+      "passed": true
+    },
+    {
+      "check": "redundancy_137_181",
+      "passed": true
+    },
+    {
+      "check": "redundancy_154_216",
+      "passed": true
+    },
+    {
+      "check": "redundancy_133_151",
+      "passed": true
+    },
+    {
+      "check": "redundancy_159_168",
+      "passed": true
+    },
+    {
+      "check": "redundancy_84_112",
+      "passed": true
+    },
+    {
+      "check": "redundancy_84_128",
+      "passed": true
+    },
+    {
+      "check": "redundancy_84_132",
+      "passed": true
+    },
+    {
+      "check": "redundancy_84_141",
+      "passed": true
+    },
+    {
+      "check": "redundancy_84_172",
+      "passed": true
+    },
+    {
+      "check": "redundancy_112_128",
+      "passed": true
+    },
+    {
+      "check": "redundancy_112_132",
+      "passed": true
+    },
+    {
+      "check": "redundancy_112_141",
+      "passed": true
+    },
+    {
+      "check": "redundancy_112_172",
+      "passed": true
+    },
+    {
+      "check": "redundancy_128_132",
+      "passed": true
+    },
+    {
+      "check": "redundancy_128_141",
+      "passed": true
+    },
+    {
+      "check": "redundancy_128_172",
+      "passed": true
+    },
+    {
+      "check": "redundancy_132_141",
+      "passed": true
+    },
+    {
+      "check": "redundancy_132_172",
+      "passed": true
+    },
+    {
+      "check": "redundancy_141_172",
+      "passed": true
+    },
+    {
+      "check": "redundancy_203_220",
+      "passed": true
+    },
+    {
+      "check": "redundancy_49_263",
+      "passed": true
+    },
+    {
+      "check": "redundancy_268_274",
+      "passed": true
+    },
+    {
+      "check": "redundancy_268_276",
+      "passed": true
+    },
+    {
+      "check": "redundancy_274_276",
+      "passed": true
+    },
+    {
+      "check": "redundancy_78_83",
+      "passed": true
+    },
+    {
+      "check": "redundancy_78_269",
+      "passed": true
+    },
+    {
+      "check": "redundancy_83_269",
+      "passed": true
+    },
+    {
+      "check": "redundancy_60_61",
+      "passed": true
+    },
+    {
+      "check": "redundancy_60_88",
+      "passed": true
+    },
+    {
+      "check": "redundancy_60_96",
+      "passed": true
+    },
+    {
+      "check": "redundancy_60_118",
+      "passed": true
+    },
+    {
+      "check": "redundancy_60_164",
+      "passed": true
+    },
+    {
+      "check": "redundancy_61_88",
+      "passed": true
+    },
+    {
+      "check": "redundancy_61_96",
+      "passed": true
+    },
+    {
+      "check": "redundancy_61_118",
+      "passed": true
+    },
+    {
+      "check": "redundancy_61_164",
+      "passed": true
+    },
+    {
+      "check": "redundancy_88_96",
+      "passed": true
+    },
+    {
+      "check": "redundancy_88_118",
+      "passed": true
+    },
+    {
+      "check": "redundancy_88_164",
+      "passed": true
+    },
+    {
+      "check": "redundancy_96_118",
+      "passed": true
+    },
+    {
+      "check": "redundancy_96_164",
+      "passed": true
+    },
+    {
+      "check": "redundancy_118_164",
+      "passed": true
+    },
+    {
+      "check": "problems_oov_tf",
+      "passed": true
+    },
+    {
+      "check": "problems_oov_outside_fixed_vocabulary",
+      "passed": true
+    },
+    {
+      "check": "solutions_oov_tf",
+      "passed": true
+    },
+    {
+      "check": "solutions_oov_outside_fixed_vocabulary",
+      "passed": true
+    },
+    {
+      "check": "530_recounted_regions_and_documents",
+      "passed": true
+    },
+    {
+      "check": "160_actual_request_keys",
+      "passed": true
+    },
+    {
+      "check": "diff_1_005B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_005C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_011B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_011C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_012B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_012C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_014B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_014C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_018B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_018C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_022B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_022C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_026B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_026C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_028B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_028C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_030B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_030C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_036B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_036C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_038B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_038C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_039B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_039C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_041B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_1_041C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_004B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_004C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_006B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_006C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_007B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_007C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_010B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_010C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_013B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_013C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_014B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_014C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_016B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_016C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_018B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_018C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_020B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_020C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_023B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_023C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_024B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_024C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_029B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_029C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_030B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_030C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_031B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_031C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_036B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_036C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_037B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_037C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_040B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_040C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_041B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_2_041C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_3_001B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_3_001C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_3_004B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_3_004C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_3_005B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_3_005C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_3_008B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_3_008C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_3_012B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_3_012C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_3_022B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_3_022C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_3_028B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_3_028C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_3_039B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_3_039C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_3_044B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_3_044C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_3_048B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_3_048C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_3_049B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "diff_3_049C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_004B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_004C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_007B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_007C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_009B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_009C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_010B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_010C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_011B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_011C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_013B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_013C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_018B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_018C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_020B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_020C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_021B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_021C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_028B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_028C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_032B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_032C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_035B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_035C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_039B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_039C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_042B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_042C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_043B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_043C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_046B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_1_046C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_2_003B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_2_003C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_2_007B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_2_007C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_2_014B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_2_014C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_2_016B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_2_016C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_2_017B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_2_017C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_2_022B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_2_022C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_2_024B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_2_024C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_2_025B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_2_025C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_2_030B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_2_030C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_2_035B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_2_035C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_002B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_002C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_010B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_010C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_011B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_011C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_014B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_014C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_015B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_015C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_017B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_017C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_021B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_021C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_026B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_026C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_034B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_034C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_035B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_035C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_039B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_039C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_040B_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "trig_3_040C_actual_mapping",
+      "passed": true
+    },
+    {
+      "check": "B_category_denominator",
+      "passed": true
+    },
+    {
+      "check": "C_category_denominator",
+      "passed": true
+    },
+    {
+      "check": "problem_user_choice_file_initially_empty",
+      "passed": true
+    },
+    {
+      "check": "solution_user_choice_file_initially_empty",
+      "passed": true
+    },
+    {
+      "check": "all_report_links_exist",
+      "passed": true
+    },
+    {
+      "check": "required_reading_documents",
+      "passed": true
+    },
+    {
+      "check": "token_figures_present",
+      "passed": true
+    }
+  ],
+  "protected_original_files": 2474,
+  "all_original_source_hashes_unchanged": true,
+  "relative_links_checked": 52,
+  "missing_links": [],
+  "png_count": 11,
+  "scope": "Stage 1 descriptive token analysis only; user chooses stopwords later",
+  "user_selection_required": true,
+  "new_model_experiments": 0,
+  "new_gemini_calls": 0,
+  "limits": "Category labels are descriptive; figures need visual inspection; no hint-effect or model-improvement experiment performed.",
+  "unit_tests": {
+    "passed": 27,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 0.016,
+    "log": "test_results.txt",
+    "scope": "New token-analysis tests only; old toy-model-training suites were not run"
+  },
+  "runtime_execution_guard": {
+    "executed_modes": [
+      "analyze",
+      "report",
+      "verify"
+    ],
+    "forbidden_calls": {
+      "mathhint_learning.TorchKMeans.fit_kmeans": 0,
+      "mathhint_learning.TorchKMeans.fit_spherical_kmeans": 0,
+      "mathhint_learning.TorchRegression.train_regression": 0,
+      "torch.load": 0,
+      "torch.nn.Linear.forward": 0,
+      "google.genai.Client": 0
+    },
+    "report_and_verify_retokenization_calls": 0,
+    "report_and_verify_numeric_csvs_unchanged": true,
+    "checks_passed": 1120
+  },
+  "independent_audit": {
+    "verified_at": "2026-11-10T06:51:56.889242+00:00",
+    "output_comparison_status": "complete",
+    "issues": [],
+    "all_token_coordinates": 777,
+    "classification_variance_rows": 1384,
+    "class_token_mean_df_rows": 36330,
+    "redundancy_pairs": 154,
+    "actual_requests": 160,
+    "transmitted_coordinates": 3200,
+    "oov_rows": 51,
+    "independent_oov_test_documents": 160,
+    "oov_raw_coordinates_and_counts_match": true,
+    "baseline": {
+      "baseline_commit": "048a3338cf598c65a567907fecd2a82e46a1586f",
+      "tracked_files": 2571,
+      "protected_data_final_and_archive_files": 2470,
+      "protected_changed": [],
+      "all_old_changed_paths_at_check": [
+        "docs/FINAL_TASK_SPEC.md",
+        "docs/WORK_PROGRESS.md",
+        "results/README.md"
+      ]
+    },
+    "user_review_files": {
+      "all_created": true,
+      "all_existing_arrays_empty": true,
+      "stopword_selection_or_masking_performed": false
+    },
+    "scope_audit": {
+      "models_created": 0,
+      "fit_calls": 0,
+      "model_loads": 0,
+      "api_calls": 0,
+      "no_stopword_selection_masking_or_followup_experiments_implemented": true
+    }
+  },
+  "visual_review": {
+    "method": "Actual generated PNGs opened locally; no external rendering server",
+    "figures_inspected": [
+      "01_problem_tokens/figures/variance_top20.png",
+      "01_problem_tokens/figures/eta_top20_type.png",
+      "01_problem_tokens/figures/variance_eta_scatter.png",
+      "01_problem_tokens/figures/redundant_distance_contribution.png",
+      "01_problem_tokens/figures/source_distribution.png",
+      "02_solution_tokens/figures/top20_category_composition.png",
+      "02_solution_tokens/figures/problem_solution_comparison.png"
+    ],
+    "literal_token_names_backslashes_korean_axes_legends_readable": true,
+    "log_tick_display": "Plain numeric 0.01/0.1/1/10, no exposed mathdefault syntax after correction",
+    "markdown_documents_checked": 5,
+    "relative_links_checked": 52,
+    "markdown_table_column_mismatches": 0,
+    "limits": "Representative visual inspection, not a claim of mathematical hint effectiveness"
+  },
+  "stage1_complete": true,
+  "next_stage": "Wait for user-selected stopwords and explicit approval; stages 2–5 are not implemented"
+}

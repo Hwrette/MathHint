@@ -1,0 +1,99 @@
+{
+  "tokenizer": {
+    "package": "kiwipiepy",
+    "version": "0.24.1",
+    "model_package_version": "0.24.0",
+    "num_workers": 2
+  },
+  "regions": {
+    "problems": {
+      "n": 80,
+      "total_tokens": 7056,
+      "represented_tf": 7027,
+      "ignored_tf": 29,
+      "ignored_fraction": 0.004109977324263038,
+      "test_total_tokens": 7056,
+      "unique_oov_tokens": 20,
+      "oov_documents": 12,
+      "train": {
+        "n": 185,
+        "total_tokens": 17123,
+        "represented_tf": 17123,
+        "ignored_tf": 0,
+        "ignored_fraction": 0.0
+      },
+      "test": {
+        "n": 80,
+        "total_tokens": 7056,
+        "represented_tf": 7027,
+        "ignored_tf": 29,
+        "ignored_fraction": 0.004109977324263038
+      },
+      "all_original_coordinates_match": true,
+      "requested_examples": {
+        "latex:\\gamma": {
+          "in_existing_vocabulary": false,
+          "oov_tf": 2,
+          "oov_df": 1
+        },
+        "latex:\\log": {
+          "in_existing_vocabulary": false,
+          "oov_tf": 1,
+          "oov_df": 1
+        },
+        "latex:\\circ": {
+          "in_existing_vocabulary": false,
+          "oov_tf": 1,
+          "oov_df": 1
+        }
+      }
+    },
+    "solutions": {
+      "n": 80,
+      "total_tokens": 18210,
+      "represented_tf": 18162,
+      "ignored_tf": 48,
+      "ignored_fraction": 0.0026359143327841844,
+      "test_total_tokens": 18210,
+      "unique_oov_tokens": 31,
+      "oov_documents": 18,
+      "train": {
+        "n": 185,
+        "total_tokens": 41198,
+        "represented_tf": 41198,
+        "ignored_tf": 0,
+        "ignored_fraction": 0.0
+      },
+      "test": {
+        "n": 80,
+        "total_tokens": 18210,
+        "represented_tf": 18162,
+        "ignored_tf": 48,
+        "ignored_fraction": 0.0026359143327841844
+      },
+      "all_original_coordinates_match": true,
+      "requested_examples": {
+        "latex:\\gamma": {
+          "in_existing_vocabulary": true,
+          "oov_tf": 0,
+          "oov_df": 0
+        },
+        "latex:\\log": {
+          "in_existing_vocabulary": false,
+          "oov_tf": 3,
+          "oov_df": 1
+        },
+        "latex:\\circ": {
+          "in_existing_vocabulary": false,
+          "oov_tf": 2,
+          "oov_df": 1
+        }
+      }
+    }
+  },
+  "recounted_documents": 530,
+  "all_original_coordinates_and_counts_match": true,
+  "fraction_denominator": "all test tokens before vocabulary filtering = represented TF + ignored TF",
+  "vocabulary_extended": false,
+  "tokenizer_changed": false
+}

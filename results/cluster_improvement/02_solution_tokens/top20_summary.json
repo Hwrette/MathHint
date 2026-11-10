@@ -1,0 +1,78 @@
+{
+  "request_count": 160,
+  "questions_per_condition": 80,
+  "transmitted_coordinates": {
+    "B": 1600,
+    "C": 1600
+  },
+  "role_groups": {
+    "B": {
+      "수학 개념·명령·연산": {
+        "coordinates": 436,
+        "fraction": 0.2725
+      },
+      "풀이 방법 자연어": {
+        "coordinates": 0,
+        "fraction": 0.0
+      },
+      "일반 조사·어미·연결어": {
+        "coordinates": 58,
+        "fraction": 0.03625
+      },
+      "숫자·변수명": {
+        "coordinates": 539,
+        "fraction": 0.336875
+      },
+      "서식·수식 구조·고정 양식": {
+        "coordinates": 503,
+        "fraction": 0.314375
+      },
+      "분류 불확실·검토 필요": {
+        "coordinates": 64,
+        "fraction": 0.04
+      }
+    },
+    "C": {
+      "수학 개념·명령·연산": {
+        "coordinates": 409,
+        "fraction": 0.255625
+      },
+      "풀이 방법 자연어": {
+        "coordinates": 0,
+        "fraction": 0.0
+      },
+      "일반 조사·어미·연결어": {
+        "coordinates": 92,
+        "fraction": 0.0575
+      },
+      "숫자·변수명": {
+        "coordinates": 477,
+        "fraction": 0.298125
+      },
+      "서식·수식 구조·고정 양식": {
+        "coordinates": 534,
+        "fraction": 0.33375
+      },
+      "분류 불확실·검토 필요": {
+        "coordinates": 88,
+        "fraction": 0.055
+      }
+    }
+  },
+  "mean_common_vector_top20": 14.0625,
+  "mean_vector_precision_at_20": 0.703125,
+  "mean_common_transmitted_top20": 14.0625,
+  "omitted_after_rounding": 0,
+  "all_original_requests_and_serialization_match": true,
+  "all_original_regression_top20_overlap_matches": true,
+  "successful_response_inputs_verified": 160,
+  "contemporaneous_sdk_capture_request_pairs": 80,
+  "contemporaneous_sdk_capture_files_verified": 81,
+  "composition_denominator": "Number of actually transmitted token coordinates, not sum of frequency values or API tokens",
+  "value_sum_note": "B is a rounded regression estimate and C is a true count. Value sums are not API token usage and do not measure information value.",
+  "historical_audit_limit": "A/B requests were reconstructed and exact-input-verified; C also has contemporaneous SDK capture. No new SDK calls were made.",
+  "interpretation_limit": "Role labels and coordinate proportions describe the old inputs; they do not establish causal hint usefulness or invalidate alternative correct solutions.",
+  "new_api_calls": 0,
+  "model_loads": 0,
+  "stopword_filtered_reselection": false
+}

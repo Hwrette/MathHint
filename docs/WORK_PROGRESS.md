@@ -1,20 +1,29 @@
 # MathHint 작업 진행 상태
 
-STATUS: IN_PROGRESS_TOKEN_ANALYSIS_STAGE1
-EXECUTION_ALLOWED: true
-LAST_CONFIRMED_PUBLISHED_COMMIT: 895b288
+STATUS: COMPLETE_TOKEN_ANALYSIS_STAGE1_AWAITING_USER_SELECTION
+EXECUTION_ALLOWED: false
+LAST_CONFIRMED_PUBLISHED_COMMIT: 048a3338cf598c65a567907fecd2a82e46a1586f
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
 AUTOMATION_STATUS: PAUSED_AFTER_READER_WORKFLOW_COMPLETION_VERIFIED_BY_PEEK
 FIRST_RUN_FROM_SAVED_RULE: 2026-11-09T05:58:50+09:00
 RECURRENCE: EVERY_5_HOURS
 NEXT_RUN_TIME_SERVER_FIELD: NOT_RETURNED
 ENVIRONMENT: MathHint / inherited / current_environment_id_confirmed
-REMOTE_CHECKPOINT_STATUS: CLUSTERING_ADDITIONS_IMPLEMENTATION_AND_RESULTS_PUBLISHED
+REMOTE_CHECKPOINT_STATUS: TOKEN_ANALYSIS_VERIFIED_READY_FOR_FINAL_PUSH_AND_REMOTE_HEAD_CHECK
 GITHUB_PREAUTHORIZATION_SETTING: RESTORED_TO_ORIGINAL_INHERIT_VERIFIED
 TIMEZONE: Asia/Seoul
 USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 
-## 현재 작업 완료 — 혼동행렬과 전체265 탐색
+## 현재 상태: 1단계 토큰 분석 완료, 사용자 선택 대기
+
+- 수행 범위는 통계·분산분해·중복·OOV·기존 B/C 전송 구성과 읽기 자료뿐이다. 불용어를 선택하거나 적용하지 않았고 K-means/회귀/신경망/새 API/성능평가/순열 기능을 구현하지 않았다.
+- 문제346·해설431, TF/DF/전체265 분산, 학습185의4수준η²·거리기여, OOV29/48, 실제전송160요청/3200좌표를 분석했다. 토큰 인덱스·어휘·원본 벡터는 불변이다.
+- 새검사27/27, 통계검증1120/1120, 독립전수대조PASS. 원본데이터/final/구보존자료2470파일과기존토큰화/공통코드4파일SHA동일. 그림11개·문서5개·CSV15개를제공한다.
+- 두stopwords JSON은모두[]이며프로그램이자동추가하지않는다. 최초생성후사용자작성목록은덮어쓰지않고어떤좌표변환에도사용하지않는다.
+- 먼저 results/cluster_improvement/README.md를읽는다. 이번분석은게시후중단한다. 사용자가목록을확정하고후속을명시적으로요청하기전2~5단계실행/구현금지. 복구자동화는peek로false확인한중지상태다.
+- 최종게시전수치/코드검증까지완료했다. 아래게시명령뒤실제Git HEAD와원격refs/heads/main을대조하여확인하며,원격반영확인외추가작업을이어가지않는다.
+
+## 이전 작업 완료 — 혼동행렬과 전체265 탐색
 
 - 기존test80 혼동행렬8개, 새full265 모델8개/40시드실행과43PNG를저장했다. 군집코드holdout/와full_dataset_265/를분리하고TorchKMeans는한곳에서공유한다.
 - 전체tests187/187·기존결과검사284/284·독립holdout8/full8의지표/CM/교차표/PCA검증PASS. 모든기존CSV/PNG/PT와data/회귀/Gemini/보존자료는바이트불변.
@@ -324,3 +333,16 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 주된η²와거리기여는학습185기준,전체265 TF/DF/비라벨분산과구분한다. Kiwi저장형태는form만있어품사중의성을남긴다. 원래토큰화버전kiwipiepy0.24.1/model0.24.0을대조한다.
 - 현재단계:자료/기준SHA확보완료→구현중→실제분석→독립검증/이미지/링크→완료커밋/푸시/원격확인→사용자선정대기. 아직완료아님.
 - 이번에는푸시후중단조건을지키도록진행중체크포인트는로컬에남기고,최종검증이끝난뒤관련커밋을한번에원격게시한다. 이전복구자동화는중지상태를유지하며후속실험을예약하지않는다.
+
+## 토큰 1단계 최종 검증·게시 준비 — 2026-11-10T06:57:52.603666+00:00
+
+- 실제토큰화설명: Kiwi form만보존/POS모호성,LaTeX명령·숫자·한글자기호분리·원시괄호좌표,순서/짝/역할손실·동일의미다른표기근거를보고서에기록했다. 설명용범주11개는불용어판정이아니다.
+- 학습제곱거리기여 {}쌍37.9643%/left-right5.7076%/()5.3260%=49.00%. 세쌍학습185빈도동일. 과목η²중괄호.0885대sin.5327처럼분산순위와분류관계가다르지만서식무의미를단정하지않았다. 유형70중43singleton/53개n<=2한계명시.
+- 전체토큰CSV777좌표/분산분해1384행/분류평균DF36330행/중복154쌍(정확일치102쌍)을독립전수대조했다. η²정의불가null·음수보조조정값·1e-12경계정밀도처리검사PASS.
+- 원래Kiwi.24.1/model.24.0로530영역문서를재계수해전좌표/총토큰/제외기록일치. 문제OOV29/7056=.4110%(20종),해설48/18210=.2636%(31종). test160문서독립재계수도PASS. 어휘확장없음.
+- B/C각1600실전송좌표:서식구조31.4375/33.375%,숫자변수33.6875/29.8125%,수학개념명령연산27.25/25.5625%,방법자연어0/0(설명용사전의관찰이며효과0아님). 원본160성공응답입력과C SDK81파일까지대조했고B의역사복원기록한계명시. 공통14.0625/P@20.703125는원래수치이며새성능실험아님.
+- guarded analyze/report/verify에서KMeans2fit·회귀train·torch.load·Linear.forward·genai.Client모두0call. report/verify는원래tokenizer까지금지해0call/CSV바이트불변확인. 이번에는기존toy학습이포함된전체기존suite를실행하지않고새token tests27개만PASS했다.
+- 실제PNG7종대표를직접열었다. scatter로그축에서parse_mathFalse와logformatter충돌로내부문구가노출된표시문제를일반숫자formatter로수정하고재생성/재검증했다. 한글/백슬래시/범례/축/표본수읽기확인. 문서5개52링크/표열수검증PASS.
+- 원본final_experiment전체/기존manifest/검증기록/모든데이터/모델/요청/응답불변이다. 기존파일수정은허용된results/README링크와이번작업명세/진행/자동화상태메타뿐이다. 원시기존코드도수정하지않았다.
+- 보존/독립검증/실행guard/시각검토/27tests근거를새validation.json과test_results.txt에정리했다. 새manifest는사용자소유stopwords파일을생성산출물과구분하며사용자목록을자동초기화하지않는다.
+- 이제관련파일만최종커밋/일반push하고실제원격SHA를확인한뒤중단한다. 본문의LAST_CONFIRMED_PUBLISHED_COMMIT은게시직전기존원격048a333을뜻한다. 이번최종반영여부는실제Git HEAD와원격main의일치로확인한다. 이후단계는승인대기이며자동화를예약하지않는다.
