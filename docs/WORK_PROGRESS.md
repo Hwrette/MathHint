@@ -670,7 +670,7 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 |test80 A/B/C/D API|완료|320/320성공,80기존정확요청재사용+240신규성공,현재실패/채점불가/미완료0|
 |전체응답 풀이검토·사례·화면|완료|320직접AI보조검토(298적절/22오류의심,사람확정0),80문항두뷰포트실제검사|
 |전체 검증|완료|종합3760/3760·독립16175/16175·핵심test39/39PASS|
-|GitHub 최종게시|진행중|직전정상게시 d14537c35d71169abe7d15be072630db74cf4a1d,아래결과커밋push후원격main확인예정|
+|GitHub 최종게시|완료|결과 b6a020198f5fddfdcc32beaf3d292f0a6178da47 일반push 및 GitHub main SHA일치 확인|
 |선택적 학습185 API확장|미실행/조건미충족|현재공급자잔여예산미확인,추가740조건호출0;이번필수test80완료와구분|
 
 - 최종 모델평가(음수보정·동일359공간·test80): 평균baseline MSE1.64540553/MAE.30894265/cos.76174021/P20.559375;선형1.11208808/.23390891/.86987555/.672500;MLP1.14457941/.21738574/.86224633/.673125. MLP의P20우위는80×20중공통1개이고MSE/cos는선형이낫다. 검증P20 선형.600000/MLP3seed평균.59774775±.00555353으로선택했으며test/API결과로모델을바꾼적이없다.
@@ -684,3 +684,11 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 최종정리중새종합결론함수의부분fixture에서success_count누락KeyError가발견돼불완전집계는완료결론을출력하지않도록수정했다. 동일정답수/개선악화상쇄/입력포함비용을검사하는새합성case를추가해최종39/39 PASS다. 검증파일갱신과읽기전용test를동시에실행하지않고순차검사했으며기존수치/모델/요청은변경0이다.
 - 첫진입점 results/final_experiment_2/README.md,종합해석 final_report.md,모델별README,API README/report.html,question_comparison.csv와case_reports로연결한다. 보고서재생성: python -m mathhint_solver.final_experiment_2.gemini_comparison report 및 python -m mathhint_learning.final_experiment_2.report report;검증:각패키지 verify. report/verify의재학습/실제API호출0이다. 모델train/evaluate와API preflight/generate명령은각README에구분했다.
 - 한계: 전체265어휘/사용자토큰선정정보를사용한전이적조건,작은검증37/테스트80,동일문제벡터의기존분할교차사례,학습빈도0해설토큰25개,단일생성·과거A재사용시점차이,BoW순서/구조손실,특정원본풀이타깃및AI검토한계다. 새로운어텐션/Lean/추가모델은개발하지않았다. 최종push후작업을중단하고모델재학습/185확장을시작하지않는다.
+
+
+## 최종 원격 게시 확인 · 실행 종료 — 2026-11-10T21:26:48.147880+00:00
+
+- 결과 커밋 b6a020198f5fddfdcc32beaf3d292f0a6178da47를 origin/main에 일반push했고 GitHub커넥터의main실제SHA/제목을조회해로컬HEAD와동일함을확인했다. 결과첫파일 https://github.com/Hwrette/MathHint/blob/main/results/final_experiment_2/README.md .
+- 마지막정상전체검증시점Git커밋은위 b6a020198f5fddfdcc32beaf3d292f0a6178da47이다. 검증후연구파일/코드/모델/요청/응답변경은없으며이후변경은이게시확인기록뿐이다. 결과커밋직후작업트리clean도확인했다. 이문서갱신은별도기록커밋으로일반push해남긴다.
+- 최종비밀값검사는시작커밋대비이번전체527신규/수정실파일에대해실행해API키노출0을확인했다. 입력/출력/원문/모델/선택목록보호와320성공/0미완료/0채점불가/39핵심test/3760전체검사/16175독립감사/실제브라우저27검사가모두확인됐다.
+- 필수연구단계는완료,선택적학습185의추가740조건은호출예산미확인으로미실행이다. 사람의최종수학검증은사용자검토로남는다. 작업종료후추가모델훈련/불용어수정/API호출/확장/자동예약은실행하지않는다.
