@@ -1,5 +1,11 @@
 # 실험 결과 안내
 
+<!-- final-experiment-2:start -->
+
+**새 후속 실험:** [2차 실험 목차](final_experiment_2/README.md) → [cluster_improvement 결과](final_experiment_2/cluster_improvement/README.md). 전체265문항의 문제 BoW와 사용자 불용어 적용 전·후 K-means를 비교했다. 같은265문항의 탐색 결과이며, 기존 1차 최종 실험·토큰 분석은 그대로 보존한다.
+
+<!-- final-experiment-2:end -->
+
 현재 연구의 최종 결과는 **[final_experiment/README.md](final_experiment/README.md)**에서 확인한다. 군집화·회귀·Gemini 세 조건의 표, 그림, 문항별 자료와 최종 보고서를 한곳에서 연결한다.
 
 문제와 풀이부터 읽으려면 **[수식이 표시되는 문항별 화면](final_experiment/03_gemini/report.html)**을 연다. GitHub 파일 페이지에서는 실행되지 않으므로 저장소 ZIP을 압축 해제한 뒤 브라우저로 연다. 읽기 화면에는 로컬 `final_experiment/viewer_assets/`도 함께 필요하다. 인터넷 연결이나 Gemini 호출 없이 동작한다.

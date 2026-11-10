@@ -1,0 +1,38 @@
+{
+  "n": 265,
+  "train": 185,
+  "test": 80,
+  "split_role": "provenance only, no holdout experiment",
+  "regions": {
+    "problems": {
+      "legacy_vocab_count": 346,
+      "raw_vocab_count": 366,
+      "filtered_vocab_count": 270,
+      "restored_token_count": 20,
+      "registered_stopword_count": 96,
+      "execution_unique_stopword_count": 96,
+      "duplicate_stopwords": 0,
+      "removed_token_count": 96,
+      "removed_tf": 14503,
+      "total_tf_before": 24179,
+      "total_tf_after": 9676,
+      "zero_vectors": {
+        "raw": {
+          "train": 0,
+          "test": 0
+        },
+        "filtered": {
+          "train": 0,
+          "test": 0
+        }
+      },
+      "stopwords_not_found": [],
+      "unique_vectors": {
+        "raw": 265,
+        "filtered": 264
+      }
+    }
+  },
+  "retokenized_problem_count": 265,
+  "retokenized_solution_count": 0
+}

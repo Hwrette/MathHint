@@ -1,0 +1,29 @@
+﻿experiment,level,method,cluster,actual_label,label_code,count,cluster_n,ratio,full_majority_label
+K1_unit_spherical,unit,spherical,0,09 대수 / 06 삼각함수의 그래프,L02,37,39,0.9487179487179487,09 대수 / 06 삼각함수의 그래프
+K1_unit_spherical,unit,spherical,0,09 대수 / 05 삼각함수의 정의,L01,2,39,0.05128205128205128,09 대수 / 06 삼각함수의 그래프
+K1_unit_spherical,unit,spherical,1,10 미적분1 / 05 함수의 증가와 감소,L07,27,41,0.6585365853658537,10 미적분1 / 05 함수의 증가와 감소
+K1_unit_spherical,unit,spherical,1,09 대수 / 06 삼각함수의 그래프,L02,7,41,0.17073170731707318,10 미적분1 / 05 함수의 증가와 감소
+K1_unit_spherical,unit,spherical,1,10 미적분1 / 03 미분계수와 도함수,L05,6,41,0.14634146341463414,10 미적분1 / 05 함수의 증가와 감소
+K1_unit_spherical,unit,spherical,1,10 미적분1 / 02 함수의 연속성,L04,1,41,0.024390243902439025,10 미적분1 / 05 함수의 증가와 감소
+K1_unit_spherical,unit,spherical,2,10 미적분1 / 06 방부등식과 직선운동,L08,11,23,0.4782608695652174,10 미적분1 / 06 방부등식과 직선운동
+K1_unit_spherical,unit,spherical,2,10 미적분1 / 04 접선의 방정식,L06,6,23,0.2608695652173913,10 미적분1 / 06 방부등식과 직선운동
+K1_unit_spherical,unit,spherical,2,09 대수 / 06 삼각함수의 그래프,L02,4,23,0.17391304347826086,10 미적분1 / 06 방부등식과 직선운동
+K1_unit_spherical,unit,spherical,2,09 대수 / 05 삼각함수의 정의,L01,2,23,0.08695652173913043,10 미적분1 / 06 방부등식과 직선운동
+K1_unit_spherical,unit,spherical,3,10 미적분1 / 03 미분계수와 도함수,L05,17,53,0.32075471698113206,10 미적분1 / 03 미분계수와 도함수
+K1_unit_spherical,unit,spherical,3,10 미적분1 / 01 함수의 극한,L03,16,53,0.3018867924528302,10 미적분1 / 03 미분계수와 도함수
+K1_unit_spherical,unit,spherical,3,10 미적분1 / 04 접선의 방정식,L06,7,53,0.1320754716981132,10 미적분1 / 03 미분계수와 도함수
+K1_unit_spherical,unit,spherical,3,09 대수 / 06 삼각함수의 그래프,L02,5,53,0.09433962264150944,10 미적분1 / 03 미분계수와 도함수
+K1_unit_spherical,unit,spherical,3,10 미적분1 / 05 함수의 증가와 감소,L07,4,53,0.07547169811320754,10 미적분1 / 03 미분계수와 도함수
+K1_unit_spherical,unit,spherical,3,10 미적분1 / 06 방부등식과 직선운동,L08,3,53,0.05660377358490566,10 미적분1 / 03 미분계수와 도함수
+K1_unit_spherical,unit,spherical,3,10 미적분1 / 02 함수의 연속성,L04,1,53,0.018867924528301886,10 미적분1 / 03 미분계수와 도함수
+K1_unit_spherical,unit,spherical,4,10 미적분1 / 02 함수의 연속성,L04,24,28,0.8571428571428571,10 미적분1 / 02 함수의 연속성
+K1_unit_spherical,unit,spherical,4,10 미적분1 / 03 미분계수와 도함수,L05,4,28,0.14285714285714285,10 미적분1 / 02 함수의 연속성
+K1_unit_spherical,unit,spherical,5,09 대수 / 06 삼각함수의 그래프,L02,25,45,0.5555555555555556,09 대수 / 06 삼각함수의 그래프
+K1_unit_spherical,unit,spherical,5,09 대수 / 05 삼각함수의 정의,L01,18,45,0.4,09 대수 / 06 삼각함수의 그래프
+K1_unit_spherical,unit,spherical,5,10 미적분1 / 04 접선의 방정식,L06,2,45,0.044444444444444446,09 대수 / 06 삼각함수의 그래프
+K1_unit_spherical,unit,spherical,6,10 미적분1 / 06 방부등식과 직선운동,L08,9,14,0.6428571428571429,10 미적분1 / 06 방부등식과 직선운동
+K1_unit_spherical,unit,spherical,6,09 대수 / 06 삼각함수의 그래프,L02,3,14,0.21428571428571427,10 미적분1 / 06 방부등식과 직선운동
+K1_unit_spherical,unit,spherical,6,09 대수 / 05 삼각함수의 정의,L01,1,14,0.07142857142857142,10 미적분1 / 06 방부등식과 직선운동
+K1_unit_spherical,unit,spherical,6,10 미적분1 / 04 접선의 방정식,L06,1,14,0.07142857142857142,10 미적분1 / 06 방부등식과 직선운동
+K1_unit_spherical,unit,spherical,7,09 대수 / 06 삼각함수의 그래프,L02,21,22,0.9545454545454546,09 대수 / 06 삼각함수의 그래프
+K1_unit_spherical,unit,spherical,7,10 미적분1 / 01 함수의 극한,L03,1,22,0.045454545454545456,09 대수 / 06 삼각함수의 그래프

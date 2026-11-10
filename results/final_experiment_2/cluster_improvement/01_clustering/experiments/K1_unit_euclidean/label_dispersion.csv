@@ -1,0 +1,9 @@
+﻿experiment,level,method,actual_label,n,occupied_clusters,largest_cluster_share,cluster_entropy_bits,cluster_ids
+K1_unit_euclidean,unit,euclidean,09 대수 / 05 삼각함수의 정의,23,5,0.6956521739130435,1.44726249944121,"0,3,4,5,6"
+K1_unit_euclidean,unit,euclidean,09 대수 / 06 삼각함수의 그래프,102,7,0.28431372549019607,2.4605805865354555,"0,1,3,4,5,6,7"
+K1_unit_euclidean,unit,euclidean,10 미적분1 / 01 함수의 극한,17,3,0.8235294117647058,0.8343470230852537,"1,3,7"
+K1_unit_euclidean,unit,euclidean,10 미적분1 / 02 함수의 연속성,26,3,0.9230769230769231,0.46816664055233254,"1,2,7"
+K1_unit_euclidean,unit,euclidean,10 미적분1 / 03 미분계수와 도함수,27,4,0.5555555555555556,1.5602636729586163,"1,2,5,7"
+K1_unit_euclidean,unit,euclidean,10 미적분1 / 04 접선의 방정식,16,4,0.5625,1.5919171866886992,"1,3,5,7"
+K1_unit_euclidean,unit,euclidean,10 미적분1 / 05 함수의 증가와 감소,31,3,0.8064516129032258,0.8346464646189743,"1,5,7"
+K1_unit_euclidean,unit,euclidean,10 미적분1 / 06 방부등식과 직선운동,23,4,0.43478260869565216,1.547972308328872,"1,3,4,5"

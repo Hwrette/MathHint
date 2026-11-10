@@ -1,30 +1,30 @@
 # MathHint 작업 진행 상태
 
-STATUS: IN_PROGRESS_FINAL2_PROBLEM_ONLY_FULL265_CLUSTERING
-EXECUTION_ALLOWED: true  # ONLY problem Full265 K0/K1 K-means; no regression/solution/holdout/API
-LAST_CONFIRMED_PUBLISHED_COMMIT: 7c5038a05dd3bc3261e61031b99cb2b8f0cc84a8
+STATUS: COMPLETE_FINAL2_CLUSTERING_VALIDATED_PENDING_PUSH_CONFIRMATION
+EXECUTION_ALLOWED: false  # Experiments complete; only commit/push verification remains
+LAST_CONFIRMED_PUBLISHED_COMMIT: 7243d20
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
 AUTOMATION_STATUS: PAUSED_AFTER_READER_WORKFLOW_COMPLETION_VERIFIED_BY_PEEK
 FIRST_RUN_FROM_SAVED_RULE: 2026-11-09T05:58:50+09:00
 RECURRENCE: EVERY_5_HOURS
 NEXT_RUN_TIME_SERVER_FIELD: NOT_RETURNED
 ENVIRONMENT: MathHint / inherited / current_environment_id_confirmed
-REMOTE_CHECKPOINT_STATUS: SIX_APPROVED_STOPWORDS_VALIDATED_READY_FOR_PUSH_VERIFY_GIT
+REMOTE_CHECKPOINT_STATUS: FINAL2_FULL265_CLUSTERING_READY_FOR_COMMIT_PUSH_VERIFY
 GITHUB_PREAUTHORIZATION_SETTING: RESTORED_TO_ORIGINAL_INHERIT_VERIFIED
 TIMEZONE: Asia/Seoul
 USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 
-## 현재 상태: 2차 실험 · 문제 전체265 K0/K1 군집화만 진행
+## 현재 상태: 2차 문제 전체265 K0/K1 군집화 완료 · 게시 확인 대기
 
 최신 사용자 정정에 따라 회귀 구현·학습·평가/풀이 BoW 모델/185·80 분리 재실험은 제외한다. 현재 승인 범위는 문제 원문265개 재토큰화, 문제 불용어96 적용 전후 어휘/벡터, 전체265 학습·평가16군집 실험과 보고·검증·게시다. Gemini·신경망은 실행하지 않는다. 기존 자료는 해시로 보호한다. 초기 확대 작업은 코드를 작성하기 전 중단했고 최신 범위로 모든 담당 작업을 정정했다.
 
 |단계|상태|근거/다음 작업|
 |---|---|---|
 |원본/기존설정/불용어 조사|완료|main clean·HEAD7c5038a·96개·seed42~46/max100/tol1e-4 확인|
-|문제265 새 BoW와 사용자 필터|진행 중|00_dataset에 별도 저장; 원본265만 재토큰화|
-|전체265 K0/K1 군집화16개|미시작|공통 TorchKMeans 재사용, 실제 라벨 평가만|
-|표·그림·보고서|미시작|01_clustering·02_evaluation·주README|
-|검증·보존·커밋/푸시|미시작|16CM×265·지표·링크·기존SHA·원격확인|
+|문제265 새 BoW와 사용자 필터|완료|기존함수265회 새계수·346→366→270·96개만 제거·OOV20복원|
+|전체265 K0/K1 군집화16개|완료|16모델·80초기화·학습목적함수선택·기존알고리즘불변|
+|표·그림·보고서|완료|16CM·교차표·분포·86PNG·종합보고서와README|
+|검증·보존·커밋/푸시|검증 완료·게시 대기|482/482·26tests·독립790/790·기존2579SHA 불변|
 
 ## 이전 상태: 토큰 분석 완료, 사용자 승인 불용어 등록 완료
 
@@ -484,3 +484,33 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 최신 정정 전의 확대 계획을 즉시 취소했다. 회귀 담당을 중단했고 회귀·풀이 새 파일 작성/실행이 없음을 확인한다. 군집화는 전체265만16조건이며 분리 재실험 코드를 만들지 않는다.
 - 실제 기존 full265 설정/알고리즘/CM과 본문 파일·원래 분할·96개 목록을 확인했다. 공통 알고리즘 소스와 기존 검증은 유지하며 새 전용 로더로 full265어휘 정책을 명시한다.
 - 다음은 새 문제 전용 데이터 준비, K0/K1 전체26516실험, 저장자료만으로 보고서 생성, 독립 검증·이미지 확인, 커밋/푸시 순서다. 완료한 단계는 재실행하지 않고 입력·설정 해시를 대조해 재사용한다. 기존 복구 자동화는 중지 상태이며 새 예약은 만들지 않았다.
+
+
+## 문제 전용 데이터·전체 군집 실행 체크포인트 — 2026-11-10T16:25:12.569925+00:00
+
+- 새 prepare 실행에서 원래 _count_function/BagOfWord.count_tokens로 문제265개를 새로 계수했다. 풀이 재토큰화0. 기존 어휘346→전체 원문366(복원20종·29회)→승인96종 제외270차원이다. TF24179→9676(14503회 제외), unknown0·중복목록0·영벡터0, 고유 벡터265→264다. 원래185/80 소속은 출처로만 보존했다.
+- 입력·토큰화·목록 SHA와 dataset_id6312639ec95df177074f62ce078bfc85eec05f89945b2a3eb6b9636a50933e7d를 새config에 저장했고 보호2579파일은 모두 바이트불변이다. 기존TorchData train-only 정책은 수정하지 않았다.
+- 새 K0/K1 각각4수준×2방법의 전체265 군집화16모델/80초기화를 실행했다. seed42~46/max100/tol1e-4·최저학습목적함수선택을 유지했고 old알고리즘 수정0이다. 모델과 시드별배정/지표를 저장했고 다시 학습할 필요가 없다.
+- 새01_clustering에 군집전체4240배정·16CM PNG/CSV·실제라벨×군집 교차표·구성비·분산·사례·PCA·비교그림을 생성했다. 전체PNG86개다. report 명령도 실제 실행했고 연구 재학습 없이 저장 자료에서 안내/종합보고서를 만들었다.
+- 첫verify는481통과/1실패였다. 수치·모델·16CM·80seed·9241링크는 통과했지만 report 렌더링이 끝나기 전에 verify를 시작해 새파일 스냅샷이 달라졌다는 읽기전용검사가 실패했다. 보고서가 완료된 후 순차 읽기전용 검증을 다시 수행한다. 실패를 수치오류로 숨기거나 전체완료로 표시하지 않았다.
+- 관련새검사6/6 PASS. 실제 ARI그림과 K1유클리드70유형CM을 열어 한글/축/셀/범례를 확인했다(원본4554×4334 고해상도,코드키 연결). 전체16이미지전수시각검사는 별도이며 자동PNG디코드는 모두 통과했다. 다음은 가드하에 읽기전용/caching검증,독립숫자감사,최종안내·커밋/푸시다.
+
+
+## 순차 검증·재사용 가드 통과 — 2026-11-10T16:30:26.377706+00:00
+
+- 보고서 생성이 끝난 뒤 순차로 verify를 다시 실행하여482/482 PASS,실패0을 확인했다. 첫 스냅샷 실패는 동시 실행 순서 문제였고 현재 해결되었다. 상대링크9245개·PNG86개 디코드·16CM×265/대각선·16모델/80시드·2579보호SHA 검증이 모두 통과했다.
+- 실제 저장 데이터/모델을 대상으로 prepare캐시와16군집캐시를 호출하고 report/verify를 실행했다. 공통fit2종·새runner의fit2종·회귀train·기존holdout/fullrun·Gemini SDK·원문tokenizer2종을 가드로 막았으며 전부0call이었다. 입력·모델PT·experimentpayload SHA는 report 전후 동일했다. 근거 /tmp/mathhint_final2_guarded_review.json. 재사용 검사는 표시 함수를 생략했고 보고서는 실제로 재생성했다.
+- 새6검사와 기존 군집/혼동행렬/열람 관련 검사 합계24/24 PASS(skip0). 최초 개별 unittest 모듈 호출은 기존 test_fixed_training의 상위모듈 import 경로 때문에1개 로딩 실패였고, tests 폴더를 명시한 올바른 PYTHONPATH에서 재실행해 해결했다. 검사자료는 임시폴더이며 실제185/80 연구 재실험이나 회귀학습은 없었다.
+- 현재 저장결과를 바탕으로 시드평균/표준편차와 작은 Macro-F1 하락·K0의 원래 대비악화·필터중복벡터 사례를 설명하는 문장만 보완중이다. 추가 모델 학습은 없다. 독립감사 이후 최종 결과를 게시하고 중단한다.
+
+
+## 전체265 문제 군집 최종 검증 완료 · 게시 준비 — 2026-11-10T16:39:07.596705+00:00
+
+- 최종 필수 범위 완료: 문제265개 fresh원래계수, 전체어휘366/필터270·불용어96 정확적용·복원20, K0/K1 전체26516모델·80초기화, 군집전체4240배정/라벨분포/분산/사례, 교차표·동일순서대표라벨CM16세트와PCA·86PNG, 기존full265와비교·주README·최종보고서·상위목차. 회귀/풀이새BoW/새185·80 연구/신경망/API실행0.
+- 최종 verify482/482 PASS·상대파일링크9246개 정상·보호2579파일SHA불변. 독립감사790/790 PASS: 이전 원래토큰화 전수재계수와 새모든좌표 동일, TFDF/전체-활성매핑/16모델·80seed와 직접NumPy float64중심배정·목적함수·16CM/교차표 재계산이 일치했다. 독립 protected2562연구파일과기존5알고리즘도불변이다. 근거 /tmp/mathhint_second_independent_audit.json.
+- 최종 관련 자동테스트26/26 PASS(skip0). 새8개는 승인투영·동일차원순서오류·다수군집대표합산·계층라벨·읽기전용검증·링크·취소명령차단·실제저장자료의보고서스모크를 보호한다. 마지막 검사는 Kiwi버전조회/학습함수를막고도 저장자료만으로 보고서생성·입력불변을 확인했다. readloader는 저장시 토큰화메타데이터와 소스SHA만 검증하므로 보고서읽기에Kiwi설치를 강제하지 않는다. prepare자체는 원래 버전을확인한다.
+- 보고서 문장 보완 중 실제 실행에서 남은 변수명 NameError를 찾아 수정했고 실제 main/finalreport 생성과 새 스모크 검사를 재실행해 해결했다. 테스트 fixture의 results README 누락도 임시 fixture에만 보완했다. 현재 실패/미완료 검증0이다. 모델·벡터·기존통계는 이 표시수정으로 변경되지 않았다.
+- 메인/종합보고서의 ARI·시드표 32행과 AMI/NMI8행 총40행을 최종CSV표시값과 재대조했다. 핵심6그림을 메인에 직접 보여주며중복그림생성은 없다. ARI·단원CM·유형70CM 대표3이미지를 실제로 열어 한글/축순서/셀/범례와 가독성을 확인했다. 전체86이미지는 자동디코드/크기검사를 통과했지만 모든그림의 사람전수열람을 주장하지 않는다.
+- 확인된 한계도 기록했다: K1은8조건ARI/AMI/NMI상승이나 유클리드세부단원MacroF1 .314665→.314530 소폭하락; 어휘복원 K0의 기존대비ARI는5동일/2상승/1하락; 과목유클리드시드SD .00388→.19919; 숫자/변수정보제거로 같은유형 diff_1_007·diff_1_011이 같은벡터가됨(고유265→264). 유형오분류발생이라고 해석하지 않는다. 모두동일265 탐색이며 미관측 일반화/LLM풀이 효과나 통계적유의성을 주장하지 않는다.
+- 시작2691추적파일 중 허용3개(명세/진행/results상위목차)만변경,나머지2688바이트불변이다. 새실행모듈9개와핵심test1개,새결과전용297파일 및상위목차만추가했다. 기존final/token_analysis/data/알고리즘·모델·응답/목록은변경0,삭제0이다. 이외 감사/검사 임시자료는/tmp에만두었다.
+- 시작문서체크포인트7243d20은원격게시되었다. 지금 관련신규코드·데이터·모델·그림·보고서·진행기록만커밋하고일반push후 실제원격main==HEAD를확인한다. 성공확인전 원격완료로 표시하지 않는다. 이후 작업은게시상태기록만이며 추가학습/실험은없고기존자동화는중지상태유지다.

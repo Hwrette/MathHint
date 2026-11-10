@@ -1,0 +1,19 @@
+{
+  "dataset_id": "6312639ec95df177074f62ce078bfc85eec05f89945b2a3eb6b9636a50933e7d",
+  "files_sha256": {
+    "README.md": "2eeacf8bfd6f769db465f78a61980e4e0d9853a711573cb8d50804858679e5ad",
+    "generated_data/dataset.json": "60a23cf0a41514c5f451c6bf096a91fe04d60fe27927119e58180002447df206",
+    "generated_data/filtered/problems/all_vectors.json": "df55323c82c22ab03cbe4bdb5e079f13be58de1623cad27a5ef20248423630dd",
+    "generated_data/filtered/problems/vocabulary.json": "629d16f8625389520c06f9348b48a909f98c10e89f8bb703bb57c8c2688be7fc",
+    "generated_data/raw/problems/all_vectors.json": "41425374aa8e31c7109acdaaf58420995a928b0aa0b3fbbb942370ffb2da5185",
+    "generated_data/raw/problems/vocabulary.json": "4813d2d0d7de09c88b8a70a62fdfe090f4b907e5a8ab14f847cac1275e295414",
+    "question_token_counts.csv": "0bc3b8960053ac8da9e6ed27ef7380a018767e8ebf958ba2739ff62d78123e40",
+    "recount_validation.csv": "bc52f01fc2233146537e344e8c883e9f8906a14f20679e0ed4a864f4bc65f788",
+    "restored_tokens.csv": "6fab2e95fc31da0c14e0496c27f829330027b775f0a0793b4670aee278b8b3d3",
+    "retained_tokens.csv": "3af4a070caa4770b810f675087efe10d3534e1a5ea195ee78623fbc9cbe4214d",
+    "stopword_audit.csv": "e73eb1a5dbb331c313919c96087faec2cee6d995d1e04142bef9a9631b7513da",
+    "summary.json": "043860f751f2cf7b53dc396ef560c2f62fbdcd42e940ffdbdb49a4aaa0a17467",
+    "token_index_mapping.csv": "58f05422601161bfc102f8892c3ae2d5707d0f6c92eecece0378f8efa0e05b82",
+    "vocabulary_comparison.md": "06359e05321f860082c786866817c687b95b327584f973fbd4b3184c4371c635"
+  }
+}

@@ -1,0 +1,9 @@
+﻿experiment,level,method,actual_label,n,occupied_clusters,largest_cluster_share,cluster_entropy_bits,cluster_ids
+K1_unit_spherical,unit,spherical,09 대수 / 05 삼각함수의 정의,23,4,0.782608695652174,1.0862293462325945,"0,2,5,6"
+K1_unit_spherical,unit,spherical,09 대수 / 06 삼각함수의 그래프,102,7,0.3627450980392157,2.3086914441087827,"0,1,2,3,5,6,7"
+K1_unit_spherical,unit,spherical,10 미적분1 / 01 함수의 극한,17,2,0.9411764705882353,0.3227569588973982,"3,7"
+K1_unit_spherical,unit,spherical,10 미적분1 / 02 함수의 연속성,26,3,0.9230769230769231,0.46816664055233254,"1,3,4"
+K1_unit_spherical,unit,spherical,10 미적분1 / 03 미분계수와 도함수,27,3,0.6296296296296297,1.3105673797344795,"1,3,4"
+K1_unit_spherical,unit,spherical,10 미적분1 / 04 접선의 방정식,16,4,0.4375,1.6774212838293647,"2,3,5,6"
+K1_unit_spherical,unit,spherical,10 미적분1 / 05 함수의 증가와 감소,31,2,0.8709677419354839,0.5547781633412736,"1,3"
+K1_unit_spherical,unit,spherical,10 미적분1 / 06 방부등식과 직선운동,23,3,0.4782608695652174,1.4219115073546411,"2,3,6"

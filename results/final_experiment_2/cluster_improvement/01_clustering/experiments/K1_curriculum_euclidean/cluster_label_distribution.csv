@@ -1,0 +1,5 @@
+﻿experiment,level,method,cluster,actual_label,label_code,count,cluster_n,ratio,full_majority_label
+K1_curriculum_euclidean,curriculum,euclidean,0,09 대수,L01,111,145,0.7655172413793103,09 대수
+K1_curriculum_euclidean,curriculum,euclidean,0,10 미적분1,L02,34,145,0.23448275862068965,09 대수
+K1_curriculum_euclidean,curriculum,euclidean,1,10 미적분1,L02,106,120,0.8833333333333333,10 미적분1
+K1_curriculum_euclidean,curriculum,euclidean,1,09 대수,L01,14,120,0.11666666666666667,10 미적분1

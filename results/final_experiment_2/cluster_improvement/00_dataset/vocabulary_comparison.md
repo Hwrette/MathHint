@@ -1,0 +1,122 @@
+# 문제265개 · 새 전체 어휘와 사용자 불용어
+
+[상위 실험 안내](../README.md) · [어휘 비교](vocabulary_comparison.md)
+
+문제 원문265개를 기존 Kiwi·LaTeX 함수로 **새로 토큰화**했다. 분류·출처 주석과 원본 풀이를 토큰화하지 않았다. 원래185/80 소속은 행 추적용이며 이번 실험은 전체265개를 함께 학습·평가한다.
+
+|문제 어휘|종류|
+|---|---:|
+|기존 학습 전용 어휘|346|
+|전체265 Raw(K0)|366|
+|원래 없던 복원 토큰|20|
+|사용자 지정/실제 제거|96 / 96|
+|Filtered(K1) 활성 차원|270|
+
+- [복원된 모든 토큰·TF/DF](restored_tokens.csv)
+- [승인된 제거 토큰 전체·TF/DF·실제 존재 여부](stopword_audit.csv)
+- [유지한 토큰 전체](retained_tokens.csv) · [원래/전체/활성 인덱스 대응](token_index_mapping.csv)
+- [문항별 제거 전후 등장 횟수](question_token_counts.csv) · [원래 좌표와 재토큰화 대조265행](recount_validation.csv)
+- [요약 수치](summary.json) · [생성 데이터/경로](generated_data/dataset.json) · [준비 결과 SHA](manifest.json)
+
+총 등장 횟수는 24,179→9,676회이며 14,503회(59.98%)를 제외했다. 영벡터는 raw 0개 / filtered 0개다. 고유 벡터 수는 각각 265 / 264개다. 사용자 목록 중 원문에 없는 토큰: 없음. 중복 지정: 0개.
+
+기존 어휘·벡터는 수정하지 않았다. K0/K1은 같은 원문 계수에서 출발하며 K1은 지정96개 좌표를 제외한 **축소 차원**이다. 빈도 재가중·새 정규화·미승인 토큰 삭제는 없다. 새 어휘에는 전체 자료가 사용되었고 동일 전체 자료를 평가하므로 미관측 문항의 일반화 성능이 아니다.
+
+## 실제 사용자 지정 제거 목록
+
+- `kiwi:,`
+- `kiwi:.`
+- `kiwi:?`
+- `kiwi:ᆫ`
+- `kiwi:ᆯ`
+- `kiwi:①`
+- `kiwi:②`
+- `kiwi:③`
+- `kiwi:④`
+- `kiwi:⑤`
+- `kiwi:고`
+- `kiwi:는`
+- `kiwi:다`
+- `kiwi:를`
+- `kiwi:어`
+- `kiwi:으`
+- `kiwi:은`
+- `kiwi:을`
+- `kiwi:의`
+- `latex:.`
+- `latex:0`
+- `latex:1`
+- `latex:10`
+- `latex:11`
+- `latex:12`
+- `latex:13`
+- `latex:14`
+- `latex:15`
+- `latex:16`
+- `latex:17`
+- `latex:18`
+- `latex:19`
+- `latex:2`
+- `latex:20`
+- `latex:21`
+- `latex:22`
+- `latex:23`
+- `latex:24`
+- `latex:25`
+- `latex:26`
+- `latex:27`
+- `latex:28`
+- `latex:29`
+- `latex:3`
+- `latex:30`
+- `latex:31`
+- `latex:32`
+- `latex:33`
+- `latex:34`
+- `latex:35`
+- `latex:36`
+- `latex:37`
+- `latex:39`
+- `latex:4`
+- `latex:40`
+- `latex:42`
+- `latex:48`
+- `latex:49`
+- `latex:5`
+- `latex:6`
+- `latex:60`
+- `latex:7`
+- `latex:72`
+- `latex:8`
+- `latex:84`
+- `latex:9`
+- `latex:A`
+- `latex:B`
+- `latex:C`
+- `latex:M`
+- `latex:O`
+- `latex:P`
+- `latex:\bigl`
+- `latex:\bigr`
+- `latex:\left`
+- `latex:\mathrm`
+- `latex:\quad`
+- `latex:\right`
+- `latex:a`
+- `latex:b`
+- `latex:c`
+- `latex:d`
+- `latex:e`
+- `latex:i`
+- `latex:k`
+- `latex:l`
+- `latex:m`
+- `latex:n`
+- `latex:p`
+- `latex:q`
+- `latex:r`
+- `latex:t`
+- `latex:x`
+- `latex:y`
+- `latex:{`
+- `latex:}`

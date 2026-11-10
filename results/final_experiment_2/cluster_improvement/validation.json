@@ -1,0 +1,1967 @@
+{
+  "verified_at": "2026-11-10T16:39:36.278730+00:00",
+  "scope": "full265_problem_bow_raw_vs_user_filtered_clustering_only",
+  "dataset_id": "6312639ec95df177074f62ce078bfc85eec05f89945b2a3eb6b9636a50933e7d",
+  "checks": [
+    {
+      "check": "original_data_models_results_and_stopword_lists_unchanged",
+      "passed": true
+    },
+    {
+      "check": "dataset_identifier_matches_experiment_config",
+      "passed": true
+    },
+    {
+      "check": "original_185_80_split_and_265_unique_ids",
+      "passed": true
+    },
+    {
+      "check": "problem_vocabulary_unique_order_and_integer_counts",
+      "passed": true
+    },
+    {
+      "check": "only_approved_problem_stopword_coordinates_removed",
+      "passed": true
+    },
+    {
+      "check": "no_solutions_or_regression_data_generated",
+      "passed": true
+    },
+    {
+      "check": "legacy_problem_vocabulary_fully_preserved_in_raw",
+      "passed": true
+    },
+    {
+      "check": "all_legacy_coordinates_and_restored_counts_match_per_document",
+      "passed": true
+    },
+    {
+      "check": "restored_tokens_equal_verified_problem_oov_inventory",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:곱",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:제",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:면",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:사분",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:이차",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:작",
+      "passed": true
+    },
+    {
+      "check": "restored_latex:\\gamma",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:경",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:나열",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:닫힌구간",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:동",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:번",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:부터",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:순",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:이차함수",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:째",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:초선",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:합성",
+      "passed": true
+    },
+    {
+      "check": "restored_latex:\\circ",
+      "passed": true
+    },
+    {
+      "check": "restored_latex:\\log",
+      "passed": true
+    },
+    {
+      "check": "265_original_problem_recounts_recorded",
+      "passed": true
+    },
+    {
+      "check": "exactly_16_full265_clustering_experiments",
+      "passed": true
+    },
+    {
+      "check": "clustering_summary_16_unique_conditions",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_euclidean_saved_assignment_payload_digest",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_euclidean_input_algorithm_and_fixed_settings",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_euclidean_all265_ids_original_provenance_and_actual_paths",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_euclidean_same_all265_majority_labels_and_tie_policy",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_euclidean_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_euclidean_summary_values",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_euclidean_seed_selected_by_fit_objective_only",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_euclidean_seed42_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_euclidean_seed43_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_euclidean_seed44_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_euclidean_seed45_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_euclidean_seed46_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_euclidean_saved_model_identity",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_euclidean_saved_centers_assignments_and_training_objective",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_euclidean_complete_hierarchical_label_codes_and_order",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_euclidean_confusion_rows_columns_counts_and_diagonal",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_euclidean_confusion_image_present",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_euclidean_cross_tab_preserves_cluster_numbers",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_euclidean_member_csv_matches_saved_assignments",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_euclidean_all_k_cluster_sizes_and_member_ids",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_euclidean_cluster_label_composition",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_euclidean_label_dispersion_counts",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_spherical_saved_assignment_payload_digest",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_spherical_input_algorithm_and_fixed_settings",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_spherical_all265_ids_original_provenance_and_actual_paths",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_spherical_same_all265_majority_labels_and_tie_policy",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_spherical_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_spherical_summary_values",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_spherical_seed_selected_by_fit_objective_only",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_spherical_seed42_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_spherical_seed43_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_spherical_seed44_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_spherical_seed45_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_spherical_seed46_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_spherical_saved_model_identity",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_spherical_spherical_centers_l2_normalized",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_spherical_saved_centers_assignments_and_training_objective",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_spherical_complete_hierarchical_label_codes_and_order",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_spherical_confusion_rows_columns_counts_and_diagonal",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_spherical_confusion_image_present",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_spherical_cross_tab_preserves_cluster_numbers",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_spherical_member_csv_matches_saved_assignments",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_spherical_all_k_cluster_sizes_and_member_ids",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_spherical_cluster_label_composition",
+      "passed": true
+    },
+    {
+      "check": "K0_curriculum_spherical_label_dispersion_counts",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_euclidean_saved_assignment_payload_digest",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_euclidean_input_algorithm_and_fixed_settings",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_euclidean_all265_ids_original_provenance_and_actual_paths",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_euclidean_same_all265_majority_labels_and_tie_policy",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_euclidean_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_euclidean_summary_values",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_euclidean_seed_selected_by_fit_objective_only",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_euclidean_seed42_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_euclidean_seed43_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_euclidean_seed44_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_euclidean_seed45_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_euclidean_seed46_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_euclidean_saved_model_identity",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_euclidean_saved_centers_assignments_and_training_objective",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_euclidean_complete_hierarchical_label_codes_and_order",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_euclidean_confusion_rows_columns_counts_and_diagonal",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_euclidean_confusion_image_present",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_euclidean_cross_tab_preserves_cluster_numbers",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_euclidean_member_csv_matches_saved_assignments",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_euclidean_all_k_cluster_sizes_and_member_ids",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_euclidean_cluster_label_composition",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_euclidean_label_dispersion_counts",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_spherical_saved_assignment_payload_digest",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_spherical_input_algorithm_and_fixed_settings",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_spherical_all265_ids_original_provenance_and_actual_paths",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_spherical_same_all265_majority_labels_and_tie_policy",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_spherical_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_spherical_summary_values",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_spherical_seed_selected_by_fit_objective_only",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_spherical_seed42_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_spherical_seed43_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_spherical_seed44_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_spherical_seed45_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_spherical_seed46_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_spherical_saved_model_identity",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_spherical_spherical_centers_l2_normalized",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_spherical_saved_centers_assignments_and_training_objective",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_spherical_complete_hierarchical_label_codes_and_order",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_spherical_confusion_rows_columns_counts_and_diagonal",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_spherical_confusion_image_present",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_spherical_cross_tab_preserves_cluster_numbers",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_spherical_member_csv_matches_saved_assignments",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_spherical_all_k_cluster_sizes_and_member_ids",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_spherical_cluster_label_composition",
+      "passed": true
+    },
+    {
+      "check": "K0_unit_spherical_label_dispersion_counts",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_euclidean_saved_assignment_payload_digest",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_euclidean_input_algorithm_and_fixed_settings",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_euclidean_all265_ids_original_provenance_and_actual_paths",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_euclidean_same_all265_majority_labels_and_tie_policy",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_euclidean_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_euclidean_summary_values",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_euclidean_seed_selected_by_fit_objective_only",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_euclidean_seed42_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_euclidean_seed43_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_euclidean_seed44_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_euclidean_seed45_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_euclidean_seed46_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_euclidean_saved_model_identity",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_euclidean_saved_centers_assignments_and_training_objective",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_euclidean_complete_hierarchical_label_codes_and_order",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_euclidean_confusion_rows_columns_counts_and_diagonal",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_euclidean_confusion_image_present",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_euclidean_cross_tab_preserves_cluster_numbers",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_euclidean_member_csv_matches_saved_assignments",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_euclidean_all_k_cluster_sizes_and_member_ids",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_euclidean_cluster_label_composition",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_euclidean_label_dispersion_counts",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_spherical_saved_assignment_payload_digest",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_spherical_input_algorithm_and_fixed_settings",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_spherical_all265_ids_original_provenance_and_actual_paths",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_spherical_same_all265_majority_labels_and_tie_policy",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_spherical_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_spherical_summary_values",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_spherical_seed_selected_by_fit_objective_only",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_spherical_seed42_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_spherical_seed43_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_spherical_seed44_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_spherical_seed45_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_spherical_seed46_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_spherical_saved_model_identity",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_spherical_spherical_centers_l2_normalized",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_spherical_saved_centers_assignments_and_training_objective",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_spherical_complete_hierarchical_label_codes_and_order",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_spherical_confusion_rows_columns_counts_and_diagonal",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_spherical_confusion_image_present",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_spherical_cross_tab_preserves_cluster_numbers",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_spherical_member_csv_matches_saved_assignments",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_spherical_all_k_cluster_sizes_and_member_ids",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_spherical_cluster_label_composition",
+      "passed": true
+    },
+    {
+      "check": "K0_subunit_spherical_label_dispersion_counts",
+      "passed": true
+    },
+    {
+      "check": "K0_type_euclidean_saved_assignment_payload_digest",
+      "passed": true
+    },
+    {
+      "check": "K0_type_euclidean_input_algorithm_and_fixed_settings",
+      "passed": true
+    },
+    {
+      "check": "K0_type_euclidean_all265_ids_original_provenance_and_actual_paths",
+      "passed": true
+    },
+    {
+      "check": "K0_type_euclidean_same_all265_majority_labels_and_tie_policy",
+      "passed": true
+    },
+    {
+      "check": "K0_type_euclidean_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_type_euclidean_summary_values",
+      "passed": true
+    },
+    {
+      "check": "K0_type_euclidean_seed_selected_by_fit_objective_only",
+      "passed": true
+    },
+    {
+      "check": "K0_type_euclidean_seed42_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_type_euclidean_seed43_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_type_euclidean_seed44_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_type_euclidean_seed45_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_type_euclidean_seed46_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_type_euclidean_saved_model_identity",
+      "passed": true
+    },
+    {
+      "check": "K0_type_euclidean_saved_centers_assignments_and_training_objective",
+      "passed": true
+    },
+    {
+      "check": "K0_type_euclidean_complete_hierarchical_label_codes_and_order",
+      "passed": true
+    },
+    {
+      "check": "K0_type_euclidean_confusion_rows_columns_counts_and_diagonal",
+      "passed": true
+    },
+    {
+      "check": "K0_type_euclidean_confusion_image_present",
+      "passed": true
+    },
+    {
+      "check": "K0_type_euclidean_cross_tab_preserves_cluster_numbers",
+      "passed": true
+    },
+    {
+      "check": "K0_type_euclidean_member_csv_matches_saved_assignments",
+      "passed": true
+    },
+    {
+      "check": "K0_type_euclidean_all_k_cluster_sizes_and_member_ids",
+      "passed": true
+    },
+    {
+      "check": "K0_type_euclidean_cluster_label_composition",
+      "passed": true
+    },
+    {
+      "check": "K0_type_euclidean_label_dispersion_counts",
+      "passed": true
+    },
+    {
+      "check": "K0_type_spherical_saved_assignment_payload_digest",
+      "passed": true
+    },
+    {
+      "check": "K0_type_spherical_input_algorithm_and_fixed_settings",
+      "passed": true
+    },
+    {
+      "check": "K0_type_spherical_all265_ids_original_provenance_and_actual_paths",
+      "passed": true
+    },
+    {
+      "check": "K0_type_spherical_same_all265_majority_labels_and_tie_policy",
+      "passed": true
+    },
+    {
+      "check": "K0_type_spherical_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_type_spherical_summary_values",
+      "passed": true
+    },
+    {
+      "check": "K0_type_spherical_seed_selected_by_fit_objective_only",
+      "passed": true
+    },
+    {
+      "check": "K0_type_spherical_seed42_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_type_spherical_seed43_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_type_spherical_seed44_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_type_spherical_seed45_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_type_spherical_seed46_metrics",
+      "passed": true
+    },
+    {
+      "check": "K0_type_spherical_saved_model_identity",
+      "passed": true
+    },
+    {
+      "check": "K0_type_spherical_spherical_centers_l2_normalized",
+      "passed": true
+    },
+    {
+      "check": "K0_type_spherical_saved_centers_assignments_and_training_objective",
+      "passed": true
+    },
+    {
+      "check": "K0_type_spherical_complete_hierarchical_label_codes_and_order",
+      "passed": true
+    },
+    {
+      "check": "K0_type_spherical_confusion_rows_columns_counts_and_diagonal",
+      "passed": true
+    },
+    {
+      "check": "K0_type_spherical_confusion_image_present",
+      "passed": true
+    },
+    {
+      "check": "K0_type_spherical_cross_tab_preserves_cluster_numbers",
+      "passed": true
+    },
+    {
+      "check": "K0_type_spherical_member_csv_matches_saved_assignments",
+      "passed": true
+    },
+    {
+      "check": "K0_type_spherical_all_k_cluster_sizes_and_member_ids",
+      "passed": true
+    },
+    {
+      "check": "K0_type_spherical_cluster_label_composition",
+      "passed": true
+    },
+    {
+      "check": "K0_type_spherical_label_dispersion_counts",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_euclidean_saved_assignment_payload_digest",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_euclidean_input_algorithm_and_fixed_settings",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_euclidean_all265_ids_original_provenance_and_actual_paths",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_euclidean_same_all265_majority_labels_and_tie_policy",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_euclidean_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_euclidean_summary_values",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_euclidean_seed_selected_by_fit_objective_only",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_euclidean_seed42_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_euclidean_seed43_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_euclidean_seed44_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_euclidean_seed45_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_euclidean_seed46_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_euclidean_saved_model_identity",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_euclidean_saved_centers_assignments_and_training_objective",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_euclidean_complete_hierarchical_label_codes_and_order",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_euclidean_confusion_rows_columns_counts_and_diagonal",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_euclidean_confusion_image_present",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_euclidean_cross_tab_preserves_cluster_numbers",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_euclidean_member_csv_matches_saved_assignments",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_euclidean_all_k_cluster_sizes_and_member_ids",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_euclidean_cluster_label_composition",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_euclidean_label_dispersion_counts",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_spherical_saved_assignment_payload_digest",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_spherical_input_algorithm_and_fixed_settings",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_spherical_all265_ids_original_provenance_and_actual_paths",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_spherical_same_all265_majority_labels_and_tie_policy",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_spherical_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_spherical_summary_values",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_spherical_seed_selected_by_fit_objective_only",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_spherical_seed42_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_spherical_seed43_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_spherical_seed44_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_spherical_seed45_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_spherical_seed46_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_spherical_saved_model_identity",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_spherical_spherical_centers_l2_normalized",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_spherical_saved_centers_assignments_and_training_objective",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_spherical_complete_hierarchical_label_codes_and_order",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_spherical_confusion_rows_columns_counts_and_diagonal",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_spherical_confusion_image_present",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_spherical_cross_tab_preserves_cluster_numbers",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_spherical_member_csv_matches_saved_assignments",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_spherical_all_k_cluster_sizes_and_member_ids",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_spherical_cluster_label_composition",
+      "passed": true
+    },
+    {
+      "check": "K1_curriculum_spherical_label_dispersion_counts",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_euclidean_saved_assignment_payload_digest",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_euclidean_input_algorithm_and_fixed_settings",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_euclidean_all265_ids_original_provenance_and_actual_paths",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_euclidean_same_all265_majority_labels_and_tie_policy",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_euclidean_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_euclidean_summary_values",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_euclidean_seed_selected_by_fit_objective_only",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_euclidean_seed42_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_euclidean_seed43_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_euclidean_seed44_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_euclidean_seed45_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_euclidean_seed46_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_euclidean_saved_model_identity",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_euclidean_saved_centers_assignments_and_training_objective",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_euclidean_complete_hierarchical_label_codes_and_order",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_euclidean_confusion_rows_columns_counts_and_diagonal",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_euclidean_confusion_image_present",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_euclidean_cross_tab_preserves_cluster_numbers",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_euclidean_member_csv_matches_saved_assignments",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_euclidean_all_k_cluster_sizes_and_member_ids",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_euclidean_cluster_label_composition",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_euclidean_label_dispersion_counts",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_spherical_saved_assignment_payload_digest",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_spherical_input_algorithm_and_fixed_settings",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_spherical_all265_ids_original_provenance_and_actual_paths",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_spherical_same_all265_majority_labels_and_tie_policy",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_spherical_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_spherical_summary_values",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_spherical_seed_selected_by_fit_objective_only",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_spherical_seed42_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_spherical_seed43_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_spherical_seed44_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_spherical_seed45_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_spherical_seed46_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_spherical_saved_model_identity",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_spherical_spherical_centers_l2_normalized",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_spherical_saved_centers_assignments_and_training_objective",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_spherical_complete_hierarchical_label_codes_and_order",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_spherical_confusion_rows_columns_counts_and_diagonal",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_spherical_confusion_image_present",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_spherical_cross_tab_preserves_cluster_numbers",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_spherical_member_csv_matches_saved_assignments",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_spherical_all_k_cluster_sizes_and_member_ids",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_spherical_cluster_label_composition",
+      "passed": true
+    },
+    {
+      "check": "K1_unit_spherical_label_dispersion_counts",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_euclidean_saved_assignment_payload_digest",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_euclidean_input_algorithm_and_fixed_settings",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_euclidean_all265_ids_original_provenance_and_actual_paths",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_euclidean_same_all265_majority_labels_and_tie_policy",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_euclidean_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_euclidean_summary_values",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_euclidean_seed_selected_by_fit_objective_only",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_euclidean_seed42_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_euclidean_seed43_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_euclidean_seed44_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_euclidean_seed45_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_euclidean_seed46_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_euclidean_saved_model_identity",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_euclidean_saved_centers_assignments_and_training_objective",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_euclidean_complete_hierarchical_label_codes_and_order",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_euclidean_confusion_rows_columns_counts_and_diagonal",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_euclidean_confusion_image_present",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_euclidean_cross_tab_preserves_cluster_numbers",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_euclidean_member_csv_matches_saved_assignments",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_euclidean_all_k_cluster_sizes_and_member_ids",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_euclidean_cluster_label_composition",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_euclidean_label_dispersion_counts",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_spherical_saved_assignment_payload_digest",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_spherical_input_algorithm_and_fixed_settings",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_spherical_all265_ids_original_provenance_and_actual_paths",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_spherical_same_all265_majority_labels_and_tie_policy",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_spherical_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_spherical_summary_values",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_spherical_seed_selected_by_fit_objective_only",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_spherical_seed42_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_spherical_seed43_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_spherical_seed44_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_spherical_seed45_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_spherical_seed46_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_spherical_saved_model_identity",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_spherical_spherical_centers_l2_normalized",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_spherical_saved_centers_assignments_and_training_objective",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_spherical_complete_hierarchical_label_codes_and_order",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_spherical_confusion_rows_columns_counts_and_diagonal",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_spherical_confusion_image_present",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_spherical_cross_tab_preserves_cluster_numbers",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_spherical_member_csv_matches_saved_assignments",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_spherical_all_k_cluster_sizes_and_member_ids",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_spherical_cluster_label_composition",
+      "passed": true
+    },
+    {
+      "check": "K1_subunit_spherical_label_dispersion_counts",
+      "passed": true
+    },
+    {
+      "check": "K1_type_euclidean_saved_assignment_payload_digest",
+      "passed": true
+    },
+    {
+      "check": "K1_type_euclidean_input_algorithm_and_fixed_settings",
+      "passed": true
+    },
+    {
+      "check": "K1_type_euclidean_all265_ids_original_provenance_and_actual_paths",
+      "passed": true
+    },
+    {
+      "check": "K1_type_euclidean_same_all265_majority_labels_and_tie_policy",
+      "passed": true
+    },
+    {
+      "check": "K1_type_euclidean_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_type_euclidean_summary_values",
+      "passed": true
+    },
+    {
+      "check": "K1_type_euclidean_seed_selected_by_fit_objective_only",
+      "passed": true
+    },
+    {
+      "check": "K1_type_euclidean_seed42_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_type_euclidean_seed43_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_type_euclidean_seed44_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_type_euclidean_seed45_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_type_euclidean_seed46_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_type_euclidean_saved_model_identity",
+      "passed": true
+    },
+    {
+      "check": "K1_type_euclidean_saved_centers_assignments_and_training_objective",
+      "passed": true
+    },
+    {
+      "check": "K1_type_euclidean_complete_hierarchical_label_codes_and_order",
+      "passed": true
+    },
+    {
+      "check": "K1_type_euclidean_confusion_rows_columns_counts_and_diagonal",
+      "passed": true
+    },
+    {
+      "check": "K1_type_euclidean_confusion_image_present",
+      "passed": true
+    },
+    {
+      "check": "K1_type_euclidean_cross_tab_preserves_cluster_numbers",
+      "passed": true
+    },
+    {
+      "check": "K1_type_euclidean_member_csv_matches_saved_assignments",
+      "passed": true
+    },
+    {
+      "check": "K1_type_euclidean_all_k_cluster_sizes_and_member_ids",
+      "passed": true
+    },
+    {
+      "check": "K1_type_euclidean_cluster_label_composition",
+      "passed": true
+    },
+    {
+      "check": "K1_type_euclidean_label_dispersion_counts",
+      "passed": true
+    },
+    {
+      "check": "K1_type_spherical_saved_assignment_payload_digest",
+      "passed": true
+    },
+    {
+      "check": "K1_type_spherical_input_algorithm_and_fixed_settings",
+      "passed": true
+    },
+    {
+      "check": "K1_type_spherical_all265_ids_original_provenance_and_actual_paths",
+      "passed": true
+    },
+    {
+      "check": "K1_type_spherical_same_all265_majority_labels_and_tie_policy",
+      "passed": true
+    },
+    {
+      "check": "K1_type_spherical_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_type_spherical_summary_values",
+      "passed": true
+    },
+    {
+      "check": "K1_type_spherical_seed_selected_by_fit_objective_only",
+      "passed": true
+    },
+    {
+      "check": "K1_type_spherical_seed42_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_type_spherical_seed43_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_type_spherical_seed44_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_type_spherical_seed45_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_type_spherical_seed46_metrics",
+      "passed": true
+    },
+    {
+      "check": "K1_type_spherical_saved_model_identity",
+      "passed": true
+    },
+    {
+      "check": "K1_type_spherical_spherical_centers_l2_normalized",
+      "passed": true
+    },
+    {
+      "check": "K1_type_spherical_saved_centers_assignments_and_training_objective",
+      "passed": true
+    },
+    {
+      "check": "K1_type_spherical_complete_hierarchical_label_codes_and_order",
+      "passed": true
+    },
+    {
+      "check": "K1_type_spherical_confusion_rows_columns_counts_and_diagonal",
+      "passed": true
+    },
+    {
+      "check": "K1_type_spherical_confusion_image_present",
+      "passed": true
+    },
+    {
+      "check": "K1_type_spherical_cross_tab_preserves_cluster_numbers",
+      "passed": true
+    },
+    {
+      "check": "K1_type_spherical_member_csv_matches_saved_assignments",
+      "passed": true
+    },
+    {
+      "check": "K1_type_spherical_all_k_cluster_sizes_and_member_ids",
+      "passed": true
+    },
+    {
+      "check": "K1_type_spherical_cluster_label_composition",
+      "passed": true
+    },
+    {
+      "check": "K1_type_spherical_label_dispersion_counts",
+      "passed": true
+    },
+    {
+      "check": "16_full265_confusion_matrices_checked",
+      "passed": true
+    },
+    {
+      "check": "all_markdown_relative_links_exist",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/figures/ami_comparison.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/figures/ari_comparison.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/figures/weighted_f1_comparison.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/figures/macro_f1_comparison.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/figures/nmi_comparison.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/figures/majority_accuracy_comparison.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/projections/K1/figures/pca_unit_euclidean.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/projections/K1/figures/pca_unit_spherical.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/projections/K1/figures/pca_curriculum_spherical.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/projections/K1/figures/pca_curriculum_euclidean.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/projections/K0/figures/pca_unit_euclidean.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/projections/K0/figures/pca_unit_spherical.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/projections/K0/figures/pca_curriculum_spherical.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/projections/K0/figures/pca_curriculum_euclidean.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_subunit_euclidean/figures/cross_tab_all_02.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_subunit_euclidean/figures/confusion_matrix_all.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_subunit_euclidean/figures/label_composition_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_subunit_euclidean/figures/cross_tab_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_unit_euclidean/figures/confusion_matrix_all.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_unit_euclidean/figures/label_composition_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_unit_euclidean/figures/cross_tab_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_type_spherical/figures/cross_tab_all_02.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_type_spherical/figures/confusion_matrix_all.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_type_spherical/figures/label_composition_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_type_spherical/figures/cross_tab_all_03.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_type_spherical/figures/label_composition_all_02.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_type_spherical/figures/label_composition_all_03.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_type_spherical/figures/cross_tab_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_type_spherical/figures/cross_tab_all_04.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_type_spherical/figures/cross_tab_all_02.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_type_spherical/figures/confusion_matrix_all.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_type_spherical/figures/label_composition_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_type_spherical/figures/cross_tab_all_03.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_type_spherical/figures/label_composition_all_02.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_type_spherical/figures/label_composition_all_03.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_type_spherical/figures/cross_tab_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_type_spherical/figures/cross_tab_all_04.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_unit_euclidean/figures/confusion_matrix_all.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_unit_euclidean/figures/label_composition_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_unit_euclidean/figures/cross_tab_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_curriculum_spherical/figures/confusion_matrix_all.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_curriculum_spherical/figures/label_composition_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_curriculum_spherical/figures/cross_tab_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_unit_spherical/figures/confusion_matrix_all.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_unit_spherical/figures/label_composition_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_unit_spherical/figures/cross_tab_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_subunit_spherical/figures/cross_tab_all_02.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_subunit_spherical/figures/confusion_matrix_all.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_subunit_spherical/figures/label_composition_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_subunit_spherical/figures/cross_tab_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_type_euclidean/figures/cross_tab_all_02.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_type_euclidean/figures/confusion_matrix_all.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_type_euclidean/figures/label_composition_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_type_euclidean/figures/cross_tab_all_03.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_type_euclidean/figures/label_composition_all_02.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_type_euclidean/figures/label_composition_all_03.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_type_euclidean/figures/cross_tab_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_type_euclidean/figures/cross_tab_all_04.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_curriculum_spherical/figures/confusion_matrix_all.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_curriculum_spherical/figures/label_composition_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_curriculum_spherical/figures/cross_tab_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_subunit_spherical/figures/cross_tab_all_02.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_subunit_spherical/figures/confusion_matrix_all.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_subunit_spherical/figures/label_composition_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_subunit_spherical/figures/cross_tab_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_unit_spherical/figures/confusion_matrix_all.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_unit_spherical/figures/label_composition_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_unit_spherical/figures/cross_tab_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_subunit_euclidean/figures/cross_tab_all_02.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_subunit_euclidean/figures/confusion_matrix_all.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_subunit_euclidean/figures/label_composition_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_subunit_euclidean/figures/cross_tab_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_curriculum_euclidean/figures/confusion_matrix_all.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_curriculum_euclidean/figures/label_composition_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_curriculum_euclidean/figures/cross_tab_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_type_euclidean/figures/cross_tab_all_02.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_type_euclidean/figures/confusion_matrix_all.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_type_euclidean/figures/label_composition_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_type_euclidean/figures/cross_tab_all_03.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_type_euclidean/figures/label_composition_all_02.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_type_euclidean/figures/label_composition_all_03.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_type_euclidean/figures/cross_tab_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K0_type_euclidean/figures/cross_tab_all_04.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_curriculum_euclidean/figures/confusion_matrix_all.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_curriculum_euclidean/figures/label_composition_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "image_01_clustering/experiments/K1_curriculum_euclidean/figures/cross_tab_all_01.png",
+      "passed": true
+    },
+    {
+      "check": "clustering_images_present",
+      "passed": true
+    },
+    {
+      "check": "verification_does_not_modify_saved_data_models_or_reports",
+      "passed": true
+    }
+  ],
+  "passed": 482,
+  "failed": 0,
+  "protected_original_files": 2579,
+  "changed_original_files": [],
+  "markdown_file_links_checked": 9246,
+  "broken_links": [],
+  "dataset": {
+    "raw_problem_dimensions": 366,
+    "filtered_problem_dimensions": 270,
+    "removed_tokens": 96,
+    "restored_tokens": 20,
+    "raw_zero_vectors": 0,
+    "filtered_zero_vectors": 0
+  },
+  "clustering": {
+    "experiment_count": 16,
+    "confusion_matrices": 16,
+    "seed_runs_checked": 80,
+    "evaluation_count_per_experiment": 265,
+    "majority_scope": "same265_exploratory"
+  },
+  "images": {
+    "decoded_png_count": 86,
+    "manual_visual_inspection": "별도 작업 기록 참조"
+  },
+  "model_training_performed": false,
+  "gemini_api_called": false,
+  "limits": [
+    "저장된 수치·파일·모델 대응 검증이다. 이미지 수학적 해석이나 가독성의 사람 확인을 대신하지 않는다.",
+    "전체265 어휘·중심·대표 라벨로 동일265문항을 평가한 탐색 결과이며 독립 테스트 성능이 아니다."
+  ],
+  "complete": true
+}
