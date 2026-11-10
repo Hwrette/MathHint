@@ -13,11 +13,14 @@ class TokenReportingTests(unittest.TestCase):
             path = Path(temporary) / "README.md"
             block = "<!-- distance-comparison:start -->\n[거리 비교](04_distance_comparison/README.md)\n<!-- distance-comparison:end -->"
             rankings = "<!-- eta-rankings:start -->\n[η² 순위](01_problem_tokens/eta_rankings/README.md)\n<!-- eta-rankings:end -->"
-            path.write_text("# 이전 제목\n\n" + rankings + "\n\n" + block + "\n\n이전 본문\n")
+            full = "<!-- full-dataset-eta:start -->\n[전체265 η²](05_full_dataset_eta/README.md)\n<!-- full-dataset-eta:end -->"
+            path.write_text("# 이전 제목\n\n" + full + "\n\n" + rankings + "\n\n" + block + "\n\n이전 본문\n")
             _write(path, ["# 새 제목", "", "기존 수치표"])
             text = path.read_text()
             self.assertIn(block, text)
             self.assertIn(rankings, text)
+            self.assertIn(full, text)
+            self.assertLess(text.index(full), text.index(rankings))
             self.assertLess(text.index(rankings), text.index(block))
             self.assertIn("기존 수치표", text)
             self.assertNotIn("이전 본문", text)

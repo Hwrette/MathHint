@@ -1,0 +1,21 @@
+{
+  "files_sha256": {
+    "class_labels.csv": "bf9f8ca8b69ae3e19b63b701ad3023697824b2268f639f05f95d27b5e9b1dd6b",
+    "README.md": "b46a13b8fdb1adf967541629bb38ca949b597ff8a74cf7d24e21159c5c3f672b",
+    "verification_details.json": "692bd98c8028f2f368abd0539e5ea91cf9a261978701a5dcff45af90d78d5e81",
+    "validation.json": "0a33da310861ebb3055cc79f8cda2c2f8b1f86f04c37102685d87ac93021258f",
+    "config.json": "8a22a83f30578370d191abbcdbbdd639a4553051179f3814b1f0a060ed5eb0c3",
+    "01_problem_tokens/README.md": "628c62713d518fd6fec6c6f6096c3aefe7aa5c48b124597b1b11ecc7d38b04af",
+    "01_problem_tokens/unit.md": "3b1b08d744b7411ac006cff3f195cc707b28bfe43ec9d28dab4c807053b10920",
+    "01_problem_tokens/curriculum.md": "16c7cc8462cc3984e99d262385a4c555fb080f25737cea437ef1312e52e5719b",
+    "01_problem_tokens/eta_statistics.csv": "76549a7ebcd5b0732b00a98b1b7112e36983215f2121633ba04a512963c7bd9c",
+    "01_problem_tokens/type.md": "c9336906f25c40c603ea00bec763c28cf1d6e17cba96040f2679e15ce3fb9228",
+    "01_problem_tokens/subunit.md": "b4e8273558c32b5af2f00cb2094a1cce6870761ecff123d0d6d0cb9caa200e1e",
+    "02_solution_tokens/README.md": "7194347cc6c25340d26fda9eef2b2f59bcbb50b093c74949ed4eae26e4b99c67",
+    "02_solution_tokens/unit.md": "651bc903ed8088da19e89002b8c2c1dd63f76d5d71762618e30f1681940403ea",
+    "02_solution_tokens/curriculum.md": "1b2163d187c906ff624d5c849a03d119fb3febef4c66ea67698c4a8a03acf0a0",
+    "02_solution_tokens/eta_statistics.csv": "929bd22244d2ac70fa83d3c672f678a09e1896f4216d32bc6b7780b61ce1341b",
+    "02_solution_tokens/type.md": "a04b1e6de5812d82fd901d4878c3fd136f08f5afc69e5c2eb5854fc70b4ccde0",
+    "02_solution_tokens/subunit.md": "f1001b07ab02102b03ce027588e59a6da48d3f7f29388ba876c0e91892119e33"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "passed": 25,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "problems_all_indices_once",
+      "passed": true
+    },
+    {
+      "check": "problems_curriculum_original_independent_projection",
+      "passed": true
+    },
+    {
+      "check": "problems_curriculum_normalized_independent_projection",
+      "passed": true
+    },
+    {
+      "check": "problems_unit_original_independent_projection",
+      "passed": true
+    },
+    {
+      "check": "problems_unit_normalized_independent_projection",
+      "passed": true
+    },
+    {
+      "check": "problems_subunit_original_independent_projection",
+      "passed": true
+    },
+    {
+      "check": "problems_subunit_normalized_independent_projection",
+      "passed": true
+    },
+    {
+      "check": "problems_type_original_independent_projection",
+      "passed": true
+    },
+    {
+      "check": "problems_type_normalized_independent_projection",
+      "passed": true
+    },
+    {
+      "check": "problems_four_ranking_documents",
+      "passed": true
+    },
+    {
+      "check": "solutions_all_indices_once",
+      "passed": true
+    },
+    {
+      "check": "solutions_curriculum_original_independent_projection",
+      "passed": true
+    },
+    {
+      "check": "solutions_curriculum_normalized_independent_projection",
+      "passed": true
+    },
+    {
+      "check": "solutions_unit_original_independent_projection",
+      "passed": true
+    },
+    {
+      "check": "solutions_unit_normalized_independent_projection",
+      "passed": true
+    },
+    {
+      "check": "solutions_subunit_original_independent_projection",
+      "passed": true
+    },
+    {
+      "check": "solutions_subunit_normalized_independent_projection",
+      "passed": true
+    },
+    {
+      "check": "solutions_type_original_independent_projection",
+      "passed": true
+    },
+    {
+      "check": "solutions_type_normalized_independent_projection",
+      "passed": true
+    },
+    {
+      "check": "solutions_four_ranking_documents",
+      "passed": true
+    },
+    {
+      "check": "curriculum_class_sizes",
+      "passed": true
+    },
+    {
+      "check": "unit_class_sizes",
+      "passed": true
+    },
+    {
+      "check": "subunit_class_sizes",
+      "passed": true
+    },
+    {
+      "check": "type_class_sizes",
+      "passed": true
+    },
+    {
+      "check": "relative_links",
+      "passed": true
+    }
+  ],
+  "n": 265,
+  "train_n": 185,
+  "test_n": 80,
+  "widths": {
+    "problems": 346,
+    "solutions": 431
+  },
+  "relative_links_checked": 89,
+  "missing_links": [],
+  "models_trained": 0,
+  "new_cluster_assignments": 0,
+  "model_checkpoint_loads": 0,
+  "new_gemini_calls": 0,
+  "limits": "Full265 exploratory labels include test data. Existing fixed vocabularies omit test OOV29/48. No stopword selection or new model evaluation.",
+  "supplementary_evidence": "verification_details.json"
+}

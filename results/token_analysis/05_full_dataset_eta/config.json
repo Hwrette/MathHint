@@ -1,0 +1,84 @@
+{
+  "analysis": "problem_solution_full265_eta_v1",
+  "counts": {
+    "train": 185,
+    "test": 80,
+    "total": 265,
+    "problems": 346,
+    "solutions": 431
+  },
+  "document_order": "original train IDs followed by original test IDs; never modify split files",
+  "scope": "Exploratory combined-data statistics including test labels; not independent holdout feature selection",
+  "vocabulary_policy": "Original training-fitted vocabularies and coordinate order; no OOV expansion",
+  "data_identity": {
+    "schema_version": 1,
+    "generation_id": "88b7c7e67c33bc961b2b85e43fc301ab6eb739f67e8b91d811b41c78347fa001",
+    "files_sha256": {
+      "metadata": "cf68d42c52f247398b8a6b4e6d68fa669bed655f77120ebea3f4441ae6054000",
+      "train_ids": "4ae0174a69a8b4d6ae698b445a30733e689fe1136be44bb23d656579782f49ff",
+      "test_ids": "91bb385ac437d80d2b4c6a8a6940cdeef64c47907feab7f1998df09061b79c54",
+      "problems_vocabulary": "fd141aa650cc091b4d2f3ade55b7f94c85dce6f4cc9b27cb05b5959a179a798a",
+      "problems_train": "efadb158142d2fba520ca6729f1df6aeba740a29d826baf632740b3cf80ccce2",
+      "problems_test": "5c9f55772cabfa221c0c933261d0ca317cd4730f2bc18ba80dfde8d4180b5951",
+      "solutions_vocabulary": "44d022a21aeb1e0878e8ac1cb6dbc49ef49797375405dc1c2025eb413cdeda3b",
+      "solutions_train": "50003c69209d9a9ecf3ea241441084a91d15453497e59cad589b06bb8b713707",
+      "solutions_test": "3cc15f412e8f1129dac59c93e0b1fb048cef13b5a5d0fe9fc6f857c14c759031"
+    },
+    "fingerprint": "6e1cc73d9b4a712ff3a7b9916e14b9570373f92f6dae347ace711cb930e89035"
+  },
+  "groups": {
+    "curriculum": {
+      "name": "과목",
+      "group_count": 2,
+      "singleton_groups": 0
+    },
+    "unit": {
+      "name": "단원",
+      "group_count": 8,
+      "singleton_groups": 0
+    },
+    "subunit": {
+      "name": "세부단원",
+      "group_count": 25,
+      "singleton_groups": 6
+    },
+    "type": {
+      "name": "문제 유형",
+      "group_count": 70,
+      "singleton_groups": 28
+    }
+  },
+  "zero_vectors": {
+    "problems": 0,
+    "solutions": 0
+  },
+  "ignored_test_tokens": {
+    "problems": 29,
+    "solutions": 48
+  },
+  "input_files_sha256": {
+    "data/processed/metadata.json": "cf68d42c52f247398b8a6b4e6d68fa669bed655f77120ebea3f4441ae6054000",
+    "data/processed/splits/train.json": "4ae0174a69a8b4d6ae698b445a30733e689fe1136be44bb23d656579782f49ff",
+    "data/processed/splits/test.json": "91bb385ac437d80d2b4c6a8a6940cdeef64c47907feab7f1998df09061b79c54",
+    "data/vectors/problems/vocabulary.json": "fd141aa650cc091b4d2f3ade55b7f94c85dce6f4cc9b27cb05b5959a179a798a",
+    "data/vectors/problems/train_vectors.json": "efadb158142d2fba520ca6729f1df6aeba740a29d826baf632740b3cf80ccce2",
+    "data/vectors/problems/test_vectors.json": "5c9f55772cabfa221c0c933261d0ca317cd4730f2bc18ba80dfde8d4180b5951",
+    "data/vectors/solutions/vocabulary.json": "44d022a21aeb1e0878e8ac1cb6dbc49ef49797375405dc1c2025eb413cdeda3b",
+    "data/vectors/solutions/train_vectors.json": "50003c69209d9a9ecf3ea241441084a91d15453497e59cad589b06bb8b713707",
+    "data/vectors/solutions/test_vectors.json": "3cc15f412e8f1129dac59c93e0b1fb048cef13b5a5d0fe9fc6f857c14c759031",
+    "results/token_analysis/01_problem_tokens/all_tokens.csv": "17c1dc8efb2f6d13514c6bc458c97ab5d2096e35cffc4841f69faf512c2038db",
+    "results/token_analysis/02_solution_tokens/all_tokens.csv": "29ae698fd5efb66f2c7c4d6a6049af4d0ea62b126a1ba2ba7327649178d968ed"
+  },
+  "analysis_sources_sha256": {
+    "mathhint_analysis/token_analysis/full_dataset_eta.py": "484d08f4df7516fc92853105e2dbb99a84b85ccd103f6792779f87c435a5cb27",
+    "mathhint_analysis/token_analysis/full_dataset_eta_report.py": "fcd19dde869149d0ad9312b85dca5f103cc19da47ad7c90771151b1b8eaf2cc9",
+    "mathhint_analysis/token_analysis/eta_rankings.py": "ec180da84560d299cbf3f375295951afb9ac01e820d20c7c0950718abeeaf6e5",
+    "mathhint_analysis/token_analysis/statistics.py": "90011c41b83d9a55c40a62476e0db87b92f73229675d7dfed2faf22417397cde",
+    "mathhint_analysis/token_analysis/common.py": "d62dd826e0b0f3a732979b2d985955f90d1919849bc67d61faad04c0b8a31c7c"
+  },
+  "variance_denominator": 265,
+  "numpy_version": "2.5.4",
+  "model_training": false,
+  "gemini_calls": 0,
+  "stopwords_selected_or_applied": false
+}

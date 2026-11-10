@@ -67,13 +67,24 @@ def sorted_rows(rows, field):
     return sorted(rows, key=lambda row: (row[field] is None, -row[field] if row[field] is not None else 0, row["index"]))
 
 
-def _table(rows):
-    lines = ["|순위|토큰|원시 η²|정규화 η²|학습 DF|의미|", "|---:|---|---:|---:|---:|---|"]
+def _table(rows, *, df_label="학습 DF"):
+    lines = [f"|순위|토큰|원시 η²|정규화 η²|{df_label}|의미|", "|---:|---|---:|---:|---:|---|"]
     for rank, row in enumerate(rows, 1):
         token = "`" + row["token"].replace("|", "\\|") + "`"
         meaning = escape(row["meaning"], quote=False).replace("|", "\\|").replace("\n", " ")
         raw, normal = ("—" if row[field] is None else f"{row[field]:.4f}" for field in ("raw", "normalized"))
         lines.append(f"|{rank}|{token}|{raw}|{normal}|{row['df']}|{meaning}|")
+    return lines
+
+
+def ranking_sections(rows, *, df_label="학습 DF"):
+    lines = []
+    for field, anchor, title in (("raw", "raw-ranking", "A. 원시 BoW η² 내림차순"),
+                                 ("normalized", "normalized-ranking", "B. L2 정규화 BoW η² 내림차순")):
+        ordered = sorted_rows(rows, field)
+        lines += [f'<a name="{anchor}"></a>', "", f"## {title}", "", "### 상위 30개", "", *_table(ordered[:30], df_label=df_label), "",
+                  "<details>", f"<summary>전체 {len(rows)}개 토큰 펼치기 — {title}</summary>", "", *_table(ordered, df_label=df_label), "", "</details>", "",
+                  "[문서 처음으로](#top) · [원시 순위](#raw-ranking) · [정규화 순위](#normalized-ranking)", ""]
     return lines
 
 
@@ -83,12 +94,7 @@ def _document(level, name, rows):
              "[A. 원시 η² 순위](#raw-ranking) · [B. 정규화 η² 순위](#normalized-ranking) · [다른 분류 선택](README.md)", "",
              "정렬은 **반올림 전 CSV 값**의 내림차순, 완전 동점은 기존 어휘 인덱스 순서다. 표시값이 같아도 실제 값은 다를 수 있다. 정의되지 않은 값은 —로 표시해 맨 아래에 둔다.", "",
              "DF는 토큰이 등장한 학습 문항 수다. η²는 불용어 판정·수학적 중요도·ARI·정답률이 아니며, 아래 [해석 주의사항](#interpretation)을 함께 읽는다.", ""]
-    for field, anchor, title in (("raw", "raw-ranking", "A. 원시 BoW η² 내림차순"),
-                                 ("normalized", "normalized-ranking", "B. L2 정규화 BoW η² 내림차순")):
-        ordered = sorted_rows(rows, field)
-        lines += [f'<a name="{anchor}"></a>', "", f"## {title}", "", "### 상위 30개", "", *_table(ordered[:30]), "",
-                  "<details>", f"<summary>전체 346개 토큰 펼치기 — {title}</summary>", "", *_table(ordered), "", "</details>", "",
-                  "[문서 처음으로](#top) · [원시 순위](#raw-ranking) · [정규화 순위](#normalized-ranking)", ""]
+    lines += ranking_sections(rows)
     lines += ['<a name="interpretation"></a>', "", "## 해석 주의사항", "",
               f"학습 집단은 **{rows[0]['group_count']}개**, 그중 문항1개인 집단은 **{rows[0]['singleton_groups']}개**다. DF는 해당 토큰이 한 번 이상 등장한 학습 문항 수이며, 총 등장 횟수(TF)가 아니다.", "",
               "η²는 이 자료에서 실제 분류와 토큰 빈도의 연관성을 나타낸다. 낮다고 불용어가 되거나 높다고 수학적으로 중요한 토큰이 되는 것은 아니다. 제거 시 잃는 정보는 사용자가 의미·문맥과 함께 판단한다. η²는 K-means ARI나 정답률도 아니다. 특히 유형70개에는 문항1개인 집단이 많아 높은 η²를 과대해석하지 않는다.", "",

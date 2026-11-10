@@ -1,15 +1,15 @@
 # MathHint 작업 진행 상태
 
-STATUS: COMPLETE_ETA_RANKINGS_AWAITING_USER_SELECTION
+STATUS: COMPLETE_FULL265_PROBLEM_SOLUTION_ETA_AWAITING_USER_SELECTION
 EXECUTION_ALLOWED: false
-LAST_CONFIRMED_PUBLISHED_COMMIT: 9d027e64fa8acf2af4e1d5e3cafe5ff9731d8685
+LAST_CONFIRMED_PUBLISHED_COMMIT: 8e05a643ca608665d88f64f9b56387ebfedaf2f0
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
 AUTOMATION_STATUS: PAUSED_AFTER_READER_WORKFLOW_COMPLETION_VERIFIED_BY_PEEK
 FIRST_RUN_FROM_SAVED_RULE: 2026-11-09T05:58:50+09:00
 RECURRENCE: EVERY_5_HOURS
 NEXT_RUN_TIME_SERVER_FIELD: NOT_RETURNED
 ENVIRONMENT: MathHint / inherited / current_environment_id_confirmed
-REMOTE_CHECKPOINT_STATUS: ETA_RANKINGS_VALIDATED_READY_FOR_FINAL_PUSH_VERIFY_GIT
+REMOTE_CHECKPOINT_STATUS: FULL265_PROBLEM_SOLUTION_ETA_VALIDATED_READY_FOR_PUSH_VERIFY_GIT
 GITHUB_PREAUTHORIZATION_SETTING: RESTORED_TO_ORIGINAL_INHERIT_VERIFIED
 TIMEZONE: Asia/Seoul
 USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
@@ -395,3 +395,22 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - parent manifest는기존README2개해시만갱신하고새MD5개항목만추가해37→42개다. 다른기존항목의해시는전부동일하며전체42개실제파일SHA와일치했다. 기존검증JSON·통계CSV·PNG·04거리결과·data/final/archive·모델/요청/응답·사용자선택two[]는불변이다. 새분석/토큰화/모델/회귀/NN/API/불용어선정·적용은없다.
 - 시작추적2665중허용7개만변경(명세/진행2·표시helper/검사2·README2·manifest1),나머지2658은바이트동일이다. MD5개와표시모듈1개만새파일로추가했으며삭제는없다. 감사/브라우저임시증거는/tmp에두고불필요한새결과JSON/그림을저장소에추가하지않았다.
 - 현재필수표시작업미완료0. 관련변경만커밋후일반push하고원격main==로컬HEAD를확인한뒤중단한다. 위LAST_CONFIRMED_PUBLISHED_COMMIT은게시전실제원격9d027e6이며이번최종커밋은Git/완료보고에서확인한다. 후속선정/실험은여전히사용자의명시적요청대기이며자동화를재개하지않는다.
+
+## 문제·풀이전체265 η²추가시작 — 2026-11-10T13:32:46.329175+00:00
+
+- 사용자가문제뿐아니라풀이도train/test합친265통계를요청했다. 새통계만허용하며기존학습185문제표와모델/결과/어휘/분할/불용어[]는보존한다.
+- 시작HEAD8e05a64·main·Git clean. 추적2671파일SHA를/tmp/mathhint_eta_full265_baseline.json에확보했다. 새05결과와실행기/표시재사용·링크·감사만수정한다.
+- 구현역할:root집계/실행/검증/보존,reportagent는새CSV만읽는MD생성,독립agent는원본직접분산/DF/정렬/보존감사. 현재단계구현중이며아직완료가아니다.
+
+## 문제·풀이 전체265 η²완료·검증·게시준비 — 2026-11-10T13:43:43.949875+00:00
+
+- 사용자요청대로원래train185+test80을ID검증후합쳐265문항에서직접η²를계산했다. 문제346/원본풀이·해설431은기존고정어휘와인덱스다. 테스트OOV29/48은기존벡터의제외를유지했으며어휘확장/토큰화/새벡터저장은없다. 풀이분류는대응문제의실제계층이며Gemini응답을분석한것이아니다.
+- 새05_full_dataset_eta의문제/풀이CSV1384/1724=3108행에raw/norm전체·집단간/내분산·η²·조정η²·차이·TF/DF·집단크기를저장했다. 모집단분모265이고기존학습η²와테스트η²의평균이아니다. 4수준집단2/8/25/70,전체singleton0/0/6/28이며학습185의유형singleton43과구분했다. 영벡터0/0이다.
+- 순위Markdown8개와안내3개완료. 각각원시/정규화상위30+접기전체346/431,4자리표시·동점index·정의불가—·전체DF·원래의미를제공한다. 전체6216순위행+480상위행을독립감사로전수대조했다. 문제raw과목sin .494584/풀이raw과목sin .397342이며풀이normalized과목frac .591663처럼같은자료의표현에따른연관성차이만관찰한다. 유용성/불용어판정은내리지않았다.
+- 새full_dataset_eta.py는기존loader/분산helper를재사용하고analyze/report/verify를분리한다. report는CSV와설정으로11MD만재생성하며기존결과를갱신하지않는다. verify는해시와독립평균투영계산을대조하고validation/manifest를재작성하지않는다. 공통eta_rankings의표/정렬/접기섹션을재사용했고default185표시5MD출력이전부바이트동일임을임시폴더에서확인했다.
+- 새verify25/25 PASS. 독립one-hot분해로3108행raw/norm분산·η²·adjusted·TF/DF/행정렬/label105행/config입력SHA·OOV와일치했다. 기존수학/표시테스트13/13 PASS. 각analyze/report/verify에서fit2·assign2·회귀train·torch.load·Linear.forward·SDK·원본tokenizer2를금지하여모두0call이었다. 기존모델을학습하는전체기존suite는실행하지않았다.
+- 새8문서의markdown-it렌더/브라우저DOM에서4표행수30/N/30/N·6열/DF/파이프·백슬래시/접기토글확인. 풀이대표desktop1280/mobile390스크린샷을agent와root가실제로열어읽었고페이지넘침없음·표좌우스크롤을확인했다. 이는로컬GitHub유사미리보기이며GitHub/iPad전수시각검사라고주장하지않는다. 새문서153링크/앵커·전체token_analysis226파일링크누락0이다.
+- root와01문제README맨앞에서문제/풀이전체265자료를직접선택한다. 기존02풀이README는04보호목록에있어그대로두었다. parentmanifest는README2개의해시만갱신하고기존42키/다른해시는동일하다. 새05는별도manifest로관리한다. 기존04verify381/381와보호2510파일SHA검사도PASS했다.
+- 시작추적2671중허용8개만변경(명세/진행2·공통표시helper2·표시테스트1·README2·manifest1),2663바이트동일. 원래CSV/JSON(허용manifest외)/PNG/분할/어휘/모델/응답/두불용어[]는모두보존했다. 새추가는통계실행/보고서모듈2개와05결과18개뿐이며삭제는없다. 검증상세는05/validation.json과verification_details.json에남겼다.
+- 전체265표는test라벨을포함하는탐색자료다. 이표를보고특징을선정하면같은test80의독립성주장에한계가있다는점을안내했다. 원본연구의학습·테스트분할이나모델평가값은바꾸지않았다. 불용어자동선정/제거·군집/회귀/NN학습·Gemini재호출은없고예약도추가하지않았다.
+- 미완료필수작업0. 관련변경만최종커밋/일반push하고원격main SHA와로컬HEAD를확인한뒤중단한다. 위게시확인커밋8e05a64는게시전실제기준이며이번최종커밋은실제Git/완료보고로확인한다. 다음단계는사용자의목록선정과명시적요청대기다.

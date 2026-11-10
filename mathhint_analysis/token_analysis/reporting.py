@@ -48,7 +48,7 @@ def _write(path, lines):
     generated = "\n".join(lines).rstrip() + "\n"
     existing = path.read_text(encoding="utf-8") if path.exists() else ""
     blocks = []
-    for section in ("distance-comparison", "eta-rankings"):
+    for section in ("distance-comparison", "eta-rankings", "full-dataset-eta"):
         start, end = f"<!-- {section}:start -->", f"<!-- {section}:end -->"
         if start in existing and end in existing:
             block = start + existing.split(start, 1)[1].split(end, 1)[0] + end

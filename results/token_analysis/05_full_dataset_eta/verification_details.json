@@ -1,0 +1,409 @@
+{
+  "verified_at": "2026-11-10T13:42:09.076338+00:00",
+  "independent_numeric_audit": {
+    "verified_at": "2026-11-10T13:41:33.246610+00:00",
+    "scope": "Both regions, fixed train185+test80=265, no model/tokenizer/API",
+    "n": 265,
+    "regions": {
+      "problems": {
+        "dimensions": 346,
+        "n": 265,
+        "rows_verified": 1384,
+        "zero_norms": 0,
+        "represented_tf": 24150,
+        "levels": {
+          "curriculum": {
+            "groups": 2,
+            "singletons": 0,
+            "raw_full": 346,
+            "normalized_full": 346,
+            "raw_top": 30,
+            "normalized_top": 30,
+            "all_values_df_tf_meanings_order_match": true
+          },
+          "unit": {
+            "groups": 8,
+            "singletons": 0,
+            "raw_full": 346,
+            "normalized_full": 346,
+            "raw_top": 30,
+            "normalized_top": 30,
+            "all_values_df_tf_meanings_order_match": true
+          },
+          "subunit": {
+            "groups": 25,
+            "singletons": 6,
+            "raw_full": 346,
+            "normalized_full": 346,
+            "raw_top": 30,
+            "normalized_top": 30,
+            "all_values_df_tf_meanings_order_match": true
+          },
+          "type": {
+            "groups": 70,
+            "singletons": 28,
+            "raw_full": 346,
+            "normalized_full": 346,
+            "raw_top": 30,
+            "normalized_top": 30,
+            "all_values_df_tf_meanings_order_match": true
+          }
+        }
+      },
+      "solutions": {
+        "dimensions": 431,
+        "n": 265,
+        "rows_verified": 1724,
+        "zero_norms": 0,
+        "represented_tf": 59360,
+        "levels": {
+          "curriculum": {
+            "groups": 2,
+            "singletons": 0,
+            "raw_full": 431,
+            "normalized_full": 431,
+            "raw_top": 30,
+            "normalized_top": 30,
+            "all_values_df_tf_meanings_order_match": true
+          },
+          "unit": {
+            "groups": 8,
+            "singletons": 0,
+            "raw_full": 431,
+            "normalized_full": 431,
+            "raw_top": 30,
+            "normalized_top": 30,
+            "all_values_df_tf_meanings_order_match": true
+          },
+          "subunit": {
+            "groups": 25,
+            "singletons": 6,
+            "raw_full": 431,
+            "normalized_full": 431,
+            "raw_top": 30,
+            "normalized_top": 30,
+            "all_values_df_tf_meanings_order_match": true
+          },
+          "type": {
+            "groups": 70,
+            "singletons": 28,
+            "raw_full": 431,
+            "normalized_full": 431,
+            "raw_top": 30,
+            "normalized_top": 30,
+            "all_values_df_tf_meanings_order_match": true
+          }
+        }
+      }
+    },
+    "issues": [],
+    "class_size_rows_verified": 105,
+    "config_counts_input_hashes_and_oov_verified": true,
+    "local_markdown_render": {
+      "localRenderer": "existing vendored markdown-it; not actual GitHub/browser visual review",
+      "documents": [
+        {
+          "folder": "01_problem_tokens",
+          "level": "curriculum",
+          "tableRows": [
+            31,
+            347,
+            31,
+            347
+          ],
+          "allRowsHaveSixCells": true,
+          "literalPipeAndSinPreserved": true
+        },
+        {
+          "folder": "01_problem_tokens",
+          "level": "unit",
+          "tableRows": [
+            31,
+            347,
+            31,
+            347
+          ],
+          "allRowsHaveSixCells": true,
+          "literalPipeAndSinPreserved": true
+        },
+        {
+          "folder": "01_problem_tokens",
+          "level": "subunit",
+          "tableRows": [
+            31,
+            347,
+            31,
+            347
+          ],
+          "allRowsHaveSixCells": true,
+          "literalPipeAndSinPreserved": true
+        },
+        {
+          "folder": "01_problem_tokens",
+          "level": "type",
+          "tableRows": [
+            31,
+            347,
+            31,
+            347
+          ],
+          "allRowsHaveSixCells": true,
+          "literalPipeAndSinPreserved": true
+        },
+        {
+          "folder": "02_solution_tokens",
+          "level": "curriculum",
+          "tableRows": [
+            31,
+            432,
+            31,
+            432
+          ],
+          "allRowsHaveSixCells": true,
+          "literalPipeAndSinPreserved": true
+        },
+        {
+          "folder": "02_solution_tokens",
+          "level": "unit",
+          "tableRows": [
+            31,
+            432,
+            31,
+            432
+          ],
+          "allRowsHaveSixCells": true,
+          "literalPipeAndSinPreserved": true
+        },
+        {
+          "folder": "02_solution_tokens",
+          "level": "subunit",
+          "tableRows": [
+            31,
+            432,
+            31,
+            432
+          ],
+          "allRowsHaveSixCells": true,
+          "literalPipeAndSinPreserved": true
+        },
+        {
+          "folder": "02_solution_tokens",
+          "level": "type",
+          "tableRows": [
+            31,
+            432,
+            31,
+            432
+          ],
+          "allRowsHaveSixCells": true,
+          "literalPipeAndSinPreserved": true
+        }
+      ]
+    },
+    "relative_links_checked": 153,
+    "missing_links": [],
+    "original_research_preservation": {
+      "original_file_count": 2545,
+      "changed_only_navigation_or_manifest": [
+        "results/token_analysis/01_problem_tokens/README.md",
+        "results/token_analysis/README.md",
+        "results/token_analysis/manifest.json"
+      ],
+      "original_csv_json_vectors_models_png_and_user_choices_unchanged": true
+    }
+  },
+  "runtime_guards": [
+    {
+      "action": "analyze",
+      "validation_passed": 25,
+      "forbidden_calls": {
+        "mathhint_learning.TorchKMeans.fit_kmeans": 0,
+        "mathhint_learning.TorchKMeans.fit_spherical_kmeans": 0,
+        "mathhint_learning.TorchKMeans.assign_clusters": 0,
+        "mathhint_learning.TorchKMeans.assign_spherical": 0,
+        "mathhint_learning.TorchRegression.train_regression": 0,
+        "torch.load": 0,
+        "torch.nn.Linear.forward": 0,
+        "google.genai.Client": 0,
+        "mathhint_analysis.PrepareDataset._count_function": 0,
+        "mathhint_analysis.BagOfWord.count_tokens": 0
+      }
+    },
+    {
+      "action": "report",
+      "validation_passed": 25,
+      "forbidden_calls": {
+        "mathhint_learning.TorchKMeans.fit_kmeans": 0,
+        "mathhint_learning.TorchKMeans.fit_spherical_kmeans": 0,
+        "mathhint_learning.TorchKMeans.assign_clusters": 0,
+        "mathhint_learning.TorchKMeans.assign_spherical": 0,
+        "mathhint_learning.TorchRegression.train_regression": 0,
+        "torch.load": 0,
+        "torch.nn.Linear.forward": 0,
+        "google.genai.Client": 0,
+        "mathhint_analysis.PrepareDataset._count_function": 0,
+        "mathhint_analysis.BagOfWord.count_tokens": 0
+      }
+    },
+    {
+      "action": "verify",
+      "validation_passed": 25,
+      "forbidden_calls": {
+        "mathhint_learning.TorchKMeans.fit_kmeans": 0,
+        "mathhint_learning.TorchKMeans.fit_spherical_kmeans": 0,
+        "mathhint_learning.TorchKMeans.assign_clusters": 0,
+        "mathhint_learning.TorchKMeans.assign_spherical": 0,
+        "mathhint_learning.TorchRegression.train_regression": 0,
+        "torch.load": 0,
+        "torch.nn.Linear.forward": 0,
+        "google.genai.Client": 0,
+        "mathhint_analysis.PrepareDataset._count_function": 0,
+        "mathhint_analysis.BagOfWord.count_tokens": 0
+      }
+    }
+  ],
+  "unit_tests": {
+    "run": 13,
+    "failed": 0,
+    "scope": "Existing test_token_reporting.py and test_token_statistics.py; model-training suites not run"
+  },
+  "visual_review": {
+    "renderer": "existing vendored markdown-it, installed Chromium, local GitHub-like CSS preview; not actual GitHub/iPad visual verification",
+    "documents": [
+      {
+        "file": "01_problem_tokens/curriculum.md",
+        "rows": [
+          30,
+          346,
+          30,
+          346
+        ],
+        "six_columns": true,
+        "whole_df_header": true,
+        "literal_token_pipe_backslash": true,
+        "details_toggle": true
+      },
+      {
+        "file": "01_problem_tokens/unit.md",
+        "rows": [
+          30,
+          346,
+          30,
+          346
+        ],
+        "six_columns": true,
+        "whole_df_header": true,
+        "literal_token_pipe_backslash": true,
+        "details_toggle": true
+      },
+      {
+        "file": "01_problem_tokens/subunit.md",
+        "rows": [
+          30,
+          346,
+          30,
+          346
+        ],
+        "six_columns": true,
+        "whole_df_header": true,
+        "literal_token_pipe_backslash": true,
+        "details_toggle": true
+      },
+      {
+        "file": "01_problem_tokens/type.md",
+        "rows": [
+          30,
+          346,
+          30,
+          346
+        ],
+        "six_columns": true,
+        "whole_df_header": true,
+        "literal_token_pipe_backslash": true,
+        "details_toggle": true
+      },
+      {
+        "file": "02_solution_tokens/curriculum.md",
+        "rows": [
+          30,
+          431,
+          30,
+          431
+        ],
+        "six_columns": true,
+        "whole_df_header": true,
+        "literal_token_pipe_backslash": true,
+        "details_toggle": true,
+        "mobile_390px_page_overflow": false,
+        "mobile_table_horizontal_scroll": true
+      },
+      {
+        "file": "02_solution_tokens/unit.md",
+        "rows": [
+          30,
+          431,
+          30,
+          431
+        ],
+        "six_columns": true,
+        "whole_df_header": true,
+        "literal_token_pipe_backslash": true,
+        "details_toggle": true
+      },
+      {
+        "file": "02_solution_tokens/subunit.md",
+        "rows": [
+          30,
+          431,
+          30,
+          431
+        ],
+        "six_columns": true,
+        "whole_df_header": true,
+        "literal_token_pipe_backslash": true,
+        "details_toggle": true
+      },
+      {
+        "file": "02_solution_tokens/type.md",
+        "rows": [
+          30,
+          431,
+          30,
+          431
+        ],
+        "six_columns": true,
+        "whole_df_header": true,
+        "literal_token_pipe_backslash": true,
+        "details_toggle": true
+      }
+    ]
+  },
+  "all_analysis_file_links_checked": 226,
+  "missing_links": [],
+  "preservation": {
+    "baseline_commit": "8e05a643ca608665d88f64f9b56387ebfedaf2f0",
+    "original_tracked_files": 2671,
+    "unchanged_original_files": 2663,
+    "only_allowed_changed_files": [
+      "docs/FINAL_TASK_SPEC.md",
+      "docs/WORK_PROGRESS.md",
+      "mathhint_analysis/token_analysis/eta_rankings.py",
+      "mathhint_analysis/token_analysis/reporting.py",
+      "results/token_analysis/01_problem_tokens/README.md",
+      "results/token_analysis/README.md",
+      "results/token_analysis/manifest.json",
+      "tests/test_token_reporting.py"
+    ],
+    "original_readme_bodies_preserved": true,
+    "old_manifest_only_two_readme_hashes_updated": [
+      "README.md",
+      "01_problem_tokens/README.md"
+    ],
+    "previous_distance_verify": {
+      "passed": 381,
+      "protected_original_files": 2510
+    },
+    "old_185_markdown_generator_output_identical": true,
+    "user_stopwords_unchanged": true
+  }
+}
