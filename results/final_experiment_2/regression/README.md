@@ -63,10 +63,10 @@ Ridge는 닫힌 해를 계산하므로 최종 모델에 반복 학습 에폭이 
 
 |관찰 사례|문항|코사인|공통 토큰 수|
 |---|---|---:|---:|
-|낮은 코사인|[trig_3_034](../../../data/processed/problems/trig_3_034.txt)|0.5122|8|
-|낮은 코사인|[diff_3_022](../../../data/processed/problems/diff_3_022.txt)|0.5748|11|
-|높은 코사인|[diff_2_020](../../../data/processed/problems/diff_2_020.txt)|0.9842|18|
-|높은 코사인|[diff_1_030](../../../data/processed/problems/diff_1_030.txt)|0.9888|16|
+|낮은 코사인|[trig_3_034 읽기 화면](../gemini_comparison/report.html#trig_3_034) · [원문](../../../data/processed/problems/trig_3_034.txt)|0.5122|8|
+|낮은 코사인|[diff_3_022 읽기 화면](../gemini_comparison/report.html#diff_3_022) · [원문](../../../data/processed/problems/diff_3_022.txt)|0.5748|11|
+|높은 코사인|[diff_2_020 읽기 화면](../gemini_comparison/report.html#diff_2_020) · [원문](../../../data/processed/problems/diff_2_020.txt)|0.9842|18|
+|높은 코사인|[diff_1_030 읽기 화면](../gemini_comparison/report.html#diff_1_030) · [원문](../../../data/processed/problems/diff_1_030.txt)|0.9888|16|
 
 ## 대표 문항의 실제·예측 빈도
 

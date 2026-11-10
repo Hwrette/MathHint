@@ -256,7 +256,7 @@ def write_model_reports(root, output, data):
     for title, chosen in (("낮은 코사인", ordered[:2]), ("높은 코사인", ordered[-2:])):
         for row in chosen:
             link = os.path.relpath(root / f"data/processed/problems/{row['id']}.txt", output)
-            lines.append(f"|{title}|[{row['id']}]({link})|{float(row['clipped_nonnegative_cosine_similarity']):.4f}|{row['common_top20_count']}|")
+            lines.append(f"|{title}|[{row['id']} 읽기 화면](../gemini_comparison/report.html#{row['id']}) · [원문]({link})|{float(row['clipped_nonnegative_cosine_similarity']):.4f}|{row['common_top20_count']}|")
     lines += ["", "## 대표 문항의 실제·예측 빈도", ""]
     for row in (ordered[0], ordered[-1]):
         lines += [f"![{row['id']} 실제·예측 상위 토큰](figures/example_{row['id']}.png)", ""]

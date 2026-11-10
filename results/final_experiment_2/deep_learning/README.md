@@ -79,10 +79,10 @@ Sequential(
 
 |관찰 사례|문항|코사인|공통 토큰 수|
 |---|---|---:|---:|
-|낮은 코사인|[trig_3_034](../../../data/processed/problems/trig_3_034.txt)|0.5666|8|
-|낮은 코사인|[trig_3_011](../../../data/processed/problems/trig_3_011.txt)|0.6123|9|
-|높은 코사인|[diff_1_011](../../../data/processed/problems/diff_1_011.txt)|0.9829|16|
-|높은 코사인|[diff_1_030](../../../data/processed/problems/diff_1_030.txt)|0.9882|15|
+|낮은 코사인|[trig_3_034 읽기 화면](../gemini_comparison/report.html#trig_3_034) · [원문](../../../data/processed/problems/trig_3_034.txt)|0.5666|8|
+|낮은 코사인|[trig_3_011 읽기 화면](../gemini_comparison/report.html#trig_3_011) · [원문](../../../data/processed/problems/trig_3_011.txt)|0.6123|9|
+|높은 코사인|[diff_1_011 읽기 화면](../gemini_comparison/report.html#diff_1_011) · [원문](../../../data/processed/problems/diff_1_011.txt)|0.9829|16|
+|높은 코사인|[diff_1_030 읽기 화면](../gemini_comparison/report.html#diff_1_030) · [원문](../../../data/processed/problems/diff_1_030.txt)|0.9882|15|
 
 ## 대표 문항의 실제·예측 빈도
 

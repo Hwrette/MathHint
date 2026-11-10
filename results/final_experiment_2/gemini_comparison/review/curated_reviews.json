@@ -2714,6 +2714,930 @@
       ],
       "alternative_solution": false,
       "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_024",
+      "condition": "D",
+      "response_sha256": "bdcaa7f1fee098d94cb2fe1548ad63acb656aab0e3e59e2364f118a74a947880",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "일반형 f=x^3+ax^2+bx+c를 놓고, (2,3)의 접선이 (1,3)을 지나는 조건을 수평접선 f(2)=3,f'(2)=0으로 정확하게 해석했다. 이를 통해 b=-4a-12 및 c=4a+19를 얻고, 다른 접선의 조건 3-f(-2)=3f'(-2)을 적용하여 a=4,c=35를 구한 모든 계산이 타당하다. 최종 선택지 ③도 옳다. 원 해설의 중근을 이용한 한 매개변수 표현 대신 일반 계수의 연립방정식을 푼 유효한 대안이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(2) = 3(2)^2 + 2a(2) + b = 12 + 4a + b = 0$",
+        "$8a - b - c = 25$",
+        "$8a - 7 = 25 \\Rightarrow 8a = 32 \\Rightarrow a = 4$",
+        "$c = 4(4) + 19 = 16 + 19 = 35$"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_024",
+      "condition": "C",
+      "response_sha256": "da36abb7ed726333359a6825bf7f69b6a14158125c9988f572846ba598f2d80e",
+      "review_status": "suspected_error",
+      "math_status": "inappropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "f(2)=3인데 f(x)가 (x-2)^2을 인수로 가진다고 한 문장은 거짓이다. 해당 인수를 가지는 것은 f(x)-3이어야 하며, f 자체가 그 인수를 가지면 f(2)=0이 되어 문제 조건과 모순된다. 응답이 최종적으로 구한 f(x)=(x-2)^2(x+8)+3도 그 주장에 대한 반례이다. 바로 다음 줄의 상수 3을 더한 형태와 이후 접선 조건 및 k=-8 계산, f(0)=35와 최종 선택지 ③는 모두 맞지만 중간의 명시적인 인수 주장에는 오류가 있다.",
+      "error_step": "$f(2) = 3$이고 $f'(2) = 0$이므로, $f(x)$는 $(x-2)^2$을 인수로 가집니다.",
+      "evidence_quotes": [
+        "$f(2) = 3$이고 $f'(2) = 0$이므로, $f(x)$는 $(x-2)^2$을 인수로 가집니다.",
+        "$f(x) = (x-2)^2(x-k) + 3$",
+        "$k = -8$",
+        "$f(0) = (0-2)^2(0+8) + 3 = 4 \\times 8 + 3 = 32 + 3 = 35$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_024",
+      "condition": "B",
+      "response_sha256": "c5259521f6d0e8c44bc0ca07b2cee603e0acc0dc0104381e0054146aa4d03cff",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "일반형 f=x^3+ax^2+bx+c를 놓고, (2,3)의 접선이 (1,3)을 지나는 조건을 수평접선 f(2)=3,f'(2)=0으로 정확하게 해석했다. 이를 통해 b=-4a-12 및 c=4a+19를 얻고, 다른 접선의 조건 3-f(-2)=3f'(-2)을 적용하여 a=4,c=35를 구한 모든 계산이 타당하다. 최종 선택지 ③도 옳다. 원 해설의 중근을 이용한 한 매개변수 표현 대신 일반 계수의 연립방정식을 푼 유효한 대안이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$b = -4a - 12$",
+        "$c = 4a + 19$",
+        "$3 - (16a + 35) = -8a(1 + 2)$",
+        "$c = 4(4) + 19 = 16 + 19 = 35$"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_029",
+      "condition": "B",
+      "response_sha256": "1dcaec13eb0d39978ab5c9ecd01d70c8da85caa001fb967f38d4b29c43691f64",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수 6x^2-6과 그 근 ±1을 정확히 구했다. 이계도함수 12x의 값이 -1에서는 음수, 1에서는 양수임을 확인하여 극대와 극소를 올바르게 분류했다. 극솟값 조건 f(1)=2에서 a-4=2, a=6을 얻은 계산과 최종 선택지 ①가 타당하다. 원 해설의 도함수 부호표 대신 이계도함수 판정법을 사용한 유효한 대안 풀이이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f''(x) = 12x$",
+        "$f''(-1) = -12 < 0$",
+        "$f''(1) = 12 > 0$",
+        "$-4 + a = 2$",
+        "$a = 6$"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_029",
+      "condition": "C",
+      "response_sha256": "a2751e4214b2d87613169171e7fd7fe0c41cd83275404a4a323e6c84869f271b",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수 6x^2-6과 그 근 ±1을 정확히 구했다. 도함수의 부호가 양수, 음수, 양수로 바뀌는 증감을 이용하여 x=1의 극소를 올바르게 판단했다. 극솟값 조건 f(1)=2에서 a-4=2, a=6을 얻은 계산과 최종 선택지 ①가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 6x^2 - 6$",
+        "$f(1) = 2(1)^3 - 6(1) + a = 2$",
+        "$-4 + a = 2$",
+        "$a = 6$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_029",
+      "condition": "D",
+      "response_sha256": "9406bcc6e295d6764aa8409995376e7fcaada81356ebb785cc2156ed9a48eaef",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수 6x^2-6과 그 근 ±1을 정확히 구했다. 도함수의 부호가 양수, 음수, 양수로 바뀌는 증감을 이용하여 x=1의 극소를 올바르게 판단했다. 극솟값 조건 f(1)=2에서 a-4=2, a=6을 얻은 계산과 최종 선택지 ①가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 6x^2 - 6$",
+        "$f(1) = 2(1)^3 - 6(1) + a = 2$",
+        "$-4 + a = 2$",
+        "$a = 6$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_030",
+      "condition": "B",
+      "response_sha256": "b47665b8c12dea2d0a84c828d24c55935e7959dd0ab5cdf6aa1429f5d40a2caa",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "극소의 필요조건 f'(1)=0에서 b=-3a를 얻고, f(1)=-2에서 -a=-2이므로 a=2,b=-6을 구한 과정이 타당하다. 이때 f'(x)=6(x-1)(x+1)이므로 x=-1에서는 양수에서 음수로 부호가 바뀌어 극대이다. f(-1)=-2+6+2=6의 계산과 최종 답이 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(1) = 3a + b = 0$",
+        "$f(1) = a(1)^3 - 3a(1) + a = a - 3a + a = -a = -2$",
+        "$f(x) = 2x^3 - 6x + 2$",
+        "최종정답: 6"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_030",
+      "condition": "D",
+      "response_sha256": "caec32dc14f01e129d610ad36f7538ecbdbabbed72224c214a7a4dc042a0e19a",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "극소의 필요조건 f'(1)=0에서 b=-3a를 얻고, f(1)=-2에서 -a=-2이므로 a=2,b=-6을 구한 과정이 타당하다. 이때 f'(x)=6(x-1)(x+1)이므로 x=-1에서는 양수에서 음수로 부호가 바뀌어 극대이다. f(-1)=-2+6+2=6의 계산과 최종 답이 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(1) = 3a + b = 0$",
+        "$f(1) = a(1)^3 - 3a(1) + a = a - 3a + a = -a = -2$",
+        "$f(x) = 2x^3 - 6x + 2$",
+        "최종정답: 6"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_030",
+      "condition": "C",
+      "response_sha256": "0c1573c54c912c47b8df6e37908c1e6a24e5e7610623767c845d932d31f82122",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "극소의 필요조건 f'(1)=0에서 b=-3a를 얻고, f(1)=-2에서 -a=-2이므로 a=2,b=-6을 구한 과정이 타당하다. 이때 f'(x)=6(x-1)(x+1)이므로 x=-1에서는 양수에서 음수로 부호가 바뀌어 극대이다. f(-1)=-2+6+2=6의 계산과 최종 답이 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(1) = 3a + b = 0$",
+        "$f(1) = a(1)^3 - 3a(1) + a = a - 3a + a = -a = -2$",
+        "$f(x) = 2x^3 - 6x + 2$",
+        "최종정답: 6"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_031",
+      "condition": "C",
+      "response_sha256": "ad346f167b581d29cf94fa7fd3eae8ec396d8c619b135bd0efb148f47526ba59",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수 3(x-1)(x+1)를 정확히 구하고 x=-1에서 극대, x=1에서 극소임을 올바르게 판단했다. 극솟값 2a-2가 a+3과 같다는 조건에서 a=5를 구한 계산이 옳다. 이때 극댓값은 f(-1)=2a+2=12이므로 최종 선택지 ②도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 - 3 = 3(x^2 - 1) = 3(x - 1)(x + 1)$",
+        "$2a - 2 = a + 3$",
+        "$a = 5$",
+        "$f(-1) = -1 + 3 + 10 = 12$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_031",
+      "condition": "B",
+      "response_sha256": "7fa483e9851c1a395aee81b7a1022b600f3a5094d1f7470d4bc1612db6561d93",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수 3(x-1)(x+1)를 정확히 구하고 x=-1에서 극대, x=1에서 극소임을 올바르게 판단했다. 극솟값 2a-2가 a+3과 같다는 조건에서 a=5를 구한 계산이 옳다. 이때 극댓값은 f(-1)=2a+2=12이므로 최종 선택지 ②도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 - 3 = 3(x^2 - 1) = 3(x - 1)(x + 1)$",
+        "$2a - 2 = a + 3$",
+        "$a = 5$",
+        "$f(-1) = -1 + 3 + 10 = 12$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_031",
+      "condition": "D",
+      "response_sha256": "4b520559b122d6712ab5b5dca1de95c9dd7616b12ddf530fb9d867c62dc7bcac",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수 3(x-1)(x+1)를 정확히 구하고 x=-1에서 극대, x=1에서 극소임을 올바르게 판단했다. 극솟값 2a-2가 a+3과 같다는 조건에서 a=5를 구한 계산이 옳다. 이때 극댓값은 f(-1)=2a+2=12이므로 최종 선택지 ②도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 - 3 = 3(x^2 - 1) = 3(x - 1)(x + 1)$",
+        "$2a - 2 = a + 3$",
+        "$a = 5$",
+        "$f(-1) = 2(5) + 2 = 10 + 2 = 12$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_036",
+      "condition": "C",
+      "response_sha256": "d42728395fa2dc950a4a19995b7b003843b6aed12da370425217f3c0da5eb102",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "상수 k를 우변으로 옮겨 삼차함수 x^3-3x^2-9x와 수평선 y=-k의 교점 수로 해석한 것이 타당하다. 도함수의 서로 다른 근 -1과 3에서 극댓값 5 및 극솟값 -27을 정확히 구했다. 두 극점은 중근에 해당하며 삼중근은 아니므로 수평선이 둘 중 하나의 극값과 일치할 때 서로 다른 실근이 정확히 두 개이다. 따라서 k=-5 또는 27, 합 22 및 최종 선택지 ④가 옳다. 원 해설과 같은 극값에서의 중근 조건을 그래프로 표현했다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 - 6x - 9 = 3(x^2 - 2x - 3) = 3(x - 3)(x + 1)$",
+        "$-k = 5$ 또는 $-k = -27$",
+        "최종정답: ④",
+        "$(-5) + 27 = 22$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_036",
+      "condition": "D",
+      "response_sha256": "5a1696b7e17a92e7b2d79cd8f6aa7cf1de79ef39aa23b8bf47f345026817a875",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "상수 k를 우변으로 옮겨 삼차함수 x^3-3x^2-9x와 수평선 y=-k의 교점 수로 해석한 것이 타당하다. 도함수의 서로 다른 근 -1과 3에서 극댓값 5 및 극솟값 -27을 정확히 구했다. 두 극점은 중근에 해당하며 삼중근은 아니므로 수평선이 둘 중 하나의 극값과 일치할 때 서로 다른 실근이 정확히 두 개이다. 따라서 k=-5 또는 27, 합 22 및 최종 선택지 ④가 옳다. 원 해설과 같은 극값에서의 중근 조건을 그래프로 표현했다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 - 6x - 9 = 3(x^2 - 2x - 3) = 3(x - 3)(x + 1)$",
+        "$-k = 5$ 또는 $-k = -27$",
+        "최종정답: ④",
+        "$(-5) + 27 = 22$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_036",
+      "condition": "B",
+      "response_sha256": "9dea64f215a772dc50a000af578898a8cfcca82f21aa3091f7fa6832786f9aa9",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "상수 k를 우변으로 옮겨 삼차함수 x^3-3x^2-9x와 수평선 y=-k의 교점 수로 해석한 것이 타당하다. 도함수의 서로 다른 근 -1과 3에서 극댓값 5 및 극솟값 -27을 정확히 구했다. 두 극점은 중근에 해당하며 삼중근은 아니므로 수평선이 둘 중 하나의 극값과 일치할 때 서로 다른 실근이 정확히 두 개이다. 따라서 k=-5 또는 27, 합 22 및 최종 선택지 ④가 옳다. 원 해설과 같은 극값에서의 중근 조건을 그래프로 표현했다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 - 6x - 9 = 3(x^2 - 2x - 3) = 3(x - 3)(x + 1)$",
+        "$-k = 5$ 또는 $-k = -27$",
+        "최종정답: ④",
+        "$-5 + 27 = 22$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_037",
+      "condition": "D",
+      "response_sha256": "356991c4df4b3fce3ef66846606d22b788ea88736c435400a658277954f7b6b1",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "두 곡선의 교점 조건을 x^3-3x^2+k+1=0으로 정확히 정리하고, -x^3+3x^2와 수평선 y=k+1의 교점 문제로 바꾸었다. 도함수 -3x(x-2)와 x=0의 극솟값 0 및 x=2의 극댓값 4를 올바르게 구했다. 서로 다른 두 교점을 위해 k+1=0 또는 4를 적용하면 k=-1 또는 3이며, 양수 조건으로 k=3을 선택한 과정과 최종 선택지 ③가 타당하다. 원 해설과 같은 수평선과 극값의 교점 판정이며 부호와 상수를 옮긴 표현만 다르다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$x^3 - 3x^2 + k + 1 = 0$",
+        "$f'(x) = -3x^2 + 6x = -3x(x - 2)$",
+        "$k + 1 = 4$ 또는 $k + 1 = 0$",
+        "최종정답: ③"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_037",
+      "condition": "B",
+      "response_sha256": "e0ab344a07efd56bef06c890fda972e2ad1c315b6c1598962cf9c1aab039f4ca",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "교점 수를 삼차방정식의 서로 다른 실근 수로 바꾸고, 도함수와 극값 1, -3을 정확히 계산했다. 극값 높이에서 서로 다른 두 실근이 생긴다는 조건과 k>0을 적용해 k=3을 얻었으며 최종정답 ③도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 - 6x = 3x(x - 2)$",
+        "$-k = 1$ 또는 $-k = -3$이어야 합니다.",
+        "문제에서 $k$는 양수라고 하였으므로, $k = 3$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_037",
+      "condition": "C",
+      "response_sha256": "964cc3153f65495205f98a01a04c5388e4425aba72d94198ac9ce578f6448835",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "방정식을 k+1=-x³+3x²로 정리한 뒤 같은 삼차함수 교점 방법을 사용했다. 극솟값 0과 극댓값 4가 정확하고 k+1이 이 중 하나여야 한다는 조건에서 양수 k=3을 올바르게 선택했다. 최종정답 ③도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$k + 1 = -x^3 + 3x^2$",
+        "$f'(x) = -3x^2 + 6x = -3x(x - 2)$",
+        "2) $k + 1 = 4 \\implies k = 3$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_040",
+      "condition": "D",
+      "response_sha256": "f9d58bd756e70b09164e375aafc570fcb3a7c2fc0e30bf8f6f7722467f8cd8cf",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "위치 차를 (t²+1)(t-6)으로 인수분해하여 유일한 실수 만남 시각 t=6을 구했다. 두 위치의 이계도함수는 각각 2, -6t+14이므로 p=2, q=-22와 p-q=24가 모두 정확하며 최종정답 ①도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$(t^2 + 1)(t - 6) = 0$",
+        "점 $\\mathrm{Q}$의 속도 $v_2 = \\frac{dx_2}{dt} = -3t^2 + 14t$, 가속도 $a_2 = \\frac{dv_2}{dt} = -6t + 14$",
+        "따라서 $p - q = 2 - (-22) = 24$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_040",
+      "condition": "C",
+      "response_sha256": "e54d427c885199fa53dc86adea42e5f44442f5adec7edc2b08b682168824c7ed",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "위치가 같다는 조건의 정리와 인수분해가 정확하며 t²+1은 실수에서 양수이므로 만남 시각은 t=6이다. 두 번의 미분과 t=6에서의 대입으로 p-q=24를 정확히 계산했다. 최종정답 ①도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$(t^2 + 1)(t - 6) = 0$",
+        "점 $\\mathrm{Q}$의 가속도 $a_2 = \\frac{dv_2}{dt} = -6t + 14$",
+        "$p - q = 2 - (-22) = 2 + 22 = 24$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_040",
+      "condition": "B",
+      "response_sha256": "1dec756e0548a15eeea367c2367883fafbe5855448fef0c44cc10c33e0b519cd",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "위치 차의 인수분해 (t²+1)(t-6)과 만남 시각 t=6이 정확하다. 위치를 두 번 미분해 p=2, q=-22를 얻는 과정과 그 차 24가 타당하며 최종정답 ①도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$(t^2 + 1)(t - 6) = 0$",
+        "점 $\\mathrm{P}$의 가속도 $a_1 = \\frac{dv_1}{dt} = 2$",
+        "$q = -6(6) + 14 = -36 + 14 = -22$",
+        "$p - q = 2 - (-22) = 2 + 22 = 24$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_041",
+      "condition": "B",
+      "response_sha256": "bd7a8f254b3faa6cca8c6aa34a0e2cd5e4c63b7cef9fe34f4a999cae562bf631",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "초반의 속도 0에 관한 문장은 후보 시각을 찾는 단계로 읽히며, 이후 속도의 부호 변화가 필요하다고 명시해 t=1을 정확히 제외했다. v=6(t-1)²(t-2)이므로 t=2에서만 방향이 바뀌고, a(2)=6의 미분·대입 계산과 최종정답 모두 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$v(t) = 6t^3 - 24t^2 + 30t - 12$",
+        "운동 방향이 바뀌는 순간은 속도의 부호가 변하는 지점이어야 합니다. $v(t) = 6(t-1)^2(t-2)$에서 $t=1$에서는 부호가 바뀌지 않고, $t=2$에서 부호가 바뀌므로 운동 방향이 바뀌는 순간은 $t=2$입니다.",
+        "따라서 $t=2$일 때의 가속도는 6입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_041",
+      "condition": "C",
+      "response_sha256": "d7487675491061ce2144a76f5a545f4326b5b094fb5af0005ca1a89406ae72ce",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "미분과 인수분해가 정확하며 속도 0인 두 후보 중 중근 t=1에서는 부호가 바뀌지 않는다고 바로 구별했다. t=2에서만 운동 방향이 바뀌고 가속도 18t²-48t+30에 대입한 값 6도 정확하다. 최종정답도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$(t-1)^2(t-2) = 0$",
+        "따라서 $t=1$ 또는 $t=2$입니다. $t=1$에서는 속도의 부호가 바뀌지 않으므로(중근), 운동 방향이 바뀌는 순간은 $t=2$입니다.",
+        "$a(2) = 72 - 96 + 30 = 6$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_041",
+      "condition": "D",
+      "response_sha256": "794394d94c7b0cd943d1df9786fb7d890a67ef6e007b1d1daab585a38596adb0",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "속도 0인 시각을 먼저 후보로 구한 뒤, 마지막에 부호 변화 조건을 명시하여 t=1을 제외하고 t=2에서 음에서 양으로 바뀐다고 정확히 판별했다. 도함수와 가속도 계산은 모두 맞으며 a(2)=6과 최종정답도 정확하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$t^3 - 4t^2 + 5t - 2 = (t-1)^2(t-2) = 0$",
+        "운동 방향이 바뀌려면 속도의 부호가 바뀌어야 합니다. $v(t) = 6(t-1)^2(t-2)$에서 $t=1$ 전후로는 부호가 바뀌지 않고, $t=2$ 전후로 속도의 부호가 음에서 양으로 바뀝니다. 따라서 운동 방향이 바뀌는 순간은 $t=2$일 때입니다.",
+        "이때의 가속도는 $a(2) = 6$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_001",
+      "condition": "B",
+      "response_sha256": "bca6319bee68929bf608b384628eda8bbda87c64097934b2bb7b3a52a8fd30fa",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "0의 충분히 작은 근방에서는 x+5>0이므로 부등식의 방향을 유지하며 곱하는 과정이 유효하다. 양쪽 곱의 극한이 모두 5이므로 목표 식에 직접 샌드위치 정리를 적용한 추론이 타당하고 최종정답 ⑤도 맞다. 참고풀이처럼 먼저 f의 극한을 구하지 않고 곱 전체를 조이는 유효한 다른 전개이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$(x + 5)(2x + 1) \\leq (x + 5)f(x) \\leq (x + 5)(x + 1)^2$",
+        "$\\lim_{x \\rightarrow 0} (x + 5)(2x + 1) = (0 + 5)(2 \\cdot 0 + 1) = 5 \\cdot 1 = 5$",
+        "$\\lim_{x \\rightarrow 0} (x + 5)f(x) = 5$"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_001",
+      "condition": "D",
+      "response_sha256": "c8b440f45d9f39d67c22c35c54e38ac153dc0d25f691afd942ed36a9230c69bf",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "x가 0에 충분히 가까우면 x+5>0이므로 부등호 방향을 유지하여 곱할 수 있다. 양쪽 곱의 극한이 모두 5이고 샌드위치 정리로 목표 극한을 구한 과정과 최종정답 ⑤가 정확하다. f의 극한을 먼저 구하는 참고풀이와 달리 곱 전체에 직접 정리를 적용한 유효한 전개이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "이때 $x$가 $0$에 가까워질 때 $x+5$는 양수($5$)이므로 부등호의 방향은 바뀌지 않습니다.",
+        "$(x + 5)(2x + 1) \\leq (x + 5)f(x) \\leq (x + 5)(x + 1)^2$",
+        "$\\lim_{x \\rightarrow 0} (x + 5)f(x) = 5$입니다."
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_001",
+      "condition": "C",
+      "response_sha256": "eabc2c79682b6280ee76b28ec8ff9f7a3a64cd169b393948820e8b863447b780",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "0 근방에서 x+5가 양수라는 조건을 확인한 뒤 주어진 부등식에 곱했다. 양쪽 극한이 모두 5라는 계산과 샌드위치 정리 적용은 타당하고 최종정답 ⑤도 맞다. 참고풀이와 달리 목표 곱 자체를 조이는 유효한 방법이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "이때 $x$가 $0$에 가까워질 때 $x+5$는 양수($5$에 수렴)이므로 부등호의 방향은 바뀌지 않습니다.",
+        "$(x + 5)(2x + 1) \\leq (x + 5)f(x) \\leq (x + 5)(x + 1)^2$",
+        "$\\lim_{x \\rightarrow 0} (x + 5)f(x) = 5$"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_004",
+      "condition": "B",
+      "response_sha256": "7780dc2e3d2635a69a22e13df34006e93de332cfccf3debd09445e994b8ac866",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "g(x)/(x-1)의 극한을 (1/2)·2=1로 먼저 구하는 과정이 정확하다. 목표식을 f(x)/(x-1), (x-1)/g(x), x+1의 곱으로 쓴 항등식도 맞고 중간 극한이 1이어서 역수 극한을 적용할 수 있다. 계산값 16과 최종정답이 맞으며 참고풀이와 다른 정규화 전개도 유효하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "따라서 $\\lim_{x \\rightarrow 1} \\frac{g(x)}{x - 1} = \\lim_{x \\rightarrow 1} \\left( \\frac{g(x)}{(x - 1)(x + 1)} \\cdot (x + 1) \\right) = \\frac{1}{2} \\cdot 2 = 1$ 입니다.",
+        "$\\lim_{x \\rightarrow 1} \\frac{(x + 1) f(x)}{g(x)} = \\lim_{x \\rightarrow 1} \\left( \\frac{f(x)}{x - 1} \\cdot \\frac{x - 1}{g(x)} \\cdot (x + 1) \\right)$",
+        "$= 8 \\cdot \\frac{1}{1} \\cdot 2 = 16$"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_004",
+      "condition": "C",
+      "response_sha256": "33c41d51b781d39e1510f6b7a90712d13cf3ed701405ccc04306708ca08c74fb",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "두 번째 조건에 x+1의 극한 2를 곱하여 g(x)/(x-1)의 극한 1을 정확히 구했다. 목표 분수의 분자와 분모를 x-1로 나누는 항등식과 분모 극한이 0이 아닐 때의 몫 법칙 적용이 올바르다. 값 16과 최종정답이 맞으며 참고풀이와 다른 정규화 방법도 유효하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\lim_{x \\rightarrow 1} \\frac{g(x)}{x - 1} = \\frac{1}{2} \\times 2 = 1$",
+        "$= \\lim_{x \\rightarrow 1} \\frac{(x + 1) \\cdot \\frac{f(x)}{x - 1}}{\\frac{g(x)}{x - 1}}$",
+        "$= \\frac{(1 + 1) \\cdot 8}{1} = \\frac{2 \\cdot 8}{1} = 16$"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_004",
+      "condition": "D",
+      "response_sha256": "175bb1c0795f5a7b1f717986abb5d136afa202df7da36bce10d12896adfeeb4e",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "g(x)/(x-1)의 극한을 1로 구한 다음 그 역수와 f(x)/(x-1), x+1의 곱으로 목표식을 표현한 항등식이 정확하다. 역수와 곱의 극한 법칙을 사용할 조건도 충족되며 16이라는 계산과 최종정답이 맞다. 참고풀이와 달리 공통 인수 x-1로 정규화한 유효한 전개이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "따라서 $\\lim_{x \\rightarrow 1} \\frac{g(x)}{x - 1} = \\lim_{x \\rightarrow 1} \\left( \\frac{g(x)}{(x - 1)(x + 1)} \\times (x + 1) \\right) = \\frac{1}{2} \\times 2 = 1$ 입니다.",
+        "$\\lim_{x \\rightarrow 1} \\frac{(x + 1) f(x)}{g(x)} = \\lim_{x \\rightarrow 1} \\left( \\frac{f(x)}{x - 1} \\times \\frac{x - 1}{g(x)} \\times (x + 1) \\right)$",
+        "$= 8 \\times \\frac{1}{1} \\times (1 + 1)$"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_005",
+      "condition": "B",
+      "response_sha256": "fdad63fbb52225a6ef21469f8d6c30f10ab0a3ed33b213e3b98a8fa2db0c35d6",
+      "review_status": "suspected_error",
+      "math_status": "inappropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "최종정답 9와 계수 a=-8, b=9는 맞지만 극한 재정리 단계에서 원래 분자 f(x)-3의 -3을 빠뜨렸다. 2x²+ax+1-a와 (x-1)(2x+a+2)는 상수항이 3만큼 다르므로 제시된 등식은 거짓이다. 예를 들어 구한 a=-8이면 첫 분자는 x=1에서 3이므로 첫 극한은 유한하게 존재하지 않지만, 올바른 f(x)-3을 넣은 약분식의 극한은 4이다.",
+      "error_step": "극한식을 재정리하면서 분자를 2x²+ax+1-a로 써서 -3을 누락한 뒤, 이를 (x-1)(2x+a+2)로 인수분해한 등식.",
+      "evidence_quotes": [
+        "$\\lim_{x \\rightarrow 1} \\frac{2x^2 + ax + 1 - a}{(x - 1)(x - 2)} = \\lim_{x \\rightarrow 1} \\frac{(x - 1)(2x + a + 2)}{(x - 1)(x - 2)} = 4$",
+        "따라서 $f(x) = 2x^2 - 8x + 9$입니다.",
+        "최종정답: 9"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_005",
+      "condition": "C",
+      "response_sha256": "277e440a88a368c36f5837b2001f6e87b7f44f1666cc514446b4d8fe806fe007",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "다항함수의 무한대 극한으로 최고차항 2x²를 결정하고 유한극한 조건과 연속성으로 f(1)=3을 얻은 과정이 정확하다. f(x)-3을 빠짐없이 전개·인수분해하여 a=-8, b=9를 구했고 f(4)=9 계산과 최종정답도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(x) - 3 = 2x^2 + ax + 1 - a - 3 = 2x^2 + ax - a - 2$",
+        "$= (x - 1)(2x + 2 + a)$",
+        "$\\frac{2(1) + 2 + a}{1 - 2} = \\frac{4 + a}{-1} = 4$",
+        "$f(4) = 2(4)^2 - 8(4) + 9 = 2(16) - 32 + 9 = 32 - 32 + 9 = 9$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_005",
+      "condition": "D",
+      "response_sha256": "1b8aed32d8e37a2d20c4553065aff80e8de2d45d83d1e91cb92eb5c29c6a73eb",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "최고차항 2x²와 f(1)=3을 올바르게 얻었다. 두 다항식은 미분 가능하고 분모 도함수 2x-3은 1 근방에서 0이 아니므로 0/0형에 대한 로피탈 적용이 유효하다. f′(1)=-4에서 a=-8, b=9를 얻은 계산과 최종정답 9가 맞으며 참고풀이의 인수분해 대신 미분을 쓴 유효한 방법이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\lim_{x \\rightarrow 1} \\frac{f(x) - 3}{(x - 1)(x - 2)} = \\lim_{x \\rightarrow 1} \\frac{f'(x)}{(x - 2) + (x - 1)} = \\frac{f'(1)}{-1} = 4$",
+        "따라서 $f'(1) = -4$입니다.",
+        "$f'(x) = 4x + a$이므로, $f'(1) = 4 + a = -4$에서 $a = -8$입니다."
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_008",
+      "condition": "B",
+      "response_sha256": "f2346c5cf07bf7c57faa6b3777528bfcca1df4db7ea2fe7189f0ba54cbbde5bb",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "각 조각은 다항식이어서 경계 x=-1에서 좌우 극한과 함숫값을 맞추면 된다. 좌극한과 함숫값 -2+a, 우극한 6-a를 정확히 계산했고 등식에서 a=4를 올바르게 구했다. 최종정답 ④도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\lim_{x \\to -1^-} f(x) = f(-1) = 2(-1) + a = -2 + a$",
+        "$\\lim_{x \\to -1^+} f(x) = (-1)^2 - 5(-1) - a = 1 + 5 - a = 6 - a$",
+        "$-2 + a = 6 - a$",
+        "최종정답: ④"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_008",
+      "condition": "D",
+      "response_sha256": "64ee886ae6abd0980e375181ab720aea7ac96ce0e90345053f071652a188098b",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "다항식 조각들의 접합점 x=-1에서 연속 조건을 적용한 방법이 정확하다. 함숫값과 좌극한 -2+a, 우극한 6-a를 바르게 구했고 a=4가 두 값을 일치시킨다. 계산과 최종정답 ④가 모두 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$$\\lim_{x \\to -1^-} f(x) = f(-1) = 2(-1) + a = -2 + a$$",
+        "$$\\lim_{x \\to -1^+} f(x) = (-1)^2 - 5(-1) - a = 1 + 5 - a = 6 - a$$",
+        "$$-2 + a = 6 - a$$",
+        "$$a = 4$$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_008",
+      "condition": "C",
+      "response_sha256": "b3e41ab43096615c46187b808c9b3909bce4858066e629f4523493ca34c8f6f0",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계 x=-1에서 좌우 극한과 함숫값을 일치시키는 연속 조건을 정확히 적용했다. 다항식 조각들의 값 -2+a와 6-a를 바르게 구하여 a=4를 얻었고, 다른 점들에서는 각 다항식이 연속이므로 조건이 충분하다. 최종정답 ④도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\lim_{x \\to -1^-} f(x) = f(-1) = 2(-1) + a = -2 + a$",
+        "$\\lim_{x \\to -1^+} f(x) = (-1)^2 - 5(-1) - a = 1 + 5 - a = 6 - a$",
+        "$-2 + a = 6 - a$",
+        "$a = 4$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_012",
+      "condition": "B",
+      "response_sha256": "ca40b57d70974a525fbc371b68a57fb658ba6e7c06a3d33cbdf5f71ec287591f",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "각 조각의 정의 구간에서는 분모가 0이 아니므로 경계 x=3만 확인하면 된다. 함숫값과 우극한 7, 유한 좌극한을 위한 9+3a+b=0, 약분 후 좌극한 6+a를 모두 정확히 구했다. a=1, b=-12와 a-b=13 및 최종정답 ⑤가 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\lim_{x \\to 3^+} f(x) = f(3) = \\frac{2(3)+1}{3-2} = \\frac{7}{1} = 7$",
+        "$3^2 + 3a + b = 0 \\implies 9 + 3a + b = 0 \\implies b = -3a - 9$",
+        "$= \\lim_{x \\to 3^-} \\frac{(x-3)(x+3) + a(x-3)}{x-3} = \\lim_{x \\to 3^-} (x+3+a) = 6+a$",
+        "$a - b = 1 - (-12) = 1 + 12 = 13$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_012",
+      "condition": "D",
+      "response_sha256": "d2485130db0e426b08b3ca45d5532adbb8a1e33b880401d9823de2a0238ff579",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "오른쪽 조각에서 f(3)=7을 구하고 왼쪽 극한을 7과 같게 둔 과정이 타당하다. 분자가 x=3에서 0이어야 한다는 조건과 그에 따른 인수분해가 정확해 좌극한은 6+a이다. a=1, b=-12와 차 13의 계산이 맞고 최종정답 ⑤도 정확하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$$f(3) = \\lim_{x \\to 3^+} \\frac{2x+1}{x-2} = \\frac{2(3)+1}{3-2} = \\frac{7}{1} = 7$$",
+        "$$3^2 + 3a + b = 0 \\implies 9 + 3a + b = 0 \\implies b = -3a - 9$$",
+        "$$= \\lim_{x \\to 3^-} \\frac{(x - 3)(x + 3) + a(x - 3)}{x - 3} = \\lim_{x \\to 3^-} (x + 3 + a) = 6 + a$$",
+        "따라서 $a - b = 1 - (-12) = 13$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_012",
+      "condition": "C",
+      "response_sha256": "0a61e7f3a5a2439dcef90cb0f6be748f7bf3d6326596005ee59d3f20427044c2",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "함숫값 및 우극한 7을 정확히 계산하고 유한 좌극한 조건에서 b=-3a-9를 얻었다. 이를 대입한 분자를 (x-3)(x+3+a)로 약분해 좌극한 6+a를 구한 과정이 올바르다. a=1, b=-12이므로 a-b=13이며 최종정답 ⑤도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\lim_{x \\to 3^+} f(x) = f(3) = \\frac{2(3)+1}{3-2} = \\frac{7}{1} = 7$",
+        "$b = -3a - 9$",
+        "$= \\lim_{x \\to 3^-} (x+3+a) = 3+3+a = 6+a$",
+        "$a - b = 1 - (-12) = 1 + 12 = 13$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_022",
+      "condition": "C",
+      "response_sha256": "bc2aa58661fef5eed42dcf4fb6bb511356af6fced61605df5bd99361378b889e",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "평균변화율 -3과 도함수 3x²-12x+5를 정확히 계산해 3a²-12a+8=0을 얻었다. 두 근 2±2√3/3은 모두 (0,4)에 있으므로 근과 계수 관계로 구한 곱 8/3이 요구한 전체 곱이다. 소수 표현은 근삿값을 나타내며 범위 판단을 바꾸지 않는다. p+q=11과 최종정답이 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(4) = 4^3 - 6(4^2) + 5(4) = 64 - 96 + 20 = -12$",
+        "$3a^2 - 12a + 8 = 0$",
+        "$a_1 a_2 = \\frac{8}{3}$",
+        "$\\sqrt{3} \\approx 1.732$이므로 $\\frac{2\\sqrt{3}}{3} \\approx 1.154$입니다.",
+        "최종정답: 11"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_022",
+      "condition": "B",
+      "response_sha256": "694d04189fcb862de4e017c223567b05ec044c2b15ee597fcdbac3ea5f14c59b",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "함숫값으로 평균변화율 -3을 구하고 f′(a)=-3을 이차방정식 3a²-12a+8=0으로 바르게 정리했다. 근의 공식으로 두 근이 0과 4 사이에 있음을 확인한 뒤 곱 8/3을 적용했으므로 p=3, q=8과 최종정답 11이 정확하다. 범위 확인의 소수들은 앞서 얻은 정확한 근의 근삿값이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$$\\frac{-12 - 0}{4 - 0} = \\frac{-12}{4} = -3$$",
+        "$3a^2 - 12a + 8 = 0$",
+        "$a_1 a_2 = \\frac{8}{3}$",
+        "$\\sqrt{3} \\approx 1.732$이므로 $\\frac{2\\sqrt{3}}{3} \\approx 1.154$입니다.",
+        "최종정답: 11"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_022",
+      "condition": "D",
+      "response_sha256": "2f88b53e9317d8ce3f0711bbf9ca87835fcb113ad36647053ae3d263ea0697e6",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "평균변화율과 미분 계산이 정확하며 이를 같게 둔 방정식은 3a²-12a+8=0이다. 제시한 정확한 두 근 2±2√3/3은 모두 (0,4)에 속하므로 근의 곱 8/3과 기약분수의 p=3, q=8이 맞다. 소수 표현은 근삿값으로 이해되며 최종정답 11도 정확하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "따라서 평균변화율은 $\\frac{-12 - 0}{4 - 0} = -3$입니다.",
+        "$3a^2 - 12a + 8 = 0$",
+        "$a_1 a_2 = \\frac{8}{3}$",
+        "$\\sqrt{3} \\approx 1.732$이므로 $\\frac{2\\sqrt{3}}{3} \\approx 1.154$입니다.",
+        "최종정답: 11"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_028",
+      "condition": "C",
+      "response_sha256": "52d97caa3a59c2f2c9b6f66ac87d89dd1e17d6d94a07ce99f2484b68d7d88f7c",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "미분가능성에 필요한 연속 조건으로 -a+b=-4를 정확히 구했다. 연속을 먼저 확보한 다항식 조각들이므로 경계에서 조각 도함수의 값 3-a와 -3을 좌우 미분계수로 비교할 수 있다. a=6, b=2와 곱 12가 정확하며 최종정답 ④도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$-a + b = -4$  --- (1)",
+        "$f'(x) = 3x^2 - a$ ($x < 1$)",
+        "$3 - a = -3$",
+        "$b = 2$",
+        "따라서 $a \\times b = 6 \\times 2 = 12$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_028",
+      "condition": "D",
+      "response_sha256": "58eddee6aed4d5c2f53601eff4f770688061f35efeba29e3ccf69327e878bddf",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "연속 조건 1-a+2b=-3+b와 조각 도함수의 경계값을 같게 두는 3-a=-3을 모두 정확히 세웠다. 연속 조건을 이미 적용했고 각 조각은 다항식이어서 이 도함수 비교는 타당하다. a=6, b=2와 곱 12 및 최종정답 ④가 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$1 - a + 2b = -3 + b$",
+        "$f'(x) = 3x^2 - a$ ($x < 1$)",
+        "$3 - a = -3$",
+        "$b = 2$",
+        "따라서 $a \\times b = 6 \\times 2 = 12$ 입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_028",
+      "condition": "B",
+      "response_sha256": "a310e612cdfcae22bc661188f5c84d60c19b3aa80182f6828692562b13ac436b",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계에서 연속을 적용해 -a+b=-4를 얻고 도함수의 좌우 극한을 비교해 a=6을 구한 계산이 정확하다. 일반 함수에서는 도함수 극한과 미분계수를 구별해야 하지만 여기서는 연속 조건과 다항식 조각의 매끄러움으로 해당 비교가 유효하다. b=2, 곱 12와 최종정답 ④가 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$-a + b = -4$  --- (1)",
+        "$\\lim_{x \\to 1^-} (3x^2 - a) = \\lim_{x \\to 1^+} (-3)$",
+        "$3 - a = -3$",
+        "$b = 2$",
+        "따라서 $a \\times b = 6 \\times 2 = 12$ 입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_039",
+      "condition": "C",
+      "response_sha256": "4f79b76f2a04de7d28b02944c390e18685ae5f81d9422d8639db6aeb1f099b77",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수 3x(x-2)가 0이 되는 두 점과 극대·극소 판정이 정확하다. x=0의 극댓값이 k이므로 k=9이고, x=2에서의 극솟값 8-12+9=5를 올바르게 계산했다. 최종정답 ⑤도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 - 6x = 3x(x - 2)$",
+        "함수 $f(x)$의 증감표를 생각해보면, $x=0$에서 극댓값을 갖고 $x=2$에서 극솟값을 갖습니다.",
+        "문제에서 극댓값이 9라고 하였으므로, $k = 9$입니다.",
+        "$f(2) = 8 - 12 + 9 = 5$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_039",
+      "condition": "B",
+      "response_sha256": "cbb4e8108889baca89160dcaac3458214552a23bbe58190e502e517b94bc43ce",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수 부호를 세 구간에서 정확히 조사해 x=0이 극대점, x=2가 극소점임을 확인했다. 극댓값 k=9를 대입하여 극솟값 5를 구한 계산이 타당하고 최종정답 ⑤도 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 - 6x = 3x(x - 2)$",
+        "함수 $f(x)$의 증감표를 생각해보면, $x < 0$에서 $f'(x) > 0$, $0 < x < 2$에서 $f'(x) < 0$, $x > 2$에서 $f'(x) > 0$이므로,",
+        "문제에서 극댓값이 $9$라고 하였으므로, $k = 9$입니다.",
+        "$f(2) = 5$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_039",
+      "condition": "D",
+      "response_sha256": "52c7c61c278e5d62f4c0ed4b1a4311284614d45fce350214695c96a61be64d96",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "증가·감소 구간과 두 극점의 분류를 정확히 제시했다. 극댓값 f(0)=k=9로부터 극솟값 f(2)=k-4=5를 구한 미분·대입 과정이 올바르며 최종정답 ⑤도 정확하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 - 6x = 3x(x - 2)$",
+        "함수 $f(x)$의 증감표를 생각해보면, $x < 0$에서 증가, $0 < x < 2$에서 감소, $x > 2$에서 증가하므로,",
+        "$f(2) = 2^3 - 3(2)^2 + k = 8 - 12 + k = k - 4$",
+        "$f(2) = 9 - 4 = 5$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_044",
+      "condition": "C",
+      "response_sha256": "c7866bdd9243817b111e9e5094c68ee8fe25fd44024e99249cdafc953e1711f2",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "함수 2x³-6x²와 수평선 y=-k의 양의 교점 수로 바꾸고 극값 0과 -8을 정확히 구했다. -8<-k<0일 때 각 양의 단조 구간에서 교점이 하나씩 생기며, 경계 k=0과 k=8은 서로 다른 양의 근이 하나뿐임을 올바르게 구별했다. 따라서 정수 k=1,…,7의 7개라는 결론과 최종정답이 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 6x^2 - 12x = 6x(x - 2)$",
+        "1) $-8 < -k < 0$인 경우: $x=0$과 $x=2$ 사이에서 교점이 1개, $x=2$와 $x=3$ 사이에서 교점이 1개 생겨 양의 실근이 2개입니다.",
+        "2) $-k = 0$인 경우: $f(x)=0$의 양의 실근은 $x=3$ 하나뿐이므로 제외합니다.",
+        "3) $-k = -8$인 경우: $f(x)=-8$의 실근은 $x=2$ (중근)와 다른 음의 실근 하나이므로 양의 실근은 $x=2$ 하나뿐입니다.",
+        "최종정답: 7"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
     }
   ]
 }
