@@ -1,6 +1,6 @@
 # MathHint 작업 진행 상태
 
-STATUS: COMPLETE_CLUSTERING_ADDITIONS
+STATUS: IN_PROGRESS_TOKEN_ANALYSIS_STAGE1
 EXECUTION_ALLOWED: true
 LAST_CONFIRMED_PUBLISHED_COMMIT: 895b288
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
@@ -314,3 +314,13 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 기존추적2403중2376파일바이트동일,기존모든CSV/PNG/PT/datavectors·회귀/Gemini/구931파일불변. 변경27경로는full validation의preservation.allowed_changed_files에기록. JSON은artifact_hashes만바뀌었고기존metrics/documents/config는완전동일이다.
 - 전체265의ARI/NMI는같은학습자료의탐색적일치도다. 보고서에기존test80과평가범위차이·NMI/큰k/표본수한계를명시했다. 성공유형8/8군집과혼합12문항10유형,동일삼각방정식19문항의12/13군집분산사례를원문으로연결했다.
 - 추가불용어/TF-IDF/신경망/회귀재학습/Gemini재실험없음. 미완료필수작업0. 마지막검증기록/문서커밋푸시확인후완료보고한다. 5시간복구예약은중지상태peek false로확인했으며새예약을만들지않았다.
+
+## 2026-11-10 후속 연구 1단계 토큰 분석 시작 — 2026-11-10T06:26:16.436141+00:00
+
+- 최신사용자지시는전체연구계획중1단계만승인했다. 토큰통계/분산/중복/OOV/기존B/C실전송해설토큰분석을하고빈사용자선택JSON2개를게시한뒤중단한다. 자동불용어선정·좌표제거·군집화/정규화/회귀/신경망/새지표실험·순열·API는실행/구현모두금지다.
+- 시작HEAD048a3338cf598c65a567907fecd2a82e46a1586f,Git clean. 추적2571파일SHA를/tmp/mathhint_token_baseline.json에확보,복구branch recovery/before-token-analysis-20261110생성. final_experiment전체와data/기존코드도이번에는수정하지않는다.
+- 새코드mathhint_analysis/token_analysis/,새결과results/cluster_improvement/에분리. 기존results/README에는링크만추가한다. 공유원본알고리즘복사/수정없음. 실제벡터346/431·185/80확인.
+- 구현분담:설명용토큰역할·원시통계/학습185분산분해/중복·OOV복원/실제전송B/C분석·저장자료보고서/그림·독립전수검증. root는통합명령/보존/빈JSON/영구검증/게시를담당한다.
+- 주된η²와거리기여는학습185기준,전체265 TF/DF/비라벨분산과구분한다. Kiwi저장형태는form만있어품사중의성을남긴다. 원래토큰화버전kiwipiepy0.24.1/model0.24.0을대조한다.
+- 현재단계:자료/기준SHA확보완료→구현중→실제분석→독립검증/이미지/링크→완료커밋/푸시/원격확인→사용자선정대기. 아직완료아님.
+- 이번에는푸시후중단조건을지키도록진행중체크포인트는로컬에남기고,최종검증이끝난뒤관련커밋을한번에원격게시한다. 이전복구자동화는중지상태를유지하며후속실험을예약하지않는다.
