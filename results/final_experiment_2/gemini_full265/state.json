@@ -1,337 +1,17 @@
 {
   "status": "partial_complete",
-  "reason": "전체265 요청 감사·정확 재사용 완료. 실제 API 환경은 별도 확인합니다.",
-  "updated_at": "2026-11-10T23:43:10.354675+00:00",
+  "reason": "이번 실행의 신규 요청 예산에 도달했습니다.",
+  "updated_at": "2026-11-10T23:53:59.376471+00:00",
   "config_id": "054e3feed73f033e910825c35d9a7332fb90a161d453525bb63edccce42a7cbe",
   "split": "all",
   "experiment_scope": "full265",
   "expected_requests": 1060,
-  "successful_requests": 320,
+  "successful_requests": 360,
   "failed_requests": 0,
-  "saved_responses": 320,
-  "response_log_entries": 320,
-  "pending_count": 740,
+  "saved_responses": 360,
+  "response_log_entries": 360,
+  "pending_count": 700,
   "pending_requests": [
-    {
-      "id": "diff_1_001",
-      "condition": "A",
-      "method": "baseline",
-      "split": "train",
-      "request_sha256": "2cdf584ce0193f117252de4b18f1e7474471e6c840d531a8e6101d5920b54fc0",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_001",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "train",
-      "request_sha256": "6294546b0087d1246bc3454a9528ce166d6565746272b8a20ca3cd21670335e0",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_001",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "train",
-      "request_sha256": "faeaab7efd97405e0e302bc5522565344e2cdce4be914851fe1cfcb08e8d6e76",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_001",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "train",
-      "request_sha256": "7594aa32c8c9e70b1dc082351908e79df8b1e582eb5ab058dd9d49de525b13e8",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_002",
-      "condition": "A",
-      "method": "baseline",
-      "split": "train",
-      "request_sha256": "5194fb72359c5d87dffc61cd6795f08e4ece61348a799daad61da9175ae980a6",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_002",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "train",
-      "request_sha256": "597abcf168b58965420b2489965530a9c0d253cba98d673e26a1ef73cb9f5319",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_002",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "train",
-      "request_sha256": "55d52085e67e149b4a452660a7094e8115e805816ac2e6d4b9a185a842f355ff",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_002",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "train",
-      "request_sha256": "5eab22e986b5cacf2e906e32f904c2ae750187719f846f576b7d36f111097d07",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_003",
-      "condition": "A",
-      "method": "baseline",
-      "split": "train",
-      "request_sha256": "fb5820feb4f3cd6f87f1f6b6f09e096ed3743fd28e7e4a1cb5ba453cf751e41d",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_003",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "train",
-      "request_sha256": "7adbed959b529504f7c283e7a33bbfd27fe6a5339bc7683cf77f86c619f56b3f",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_003",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "train",
-      "request_sha256": "466e5a41abcc327fe3fcf9fded7fc66f14ad1557d8bafb75a9bff010343b5cf8",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_003",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "train",
-      "request_sha256": "fac361c1782d0083e2e256ec5a488aae55564adaafe46c5a6f5078fe8178ab29",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_004",
-      "condition": "A",
-      "method": "baseline",
-      "split": "train",
-      "request_sha256": "d0129b27ad0ccd6a37bf32154fa176aed8502174f2716dce5ed4efad8bd919d2",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_004",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "train",
-      "request_sha256": "06db64b03d48e0ef18081a5ea5f404e9766f561630fc369f7e71c45f00c1dfe2",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_004",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "train",
-      "request_sha256": "d0d88ebf97877a04d09092b7becfd7c690376066ab4c46c00cfd8206ffef9d78",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_004",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "train",
-      "request_sha256": "d67358c59c26fbdffdda1cdbd128ad0bfad9dc3227290832c7bd69dea229228d",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_006",
-      "condition": "A",
-      "method": "baseline",
-      "split": "train",
-      "request_sha256": "add70c3770a949ab632dca746fc72397e94fdd13193e2c900ab801e83d6cefae",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_006",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "train",
-      "request_sha256": "3b5a933ff49aeb58f25a5c223d3cf22e24501a534a9313e9fbdaadc4930648aa",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_006",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "train",
-      "request_sha256": "b52e9ec9b068b3a94ab6875e1ee0bc5a6f9b7f6af5d6f16fc6cd62deec1953c3",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_006",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "train",
-      "request_sha256": "36564001c97589ab4ca28aa97b9190e1259a09be650385104fd5954e4a9ea10e",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_007",
-      "condition": "A",
-      "method": "baseline",
-      "split": "train",
-      "request_sha256": "d7703f9dca2573674a9822d16e92dd069b3fe056663e2bcf58cd8e5ec876b805",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_007",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "train",
-      "request_sha256": "6dc44795cf92548dfeae38a477dc47b79dac45c971aede16822fdf03b26ad3f2",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_007",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "train",
-      "request_sha256": "fdb6943c98b481a8f14c5ef73cd017ed6db0fed91d66fa467c7cf7003cc0da5d",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_007",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "train",
-      "request_sha256": "25f5b8bcb61ff0b2f3ecf58fbe8a6be27e18e93fae22433889a492c742bdf714",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_008",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "train",
-      "request_sha256": "7e585265599891ae77e9eb2ae5fc65b854720e72b792b746530f048feffd481c",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_008",
-      "condition": "A",
-      "method": "baseline",
-      "split": "train",
-      "request_sha256": "3e4a43b8231070c481cd42fba3584c370bc0aa37b32718491c4dfa3ed3f4e9f6",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_008",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "train",
-      "request_sha256": "ba7e299ff995ad9ad72fe6de25f8a40b7ebc651badd332948a4b768de441a068",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_008",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "train",
-      "request_sha256": "a2afb42216ca7daed93489e453b6049f161250f9b85d6925ec58bcdcaa04bede",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_009",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "train",
-      "request_sha256": "36217860f43388fce56a7a73be88a0c3f15bdd3b8a757bf0bf74901aaa3cd0fa",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_009",
-      "condition": "A",
-      "method": "baseline",
-      "split": "train",
-      "request_sha256": "ce546cd582b082897aedf861c25fb52b2dd989ea255ca72b79f38d3c2f50ff62",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_009",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "train",
-      "request_sha256": "c3c43c6839f6d90e2fd1393a1436f46e7a1afffe0d23393965509a90f2829298",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_009",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "train",
-      "request_sha256": "772f7e98bd44f7a8b64dc4af790a7fd7f2e6924b47db0f3dbf7685edebc2fa8f",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_010",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "train",
-      "request_sha256": "10581b9a06d0993a2854c59fc1efb0f29a2ddb531fc29e69f863e8acd0bb5d03",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_010",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "train",
-      "request_sha256": "df04604702a5a356e49c1862dc844c9c5eb594277dfb34791bd0b4b9f799b582",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_010",
-      "condition": "A",
-      "method": "baseline",
-      "split": "train",
-      "request_sha256": "655fce3b1a632b364d5b9d601404821dd554daa6d67e700547437578f693db4e",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_010",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "train",
-      "request_sha256": "f5938174d245c59534e78be60c574f1b7c14f936f497487204333f81e1f1c52a",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_013",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "train",
-      "request_sha256": "d69d92ce648a29e6e73b099be5135e66f245687f9f20a176547564c8a88c5548",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_013",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "train",
-      "request_sha256": "9b0b2c0a20616ec9bfb0ccb5a8691ebab0659f1fa9c07cee425bd1781ce012ea",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_013",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "train",
-      "request_sha256": "40cca3d05d1ad71555dedd5d24ef47bd73cf5a6f82c79eed37d1bec693a092df",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_1_013",
-      "condition": "A",
-      "method": "baseline",
-      "split": "train",
-      "request_sha256": "bdb18b87f1af62a71772198315da67efcd5b90ea9f56dbdceb4b9c7b3d78ebf6",
-      "last_status": "not_executed"
-    },
     {
       "id": "diff_1_015",
       "condition": "B",
@@ -5941,17 +5621,45 @@
     },
     "train": {
       "expected_requests": 740,
-      "successful_requests": 0,
-      "pending_requests": 740
+      "successful_requests": 40,
+      "pending_requests": 700
     }
   },
   "reused_successes": 320,
-  "new_successes": 0,
+  "new_successes": 40,
   "safe_to_resume": true,
   "resume_command": "python -m mathhint_solver.final_experiment_2.gemini_full265 generate",
   "resume_prerequisites": "기록된 대기시간과 실행 예산을 확인하고 미완료만 실행",
   "provider_daily_reset_time": null,
   "resume_note": "성공 요청은 해시를 검증해 재사용한다. 환경 종료 후 자동 예약은 설정하지 않았다.",
   "user_authorized_additional_train185": true,
-  "training_scope_note": "train185는 모델 가중치 학습에 사용된 문항의 예측이다. 전체265 혼합값은 독립 테스트 성능이 아니다."
+  "training_scope_note": "train185는 모델 가중치 학습에 사용된 문항의 예측이다. 전체265 혼합값은 독립 테스트 성능이 아니다.",
+  "limiter": {
+    "new_request_starts": 40,
+    "rolling_minute_starts": 6,
+    "rolling_hour_starts": 40,
+    "rolling_24h_starts": 316,
+    "status": "partial_complete",
+    "reason": "이번 실행의 신규 요청 예산에 도달했습니다.",
+    "daily_quota_reported": false,
+    "cooldown_remaining_seconds": 0,
+    "service_cooldown_remaining_seconds": 0,
+    "resume_cooldown_note": "absolute recorded delays restored; legacy events preserve only recorded backoff, not unrecorded provider timing; daily reset remains unconfirmed",
+    "policy": {
+      "interval_seconds": 10.0,
+      "workers": 1,
+      "rpm": 6,
+      "rph": 360,
+      "rpd": 1400,
+      "max_new_requests": 40,
+      "max_run_seconds": 3600.0,
+      "max_wait_seconds": 120.0,
+      "max_attempts": 2,
+      "http_timeout_ms": 180000,
+      "provider_limits_confirmed": false,
+      "limits_note": "user-authorized local safety cap for full265 extension; not a confirmed provider quota; old and new request starts share rolling windows",
+      "user_authorized_additional_requests": 740
+    },
+    "provider_quota_confirmation": "not inferred from local caps"
+  }
 }
