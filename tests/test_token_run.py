@@ -48,7 +48,7 @@ class TokenRunTests(unittest.TestCase):
     def test_analysis_cannot_write_into_existing_results(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            with self.assertRaisesRegex(ValueError, "cluster_improvement"):
+            with self.assertRaisesRegex(ValueError, "token_analysis"):
                 run("analyze", root=root, output=root / "results/final_experiment")
             self.assertFalse((root / "results").exists())
 

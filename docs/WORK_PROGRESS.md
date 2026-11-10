@@ -2,14 +2,14 @@
 
 STATUS: COMPLETE_TOKEN_ANALYSIS_STAGE1_AWAITING_USER_SELECTION
 EXECUTION_ALLOWED: false
-LAST_CONFIRMED_PUBLISHED_COMMIT: 048a3338cf598c65a567907fecd2a82e46a1586f
+LAST_CONFIRMED_PUBLISHED_COMMIT: 3a4e762df9135953505b4575246ad6f5002d136a
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
 AUTOMATION_STATUS: PAUSED_AFTER_READER_WORKFLOW_COMPLETION_VERIFIED_BY_PEEK
 FIRST_RUN_FROM_SAVED_RULE: 2026-11-09T05:58:50+09:00
 RECURRENCE: EVERY_5_HOURS
 NEXT_RUN_TIME_SERVER_FIELD: NOT_RETURNED
 ENVIRONMENT: MathHint / inherited / current_environment_id_confirmed
-REMOTE_CHECKPOINT_STATUS: TOKEN_ANALYSIS_VERIFIED_READY_FOR_FINAL_PUSH_AND_REMOTE_HEAD_CHECK
+REMOTE_CHECKPOINT_STATUS: TOKEN_ANALYSIS_PUBLISHED_RENAME_VERIFIED_READY_FOR_PUSH
 GITHUB_PREAUTHORIZATION_SETTING: RESTORED_TO_ORIGINAL_INHERIT_VERIFIED
 TIMEZONE: Asia/Seoul
 USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
@@ -20,7 +20,7 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 문제346·해설431, TF/DF/전체265 분산, 학습185의4수준η²·거리기여, OOV29/48, 실제전송160요청/3200좌표를 분석했다. 토큰 인덱스·어휘·원본 벡터는 불변이다.
 - 새검사27/27, 통계검증1120/1120, 독립전수대조PASS. 원본데이터/final/구보존자료2470파일과기존토큰화/공통코드4파일SHA동일. 그림11개·문서5개·CSV15개를제공한다.
 - 두stopwords JSON은모두[]이며프로그램이자동추가하지않는다. 최초생성후사용자작성목록은덮어쓰지않고어떤좌표변환에도사용하지않는다.
-- 먼저 results/cluster_improvement/README.md를읽는다. 이번분석은게시후중단한다. 사용자가목록을확정하고후속을명시적으로요청하기전2~5단계실행/구현금지. 복구자동화는peek로false확인한중지상태다.
+- 먼저 results/token_analysis/README.md를읽는다. 이번분석은게시후중단한다. 사용자가목록을확정하고후속을명시적으로요청하기전2~5단계실행/구현금지. 복구자동화는peek로false확인한중지상태다.
 - 최종게시전수치/코드검증까지완료했다. 아래게시명령뒤실제Git HEAD와원격refs/heads/main을대조하여확인하며,원격반영확인외추가작업을이어가지않는다.
 
 ## 이전 작업 완료 — 혼동행렬과 전체265 탐색
@@ -346,3 +346,12 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 원본final_experiment전체/기존manifest/검증기록/모든데이터/모델/요청/응답불변이다. 기존파일수정은허용된results/README링크와이번작업명세/진행/자동화상태메타뿐이다. 원시기존코드도수정하지않았다.
 - 보존/독립검증/실행guard/시각검토/27tests근거를새validation.json과test_results.txt에정리했다. 새manifest는사용자소유stopwords파일을생성산출물과구분하며사용자목록을자동초기화하지않는다.
 - 이제관련파일만최종커밋/일반push하고실제원격SHA를확인한뒤중단한다. 본문의LAST_CONFIRMED_PUBLISHED_COMMIT은게시직전기존원격048a333을뜻한다. 이번최종반영여부는실제Git HEAD와원격main의일치로확인한다. 이후단계는승인대기이며자동화를예약하지않는다.
+
+## 토큰 분석 결과 폴더 명칭 변경 — 2026-11-10T11:22:56.836835+00:00
+
+- 사용자요청에따라 results/cluster_improvement/를results/token_analysis/로이동했다. 실행경로·테스트·상위결과안내링크만수정했으며기존명세/진행이력의옛이름은보존했다.
+- 변경전HEAD3a4e762와40산출물/추적파일SHA를/tmp/mathhint_token_rename_baseline.json에확보했다. 기존분석sourceSHA는역사적근거로보존하고출력경로변경이력/수정소스SHA만새config에추가했다. manifest는config의해시만갱신했다. 분석·그림재생성·학습·API호출은하지않는다.
+- 다음: 새경로의기존CSV/PNG/두선택파일바이트동일·문서링크·읽기전용검증·기존원본보존확인후커밋/푸시. 후속실험은여전히사용자선정/승인대기다.
+
+- 명칭변경검증완료:40개이동파일중38개바이트동일. 변경2개는config경로변경이력과그manifest해시뿐이다. 모든CSV15개/PNG11개/두[]선택파일/기존validation감사원문그대로. 새경로읽기전용verify1120/1120·token tests27/27 PASS,원본data/final/구보존자료SHA불변. 모델/분석산출물재생성/API없음. 관련변경커밋/원격확인후다시사용자선정대기.
+- 독립감사추가PASS:상대링크62개정상·활성옛경로참조0·기존보호2470파일을Git3a4e762원본blob과직접대조해변경0확인. 새config는명칭변경이력외원본JSON과동일하다.

@@ -7,7 +7,7 @@
 | 구분 | 내용 | 먼저 볼 자료 |
 |---|---|---|
 | **최종 연구 결과** | 과목·단원·세부단원·유형의 유클리드/구면 군집화, 실수 회귀 평가, Gemini A/B/C 각80문항 비교 | [전체 안내](final_experiment/README.md) · [군집별 문항](final_experiment/01_clustering/cluster_members.csv) · [Gemini80문항 비교](final_experiment/03_gemini/question_comparison.csv) · [최종 보고서](final_experiment/final_report.md) |
-| **후속 연구1단계: 토큰 분석** | 문제·해설 통계, 학습 분류별 분산·중복성, OOV와 실제 B/C 전송 구성. 불용어 선정·군집화 재실험은 미실행 | [먼저 읽을 요약](cluster_improvement/README.md) · [종합 보고서](cluster_improvement/token_analysis_report.md) · [사용자 선택 파일](cluster_improvement/stopwords/) |
+| **후속 연구1단계: 토큰 분석** | 문제·해설 통계, 학습 분류별 분산·중복성, OOV와 실제 B/C 전송 구성. 불용어 선정·군집화 재실험은 미실행 | [먼저 읽을 요약](token_analysis/README.md) · [종합 보고서](token_analysis/token_analysis_report.md) · [사용자 선택 파일](token_analysis/stopwords/) |
 | 기존 실험의 불변 근거 | `model_comparison_2026-11-07/`의 원본 응답160개, 학습 모델·설정·검토·출처 및 기존 결과 | [보존 자료 안내](model_comparison_2026-11-07/README.md) |
 
 기존 폴더는 재사용 결과의 근거를 확인하기 위한 보존 영역이다. 그 안의 두 조건 보고서·PDF는 당시 실험의 기록이며 현재 최종 세 조건 결과와 구분한다. 최종 해석과 수치는 `final_experiment/`를 기준으로 읽는다.

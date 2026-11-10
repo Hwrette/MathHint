@@ -58,9 +58,9 @@ def run(action="analyze", *, root=ROOT, output=None):
     if action not in ("analyze", "report", "verify"):
         raise ValueError("analyze / report / verify 중 하나를 지정하세요. 모델 실험 명령은 없습니다.")
     root = Path(root).resolve()
-    output = Path(output).resolve() if output is not None else root / "results/cluster_improvement"
-    if output != root / "results/cluster_improvement":
-        raise ValueError("이번 분석은 results/cluster_improvement/에만 저장합니다.")
+    output = Path(output).resolve() if output is not None else root / "results/token_analysis"
+    if output != root / "results/token_analysis":
+        raise ValueError("이번 분석은 results/token_analysis/에만 저장합니다.")
     if action != "analyze" and not (output / "config.json").exists():
         raise FileNotFoundError("저장된 분석이 없습니다. 먼저 analyze를 실행하세요.")
     config = prepare_config(root, output)

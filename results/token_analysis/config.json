@@ -2521,5 +2521,16 @@
     "mathhint_analysis/token_analysis/__init__.py": "37d3544e5f20192cbf3feb4e82e082d3cfc7aeedaa41192e77ba09ac33a29dec",
     "mathhint_analysis/token_analysis/run.py": "a7a2681b6acdd79bd80a488c8f9403f12d5cab56123b76ec0e32d8fce39ecd9a",
     "mathhint_analysis/token_analysis/common.py": "6c48cfa155b5694b8cd2723144ff804b8d0e6cf8e75e02d1e2c41a6d8b6ad4a9"
+  },
+  "result_directory_rename": {
+    "from": "results/cluster_improvement",
+    "to": "results/token_analysis",
+    "analysis_results_recomputed": false,
+    "original_analysis_commit": "3a4e762df9135953505b4575246ad6f5002d136a",
+    "source_sha256_after_rename": {
+      "mathhint_analysis/token_analysis/common.py": "d62dd826e0b0f3a732979b2d985955f90d1919849bc67d61faad04c0b8a31c7c",
+      "mathhint_analysis/token_analysis/run.py": "5177cef3b41d42de72d477409f66e83786fb3918d31a2904cafbbf7bdeb560f3"
+    },
+    "note": "Original analysis_sources_sha256 is retained as historical provenance. Only output-directory references changed."
   }
 }

@@ -10,7 +10,7 @@ import numpy as np
 from mathhint_learning.TorchData import read_dataset
 
 ROOT = Path(__file__).resolve().parents[2]
-OUTPUT = ROOT / "results/cluster_improvement"
+OUTPUT = ROOT / "results/token_analysis"
 
 
 def load_data(root=ROOT):
