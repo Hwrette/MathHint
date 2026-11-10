@@ -48,7 +48,7 @@ def _write(path, lines):
     generated = "\n".join(lines).rstrip() + "\n"
     existing = path.read_text(encoding="utf-8") if path.exists() else ""
     blocks = []
-    for section in ("distance-comparison", "eta-rankings", "full-dataset-eta"):
+    for section in ("distance-comparison", "eta-rankings", "full-dataset-eta", "approved-stopwords"):
         start, end = f"<!-- {section}:start -->", f"<!-- {section}:end -->"
         if start in existing and end in existing:
             block = start + existing.split(start, 1)[1].split(end, 1)[0] + end
@@ -416,7 +416,7 @@ def build_report(root, output, summary=None):
     _write(output / "token_analysis_report.md", report)
     source_counts = {region: Counter(r["source"] for r in rows) for region, rows in (("문제", problem), ("해설", solution))}
     readme = ["# MathHint 후속 연구 1단계 · 사용자의 토큰 검토 자료", "",
-        "**토큰 분석만 완료했다. 불용어는 선정하지 않았고, 군집화 재실험·모델 학습·Gemini 호출은 수행하지 않았다.** 문제346·해설431개의 고정 어휘와 기존185/80 분할을 그대로 읽었다.", "",
+        "**아래 통계는 불용어 선정·적용 전의 원본 토큰 분석 결과다. 군집화 재실험·모델 학습·Gemini 호출은 수행하지 않았다.** 문제346·해설431개의 고정 어휘와 기존185/80 분할을 그대로 읽었다.", "",
         "## 먼저 확인할 주요 관찰", "", f"- 어휘 종류: 문제 Kiwi{source_counts['문제']['Kiwi']}·LaTeX{source_counts['문제']['LaTeX']}, 해설 Kiwi{source_counts['해설']['Kiwi']}·LaTeX{source_counts['해설']['LaTeX']}.",
         f"- 문제의 학습 분산 상위: {top_names}.",
         f"- 중괄호·좌우 표시·소괄호 6좌표의 학습 문항쌍 제곱거리 기여 합: **{_pct(pair_share)}**. 높은 기여는 수학적 중요도와 같지 않다.",
@@ -432,8 +432,8 @@ def build_report(root, output, summary=None):
         "|3 해설 힌트의 구성|[해설 토큰·B/C 분석](02_solution_tokens/README.md) · [전체431목록](02_solution_tokens/all_tokens.csv)|",
         "|4 제외된 테스트 토큰|[문자열·횟수·손실 가능성](03_oov_analysis/README.md)|",
         "|5 전체 해석과 정의|[토큰화·분산 정의·한계 보고서](token_analysis_report.md) · [검증 기록](validation.json)|", "",
-        "## 사용자가 직접 선택할 파일", "", "- [문제 불용어 선택용 빈 배열](stopwords/problem_stopwords.json)",
-        "- [해설 불용어 선택용 빈 배열](stopwords/solution_stopwords.json)", "",
+        "## 사용자가 직접 선택할 파일", "", "- [문제 불용어 목록](stopwords/problem_stopwords.json)",
+        "- [해설 불용어 목록](stopwords/solution_stopwords.json)", "",
         "**두 목록은 프로그램이 자동으로 채우지 않는다.** 범주·분산·η²는 선택 근거이며 제거/유지의 확정 판정이 아니다. 사용자의 목록 확정과 명시적 요청 전에는 후속 단계를 구현하거나 실행하지 않는다.", "",
         "## 그림과 실행", "", "![분산 상위20](01_problem_tokens/figures/variance_top20.png)", "",
         "[분산과 η² 산점도](01_problem_tokens/figures/variance_eta_scatter.png) · [중복 거리 기여](01_problem_tokens/figures/redundant_distance_contribution.png) · [Kiwi/LaTeX 구성](01_problem_tokens/figures/source_distribution.png) · [B/C 범주 비교](02_solution_tokens/figures/top20_category_composition.png)", "",

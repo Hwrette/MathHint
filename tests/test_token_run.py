@@ -3,13 +3,57 @@
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from mathhint_analysis.token_analysis.common import dump_json, read_json, review_files, sha256
 from mathhint_analysis.token_analysis.run import run, save_manifest, verify_saved_tables
-from mathhint_analysis.token_analysis.validation import scan_report_links, verify_sources
+from mathhint_analysis.token_analysis.validation import scan_report_links, validate_user_stopwords, verify_sources
 
 
 class TokenRunTests(unittest.TestCase):
+    def test_only_exact_user_owned_lists_are_exempt_from_historical_hashes(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            user_name = "results/token_analysis/stopwords/problem_stopwords.json"
+            fixed_name = "data/problem_stopwords.json"
+            dump_json(root / user_name, [])
+            dump_json(root / fixed_name, [])
+            config = {"protected_files_sha256": {name: sha256(root / name) for name in (user_name, fixed_name)}}
+            dump_json(root / user_name, ["latex:x"])
+            self.assertEqual(verify_sources(root, config), 1)
+            dump_json(root / fixed_name, ["latex:x"])
+            with self.assertRaisesRegex(ValueError, fixed_name):
+                verify_sources(root, config)
+
+    def test_user_choices_must_be_unique_strings_in_the_corresponding_vocabulary(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            output = Path(temporary)
+            paths = review_files(output)
+            vocabulary = {"problems": ["latex:x"], "solutions": [r"latex:\gamma"]}
+            dump_json(paths[0], ["latex:x"])
+            dump_json(paths[1], [r"latex:\gamma"])
+            before = [p.read_bytes() for p in paths]
+            self.assertEqual(validate_user_stopwords(output, vocabulary)["problem"], ["latex:x"])
+            self.assertEqual([p.read_bytes() for p in paths], before)
+            for invalid in (["latex:x", "latex:x"], [r"latex:\gamma"], [1], {"token": "latex:x"}):
+                dump_json(paths[0], invalid)
+                with self.subTest(invalid=invalid), self.assertRaises(ValueError):
+                    validate_user_stopwords(output, vocabulary)
+
+    def test_verifying_does_not_rewrite_historical_validation_or_manifest(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            output = root / "results/token_analysis"
+            dump_json(output / "config.json", {"protected_files_sha256": {}})
+            dump_json(output / "validation.json", {"historical": True})
+            save_manifest(output)
+            before = {p.name: p.read_bytes() for p in output.glob("*.json")}
+            with patch("mathhint_analysis.token_analysis.run.verify_analysis",
+                       return_value={"passed": 1, "failed": 0, "protected_original_files": 0}) as verify:
+                run("verify", root=root)
+            verify.assert_called_once_with(root, output, save=False)
+            self.assertEqual({p.name: p.read_bytes() for p in output.glob("*.json")}, before)
+
     def test_first_validation_accepts_its_own_pending_output_link(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)

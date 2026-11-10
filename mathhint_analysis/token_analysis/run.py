@@ -79,10 +79,11 @@ def run(action="analyze", *, root=ROOT, output=None):
     if action in ("analyze", "report"):
         from .reporting import build_report
         build_report(root, output, summary=read_json(output / "summary.json"))
-    result = verify_analysis(root, output)
+    result = verify_analysis(root, output, save=action != "verify")
     if result["failed"]:
         raise ValueError("검증 실패: " + ", ".join(c["check"] for c in result["checks"] if not c["passed"]))
-    save_manifest(output)
+    if action != "verify":
+        save_manifest(output)
     print(f"검증 {result['passed']}개 통과 · 원본 {result['protected_original_files']}파일 해시 동일 · 후속 실험 실행 없음", flush=True)
     return result
 

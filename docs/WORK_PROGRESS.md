@@ -1,26 +1,26 @@
 # MathHint 작업 진행 상태
 
-STATUS: COMPLETE_FULL_ETA_TABLE_DISPLAY_AWAITING_USER_SELECTION
+STATUS: COMPLETE_APPROVED_STOPWORDS_REGISTERED_AWAITING_EXPERIMENT_REQUEST
 EXECUTION_ALLOWED: false
-LAST_CONFIRMED_PUBLISHED_COMMIT: 43e91aaf69c4a783a59bcf0da9fcc1c037617530
+LAST_CONFIRMED_PUBLISHED_COMMIT: fa7b63e376937c72c30f912d92e891b7ad6617c7
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
 AUTOMATION_STATUS: PAUSED_AFTER_READER_WORKFLOW_COMPLETION_VERIFIED_BY_PEEK
 FIRST_RUN_FROM_SAVED_RULE: 2026-11-09T05:58:50+09:00
 RECURRENCE: EVERY_5_HOURS
 NEXT_RUN_TIME_SERVER_FIELD: NOT_RETURNED
 ENVIRONMENT: MathHint / inherited / current_environment_id_confirmed
-REMOTE_CHECKPOINT_STATUS: FULL_ETA_TABLE_DISPLAY_VALIDATED_READY_FOR_PUSH_VERIFY_GIT
+REMOTE_CHECKPOINT_STATUS: APPROVED_STOPWORDS_VALIDATED_READY_FOR_PUSH_VERIFY_GIT
 GITHUB_PREAUTHORIZATION_SETTING: RESTORED_TO_ORIGINAL_INHERIT_VERIFIED
 TIMEZONE: Asia/Seoul
 USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 
-## 현재 상태: 1단계 토큰 분석 완료, 사용자 선택 대기
+## 현재 상태: 토큰 분석 완료, 사용자 승인 불용어 등록 완료
 
 - 수행 범위는 통계·분산분해·중복·OOV·기존 B/C 전송 구성과 읽기 자료뿐이다. 불용어를 선택하거나 적용하지 않았고 K-means/회귀/신경망/새 API/성능평가/순열 기능을 구현하지 않았다.
 - 문제346·해설431, TF/DF/전체265 분산, 학습185의4수준η²·거리기여, OOV29/48, 실제전송160요청/3200좌표를 분석했다. 토큰 인덱스·어휘·원본 벡터는 불변이다.
 - 새검사27/27, 통계검증1120/1120, 독립전수대조PASS. 원본데이터/final/구보존자료2470파일과기존토큰화/공통코드4파일SHA동일. 그림11개·문서5개·CSV15개를제공한다.
-- 두stopwords JSON은모두[]이며프로그램이자동추가하지않는다. 최초생성후사용자작성목록은덮어쓰지않고어떤좌표변환에도사용하지않는다.
-- 먼저 results/token_analysis/README.md를읽는다. 이번분석은게시후중단한다. 사용자가목록을확정하고후속을명시적으로요청하기전2~5단계실행/구현금지. 복구자동화는peek로false확인한중지상태다.
+- 사용자②승인으로문제96/풀이97을선택JSON에저장했다. 함수f/g/h/Q/R은보존하고a/x및풀이v는목록에포함했다. 앞으로도목록변경전에전체토큰을보여주고명시적확인을받는다. 현재등록목록을기존벡터에적용하지않았다.
+- 먼저 results/token_analysis/README.md의승인목록안내를읽는다. 등록내용게시후중단한다. 목록등록은후속벡터가공/모델실험승인이아니며별도명시적요청전실행하지않는다. 이전복구자동화는중지상태를유지하고새예약은없다.
 - 최종게시전수치/코드검증까지완료했다. 아래게시명령뒤실제Git HEAD와원격refs/heads/main을대조하여확인하며,원격반영확인외추가작업을이어가지않는다.
 
 ## 이전 작업 완료 — 혼동행렬과 전체265 탐색
@@ -428,3 +428,20 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 공통ranking_sections에full_only옵션만추가해05생성에서만사용한다. 기본값False의기존학습185표시5개MD를임시폴더에서생성해원래파일과바이트동일확인했다. 기존학습표/수치CSV/data/모델/API/두선택[]는수정하지않았다. 불필요한새테스트/통계/모델실행/API는없다.
 - 05manifest는기존11MD해시만갱신,CSV/config/validation/verification_details해시와내용은그대로다. config.analysis_sources_sha256와verification_details의이전4표기록은43e91aa통계작성시점의역사적근거로보존했다. 현재표시소스는이번Git커밋의eta_rankings.py/full_dataset_eta_report.py이며표시변경검증은이기록과독립감사(/tmp/mathhint_full_open_audit.json·render·browser)로구분한다.
 - 시작2691추적파일중2675개불변,허용변경16개는작업문서2·표시소스2·MD11·표시manifest1이다. 새파일/삭제/실험추가는없다. 검증완료후관련변경만커밋/일반push해원격main일치를확인하고중단한다. 게시전확인기준43e91aa이며최종반영은실제Git/완료보고SHA로확인한다. 후속불용어선정/실험은사용자명시적요청대기다.
+
+## 사용자승인② 불용어등록시작 — 2026-11-10T15:18:45.766739+00:00
+
+- 전체목록을먼저보여준뒤사용자가②번을명시승인했다. 현재문제96/풀이97을기존어휘순JSON에저장했다. 미래변경마다동일한사전공개·명시승인절차를따른다.
+- 시작HEADfa7b63e·Git clean. 추적2691파일SHA를/tmp/mathhint_stopword_registration_baseline.json에확보했다. 이번변경은사용자JSON2개/검증의빈목록가정수정/현재목록안내·명세·진행기록에한정한다. 벡터·통계·모델적용은없다.
+- 검증이ownerJSON을빈배열SHA로고정하던실제호환성문제를고쳐exact두owner경로만과거원본SHA검사에서분리하고문자열/중복/domain어휘검사로대체했다. 나머지연구원본SHA검사는엄격하게유지한다. parentverify는읽기전용으로하여기존감사JSON/manifest를덮어쓰지않도록최소보강했다. 검증/게시아직진행중이다.
+
+## 사용자승인② 목록등록 검증완료·게시준비 — 2026-11-10T15:23:48.113592+00:00
+
+- 승인목록과저장JSON을독립재구성해문제96/풀이97의집합완전일치·중복0·전부각영역고정어휘존재·원래인덱스순저장확인했다. f/g/h/Q/R·그리스문자·π·수학명령·연산기호·visible\{\}보존,혼용a/x양쪽·v풀이제외목록포함이다. 전체정확한리스트는사용자소유JSON2개가유일기준이며앞선명세에SHA를기록했다.
+- exact두ownerJSON만과거빈배열SHA검사에서분리했다. 다른동명파일/원본은엄격한SHA검사를유지하고ownerJSON은문자열배열·중복없음·해당영역어휘일치를검사한다. 분석에목록을적용하는함수/새전처리/모델경로는추가하지않았다. parentverify의validation/manifest쓰기만막아기존연구감사기록을보존했다.
+- token/distance관련unit54/54 PASS(skip0). 새검사3개는owner경로만해시예외인지/잘못된목록·중복·wrong-domain차단/verify읽기전용을확인하고기존표시검사에승인내비보존을확장했다. 모델학습을포함하는전체기존suite는실행하지않았다.
+- 기존실제검증1120+381+25=1526/1526 PASS. root토큰검증보호2474,거리검증보호2508이다(옛2510중owner2개를별도내용검사). 검증3종전후모든token_analysis파일SHA동일로읽기전용확인했고fit2종·assign2종·회귀train·checkpointload·Linear.forward·SDK·원본tokenizer2종전부0call이다. 근거/tmp/mathhint_stopword_guarded_verify.json.
+- 독립보호2534연구파일SHA변경0(원본/벡터/모델/기존CSVPNG·numeric/config·감사JSON). 시작추적2691중허용변경13개외2678바이트동일이다. 변경13개는선택JSON2/명세·진행2/검증·안내코드4/단위검사2/현재문서2/문서manifest1이다. 새로운결과폴더나백업/로그파일은추가하지않았다.
+- 현재README·종합보고서맨위에승인등록96/97·미적용상태·미래사전승인절차를연결하고첫안내의빈배열표현을수정했다. 이전분석원문/수치와감사기록은역사적근거로보존했다. parentmanifest42키유지,변경해시는README/token_analysis_report2개뿐이다. 전체230상대파일링크누락0이다.
+- 현재목록은승인완료되어재승인은필요없지만향후추가/삭제/변경은새전체목록을보여주고별도확인을받는다. 이번에는등록까지만완료했다. 불용어적용벡터/군집화/회귀/신경망/Gemini/새성능실험은없고다음작업은사용자의명시적요청대기다.
+- 관련변경을커밋/일반push하고실제원격main과HEAD일치를확인한후중단한다. 위LAST_CONFIRMED_PUBLISHED_COMMIT은게시전실제fa7b63e이고이번게시최종SHA는Git/완료보고로확인한다. 필수등록작업미완료0이다.

@@ -1,5 +1,16 @@
 # MathHint 1단계: 토큰 표현과 실제 분류의 관계
 
+<!-- approved-stopwords:start -->
+
+## 사용자 승인 불용어 목록 등록
+
+사용자가 검토 목록의 **②번**을 승인하여 [문제96개](stopwords/problem_stopwords.json)·[풀이97개](stopwords/solution_stopwords.json)를 등록했다. 기본 후보+A·B·C·D와 일반 영문 이름을 포함하고, 혼용 문자 `a`, `x`, `v`도 해당 어휘에서 제외 대상으로 선택했다. 함수명 `f`, `g`, `h`, `Q`, `R`은 보존한다.
+
+현재는 **목록만 등록**했다. 아래의 기존 통계와 원문·벡터·모델·API 결과에는 불용어를 적용하지 않았다. 향후 목록을 추가·삭제·변경하기 전에도 전체 대상 토큰을 먼저 보여 주고 명시적 확인을 받는다. 후속 벡터 가공·모델 실험은 별도 요청을 기다린다.
+
+<!-- approved-stopwords:end -->
+
+
 <!-- distance-comparison:start -->
 
 **추가 분석: [유클리드와 코사인 거리의 토큰 영향 비교](04_distance_comparison/README.md)**

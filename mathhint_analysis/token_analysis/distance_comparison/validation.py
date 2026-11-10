@@ -7,7 +7,7 @@ import math
 import numpy as np
 
 from ..common import dump_json, load_data, read_csv, read_json
-from ..validation import scan_report_links, verify_sources
+from ..validation import scan_report_links, validate_user_stopwords, verify_sources
 
 
 def verify(root, output, *, save=True):
@@ -15,6 +15,7 @@ def verify(root, output, *, save=True):
     config = read_json(output / "config.json")
     protected = verify_sources(root, config)
     data = load_data(root)
+    choices = validate_user_stopwords(root / "results/token_analysis", data["vocabularies"])
     ids, vocabulary = data["ids"]["train"], data["vocabularies"]["problems"]
     x = data["arrays"]["problems"]["train"].astype(float)
     norms = np.sqrt(np.einsum("ij,ij->i", x, x))
@@ -117,7 +118,7 @@ def verify(root, output, *, save=True):
         all(close(r[key], original[r["experiment"]][key]) for key in ("ari", "nmi", "train_majority_accuracy")) and int(r["n"]) == 80
         for r in old_metrics))
     for region in ("problem", "solution"):
-        check(region + "_selection_file_unchanged_and_empty", read_json(root / f"results/token_analysis/stopwords/{region}_stopwords.json") == [])
+        check(region + "_user_selection_file_valid", region in choices)
     links, missing = scan_report_links(output)
     check("all_new_report_links", not missing)
     check("new_reading_documents", (output / "README.md").is_file() and (output / "clustering_context.md").is_file())
@@ -126,6 +127,7 @@ def verify(root, output, *, save=True):
               "checks": checks, "n": 185, "dimensions": 346, "pair_count": len(first), "zero_vectors": 0,
               "protected_original_files": protected, "all_original_source_hashes_unchanged": True,
               "relative_links_checked": links, "missing_links": missing, "models_trained": 0,
+              "registered_stopwords_not_applied": {key: len(values) for key, values in choices.items()},
               "new_cluster_assignments": 0, "model_checkpoint_loads": 0, "new_gemini_calls": 0,
               "limits": "Descriptive fixed-training statistics; no causal attribution, token-removal or new clustering experiment."}
     if save:

@@ -11,13 +11,39 @@ import numpy as np
 from .common import dump_json, load_data, read_csv, read_json, sha256
 
 
+USER_OWNED_STOPWORD_FILES = {
+    "results/token_analysis/stopwords/problem_stopwords.json",
+    "results/token_analysis/stopwords/solution_stopwords.json",
+}
+
+
 def verify_sources(root, config):
     root = Path(root)
-    changed = [name for name, expected in config["protected_files_sha256"].items()
+    # 과거 빈 목록의 SHA는 보존하되, 사용자 선택 파일은 별도 내용 검사로 관리한다.
+    protected = {name: digest for name, digest in config["protected_files_sha256"].items()
+                 if name not in USER_OWNED_STOPWORD_FILES}
+    changed = [name for name, expected in protected.items()
                if not (root / name).is_file() or sha256(root / name) != expected]
     if changed:
         raise ValueError("분석 기준 원본이 변경되었습니다: " + ", ".join(changed[:10]))
-    return len(config["protected_files_sha256"])
+    return len(protected)
+
+
+def validate_user_stopwords(output, vocabularies):
+    """사용자 목록을 검증한다. 목록을 수정하거나 벡터에 적용하지 않는다."""
+    choices = {}
+    for singular, region in (("problem", "problems"), ("solution", "solutions")):
+        path = Path(output) / f"stopwords/{singular}_stopwords.json"
+        values = read_json(path)
+        if not isinstance(values, list) or any(not isinstance(value, str) for value in values):
+            raise ValueError(f"사용자 불용어는 문자열 배열이어야 합니다: {path}")
+        if len(values) != len(set(values)):
+            raise ValueError(f"사용자 불용어에 중복이 있습니다: {path}")
+        unknown = sorted(set(values) - set(vocabularies[region]))
+        if unknown:
+            raise ValueError(f"{path}: 해당 영역 어휘에 없는 불용어: {unknown}")
+        choices[singular] = values
+    return choices
 
 
 def scan_report_links(output):
@@ -37,11 +63,12 @@ def scan_report_links(output):
     return links, missing
 
 
-def verify_analysis(root, output):
+def verify_analysis(root, output, *, save=True):
     root, output = Path(root), Path(output)
     config = read_json(output / "config.json")
     protected = verify_sources(root, config)
     data = load_data(root)
+    choices = validate_user_stopwords(output, data["vocabularies"])
     checks = []
 
     def check(name, condition):
@@ -156,8 +183,7 @@ def verify_analysis(root, output):
                   close(row["coordinate_fraction"], counts[row["category"]] / len(rows)) for row in composition))
 
     for region in ("problem", "solution"):
-        path = output / f"stopwords/{region}_stopwords.json"
-        check(region + "_user_choice_file_initially_empty", path.exists() and read_json(path) == [])
+        check(region + "_user_choice_file_valid", region in choices)
 
     links, missing = scan_report_links(output)
     check("all_report_links_exist", not missing)
@@ -172,6 +198,8 @@ def verify_analysis(root, output):
               "missing_links": missing, "png_count": len(pngs),
               "scope": "Stage 1 descriptive token analysis only; user chooses stopwords later",
               "user_selection_required": True, "new_model_experiments": 0, "new_gemini_calls": 0,
+              "registered_stopwords_not_applied": {key: len(values) for key, values in choices.items()},
               "limits": "Category labels are descriptive; figures need visual inspection; no hint-effect or model-improvement experiment performed."}
-    dump_json(output / "validation.json", result)
+    if save:
+        dump_json(output / "validation.json", result)
     return result
