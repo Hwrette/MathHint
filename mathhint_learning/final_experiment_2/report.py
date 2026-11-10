@@ -58,6 +58,40 @@ def _api_table(values):
          for r in values if r["split"] == "test"])
 
 
+def _api_findings(base, values):
+    """서로 대응 가능한 저장 응답만 비교하고 미완료를 효과 없음으로 해석하지 않는다."""
+    lookup = {r["condition"]: r for r in values if r["split"] == "test"}
+    if not lookup:
+        return []
+    lines = ["### 실제 풀이 효과와 사용량을 구분해 읽기", ""]
+    for condition in ("B", "C", "D"):
+        if condition in lookup:
+            r = lookup[condition]
+            lines.append(f"- {condition}: 성공 {r['success_count']}/80, 원본 정답표 기준 "
+                         f"{r['correct_count']}/{r['graded_count']}채점 가능. "
+                         f"미완료 {r['pending_count']}·실패 {r['failed_count']}·채점 불가 {r['ungradable_count']}.")
+    pairs = [r for r in rows(base / "gemini_comparison/paired_comparison.csv") if r["split"] == "test"]
+    if pairs:
+        lines += ["", *table(["대응 조건", "공통 채점 수", "앞만 정답", "뒤만 정답", "정확 McNemar p", "Holm 보정 p"],
+            [(r["pair"], r["matched_gradable_count"], r["first_correct_second_wrong"], r["first_wrong_second_correct"],
+              number(r["p_exact_mcnemar"]), number(r["p_holm_within_split"])) for r in pairs]), "",
+            "정오답 변화가 적으면 검정력이 낮다. 유의하지 않다는 사실은 효과가 없다는 증명이 아니며, "
+            "반복 생성하지 않은 작은 표본과 시점이 다른 과거 A 재사용이라는 한계가 있다."]
+    questions = [r for r in rows(base / "gemini_comparison/question_comparison.csv") if r["split"] == "test"]
+    differences = []
+    for first, second in (("B", "A"), ("C", "A"), ("D", "A"), ("C", "B")):
+        valid = [r for r in questions if r.get(first + "_status") == r.get(second + "_status") == "success"
+                 and r.get(first + "_total_token_count") not in (None, "")
+                 and r.get(second + "_total_token_count") not in (None, "")]
+        deltas = [int(r[first + "_total_token_count"]) - int(r[second + "_total_token_count"]) for r in valid]
+        differences.append((first + "−" + second, len(deltas), sum(deltas) if deltas else "—",
+                            number(sum(deltas) / len(deltas), 2) if deltas else "—"))
+    lines += ["", *table(["전체 토큰 차이", "사용량 제공 공통 문항", "차이 합계", "문항당 평균 차이"], differences), "",
+              "토큰 차이는 두 응답이 모두 성공하고 실제 total이 제공된 공통 문항만 사용했다. "
+              "음수는 뒤 조건보다 적은 토큰, 양수는 많은 토큰이다. 미완료 집합의 서로 다른 합계를 직접 비교하지 않는다."]
+    return lines + [""]
+
+
 def _model_plot(base, values):
     from mathhint_learning.ClusterReport import setup_final_plots
     plt = setup_final_plots()
@@ -100,7 +134,9 @@ def report(root=ROOT):
     else:
         model_fact = "아직 두 모델의 독립 확정본이 모두 준비되지 않았다. Gemini 생성 실험은 시작할 수 없다."
     model_sections = ["## 같은 기준으로 두 예측 모델 비교", "", "내부 검증37 · 기준선은 fit148 평균", "",
-                      *_model_table(values, "validation"), "", "최종 테스트80 · 기준선은 학습185 평균", "",
+                      *_model_table(values, "validation"), "",
+                      "MLP 검증 행은 대표 seed42의 값이다. 구성 선택에 사용한3시드 평균과는 구분하며 자세한 값은 딥러닝 README에 있다.", "",
+                      "최종 테스트80 · 기준선은 학습185 평균", "",
                       *_model_table(values, "test"), "", model_fact, ""]
     if len(manifests) == 2:
         model_sections += ["![동일 타깃 공간 모델 비교](figures/model_comparison.png)", ""]
@@ -116,6 +152,7 @@ def report(root=ROOT):
     if api:
         api_section += [*_api_table(api), "", "평균 토큰은 실제 제공된 성공 응답 값에 대한 평균이며 미제공은 —다. "
                         "추론 토큰을 전체 토큰에 다시 더하지 않는다. 원본 정답 기준과 trig_1_010의 AI 보조 기준은 분리한다.", ""]
+        api_section += _api_findings(base, api)
     else:
         api_section += ["아직 저장된 네 조건의 최종 비교 수치가 없다. 새 해설 토큰의 풀이 효과는 미검증이다.", ""]
     notes = [

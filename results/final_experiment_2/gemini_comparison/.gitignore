@@ -1,0 +1,3 @@
+# Local process controls; execution state and request logs remain tracked.
+stop_requested
+*.tmp

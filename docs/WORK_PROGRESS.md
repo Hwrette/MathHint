@@ -580,3 +580,12 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 실제자료의종합저장검증2281/2281 PASS(공통977/선형266/MLP310/API오프라인728),새핵심test23/23PASS,실제부분HTML데스크톱/모바일18/18PASS다. 원본·checkpoint·prediction·promptaudit·A80원문해시는보고서재생성전후같고렌더러의학습/SDK호출은0이다. 데이터/두모델/320실제입력전문/부분화면을이체크포인트로보존한다.
 - 현재A80은기존정확요청재사용, B/C/D신규240은미실행·정오답공란이다. 예정힌트는실제전송힌트와구분해표시한다. 풀이검토상태320개는각최종정답과분리했고새오류확정이없는것은보류다. 아직API생성실험전체완료가아니다.
 - 이제관련파일만커밋/일반push후 실제Gemini models.get으로지원·인증을확인한다. 모델사용불가/권한오류이면다른모델로대체하거나재시도폭주하지않고부분결과와원인을게시한다. ready일때만test80의신규240을실행하며장시간실행중에도응답즉시fsync·상태/미완료저장·boundedwait·checkpoint를유지한다.
+
+
+## 실제 Gemini 시작 · 통신 보완 체크포인트 — 2026-11-10T19:33:16.381465+00:00
+
+- 데이터·두 확정 모델·320입력 감사를 담은 8ff16f0e93a192e0d8d8302002a9df8718d0e41d를 일반 push했고 GitHub main SHA로 게시를 확인했다. API 전 실제 model GET은 gemini-3.1-flash-lite 접근 성공이며 공급자 RPM/RPH/RPD/TPM/잔여일일값은 제공되지 않았다. 로컬10초/1worker/6RPM·360RPH·320RPD 한도와 test80 우선을 유지하고 185확장은 실행하지 않는다.
+- 실제 신규 성공8개를 즉시 fsync해 기존 정확재사용 A80과 합계88/320을 보존했다. 미완료232이며 기존 90초 HTTP 대기로 ReadTimeout이 반복되어 stop_requested로 정상 중단했다. 오류 응답의 토큰은 null이며 완료로 표시하지 않는다. 환경 재시작 후에도 파일이 남아 있음을 확인했다.
+- 새 전용 실행기의 전송만180초로 늘리고 httpx timeout을 기존 max2 bounded retry에 전달하도록 보완했다. SDK body/320요청서명/config/plan/A80해시는 불변이다. 기존 알고리즘·생성설정·입력·모델·과거응답 수정0. 실행별 timeout과 원래 오류 유형을 별도 기록한다. 새 관련25/25 테스트PASS. 순차 종합검증2349/2349 PASS(실험 자체는 미완료)다.
+- A80 및 신규8의 생성 풀이를 원문/원본해설과 직접 AI 보조 검토해 review/curated_reviews.json88건에 저장했다. 83건 적절·5건 오류 의심이며 사람 확정/형식증명으로 취급하지 않는다. 신규 diff_1_005 B는 최종답은 맞지만 중복근이 필수라는 중간 주장이 반례를 갖는다. 추가 검토 API 호출0. 남은 생성문항은 생성 후 별도 검토한다.
+- 재개 명령: python -m mathhint_solver.final_experiment_2.gemini_comparison generate --max-new-requests 40 --max-run-seconds 3600 --max-wait-seconds 120 --clear-stop . 성공88은 건너뛰고 실패/미완료부터 진행한다. 장시간 제한이면 현재 결과·상태·정확한 재개명령을 게시한다. 자동 예약 재개는 설정하지 않았다.

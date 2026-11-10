@@ -160,6 +160,39 @@ def _preflight_fresh(output, config):
     return value.get("config_id") == comparison.digest(config) and value.get("api_readiness") == "ready" and age < 1800
 
 
+def transport_request(config, api_key, *, http_timeout_ms, request_observer=None,
+                      error_observer=None, client_factory=None):
+    """SDK 본문은 공통 함수를 재사용하고 HTTP 대기만 늘린다. timeout만 유한 재시도 대상으로 정규화한다."""
+    import httpx
+    from google import genai
+
+    if type(http_timeout_ms) is not int or http_timeout_ms <= 0:
+        raise ValueError("HTTP 제한 시간은 양의 정수 밀리초여야 합니다.")
+    factory = client_factory or genai.Client
+
+    def with_timeout(**arguments):
+        # 기존 make_request의 SDK 1회 시도 정책과 나머지 HttpOptions는 유지한다.
+        options = arguments["http_options"].model_copy(update={"timeout": http_timeout_ms})
+        return factory(**{**arguments, "http_options": options})
+
+    request = comparison.make_request(config, api_key, request_observer=request_observer,
+                                      client_factory=with_timeout)
+
+    def invoke(text):
+        try:
+            return request(text)
+        except httpx.TimeoutException as error:
+            message = str(error).replace(api_key, "[REDACTED]") if api_key else str(error)
+            detail = {"original_error_type": type(error).__name__, "normalized_error_type": "TimeoutError",
+                      "message": message, "http_timeout_ms": http_timeout_ms,
+                      "observed_at": comparison.utc_now()}
+            if error_observer is not None:
+                error_observer(detail)
+            # 기존 generate_one은 builtin TimeoutError를 max_attempts 범위에서만 재시도한다.
+            raise TimeoutError(f"{type(error).__name__}: {message}") from error
+    return invoke
+
+
 def _generate(root=ROOT, output=OUTPUT, *, split="test", policy=None, request_function=None,
              api_key=None, data=None, render_callback=None):
     root = Path(root).resolve()
@@ -182,6 +215,8 @@ def _generate(root=ROOT, output=OUTPUT, *, split="test", policy=None, request_fu
     events_path = safe_output(root) / "execution_runs/request_events.jsonl"
     execution = {"execution_id": execution_id, "config_id": config_id, "started_at": comparison.utc_now(),
         "status": "running", "split": split, "policy": policy,
+        "transport": {"http_timeout_ms": policy["http_timeout_ms"], "sdk_attempts": 1,
+                      "timeout_error_policy": "httpx.TimeoutException to chained builtin TimeoutError; existing bounded max_attempts"},
         "preexisting_successes": preparation["state"]["successful_requests"],
         "runner_sha256": comparison.file_hash(Path(__file__)), "sdk_request_capture": "immediately before generate_content"}
     write_json(path, execution)
@@ -200,6 +235,7 @@ def _generate(root=ROOT, output=OUTPUT, *, split="test", policy=None, request_fu
             context.update(id=item["id"], condition=item["condition"])
             expected = read_json(output / "prompt_audit/requests" / item["id"] / (item["condition"] + ".json"))
             captures = []
+            transport_errors = []
 
             def observe(snapshot):
                 if snapshot != expected["sdk_request"] or comparison.digest(snapshot) != item["request_sha256"]:
@@ -209,10 +245,15 @@ def _generate(root=ROOT, output=OUTPUT, *, split="test", policy=None, request_fu
                     "condition": item["condition"], "execution_id": execution_id,
                     "captured_at": comparison.utc_now(), "sdk_request": snapshot,
                     "request_sha256": captures[-1], "matches_saved_prompt": True,
+                    "transport": {"http_timeout_ms": policy["http_timeout_ms"], "sdk_attempts": 1},
                     "capture": "immediately_before_sdk_generate_content"})
-            request = request_function or comparison.make_request(config, key, request_observer=observe)
+            request = request_function or transport_request(config, key,
+                http_timeout_ms=policy["http_timeout_ms"], request_observer=observe,
+                error_observer=transport_errors.append)
             row = comparison.generate_one(item, config, config_id, key or "", request_function=lambda text: limiter.request(request, text))
             row.update(execution_id=execution_id, sdk_request_sha256=item["request_sha256"],
+                transport={"http_timeout_ms": policy["http_timeout_ms"], "sdk_attempts": 1},
+                transport_errors=transport_errors,
                 sdk_boundary_captured_attempts=len(captures), sdk_boundary_capture_expected=request_function is None,
                 solution_review={"status": "pending_review", "mathematical_validity": None,
                                  "reason": "최종 답 채점과 별개이며 수학적 타당성을 자동 확정하지 않았다."})

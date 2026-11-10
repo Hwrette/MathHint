@@ -15,6 +15,7 @@ CONDITIONS = {value: key for key, value in METHODS.items()}
 DEFAULT_POLICY = {"interval_seconds": 10.0, "workers": 1, "rpm": 6, "rph": 360,
                   "rpd": 320, "max_new_requests": 320, "max_run_seconds": 3600,
                   "max_wait_seconds": 120, "max_attempts": 2,
+                  "http_timeout_ms": 180_000,
                   "provider_limits_confirmed": False,
                   "limits_note": "local conservative rolling-window caps; not confirmed provider quotas"}
 

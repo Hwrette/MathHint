@@ -1,9 +1,9 @@
 {
-  "checked_at": "2026-11-10T19:05:46.302089+00:00",
+  "checked_at": "2026-11-10T19:14:14.205452+00:00",
   "config_id": "cc67f503605a3acd86112e8734b755f1c1da6e86d5cea9a3c8da1de43c3708e9",
   "requested_model": "gemini-3.1-flash-lite",
   "generation_calls": 0,
-  "non_generation_network_calls": 0,
+  "non_generation_network_calls": 1,
   "expected_requests": 320,
   "successful_saved": 80,
   "new_requests_needed": 240,
@@ -18,335 +18,14 @@
       "model_freeze_gate": "both manifests checked before plan"
     },
     "reuse": {
-      "imported": 80,
-      "requests": [
-        {
-          "id": "diff_1_005",
-          "condition": "A"
-        },
-        {
-          "id": "diff_1_011",
-          "condition": "A"
-        },
-        {
-          "id": "diff_1_012",
-          "condition": "A"
-        },
-        {
-          "id": "diff_1_014",
-          "condition": "A"
-        },
-        {
-          "id": "diff_1_018",
-          "condition": "A"
-        },
-        {
-          "id": "diff_1_022",
-          "condition": "A"
-        },
-        {
-          "id": "diff_1_026",
-          "condition": "A"
-        },
-        {
-          "id": "diff_1_028",
-          "condition": "A"
-        },
-        {
-          "id": "diff_1_030",
-          "condition": "A"
-        },
-        {
-          "id": "diff_1_036",
-          "condition": "A"
-        },
-        {
-          "id": "diff_1_038",
-          "condition": "A"
-        },
-        {
-          "id": "diff_1_039",
-          "condition": "A"
-        },
-        {
-          "id": "diff_1_041",
-          "condition": "A"
-        },
-        {
-          "id": "diff_2_004",
-          "condition": "A"
-        },
-        {
-          "id": "diff_2_006",
-          "condition": "A"
-        },
-        {
-          "id": "diff_2_007",
-          "condition": "A"
-        },
-        {
-          "id": "diff_2_010",
-          "condition": "A"
-        },
-        {
-          "id": "diff_2_013",
-          "condition": "A"
-        },
-        {
-          "id": "diff_2_014",
-          "condition": "A"
-        },
-        {
-          "id": "diff_2_016",
-          "condition": "A"
-        },
-        {
-          "id": "diff_2_018",
-          "condition": "A"
-        },
-        {
-          "id": "diff_2_020",
-          "condition": "A"
-        },
-        {
-          "id": "diff_2_023",
-          "condition": "A"
-        },
-        {
-          "id": "diff_2_024",
-          "condition": "A"
-        },
-        {
-          "id": "diff_2_029",
-          "condition": "A"
-        },
-        {
-          "id": "diff_2_030",
-          "condition": "A"
-        },
-        {
-          "id": "diff_2_031",
-          "condition": "A"
-        },
-        {
-          "id": "diff_2_036",
-          "condition": "A"
-        },
-        {
-          "id": "diff_2_037",
-          "condition": "A"
-        },
-        {
-          "id": "diff_2_040",
-          "condition": "A"
-        },
-        {
-          "id": "diff_2_041",
-          "condition": "A"
-        },
-        {
-          "id": "diff_3_001",
-          "condition": "A"
-        },
-        {
-          "id": "diff_3_004",
-          "condition": "A"
-        },
-        {
-          "id": "diff_3_005",
-          "condition": "A"
-        },
-        {
-          "id": "diff_3_008",
-          "condition": "A"
-        },
-        {
-          "id": "diff_3_012",
-          "condition": "A"
-        },
-        {
-          "id": "diff_3_022",
-          "condition": "A"
-        },
-        {
-          "id": "diff_3_028",
-          "condition": "A"
-        },
-        {
-          "id": "diff_3_039",
-          "condition": "A"
-        },
-        {
-          "id": "diff_3_044",
-          "condition": "A"
-        },
-        {
-          "id": "diff_3_048",
-          "condition": "A"
-        },
-        {
-          "id": "diff_3_049",
-          "condition": "A"
-        },
-        {
-          "id": "trig_1_004",
-          "condition": "A"
-        },
-        {
-          "id": "trig_1_007",
-          "condition": "A"
-        },
-        {
-          "id": "trig_1_009",
-          "condition": "A"
-        },
-        {
-          "id": "trig_1_010",
-          "condition": "A"
-        },
-        {
-          "id": "trig_1_011",
-          "condition": "A"
-        },
-        {
-          "id": "trig_1_013",
-          "condition": "A"
-        },
-        {
-          "id": "trig_1_018",
-          "condition": "A"
-        },
-        {
-          "id": "trig_1_020",
-          "condition": "A"
-        },
-        {
-          "id": "trig_1_021",
-          "condition": "A"
-        },
-        {
-          "id": "trig_1_028",
-          "condition": "A"
-        },
-        {
-          "id": "trig_1_032",
-          "condition": "A"
-        },
-        {
-          "id": "trig_1_035",
-          "condition": "A"
-        },
-        {
-          "id": "trig_1_039",
-          "condition": "A"
-        },
-        {
-          "id": "trig_1_042",
-          "condition": "A"
-        },
-        {
-          "id": "trig_1_043",
-          "condition": "A"
-        },
-        {
-          "id": "trig_1_046",
-          "condition": "A"
-        },
-        {
-          "id": "trig_2_003",
-          "condition": "A"
-        },
-        {
-          "id": "trig_2_007",
-          "condition": "A"
-        },
-        {
-          "id": "trig_2_014",
-          "condition": "A"
-        },
-        {
-          "id": "trig_2_016",
-          "condition": "A"
-        },
-        {
-          "id": "trig_2_017",
-          "condition": "A"
-        },
-        {
-          "id": "trig_2_022",
-          "condition": "A"
-        },
-        {
-          "id": "trig_2_024",
-          "condition": "A"
-        },
-        {
-          "id": "trig_2_025",
-          "condition": "A"
-        },
-        {
-          "id": "trig_2_030",
-          "condition": "A"
-        },
-        {
-          "id": "trig_2_035",
-          "condition": "A"
-        },
-        {
-          "id": "trig_3_002",
-          "condition": "A"
-        },
-        {
-          "id": "trig_3_010",
-          "condition": "A"
-        },
-        {
-          "id": "trig_3_011",
-          "condition": "A"
-        },
-        {
-          "id": "trig_3_014",
-          "condition": "A"
-        },
-        {
-          "id": "trig_3_015",
-          "condition": "A"
-        },
-        {
-          "id": "trig_3_017",
-          "condition": "A"
-        },
-        {
-          "id": "trig_3_021",
-          "condition": "A"
-        },
-        {
-          "id": "trig_3_026",
-          "condition": "A"
-        },
-        {
-          "id": "trig_3_034",
-          "condition": "A"
-        },
-        {
-          "id": "trig_3_035",
-          "condition": "A"
-        },
-        {
-          "id": "trig_3_039",
-          "condition": "A"
-        },
-        {
-          "id": "trig_3_040",
-          "condition": "A"
-        }
-      ],
+      "imported": 0,
+      "requests": [],
       "note": "Old oracle C can map to new D only if the full actual SDK request is identical."
     },
     "state": {
       "status": "partial_complete",
       "reason": "모델·요청 감사 완료. 현재 API 환경 확인 전입니다.",
-      "updated_at": "2026-11-10T19:05:46.292825+00:00",
+      "updated_at": "2026-11-10T19:14:14.082754+00:00",
       "config_id": "cc67f503605a3acd86112e8734b755f1c1da6e86d5cea9a3c8da1de43c3708e9",
       "split": "test",
       "expected_requests": 320,
@@ -2314,11 +1993,40 @@
     "limits_note": "local conservative rolling-window caps; not confirmed provider quotas"
   },
   "api_key_present": true,
-  "api_readiness": "offline_audit_only",
+  "api_readiness": "ready",
   "legacy_interval_seconds": 5,
   "applied_interval_seconds": 10.0,
   "legacy_workers": 2,
   "applied_workers": 1,
   "legacy_settings_match": true,
-  "automatic_extension_allowed": false
+  "automatic_extension_allowed": false,
+  "model_metadata": {
+    "name": "models/gemini-3.1-flash-lite",
+    "display_name": "Gemini 3.1 Flash Lite",
+    "description": "Gemini 3.1 Flash Lite",
+    "version": "3.1-flash-lite-05-2026",
+    "endpoints": null,
+    "labels": null,
+    "tuned_model_info": {
+      "base_model": null,
+      "create_time": null,
+      "update_time": null
+    },
+    "input_token_limit": 1048576,
+    "output_token_limit": 65536,
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "createCachedContent",
+      "batchGenerateContent"
+    ],
+    "default_checkpoint_id": null,
+    "checkpoints": null,
+    "temperature": 1.0,
+    "max_temperature": 2.0,
+    "top_p": 0.95,
+    "top_k": 64,
+    "thinking": true
+  },
+  "reported_model_name": "models/gemini-3.1-flash-lite"
 }

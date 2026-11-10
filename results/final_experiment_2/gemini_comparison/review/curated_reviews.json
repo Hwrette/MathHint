@@ -1,0 +1,1566 @@
+{
+  "reviewer_type": "Codex_AI_assisted_math_review",
+  "additional_external_review_api_calls": 0,
+  "human_confirmed": false,
+  "records": [
+    {
+      "id": "diff_1_005",
+      "condition": "A",
+      "response_sha256": "8a784d69123ed4af2980740cbe4b8c9b1c9b12d9c305470d105d97342a216b54",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "유한 극한에서 f(a)(a−3)=0을 얻고 인수의 중복도를 구분했다. a≠3이면 f=(x−a)²로 a=8, a=3이면 f=(x−3)(x+2)가 되어 가능한 값의 합11이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$k=a$이면 $f(x) = (x-a)^2$",
+        "$a=3$이면 $f(x) = (x-3)(x-k)$",
+        "모든 실수 $a$의 값의 합은 $8 + 3 = 11$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_011",
+      "condition": "A",
+      "response_sha256": "a18c3b6938617712f626e5b9968a82ce3932a6d27adb5e838c96199a399d0d04",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "다항식인 두 구간의 접합점 x=1에서 좌극한1과 우극한·함숫값a−2를 일치시켜 a=3을 얻는 연속 조건과 계산이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "\\lim_{x \\to 1^-} f(x) = \\lim_{x \\to 1^-} (3x - 2) = 3(1) - 2 = 1",
+        "1 = a - 2"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_012",
+      "condition": "A",
+      "response_sha256": "95f13635105b41e16e24986d3f3c08cb95ade5202e001e6d0a9e88ba235ff4a1",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "접합점 x=2의 좌극한4a−2와 우극한·함숫값6을 비교했다. 나머지 구간은 다항식이므로 a=2는 전체 연속의 필요충분 조건이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "4a - 2 = 6",
+        "a = 2"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_014",
+      "condition": "A",
+      "response_sha256": "9e19e13c823e2fe244f2bb1fd845a7126b4399d1a3094883ea9a08b045a7a2c1",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "x=2가 왼쪽 정의역에 포함됨을 반영하여 f(2)=14+a로 두고 우극한4+2a와 같게 했다. 방정식에서 a=10이 정확하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "\\lim_{x \\to 2^-} f(x) = f(2) = 7(2) + a = 14 + a",
+        "$14 + a = 4 + 2a$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_018",
+      "condition": "A",
+      "response_sha256": "47a5669b1fe754d577bfb4b8f9fd41e06217c03c853fb18d5d90ea3795f1be81",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "t≠1에서 주어진 평균변화율을 미분계수 정의에 그대로 대입했다. t→1의 양쪽 극한이 √9=3으로 존재하므로 순간변화율3이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "\\frac{f(t) - f(1)}{t - 1} = \\sqrt{t^2 + 8}",
+        "f'(1) = \\sqrt{1^2 + 8} = \\sqrt{1 + 8} = \\sqrt{9} = 3"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_022",
+      "condition": "A",
+      "response_sha256": "ebb25f9e79684d46066f5f6105079a0d669ff1060baf9abcf6d93af83aabf6e7",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "다항식 g의 연속성과 유한 극한으로 g(1)=4를 얻은 뒤 주어진 극한을 g′(1)=9로 해석할 수 있다. 곱미분에 따른 3f(1)+2f′(1)=9에서 f(1)=2, f′(1)=3/2 및 곱3이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$g(1) - 4 = 0$에서 $g(1) = 4$입니다.",
+        "$g'(x) = (2x + 1)f(x) + (x^2 + x)f'(x)$",
+        "$f(1) \\times f'(1) = 2 \\times \\frac{3}{2} = 3$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_026",
+      "condition": "A",
+      "response_sha256": "6ef189ab144932acb068f8ed81b4303d0f4dd2fe17f3a0646b9b3aa66c59f423",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "접점에서의 도함수6t²−14t와 접선식을 올바르게 사용했다. (0,1)을 대입하면 t²(4t−7)=0이며 t>0으로 t=0을 제외하여 7/4를 얻는다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$t^2(4t - 7) = 0$",
+        "문제에서 $t$는 양수라고 하였으므로 $t^2 \\neq 0$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_028",
+      "condition": "A",
+      "response_sha256": "f750908f9dd5b8ea1f996f5fef9a35764c29304589d34641f76b8da4fc518f69",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "외부점(0,1)에서 그은 접선의 접점을 별도 변수t로 두었다. 접선 조건이 t³=8로 환원되고 유일한 실근t=2에서 y=10x+1이므로 a=1이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$t^3 = 8$",
+        "$y = 10x + 1$",
+        "$11 = 10a + 1$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_030",
+      "condition": "A",
+      "response_sha256": "a42ec4752836dbe000a36db658945600a3b49023c3e2d312804730089aeb47e0",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "x=−1의 극대 조건 f′(−1)=0에서 a=−3을 얻는다. f′=3(x−1)(x+1)은 x=1에서 음→양으로 바뀌므로 그 점이 극소이며 f(1)=7 계산이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$a = -3$",
+        "$3(x - 1)(x + 1) = 0$",
+        "$f(1) = 7$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_036",
+      "condition": "A",
+      "response_sha256": "638838c415102897e6c7f6e8b4f6a1bebb30dfc41e8d8830588cb704c967e64c",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "수평 접선의 조건 f(k)=5와 f′(k)=0을 모두 적용했다. x=a에서의 음수 a³는 양수 조건으로 제외하고 x=−3a에서 a=1/3을 얻어 f(2)=14를 계산한 과정이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(k)=5$이고 $f'(k)=0$",
+        "$a^3 = -\\frac{1}{5}$",
+        "$a^3 = \\frac{1}{27}$",
+        "$f(2) = 8 + 4 - 2 + 4 = 14$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_038",
+      "condition": "A",
+      "response_sha256": "0dce5c454b17f550181f551b7b8ca387221cd07f01d525c9deeb13ba9e34a705",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "극값의 필요조건 f′(3)=0에서 a=9를 얻고 도함수의 두 단순근1,3에서 극대·극소가 존재함을 확인할 수 있다. 함수값4+b와 b의 합8로 b=2, a+b=11이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$a = 9$",
+        "$f'(x) = 3x^2 - 12x + 9 = 3(x^2 - 4x + 3) = 3(x-1)(x-3)$",
+        "$(4 + b) + b = 8$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_039",
+      "condition": "A",
+      "response_sha256": "4273051f6ace9c98c6c502007c7270d83ef2cd4cce6ba65ecd16716f6a91b313",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "닫힌구간[1,3]의 양 끝점과 내부 임계점2를 빠짐없이 비교했다. 후보값a−13,a−20,a−9에서 최솟값4로 a=24이고 최댓값15라는 계산이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$x=2$는 구간 내에 포함되지만, $x=-1$은 포함되지 않습니다.",
+        "$a - 20 = 4 \\implies a = 24$",
+        "$M = 24 - 9 = 15$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_041",
+      "condition": "A",
+      "response_sha256": "b7f1224c2599941c7a96b03a4b09ba66a1c28ecaca34f29db28fd89941c8121d",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "삼차함수 조건으로 a≠0이며 도함수의 근0,1과 끝점2를 비교했다. a>0은 최댓값8과 최솟값−2를 동시에 만족하지 못하고 a<0에서는 a=−2가 두 조건을 만족한다. f(−2)=62 계산도 정확하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$4a = 2 \\implies a = \\frac{1}{2}$",
+        "$-a = 2 \\implies a = -2$",
+        "$f(-2) = 32 + 24 + 6 = 62$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_004",
+      "condition": "A",
+      "response_sha256": "fe921961c1f0c52d10a6a6b183bb457beca1491c284d006998592d458e7a2f5d",
+      "review_status": "suspected_error",
+      "math_status": "inappropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "최종답20과 후반 계산은 맞지만 첫 조건의 계수 비교에 구체적 오류가 있다. g=(a+1)x²+…이면 g−x²의 최고차항 계수는 a여서 필요한 등식은 a=a이며 a=a+1이 아니다. 반례 f=x², g=2x²+2x−15는 두 극한1과8을 모두 만족한다. 따라서 답의 정오와 별도로 전체 추론은 부적절하다.",
+      "error_step": "첫 번째 조건 분석: g(x)=(a+1)x²+…로 설정한 뒤 g(x)−x²의 계수 비교를 a=a+1로 잘못 쓴 단계. 올바른 계수는 양쪽 모두 a다.",
+      "evidence_quotes": [
+        "극한값이 1이 되려면 $f(x)$와 $g(x) - x^2$의 최고차항 계수가 같아야 하므로, $a = a+1$이 성립해야 하는데 이는 모순입니다.",
+        "$g(5) - f(5) = 5^2 + 2(5) - 15 = 25 + 10 - 15 = 20$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_006",
+      "condition": "A",
+      "response_sha256": "cb0c11cb28d2077d4177b3a3e5ef07348e9a52582b39e0b52fbf013ce88b3ba7",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "x=2의 좌극한6−a와 우극한·함숫값4+a를 일치시켜 a=1을 얻었다. 두 조각이 다항식이므로 이 조건으로 전체 연속성이 성립한다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "6 - a = 4 + a",
+        "a = 1"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_007",
+      "condition": "A",
+      "response_sha256": "08c8d8224845fd34483757d6eac2934d374d397dca987a9e4b96e92ac914fccc",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계x=4에서 우극한·함숫값4와 좌극한(4−a)²를 비교했다. 제곱방정식의 두 부호를 모두 고려해 a=2,6을 얻고 곱12를 계산한 과정이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$(4 - a)^2 = 4$",
+        "$4 - a = 2$ 또는 $4 - a = -2$",
+        "이들의 곱은 $2 \\times 6 = 12$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_010",
+      "condition": "A",
+      "response_sha256": "0f2124c6fe18519830d50fd5de2084c1b9393f29e1afe71aa843fb3811a033ae",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "원래 f의 좌극한−1/2와 우극한·값3을 제곱한 합성함수의 접합 조건으로 옮겼다. (a−1/2)²=(a+3)²의 전개·소거가 정확하여 유일한 a=−5/4를 얻는다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$(-\\frac{1}{2} + a)^2 = (3 + a)^2$",
+        "$a^2 - a + \\frac{1}{4} = a^2 + 6a + 9$",
+        "$a = -\\frac{5}{4}$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_013",
+      "condition": "A",
+      "response_sha256": "f5a365e2231638eb7c304c9846bafd1c2b8f74c0872a97cee66d92e43b51be36",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "다항식의 연속성으로 f(1)=4를 얻고 분모2h의 차분몫에 바깥 계수2를 두는 올바른 식을 사용했다. t=2h 치환으로 f′(1)=3, 합7이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(1) = 4$",
+        "\\lim_{h \\rightarrow 0} \\frac{f(1+2h) - f(1)}{2h} \\times 2 = 6",
+        "$f(1) + f'(1) = 4 + 3 = 7$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_014",
+      "condition": "A",
+      "response_sha256": "6c2807b8bfee71573ec2ddf80b9fcc7a87b49c2726beb7e0ff8be590af64f6bf",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "곱미분 후 x=0,2에서 x²−2x가0임을 이용해 g′(0)=−2f(0), g′(2)=2f(2)를 얻었다. 두 식의 합16에서 차8을 구한 계산이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$g'(x) = (2x - 2)f(x) + (x^2 - 2x)f'(x)$",
+        "$-2f(0) + 2f(2) = 16$",
+        "$f(2) - f(0) = 8$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_016",
+      "condition": "A",
+      "response_sha256": "266a82596c88093579e5e968be5da75ffa012ac819f977e25ac2b87fb517bb5d",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "곡선 위의 점과 접선 기울기에서 각각 f(3)=2, f′(3)=4를 구분했다. g=(x+2)f에 곱미분을 적용한 g′(3)=f(3)+5f′(3)=22가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(3) = 2$",
+        "$f'(3) = 4$",
+        "$g'(3) = 2 + 5 \\times 4$",
+        "$g'(3) = 22$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_018",
+      "condition": "A",
+      "response_sha256": "9154317217e231a5301c0d5aa5a9c9095e0585176f7a780ffa4037092f0f6a2a",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "연속 조건 a+4b=-2와 좌우 미분계수 조건 2a+b=-3b를 올바르게 연립하여 a=2, b=-1을 얻었다. 최종 선택 ③(a+b=1)은 참조 답과 일치하며, 각 구간이 다항식이므로 경계 조건으로 전체 미분가능성을 확인하는 논리도 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$a + 4b = -2$",
+        "$2a + b = -3b$",
+        "$a + b = 2 + (-1) = 1$"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_020",
+      "condition": "A",
+      "response_sha256": "872f9ffcd041ea4eaf989ee899ba920a6493031010e83c17aae53a677765dfbd",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "유한한 극한에서 f(a)=1과 f′(a)=3을 도출하고 접선의 절편 조건으로 a=-1을 구한 뒤, 삼차함수 계수 p=-2, q=-4를 일관되게 계산했다. 최종 선택 ⑤(f(1)=-5)는 참조 답과 일치하며 추론에 구체적인 오류가 보이지 않는다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(a) = 1$",
+        "$-3a + 1 = 4 \\implies -3a = 3 \\implies a = -1$",
+        "$f(1) = 1^3 - 2(1)^2 - 4(1) = 1 - 2 - 4 = -5$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_023",
+      "condition": "A",
+      "response_sha256": "2eb5c0285c0ecb13a65d749593788fee2c9165a32681f232552fd93ea30db484",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "P에서의 접선을 y=12x+6으로 정확히 구하고, Q의 접선 기울기가 같다는 조건에서 접점의 가로좌표 a=±2를 모두 검토했다. 각각 k=22,-10을 얻어 양수 조건으로 22를 선택했으므로 최종 답과 논리가 모두 참조 해설과 부합한다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "**$y = 12x + 6$**",
+        "$3a^2 = 12 \\implies a^2 = 4 \\implies a = 2$ 또는 $a = -2$",
+        "$-16 + k = 6 \\implies k = 22$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_024",
+      "condition": "A",
+      "response_sha256": "6424d0aff676f7167c76e5e61488cdd507b789352dfcf06d47483669a6807aa7",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "(2,3)에서의 접선이 수평이므로 f(2)=3, f′(2)=0이라는 조건을 정확히 사용했다. f(x)=(x-2)²(x-k)+3으로 놓고 다른 접선이 (1,3)을 지나는 조건 3f′(-2)+f(-2)=3에서 k=-8을 구하였다. 최종 선택 ③(f(0)=35)은 정확하고 계산 과정도 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(2) = 3$이고, $f'(2) = 0$",
+        "$3f'(-2) + f(-2) = 3$",
+        "$f(0) = (-2)^2(8) + 3 = 4 \\times 8 + 3 = 32 + 3 = 35$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_029",
+      "condition": "A",
+      "response_sha256": "a21328cc877d2639de3c792fc0c5e3dfad8febe08594165bc4769d1bdf576050",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수의 영점 ±1을 구한 후 이계도함수로 x=1이 극소점임을 확인하였다. f(1)=a-4=2에서 a=6을 얻는 계산이 정확하다. 최종 선택 ①도 참조 답과 일치하며 이계도함수를 이용한 판별은 유효하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f''(1) = 12 > 0$",
+        "$-4 + a = 2$",
+        "$a = 6$"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_030",
+      "condition": "A",
+      "response_sha256": "b3e01cdfb8b8abcc3c0a8dba10c40112ecc39a580f66a7c353b67811ec5797dc",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "극소점 x=1에서 f′(1)=0을 적용하여 b=-3a를 얻고 극솟값 f(1)=-2로부터 a=2를 계산했다. 이때 도함수 6(x-1)(x+1)의 부호로 x=-1이 극대점임이 확인되며 f(-1)=6이다. 최종 답 6과 계산 논리는 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$b = -3a$",
+        "$-a = -2$ 이므로 $a = 2$",
+        "$f(-1) = -2 + 6 + 2 = 6$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_031",
+      "condition": "A",
+      "response_sha256": "919ce98dac40e7304a43d5bdd3d63166c32980d64cbc60e244923d302cc53a41",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수 3(x-1)(x+1)의 부호에 따라 극소점 x=1과 극대점 x=-1을 올바르게 구분했다. 극솟값 조건 2a-2=a+3에서 a=5를 얻고 f(-1)=12를 계산하였으므로 최종 선택 ②와 추론이 모두 적절하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 - 3 = 3(x^2 - 1) = 3(x - 1)(x + 1)$",
+        "$2a - 2 = a + 3$",
+        "$f(-1) = -1 + 3 + 10 = 12$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_036",
+      "condition": "A",
+      "response_sha256": "e3f237170e3c0ffda061b3f412b86e17c87b9eea1f09fceafa7d7aa8951f9f67",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "방정식을 k=-x³+3x²+9x로 바꾸어 수평선과 삼차함수의 교점 수로 해석했다. 서로 다른 두 실근이 생기는 두 극값 -5와 27을 정확히 계산하였고, 두 임계점이 서로 달라 각 극값에서 두 교점이 생긴다. 최종 선택 ④(합 22)는 정확하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$k = -x^3 + 3x^2 + 9x$",
+        "$f(-1) = -(-1)^3 + 3(-1)^2 + 9(-1) = 1 + 3 - 9 = -5$",
+        "$f(3) = -(3)^3 + 3(3)^2 + 9(3) = -27 + 27 + 27 = 27$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_037",
+      "condition": "A",
+      "response_sha256": "cadf3c958bd953209140e3e21e9973329afd670d0e24a3ac66b0d3d178126095",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "두 곡선의 교점을 x³-3x²+k+1=0의 서로 다른 실근으로 정확히 바꾸었다. -x³+3x²의 극값 0,4에 수평선 y=k+1이 접하는 경우 k=-1,3을 모두 얻어 양수 k=3만 선택했다. 최종 선택 ③과 교점 개수 판단이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$x^3 - 3x^2 + k + 1 = 0$",
+        "$k + 1 = 4$인 경우: $k = 3$",
+        "$k + 1 = 0$인 경우: $k = -1$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_040",
+      "condition": "A",
+      "response_sha256": "1f1574d1fe6aafb0d5a9eb7cfebbe52eaaac10ca69c38b8b3c0120c480656ae2",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "위치가 같은 조건을 (t²+1)(t-6)=0으로 올바르게 인수분해하여 유일한 실수 시각 t=6을 구했다. 각 위치를 두 번 미분한 가속도 2와 -6t+14로부터 p-q=24를 계산했다. 최종 선택 ①과 풀이 논리는 참조 해설과 일치한다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$(t^2 + 1)(t - 6) = 0$",
+        "$q = -6(6) + 14 = -36 + 14 = -22$",
+        "$p - q = 2 - (-22) = 2 + 22 = 24$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_041",
+      "condition": "A",
+      "response_sha256": "37509d937c5c9ef9dfe1ca7a83ae972fb472da240ec5c71cded27cb4d04a3748",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "속도를 6(t-1)²(t-2)로 정확히 인수분해하고, 속도 영점 중 t=1에서는 부호가 유지되고 t=2에서만 바뀐다는 점을 명시하였다. 따라서 방향 전환 시각을 t=2로 선택하여 가속도 18t²-48t+30의 값 6을 구한 논리가 타당하고 최종 답도 정확하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$(t-1)^2(t-2) = 0$",
+        "$t=1$에서는 속도의 부호가 바뀌지 않지만(중근), $t=2$에서는 속도의 부호가 바뀌므로 운동 방향이 바뀌는 순간은 $t=2$입니다.",
+        "$a(2) = 6$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_001",
+      "condition": "A",
+      "response_sha256": "f4c5020b311cd8f722898f35b9bfa23a49b010df9cb1aab893953c79a1c110b9",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "0의 충분히 작은 근방에서 x+5가 양수라는 사실을 사용하여 주어진 양쪽 부등식에 곱하고, 양 끝의 극한이 모두 5임을 정확히 계산했다. 샌드위치 정리의 적용이 타당하므로 최종 선택 ⑤는 정확하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$x \\to 0$일 때 $x+5 > 0$",
+        "$(x + 5)(2x + 1) \\leq (x + 5)f(x) \\leq (x + 5)(x + 1)^2$",
+        "$\\lim_{x \\to 0} (x + 5)f(x) = 5$"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_004",
+      "condition": "A",
+      "response_sha256": "8be6868b26e78b4738c6e58ec28b885dab952e2f8ebdff95bf64e4dffcf96ad9",
+      "review_status": "suspected_error",
+      "math_status": "inappropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "최종 답 16은 정확하고 3단계의 A(x), B(x) 치환 뒤 약분은 유효하다. 그러나 2단계에서 원래 식을 f/(x-1)·(x²-1)/g·(x+1)²/(x²-1)로 변형한 등식은 불필요한 (x+1)/(x-1)을 곱하여 성립하지 않는다. 예를 들어 f=8(x-1), g=(x²-1)/2는 조건을 만족하지만 원식은 16이고 잘못 변형한 식은 16(x+1)/(x-1)이다. 뒤의 올바른 재계산과 별개로 응답에 명시적인 대수 오류가 포함되어 있다.",
+      "error_step": "2단계의 원래 극한식 변형: 불필요한 (x+1)/(x-1) 인자를 곱한 등식",
+      "evidence_quotes": [
+        "\\frac{f(x)}{x - 1} \\cdot \\frac{x^2 - 1}{g(x)} \\cdot \\frac{x + 1}{x^2 - 1} \\cdot (x + 1)",
+        "\\frac{f(x)}{x - 1} \\cdot \\frac{1}{\\frac{g(x)}{x^2 - 1}} \\cdot \\frac{(x + 1)^2}{x^2 - 1}",
+        "\\frac{A(x)}{B(x)} = \\frac{\\lim_{x \\to 1} A(x)}{\\lim_{x \\to 1} B(x)} = \\frac{8}{1/2} = 16"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_005",
+      "condition": "A",
+      "response_sha256": "7e05cd04fefb1c76b6df3de150f906f848631ed32b3fcd1140a184f0bfca3f33",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "다항함수의 무한대 극한에서 f(x)=2x²+ax+b를 정하고 유한한 두 번째 극한으로 f(1)=3을 얻는 과정이 정확하다. 0/0 형태에서 분모 도함수 2x-3이 1 근방에서 0이 아니므로 로피탈 정리 적용도 유효하며, a=-8,b=9와 최종 답 f(4)=9가 정확하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(x) = 2x^2 + ax + b$",
+        "\\frac{4x + a}{2x - 3} = 4",
+        "$f(4) = 32 - 32 + 9 = 9$"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_008",
+      "condition": "A",
+      "response_sha256": "0c73697f2cd40770d8cd65f9c1a313f3e0a49fad296e9bdadfad599b7ef38b9d",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "두 다항식 조각은 각 구간에서 연속이므로 경계 x=-1만 확인하면 된다. 좌극한과 함숫값 -2+a, 우극한 6-a를 올바르게 계산하여 같게 놓았고 a=4를 얻었다. 최종 선택 ④와 연속성 판단이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "\\lim_{x \\to -1^-} f(x) = f(-1) = 2(-1) + a = -2 + a",
+        "-2 + a = 6 - a",
+        "a = 4"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_012",
+      "condition": "A",
+      "response_sha256": "c10f102da1f3498ea76478727ee14b623fc98134672bec43827132f3a0ec564d",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "x=3에서 우측 값이 7임을 계산하고 좌측 분모가 0으로 가므로 9+3a+b=0을 요구하였다. 이 조건으로 분자를 (x-3)(x+3+a)로 인수분해한 뒤 좌극한 6+a=7에서 a=1,b=-12를 구했다. 최종 선택 ⑤(a-b=13)와 전체 연속성 논리가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "9 + 3a + b = 0 \\implies b = -3a - 9",
+        "(x-3)(x+3+a)",
+        "a - b = 1 - (-12) = 1 + 12 = 13"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_022",
+      "condition": "A",
+      "response_sha256": "5182f6be9e03464399d3d675fe110f520c2bcfbd8aca0807203b14fabd1aa2af",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "평균변화율 -3을 정확히 계산하고 f′(a)=-3을 3a²-12a+8=0으로 정리했다. 두 근 2±2√3/3이 모두 (0,4)에 있음을 확인한 후 근의 곱 8/3을 사용했으므로 누락된 구간 조건이 없다. 최종 답 p+q=11은 정확하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "\\frac{-12 - 0}{4 - 0} = \\frac{-12}{4} = -3",
+        "$3a^2 - 12a + 8 = 0$",
+        "$a_1 a_2 = \\frac{8}{3}$",
+        "$p + q = 3 + 8 = 11$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_028",
+      "condition": "A",
+      "response_sha256": "045086a092cd7b06b6160842b915d1175430e88d8dcf0df14f92391dedb29cc3",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계 x=1에서 연속 조건 -a+b=-4와 좌우 미분계수 조건 3-a=-3을 정확히 세웠다. a=6,b=2를 얻어 곱 12를 계산했으며, 각 구간이 다항식이므로 이 경계 확인으로 전체 미분가능성이 보장된다. 최종 선택 ④는 정확하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$-a + b = -4",
+        "$3 - a = -3$",
+        "$a \\times b = 6 \\times 2 = 12$"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_039",
+      "condition": "A",
+      "response_sha256": "f647d1d860ba90b887ea9311d49e177763a64aae8f31206e630fe98a79099742",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수 3x(x-2)의 부호를 통해 x=0이 극대점, x=2가 극소점임을 올바르게 판단했다. 극댓값 f(0)=k=9를 적용한 후 극솟값 f(2)=5를 계산하였다. 최종 선택 ⑤와 추론은 참조 해설과 부합한다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 - 6x = 3x(x - 2)$",
+        "$k = 9$",
+        "$f(2) = 5$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_044",
+      "condition": "A",
+      "response_sha256": "331c59f21b68dd852554179b63c93d2430d4c8388504d185a585f5d850c96a89",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "x>0에서 2x³-6x²가 0에서 -8까지 감소한 뒤 무한대로 증가하므로 수평선 y=-k와 두 번 만나려면 -8<-k<0임을 올바르게 판단했다. 경계 -k=-8과 0에서는 서로 다른 양의 근이 하나뿐임도 확인하였다. 따라서 정수 k=1,…,7의 7개라는 최종 답과 주된 논리가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$-8 < -k < 0$",
+        "$-k = 0$이면 $x=0$에서 근을 갖고 $x=3$에서 다른 근을 가지므로 양의 실근은 1개입니다.",
+        "$0 < k < 8$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_048",
+      "condition": "A",
+      "response_sha256": "5a3284ba94cb754e8c1148df480ee644f10f602168905077adab50976b5de7c5",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수를 12x(x-2)(x+1)로 정확히 인수분해하고 세 임계점의 함숫값을 k-5, k, k-32로 계산했다. 최고차항이 양수인 사차식의 전역 최솟값 k-32에서 k≥32를 얻는 논리와 최종값 32가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$12x(x - 2)(x + 1) = 0$",
+        "$k - 32 \\geq 0$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_3_049",
+      "condition": "A",
+      "response_sha256": "d64a376ace3a00a8a791135638c45e8f37ef111d8706b5b666486febe17498d3",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "x≥0의 모든 x에 대한 조건을 a≤h(x)의 전역 최솟값 조건으로 바꾸었다. h′=(3x+1)(x-1)의 부호가 [0,1)에서 음수, (1,∞)에서 양수인 점과 h(1)=5를 정확히 사용하여 최댓값 5 및 ⑤를 얻었다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$h'(x) = (3x + 1)(x - 1) = 0$",
+        "$h(1) = 1^3 - 1^2 - 1 + 6 = 1 - 1 - 1 + 6 = 5$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_1_004",
+      "condition": "A",
+      "response_sha256": "8706a6a9258fd4bf712da040ff0572de8f0a87502541f24b5a70c08d8b0e3b5d",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "1+tan²θ=1/cos²θ에서 cos²θ=1/3을 정확히 도출하고 제2사분면 조건으로 음의 부호를 선택했다. −√3/3 및 선택지 ①이 모두 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\cos^2 \\theta = \\frac{1}{3}$",
+        "따라서 $\\cos \\theta = -\\frac{\\sqrt{3}}{3}$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_1_007",
+      "condition": "A",
+      "response_sha256": "f41e9ba9d955e605b0b2daa76cd6fa91b4293a462231aaf1505359dffb8a1eba",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "cosθ/tanθ+sinθ를 1/sinθ로 정확히 합쳐 sinθ=1/√3을 얻었다. 원래 제2사분면 조건에 맞추어 cosθ=−√6/3을 선택하므로 대수와 부호 판단, 최종 선택지 ①이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\frac{1}{\\sin \\theta} = \\sqrt{3}$",
+        "따라서 $\\cos \\theta = -\\frac{\\sqrt{6}}{3}$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_1_009",
+      "condition": "A",
+      "response_sha256": "dab666c85f3a481f39997ffdcd6d0a8f4a857e3a16956ca4c63b4edbdeeafd2e",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "합의 제곱에서 sin2θ=3/5를 구하고 2θ가 제2사분면이라는 조건으로 cos2θ=−4/5를 선택했다. 배각식으로 cos²θ=1/10을 얻어 두 부호 경우를 검사하며 원래 합이 양수인 경우를 확인했고, m=tanθ=3 및 ④가 타당하다. 기준해설의 m+1/m 방정식 대신 배각식을 쓰는 대안 풀이이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "즉, $\\sin 2\\theta = \\frac{3}{5}$입니다.",
+        "$2\\theta$가 제2사분면의 각이므로 $\\cos 2\\theta = -\\sqrt{1 - \\sin^2 2\\theta} = -\\sqrt{1 - \\left(\\frac{3}{5}\\right)^2} = -\\frac{4}{5}$입니다.",
+        "따라서 $m = 3$입니다."
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_1_010",
+      "condition": "A",
+      "response_sha256": "1d08d7de6b1103d4574856bb8b6d22b986a00946131fbc170ac8b394c196735d",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "비에타 관계로 k=−12/5를 구하고 제2사분면 조건으로 sin t=3/5, cos t=−4/5를 골라 k tan t=9/5를 계산한 전개는 타당하다. 원본 정답 키는 ④로 보존해야 하지만 원본 해설의 계산도 9/5이므로 수학적 정답은 ②이다. A의 ②와 원본 키 불일치는 이 응답의 수학 오류가 아니라 원본 키와 해설의 충돌이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$k = -\\frac{24}{25} \\times \\frac{5}{2} = -\\frac{12}{5}$",
+        "$k \\times \\tan t = \\left(-\\frac{12}{5}\\right) \\times \\left(-\\frac{3}{4}\\right) = \\frac{36}{20} = \\frac{9}{5}$",
+        "최종정답: ②"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_1_011",
+      "condition": "A",
+      "response_sha256": "8711ac74a88f4e22b6fa6685b9f39cefd9c84dda2f27f0278bc79f4e2834ae2a",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "양수 a와 코사인 주기 4π에서 a=1/2를 정확히 구하고 입력 4π/3의 위상을 2π/3으로 계산했다. cos(2π/3)=−1/2로 f=7을 얻는 풀이와 최종값이 타당하다. a를 푸는 설명이 압축되어 있으나 실제 수치와 관계식은 일관된다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$$a = \\frac{2\\pi}{4\\pi} = \\frac{1}{2}$$",
+        "$$f\\left(\\frac{4}{3}\\pi\\right) = -3 + 10 = 7$$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_1_013",
+      "condition": "A",
+      "response_sha256": "4b7d0a277e1fbc9a7a18101346c18ce23b425c4cae2861fdb5b775806585a2b7",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "b>0와 주기 6π에서 b=1/3을 얻고 위상 구간 [π/3,4π/3]의 코사인 최댓값 1/2, 최솟값 −1을 정확히 사용했다. a>0이므로 a/2=1에서 a=2, a+b=7/3 및 ⑤가 타당하다. π/2 포함을 언급한 설명은 성기지만 극값 자체는 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$$\\frac{2\\pi}{b} = 6\\pi \\implies b = \\frac{1}{3}$$",
+        "$$f(\\pi) = a \\cos \\left( \\frac{\\pi}{3} \\right) = a \\cdot \\frac{1}{2} = 1$$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_1_018",
+      "condition": "A",
+      "response_sha256": "4992ff0cf69f37b73d5c51c8978391052a8ea61d47f2920ef528d3417ad32114",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "주기에서 b=2/3을 구하고 최댓값 |a|+10−a=18을 부호별로 검토했다. a>0을 배제하고 a=−4를 얻은 뒤 f(π/2)=−4cos(π/3)+14=12를 계산하여 조건, 부호와 최종값이 일치한다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "함수 $f(x) = a \\cos bx + 10 - a$의 최댓값은 $|a| + (10 - a)$입니다.",
+        "$a = -4$",
+        "$f\\left(\\frac{\\pi}{2}\\right) = -2 + 14 = 12$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_1_020",
+      "condition": "A",
+      "response_sha256": "026ce04c2d81ebfd3d7b4bc9c4694485d869709acffcde9cf8732277b0800f27",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "주어진 닫힌구간에서 cos x의 범위가 [−1,1/2]임을 확인하고 양수 a에 따라 최댓값 2a, 최솟값 −a를 정확히 정했다. 곱 조건 −2a²=−8과 a>0에서 a=2를 얻으므로 전개와 최종값이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "따라서 이 범위에서 $\\cos x$의 최솟값은 $-1$이고, 최댓값은 $\\frac{1}{2}$입니다.",
+        "$-2a^2 = -8$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_1_021",
+      "condition": "A",
+      "response_sha256": "9a08b59c4c3c96ea1fa336df322d991ad533d59e4fa6271b05a70083355c5d09",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "전체 실수에서 사인의 최솟값 −1을 사용하여 a−4=1, a=5를 얻었다. π/2−π/3=π/6과 sin(π/6)=1/2를 정확히 대입하여 f(π/2)=7을 계산했다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$-4 + a = 1$",
+        "$f \\left( \\frac{\\pi}{2} \\right) = 4 \\times \\frac{1}{2} + 5 = 2 + 5 = 7$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_1_028",
+      "condition": "A",
+      "response_sha256": "83f4d02dba51960d3514e51a85384b27a32d19926161f0c4b36ce8835fb9c5df",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "sin(π−θ)=sinθ>0과 2cosθ=sinθ를 함께 사용하여 제1사분면을 정했다. tanθ=2인 직각삼각형의 변 비로 cosθ=1/√5=√5/5를 얻으므로 부호와 최종 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "따라서 $\\sin \\theta > 0$이어야 합니다.",
+        "$\\cos \\theta = \\frac{\\text{밑변}}{\\text{빗변}} = \\frac{1}{\\sqrt{5}}$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_1_032",
+      "condition": "A",
+      "response_sha256": "a17947b81ed8dc06085ceab318eeadabbd5207345b9300955f81074eb5d19034",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "sinθ=−3cosθ에서 tanθ=−3을 얻고 cos(π−θ)>0에서 cosθ<0을 적용하여 제2사분면임을 정했다. 변 비 1:3:√10 및 sinθ>0으로 3√10/10과 ①을 얻는 대수·부호 판단이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "따라서 $-\\cos \\theta > 0$이므로, $\\cos \\theta < 0$이어야 합니다.",
+        "$\\sin \\theta = \\frac{3\\sqrt{10}}{10}$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_1_035",
+      "condition": "A",
+      "response_sha256": "f64d96018288fb997f98a8f60dafbdb9ba92c1f81c9f752fff1dfecce7e15051",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "여각 공식으로 sinθ=−2cosθ를 얻고 제곱합 항등식에서 cos²θ=1/5을 정확히 도출했다. sinθ<0을 원래 선형 관계에 적용하여 cosθ>0을 선택하므로 √5/5 및 ④가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$5 \\cos^2 \\theta = 1$",
+        "즉, $\\cos \\theta > 0$이어야 합니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_1_039",
+      "condition": "A",
+      "response_sha256": "931777070d81fdc7c2a4239a0cfd1faf065cc0282cc6ee89d3c777b66f813f64",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "cos²x−1=−sin²x로 변형하여 sin x(sin x+2)=0을 얻고 sin x=−2를 범위로 배제했다. 0<x≤2π의 열린 왼쪽 끝과 닫힌 오른쪽 끝을 반영하여 해 π,2π만 골랐고 합 3π 및 ④가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\sin x (\\sin x + 2) = 0$",
+        "$x = \\pi, \\quad x = 2\\pi$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_1_042",
+      "condition": "A",
+      "response_sha256": "24f059266dc2ab89e92993eac6a3998cfc5886853dc56912e1c31f72f7ae03bb",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "a,b>0에서 첫 양의 교점을 arctan(b)/a로 놓고 교점들이 π/a 간격인 것을 정확히 식으로 표현했다. x₄−x₂=2π/a=6π에서 a=1/3, x₁=π에서 b=√3을 얻어 곱 √3/3 및 ②가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$ax_n = \\arctan b + (n-1)\\pi$",
+        "$x_4 - x_2 = \\frac{(\\arctan b + 3\\pi) - (\\arctan b + \\pi)}{a} = \\frac{2\\pi}{a} = 6\\pi$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_1_043",
+      "condition": "A",
+      "response_sha256": "fac948e363c4a1ba69239a539e4c29ae72004abbe523938f679f845e28284fd1",
+      "review_status": "suspected_error",
+      "math_status": "inappropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "최종값 4는 원본 정답과 같지만 풀이에는 구체적인 삼각방정식 오류가 있다. α=arcsin(5/8)일 때 마지막 해는 ax=(8a−1)π−α인데 응답은 +α를 사용했다. 그 잘못된 식으로 a=4(1−2α/π)를 얻고 α>π/4라는 거짓 비교까지 사용했으며, 모순된 검산 뒤 a=4를 근거 없이 선언했다. 올바르게는 최소 α/a와 최대 8π−π/a−α/a의 합이 8π−π/a이므로 a=4이다.",
+      "error_step": "마지막 주기의 가장 큰 교점에서 ax=(8a−1)π−α를 (8a−1)π+α로 잘못 정함; 뒤이어 α=arcsin(5/8)<π/4인데 반대로 비교하고, 모순을 해결하지 않은 채 최종 a=4로 도약함.",
+      "evidence_quotes": [
+        "이 구간에서 $\\sin(ax) = \\frac{5}{8}$을 만족하는 해는 $ax = 8a\\pi - \\pi + \\alpha$입니다.",
+        "이고, $\\sin(\\frac{\\pi}{4}) \\approx 0.707$이므로 $\\alpha$는 $\\frac{\\pi}{4}$보다 약간 큽니다.",
+        "주기성을 고려할 때 $a=4$일 때 대칭성에 의해 합이 $8\\pi - \\frac{\\pi}{4a} \\times \\dots$ 형태가 되어 $a=4$가 성립합니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_1_046",
+      "condition": "A",
+      "response_sha256": "12aa417e928a6e40f76917cbc54586bcd90d682aa01e533614134826d3ef7469",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "θ=πx/5로 바꾸어 0<θ≤2π를 반영하고 sinθ−cosθ=√2sin(θ−π/4)>0을 풀어 π/4<θ<5π/4를 얻었다. 이를 5/4<x<25/4로 되돌려 자연수 2,3,4,5,6과 합 20을 정확히 구했다. 기준해설의 교점 그래프 대신 합성 공식을 사용한 타당한 대안 풀이이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\sqrt{2} \\sin(\\theta - \\frac{\\pi}{4}) > 0$",
+        "$\\frac{5}{4} < x < \\frac{25}{4}$",
+        "$2 + 3 + 4 + 5 + 6 = 20$"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_003",
+      "condition": "A",
+      "response_sha256": "9858eab6daca4730a9bfd8f18e0e1dc1dbfeb29ff2591d3424e4c1fff3673fd9",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "좌표에서 tanθ₁=b/a와 tanθ₂=−2b²/a²를 정확히 쓰고 양수 조건에 의해 b/a로 나누어 a=2b를 얻었다. 제1사분면과 변 비 2:1:√5로 sinθ₁=√5/5를 계산하여 분모, 부호 및 최종 선택지 ②가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$$\\tan \\theta_1 = \\frac{b}{a}, \\quad \\tan \\theta_2 = \\frac{-2b^2}{a^2}$$",
+        "$$1 - \\frac{2b}{a} = 0 \\implies \\frac{2b}{a} = 1 \\implies a = 2b$$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_007",
+      "condition": "A",
+      "response_sha256": "0542bb8a5e11bc39d591f9aef9f77f44294f290d1628e0d04c0469dbc29bb50e",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "네제곱 합을 1−2(sinθcosθ)²로 바꾸어 곱의 제곱 9/64를 정확히 구했다. 제2사분면에서 곱이 −3/8이고 차 sinθ−cosθ가 양수임을 각각 적용하여 제곱 7/4의 양의 제곱근 √7/2 및 ⑤를 올바르게 골랐다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "따라서 $\\sin \\theta \\cos \\theta = -\\frac{3}{8}$입니다.",
+        "$= 1 - 2\\left(-\\frac{3}{8}\\right) = 1 + \\frac{3}{4} = \\frac{7}{4}$",
+        "따라서 $\\sin \\theta - \\cos \\theta = \\frac{\\sqrt{7}}{2}$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_014",
+      "condition": "A",
+      "response_sha256": "92ad09a72476efd32cc834b5fd613baeedc7a75d156d0c856c79c6a49d5493af",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "AI 보조 검토상 a>0에서 주기 2a=4로 a=2를 얻고, 진폭 4와 최솟값 -1에서 -4+b=-1로 b=3을 얻는 계산이 타당하다. a+b=5와 최종 선택지 ①이 일치한다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "2a = 4 \\implies a = 2",
+        "a + b = 2 + 3 = 5"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_016",
+      "condition": "A",
+      "response_sha256": "75deb798a29faf29b7294b4e2933440b8d807d5173a3ba553b863e520fcc8fc4",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "AI 보조 검토상 cos(π/2+θ)=-sinθ로 sinθ=-√5/5를 얻고 tanθ<0과 함께 제4사분면을 정한 과정이 타당하다. cosθ를 양의 제곱근 2√5/5로 선택하여 ⑤를 얻었다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "두 조건을 동시에 만족하는 사분면은 **제4사분면**입니다.",
+        "\\cos \\theta = \\sqrt{\\frac{4}{5}} = \\frac{2}{\\sqrt{5}} = \\frac{2\\sqrt{5}}{5}"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_017",
+      "condition": "A",
+      "response_sha256": "ce713eb3fec32b9582087a621aa39ee411ebdb15a58b2e428a60c655b57f767f",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "AI 보조 검토상 sin(-θ)=1/3에서 sinθ=-1/3을 얻고 3π/2<θ<2π에 따라 cosθ=2√2/3>0을 택했다. tanθ=-√2/4와 최종 ②가 타당하다. 원본 해설의 구간 표기 오타를 따라가지 않고 문제의 실제 구간을 사용했다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "\\frac{3}{2}\\pi < \\theta < 2\\pi$는 제4사분면의 각입니다.",
+        "\\tan\\theta = -\\frac{\\sqrt{2}}{2 \\times 2} = -\\frac{\\sqrt{2}}{4}"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_022",
+      "condition": "A",
+      "response_sha256": "a34f1652c215fc3ac54d9d8f879ac72a90dd313e27db77d8c37eedb5782f912f",
+      "review_status": "suspected_error",
+      "math_status": "inappropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "sin x(2sin x-1)=0까지의 변형은 맞지만 0<x<2π에서 sin x=0인 해가 없다는 판정은 틀리다. 반례 x=π는 구간 내부이며 원래 식에 대입하면 2cos²π-sin(2π)-2=0이다. 해는 π/6,5π/6,π의 세 개이고 합은 2π(③)이므로 응답의 π(①)도 틀리다.",
+      "error_step": "4단계의 sin x=0 해 판정: 열린 구간 안의 x=π를 누락했다.",
+      "evidence_quotes": [
+        "$0 < x < 2\\pi$ 범위에서 $\\sin x = 0$을 만족하는 $x$는 없습니다. (단위원의 경계값 제외)",
+        "최종정답: ①"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_024",
+      "condition": "A",
+      "response_sha256": "5c7cbf16d96923bbb65f90fbad11273fac6684e964078546a70003b94597a2f9",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "AI 보조 검토상 t=πx/2의 범위를 [0,4π)로 정확히 바꾸고 각 주기의 두 양의 사인 해의 합 π를 사용했다. 네 t해의 합 6π를 x로 환산한 12가 타당하며 끝점은 해가 아니어서 누락이 없다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "\\alpha + \\beta + (\\alpha + 2\\pi) + (\\beta + 2\\pi) = (\\alpha + \\beta) + (\\alpha + \\beta) + 4\\pi = \\pi + \\pi + 4\\pi = 6\\pi",
+        "\\sum x = \\frac{2}{\\pi} \\times (\\sum t) = \\frac{2}{\\pi} \\times 6\\pi = 12"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_025",
+      "condition": "A",
+      "response_sha256": "b9af250ccd8f74577dcc0ca5ddb96f73937e02278279a79fa46d26ec329c928e",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "AI 보조 검토상 cos x=√2/2의 해를 [0,3π]에서 π/4,7π/4,9π/4로 모두 열거하고 다음 해 15π/4를 범위 밖으로 제외했다. 합 17π/4와 최종 ③이 일치한다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "따라서 구하는 모든 해는 $\\frac{\\pi}{4}, \\frac{7}{4}\\pi, \\frac{9}{4}\\pi$입니다.",
+        "\\frac{\\pi}{4} + \\frac{7}{4}\\pi + \\frac{9}{4}\\pi = \\frac{17}{4}\\pi"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_030",
+      "condition": "A",
+      "response_sha256": "5952b5941da1e0eaa8093367c724b33ba419daa71ea433e757205e94063d69fe",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "AI 보조 검토상 절댓값 방정식을 sin3x=0 또는 -1로 나눈 풀이가 타당하다. 0≤3x<6π에서 전자는 여섯 개, 후자는 세 개이며 두 집합이 겹치지 않아 서로 다른 교점은 9개(③)다. 원본의 그래프 판독 대신 해를 직접 열거한 대안 풀이이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$3x = 0, \\pi, 2\\pi, 3\\pi, 4\\pi, 5\\pi$",
+        "$3x = \\frac{3\\pi}{2}, \\frac{7\\pi}{2}, \\frac{11\\pi}{2}$",
+        "따라서 전체 서로 다른 점의 개수는 $6 + 3 = 9$개입니다."
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_2_035",
+      "condition": "A",
+      "response_sha256": "e10f1363ecfc384323ef4f340f7a6e855cc00875c766f845723268adbc74ee19",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "AI 보조 검토상 f(2+x)=f(2-x)=cos(πx/4)로 바꾸고 -1/2<cosθ<1/2를 0<θ<4π의 네 구간에서 풀었다. 정확한 분수 구간에 속하는 자연수는 2,6,10,14뿐이므로 합 32가 타당하다. 근사값을 병기한 문장에 어색한 연결 표기는 있으나 정확한 구간과 정수 선택은 일치한다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\cos^2 \\frac{\\pi}{4}x < \\frac{1}{4}$",
+        "구하는 자연수 $x$는 $2, 6, 10, 14$이며, 이들의 합은 $2 + 6 + 10 + 14 = 32$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_002",
+      "condition": "A",
+      "response_sha256": "24c61e87ebdda2c105a262e79fa9860945bfd58e9580bee3271912843980e9ca",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "AI 보조 검토상 근의 합 0에서 6cos²θ+5sinθ=0을 얻고 sinθ의 범위를 사용해 -2/3만 남긴 과정이 타당하다. tanθ가 주어져 cosθ≠0이고, 구한 cos²θ=5/9에서 k=(6cosθ)²=20이다. 두 근도 서로 반대인 비영 실수이므로 서로 다르다는 조건을 충족한다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$(2 \\sin \\theta - 3)(3 \\sin \\theta + 2) = 0$",
+        "$k = 36 \\times \\frac{5}{9} = 4 \\times 5 = 20$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_010",
+      "condition": "A",
+      "response_sha256": "b6f96f0ea10dec36688fd00ab1a1e9e0959eca8e132dfd6f90b197729372a8f6",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "AI 보조 검토상 cos(θ+π/2)=-sinθ라는 항등식에 sinθ=1/3을 대입하여 -1/3을 얻는 과정이 타당하다. 별도 사분면 조건 없이 성립하며 최종 ⑤와 일치한다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\cos \\left( \\theta + \\frac{\\pi}{2} \\right) = -\\sin \\theta$",
+        "$-\\sin \\theta = -\\left( \\frac{1}{3} \\right) = -\\frac{1}{3}$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_011",
+      "condition": "A",
+      "response_sha256": "149a05f075ba80ab0124140c31fb580d09a4f944f1757dd1ae78aa2a67f32016",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "AI 보조 검토상 P의 제1사분면 조건과 sinα=1/3에서 x=2√2y(y>0)를 얻었다. 좌표 교환 Q=(y,2√2y), 원점 대칭 R=(-y,-2√2y)를 정확히 적용하여 sin²β=8/9, tan²γ=8 및 최종 80을 구했다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\mathrm{Q} = (y, 2\\sqrt{2}y)$",
+        "$\\mathrm{R} = (-y, -2\\sqrt{2}y)$",
+        "$9(\\sin^2 \\beta + \\tan^2 \\gamma) = 9 \\left( \\frac{8}{9} + 8 \\right) = 9 \\left( \\frac{8 + 72}{9} \\right) = 8 + 72 = 80$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_014",
+      "condition": "A",
+      "response_sha256": "9281e38ee9956635ca1a505c8914b17c69cfef60d47d3c174177c51a0d9b5c8b",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "AI 보조 검토상 x+π/6∈[π/6,π/3]에서 탄젠트가 증가하므로 g의 양의 치역 [√3,3√3]를 얻었다. 밑 3인 로그의 증가성을 적용하여 m=5/2,M=7/2 및 합 6을 구한 과정이 타당하고 로그 정의역도 충족한다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "따라서 $g(x)$의 치역은 $[\\sqrt{3}, 3\\sqrt{3}]$입니다.",
+        "$M + m = \\frac{7}{2} + \\frac{5}{2} = \\frac{12}{2} = 6$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_015",
+      "condition": "A",
+      "response_sha256": "84f7a27f5d2ecf47f86202982de7bb19991128d95e55a5a13229d9514d56aeef",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "AI 보조 검토상 sin2x=-√2/2를 0≤2x≤2π에서 풀어 2x=5π/4,7π/4만 얻었다. 이를 절반으로 한 두 근 5π/8,7π/8의 합 3π/2와 최종 ③이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$0 \\le 2x \\le 2\\pi$",
+        "$x = \\frac{5\\pi}{8}$ 또는 $x = \\frac{7\\pi}{8}$",
+        "$\\frac{5\\pi}{8} + \\frac{7\\pi}{8} = \\frac{12\\pi}{8} = \\frac{3\\pi}{2}$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_017",
+      "condition": "A",
+      "response_sha256": "b79aae5a79e44f23c95186e5605a50afe79b5e54a9289b8eea4172bd00dd3d1d",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "AI 보조 검토상 cosx=±1/2의 구간 내 네 해를 모두 열거한 뒤 sinx cosx<0의 제2·4사분면 조건으로 2π/3,5π/3만 골랐다. 합 7π/3과 최종 ②가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "따라서 조건을 만족하는 $x$는 $\\frac{2\\pi}{3}$와 $\\frac{5\\pi}{3}$입니다.",
+        "$\\frac{2\\pi}{3} + \\frac{5\\pi}{3} = \\frac{7\\pi}{3}$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_021",
+      "condition": "A",
+      "response_sha256": "a213f09af1067a863a340c38b10ea2c79158b5eba00eab1ca4455bb27e9bd92c",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "AI 보조 검토상 두 그래프의 교점 조건을 sinx=-sinx+1로 정확히 바꾸어 sinx=1/2를 얻었다. [0,2π)에서 두 해 π/6,5π/6의 합은 π이므로 최종 ②가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$$\\sin x = -\\sin x + 1$$",
+        "$$\\frac{\\pi}{6} + \\frac{5}{6}\\pi = \\frac{6}{6}\\pi = \\pi$$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_026",
+      "condition": "A",
+      "response_sha256": "3a60903c3883f4768695e4636af2610ccd93d111b193554abcdedaff36fb53b2",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "AI 보조 검토상 cos²x=1-sin²x를 대입해 sinx(sinx+1)=0으로 인수분해했다. 열린 구간 (0,2π)에서 sinx=0의 내부해 π를 보존하고 sinx=-1의 해 3π/2를 더한 5π/2를 기약분수로 표현하여 p+q=7을 얻었다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$x = \\pi$ (범위 내의 해)",
+        "$x = \\frac{3}{2}\\pi$ (범위 내의 해)",
+        "따라서 $p + q = 2 + 5 = 7$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_034",
+      "condition": "A",
+      "response_sha256": "3c24e68ff3fba2b291c323a2a2ca3e0ff41e948d53659a88d6ece48cb4a9f1e8",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "AI 보조 검토상 점근선으로 나뉜 세 가지에서 tanπx는 증가하고 직선은 감소하므로 각 가지의 교점은 최대 하나다. 앞의 두 가지에는 항상 하나씩 있고 마지막 가지에는 n≤20/3일 때 하나가 있다. 응답의 n<20/3 표현은 자연수 n에서는 같은 조건 n≤6을 뜻하며, n=6의 세 교점을 끝점 부호로 확인했다. 최종 ⑤가 타당한 대안 풀이이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$n - \\frac{20}{3} < 0 \\implies n < 6.66...$",
+        "따라서 $n=6$일 때 정확히 3개의 교점을 가집니다."
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_035",
+      "condition": "A",
+      "response_sha256": "c90b1c12a0c70d8380dfd6456f016a0d8db6ea095d3e57234fcff0940550be4a",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "AI 보조 검토상 절댓값을 두 코사인 방정식으로 나누어 k=3/4에서 cosx=1/2의 두 근과 cosx=-1의 한 근을 확인했다. 다른 k≥0 범위의 근 개수도 분류하여 유일성을 뒷받침하며 k<0은 절댓값 때문에 근이 없으므로 α=3/4 및 40α=30이 타당하다. 그래프 판독을 대수적 해 개수로 설명한 대안 풀이이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\cos x + \\frac{1}{4} = \\frac{3}{4} \\implies \\cos x = \\frac{1}{2}$ (2개의 실근: $x = \\frac{\\pi}{3}, \\frac{5\\pi}{3}$)",
+        "$\\cos x + \\frac{1}{4} = -\\frac{3}{4} \\implies \\cos x = -1$ (1개의 실근: $x = \\pi$)",
+        "최종정답: 30"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_039",
+      "condition": "A",
+      "response_sha256": "53a855bf61239d09b9a9f5d332af79cf0345cf973f5a44a2d1c79f917b846e9b",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "AI 보조 검토상 판별식 D<0을 2sin²θ+3sinθ-2>0으로 정확히 정리했다. 인수분해와 sinθ+2>0에서 sinθ>1/2, 따라서 π/6<θ<5π/6 및 3α+β=4π/3(④)를 얻었다. 원본 해설 중간의 상수항 -4 표기와 달리 응답의 -2가 올바른 대수 전개이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$$2\\sin^2\\theta + 3\\sin\\theta - 2 > 0$$",
+        "$$(2\\sin\\theta - 1)(\\sin\\theta + 2) > 0$$",
+        "$$\\frac{\\pi}{6} < \\theta < \\frac{5}{6}\\pi$$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_040",
+      "condition": "A",
+      "response_sha256": "94184c5f9a0806e74951edb5fd80097124091468c1985cd6440e3fc1bce3763f",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "AI 보조 검토상 t=sinx가 [-1,1] 전체를 움직인다는 점을 사용하여 항상 성립 조건을 5k≤min(t²-4t+5)로 바꾸었다. 꼭짓점 t=2가 구간 오른쪽에 있으므로 최소는 t=1에서 2이고, k≤2/5 및 최대 2/5(①)가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(t) = (t - 2)^2 + 1$",
+        "$f(1) = 1^2 - 4(1) + 5 = 1 - 4 + 5 = 2$",
+        "$k \\leq \\frac{2}{5}$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex의 AI 보조 수학 검토다. 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_005",
+      "condition": "B",
+      "response_sha256": "e6a6ca30cd9e0dfa86a91afd21e21f1427f9256b70c0b3b9a1496eb4f0c76a56",
+      "review_status": "suspected_error",
+      "math_status": "inappropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "최종 선택 ⑤(합 11)는 정확하고 후반부에서는 a=8과 a=3을 모두 올바르게 구했다. 그러나 앞부분에서 유한한 극한을 위해 f(x) 자체가 반드시 (x-a)²을 인수로 가져야 한다고 단정한 것은 오류이다. 분자에는 별도의 (x-3) 인수가 있으므로 a=3, f(x)=(x-3)(x+2)일 때 f는 (x-3)²을 인수로 갖지 않아도 주어진 극한이 5가 된다. 후반부의 올바른 경우 분류가 이 잘못된 필요조건을 명시적으로 철회하지 않은 채 이어진다.",
+      "error_step": "초반의 필요조건 단정: f(x)가 반드시 (x-a)²을 인수로 가져야 한다는 주장",
+      "evidence_quotes": [
+        "극한값이 $5$라는 유한한 값을 가지려면 분모의 $(x-a)^2$을 약분할 수 있어야 하므로, $f(x)$는 $(x-a)^2$을 인수로 가져야 합니다. 즉, $f(x) = (x-a)^2$이어야 합니다.",
+        "$k = -2$가 되어 $f(x) = (x-3)(x+2)$로 존재합니다.",
+        "$8+3=11$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_005",
+      "condition": "C",
+      "response_sha256": "3af7b9320479e9134eefed24dc077fd2223fd98fd3810f92d653b346670736f7",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "최종 선택 ⑤(합 11)는 정확하다. 유한한 극한에서 f(a)(a-3)=0을 도출한 뒤 f(a)=0인 경우 k=a 또는 a=3으로 세분하여 a=8과 a=3을 구하고, a=3인 별도 경우에서도 f(3)=0을 확인했다. 중복된 경우를 같은 해로 처리하므로 빠진 경우나 이중 계수 없이 해를 모두 구한 논리가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(a)(a-3) = 0$",
+        "즉, $k=a$ 또는 $3=a$여야 합니다.",
+        "모든 실수 $a$의 값의 합은 $8 + 3 = 11$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_005",
+      "condition": "D",
+      "response_sha256": "7972d79b8905b96b09f99ea72b42d61127b60c2ae5b63eac44b4fbeef0df3130",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "최종 선택 ⑤(합 11)는 참조 답과 일치한다. f(a)(a-3)=0이라는 필요조건에서 시작하여 f(a)=0인 경우 분자의 추가 영점이 k=a 또는 a=3이어야 함을 올바르게 사용했다. 각각 f=(x-8)²와 f=(x-3)(x+2)가 실제로 극한 5를 주는 것을 계산했고 a=3인 경우도 확인하므로 해의 완전성과 계산이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(a)(a-3) = 0$",
+        "$k=a$이거나 $3=a$여야 합니다.",
+        "$f(x) = (x-3)(x+2)$가 존재합니다.",
+        "이들의 합은 $8 + 3 = 11$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_011",
+      "condition": "D",
+      "response_sha256": "3125a09291f107a0bfdf71d639d09602c619d7586ea48049a9f6e6576e94ede1",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "각 조각은 다항식이므로 x=1에서 연속 조건을 확인하는 방법이 유효하다. 좌극한 1과 우극한 및 함숫값 a-2를 정확히 구하여 1=a-2에서 a=3을 얻었다. 최종 선택 ③도 정확하며 추론에 구체적인 수학 오류가 보이지 않는다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "3(1) - 2 = 1",
+        "1 - 3 + a = a - 2",
+        "1 = a - 2",
+        "a = 3"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_011",
+      "condition": "C",
+      "response_sha256": "f187f24d7da708e595e6ae605a9392958aac51d2956a4d1bc5930d446ae08328",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "x=1의 좌극한을 1, 우극한과 실제 함숫값을 a-2로 정확히 계산하였다. 이들을 같게 놓아 a=3을 구하는 연속성 논리가 타당하며, 다른 점에서는 다항식 조각이 연속이므로 전체 연속 조건을 충족한다. 최종 선택 ③은 참조 답과 일치한다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "3(1) - 2 = 1",
+        "1 - 3 + a = a - 2",
+        "$1 = a - 2$",
+        "$a = 3$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_012",
+      "condition": "B",
+      "response_sha256": "9d090256481d98642791bcf4aa19da68247932c5b70c8c0c08d63a26f5334936",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계 x=2에서 좌극한 4a-2와 우극한 및 함숫값 6을 정확히 계산했다. 연속 조건 4a-2=6에서 a=2를 얻었고 각 구간의 다항식은 연속이므로 경계 확인으로 충분하다. 최종 선택 ②와 계산 논리가 모두 적절하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "a(2)^2 - 2 = 4a - 2",
+        "3(2) = 6",
+        "$4a - 2 = 6$",
+        "$a = 2$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_014",
+      "condition": "C",
+      "response_sha256": "e26dcd75aaab969553110187975fb5346f3c18cea4e5867584bc614a94faa72d",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계 x=2에서 좌극한과 함숫값 14+a, 우극한 4+2a를 정확히 계산하고 연속 조건으로 같게 놓았다. 14+a=4+2a에서 a=10을 구한 계산은 타당하며 각 조각이 다항식이므로 다른 점의 연속성도 성립한다. 최종 선택 ②는 참조 답과 일치한다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "7(2) + a = 14 + a",
+        "2^2 + a(2) = 4 + 2a",
+        "$14 + a = 4 + 2a$",
+        "$a = 10$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_014",
+      "condition": "D",
+      "response_sha256": "f7a2eb6802a505001634d544f5213a051287e715294b536cbeef72f8cb8762b7",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "다항식 조각의 경계 x=2에서 좌극한과 실제 값 14+a, 우극한 4+2a를 정확히 구했다. 연속성을 위해 두 값을 같게 놓아 a=10을 얻은 추론과 계산이 타당하다. 최종 선택 ②도 정확하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "7(2) + a = 14 + a",
+        "2^2 + a(2) = 4 + 2a",
+        "$14 + a = 4 + 2a$",
+        "$a = 10$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    }
+  ]
+}

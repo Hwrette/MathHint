@@ -1,5 +1,5 @@
 {
-  "verified_at": "2026-11-10T19:12:53.654284+00:00",
+  "verified_at": "2026-11-10T19:33:25.498664+00:00",
   "config_id": "cc67f503605a3acd86112e8734b755f1c1da6e86d5cea9a3c8da1de43c3708e9",
   "dataset_id": "1e1e467b301406d6a2df2775ad506474aaa915b342d315cdca8dc39fdf3e7345",
   "split": "test",
@@ -1298,6 +1298,78 @@
     },
     {
       "check": "identical_problem_and_common_system_across_all_conditions",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_324",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_325",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_326",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_327",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_328",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_329",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_330",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_331",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_332",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_333",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_334",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_335",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_336",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_337",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_338",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_339",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_340",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_341",
       "passed": true
     },
     {
@@ -2901,6 +2973,206 @@
       "passed": true
     },
     {
+      "check": "response_identity_diff_1_005_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_005_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_005_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_005_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_005_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_005_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_005_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_005_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_005_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_005_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_005_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_005_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_005_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_005_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_005_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_011_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_011_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_011_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_011_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_011_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_011_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_011_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_011_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_011_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_011_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_011_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_011_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_012_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_012_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_012_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_012_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_012_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_012_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_012_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_012_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_012_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_014_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_014_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_014_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_014_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_014_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_014_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_014_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_1_014_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_1_014_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_1_014_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_014_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_014_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_018_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_1_018_D",
+      "passed": true
+    },
+    {
       "check": "successful_exact_requests_never_saved_twice",
       "passed": true
     },
@@ -2917,13 +3189,13 @@
       "passed": true
     }
   ],
-  "passed": 728,
+  "passed": 796,
   "failed": 0,
   "complete": true,
   "experiment_complete": false,
-  "successful_requests": 80,
+  "successful_requests": 88,
   "expected_requests": 320,
-  "pending_requests": 240,
+  "pending_requests": 232,
   "live_api_calls_during_verification": 0,
   "model_training_during_verification": false,
   "limits": [

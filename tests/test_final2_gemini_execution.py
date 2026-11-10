@@ -37,6 +37,59 @@ class APIError(Exception):
 
 
 class Final2GenerationTests(unittest.TestCase):
+    def test_longer_http_timeout_changes_only_transport_not_sdk_body_or_hash(self):
+        captured, transport, observed = [], [], []
+        class FakeClient:
+            def __init__(self, **arguments):
+                transport.append((arguments["http_options"].timeout,
+                                  arguments["http_options"].retry_options.attempts))
+                self.models = self
+            def __enter__(self):
+                return self
+            def __exit__(self, *_):
+                return False
+            def generate_content(self, **arguments):
+                captured.append(comparison.request_snapshot(arguments))
+                return SimpleNamespace(text="최종정답: ①")
+        text = r"수식 $\lim_{x\to0}\frac{\sin x}{x}$"
+        comparison.make_request(SETTINGS, "fake", client_factory=FakeClient)(text)
+        runner.transport_request(SETTINGS, "fake", http_timeout_ms=180_000,
+                                 client_factory=FakeClient, request_observer=observed.append)(text)
+        self.assertEqual(transport, [(90_000, 1), (180_000, 1)])
+        self.assertEqual(captured[0], captured[1])
+        self.assertEqual(comparison.digest(captured[0]), comparison.digest(captured[1]))
+        self.assertEqual(observed, [captured[1]])
+
+    def test_httpx_read_timeout_uses_existing_bounded_retry_and_preserves_safe_cause(self):
+        import httpx
+        attempts, details = [], []
+        class TimeoutClient:
+            def __init__(self, **_):
+                self.models = self
+            def __enter__(self):
+                return self
+            def __exit__(self, *_):
+                return False
+            def generate_content(self, **_):
+                attempts.append(True)
+                raise httpx.ReadTimeout("timed out key=private")
+        request = runner.transport_request(SETTINGS, "private", http_timeout_ms=180_000,
+                                           client_factory=TimeoutClient, error_observer=details.append)
+        with self.assertRaises(TimeoutError) as stopped:
+            request("problem")
+        self.assertIsInstance(stopped.exception.__cause__, httpx.ReadTimeout)
+        self.assertNotIn("private", str(stopped.exception))
+        attempts.clear()
+        details.clear()
+        item = {"id": "q", "method": "baseline", "input_text": "problem", "reference": {}, "problem_text": "problem"}
+        with patch.object(comparison.time, "sleep"):
+            row = comparison.generate_one(item, {**SETTINGS, "max_attempts": 2}, "c", "private", request_function=request)
+        self.assertEqual(len(attempts), 2)
+        self.assertEqual(len(row["attempts"]), 2)
+        self.assertEqual(row["error"]["type"], "TimeoutError")
+        self.assertTrue(all(detail["original_error_type"] == "ReadTimeout" for detail in details))
+        self.assertTrue(all("private" not in detail["message"] for detail in details))
+
     def test_three_hint_arms_share_selection_json_and_final_instruction(self):
         vocabulary = ["latex:x", r"latex:\sin", "kiwi:연속", "latex:2", "kiwi:대입"]
         values = [-1, 2.12345, 2.12345, .0004, .0006]
