@@ -1,0 +1,102 @@
+{
+  "id": "diff_2_032",
+  "condition": "B",
+  "method": "regression_hint",
+  "split": "train",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "함수 $f (x) = x^{3} + a x^{2} - 9 x + b$는 $x = 1$에서 극소이다. 함수 $f (x)$의 극댓값이 $\\mathrm{28}$일 때, $a + b$의 값을 구하시오. (단, $a$와 $b$는 상수이다.)\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:=\":14.81,\"latex:(\":11.362,\"latex:)\":11.346,\"latex:+\":9.537,\"latex:-\":9.327,\"latex:f\":8.428,\"latex:^\":4.521,\"kiwi:에서\":3.781,\"latex:'\":3.246,\"kiwi:이\":3.006,\"kiwi:함수\":2.49,\"kiwi:므로\":2.183,\"latex:\\\\cdots\":1.486,\"kiwi:늘\":1.089,\"latex:_\":1.076,\"kiwi:극댓값\":0.933,\"latex:\\\\nearrow\":0.904,\"kiwi:가지\":0.867,\"latex:\\\\therefore\":0.856,\"kiwi:또는\":0.824}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "problem_text": "함수 $f (x) = x^{3} + a x^{2} - 9 x + b$는 $x = 1$에서 극소이다. 함수 $f (x)$의 극댓값이 $\\mathrm{28}$일 때, $a + b$의 값을 구하시오. (단, $a$와 $b$는 상수이다.)\n",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 359,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:=": 14.81,
+      "latex:(": 11.362,
+      "latex:)": 11.346,
+      "latex:+": 9.537,
+      "latex:-": 9.327,
+      "latex:f": 8.428,
+      "latex:^": 4.521,
+      "kiwi:에서": 3.781,
+      "latex:'": 3.246,
+      "kiwi:이": 3.006,
+      "kiwi:함수": 2.49,
+      "kiwi:므로": 2.183,
+      "latex:\\cdots": 1.486,
+      "kiwi:늘": 1.089,
+      "latex:_": 1.076,
+      "kiwi:극댓값": 0.933,
+      "latex:\\nearrow": 0.904,
+      "kiwi:가지": 0.867,
+      "latex:\\therefore": 0.856,
+      "kiwi:또는": 0.824
+    },
+    "source": "regression_prediction"
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n함수 $f (x) = x^{3} + a x^{2} - 9 x + b$는 $x = 1$에서 극소이다. 함수 $f (x)$의 극댓값이 $\\mathrm{28}$일 때, $a + b$의 값을 구하시오. (단, $a$와 $b$는 상수이다.)\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:=\":14.81,\"latex:(\":11.362,\"latex:)\":11.346,\"latex:+\":9.537,\"latex:-\":9.327,\"latex:f\":8.428,\"latex:^\":4.521,\"kiwi:에서\":3.781,\"latex:'\":3.246,\"kiwi:이\":3.006,\"kiwi:함수\":2.49,\"kiwi:므로\":2.183,\"latex:\\\\cdots\":1.486,\"kiwi:늘\":1.089,\"latex:_\":1.076,\"kiwi:극댓값\":0.933,\"latex:\\\\nearrow\":0.904,\"kiwi:가지\":0.867,\"latex:\\\\therefore\":0.856,\"kiwi:또는\":0.824}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "함수 $f (x) = x^{3} + a x^{2} - 9 x + b$는 $x = 1$에서 극소이다. 함수 $f (x)$의 극댓값이 $\\mathrm{28}$일 때, $a + b$의 값을 구하시오. (단, $a$와 $b$는 상수이다.)\n\n\n[학습 데이터로 학습한 선형회귀가 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:=\":14.81,\"latex:(\":11.362,\"latex:)\":11.346,\"latex:+\":9.537,\"latex:-\":9.327,\"latex:f\":8.428,\"latex:^\":4.521,\"kiwi:에서\":3.781,\"latex:'\":3.246,\"kiwi:이\":3.006,\"kiwi:함수\":2.49,\"kiwi:므로\":2.183,\"latex:\\\\cdots\":1.486,\"kiwi:늘\":1.089,\"latex:_\":1.076,\"kiwi:극댓값\":0.933,\"latex:\\\\nearrow\":0.904,\"kiwi:가지\":0.867,\"latex:\\\\therefore\":0.856,\"kiwi:또는\":0.824}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "2c99b09dba9fe27ebed79fe2663af5bc0443b1db8e998dbeee20b9eda7b649f5",
+  "request_sha256": "2c99b09dba9fe27ebed79fe2663af5bc0443b1db8e998dbeee20b9eda7b649f5",
+  "input_sha256": "95f29ed123ea0f660e66780db1d54ff42dceb36c342f9e988a589fa58797f540",
+  "dataset_id": "1e1e467b301406d6a2df2775ad506474aaa915b342d315cdca8dc39fdf3e7345",
+  "models": {
+    "regression": {
+      "manifest_path": "results/final_experiment_2/regression/model_manifest.json",
+      "manifest_sha256": "9ef1f4064e17d8a11388f177de627cd422799435ea22224a8e4093b0f212fdce",
+      "checkpoint": {
+        "path": "results/final_experiment_2/regression/checkpoints/final.pt",
+        "sha256": "a92db2cadfa16cd19af842030af79f61878f96d47c2043fb877415b92427fa24"
+      },
+      "predictions": {
+        "path": "results/final_experiment_2/regression/predictions/all_predictions.json",
+        "sha256": "5b9d3a7e906b6b9a07878f023d898225b39043f4fd42af889e48a1f267b4bc77"
+      },
+      "architecture": "Linear(in_features=270, out_features=359, bias=True)",
+      "frozen_before_test": true
+    },
+    "deep_learning": {
+      "manifest_path": "results/final_experiment_2/deep_learning/model_manifest.json",
+      "manifest_sha256": "bc28db72208c97d3ef2f0237859cd38a80383d22460ad3a90aa073aa97e30590",
+      "checkpoint": {
+        "path": "results/final_experiment_2/deep_learning/checkpoints/final.pt",
+        "sha256": "b6410ac910d8cc737b24561c5a094c45ed307ec1ba983ff5a15c0418e93dd13c"
+      },
+      "predictions": {
+        "path": "results/final_experiment_2/deep_learning/predictions/all_predictions.json",
+        "sha256": "894edae73c5d9c74736c27010a7f25deea53062b880825f5dd30f065e9ad8560"
+      },
+      "architecture": "Sequential(\n  (0): Linear(in_features=270, out_features=32, bias=True)\n  (1): ReLU()\n  (2): Dropout(p=0.1, inplace=False)\n  (3): Linear(in_features=32, out_features=359, bias=True)\n)",
+      "frozen_before_test": true
+    }
+  },
+  "solution_vocabulary_sha256": "e857072c08e72344631c662e634ab511e2fe061f1382fb2d95cfdaa4813fb8a6",
+  "data_identity_sha256": "2ee1ebe5bf2380022d6dd277446f87caa0afca55b1ca92bdff03cbdcbcaa9bce",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "raw_problem_unchanged": true,
+    "new_live_api_calls": 0
+  },
+  "sources": {
+    "problem": "data/processed/problems/diff_2_032.txt",
+    "vector_source": {
+      "path": "results/final_experiment_2/regression/predictions/all_predictions.json",
+      "sha256": "5b9d3a7e906b6b9a07878f023d898225b39043f4fd42af889e48a1f267b4bc77"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+# Local controls; requests, responses and execution history remain tracked.
+.execution.lock
+stop_requested
+*.tmp

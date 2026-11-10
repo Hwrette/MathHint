@@ -1,5 +1,11 @@
 # MathHint Final Experiment 2
 
+<!-- gemini-full265:start -->
+
+**전체265문항 API 확장:** [새 비교 결과](gemini_full265/README.md) · [문항265개 CSV](gemini_full265/question_comparison.csv) · [수식 비교 화면](gemini_full265/report.html). 학습185와 테스트80을 구분해 읽는다.
+
+<!-- gemini-full265:end -->
+
 ## 결과를 읽는 순서
 
 |연구|먼저 열 자료|

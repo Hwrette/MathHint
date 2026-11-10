@@ -1,0 +1,99 @@
+{
+  "id": "diff_2_008",
+  "condition": "D",
+  "method": "oracle_hint",
+  "split": "train",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "함수\n$f \\left( x \\right) = {\\left\\{\\begin{array}{lll}5 x + a &  & \\left( x < - 2 \\right) \\\\ x^{2} - a &  & \\left( x \\geq - 2 \\right)\\end{array}\\right.}$\n가 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?\n① $6$\t\t② $7$\t\t③ $8$\n④ $9$\t\t⑤ $10$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:-\":14.0,\"latex:=\":8.0,\"kiwi:이\":6.0,\"latex:(\":6.0,\"latex:)\":6.0,\"latex:+\":5.0,\"latex:\\\\lim\":4.0,\"latex:\\\\rightarrow\":4.0,\"latex:_\":4.0,\"latex:f\":4.0,\"kiwi:므로\":2.0,\"kiwi:에서\":2.0,\"kiwi:연속\":2.0,\"kiwi:가\":1.0,\"kiwi:실수\":1.0,\"kiwi:이때\":1.0,\"kiwi:전체\":1.0,\"kiwi:집합\":1.0,\"kiwi:함수\":1.0,\"latex:\\\\therefore\":1.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "problem_text": "함수\n$f \\left( x \\right) = {\\left\\{\\begin{array}{lll}5 x + a &  & \\left( x < - 2 \\right) \\\\ x^{2} - a &  & \\left( x \\geq - 2 \\right)\\end{array}\\right.}$\n가 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?\n① $6$\t\t② $7$\t\t③ $8$\n④ $9$\t\t⑤ $10$\n",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 359,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:-": 14.0,
+      "latex:=": 8.0,
+      "kiwi:이": 6.0,
+      "latex:(": 6.0,
+      "latex:)": 6.0,
+      "latex:+": 5.0,
+      "latex:\\lim": 4.0,
+      "latex:\\rightarrow": 4.0,
+      "latex:_": 4.0,
+      "latex:f": 4.0,
+      "kiwi:므로": 2.0,
+      "kiwi:에서": 2.0,
+      "kiwi:연속": 2.0,
+      "kiwi:가": 1.0,
+      "kiwi:실수": 1.0,
+      "kiwi:이때": 1.0,
+      "kiwi:전체": 1.0,
+      "kiwi:집합": 1.0,
+      "kiwi:함수": 1.0,
+      "latex:\\therefore": 1.0
+    },
+    "source": "actual_reference"
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n함수\n$f \\left( x \\right) = {\\left\\{\\begin{array}{lll}5 x + a &  & \\left( x < - 2 \\right) \\\\ x^{2} - a &  & \\left( x \\geq - 2 \\right)\\end{array}\\right.}$\n가 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?\n① $6$\t\t② $7$\t\t③ $8$\n④ $9$\t\t⑤ $10$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:-\":14.0,\"latex:=\":8.0,\"kiwi:이\":6.0,\"latex:(\":6.0,\"latex:)\":6.0,\"latex:+\":5.0,\"latex:\\\\lim\":4.0,\"latex:\\\\rightarrow\":4.0,\"latex:_\":4.0,\"latex:f\":4.0,\"kiwi:므로\":2.0,\"kiwi:에서\":2.0,\"kiwi:연속\":2.0,\"kiwi:가\":1.0,\"kiwi:실수\":1.0,\"kiwi:이때\":1.0,\"kiwi:전체\":1.0,\"kiwi:집합\":1.0,\"kiwi:함수\":1.0,\"latex:\\\\therefore\":1.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "함수\n$f \\left( x \\right) = {\\left\\{\\begin{array}{lll}5 x + a &  & \\left( x < - 2 \\right) \\\\ x^{2} - a &  & \\left( x \\geq - 2 \\right)\\end{array}\\right.}$\n가 실수 전체의 집합에서 연속일 때, 상수 $a$의 값은?\n① $6$\t\t② $7$\t\t③ $8$\n④ $9$\t\t⑤ $10$\n\n\n[정답 해설에서 계산한 실제 해설 주요 토큰: 실제 빈도순 상위20개]\n{\"latex:-\":14.0,\"latex:=\":8.0,\"kiwi:이\":6.0,\"latex:(\":6.0,\"latex:)\":6.0,\"latex:+\":5.0,\"latex:\\\\lim\":4.0,\"latex:\\\\rightarrow\":4.0,\"latex:_\":4.0,\"latex:f\":4.0,\"kiwi:므로\":2.0,\"kiwi:에서\":2.0,\"kiwi:연속\":2.0,\"kiwi:가\":1.0,\"kiwi:실수\":1.0,\"kiwi:이때\":1.0,\"kiwi:전체\":1.0,\"kiwi:집합\":1.0,\"kiwi:함수\":1.0,\"latex:\\\\therefore\":1.0}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "65caf93e9e611cab7a71fc13110d5e7b1bc93499352b1fcd041f27825a02e6f0",
+  "request_sha256": "65caf93e9e611cab7a71fc13110d5e7b1bc93499352b1fcd041f27825a02e6f0",
+  "input_sha256": "c76b31b7eead202bd6ac1de4e94d6e59febfa3c2af2c6cc0726aab07f1644c82",
+  "dataset_id": "1e1e467b301406d6a2df2775ad506474aaa915b342d315cdca8dc39fdf3e7345",
+  "models": {
+    "regression": {
+      "manifest_path": "results/final_experiment_2/regression/model_manifest.json",
+      "manifest_sha256": "9ef1f4064e17d8a11388f177de627cd422799435ea22224a8e4093b0f212fdce",
+      "checkpoint": {
+        "path": "results/final_experiment_2/regression/checkpoints/final.pt",
+        "sha256": "a92db2cadfa16cd19af842030af79f61878f96d47c2043fb877415b92427fa24"
+      },
+      "predictions": {
+        "path": "results/final_experiment_2/regression/predictions/all_predictions.json",
+        "sha256": "5b9d3a7e906b6b9a07878f023d898225b39043f4fd42af889e48a1f267b4bc77"
+      },
+      "architecture": "Linear(in_features=270, out_features=359, bias=True)",
+      "frozen_before_test": true
+    },
+    "deep_learning": {
+      "manifest_path": "results/final_experiment_2/deep_learning/model_manifest.json",
+      "manifest_sha256": "bc28db72208c97d3ef2f0237859cd38a80383d22460ad3a90aa073aa97e30590",
+      "checkpoint": {
+        "path": "results/final_experiment_2/deep_learning/checkpoints/final.pt",
+        "sha256": "b6410ac910d8cc737b24561c5a094c45ed307ec1ba983ff5a15c0418e93dd13c"
+      },
+      "predictions": {
+        "path": "results/final_experiment_2/deep_learning/predictions/all_predictions.json",
+        "sha256": "894edae73c5d9c74736c27010a7f25deea53062b880825f5dd30f065e9ad8560"
+      },
+      "architecture": "Sequential(\n  (0): Linear(in_features=270, out_features=32, bias=True)\n  (1): ReLU()\n  (2): Dropout(p=0.1, inplace=False)\n  (3): Linear(in_features=32, out_features=359, bias=True)\n)",
+      "frozen_before_test": true
+    }
+  },
+  "solution_vocabulary_sha256": "e857072c08e72344631c662e634ab511e2fe061f1382fb2d95cfdaa4813fb8a6",
+  "data_identity_sha256": "2ee1ebe5bf2380022d6dd277446f87caa0afca55b1ca92bdff03cbdcbcaa9bce",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "raw_problem_unchanged": true,
+    "new_live_api_calls": 0
+  },
+  "sources": {
+    "problem": "data/processed/problems/diff_2_008.txt",
+    "vector_source": "actual reference only for D"
+  }
+}

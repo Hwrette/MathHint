@@ -1,0 +1,9 @@
+{
+  "mocked_sdk_calls": 1060,
+  "live_generation_calls": 0,
+  "requests": 1060,
+  "all_sdk_arguments_match": true,
+  "system_is_exact_legacy_default": true,
+  "oracle_condition": "D; previous experiment C",
+  "model_freeze_gate": "both manifests checked before plan"
+}

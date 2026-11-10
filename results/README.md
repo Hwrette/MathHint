@@ -1,5 +1,11 @@
 # 실험 결과 안내
 
+<!-- gemini-full265:start -->
+
+**전체265문항 A/B/C/D 확장:** [새 결과 안내](final_experiment_2/gemini_full265/README.md). 기존 테스트80의320성공응답을 재사용하고 학습185를 추가하는 별도 비교다. 전체와 학습/테스트 분리 결과를 함께 제공한다.
+
+<!-- gemini-full265:end -->
+
 <!-- final-experiment-2:start -->
 
 **후속 연구:** [2차 실험 목차](final_experiment_2/README.md)에서 [전체265 군집화](final_experiment_2/cluster_improvement/README.md), [선형회귀](final_experiment_2/regression/README.md), [비선형 MLP](final_experiment_2/deep_learning/README.md), [Gemini A/B/C/D 비교와 실제 완료 범위](final_experiment_2/gemini_comparison/README.md)로 이동한다. 모델의 해설 토큰 예측과 Gemini의 수학 풀이 성능을 구분해 읽는다. 기존 1차 최종 실험·토큰 분석은 그대로 보존한다.

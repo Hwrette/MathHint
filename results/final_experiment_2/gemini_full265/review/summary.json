@@ -1,0 +1,11 @@
+{
+  "planned_response_count": 1060,
+  "review_status_counts": {
+    "not_generated": 740,
+    "AI_assisted_reviewed": 298,
+    "suspected_error": 22
+  },
+  "human_confirmed_count": 0,
+  "additional_review_api_calls": 0,
+  "note": "전체 상태를 기록했지만 보류를 수학적 검증 완료로 취급하지 않는다."
+}

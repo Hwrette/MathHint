@@ -1,0 +1,69 @@
+{
+  "id": "trig_1_024",
+  "condition": "A",
+  "method": "baseline",
+  "split": "train",
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "user_message": "$\\sin \\theta = - \\frac{4}{5}$일 때, $\\cos \\left( \\frac{\\pi}{2} + \\theta \\right)$의 값은?\n① $- \\frac{4}{5}$\t② $- \\frac{3}{5}$\t\t③ $0$\n④ $\\frac{3}{5}$\t\t⑤ $\\frac{4}{5}$\n",
+  "problem_text": "$\\sin \\theta = - \\frac{4}{5}$일 때, $\\cos \\left( \\frac{\\pi}{2} + \\theta \\right)$의 값은?\n① $- \\frac{4}{5}$\t② $- \\frac{3}{5}$\t\t③ $0$\n④ $\\frac{3}{5}$\t\t⑤ $\\frac{4}{5}$\n",
+  "hint": null,
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n$\\sin \\theta = - \\frac{4}{5}$일 때, $\\cos \\left( \\frac{\\pi}{2} + \\theta \\right)$의 값은?\n① $- \\frac{4}{5}$\t② $- \\frac{3}{5}$\t\t③ $0$\n④ $\\frac{3}{5}$\t\t⑤ $\\frac{4}{5}$\n",
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "$\\sin \\theta = - \\frac{4}{5}$일 때, $\\cos \\left( \\frac{\\pi}{2} + \\theta \\right)$의 값은?\n① $- \\frac{4}{5}$\t② $- \\frac{3}{5}$\t\t③ $0$\n④ $\\frac{3}{5}$\t\t⑤ $\\frac{4}{5}$\n",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "sdk_request_sha256": "6427262a47e2bcb3e2a48313f256b8267a308404586ea69a11c6c78389460519",
+  "request_sha256": "6427262a47e2bcb3e2a48313f256b8267a308404586ea69a11c6c78389460519",
+  "input_sha256": "17c6330ff4a387e6c578f53de17148dd1ab7e4ffbe79b8aeadb562b9d5338574",
+  "dataset_id": "1e1e467b301406d6a2df2775ad506474aaa915b342d315cdca8dc39fdf3e7345",
+  "models": {
+    "regression": {
+      "manifest_path": "results/final_experiment_2/regression/model_manifest.json",
+      "manifest_sha256": "9ef1f4064e17d8a11388f177de627cd422799435ea22224a8e4093b0f212fdce",
+      "checkpoint": {
+        "path": "results/final_experiment_2/regression/checkpoints/final.pt",
+        "sha256": "a92db2cadfa16cd19af842030af79f61878f96d47c2043fb877415b92427fa24"
+      },
+      "predictions": {
+        "path": "results/final_experiment_2/regression/predictions/all_predictions.json",
+        "sha256": "5b9d3a7e906b6b9a07878f023d898225b39043f4fd42af889e48a1f267b4bc77"
+      },
+      "architecture": "Linear(in_features=270, out_features=359, bias=True)",
+      "frozen_before_test": true
+    },
+    "deep_learning": {
+      "manifest_path": "results/final_experiment_2/deep_learning/model_manifest.json",
+      "manifest_sha256": "bc28db72208c97d3ef2f0237859cd38a80383d22460ad3a90aa073aa97e30590",
+      "checkpoint": {
+        "path": "results/final_experiment_2/deep_learning/checkpoints/final.pt",
+        "sha256": "b6410ac910d8cc737b24561c5a094c45ed307ec1ba983ff5a15c0418e93dd13c"
+      },
+      "predictions": {
+        "path": "results/final_experiment_2/deep_learning/predictions/all_predictions.json",
+        "sha256": "894edae73c5d9c74736c27010a7f25deea53062b880825f5dd30f065e9ad8560"
+      },
+      "architecture": "Sequential(\n  (0): Linear(in_features=270, out_features=32, bias=True)\n  (1): ReLU()\n  (2): Dropout(p=0.1, inplace=False)\n  (3): Linear(in_features=32, out_features=359, bias=True)\n)",
+      "frozen_before_test": true
+    }
+  },
+  "solution_vocabulary_sha256": "e857072c08e72344631c662e634ab511e2fe061f1382fb2d95cfdaa4813fb8a6",
+  "data_identity_sha256": "2ee1ebe5bf2380022d6dd277446f87caa0afca55b1ca92bdff03cbdcbcaa9bce",
+  "verification": {
+    "mocked_sdk_arguments_match_saved": true,
+    "raw_problem_unchanged": true,
+    "new_live_api_calls": 0
+  },
+  "sources": {
+    "problem": "data/processed/problems/trig_1_024.txt",
+    "vector_source": null
+  }
+}

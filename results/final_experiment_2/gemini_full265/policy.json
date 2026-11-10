@@ -1,0 +1,15 @@
+{
+  "interval_seconds": 10.0,
+  "workers": 1,
+  "rpm": 6,
+  "rph": 360,
+  "rpd": 1400,
+  "max_new_requests": 40,
+  "max_run_seconds": 3600,
+  "max_wait_seconds": 120,
+  "max_attempts": 2,
+  "http_timeout_ms": 180000,
+  "provider_limits_confirmed": false,
+  "limits_note": "user-authorized local safety cap for full265 extension; not a confirmed provider quota; old and new request starts share rolling windows",
+  "user_authorized_additional_requests": 740
+}
