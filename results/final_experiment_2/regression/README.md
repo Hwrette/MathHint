@@ -78,4 +78,16 @@ Ridge는 닫힌 해를 계산하므로 최종 모델에 반복 학습 에폭이 
 
 새 Gemini 효과는 이 벡터 지표와 다른 평가 대상이다. 이 문서만으로 풀이 정확도·시스템 계산 효율 향상을 주장하지 않는다.
 
+## 실행 구분
+
+저장소 루트에서 설치 후 실행한다. Python 환경은 프로젝트의 learning·analysis 의존성을 사용한다.
+
+```bash
+python -m pip install -e '.[learning,analysis]'
+python -m mathhint_learning.final_experiment_2.regression evaluate
+python -m mathhint_learning.final_experiment_2.regression train
+```
+
+evaluate는 지정된 확정 체크포인트의 예측을 저장 예측과 대조하고 표·그림을 다시 만든다. 재학습이나 API 호출은 없다. train은 이 실험의 검증 탐색·최종 학습 진입점이며, 이미 완료된 동일 데이터·설정은 무결성을 확인해 재사용한다. 완료된 모델을 지워 재학습할 필요는 없다. 데이터나 설정이 다르면 과거 모델로 대신 진행하지 않고 중단한다.
+
 [전체2차 연구](../README.md) · [공통 데이터](../solution_data/README.md)

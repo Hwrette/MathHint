@@ -80,6 +80,15 @@ def run(root=ROOT, output=OUTPUT, *, save=True):
           and state.get("pending_count") == len(expected_pending)
           and {(r["id"], r["condition"]) for r in state.get("pending_requests", [])} == expected_pending)
     check("completed_status_only_when_all_requests_succeeded", (state.get("status") == "completed") == (not expected_pending))
+    browser_path = output / "review/browser_validation.json"
+    browser = read_json(browser_path) if browser_path.exists() else {"performed": False,
+        "note": "실제 브라우저 검사는 별도 수행하며, 파일 존재 검증으로 대신하지 않는다."}
+    if browser.get("performed"):
+        check("actual_browser_record_matches_current_html_and_assets", browser.get("passed") is True
+              and browser.get("report_sha256") == comparison.file_hash(output / "report.html")
+              and bool(browser.get("assets_sha256"))
+              and all((root / name).is_file() and comparison.file_hash(root / name) == digest
+                      for name, digest in browser["assets_sha256"].items()))
     after = {str(path.relative_to(output)): comparison.file_hash(path)
              for path in output.rglob("*") if path.is_file() and path.name != "validation.json"}
     check("verification_leaves_inputs_models_and_response_logs_unchanged", before == after)
@@ -90,6 +99,7 @@ def run(root=ROOT, output=OUTPUT, *, save=True):
         "successful_requests": len(latest_successes), "expected_requests": len(plan),
         "pending_requests": len(expected_pending), "live_api_calls_during_verification": 0,
         "model_training_during_verification": False,
+        "actual_browser_validation": browser,
         "limits": ["검증 통과와 실험 완료는 구분한다. 미완료 요청은 그대로 표시한다.",
                    "최종 답의 자동 판정은 수학적 풀이 타당성의 확정 판정이 아니다."]}
     if save:

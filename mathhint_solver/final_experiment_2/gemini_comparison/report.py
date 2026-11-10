@@ -376,8 +376,15 @@ def _readme(output, config, state, summary, tokens, pairs, cases, reviews, quest
               "GitHub의 HTML 파일 페이지는 실행 화면이 아니다. **저장소 전체 ZIP을 압축 해제**한 뒤 `results/final_experiment_2/gemini_comparison/report.html`을 브라우저에서 연다. "
               "같은 폴더의 `viewer_assets/`와 기존 `mathhint_analysis/viewer_assets/vendor/`의 Markdown·KaTeX·폰트가 함께 필요하다. HTML 하나만 내려받으면 수식이 표시되지 않는다. "
               "인터넷·서버·로그인·추가 Gemini 요청 없이 작동한다. 임의 HTML은 실행하지 않으며 수식 실패는 원문과 실패 표시로 남긴다.", "",
-              "## 재개·보고서 재생성", "", "```bash", "python -m mathhint_solver.final_experiment_2.gemini_comparison generate",
-              "python -m mathhint_solver.final_experiment_2.gemini_comparison report", "python -m mathhint_solver.final_experiment_2.gemini_comparison verify", "```", "",
+              "## 재개·보고서 재생성", "", "저장 결과만 다시 읽는 명령은 다음과 같다. 새 모델 학습이나 API 호출은 없다.", "",
+              "```bash", "python -m mathhint_solver.final_experiment_2.gemini_comparison report",
+              "python -m mathhint_solver.final_experiment_2.gemini_comparison verify", "```", "",
+              "실제 호출은 별도로 실행한다. 프로젝트 solver 의존성을 설치하고 안전한 환경변수 `GEMINI_API_KEY`를 설정한다. "
+              "preflight는 모델 지원·인증을 모델 조회 API로 확인하지만 풀이를 생성하지 않는다. generate만 미완료 풀이를 요청한다.", "",
+              "```bash", "python -m mathhint_solver.final_experiment_2.gemini_comparison preflight",
+              "python -m mathhint_solver.final_experiment_2.gemini_comparison generate", "```", "",
+              "중단 파일이 남아 있다면 state.json의 정확한 재개 명령에 있는 `--clear-stop`을 사용한다. "
+              "현재 통신 제한 시간과 재시도·요청 예산은 실행별 execution_runs 기록을 확인한다.", "",
               "generate는 같은 요청의 성공 기록을 건너뛰고 미완료만 처리한다. report/verify는 모델 학습이나 새 API 호출을 시작하지 않는다. "
               "실행 환경이 종료된 뒤 스스로 계속 실행되거나 별도 예약이 설정됐다고 가정하지 않는다."]
     traces = ["", "## 응답의 실행 시기와 보고 모델 버전", "",

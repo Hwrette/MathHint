@@ -262,6 +262,13 @@ def write_model_reports(root, output, data):
         lines += [f"![{row['id']} 실제·예측 상위 토큰](figures/example_{row['id']}.png)", ""]
     lines += ["전체265의 어휘를 미리 구성한 탐색적 조건이다. 테스트 표현이 어휘와 불용어 검토에 포함됐으므로 완전히 미관측인 일반화 검증이 아니다. 한 문제의 특정 원본 해설을 타깃으로 삼았으며 다른 올바른 풀이의 토큰은 다를 수 있다.", "",
         "새 Gemini 효과는 이 벡터 지표와 다른 평가 대상이다. 이 문서만으로 풀이 정확도·시스템 계산 효율 향상을 주장하지 않는다.", "",
+        "## 실행 구분", "", "저장소 루트에서 설치 후 실행한다. Python 환경은 프로젝트의 learning·analysis 의존성을 사용한다.", "",
+        "```bash", "python -m pip install -e '.[learning,analysis]'",
+        f"python -m mathhint_learning.final_experiment_2.{output.name} evaluate",
+        f"python -m mathhint_learning.final_experiment_2.{output.name} train", "```", "",
+        "evaluate는 지정된 확정 체크포인트의 예측을 저장 예측과 대조하고 표·그림을 다시 만든다. 재학습이나 API 호출은 없다. "
+        "train은 이 실험의 검증 탐색·최종 학습 진입점이며, 이미 완료된 동일 데이터·설정은 무결성을 확인해 재사용한다. "
+        "완료된 모델을 지워 재학습할 필요는 없다. 데이터나 설정이 다르면 과거 모델로 대신 진행하지 않고 중단한다.", "",
         "[전체2차 연구](../README.md) · [공통 데이터](../solution_data/README.md)", ""]
     text = "\n".join(lines)
     (output / "README.md").write_text(text, encoding="utf-8")

@@ -2,7 +2,7 @@
 
 <!-- final-experiment-2:start -->
 
-**새 후속 실험:** [2차 실험 목차](final_experiment_2/README.md) → [cluster_improvement 결과](final_experiment_2/cluster_improvement/README.md). 전체265문항의 문제 BoW와 사용자 불용어 적용 전·후 K-means를 비교했다. 같은265문항의 탐색 결과이며, 기존 1차 최종 실험·토큰 분석은 그대로 보존한다.
+**후속 연구:** [2차 실험 목차](final_experiment_2/README.md)에서 [전체265 군집화](final_experiment_2/cluster_improvement/README.md), [선형회귀](final_experiment_2/regression/README.md), [비선형 MLP](final_experiment_2/deep_learning/README.md), [Gemini A/B/C/D 비교와 실제 완료 범위](final_experiment_2/gemini_comparison/README.md)로 이동한다. 모델의 해설 토큰 예측과 Gemini의 수학 풀이 성능을 구분해 읽는다. 기존 1차 최종 실험·토큰 분석은 그대로 보존한다.
 
 <!-- final-experiment-2:end -->
 
