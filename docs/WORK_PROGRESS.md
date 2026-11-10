@@ -1,20 +1,41 @@
 # MathHint 작업 진행 상태
 
-STATUS: COMPLETE_FINAL2_PROBLEM_ONLY_FULL265_CLUSTERING_PUBLISHED
-EXECUTION_ALLOWED: false  # Completed; wait for a new explicit user request
-LAST_CONFIRMED_PUBLISHED_COMMIT: fc903c9280da74a0cf3178b37c14f5113de8859d
+STATUS: IN_PROGRESS_FINAL2_SUPERVISED_MODELS_AND_GEMINI_ABCD
+EXECUTION_ALLOWED: true  # New supervised/API follow-up authorized; Gemini gated on BOTH models frozen
+LAST_CONFIRMED_PUBLISHED_COMMIT: 5e442d338ee514344eaa954c05a0dc6c00d21c9d
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
 AUTOMATION_STATUS: PAUSED_AFTER_READER_WORKFLOW_COMPLETION_VERIFIED_BY_PEEK
 FIRST_RUN_FROM_SAVED_RULE: 2026-11-09T05:58:50+09:00
 RECURRENCE: EVERY_5_HOURS
 NEXT_RUN_TIME_SERVER_FIELD: NOT_RETURNED
 ENVIRONMENT: MathHint / inherited / current_environment_id_confirmed
-REMOTE_CHECKPOINT_STATUS: FINAL2_RESULTS_PUBLISHED_MAIN_VERIFIED_FC903C9
+REMOTE_CHECKPOINT_STATUS: NEW_FOLLOWUP_STARTED_FROM_PUBLISHED_5E442D3_NO_NEW_PUSH_YET
 GITHUB_PREAUTHORIZATION_SETTING: RESTORED_TO_ORIGINAL_INHERIT_VERIFIED
 TIMEZONE: Asia/Seoul
 USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 
-## 현재 상태: 2차 문제 전체265 K0/K1 군집화 완료 · GitHub 게시 확인 · 다음 요청 대기
+## 현재 상태: 후속 지도학습·Gemini A/B/C/D 연구 시작
+
+새 사용자 명세가 선형회귀·실제 비선형 nn.Sequential 모델 개발과 Gemini A/B/C/D 실험을 명시적으로 승인했다. 직전의 군집화만 수행한다는 제한은 완료된 이전 단계의 이력이며 이번 후속 작업을 막는 지시가 아니다. 기존 cluster_improvement·final_experiment·token_analysis·원본 데이터/모델/응답/승인 목록은 변경하지 않는다.
+
+**실행 순서:** 기존 실험 확인 → 기존 문제270차원 재사용/원본 풀이265개 재토큰화 및 승인103개 적용 → 내부검증 기반 선형회귀 개선 → 비선형 nn.Sequential 개선 → 두 최종 모델·예측 확정 → API 사전점검·요청 감사 → 테스트80 ABCD 우선 실행 → 확인된 예산이 있을 때만185 확장 → 분석/검토/정적화면 → 검증·커밋·푸시. **두 모델의 최종 확정과 예측 검증 전에는 Gemini 생성 실험을 실행하지 않는다.**
+
+|단계|현재 상태|완료 근거/다음 작업|
+|---|---|---|
+|기존 데이터·모델·실제 API 요청·보존 기준 조사|완료|HEAD5e442d3 clean·2859보호SHA·oldDEFAULT_SYSTEM/실제SDK요청/기존5초·2worker기록 대조|
+|공통 solution_data 준비|완료|문제재토큰화0·풀이265회·462→359·103정확제거·내부148/37·977검증PASS|
+|선형회귀 개발·개선·확정|완료|12후보·scaled Ridge alpha100·valP20 .600/testP20 .6725·동결선행·266검증PASS|
+|nn.Sequential 비선형 모델 개발·개선·확정|완료|8구성·top2×3seed·M7SmoothL1·270→32ReLU/Dropout.1→359·최종220epoch|
+|두 모델 검증·테스트 결과 및 예측 최종 확정|완료|선형266/266·MLP308/308·각265예측/freeze선행·testP20 .6725/.673125|
+|Gemini ABCD 감사·사전점검·테스트80|진행 중: 오프라인 요청검증|두 모델 확정 완료·320요청준비·동일원문/기존SYSTEM·실제환경확인후실행|
+|학습185 API 확장|조건부 대기|테스트80 완료·검증 후 확인된 호출 예산이 충분한 경우만|
+|정답·사용량·풀이 검토·사례·HTML·종합보고서|미완료|정오답/논리 타당성 분리, 미검토는 보류, 미제공 토큰은null|
+|전체 검증·기존 자료 보존·GitHub 게시|미완료|실제 산출물·API 상태에 근거해 통과/차단/미완료를 구분|
+
+모델은 학습185 내부 검증으로만 개선하고 테스트80의 타깃을 모델 선택·조기 종료에 사용하지 않는다. 전체265 어휘를 미리 안다는 한계를 기록한다. API 이후 모델을 다시 유리하게 바꾸지 않는다. 할당량·인증·권한·지원 모델을 확인할 수 없거나 제한에 걸리면 완료 결과를 저장하고 상태/미완료 요청/정확한 재개 명령을 남긴다. 임의 모델 변경·추가 평가 API 비용·중복 성공 호출·무한 대기는 금지한다. 기존 복구 자동화의 실제 상태는 이전 기록처럼 중지이며 이번에 새 예약이 설정됐다고 주장하지 않는다.
+
+## 이전 완료 상태: 2차 문제 전체265 K0/K1 군집화 · GitHub 게시 확인
+
 
 최신 사용자 정정에 따라 회귀 구현·학습·평가/풀이 BoW 모델/185·80 분리 재실험은 제외한다. 현재 승인 범위는 문제 원문265개 재토큰화, 문제 불용어96 적용 전후 어휘/벡터, 전체265 학습·평가16군집 실험과 보고·검증·게시다. Gemini·신경망은 실행하지 않는다. 기존 자료는 해시로 보호한다. 초기 확대 작업은 코드를 작성하기 전 중단했고 최신 범위로 모든 담당 작업을 정정했다.
 
@@ -522,3 +543,40 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 첫 ls-remote는 기존 local core.askpass가 사라진/tmp도우미를참조해실패했다. 환경변수GH_TOKEN을읽는 일회성도우미를 명령단위로지정한 재시도도 GitHub 인증 거부로 실패했다. 따라서 게시 확인은 정상 응답한 GitHub 커넥터의 main 커밋 조회에 근거한다. 비밀값은코드/결과/커밋/로그에기록하지않았다. Git전역설정·연결권한변경이나강제push는없다.
 - 이 마지막변경은 게시확인상태를남기는 WORK_PROGRESS 문서뿐이다. 마지막 정상 검증과 실제 데이터/모델/결과가 포함된 커밋은 위fc903c9이며, 완료기록커밋을추가로일반push한후원격일치를확인하고중단한다. 데이터/모델을다시실행할필요가없다.
 - 미완료필수항목0. 사용자의추가명시적요청전 회귀/풀이BoW/신경망/Gemini/185·80분리연구를시작하지않는다. 기존자동화는중지상태를그대로유지한다.
+
+
+## 선형회귀·비선형 모델·Gemini ABCD 새 명세 수령 — 2026-11-10T18:55:03.508595+00:00
+
+- 시작 기준 커밋은5e442d338ee514344eaa954c05a0dc6c00d21c9d다. 새 요청 전문(0~17절, 모델/검토/API 통제 보완, 중단·재개 보완)을 FINAL_TASK_SPEC 끝의 supervised-abcd-user-spec 영역에 그대로 보존했다. 과거 명세와 군집화 완료 이력은 삭제하지 않았다.
+- 이번 후속 작업은 새 solution_data/regression/deep_learning/gemini_comparison 경로에만 결과를 쓴다. 기존270차원 문제 BoW를 재사용하고 풀이 원문만 기존 토큰화로 재계수한다. 사용자 문제96/풀이103 목록은 변경하지 않는다.
+- 현재는 새 요청을 실행 단계로 분리해 조사·구현에 착수한 상태다. 이 체크포인트에서 모델 학습/검증/테스트/API 생성/게시가 완료됐다고 표시하지 않는다. 각 완료 단계는 실제 산출물·실행 기록·해시로 다음 담당자가 갱신한다.
+- 다음 순서는 원본 보존 해시 및 공통 데이터 검증 → 선형 검증 개선·확정 → 비선형 검증 개선·확정 → 두 모델 확정 게이트 검증 → API 사전점검과80문항 ABCD다. 새 API 호출과185 확장에는 명세의 모델 확정·현재 제한·예산 조건을 적용한다.
+
+
+## 지도모델 후속: 공통 데이터·선형 모델 체크포인트 — 2026-11-10T19:01:49.764940+00:00
+
+- 최신사용자전문995줄을FINAL_TASK_SPEC에추가했고 과거본문을보존했다. 기존2999추적/2859연구파일SHA의시작스냅샷은 /tmp/mathhint_supervised_independent_baseline.json에있다. 기존군집/원본/통계/응답/선택목록변경0이다.
+- 문제270은기존filtered/all_vectors를읽기만했으며토큰화0. 원본풀이265개만같은Kiwi0.24.1/model0.24.0/regex로새계수했고462raw→103승인제거→359active다. TF59408→27949,unknown0·중복선택0·영벡터0. 예전431어휘의좌표와OOV48TF도모두재현했다. 학습185에는항상0인활성해설좌표25개가있고단어존재를안다고빈도를학습할수있는것은아니라고설명했다.
+- 기존185/80소속을그대로보존하고학습185내부에서과목/단원층화seed42로148fit/37validation을만들었다. 선택주기준은검증P@20,동률음수보정MSE와고정후보순서이며최종test타깃은기본모델선택로더반환에서제외했다. 데이터독립533항목및상세977/977검증통과;보호2884파일SHA일치.
+- 선형은원래AdamLinear500/.01초기후보와rawRidge6/fit전용표준화Ridge3을비교한후최적근방2값으로총12구성을실행했다. scaledRidgealpha100(valP20 .600000/MSE1.384997)이선택됐고rawRidge10의MSE1.201928보다P20우선정책을지켰다. 개선후보31.622/316.228은P20 .595946/.587838로개선실패해중단했다. 표준화는fit148만으로추정하고가중치를원시입력270의nn.Linear로대수변환했다.
+- 선택후185로다시fit하고testY반환전에checkpoints/final.pt를저장했다. 테스트80의보정MSE1.112088/MAE.233909/cos.869876/P20.6725/Recall.710466/공통13.45다. 학습185평균baselineP20.559375와구분했다. all265예측파일에는실제Y가없고model_manifest에checkpoint/pred/selectionSHA·동결시각을보존했다. 독립선형266/266 검증·saved265prediction전수일치·cache추가fit0을확인했다.
+- 선형동결완료후에만딥러닝담당에GO를주었다. 현재작은Sequential6초기후보+최대2추가후보를학습185의내부검증으로비교중이고확정전에는APIpreflight/생성모두금지상태다. API실행기/오프라인뷰어는새전용패키지에만구현중이며syntheticAPI테스트9/9PASS·외부호출0이다.
+- API기본은현재provider쿼터미확인을명시하고로컬보수적10초/1worker/6RPM/360RPH/320RPD/max3600초/maxwait120초(공급자보장값아님)다. 실제한도가더엄격하면429/RetryInfo/RetryAfter를준수한다. test80×4우선이며확인된추가예산이없으면185확장하지않는다. 추가외부풀이검토API는승인되지않아구현/실행하지않는다.
+
+
+## 두 모델 최종 동결 · API 전 검증 경계 — 2026-11-10T19:07:16.108798+00:00
+
+- 선형이완료된후에딥러닝구현/학습을시작했다. 실제nn.Sequential은Linear270→32/ReLU/Dropout.1/Linear32→359, AdamW lr.0015/weight_decay.001/SmoothL1이다. 6coarse+2개선구성에top2의시드42~44를확인해총12fit, M7평균검증P20.59774775±.00555353으로확정했다. 최종epoch는3seed선택epoch220/270/210의중앙값220, seed42로185전체재학습후testY를반환했다.
+- MLP대표검증seed42P20.59054054와3seed평균.59774775는서로다른요약으로구분했다. 최종테스트P20.673125/MSE1.14457941/MAE.21738574/cos.86224633이다. 선형P20.6725와차이는80×20중공통토큰1개이며MSE/cos는선형이낫다. 큰비선형우월성/통계적유의성을주장하지않는다. 새두모델은같은359공간이지만이전431차원MSE와동등비교하지않는다.
+- 독립검증: 공통데이터977/977,선형266/266,MLP308/308 PASS. MLP모든trialcheckpoint/37val최적epoch·3seed평균선택·medianepoch·진짜비선형구조·실제265예측을재학습없이대조했다. 모델들은이미확정되었고앞으로API정답을보고재학습하지않는다.
+- 선형finalSHA a92db2cadfa16cd19af842030af79f61878f96d47c2043fb877415b92427fa24 / 예측5b9d3a7e906b6b9a07878f023d898225b39043f4fd42af889e48a1f267b4bc77. MLPfinalSHA b6410ac910d8cc737b24561c5a094c45ed307ec1ba983ff5a15c0418e93dd13c / 예측894edae73c5d9c74736c27010a7f25deea53062b880825f5dd30f065e9ad8560. 모델별동결시각은각manifest에있다.
+- 두manifest와입출력어휘/265ID를검증한후에만APIofflinepreflight를실행했다.320요청이공통원문/기존ASCII...system/모델설정으로감사되었다. 기존actual저장SDK요청과모든인자가동일한A80을기존출처/시각으로재사용했고신규필요240이다. B/C예측파일에실제Y없음·D만실제해설filtered상위20·조건별JSON선정동일을검사했다. APIlive요청은아직0이다.
+- 실제부분보고서/80문항HTML/320풀이검토상태와모델종합표를생성했다. A원본기준정답과trig_1_010보조기준은분리하며B/C/D미실행은오답/0토큰이아니다. 새UI는기존로컬vendor/font를참조한다. 합성브라우저14항목PASS와실제부분데이터브라우저검사를진행한다.
+- 다음실행은코드·데이터·모델/예측·실제요청감사를커밋/푸시한후 livepreflight의모델GET으로지원/인증/확인가능할당량을점검한다. ready일때만test80 ABCD를최대신규320·실행3600초·대기120초의보수적10초/1worker로생성한다. 쿼터/인증/환경차단이면완료A80/모델/화면을보존하고명확한상태와재개명령을게시한다. 185확장은확인된예산이없으면실행하지않는다.
+
+
+## API 실행 직전 저장 체크포인트 — 2026-11-10T19:13:49.028801+00:00
+
+- 실제자료의종합저장검증2281/2281 PASS(공통977/선형266/MLP310/API오프라인728),새핵심test23/23PASS,실제부분HTML데스크톱/모바일18/18PASS다. 원본·checkpoint·prediction·promptaudit·A80원문해시는보고서재생성전후같고렌더러의학습/SDK호출은0이다. 데이터/두모델/320실제입력전문/부분화면을이체크포인트로보존한다.
+- 현재A80은기존정확요청재사용, B/C/D신규240은미실행·정오답공란이다. 예정힌트는실제전송힌트와구분해표시한다. 풀이검토상태320개는각최종정답과분리했고새오류확정이없는것은보류다. 아직API생성실험전체완료가아니다.
+- 이제관련파일만커밋/일반push후 실제Gemini models.get으로지원·인증을확인한다. 모델사용불가/권한오류이면다른모델로대체하거나재시도폭주하지않고부분결과와원인을게시한다. ready일때만test80의신규240을실행하며장시간실행중에도응답즉시fsync·상태/미완료저장·boundedwait·checkpoint를유지한다.

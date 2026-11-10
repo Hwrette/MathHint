@@ -1,0 +1,163 @@
+[
+  {
+    "candidate_id": "final_refit185",
+    "phase": "final_refit185",
+    "epoch": 0,
+    "train_mse": 2.7274787425994873,
+    "train_objective": 0.26564621925354004
+  },
+  {
+    "candidate_id": "final_refit185",
+    "phase": "final_refit185",
+    "epoch": 10,
+    "train_mse": 2.6647777557373047,
+    "train_objective": 0.2521933913230896
+  },
+  {
+    "candidate_id": "final_refit185",
+    "phase": "final_refit185",
+    "epoch": 20,
+    "train_mse": 2.589186906814575,
+    "train_objective": 0.2458614856004715
+  },
+  {
+    "candidate_id": "final_refit185",
+    "phase": "final_refit185",
+    "epoch": 30,
+    "train_mse": 2.490694761276245,
+    "train_objective": 0.2379620522260666
+  },
+  {
+    "candidate_id": "final_refit185",
+    "phase": "final_refit185",
+    "epoch": 40,
+    "train_mse": 2.3331732749938965,
+    "train_objective": 0.22768917679786682
+  },
+  {
+    "candidate_id": "final_refit185",
+    "phase": "final_refit185",
+    "epoch": 50,
+    "train_mse": 2.099862575531006,
+    "train_objective": 0.21329742670059204
+  },
+  {
+    "candidate_id": "final_refit185",
+    "phase": "final_refit185",
+    "epoch": 60,
+    "train_mse": 1.826894760131836,
+    "train_objective": 0.1964745819568634
+  },
+  {
+    "candidate_id": "final_refit185",
+    "phase": "final_refit185",
+    "epoch": 70,
+    "train_mse": 1.5963441133499146,
+    "train_objective": 0.18281082808971405
+  },
+  {
+    "candidate_id": "final_refit185",
+    "phase": "final_refit185",
+    "epoch": 80,
+    "train_mse": 1.4384816884994507,
+    "train_objective": 0.1733158528804779
+  },
+  {
+    "candidate_id": "final_refit185",
+    "phase": "final_refit185",
+    "epoch": 90,
+    "train_mse": 1.3166263103485107,
+    "train_objective": 0.16505645215511322
+  },
+  {
+    "candidate_id": "final_refit185",
+    "phase": "final_refit185",
+    "epoch": 100,
+    "train_mse": 1.219904899597168,
+    "train_objective": 0.15774202346801758
+  },
+  {
+    "candidate_id": "final_refit185",
+    "phase": "final_refit185",
+    "epoch": 110,
+    "train_mse": 1.1445527076721191,
+    "train_objective": 0.1515161693096161
+  },
+  {
+    "candidate_id": "final_refit185",
+    "phase": "final_refit185",
+    "epoch": 120,
+    "train_mse": 1.0776820182800293,
+    "train_objective": 0.14579631388187408
+  },
+  {
+    "candidate_id": "final_refit185",
+    "phase": "final_refit185",
+    "epoch": 130,
+    "train_mse": 1.0174487829208374,
+    "train_objective": 0.14058658480644226
+  },
+  {
+    "candidate_id": "final_refit185",
+    "phase": "final_refit185",
+    "epoch": 140,
+    "train_mse": 0.9695502519607544,
+    "train_objective": 0.1360553354024887
+  },
+  {
+    "candidate_id": "final_refit185",
+    "phase": "final_refit185",
+    "epoch": 150,
+    "train_mse": 0.928813636302948,
+    "train_objective": 0.13205356895923615
+  },
+  {
+    "candidate_id": "final_refit185",
+    "phase": "final_refit185",
+    "epoch": 160,
+    "train_mse": 0.8948167562484741,
+    "train_objective": 0.12855568528175354
+  },
+  {
+    "candidate_id": "final_refit185",
+    "phase": "final_refit185",
+    "epoch": 170,
+    "train_mse": 0.8606575727462769,
+    "train_objective": 0.12545636296272278
+  },
+  {
+    "candidate_id": "final_refit185",
+    "phase": "final_refit185",
+    "epoch": 180,
+    "train_mse": 0.8361903429031372,
+    "train_objective": 0.12259767204523087
+  },
+  {
+    "candidate_id": "final_refit185",
+    "phase": "final_refit185",
+    "epoch": 190,
+    "train_mse": 0.8055071830749512,
+    "train_objective": 0.11982971429824829
+  },
+  {
+    "candidate_id": "final_refit185",
+    "phase": "final_refit185",
+    "epoch": 200,
+    "train_mse": 0.781532347202301,
+    "train_objective": 0.11734677106142044
+  },
+  {
+    "candidate_id": "final_refit185",
+    "phase": "final_refit185",
+    "epoch": 210,
+    "train_mse": 0.756222128868103,
+    "train_objective": 0.11496234685182571
+  },
+  {
+    "candidate_id": "final_refit185",
+    "phase": "final_refit185",
+    "epoch": 220,
+    "train_mse": 0.736800491809845,
+    "train_objective": 0.11286254227161407
+  }
+]

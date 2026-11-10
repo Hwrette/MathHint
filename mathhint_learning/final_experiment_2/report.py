@@ -1,0 +1,207 @@
+"""새 지도 모델과 Gemini 저장 결과를 한곳에 연결한다. 학습·API 호출은 없다."""
+
+import argparse
+import csv
+from pathlib import Path
+
+from .solution_data.common import ROOT, file_hash, read_json, write_csv, write_json
+
+
+def rows(path):
+    path = Path(path)
+    if not path.exists():
+        return []
+    with path.open(encoding="utf-8-sig", newline="") as stream:
+        return list(csv.DictReader(stream))
+
+
+def number(value, digits=4):
+    return "—" if value in (None, "") else f"{float(value):.{digits}f}"
+
+
+def table(headers, values):
+    return ["|" + "|".join(headers) + "|", "|" + "|".join("---" for _ in headers) + "|"] + [
+        "|" + "|".join(str(v) for v in row) + "|" for row in values]
+
+
+def model_rows(base):
+    result = []
+    for name in ("regression", "deep_learning"):
+        folder = base / name
+        if not (folder / "model_manifest.json").exists():
+            continue
+        manifest = read_json(folder / "model_manifest.json")
+        summary = rows(folder / "summary.csv")
+        for phase in ("validation", "test"):
+            if name == "regression":
+                result.append({"model": "training_mean", "label": "학습 평균 기준선", "split": phase,
+                               **next(r for r in summary if r["split"] == phase and r["method"] == "training_mean"),
+                               "architecture": "training mean vector"})
+            actual = next(r for r in summary if r["split"] == phase and r["method"] == "clipped_nonnegative")
+            result.append({"model": name, "label": "선형회귀" if name == "regression" else "nn.Sequential MLP",
+                           **actual, "architecture": manifest["architecture"]})
+    return result
+
+
+def _model_table(values, phase):
+    selected = [r for r in values if r["split"] == phase]
+    return table(["모델", "MSE ↓", "MAE ↓", "코사인 ↑", "Precision@20 ↑", "Recall@20 ↑", "공통 토큰 수/20"],
+                 [(r["label"], *[number(r[k]) for k in ("mse", "mae", "cosine_similarity", "precision_at_20",
+                                                       "recall_at_20", "mean_common_top20_count")]) for r in selected])
+
+
+def _api_table(values):
+    return table(["조건", "성공/80", "채점 가능", "원본 기준 정답", "정답률", "평균 입력", "평균 출력", "평균 전체"],
+        [(r["label"], r["success_count"], r["graded_count"], r["correct_count"],
+          "—" if r["accuracy_graded"] == "" else f"{float(r['accuracy_graded']):.2%}",
+          *[number(r.get(key + "_mean"), 1) for key in ("prompt_token_count", "candidates_token_count", "total_token_count")])
+         for r in values if r["split"] == "test"])
+
+
+def _model_plot(base, values):
+    from mathhint_learning.ClusterReport import setup_final_plots
+    plt = setup_final_plots()
+    selected = [r for r in values if r["split"] == "test"]
+    if len(selected) != 3:
+        return
+    folder = base / "figures"
+    folder.mkdir(exist_ok=True)
+    fig, axes = plt.subplots(1, 4, figsize=(15, 4.5), constrained_layout=True)
+    for ax, key, title in zip(axes, ("mse", "mae", "cosine_similarity", "precision_at_20"),
+                              ("MSE ↓", "MAE ↓", "코사인 유사도 ↑", "Precision@20 ↑")):
+        heights = [float(r[key]) for r in selected]
+        bars = ax.bar(["학습 평균", "선형회귀", "MLP"], heights, color=[".8", ".5", ".2"], edgecolor="black")
+        ax.bar_label(bars, fmt="%.3f", fontsize=8, padding=3)
+        ax.set(title=title, ylim=(0, max(heights)*1.2))
+    fig.suptitle("같은 테스트80 · 동일 풀이 활성 어휘 · 음수→0 예측 · 수학 문제 정답률과 구분")
+    fig.savefig(folder / "model_comparison.png", dpi=200)
+    plt.close(fig)
+
+
+def report(root=ROOT):
+    root = Path(root).resolve()
+    base = root / "results/final_experiment_2"
+    data = read_json(base / "solution_data/summary.json")
+    values = model_rows(base)
+    if values:
+        write_csv(base / "model_comparison.csv", values)
+    _model_plot(base, values)
+    api = rows(base / "gemini_comparison/summary.csv")
+    api_state_path = base / "gemini_comparison/state.json"
+    state = read_json(api_state_path) if api_state_path.exists() else {"status": "not_started_models_or_preflight_pending"}
+    scope = state.get("status", "unknown")
+    manifests = {name: read_json(base / name / "model_manifest.json") for name in ("regression", "deep_learning")
+                 if (base / name / "model_manifest.json").exists()}
+    if len(manifests) == 2:
+        linear, deep = [manifests[n]["test_metrics"] for n in ("regression", "deep_learning")]
+        model_fact = (f"테스트80의 음수 보정 P@20은 선형 {linear['precision_at_20']:.4f}, MLP {deep['precision_at_20']:.4f}다. "
+                      f"MLP−선형 차이는 {deep['precision_at_20']-linear['precision_at_20']:+.4f}다. "
+                      "이는 이 고정 테스트의 관찰이며 비선형 모델의 일반적인 우월성을 보장하지 않는다.")
+    else:
+        model_fact = "아직 두 모델의 독립 확정본이 모두 준비되지 않았다. Gemini 생성 실험은 시작할 수 없다."
+    model_sections = ["## 같은 기준으로 두 예측 모델 비교", "", "내부 검증37 · 기준선은 fit148 평균", "",
+                      *_model_table(values, "validation"), "", "최종 테스트80 · 기준선은 학습185 평균", "",
+                      *_model_table(values, "test"), "", model_fact, ""]
+    if len(manifests) == 2:
+        model_sections += ["![동일 타깃 공간 모델 비교](figures/model_comparison.png)", ""]
+    links = ["|연구|먼저 열 자료|", "|---|---|",
+             "|완료된 군집화|[군집화 결과](cluster_improvement/README.md)|",
+             "|문제270 → 원본 풀이 공통 데이터|[데이터·분할·어휘·불용어](solution_data/README.md)|",
+             "|선형회귀와 개선 기록|[선형 결과](regression/README.md) · [문항별 예측](regression/question_comparison.csv)|",
+             "|nn.Sequential 비선형 모델|[MLP 결과](deep_learning/README.md) · [문항별 예측](deep_learning/question_comparison.csv)|",
+             "|Gemini A/B/C/D|[정답·사용량](gemini_comparison/README.md) · [네 풀이 비교 HTML](gemini_comparison/report.html)|",
+             "|모든 연구 해석과 한계|[종합 보고서](final_report.md) · [전체 검증](validation.json)|"]
+    api_section = ["## Gemini 네 조건의 실제 풀이", "", f"현재 실행 상태: **{scope}**. "
+                   "완료하지 않은 응답을 오답이나0토큰으로 집계하지 않는다.", ""]
+    if api:
+        api_section += [*_api_table(api), "", "평균 토큰은 실제 제공된 성공 응답 값에 대한 평균이며 미제공은 —다. "
+                        "추론 토큰을 전체 토큰에 다시 더하지 않는다. 원본 정답 기준과 trig_1_010의 AI 보조 기준은 분리한다.", ""]
+    else:
+        api_section += ["아직 저장된 네 조건의 최종 비교 수치가 없다. 새 해설 토큰의 풀이 효과는 미검증이다.", ""]
+    notes = [
+        "전체265 문제·원본 풀이의 어휘를 사전에 사용했다. 가중치와 모델 선택은 원래 학습185 내부에서만 수행했지만 완전히 독립적인 미관측 일반화 평가가 아니다.",
+        "검증 P@20을 먼저 고정하고 내부148/37에서 유한 후보를 개선했다. 최종 설정을 확정한 뒤185개로 재학습하고 테스트80 예측을 만들었다. API 정답률을 보고 모델을 다시 바꾸지 않는다.",
+        "특정 원본 해설의 토큰 빈도는 가능한 여러 올바른 풀이 중 하나의 표현이다. 빈도 오차와 수학적 풀이의 옳고 그름은 다른 평가다.",
+        "학습185에서 빈도가0인 풀이 토큰25개는 전체 어휘에 있어도 학습 사례가 없다. 문제의 동일 BoW가 train/test에 걸친 diff_1_007·diff_1_011도 원래 분할대로 남겨 해석에 제한이 있다.",
+        "BoW는 수식의 순서·분자/분모·변수 역할·논리 연결을 보존하지 못한다. 층을 늘리는 것만으로 소실된 수식 구조가 복원되지 않는다.",
+        "원본 답 정오답과 풀이 과정 타당성을 분리했다. 구체적 오류 단계·근거로 충분히 확인하지 못한 생성 풀이는 검토 보류로 남기며 사람의 확정 판정으로 표시하지 않는다.",
+        "API 원문·사용량·미완료 상태·실제 요청을 보존한다. 과거의 정확히 같은 요청 재사용과 새 응답의 실행 시점 차이도 구분한다.",
+        "예측 모델의 연산 비용을 측정하지 않았으므로 Gemini 토큰 절감만으로 시스템 전체 계산 효율성이 개선됐다고 주장하지 않는다.",
+    ]
+    readme = ["# MathHint Final Experiment 2", "", "## 결과를 읽는 순서", "", *links, "",
+              f"문제 입력은 기존 **{data['input_dimension']}차원**을 그대로 읽었고, 원본 풀이265개는 "
+              f"어휘 {data['raw_solution_dimension']}종에서 승인103개를 제외한 **{data['output_dimension']}차원**을 새로 구성했다.", "",
+              *model_sections, *api_section, "## 연구 범위와 한계", "", *["- " + n for n in notes], "",
+              "학습185 확장은 테스트80 네 조건을 완료·검증한 뒤 확인된 호출 예산이 충분할 때만 실행한다. "
+              "현재 예산이 확인되지 않으면 확장하지 않는다. HTML은 GitHub 파일 화면에서 실행되지 않으므로 저장소 ZIP 전체를 압축 해제해 브라우저로 연다. "
+              "로컬 수식 자산과 연결된 폴더가 함께 필요하며 인터넷 연결 없이 읽을 수 있다.", "",
+              "## 실행과 재개", "", "각 모델·API README의 명령을 따른다. 저장 결과의 종합 안내만 재생성하려면:", "",
+              "```bash", "python -m mathhint_learning.final_experiment_2.report report",
+              "python -m mathhint_learning.final_experiment_2.report verify", "```", "",
+              "report/verify는 새 모델 학습이나 Gemini 호출을 실행하지 않는다. 실제 API 재개는 gemini_comparison의 generate 명령으로 분리했다.", ""]
+    (base / "README.md").write_text("\n".join(readme), encoding="utf-8")
+    final = ["# MathHint: 외부 해설 토큰 예측과 LLM 풀이 비교", "",
+             "## 1. 연구 질문과 실험 설계", "",
+             "외부 선형/비선형 모델이 예측한 풀이 토큰이 Gemini의 정답과 사용량에 어떤 차이를 만드는지 조사했다. "
+             "해설 빈도 예측의 성능과 실제 수학 풀이 성능을 분리해 분석했다. 개선을 전제로 모델이나 정답을 수정하지 않았다.", "",
+             "## 2. 데이터와 내부 검증", "", f"기존 문제270은 재토큰화 없이 재사용했다. 풀이 {data['raw_solution_dimension']}→"
+             f"{data['output_dimension']}차원, 원시 빈도 {data['raw_solution_tf']:,}→{data['filtered_solution_tf']:,}회다. "
+             "원래185/80을 유지했고 학습185 안의148/37로 두 모델을 선택했다. 데이터 변환의 추정값도 내부 학습 자료에서만 계산했다.", "",
+             "## 3. 선형회귀의 개선", ""]
+    for name, title in (("regression", "선형 모델"), ("deep_learning", "비선형 MLP")):
+        if name in manifests:
+            m = manifests[name]
+            final += [f"### {title}", "", f"최종 구조: `{m['architecture']}`", "",
+                      f"선택 설정: `{m['selected_configuration']}`", "",
+                      f"[전체 후보·개선 이유·중단·손실곡선]({name}/README.md). "
+                      "검증 P@20과 오차를 기준으로 설정을 확정했으며 테스트와 API 결과는 후보 선택에 쓰지 않았다.", ""]
+    final += ["## 4. 동일 타깃 공간에서 모델은 얼마나 예측했는가?", "", *model_sections,
+              "## 5. Gemini 입력과 실행", "",
+              "A는 원문만, B는 선형 예측, C는 비선형 예측, D는 실제 해설 상위20개다. D는 이전 연구 C에 해당하는 오라클이다. "
+              "모든 문제 원문·DEFAULT_SYSTEM·gemini-3.1-flash-lite·temperature0·minimal·8192 설정을 통제했다. "
+              "힌트는 양수/음수보정·반올림전순위·어휘순동점·셋째자리표시·0표시제외 JSON과 마지막 지시문을 공유한다. "
+              "실제 모델 사용 가능 여부·인증·확인 가능한 제한은 [사전점검과 실행 상태](gemini_comparison/README.md)에 기록한다.", "",
+              *api_section, "## 6. 어떤 문항에서 도움이 되거나 방해됐는가?", "",
+              "[문항별 네 조건 비교](gemini_comparison/question_comparison.csv), [오류·특이 사례](gemini_comparison/case_reports/README.md), "
+              "[원본·생성 풀이를 함께 읽는 화면](gemini_comparison/report.html)에서 실제 답 변화와 토큰 차이를 확인한다. "
+              "최종 답이 맞아도 풀이를 자동으로 타당하다고 판정하지 않았다. 검토 보류는 실제 오류 확정과 다르다.", "",
+              "## 7. 결론의 범위와 후속 과제", "", *["- " + n for n in notes], "",
+              "모델 P@20이 좋아진 사실만으로 Gemini 정답률·효율성 개선을 주장하지 않는다. 실제 API 대응 결과와 사용량을 따로 평가한다. "
+              "어텐션 기반 표현이나 출력 제약·형식 검증은 향후 방향이며 새로운 미관측 문제에서 재검증해야 한다.", "",
+              "[공통 데이터](solution_data/README.md) · [선형 결과](regression/README.md) · "
+              "[비선형 결과](deep_learning/README.md) · [API 결과](gemini_comparison/README.md) · [전체 검증](validation.json)", ""]
+    (base / "final_report.md").write_text("\n".join(final), encoding="utf-8")
+    return {"models_frozen": len(manifests), "api_status": scope, "training_performed": False, "api_calls": 0}
+
+
+def verify(root=ROOT):
+    from .solution_data.validation import validate_dataset, validate_model
+    root = Path(root).resolve()
+    base = root / "results/final_experiment_2"
+    dataset = validate_dataset(root, save=True)
+    models = {name: validate_model(root, name, save=True) for name in ("regression", "deep_learning")}
+    from mathhint_solver.final_experiment_2.gemini_comparison.verify import run as verify_api
+    api = verify_api(root, base / "gemini_comparison")
+    details = {"solution_data": dataset, **models, "gemini_comparison": api}
+    passed = sum(int(v.get("passed", 0)) for v in details.values())
+    failed = sum(int(v.get("failed", 0)) for v in details.values())
+    result = {"passed": passed, "failed": failed,
+              "complete": failed == 0 and api.get("experiment_complete", False),
+              "component_details": details, "training_performed": False, "api_calls": 0,
+              "scope": "filtered_full265_vocab; train185/internal148-37; test80 ABCD; optionaltrain185onlyconfirmedbudget"}
+    write_json(base / "validation.json", result)
+    print(f"종합 검증 {passed}통과/{failed}실패 · 실제 API 완료 여부 {api.get('experiment_complete')}")
+    return result
+
+
+def main():
+    parser = argparse.ArgumentParser(description="저장된 모델·API 결과의 종합 보고서와 검증")
+    parser.add_argument("action", choices=("report", "verify"))
+    args = parser.parse_args()
+    result = (report if args.action == "report" else verify)()
+    if args.action == "verify" and result["failed"]:
+        raise SystemExit(1)
+
+
+if __name__ == "__main__":
+    main()

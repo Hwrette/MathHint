@@ -1,0 +1,18 @@
+{
+  "dataset_id": "1e1e467b301406d6a2df2775ad506474aaa915b342d315cdca8dc39fdf3e7345",
+  "files_sha256": {
+    "README.md": "fcba8104b5f571b9002689f3d0132c225b0a2c43ecc4604f72ac3da486c32849",
+    "config.json": "8e8f4a21527fb7c1d643daa5a468211b2e6d304a550c7ae932d6ba496e2f6359",
+    "generated_data/filtered/solutions/all_vectors.json": "616d50f8b7dc55eab1302ee835a67860a0029c901a3087c40f83a591c57daf82",
+    "generated_data/filtered/solutions/vocabulary.json": "4019919d0bdf7f8adcbcd961a4f2180d1974df632b971262955a4636e0a2559f",
+    "generated_data/input_reference.json": "9abe829688d464e771e934a694c57678e1879b55fccb332a6c0ed0c5079bc796",
+    "generated_data/raw/solutions/all_vectors.json": "9f1400aab4083f985bff5198dd67f2c438c461326f1666395c948eea20affd85",
+    "generated_data/raw/solutions/vocabulary.json": "8d8a473d41acad32e8049ab59df201e4652c0d833282d0e3a965efce3ecbadd0",
+    "generated_data/splits.json": "e7d460bb9a91994dc78c70b283c284ed6d272d5b6094db478dc0b699f9191798",
+    "question_token_counts.csv": "3e221314c00ef2c612ff7383cec427c777e0564d6ef85deae9bc987c36d22e04",
+    "recount_validation.csv": "ac25d8c303dd349994d11cd565455635ff9f7301a6e94144651862875ad38ee6",
+    "solution_token_mapping.csv": "bc4626a87887fae6b6f437c49abfd496810b96cc1e21570ec8e2de623352750a",
+    "stopword_audit.csv": "36cc57136f245d10b67241086e7ed9680ccf263866b58996b81c9c84d07b9a3b",
+    "summary.json": "017ecd31866ed068eeb89943d9f2d155fa65761f6f4f510aa0a72b57bf6ef798"
+  }
+}

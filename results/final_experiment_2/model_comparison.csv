@@ -1,0 +1,17 @@
+﻿model,label,split,method,mse,mae,cosine_similarity,precision_at_20,recall_at_20,mean_common_top20_count,actual_fewer_than_20,predicted_fewer_than_20,n,architecture
+training_mean,학습 평균 기준선,validation,training_mean,1.837817668914795,0.32474908232688904,0.7294133305549622,0.5202702702702703,0.5783493309422102,10.405405405405405,9,0,37,training mean vector
+regression,선형회귀,validation,clipped_nonnegative,1.384997010231018,0.26891058683395386,0.8219442963600159,0.6,0.6671513073989854,12.0,9,0,37,"Linear(in_features=270, out_features=359, bias=True)"
+training_mean,학습 평균 기준선,test,training_mean,1.6454055309295654,0.30894264578819275,0.7617402076721191,0.559375,0.5903626891039817,11.1875,20,0,80,training mean vector
+regression,선형회귀,test,clipped_nonnegative,1.1120880842208862,0.23390890657901764,0.8698755502700806,0.6725,0.7104662036879529,13.45,20,0,80,"Linear(in_features=270, out_features=359, bias=True)"
+deep_learning,nn.Sequential MLP,validation,clipped_nonnegative,1.4116686582565308,0.25491082668304443,0.8147474527359009,0.5905405405405406,0.654770394863274,11.81081081081081,9,0,37,"Sequential(
+  (0): Linear(in_features=270, out_features=32, bias=True)
+  (1): ReLU()
+  (2): Dropout(p=0.1, inplace=False)
+  (3): Linear(in_features=32, out_features=359, bias=True)
+)"
+deep_learning,nn.Sequential MLP,test,clipped_nonnegative,1.1445794105529785,0.21738573908805847,0.8622463345527649,0.673125,0.7098270781828251,13.4625,20,0,80,"Sequential(
+  (0): Linear(in_features=270, out_features=32, bias=True)
+  (1): ReLU()
+  (2): Dropout(p=0.1, inplace=False)
+  (3): Linear(in_features=32, out_features=359, bias=True)
+)"

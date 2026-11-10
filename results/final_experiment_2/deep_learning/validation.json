@@ -1,0 +1,1255 @@
+{
+  "verified_at": "2026-11-10T19:12:52.529371+00:00",
+  "model": "deep_learning",
+  "dataset_id": "1e1e467b301406d6a2df2775ad506474aaa915b342d315cdca8dc39fdf3e7345",
+  "passed": 310,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "frozen_model_dataset_and_selection_identity",
+      "passed": true
+    },
+    {
+      "check": "checkpoint_file_matches_frozen_hash",
+      "passed": true
+    },
+    {
+      "check": "predictions_file_matches_frozen_hash",
+      "passed": true
+    },
+    {
+      "check": "weights_frozen_before_test_and_refit_only_train185",
+      "passed": true
+    },
+    {
+      "check": "checkpoint_vocabularies_and_all_ids_preserved",
+      "passed": true
+    },
+    {
+      "check": "actual_nonlinear_sequential_architecture",
+      "passed": true
+    },
+    {
+      "check": "all265_prediction_rows_and_unambiguous_vocabularies",
+      "passed": true
+    },
+    {
+      "check": "raw_real_predictions_and_negative_only_correction",
+      "passed": true
+    },
+    {
+      "check": "frozen_checkpoint_reproduces_all265_saved_predictions",
+      "passed": true
+    },
+    {
+      "check": "selected_internal_validation_scores_reproduced",
+      "passed": true
+    },
+    {
+      "check": "validation_selection_uses_exact_fit148_validation37",
+      "passed": true
+    },
+    {
+      "check": "deep_bounded_six_plus_two_configurations_and_12_seed_trials",
+      "passed": true
+    },
+    {
+      "check": "deep_search_signature_binds_data_policy_and_model_source",
+      "passed": true
+    },
+    {
+      "check": "deep_refinement_depends_only_on_best_internal_validation_configuration",
+      "passed": true
+    },
+    {
+      "check": "deep_only_top_two_configurations_get_seed43_and44",
+      "passed": true
+    },
+    {
+      "check": "M0_seed42_checkpoint_uses_only_fit148_validation37",
+      "passed": true
+    },
+    {
+      "check": "M0_seed42_validation_metrics_independently_reproduced",
+      "passed": true
+    },
+    {
+      "check": "M0_seed42_best_epoch_selected_without_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "M1_seed42_checkpoint_uses_only_fit148_validation37",
+      "passed": true
+    },
+    {
+      "check": "M1_seed42_validation_metrics_independently_reproduced",
+      "passed": true
+    },
+    {
+      "check": "M1_seed42_best_epoch_selected_without_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "M2_seed42_checkpoint_uses_only_fit148_validation37",
+      "passed": true
+    },
+    {
+      "check": "M2_seed42_validation_metrics_independently_reproduced",
+      "passed": true
+    },
+    {
+      "check": "M2_seed42_best_epoch_selected_without_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "M3_seed42_checkpoint_uses_only_fit148_validation37",
+      "passed": true
+    },
+    {
+      "check": "M3_seed42_validation_metrics_independently_reproduced",
+      "passed": true
+    },
+    {
+      "check": "M3_seed42_best_epoch_selected_without_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "M4_seed42_checkpoint_uses_only_fit148_validation37",
+      "passed": true
+    },
+    {
+      "check": "M4_seed42_validation_metrics_independently_reproduced",
+      "passed": true
+    },
+    {
+      "check": "M4_seed42_best_epoch_selected_without_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "M5_seed42_checkpoint_uses_only_fit148_validation37",
+      "passed": true
+    },
+    {
+      "check": "M5_seed42_validation_metrics_independently_reproduced",
+      "passed": true
+    },
+    {
+      "check": "M5_seed42_best_epoch_selected_without_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "M5_seed43_checkpoint_uses_only_fit148_validation37",
+      "passed": true
+    },
+    {
+      "check": "M5_seed43_validation_metrics_independently_reproduced",
+      "passed": true
+    },
+    {
+      "check": "M5_seed43_best_epoch_selected_without_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "M5_seed44_checkpoint_uses_only_fit148_validation37",
+      "passed": true
+    },
+    {
+      "check": "M5_seed44_validation_metrics_independently_reproduced",
+      "passed": true
+    },
+    {
+      "check": "M5_seed44_best_epoch_selected_without_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "M6_seed42_checkpoint_uses_only_fit148_validation37",
+      "passed": true
+    },
+    {
+      "check": "M6_seed42_validation_metrics_independently_reproduced",
+      "passed": true
+    },
+    {
+      "check": "M6_seed42_best_epoch_selected_without_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "M7_seed42_checkpoint_uses_only_fit148_validation37",
+      "passed": true
+    },
+    {
+      "check": "M7_seed42_validation_metrics_independently_reproduced",
+      "passed": true
+    },
+    {
+      "check": "M7_seed42_best_epoch_selected_without_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "M7_seed43_checkpoint_uses_only_fit148_validation37",
+      "passed": true
+    },
+    {
+      "check": "M7_seed43_validation_metrics_independently_reproduced",
+      "passed": true
+    },
+    {
+      "check": "M7_seed43_best_epoch_selected_without_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "M7_seed44_checkpoint_uses_only_fit148_validation37",
+      "passed": true
+    },
+    {
+      "check": "M7_seed44_validation_metrics_independently_reproduced",
+      "passed": true
+    },
+    {
+      "check": "M7_seed44_best_epoch_selected_without_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "deep_stability_contains_exact_top_two_configuration_ids",
+      "passed": true
+    },
+    {
+      "check": "M5_three_seed_mean_and_population_sd",
+      "passed": true
+    },
+    {
+      "check": "M7_three_seed_mean_and_population_sd",
+      "passed": true
+    },
+    {
+      "check": "deep_stability_csv_matches_trial_means_and_population_sd",
+      "passed": true
+    },
+    {
+      "check": "deep_candidate_csv_reports_all12_actual_trial_results",
+      "passed": true
+    },
+    {
+      "check": "deep_configuration_chosen_by_three_seed_mean_precision_then_mean_mse",
+      "passed": true
+    },
+    {
+      "check": "deep_reported_validation_metrics_are_selected_seed42_not_in_sample_final_model",
+      "passed": true
+    },
+    {
+      "check": "all9_phase_method_summary_rows_present",
+      "passed": true
+    },
+    {
+      "check": "validation_training_mean_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "validation_raw_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "validation_clipped_nonnegative_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "train_training_mean_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "train_raw_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "train_clipped_nonnegative_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "test_training_mean_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "test_raw_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "test_clipped_nonnegative_independent_metrics",
+      "passed": true
+    },
+    {
+      "check": "test80_question_comparison_rows_exact",
+      "passed": true
+    },
+    {
+      "check": "diff_1_005_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_1_005_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_005_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_011_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_1_011_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_011_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_012_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_1_012_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_012_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_014_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_1_014_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_014_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_018_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_1_018_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_018_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_022_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_1_022_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_022_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_026_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_1_026_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_026_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_028_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_1_028_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_028_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_030_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_1_030_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_030_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_036_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_1_036_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_036_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_038_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_1_038_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_038_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_039_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_1_039_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_039_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_041_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_1_041_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_1_041_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_004_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_2_004_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_004_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_006_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_2_006_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_006_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_007_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_2_007_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_007_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_010_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_2_010_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_010_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_013_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_2_013_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_013_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_014_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_2_014_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_014_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_016_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_2_016_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_016_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_018_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_2_018_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_018_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_020_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_2_020_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_020_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_023_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_2_023_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_023_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_024_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_2_024_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_024_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_029_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_2_029_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_029_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_030_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_2_030_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_030_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_031_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_2_031_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_031_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_036_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_2_036_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_036_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_037_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_2_037_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_037_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_040_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_2_040_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_040_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_041_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_2_041_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_2_041_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_3_001_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_3_001_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_3_001_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_3_004_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_3_004_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_3_004_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_3_005_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_3_005_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_3_005_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_3_008_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_3_008_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_3_008_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_3_012_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_3_012_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_3_012_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_3_022_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_3_022_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_3_022_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_3_028_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_3_028_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_3_028_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_3_039_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_3_039_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_3_039_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_3_044_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_3_044_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_3_044_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_3_048_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_3_048_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_3_048_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_3_049_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "diff_3_049_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "diff_3_049_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_004_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_1_004_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_004_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_007_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_1_007_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_007_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_009_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_1_009_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_009_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_010_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_1_010_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_010_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_011_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_1_011_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_011_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_013_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_1_013_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_013_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_018_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_1_018_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_018_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_020_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_1_020_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_020_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_021_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_1_021_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_021_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_028_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_1_028_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_028_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_032_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_1_032_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_032_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_035_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_1_035_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_035_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_039_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_1_039_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_039_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_042_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_1_042_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_042_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_043_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_1_043_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_043_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_046_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_1_046_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_1_046_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_2_003_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_2_003_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_2_003_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_2_007_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_2_007_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_2_007_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_2_014_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_2_014_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_2_014_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_2_016_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_2_016_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_2_016_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_2_017_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_2_017_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_2_017_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_2_022_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_2_022_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_2_022_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_2_024_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_2_024_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_2_024_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_2_025_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_2_025_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_2_025_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_2_030_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_2_030_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_2_030_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_2_035_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_2_035_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_2_035_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_002_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_3_002_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_002_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_010_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_3_010_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_010_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_011_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_3_011_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_011_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_014_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_3_014_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_014_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_015_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_3_015_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_015_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_017_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_3_017_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_017_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_021_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_3_021_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_021_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_026_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_3_026_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_026_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_034_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_3_034_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_034_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_035_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_3_035_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_035_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_039_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_3_039_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_039_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_040_independent_test_metrics",
+      "passed": true
+    },
+    {
+      "check": "trig_3_040_actual_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "trig_3_040_predicted_unrounded_top20",
+      "passed": true
+    },
+    {
+      "check": "model_verification_does_not_modify_weights_predictions_or_reports",
+      "passed": true
+    }
+  ],
+  "complete": true,
+  "training_performed": false,
+  "api_calls": 0,
+  "prediction_rows": 265,
+  "test_rows": 80,
+  "selection_primary": "validation_precision_at_20"
+}

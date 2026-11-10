@@ -1,0 +1,2721 @@
+﻿id,split,condition,api_status,final_answer_correct_original,final_answer_correct_supplemental,response_sha256,review_status,math_status,reviewer_type,human_confirmed,reason,error_step,evidence_quotes,source_path
+diff_1_005,test,A,success,True,True,8a784d69123ed4af2980740cbe4b8c9b1c9b12d9c305470d105d97342a216b54,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_1_005 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+- $k=a$이면 $f(x) = (x-a)^2$이 되어, $\lim_{x \rightarrow a} \frac{(x-a)^2(x-3)}{(x-a)^2} = a-3 = 5 \Rightarrow a=8$
+
+유한한 극한에서 분자 영점을 요구하고 중근 a=8 및 a=3인 경우를 구분한 계산이 타당하다.
+
+설명의 충분성: appropriate
+
+즉, $k=a$이거나 $3=a$여야 합니다.
+
+분모의 이중 영점에 맞추어 추가 인수 조건을 설명하고 a=3의 실현 가능한 함수까지 제시했다.
+
+교과 범위 적합성: uncertain
+
+1. **분자의 조건:**
+
+다항식의 인수분해와 유한 극한 조건을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+모든 실수 $a$의 값의 합은 $8 + 3 = 11$입니다.
+
+원본의 가능한 a=3,8 및 합11과 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_1_005,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_005,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_005,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_011,test,A,success,True,True,a18c3b6938617712f626e5b9968a82ce3932a6d27adb5e838c96199a399d0d04,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_1_011 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$$1 = a - 2$$
+
+x=1에서 좌극한1과 우극한 a-2를 같게 둔 방정식과 a=3의 계산이 맞다.
+
+설명의 충분성: appropriate
+
+함수 $f(x)$가 실수 전체의 집합에서 연속이려면, 모든 실수 $x$에 대하여 연속이어야 합니다. 주어진 함수에서 $x < 1$일 때는 일차함수이고, $x > 1$일 때는 이차함수이므로 각각의 구간에서는 항상 연속입니다.
+
+각 다항식 구간의 연속성과 유일한 경계의 연속성을 구분했다.
+
+교과 범위 적합성: uncertain
+
+3. **연속 조건 적용:**
+
+조각별 다항함수의 연속을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$$a = 3$$
+
+원본의 경계 연속 조건 및 상수3과 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_1_011,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_011,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_011,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_012,test,A,success,True,True,95f13635105b41e16e24986d3f3c08cb95ade5202e001e6d0a9e88ba235ff4a1,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_1_012 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$$4a - 2 = 6$$
+
+x=2의 좌극한4a-2와 함숫값6의 일치에서 a=2를 정확히 구했다.
+
+설명의 충분성: appropriate
+
+$$f(2) = 3(2) = 6$$
+
+좌우 극한과 실제 경계 함숫값을 각각 계산했다.
+
+교과 범위 적합성: uncertain
+
+함수 $f(x)$가 $x=2$에서 연속이기 위한 조건은 다음과 같습니다.
+
+조각별 다항함수의 연속을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$$a = 2$$
+
+원본의 조건4a-2=6 및 정답2와 같다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_1_012,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_012,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_012,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_014,test,A,success,True,True,9e19e13c823e2fe244f2bb1fd845a7126b4399d1a3094883ea9a08b045a7a2c1,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_1_014 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$14 + a = 4 + 2a$
+
+경계 x=2에서 두 식의 값14+a,4+2a를 같게 둔 계산이 맞다.
+
+설명의 충분성: appropriate
+
+1. 좌극한과 함숫값:
+
+좌극한·함숫값과 우극한을 구분해 필요한 연속 조건을 설명했다.
+
+교과 범위 적합성: uncertain
+
+함수 $f(x)$가 실수 전체의 집합에서 연속이려면, 모든 실수 $x$에 대하여 연속이어야 합니다. 주어진 함수는 $x=2$를 기준으로 식이 나뉘어 있으므로, $x=2$에서 연속이어야 합니다.
+
+조각별 다항함수의 연속을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$a = 10$
+
+원본의 a=10 및 보기②와 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_1_014,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_014,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_014,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_018,test,A,success,True,True,47a5669b1fe754d577bfb4b8f9fd41e06217c03c853fb18d5d90ea3795f1be81,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_1_018 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$$f'(1) = \sqrt{1^2 + 8} = \sqrt{1 + 8} = \sqrt{9} = 3$$
+
+평균변화율의 t→1 극한을 미분계수로 읽고3을 구한 계산이 타당하다.
+
+설명의 충분성: appropriate
+
+함수 $f(x)$의 $x=1$에서의 순간변화율(미분계수) $f'(1)$은 도함수의 정의에 의해 다음과 같습니다.
+
+평균변화율 정의와 미분계수 극한을 모두 적어 연결을 설명했다.
+
+교과 범위 적합성: uncertain
+
+함수 $f(x)$의 $x=1$에서의 순간변화율(미분계수) $f'(1)$은 도함수의 정의에 의해 다음과 같습니다.
+
+평균변화율과 순간변화율의 정의을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$$f'(1) = \sqrt{1^2 + 8} = \sqrt{1 + 8} = \sqrt{9} = 3$$
+
+원본의 극한값3과 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_1_018,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_018,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_018,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_022,test,A,success,True,True,ebb25f9e79684d46066f5f6105079a0d669ff1060baf9abcf6d93af83aabf6e7,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_1_022 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$6 + 2f'(1) = 9$
+
+g(1)=4에서 f(1)=2를 구한 뒤 곱의 미분법으로 f'(1)=3/2를 얻는 계산이 맞다.
+
+설명의 충분성: appropriate
+
+2. 극한값이 존재하므로 분자의 극한은 0이어야 합니다. 즉, $g(1) - 4 = 0$에서 $g(1) = 4$입니다.
+
+g(1)=4의 근거와 곱의 미분 전개를 제시해 필요한 값을 모두 연결했다.
+
+교과 범위 적합성: uncertain
+
+다음으로 $g(x)$를 미분하면 곱의 미분법에 의해
+
+다항함수 극한과 곱의 미분법을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$f(1) \times f'(1) = 2 \times \frac{3}{2} = 3$
+
+원본의 f(1)=2, f'(1)=3/2 및 곱3과 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_1_022,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_022,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_022,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_026,test,A,success,True,True,6ef189ab144932acb068f8ed81b4303d0f4dd2fe17f3a0646b9b3aa66c59f423,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_1_026 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$t^2(4t - 7) = 0$
+
+접선 방정식에(0,1)을 대입해 얻은 t²(4t-7)=0과 양수 조건의 적용이 맞다.
+
+설명의 충분성: appropriate
+
+문제에서 $t$는 양수라고 하였으므로 $t^2 \neq 0$입니다.
+
+접선의 기울기·방정식·외부점 대입과 t=0 배제를 순서대로 설명했다.
+
+교과 범위 적합성: uncertain
+
+함수 $f(x) = 2x^3 - 7x^2 + 1$ 위의 점 $(t, f(t))$에서의 접선의 방정식을 구합니다.
+
+다항함수의 미분과 접선을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$t = \frac{7}{4}$
+
+원본의 양의 접점 매개변수7/4와 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_1_026,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_026,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_026,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_028,test,A,success,True,True,f750908f9dd5b8ea1f996f5fef9a35764c29304589d34641f76b8da4fc518f69,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_1_028 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$2t^3 = 16$
+
+임의 접점 t의 접선을 외부점(0,1)에 통과시키는 방정식으로 t=2를 정확히 구했다.
+
+설명의 충분성: appropriate
+
+5. **점 $(a, 11)$을 지나는 조건 적용**
+
+접선 y=10x+1을 구한 다음 별도의 점(a,11)을 대입하는 절차가 충분하다.
+
+교과 범위 적합성: uncertain
+
+1. **접선의 기울기 구하기**
+
+다항함수의 미분과 외부점에서 그은 접선을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$y = 10x + 1$
+
+원본의 접선과 a=1에 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_1_028,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_028,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_028,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_030,test,A,success,True,True,a42ec4752836dbe000a36db658945600a3b49023c3e2d312804730089aeb47e0,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_1_030 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+극값을 찾기 위해 $f'(x) = 3x^2 - 3 = 0$을 풀면,
+
+주어진 극대 조건에서 a=-3을 얻고 도함수의 두 단순근 중 x=1의 극솟값7을 맞게 구했다.
+
+설명의 충분성: appropriate
+
+$x = 1$ 또는 $x = -1$
+
+도함수와 두 임계점을 제시했다. 3(x-1)(x+1)의 부호로 x=1의 극소를 확인할 수 있다.
+
+교과 범위 적합성: uncertain
+
+극값을 찾기 위해 $f'(x) = 3x^2 - 3 = 0$을 풀면,
+
+다항함수의 극대·극소을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$f(1) = 7$
+
+원본의 극소 위치1 및 극솟값7과 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_1_030,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_030,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_030,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_036,test,A,success,True,True,638838c415102897e6c7f6e8b4f6a1bebb30dfc41e8d8830588cb704c967e64c,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_1_036 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$a^3 = \frac{1}{27}$
+
+수평 접선 조건 f'=0의 두 후보를 모두 살피고 양수 a에 맞는 a=1/3을 구한 계산이 맞다.
+
+설명의 충분성: appropriate
+
+$a$는 양수라는 조건에 모순됩니다.
+
+두 접점 후보 중 부적합한 경우를 명시적으로 배제했다.
+
+교과 범위 적합성: uncertain
+
+함수 $f(x) = x^3 + 3ax^2 - 9a^2x + 4$에 대하여, 직선 $y=5$가 곡선 $y=f(x)$에 접한다는 것은 어떤 $x=k$에서 $f(k)=5$이고 $f'(k)=0$임을 의미합니다.
+
+수평 접선과 다항함수의 미분을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$f(2) = 8 + 4 - 2 + 4 = 14$
+
+원본의 a=1/3, f(x)=x³+x²-x+4 및14와 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_1_036,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_036,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_036,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_038,test,A,success,True,True,0dce5c454b17f550181f551b7b8ca387221cd07f01d525c9deeb13ba9e34a705,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_1_038 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$-9 + a = 0$ 이므로 **$a = 9$**입니다.
+
+극값의 필요조건으로 a=9를 구하고 f(1)=4+b,f(3)=b의 합에서 b=2를 맞게 얻었다.
+
+설명의 충분성: appropriate
+
+$f'(x) = 3x^2 - 12x + 9 = 3(x^2 - 4x + 3) = 3(x-1)(x-3)$
+
+두 단순 임계점이 실제 극값임은 도함수의 부호 변화로 확인 가능하며 합 조건 사용이 맞다.
+
+교과 범위 적합성: uncertain
+
+2. **극값 구하기**
+
+다항함수의 극대·극소을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$a + b = 9 + 2 = 11$
+
+원본의 계수9,2와 합11에 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_1_038,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_038,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_038,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_039,test,A,success,True,True,4273051f6ace9c98c6c502007c7270d83ef2cd4cce6ba65ecd16716f6a91b313,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_1_039 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$a - 20 = 4 \implies a = 24$
+
+닫힌구간 내부 임계점2와 양 끝점1,3의 값을 비교한 계산이 정확하며 a=24,M=15를 얻는다.
+
+설명의 충분성: appropriate
+
+닫힌구간 $[1, 3]$에서 $x=2$는 구간 내에 포함되지만, $x=-1$은 포함되지 않습니다.
+
+임계점 중 구간 밖의 -1을 제외하고 두 끝점과 내부 임계점의 세 값을 모두 비교했다.
+
+교과 범위 적합성: uncertain
+
+이제 구간의 양 끝점과 극점에서의 함숫값을 비교합니다.
+
+다항함수의 미분과 닫힌구간의 최대·최소를 사용했다. 명확한 교과 밖 방법은 보이지 않으나 공식 성취기준과 대조하지 않아 교과 범위를 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$M = 24 - 9 = 15$
+
+원본의 최솟값 a-20과 최댓값 a-9의 관계 및 M=15와 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_1_039,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_039,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_039,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_041,test,A,success,True,True,b7f1224c2599941c7a96b03a4b09ba66a1c28ecaca34f29db28fd89941c8121d,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_1_041 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$f(-2) = 32 + 24 + 6 = 62$
+
+a의 양·음 부호를 나누어 양수 경우를 배제하고 a=-2일 때 두 극값 조건이 모두 성립함을 확인한 뒤 f(-2)=62를 맞게 계산했다.
+
+설명의 충분성: appropriate
+
+이는 문제의 조건(최댓값 8, 최솟값 -2)을 모두 만족합니다.
+
+각 부호에서 세 후보 함숫값을 비교하고 최댓값·최솟값 두 조건을 함께 검증했다.
+
+교과 범위 적합성: uncertain
+
+$f'(x) = 0$이 되는 $x$의 값은 $x = 0$ 또는 $x = 1$입니다. 닫힌구간 $[0, 2]$에서 함수 $f(x)$의 극값과 양 끝점에서의 함숫값을 비교해야 합니다.
+
+다항함수의 증감 및 닫힌구간의 최대·최소를 사용했다. 공식 성취기준과 대조하지 않아 해당 단원의 허용 방법인지 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$-a = 2 \implies a = -2$
+
+원본의 가능한 계수 a=-2와 함수 -4x³+6x²+6 및 계산값62에 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_1_041,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_041,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_1_041,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_004,test,A,success,True,True,fe921961c1f0c52d10a6a6b183bb457beca1491c284d006998592d458e7a2f5d,historical_AI_suspected_error,inappropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_2_004 / baseline
+
+수학적 적절성(논리·설명·일관성): inappropriate / 교과 범위: uncertain / 네 기준 종합: inappropriate
+
+논리적 타당성: inappropriate
+
+극한값이 1이 되려면 $f(x)$와 $g(x) - x^2$의 최고차항 계수가 같아야 하므로, $a = a+1$이 성립해야 하는데 이는 모순입니다.
+
+앞에서 g=(a+1)x²+...로 두었으므로 g-x²의 선두계수는 a이다. 이를 다시 a+1과 비교하여 a=a+1이라는 모순을 주장한 것은 오류이며 뒤의 올바른 차함수 계산으로 이 앞 문장이 정정되지 않는다.
+
+설명의 충분성: inappropriate
+
+극한값이 1이 되려면 $f(x)$와 $g(x) - x^2$의 최고차항 계수가 같아야 하므로, $a = a+1$이 성립해야 하는데 이는 모순입니다.
+
+올바른 최고차항 관계를 설명한 직후 잘못된 계수 비교와 모순을 주장하고 같은 형태를 부정했다가 다시 사용하여 독자가 타당한 추론과 오류를 구별하기 어렵다.
+
+교과 범위 적합성: uncertain
+
+이 극한값이 1로 수렴하므로, $f(x)$와 $g(x) - x^2$은 최고차항의 계수가 같고 차수가 같은 이차식이어야 합니다.
+
+다항식의 무한대 극한·차수 및 인수분해를 사용했다. 공식 성취기준을 대조하지 않아 교과 범위를 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$g(x) - f(x) = x^2 + h(x) = x^2 + 2x - 15$
+
+최종적으로 얻은 차함수 x²+2x-15=(x-3)(x+5) 및 값20은 원본과 일치하지만 앞 절에 별도의 논리 오류가 있다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_2_004,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_004,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_004,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_006,test,A,success,True,True,cb0c11cb28d2077d4177b3a3e5ef07348e9a52582b39e0b52fbf013ce88b3ba7,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_2_006 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$$6 - a = 4 + a$$
+
+경계 x=2에서 연속 조건을 맞게 세우고 a=1을 구했다.
+
+설명의 충분성: appropriate
+
+2. **우극한 및 함숫값 계산:**
+
+좌우 극한 및 경계에서의 실제 함숫값을 모두 확인했다.
+
+교과 범위 적합성: uncertain
+
+함수 $f(x)$가 $x=2$에서 연속이기 위한 조건은 다음과 같습니다.
+
+조각별 다항함수의 연속을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$$a = 1$$
+
+원본의 상수1과 보기①에 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_2_006,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_006,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_006,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_007,test,A,success,True,True,08c8d8224845fd34483757d6eac2934d374d397dca987a9e4b96e92ac914fccc,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_2_007 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$(4 - a)^2 = 4$
+
+x=4에서 연속 조건의 두 해 a=2,6 및 곱12를 정확히 구했다.
+
+설명의 충분성: appropriate
+
+$4 - a = 2$ 또는 $4 - a = -2$
+
+제곱 방정식에서 양·음 두 경우를 모두 고려했다.
+
+교과 범위 적합성: uncertain
+
+3. **연속 조건:**
+
+조각별 다항함수의 연속과 이차방정식을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+이들의 곱은 $2 \times 6 = 12$입니다.
+
+원본의 두 상수와 곱12에 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_2_007,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_007,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_007,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_010,test,A,success,True,True,0f2124c6fe18519830d50fd5de2084c1b9393f29e1afe71aa843fb3811a033ae,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_2_010 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$(a - \frac{1}{2})^2 = (a + 3)^2$
+
+f의 좌우 극한을 그대로 같게 두지 않고 변환된 g=(f+a)²의 극한을 같게 두어 a=-5/4를 맞게 구했다.
+
+설명의 충분성: appropriate
+
+함수 $g(x) = (f(x) + a)^2$이 실수 전체의 집합에서 연속이려면, 함수 $f(x)$가 불연속일 가능성이 있는 지점인 $x=0$에서 $g(x)$가 연속이어야 합니다.
+
+연속 여부를 판단할 대상이 f가 아닌 g라는 점을 명시했다.
+
+교과 범위 적합성: uncertain
+
+먼저 $x=0$에서 $f(x)$의 좌극한과 우극한(함숫값)을 구합니다.
+
+합성된 함수의 연속과 극한을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$a = -\frac{5}{4}$
+
+원본의 전개식과 상수-5/4에 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_2_010,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_010,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_010,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_013,test,A,success,True,True,f5a365e2231638eb7c304c9846bafd1c2b8f74c0872a97cee66d92e43b51be36,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_2_013 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+여기서 $2h = t$로 치환하면 $h \rightarrow 0$일 때 $t \rightarrow 0$이므로,
+
+f(1)=4를 구하고 t=2h 치환으로 극한을 f'(1)=3에 연결하는 수식은 타당하다.
+
+설명의 충분성: appropriate
+
+분모와 분자에 $2$를 곱하면,
+
+표현은 부정확하지만 실제 제시한 식은 분모를2h로 바꾸고 바깥에2를 보정한 올바른 등식이며 이후 치환까지 설명한다.
+
+교과 범위 적합성: uncertain
+
+주어진 식을 미분계수의 정의 형태로 변형합니다.
+
+미분계수의 정의와 변수 치환을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$f(1) + f'(1) = 4 + 3 = 7$
+
+원본의 함수값4·미분계수3·합7에 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_2_013,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_013,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_013,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_014,test,A,success,True,True,6c2807b8bfee71573ec2ddf80b9fcc7a87b49c2726beb7e0ff8be590af64f6bf,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_2_014 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$-2f(0) + 2f(2) = 16$
+
+곱의 미분식에서 x=0,2일 때 f'항이 사라지는 점을 이용한 계산이 정확하다.
+
+설명의 충분성: appropriate
+
+$g'(0) = -2f(0) + 0 = -2f(0)$
+
+두 대입값을 각각 전개하고 주어진 합 조건에 연결했다.
+
+교과 범위 적합성: uncertain
+
+함수 $g(x) = (x^2 - 2x)f(x)$를 미분하면 곱의 미분법에 의해 다음과 같습니다.
+
+다항함수의 곱의 미분법을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$f(2) - f(0) = 8$
+
+원본의 차8과 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_2_014,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_014,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_014,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_016,test,A,success,True,True,266a82596c88093579e5e968be5da75ffa012ac819f977e25ac2b87fb517bb5d,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_2_016 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$g'(3) = 2 + 5 \times 4$
+
+접점 좌표와 접선 기울기를 각각 f(3)=2,f'(3)=4로 해석해22를 정확히 구했다.
+
+설명의 충분성: appropriate
+
+$f'(3) = 4$
+
+좌표 조건과 기울기 조건을 구분한 뒤 곱의 미분식을 제시했다.
+
+교과 범위 적합성: uncertain
+
+2. 함수 $g(x) = (x + 2)f(x)$를 미분하면 곱의 미분법에 의해 다음과 같습니다.
+
+접선 기울기와 곱의 미분법을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$g'(3) = 22$
+
+원본의 미분계수22와 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_2_016,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_016,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_016,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_018,test,A,success,True,True,9154317217e231a5301c0d5aa5a9c9095e0585176f7a780ffa4037092f0f6a2a,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_2_018 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$a + 4b = -2$  --- (1)
+
+연속 조건 a+4b=-2와 미분 조건2a+b=-3b의 연립으로 a=2,b=-1을 맞게 구했다.
+
+설명의 충분성: appropriate
+
+$2a + b = -3b$
+
+연속을 먼저 보장한 다음 각 다항식의 한쪽 미분계수를 비교하여 미분가능성을 확인했다.
+
+교과 범위 적합성: uncertain
+
+$x=1$에서 좌미분계수와 우미분계수가 같아야 하므로,
+
+조각별 다항함수의 연속·미분가능을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+따라서 $a + b = 2 + (-1) = 1$입니다.
+
+원본의 계수2,-1 및 합1과 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_2_018,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_018,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_018,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_020,test,A,success,True,True,872f9ffcd041ea4eaf989ee899ba920a6493031010e83c17aae53a677765dfbd,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_2_020 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$-3a + 1 = 4 \implies -3a = 3 \implies a = -1$
+
+유한 극한에서 f(a)=1,f'(a)=3을 구하고 접선 절편으로 a=-1을 얻는 과정이 타당하다.
+
+설명의 충분성: appropriate
+
+$f(-1) = -1 + p - q = 1 \implies p - q = 2$  --- (1)
+
+삼차함수의 형태와 접점 조건을 명시해 계수 p=-2,q=-4를 결정했다.
+
+교과 범위 적합성: uncertain
+
+1. **미분계수의 정의 이용:**
+
+유한 극한·미분계수와 접선을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$f(1) = 1^3 - 2(1)^2 - 4(1) = 1 - 2 - 4 = -5$
+
+원본의 의도한 함수 x³-2x²-4x 및 값-5와 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_2_020,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_020,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_020,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_023,test,A,success,True,True,2eb5c0285c0ecb13a65d749593788fee2c9165a32681f232552fd93ea30db484,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_2_023 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+- 이 식이 $y = 12x + 6$과 같아야 하므로, $16 + k = 6 \implies k = -10$입니다.
+
+두 접선의 같은 기울기 조건에서 접점 a=±2를 모두 살피고 절편 일치와 k>0을 적용한 계산이 맞다.
+
+설명의 충분성: appropriate
+
+- 두 접선이 일치하므로 기울기가 같아야 합니다.
+
+기울기뿐 아니라 각각의 직선 절편까지 비교했다.
+
+교과 범위 적합성: uncertain
+
+1. 곡선 $f(x) = x^3 - 10$ 위의 점 $\mathrm{P}(-2, -18)$에서의 접선의 방정식을 구합니다.
+
+다항함수의 접선 일치 조건을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+- 이 식이 $y = 12x + 6$과 같아야 하므로, $-16 + k = 6 \implies k = 22$입니다.
+
+원본의 후보22,-10 중 양수22 선택과 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_2_023,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_023,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_023,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_024,test,A,success,True,True,6424d0aff676f7167c76e5e61488cdd507b789352dfcf06d47483669a6807aa7,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_2_024 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$8k = -64 \implies k = -8$
+
+수평 접점 조건으로 f-3=(x-2)²(x-k)를 두고 다른 접선의 통과 조건을 적용해 k=-8을 맞게 구했다.
+
+설명의 충분성: appropriate
+
+또한, 이 기울기는 $f'(-2)$와 같으므로 $f'(-2) = \frac{3 - f(-2)}{3}$, 즉 $3f'(-2) + f(-2) = 3$입니다.
+
+다른 접선의 기울기와 통과점을 식으로 연결해 계수를 결정했다.
+
+교과 범위 적합성: uncertain
+
+1. **점 $(2, 3)$에서의 접선 정보:**
+
+삼차함수의 접선과 중근 조건을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$f(0) = (-2)^2(8) + 3 = 4 \times 8 + 3 = 32 + 3 = 35$
+
+원본의 함수 형태와 f(0)=35에 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_2_024,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_024,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_024,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_029,test,A,success,True,True,a21328cc877d2639de3c792fc0c5e3dfad8febe08594165bc4769d1bdf576050,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_2_029 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$f''(1) = 12 > 0$ 이므로 $x = 1$에서 극솟값을 갖습니다.
+
+이계도함수 판정은 이 매끄러운 다항함수에서 수학적으로 타당하며 극솟값 a-4=2로 a=6을 맞게 얻는다.
+
+설명의 충분성: appropriate
+
+이계도함수를 구하여 극대와 극소를 판별하면,
+
+두 임계점을 구하고 이계도함수 부호로 종류를 판정하는 이유를 제시했다.
+
+교과 범위 적합성: uncertain
+
+이계도함수를 구하여 극대와 극소를 판별하면,
+
+이계도함수의 부호로 극대·극소를 판정했다. 고교 전체에서의 취급 여부와 별개로 이 자료의 해당 단원에서 허용하는 판정법인지는 공식 성취기준 대조가 필요하다. 확실한 교과 밖 정리로 세지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$-4 + a = 2$
+
+원본의 극소 위치1 및 a=6과 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_2_029,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_029,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_029,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_030,test,A,success,True,True,b3e01cdfb8b8abcc3c0a8dba10c40112ecc39a580f66a7c353b67811ec5797dc,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_2_030 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$-a = -2$ 이므로 $a = 2$입니다.
+
+극소점 조건으로 b=-3a,극솟값으로 a=2를 구하고 반대 임계점 x=-1의 값6을 정확히 계산했다.
+
+설명의 충분성: appropriate
+
+$f'(x) = 3ax^2 - 3a = 3a(x^2 - 1) = 3a(x-1)(x+1)$
+
+도함수를 인수분해해 임계점 두 개를 제시하고 주어진 극소 조건과 연결했다.
+
+교과 범위 적합성: uncertain
+
+5. **극댓값 구하기:**
+
+다항함수의 극대·극소을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$f(-1) = -2 + 6 + 2 = 6$
+
+원본의 계수2,-6 및 극댓값6과 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_2_030,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_030,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_030,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_031,test,A,success,True,True,919ce98dac40e7304a43d5bdd3d63166c32980d64cbc60e244923d302cc53a41,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_2_031 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$2a - 2 = a + 3$
+
+x=1의 극솟값 조건에서 a=5를 얻고 x=-1의 극댓값12를 맞게 구했다.
+
+설명의 충분성: appropriate
+
+함수 $f(x)$의 증감표를 생각해보면, $x = -1$에서 극대이고 $x = 1$에서 극소임을 알 수 있습니다.
+
+도함수 인수분해와 증감에 따른 극대·극소 위치를 설명했다.
+
+교과 범위 적합성: uncertain
+
+함수 $f(x)$의 증감표를 생각해보면, $x = -1$에서 극대이고 $x = 1$에서 극소임을 알 수 있습니다.
+
+다항함수의 극대·극소을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$f(-1) = -1 + 3 + 10 = 12$
+
+원본의 계수5 및 극댓값12에 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_2_031,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_031,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_031,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_036,test,A,success,True,True,e3f237170e3c0ffda061b3f412b86e17c87b9eea1f09fceafa7d7aa8951f9f67,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_2_036 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+즉, $k = 27$ 또는 $k = -5$일 때 서로 다른 두 실근을 갖게 됩니다.
+
+삼차함수와 수평선의 교점수로 바꾸어 서로 다른 두 근의 조건을 두 극값에 연결한 풀이가 맞다.
+
+설명의 충분성: appropriate
+
+방정식 $f(x) = k$가 서로 다른 두 실근을 가지려면, 직선 $y = k$가 함수 $f(x)$의 극댓값 또는 극솟값과 만나야 합니다.
+
+서로 다른 두 실근과 수평선이 극값에서 접하는 경우의 관계를 설명했다.
+
+교과 범위 적합성: uncertain
+
+함수 $f(x) = -x^3 + 3x^2 + 9x$의 그래프와 직선 $y = k$가 만나는 점의 개수가 서로 다른 실근의 개수입니다. $f(x)$의 극값을 구하기 위해 미분하면,
+
+삼차함수의 극값과 방정식의 실근 개수을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+따라서 구하는 모든 실수 $k$의 값의 합은 $27 + (-5) = 22$입니다.
+
+원본의 두 매개변수-5,27 및 합22에 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_2_036,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_036,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_036,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_037,test,A,success,True,True,cadf3c958bd953209140e3e21e9973329afd670d0e24a3ac66b0d3d178126095,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_2_037 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+1) $k + 1 = 4$인 경우: $k = 3$
+
+곡선 교점 문제를 -x³+3x²=k+1의 실근수로 바꾸고 수평선이 극값에 접하는 경우를 맞게 구했다.
+
+설명의 충분성: appropriate
+
+2) $k + 1 = 0$인 경우: $k = -1$
+
+두 극값에 해당하는 k=3,-1을 모두 구한 뒤 양수 조건을 적용했다.
+
+교과 범위 적합성: uncertain
+
+직선 $y = k + 1$과 이 그래프가 만나는 점의 개수가 2개가 되려면, 직선이 극댓값이나 극솟값에 접해야 합니다.
+
+삼차함수의 극값과 교점 개수을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+1) $k + 1 = 4$인 경우: $k = 3$
+
+원본과 함수 부호·상수 설정은 다르지만 같은 양수 k=3을 타당하게 얻었다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_2_037,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_037,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_037,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_040,test,A,success,True,True,1f1574d1fe6aafb0d5a9eb7cfebbe52eaaac10ca69c38b8b3c0120c480656ae2,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_2_040 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$(t^2 + 1)(t - 6) = 0$
+
+위치 일치 시각의 유일한 실수 해6과 두 위치함수의 두 번 미분에서 얻은 가속도2,-22가 모두 정확하다.
+
+설명의 충분성: appropriate
+
+다음으로, 각 점의 속도와 가속도를 구합니다. 가속도는 위치를 시간에 대해 두 번 미분한 값입니다.
+
+위치 일치 조건과 속도·가속도 계산을 분리해서 설명했다.
+
+교과 범위 적합성: uncertain
+
+다음으로, 각 점의 속도와 가속도를 구합니다. 가속도는 위치를 시간에 대해 두 번 미분한 값입니다.
+
+다항 위치함수의 미분과 운동을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$p - q = 2 - (-22) = 2 + 22 = 24$
+
+원본의 시각6과 가속도 차24에 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_2_040,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_040,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_040,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_041,test,A,success,True,True,37509d937c5c9ef9dfe1ca7a83ae972fb472da240ec5c71cded27cb4d04a3748,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_2_041 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$t=1$에서는 속도의 부호가 바뀌지 않지만(중근), $t=2$에서는 속도의 부호가 바뀌므로 운동 방향이 바뀌는 순간은 $t=2$입니다.
+
+속도 영점 중 중근1은 제외하고 부호가 바뀌는2만 선택해 가속도6을 정확히 구했다.
+
+설명의 충분성: appropriate
+
+$t=1$에서는 속도의 부호가 바뀌지 않지만(중근), $t=2$에서는 속도의 부호가 바뀌므로 운동 방향이 바뀌는 순간은 $t=2$입니다.
+
+속도가0인 모든 순간이 방향 전환은 아니라는 점을 구체적인 중근 사례로 구분했다.
+
+교과 범위 적합성: uncertain
+
+다음으로 가속도 $a(t)$는 속도를 시간 $t$에 대해 미분하여 구합니다.
+
+속도의 부호와 운동 방향·가속도을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$a(2) = 72 - 96 + 30$
+
+원본의 방향 전환 시각2 및 가속도6과 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_2_041,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_041,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_2_041,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_001,test,A,success,True,True,f4c5020b311cd8f722898f35b9bfa23a49b010df9cb1aab893953c79a1c110b9,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_3_001 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$x \to 0$일 때 $x+5 > 0$이므로 부등호의 방향은 바뀌지 않습니다.
+
+0의 근방에서 양수인 x+5를 곱해 부등호를 유지하고 양끝 극한5로 샌드위치 정리를 적용한 논증이 맞다.
+
+설명의 충분성: appropriate
+
+$x \to 0$일 때 $x+5 > 0$이므로 부등호의 방향은 바뀌지 않습니다.
+
+음수배의 부등호 문제를 피하기 위해 극한 근방의 부호를 확인했다.
+
+교과 범위 적합성: uncertain
+
+함수의 극한의 대소 관계(샌드위치 정리)에 의해,
+
+함수의 극한의 대소 관계을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$\lim_{x \to 0} (x + 5)(x + 1)^2 = (0 + 5)(0 + 1)^2 = 5 \cdot 1^2 = 5$
+
+원본은 f의 극한을 먼저 구하지만 같은 극한값5를 적법하게 얻었다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_3_001,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_001,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_001,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_004,test,A,success,True,True,8be6868b26e78b4738c6e58ec28b885dab952e2f8ebdff95bf64e4dffcf96ad9,historical_AI_suspected_error,inappropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_3_004 / baseline
+
+수학적 적절성(논리·설명·일관성): inappropriate / 교과 범위: uncertain / 네 기준 종합: inappropriate
+
+논리적 타당성: inappropriate
+
+$$\lim_{x \rightarrow 1} \left( \frac{f(x)}{x - 1} \cdot \frac{1}{\frac{g(x)}{x^2 - 1}} \cdot \frac{(x + 1)^2}{x^2 - 1} \right)$$
+
+2절에서 목표식과 같다고 제시한 곱에는 불필요한 (x+1)/(x-1) 인수가 더 붙어 있다. 뒤의 A/B 치환은 맞지만 잘못된 앞 등식을 명시적으로 철회하지 않았다.
+
+설명의 충분성: inappropriate
+
+여기서 $\frac{(x + 1)^2}{x^2 - 1} = \frac{(x + 1)^2}{(x - 1)(x + 1)} = \frac{x + 1}{x - 1}$ 이 되어 극한값이 발산하는 것처럼 보일 수 있으므로, 식을 더 직관적으로 대입해 봅니다.
+
+틀린 변형을 단지 발산해 보이는 표현으로 설명한 뒤 다른 방법으로 전환해 학습자가 어느 식이 틀렸는지 알기 어렵다.
+
+교과 범위 적합성: uncertain
+
+3. **직접 대입:**
+
+함수의 극한 성질과 대수적 약분을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$$\lim_{x \rightarrow 1} \frac{A(x)}{B(x)} = \frac{\lim_{x \to 1} A(x)}{\lim_{x \to 1} B(x)} = \frac{8}{1/2} = 16$$
+
+3절의 A=f/(x-1), B=g/(x²-1) 치환 및 최종16은 원본의 올바른 약분·극한 계산과 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_3_004,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_004,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_004,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_005,test,A,success,True,True,7e05cd04fefb1c76b6df3de150f906f848631ed32b3fcd1140a184f0bfca3f33,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_3_005 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: inappropriate / 네 기준 종합: inappropriate
+
+논리적 타당성: appropriate
+
+$\frac{4 + a}{-1} = 4$
+
+다항식의 차수·선두계수를 결정하고 f(1)=3을 얻은 후 로피탈을 적용한 계산은 수학적으로 타당하다.
+
+설명의 충분성: appropriate
+
+분모가 $x \rightarrow 1$일 때 0으로 가므로, 극한값이 존재하려면 분자도 0이어야 합니다.
+
+0/0 형태와 다항식 미분값으로 계수 a=-8,b=9를 결정하는 계산 근거는 제시했다.
+
+교과 범위 적합성: inappropriate
+
+이제 로피탈의 정리를 사용하거나 식을 대입하여 극한값을 계산합니다.
+
+로피탈의 정리를 명시하고 분자·분모의 도함수 비로 실제 극한을 계산했다. 고교 교과의 다항함수 극한 풀이 범위를 벗어나는 정리이며 원본은 인수분해만으로 해결한다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$f(4) = 32 - 32 + 9 = 9$
+
+원본의 이차함수2x²-8x+9 및 f(4)=9와 일치하나 사용 정리는 다르다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_3_005,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_005,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_005,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_008,test,A,success,True,True,0c73697f2cd40770d8cd65f9c1a313f3e0a49fad296e9bdadfad599b7ef38b9d,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_3_008 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$$-2 + a = 6 - a$$
+
+경계 x=-1의 연속 조건에서 a=4를 구한 계산이 정확하다.
+
+설명의 충분성: appropriate
+
+1. **좌극한과 함숫값 계산 ($x \leq -1$인 경우):**
+
+경계 포함 방향과 좌우 극한·함숫값을 각각 확인했다.
+
+교과 범위 적합성: uncertain
+
+함수 $f(x)$가 실수 전체의 집합에서 연속이려면, 함수가 정의된 구간이 나뉘는 지점인 $x = -1$에서 연속이어야 합니다.
+
+조각별 다항함수의 연속을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$$a = 4$$
+
+원본의 연속 조건 및 보기④와 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_3_008,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_008,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_008,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_012,test,A,success,True,True,c10f102da1f3498ea76478727ee14b623fc98134672bec43827132f3a0ec564d,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_3_012 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+분자를 인수분해하면 $x^2-9 + a(x-3) = (x-3)(x+3) + a(x-3) = (x-3)(x+3+a)$이므로,
+
+유한 좌극한에서 분자 영점 조건을 얻고 인수분해로 약분해6+a=7을 세운 논증이 맞다.
+
+설명의 충분성: appropriate
+
+$$3^2 + 3a + b = 0 \implies 9 + 3a + b = 0 \implies b = -3a - 9$$
+
+우극한·함숫값7을 구하고 좌극한의 유한성 및 값 일치를 차례로 사용했다.
+
+교과 범위 적합성: uncertain
+
+분자를 인수분해하면 $x^2-9 + a(x-3) = (x-3)(x+3) + a(x-3) = (x-3)(x+3+a)$이므로,
+
+유리함수의 극한과 조각별 함수의 연속을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$$a - b = 1 - (-12) = 1 + 12 = 13$$
+
+원본의 a=1,b=-12 및 차13과 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_3_012,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_012,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_012,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_022,test,A,success,True,True,5182f6be9e03464399d3d675fe110f520c2bcfbd8aca0807203b14fabd1aa2af,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_3_022 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$3a^2 - 12a + 8 = 0$
+
+평균변화율-3과 도함수값을 같게 놓은 이차방정식 및 두 해의 곱8/3이 정확하다.
+
+설명의 충분성: appropriate
+
+따라서 $a_1 = 2 - 1.154 = 0.846$, $a_2 = 2 + 1.154 = 3.154$가 되어 두 근 모두 $0 < a < 4$의 범위를 만족합니다.
+
+근의 공식을 이용해 두 해가 모두 요구된 열린 구간에 있음을 추가 확인했다.
+
+교과 범위 적합성: uncertain
+
+함수 $f(x) = x^3 - 6x^2 + 5x$에서 $x$의 값이 $0$에서 $4$까지 변할 때의 평균변화율은 다음과 같습니다.
+
+평균변화율·미분계수와 이차방정식을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$p + q = 3 + 8 = 11$
+
+원본의 기약분수8/3과 합11에 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_3_022,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_022,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_022,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_028,test,A,success,True,True,045086a092cd7b06b6160842b915d1175430e88d8dcf0df14f92391dedb29cc3,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_3_028 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$3 - a = -3$
+
+연속 조건 b=a-4와 미분 조건3-a=-3의 연립으로 a=6,b=2를 맞게 구했다.
+
+설명의 충분성: appropriate
+
+$x=1$에서 좌미분계수와 우미분계수가 같아야 하므로:
+
+연속을 먼저 확보하고 한쪽 다항식 미분계수의 일치를 적용했다.
+
+교과 범위 적합성: uncertain
+
+**2. $x=1$에서 미분가능 조건:**
+
+조각별 다항함수의 연속·미분가능을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+따라서 $a \times b = 6 \times 2 = 12$입니다.
+
+원본의 계수6,2 및 곱12와 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_3_028,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_028,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_028,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_039,test,A,success,True,True,f647d1d860ba90b887ea9311d49e177763a64aae8f31206e630fe98a79099742,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_3_039 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$f'(x) = 3x^2 - 6x = 3x(x - 2)$
+
+도함수 부호에 맞는 극대 위치0에서 k=9를 얻고 극소 위치2의 값5를 정확히 계산했다.
+
+설명의 충분성: appropriate
+
+함수 $f(x)$의 증감표를 생각해보면, $x=0$에서 극대이고 $x=2$에서 극소임을 알 수 있습니다.
+
+도함수 인수분해와 증감을 통해 두 임계점의 극값 종류를 구분했다.
+
+교과 범위 적합성: uncertain
+
+함수 $f(x)$의 증감표를 생각해보면, $x=0$에서 극대이고 $x=2$에서 극소임을 알 수 있습니다.
+
+다항함수의 극대·극소을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$f(2) = 8 - 12 + 9$
+
+원본의 k=9 및 극솟값5와 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_3_039,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_039,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_039,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_044,test,A,success,True,True,331c59f21b68dd852554179b63c93d2430d4c8388504d185a585f5d850c96a89,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_3_044 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+2. $-8 < -k < 0$인 경우:
+
+양의 영역에서 감소·증가 구간과 경계의 한 근인 경우를 구분하여0<k<8을 맞게 얻었다.
+
+설명의 충분성: appropriate
+
+- $x=2$일 때 $f(2)=-8$이므로, $-k = -8$이면 $x=2$에서 중근을 갖고 $x=0$보다 작은 곳에서 다른 근을 가지므로 양의 실근은 1개입니다.
+
+두 경계값에서 양의 근이 하나뿐임을 별도로 확인해 열린 범위가 필요한 이유를 설명했다.
+
+교과 범위 적합성: uncertain
+
+함수 $f(x) = 2x^3 - 6x^2$이라 하고, 이 함수의 그래프를 그려서 $y = -k$와의 교점을 분석합니다.
+
+삼차함수의 증감과 양의 실근 개수을 사용했다. 명확한 고교 밖 정리는 발견하지 못했으나 공식 교육과정·해당 단원 성취기준과 대조하지 않아 범위 적합성을 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+이 범위에 속하는 정수 $k$는 $1, 2, 3, 4, 5, 6, 7$로 총 7개입니다.
+
+원본의 허용 정수 범위 및 개수7과 일치한다.
+
+검토자: {'id': 'AI-assisted reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted proposal; not a human-verified judgment'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_3_044,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_044,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_044,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_048,test,A,success,True,True,5a3284ba94cb754e8c1148df480ee644f10f602168905077adab50976b5de7c5,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_3_048 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+위의 세 값 중 최솟값은 $k - 32$입니다.
+
+도함수12x(x−2)(x+1)의 세 임계점에서 값을 비교하여 전역 최솟값k−32와 k≥32를 얻는다. 사차항의 양의 최고차 계수와 모순이 없다.
+
+설명의 충분성: appropriate
+
+위의 세 값 중 최솟값은 $k - 32$입니다.
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. 도함수12x(x−2)(x+1)의 세 임계점에서 값을 비교하여 전역 최솟값k−32와 k≥32를 얻는다. 사차항의 양의 최고차 계수와 모순이 없다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+위의 세 값 중 최솟값은 $k - 32$입니다.
+
+원본 해설의 핵심 유도와 결과를 대조했으며, 도함수12x(x−2)(x+1)의 세 임계점에서 값을 비교하여 전역 최솟값k−32와 k≥32를 얻는다. 사차항의 양의 최고차 계수와 모순이 없다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_3_048,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_048,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_048,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_049,test,A,success,True,True,d64a376ace3a00a8a791135638c45e8f37ef111d8706b5b666486febe17498d3,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+diff_3_049 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+   $h(1) = 1^3 - 1^2 - 1 + 6 = 1 - 1 - 1 + 6 = 5$
+
+x≥0에서 도함수 부호가1을 경계로 음수에서 양수로 바뀌므로 h의 최소5에 의해 a≤5이다.
+
+설명의 충분성: appropriate
+
+   $h(1) = 1^3 - 1^2 - 1 + 6 = 1 - 1 - 1 + 6 = 5$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. x≥0에서 도함수 부호가1을 경계로 음수에서 양수로 바뀌므로 h의 최소5에 의해 a≤5이다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+   $h(1) = 1^3 - 1^2 - 1 + 6 = 1 - 1 - 1 + 6 = 5$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, x≥0에서 도함수 부호가1을 경계로 음수에서 양수로 바뀌므로 h의 최소5에 의해 a≤5이다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+diff_3_049,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_049,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+diff_3_049,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_004,test,A,success,True,True,8706a6a9258fd4bf712da040ff0572de8f0a87502541f24b5a70c08d8b0e3b5d,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_1_004 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+   $\cos^2 \theta = \frac{1}{3}$
+
+tan²θ=2에서 cos²θ=1/3을 얻고 제2사분면의 음수 부호를 적용하여 −√3/3을 고른다.
+
+설명의 충분성: appropriate
+
+   $\cos^2 \theta = \frac{1}{3}$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. tan²θ=2에서 cos²θ=1/3을 얻고 제2사분면의 음수 부호를 적용하여 −√3/3을 고른다.
+
+교과 범위 적합성: uncertain
+
+   삼각함수의 기본 항등식 $1 + \tan^2 \theta = \sec^2 \theta = \frac{1}{\cos^2 \theta}$를 이용합니다.
+
+sec 기호와 항등식을 도입한다. 같은 계산은sin²+cos²=1로도 가능하며, 제공된09대수 단원에서 sec가 허용되는지 공식 교육과정 대조가 필요하다.
+
+문제·원본 정답과의 일관성: appropriate
+
+   $\cos^2 \theta = \frac{1}{3}$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, tan²θ=2에서 cos²θ=1/3을 얻고 제2사분면의 음수 부호를 적용하여 −√3/3을 고른다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_1_004,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_004,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_004,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_007,test,A,success,True,True,f41e9ba9d955e605b0b2daa76cd6fa91b4293a462231aaf1505359dffb8a1eba,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_1_007 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$\sin \theta = \frac{1}{\sqrt{3}} = \frac{\sqrt{3}}{3}$
+
+cosθ/tanθ+sinθ를1/sinθ로 정리한 뒤 제2사분면의 cos 부호를 선택하는 계산이 옳다.
+
+설명의 충분성: appropriate
+
+$\sin \theta = \frac{1}{\sqrt{3}} = \frac{\sqrt{3}}{3}$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. cosθ/tanθ+sinθ를1/sinθ로 정리한 뒤 제2사분면의 cos 부호를 선택하는 계산이 옳다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$\sin \theta = \frac{1}{\sqrt{3}} = \frac{\sqrt{3}}{3}$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, cosθ/tanθ+sinθ를1/sinθ로 정리한 뒤 제2사분면의 cos 부호를 선택하는 계산이 옳다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_1_007,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_007,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_007,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_009,test,A,success,True,True,dab666c85f3a481f39997ffdcd6d0a8f4a857e3a16956ca4c63b4edbdeeafd2e,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_1_009 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$2\theta$가 제2사분면의 각이므로 $\cos 2\theta = -\sqrt{1 - \sin^2 2\theta} = -\sqrt{1 - \left(\frac{3}{5}\right)^2} = -\frac{4}{5}$입니다.
+
+제곱식으로 sin2θ=3/5, 제2사분면의2θ로 cos2θ=−4/5를 구하여 cos²θ=1/10과 tanθ=3을 얻는다. 원조건의 부호도 검산한다.
+
+설명의 충분성: appropriate
+
+$2\theta$가 제2사분면의 각이므로 $\cos 2\theta = -\sqrt{1 - \sin^2 2\theta} = -\sqrt{1 - \left(\frac{3}{5}\right)^2} = -\frac{4}{5}$입니다.
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. 제곱식으로 sin2θ=3/5, 제2사분면의2θ로 cos2θ=−4/5를 구하여 cos²θ=1/10과 tanθ=3을 얻는다. 원조건의 부호도 검산한다.
+
+교과 범위 적합성: uncertain
+
+배각 공식에 의해 $\cos 2\theta = 2\cos^2 \theta - 1$이므로,
+
+원본 해설은기본관계식으로 해결하지만 생성 풀이는 sin2θ·cos2θ 배각공식을 사용한다.09대수 단원의 허용 범위는 공식 기준이 없어 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$2\theta$가 제2사분면의 각이므로 $\cos 2\theta = -\sqrt{1 - \sin^2 2\theta} = -\sqrt{1 - \left(\frac{3}{5}\right)^2} = -\frac{4}{5}$입니다.
+
+원본 해설의 핵심 유도와 결과를 대조했으며, 제곱식으로 sin2θ=3/5, 제2사분면의2θ로 cos2θ=−4/5를 구하여 cos²θ=1/10과 tanθ=3을 얻는다. 원조건의 부호도 검산한다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_1_009,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_009,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_009,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_010,test,A,success,False,True,1d08d7de6b1103d4574856bb8b6d22b986a00946131fbc170ac8b394c196735d,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_1_010 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$k \times \tan t = \left(-\frac{12}{5}\right) \times \left(-\frac{3}{4}\right) = \frac{36}{20} = \frac{9}{5}$
+
+근과 계수의 관계에서 k=−12/5, 제2사분면에서 sin t=3/5와 cos t=−4/5, 따라서 k tan t=9/5이다. 보기②가 수학적으로 옳다.
+
+설명의 충분성: appropriate
+
+$k \times \tan t = \left(-\frac{12}{5}\right) \times \left(-\frac{3}{4}\right) = \frac{36}{20} = \frac{9}{5}$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. 근과 계수의 관계에서 k=−12/5, 제2사분면에서 sin t=3/5와 cos t=−4/5, 따라서 k tan t=9/5이다. 보기②가 수학적으로 옳다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$k \times \tan t = \left(-\frac{12}{5}\right) \times \left(-\frac{3}{4}\right) = \frac{36}{20} = \frac{9}{5}$
+
+원본 해설의 마지막 계산9/5와 일치한다. 원본 HML 정답표시④가 잘못되어 보기②와 충돌한다는 독립 감사를 따로 남겼다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_1_010,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_010,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_010,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_011,test,A,success,True,True,8711ac74a88f4e22b6fa6685b9f39cefd9c84dda2f27f0278bc79f4e2834ae2a,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_1_011 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+   $$a = \frac{2\pi}{4\pi} = \frac{1}{2}$$
+
+주기2π/a=4π에서 a=1/2를 구하고 cos(2π/3)=−1/2를 대입하여7을 얻는다.
+
+설명의 충분성: appropriate
+
+   $$a = \frac{2\pi}{4\pi} = \frac{1}{2}$$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. 주기2π/a=4π에서 a=1/2를 구하고 cos(2π/3)=−1/2를 대입하여7을 얻는다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+   $$a = \frac{2\pi}{4\pi} = \frac{1}{2}$$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, 주기2π/a=4π에서 a=1/2를 구하고 cos(2π/3)=−1/2를 대입하여7을 얻는다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_1_011,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_011,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_011,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_013,test,A,success,True,True,4b7d0a277e1fbc9a7a18101346c18ce23b425c4cae2861fdb5b775806585a2b7,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_1_013 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$$f(\pi) = a \cos \left( \frac{\pi}{3} \right) = a \cdot \frac{1}{2} = 1$$
+
+주기로 b=1/3을 구하고 변환구간[π/3,4π/3]의 코사인 최대1/2에서 a=2, a+b=7/3을 얻는다.
+
+설명의 충분성: appropriate
+
+$$f(\pi) = a \cos \left( \frac{\pi}{3} \right) = a \cdot \frac{1}{2} = 1$$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. 주기로 b=1/3을 구하고 변환구간[π/3,4π/3]의 코사인 최대1/2에서 a=2, a+b=7/3을 얻는다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$$f(\pi) = a \cos \left( \frac{\pi}{3} \right) = a \cdot \frac{1}{2} = 1$$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, 주기로 b=1/3을 구하고 변환구간[π/3,4π/3]의 코사인 최대1/2에서 a=2, a+b=7/3을 얻는다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_1_013,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_013,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_013,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_018,test,A,success,True,True,4992ff0cf69f37b73d5c51c8978391052a8ea61d47f2920ef528d3417ad32114,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_1_018 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$10 - 2a = 18$
+
+a>0이면 최대10이어서 배제하고 a<0일 때 최대10−2a=18로 a=−4를 구한다. b=2/3과 함수값12 계산도 옳다.
+
+설명의 충분성: appropriate
+
+$10 - 2a = 18$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. a>0이면 최대10이어서 배제하고 a<0일 때 최대10−2a=18로 a=−4를 구한다. b=2/3과 함수값12 계산도 옳다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$10 - 2a = 18$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, a>0이면 최대10이어서 배제하고 a<0일 때 최대10−2a=18로 a=−4를 구한다. b=2/3과 함수값12 계산도 옳다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_1_018,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_018,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_018,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_020,test,A,success,True,True,026ce04c2d81ebfd3d7b4bc9c4694485d869709acffcde9cf8732277b0800f27,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_1_020 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$M \times m = (2a) \times (-a) = -8$
+
+지정 구간의 cos 범위[−1,1/2]와 a>0을 적용한 최대2a·최소−a의 곱으로 a=2를 도출한다.
+
+설명의 충분성: appropriate
+
+$M \times m = (2a) \times (-a) = -8$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. 지정 구간의 cos 범위[−1,1/2]와 a>0을 적용한 최대2a·최소−a의 곱으로 a=2를 도출한다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$M \times m = (2a) \times (-a) = -8$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, 지정 구간의 cos 범위[−1,1/2]와 a>0을 적용한 최대2a·최소−a의 곱으로 a=2를 도출한다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_1_020,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_020,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_020,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_021,test,A,success,True,True,9a08b59c4c3c96ea1fa336df322d991ad533d59e4fa6271b05a70083355c5d09,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_1_021 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+   $-4 + a = 1$
+
+최소−4+a=1에서 a=5를 구한 뒤 sin(π/6)=1/2로7을 계산한다.
+
+설명의 충분성: appropriate
+
+   $-4 + a = 1$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. 최소−4+a=1에서 a=5를 구한 뒤 sin(π/6)=1/2로7을 계산한다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+   $-4 + a = 1$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, 최소−4+a=1에서 a=5를 구한 뒤 sin(π/6)=1/2로7을 계산한다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_1_021,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_021,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_021,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_028,test,A,success,True,True,83f4d02dba51960d3514e51a85384b27a32d19926161f0c4b36ce8835fb9c5df,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_1_028 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$\tan \theta = \frac{\sin \theta}{\cos \theta} = 2$
+
+sinθ>0과 tanθ=2를 결합하여 제1사분면을 고르고 변비1:2의 직각삼각형으로 cosθ=1/√5를 구한다.
+
+설명의 충분성: appropriate
+
+$\tan \theta = \frac{\sin \theta}{\cos \theta} = 2$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. sinθ>0과 tanθ=2를 결합하여 제1사분면을 고르고 변비1:2의 직각삼각형으로 cosθ=1/√5를 구한다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$\tan \theta = \frac{\sin \theta}{\cos \theta} = 2$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, sinθ>0과 tanθ=2를 결합하여 제1사분면을 고르고 변비1:2의 직각삼각형으로 cosθ=1/√5를 구한다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_1_028,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_028,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_028,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_032,test,A,success,True,True,a17947b81ed8dc06085ceab318eeadabbd5207345b9300955f81074eb5d19034,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_1_032 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$\sin \theta = \frac{3\sqrt{10}}{10}$입니다.
+
+cos(π−θ)>0에서 cosθ<0, tanθ=−3에서 제2사분면을 정해 sinθ=3/√10을 얻는다.
+
+설명의 충분성: appropriate
+
+$\sin \theta = \frac{3\sqrt{10}}{10}$입니다.
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. cos(π−θ)>0에서 cosθ<0, tanθ=−3에서 제2사분면을 정해 sinθ=3/√10을 얻는다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$\sin \theta = \frac{3\sqrt{10}}{10}$입니다.
+
+원본 해설의 핵심 유도와 결과를 대조했으며, cos(π−θ)>0에서 cosθ<0, tanθ=−3에서 제2사분면을 정해 sinθ=3/√10을 얻는다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_1_032,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_032,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_032,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_035,test,A,success,True,True,f64d96018288fb997f98a8f60dafbdb9ba92c1f81c9f752fff1dfecce7e15051,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_1_035 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$5 \cos^2 \theta = 1$
+
+여각변환으로 sinθ=−2cosθ를 얻고 항등식과 sinθ<0을 적용해 양의 cosθ=1/√5를 정한다.
+
+설명의 충분성: appropriate
+
+$5 \cos^2 \theta = 1$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. 여각변환으로 sinθ=−2cosθ를 얻고 항등식과 sinθ<0을 적용해 양의 cosθ=1/√5를 정한다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$5 \cos^2 \theta = 1$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, 여각변환으로 sinθ=−2cosθ를 얻고 항등식과 sinθ<0을 적용해 양의 cosθ=1/√5를 정한다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_1_035,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_035,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_035,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_039,test,A,success,True,True,931777070d81fdc7c2a4239a0cfd1faf065cc0282cc6ee89d3c777b66f813f64,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_1_039 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+   $x = \pi, \quad x = 2\pi$
+
+방정식을 sinx(sinx+2)=0으로 바꾸고 불가능한 sinx=−2를 제외한다. 열린0과 닫힌2π 경계를 정확히 반영해π와2π를 합한다.
+
+설명의 충분성: appropriate
+
+   $x = \pi, \quad x = 2\pi$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. 방정식을 sinx(sinx+2)=0으로 바꾸고 불가능한 sinx=−2를 제외한다. 열린0과 닫힌2π 경계를 정확히 반영해π와2π를 합한다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+   $x = \pi, \quad x = 2\pi$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, 방정식을 sinx(sinx+2)=0으로 바꾸고 불가능한 sinx=−2를 제외한다. 열린0과 닫힌2π 경계를 정확히 반영해π와2π를 합한다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_1_039,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_039,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_039,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_042,test,A,success,True,True,24f059266dc2ab89e92993eac6a3998cfc5886853dc56912e1c31f72f7ae03bb,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_1_042 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$x_4 - x_2 = \frac{(\arctan b + 3\pi) - (\arctan b + \pi)}{a} = \frac{2\pi}{a} = 6\pi$
+
+tan 주기로 x4−x2=2π/a=6π를 풀어 a=1/3을 얻고 x1=π에서 b=tan(π/3)=√3을 구한다. 역탄젠트 표현은 수학적으로 동치다.
+
+설명의 충분성: appropriate
+
+$x_4 - x_2 = \frac{(\arctan b + 3\pi) - (\arctan b + \pi)}{a} = \frac{2\pi}{a} = 6\pi$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. tan 주기로 x4−x2=2π/a=6π를 풀어 a=1/3을 얻고 x1=π에서 b=tan(π/3)=√3을 구한다. 역탄젠트 표현은 수학적으로 동치다.
+
+교과 범위 적합성: uncertain
+
+$ax_n = \arctan b + (n-1)\pi$
+
+역삼각함수 arctan을 도입한다. 주기만으로 해결되는 원본 해설과 달라 단원 범위 적합성 후보로 표시하되, 공식 기준 없이 확정하지 않는다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$x_4 - x_2 = \frac{(\arctan b + 3\pi) - (\arctan b + \pi)}{a} = \frac{2\pi}{a} = 6\pi$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, tan 주기로 x4−x2=2π/a=6π를 풀어 a=1/3을 얻고 x1=π에서 b=tan(π/3)=√3을 구한다. 역탄젠트 표현은 수학적으로 동치다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_1_042,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_042,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_042,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_043,test,A,success,True,True,fac948e363c4a1ba69239a539e4c29ae72004abbe523938f679f845e28284fd1,historical_AI_suspected_error,inappropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_1_043 / baseline
+
+수학적 적절성(논리·설명·일관성): inappropriate / 교과 범위: uncertain / 네 기준 종합: inappropriate
+
+논리적 타당성: inappropriate
+
+이 구간에서 $\sin(ax) = \frac{5}{8}$을 만족하는 해는 $ax = 8a\pi - \pi + \alpha$입니다.
+
+가장 큰 해의 위상을 잘못 정하고 모순된 자연수 추정 뒤 근거 없이 정답4로 이동한다. 정답 숫자가 같아도 제시한 유도는 성립하지 않는다.
+
+설명의 충분성: inappropriate
+
+주기성을 고려할 때 $a=4$일 때 대칭성에 의해 합이 $8\pi - \frac{\pi}{4a} \times \dots$ 형태가 되어 $a=4$가 성립합니다.
+
+핵심 해 선택 또는 결론의 도출에 오류·비약이 있어 충분한 정당화가 아니다. 가장 큰 해의 위상을 잘못 정하고 모순된 자연수 추정 뒤 근거 없이 정답4로 이동한다. 정답 숫자가 같아도 제시한 유도는 성립하지 않는다.
+
+교과 범위 적합성: uncertain
+
+여기서 $\alpha = \arcsin(\frac{5}{8})$입니다. $\sin(\frac{\pi}{2} - \alpha) = \cos \alpha = \sqrt{1 - (\frac{5}{8})^2} = \frac{\sqrt{39}}{8} \approx 0.78$이고, $\sin(\frac{\pi}{4}) \approx 0.707$이므로 $\alpha$는 $\frac{\pi}{4}$보다 약간 큽니다.
+
+역삼각함수 arcsin과 근삿값을 사용한다. 제공된09대수 단원의 허용 범위를 확인할 공식 문서가 없어 범위 판정은 유보한다.
+
+문제·원본 정답과의 일관성: inappropriate
+
+$x_1 + x_n = \frac{\alpha}{a} + 8\pi - \frac{\pi}{a} + \frac{\alpha}{a} = 8\pi - \frac{\pi}{a} + \frac{2\alpha}{a} = \frac{31}{4}\pi$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, 가장 큰 해의 위상을 잘못 정하고 모순된 자연수 추정 뒤 근거 없이 정답4로 이동한다. 정답 숫자가 같아도 제시한 유도는 성립하지 않는다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_1_043,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_043,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_043,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_046,test,A,success,True,True,12aa417e928a6e40f76917cbc54586bcd90d682aa01e533614134826d3ef7469,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_1_046 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$\sqrt{2} \sin(\theta - \frac{\pi}{4}) > 0$
+
+sinθ−cosθ>0의 해를 θ∈(π/4,5π/4)로 구하고 x의 범위(5/4,25/4) 속 자연수2,3,4,5,6을 합하여20을 얻는다.
+
+설명의 충분성: appropriate
+
+$\sqrt{2} \sin(\theta - \frac{\pi}{4}) > 0$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. sinθ−cosθ>0의 해를 θ∈(π/4,5π/4)로 구하고 x의 범위(5/4,25/4) 속 자연수2,3,4,5,6을 합하여20을 얻는다.
+
+교과 범위 적합성: uncertain
+
+$\sqrt{2} \sin(\theta - \frac{\pi}{4}) > 0$
+
+삼각함수 합성식을 사용한다. 원본은 그래프 해석으로 해결하므로,09대수 단원의 공식적 허용 범위와 대조할 후보로 둔다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$\sqrt{2} \sin(\theta - \frac{\pi}{4}) > 0$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, sinθ−cosθ>0의 해를 θ∈(π/4,5π/4)로 구하고 x의 범위(5/4,25/4) 속 자연수2,3,4,5,6을 합하여20을 얻는다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_1_046,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_046,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_1_046,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_003,test,A,success,True,True,9858eab6daca4730a9bfd8f18e0e1dc1dbfeb29ff2591d3424e4c1fff3673fd9,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_2_003 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$$1 - \frac{2b}{a} = 0 \implies \frac{2b}{a} = 1 \implies a = 2b$$
+
+a,b>0에 의해 안전하게 b/a로 나누어 a=2b를 얻고 제1사분면의 직각삼각형에서 sinθ1=1/√5를 계산한다.
+
+설명의 충분성: appropriate
+
+$$1 - \frac{2b}{a} = 0 \implies \frac{2b}{a} = 1 \implies a = 2b$$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. a,b>0에 의해 안전하게 b/a로 나누어 a=2b를 얻고 제1사분면의 직각삼각형에서 sinθ1=1/√5를 계산한다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$$1 - \frac{2b}{a} = 0 \implies \frac{2b}{a} = 1 \implies a = 2b$$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, a,b>0에 의해 안전하게 b/a로 나누어 a=2b를 얻고 제1사분면의 직각삼각형에서 sinθ1=1/√5를 계산한다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_2_003,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_003,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_003,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_007,test,A,success,True,True,0542bb8a5e11bc39d591f9aef9f77f44294f290d1628e0d04c0469dbc29bb50e,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_2_007 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+   따라서 $\sin \theta \cos \theta = -\frac{3}{8}$입니다.
+
+항등식을 제곱하여 곱의 제곱9/64를 얻은 뒤 제2사분면의 음수 부호를 고르고, sinθ−cosθ>0으로 √7/2를 정한다.
+
+설명의 충분성: appropriate
+
+   따라서 $\sin \theta \cos \theta = -\frac{3}{8}$입니다.
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. 항등식을 제곱하여 곱의 제곱9/64를 얻은 뒤 제2사분면의 음수 부호를 고르고, sinθ−cosθ>0으로 √7/2를 정한다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+   따라서 $\sin \theta \cos \theta = -\frac{3}{8}$입니다.
+
+원본 해설의 핵심 유도와 결과를 대조했으며, 항등식을 제곱하여 곱의 제곱9/64를 얻은 뒤 제2사분면의 음수 부호를 고르고, sinθ−cosθ>0으로 √7/2를 정한다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_2_007,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_007,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_007,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_014,test,A,success,True,True,92ad09a72476efd32cc834b5fd613baeedc7a75d156d0c856c79c6a49d5493af,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_2_014 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$$2a = 4 \implies a = 2$$
+
+주기2a=4로 a=2, 최솟값−4+b=−1로 b=3을 구해 합5를 얻는다.
+
+설명의 충분성: appropriate
+
+$$2a = 4 \implies a = 2$$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. 주기2a=4로 a=2, 최솟값−4+b=−1로 b=3을 구해 합5를 얻는다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$$2a = 4 \implies a = 2$$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, 주기2a=4로 a=2, 최솟값−4+b=−1로 b=3을 구해 합5를 얻는다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_2_014,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_014,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_014,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_016,test,A,success,True,True,75deb798a29faf29b7294b4e2933440b8d807d5173a3ba553b863e520fcc8fc4,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_2_016 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$\cos^2 \theta = 1 - \frac{1}{5} = \frac{4}{5}$
+
+각변환으로 sinθ=−√5/5를 구하고 tanθ<0과 결합하여 제4사분면의 양의 cos값2√5/5를 정한다.
+
+설명의 충분성: appropriate
+
+$\cos^2 \theta = 1 - \frac{1}{5} = \frac{4}{5}$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. 각변환으로 sinθ=−√5/5를 구하고 tanθ<0과 결합하여 제4사분면의 양의 cos값2√5/5를 정한다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$\cos^2 \theta = 1 - \frac{1}{5} = \frac{4}{5}$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, 각변환으로 sinθ=−√5/5를 구하고 tanθ<0과 결합하여 제4사분면의 양의 cos값2√5/5를 정한다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_2_016,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_016,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_016,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_017,test,A,success,True,True,ce713eb3fec32b9582087a621aa39ee411ebdb15a58b2e428a60c655b57f767f,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_2_017 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$\frac{3}{2}\pi < \theta < 2\pi$는 제4사분면의 각입니다.
+
+문제의 제4사분면 범위를 정확히 사용하고 sinθ=−1/3, cosθ=2√2/3으로부터 tanθ=−√2/4를 계산한다.
+
+설명의 충분성: appropriate
+
+$\frac{3}{2}\pi < \theta < 2\pi$는 제4사분면의 각입니다.
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. 문제의 제4사분면 범위를 정확히 사용하고 sinθ=−1/3, cosθ=2√2/3으로부터 tanθ=−√2/4를 계산한다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$\frac{3}{2}\pi < \theta < 2\pi$는 제4사분면의 각입니다.
+
+원본 해설의 핵심 유도와 결과를 대조했으며, 문제의 제4사분면 범위를 정확히 사용하고 sinθ=−1/3, cosθ=2√2/3으로부터 tanθ=−√2/4를 계산한다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_2_017,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_017,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_017,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_022,test,A,success,False,False,a34f1652c215fc3ac54d9d8f879ac72a90dd313e27db77d8c37eedb5782f912f,historical_AI_suspected_error,inappropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_2_022 / baseline
+
+수학적 적절성(논리·설명·일관성): inappropriate / 교과 범위: uncertain / 네 기준 종합: inappropriate
+
+논리적 타당성: inappropriate
+
+    $0 < x < 2\pi$ 범위에서 $\sin x = 0$을 만족하는 $x$는 없습니다. (단위원의 경계값 제외)
+
+sinx=0의 내부 해x=π를 잘못 제외하여 해의 합을π로 줄였다. 실제로는π,π/6,5π/6을 더한2π가 옳다.
+
+설명의 충분성: inappropriate
+
+    $0 < x < 2\pi$ 범위에서 $\sin x = 0$을 만족하는 $x$는 없습니다. (단위원의 경계값 제외)
+
+핵심 해 선택 또는 결론의 도출에 오류·비약이 있어 충분한 정당화가 아니다. sinx=0의 내부 해x=π를 잘못 제외하여 해의 합을π로 줄였다. 실제로는π,π/6,5π/6을 더한2π가 옳다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: inappropriate
+
+    $0 < x < 2\pi$ 범위에서 $\sin x = 0$을 만족하는 $x$는 없습니다. (단위원의 경계값 제외)
+
+원본 해설에 명시된 내부해x=π를 누락하여 전체 해집합과 합2π에 어긋난다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_2_022,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_022,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_022,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_024,test,A,success,True,True,5c7cbf16d96923bbb65f90fbad11273fac6684e964078546a70003b94597a2f9,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_2_024 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$\sum x = \frac{2}{\pi} \times (\sum t) = \frac{2}{\pi} \times 6\pi = 12$
+
+치환 t=πx/2와 사인 대칭·주기로 네 해의 t합6π를 얻고 역치환하여 x합12를 구한다.
+
+설명의 충분성: appropriate
+
+$\sum x = \frac{2}{\pi} \times (\sum t) = \frac{2}{\pi} \times 6\pi = 12$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. 치환 t=πx/2와 사인 대칭·주기로 네 해의 t합6π를 얻고 역치환하여 x합12를 구한다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$\sum x = \frac{2}{\pi} \times (\sum t) = \frac{2}{\pi} \times 6\pi = 12$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, 치환 t=πx/2와 사인 대칭·주기로 네 해의 t합6π를 얻고 역치환하여 x합12를 구한다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_2_024,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_024,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_024,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_025,test,A,success,True,True,b9af250ccd8f74577dcc0ca5ddb96f73937e02278279a79fa46d26ec329c928e,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_2_025 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$\frac{\pi}{4} + \frac{7}{4}\pi + \frac{9}{4}\pi = \frac{17}{4}\pi$
+
+cosx=√2/2의 주기별 해를[0,3π]에 맞춰π/4,7π/4,9π/4로 열거하고 합17π/4를 구한다.
+
+설명의 충분성: appropriate
+
+$\frac{\pi}{4} + \frac{7}{4}\pi + \frac{9}{4}\pi = \frac{17}{4}\pi$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. cosx=√2/2의 주기별 해를[0,3π]에 맞춰π/4,7π/4,9π/4로 열거하고 합17π/4를 구한다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$\frac{\pi}{4} + \frac{7}{4}\pi + \frac{9}{4}\pi = \frac{17}{4}\pi$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, cosx=√2/2의 주기별 해를[0,3π]에 맞춰π/4,7π/4,9π/4로 열거하고 합17π/4를 구한다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_2_025,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_025,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_025,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_030,test,A,success,True,True,5952b5941da1e0eaa8093367c724b33ba419daa71ea433e757205e94063d69fe,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_2_030 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+따라서 전체 서로 다른 점의 개수는 $6 + 3 = 9$개입니다.
+
+절댓값을sin3x=0과−1로 분리해 변환구간[0,6π)에서 각각6개와3개를 세고 중복 없음도 설명한다.
+
+설명의 충분성: appropriate
+
+따라서 전체 서로 다른 점의 개수는 $6 + 3 = 9$개입니다.
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. 절댓값을sin3x=0과−1로 분리해 변환구간[0,6π)에서 각각6개와3개를 세고 중복 없음도 설명한다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+따라서 전체 서로 다른 점의 개수는 $6 + 3 = 9$개입니다.
+
+원본 해설의 핵심 유도와 결과를 대조했으며, 절댓값을sin3x=0과−1로 분리해 변환구간[0,6π)에서 각각6개와3개를 세고 중복 없음도 설명한다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_2_030,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_030,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_030,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_035,test,A,success,True,True,e10f1363ecfc384323ef4f340f7a6e855cc00875c766f845723268adbc74ee19,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_2_035 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+구하는 자연수 $x$는 $2, 6, 10, 14$이며, 이들의 합은 $2 + 6 + 10 + 14 = 32$입니다.
+
+f(2±x)를cos(πx/4)로 변형하고 −1/2<cosθ<1/2의 네 구간을 정확히 변환하여2,6,10,14를 얻는다.
+
+설명의 충분성: appropriate
+
+구하는 자연수 $x$는 $2, 6, 10, 14$이며, 이들의 합은 $2 + 6 + 10 + 14 = 32$입니다.
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. f(2±x)를cos(πx/4)로 변형하고 −1/2<cosθ<1/2의 네 구간을 정확히 변환하여2,6,10,14를 얻는다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+구하는 자연수 $x$는 $2, 6, 10, 14$이며, 이들의 합은 $2 + 6 + 10 + 14 = 32$입니다.
+
+원본 해설의 핵심 유도와 결과를 대조했으며, f(2±x)를cos(πx/4)로 변형하고 −1/2<cosθ<1/2의 네 구간을 정확히 변환하여2,6,10,14를 얻는다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_2_035,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_035,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_2_035,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_002,test,A,success,True,True,24c61e87ebdda2c105a262e79fa9860945bfd58e9580bee3271912843980e9ca,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_3_002 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$k = 36 \times \frac{5}{9} = 4 \times 5 = 20$
+
+두 근의 합0을 이용해sinθ=−2/3을 얻고 cos²θ=5/9와 k=(6cosθ)²를 결합하여20을 계산한다.
+
+설명의 충분성: appropriate
+
+$k = 36 \times \frac{5}{9} = 4 \times 5 = 20$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. 두 근의 합0을 이용해sinθ=−2/3을 얻고 cos²θ=5/9와 k=(6cosθ)²를 결합하여20을 계산한다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$k = 36 \times \frac{5}{9} = 4 \times 5 = 20$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, 두 근의 합0을 이용해sinθ=−2/3을 얻고 cos²θ=5/9와 k=(6cosθ)²를 결합하여20을 계산한다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_3_002,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_002,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_002,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_010,test,A,success,True,True,b6f96f0ea10dec36688fd00ab1a1e9e0959eca8e132dfd6f90b197729372a8f6,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_3_010 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+   $\cos \left( \theta + \frac{\pi}{2} \right) = -\sin \theta$
+
+각변환 cos(θ+π/2)=−sinθ에1/3을 대입하여−1/3을 얻는다.
+
+설명의 충분성: appropriate
+
+   $\cos \left( \theta + \frac{\pi}{2} \right) = -\sin \theta$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. 각변환 cos(θ+π/2)=−sinθ에1/3을 대입하여−1/3을 얻는다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+   $\cos \left( \theta + \frac{\pi}{2} \right) = -\sin \theta$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, 각변환 cos(θ+π/2)=−sinθ에1/3을 대입하여−1/3을 얻는다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_3_010,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_010,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_010,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_011,test,A,success,True,True,149a05f075ba80ab0124140c31fb580d09a4f944f1757dd1ae78aa2a67f32016,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_3_011 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+   $9(\sin^2 \beta + \tan^2 \gamma) = 9 \left( \frac{8}{9} + 8 \right) = 9 \left( \frac{8 + 72}{9} \right) = 8 + 72 = 80$
+
+좌표비 x:y=2√2:1을 구하고 y=x 대칭 및 원점대칭을 정확히 적용하여 sin²β=8/9,tan²γ=8을 얻는다.
+
+설명의 충분성: appropriate
+
+   $9(\sin^2 \beta + \tan^2 \gamma) = 9 \left( \frac{8}{9} + 8 \right) = 9 \left( \frac{8 + 72}{9} \right) = 8 + 72 = 80$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. 좌표비 x:y=2√2:1을 구하고 y=x 대칭 및 원점대칭을 정확히 적용하여 sin²β=8/9,tan²γ=8을 얻는다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+   $9(\sin^2 \beta + \tan^2 \gamma) = 9 \left( \frac{8}{9} + 8 \right) = 9 \left( \frac{8 + 72}{9} \right) = 8 + 72 = 80$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, 좌표비 x:y=2√2:1을 구하고 y=x 대칭 및 원점대칭을 정확히 적용하여 sin²β=8/9,tan²γ=8을 얻는다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_3_011,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_011,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_011,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_014,test,A,success,True,True,9281e38ee9956635ca1a505c8914b17c69cfef60d47d3c174177c51a0d9b5c8b,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_3_014 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+   - 최댓값 $M = f(3\sqrt{3}) = \log_3 (3 \cdot 3^{1/2}) + 2 = \log_3 (3^{3/2}) + 2 = \frac{3}{2} + 2 = \frac{7}{2}$
+
+탄젠트와 밑3 로그가 각 정의구간에서 증가함을 이용해g의 치역[√3,3√3], 합성함수 최소5/2·최대7/2를 계산한다.
+
+설명의 충분성: appropriate
+
+   - 최댓값 $M = f(3\sqrt{3}) = \log_3 (3 \cdot 3^{1/2}) + 2 = \log_3 (3^{3/2}) + 2 = \frac{3}{2} + 2 = \frac{7}{2}$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. 탄젠트와 밑3 로그가 각 정의구간에서 증가함을 이용해g의 치역[√3,3√3], 합성함수 최소5/2·최대7/2를 계산한다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+   - 최댓값 $M = f(3\sqrt{3}) = \log_3 (3 \cdot 3^{1/2}) + 2 = \log_3 (3^{3/2}) + 2 = \frac{3}{2} + 2 = \frac{7}{2}$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, 탄젠트와 밑3 로그가 각 정의구간에서 증가함을 이용해g의 치역[√3,3√3], 합성함수 최소5/2·최대7/2를 계산한다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_3_014,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_014,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_014,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_015,test,A,success,True,True,84f7a27f5d2ecf47f86202982de7bb19991128d95e55a5a13229d9514d56aeef,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_3_015 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$x = \frac{5\pi}{8}$ 또는 $x = \frac{7\pi}{8}$
+
+sin2x=−√2/2를 변환구간[0,2π]에서 풀어 x=5π/8,7π/8을 얻고 합3π/2를 계산한다.
+
+설명의 충분성: appropriate
+
+$x = \frac{5\pi}{8}$ 또는 $x = \frac{7\pi}{8}$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. sin2x=−√2/2를 변환구간[0,2π]에서 풀어 x=5π/8,7π/8을 얻고 합3π/2를 계산한다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$x = \frac{5\pi}{8}$ 또는 $x = \frac{7\pi}{8}$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, sin2x=−√2/2를 변환구간[0,2π]에서 풀어 x=5π/8,7π/8을 얻고 합3π/2를 계산한다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_3_015,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_015,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_015,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_017,test,A,success,True,True,b79aae5a79e44f23c95186e5605a50afe79b5e54a9289b8eea4172bd00dd3d1d,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_3_017 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$\frac{2\pi}{3} + \frac{5\pi}{3} = \frac{7\pi}{3}$
+
+cosx=±1/2의 네 해를 열거한 뒤 sinx cosx<0인 제2·4사분면 해2π/3과5π/3만 선택한다.
+
+설명의 충분성: appropriate
+
+$\frac{2\pi}{3} + \frac{5\pi}{3} = \frac{7\pi}{3}$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. cosx=±1/2의 네 해를 열거한 뒤 sinx cosx<0인 제2·4사분면 해2π/3과5π/3만 선택한다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$\frac{2\pi}{3} + \frac{5\pi}{3} = \frac{7\pi}{3}$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, cosx=±1/2의 네 해를 열거한 뒤 sinx cosx<0인 제2·4사분면 해2π/3과5π/3만 선택한다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_3_017,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_017,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_017,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_021,test,A,success,True,True,a213f09af1067a863a340c38b10ea2c79158b5eba00eab1ca4455bb27e9bd92c,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_3_021 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+   $$\sin x = -\sin x + 1$$
+
+두 그래프 교점을sinx=1/2로 바꾸고[0,2π)의 두 해π/6,5π/6을 합하여π를 얻는다.
+
+설명의 충분성: appropriate
+
+   $$\sin x = -\sin x + 1$$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. 두 그래프 교점을sinx=1/2로 바꾸고[0,2π)의 두 해π/6,5π/6을 합하여π를 얻는다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+   $$\sin x = -\sin x + 1$$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, 두 그래프 교점을sinx=1/2로 바꾸고[0,2π)의 두 해π/6,5π/6을 합하여π를 얻는다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_3_021,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_021,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_021,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_026,test,A,success,True,True,3a60903c3883f4768695e4636af2610ccd93d111b193554abcdedaff36fb53b2,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_3_026 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$x = \pi$ (범위 내의 해)
+
+sinx(sinx+1)=0을 풀어 열린 경계0,2π를 제외하고π,3π/2를 얻는다. 합5π/2에서 서로소 p=2,q=5를 정한다.
+
+설명의 충분성: appropriate
+
+$x = \pi$ (범위 내의 해)
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. sinx(sinx+1)=0을 풀어 열린 경계0,2π를 제외하고π,3π/2를 얻는다. 합5π/2에서 서로소 p=2,q=5를 정한다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$x = \pi$ (범위 내의 해)
+
+원본 해설의 핵심 유도와 결과를 대조했으며, sinx(sinx+1)=0을 풀어 열린 경계0,2π를 제외하고π,3π/2를 얻는다. 합5π/2에서 서로소 p=2,q=5를 정한다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_3_026,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_026,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_026,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_034,test,A,success,True,True,3c24e68ff3fba2b291c323a2a2ca3e0ff41e948d53659a88d6ece48cb4a9f1e8,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_3_034 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+따라서 $n=6$일 때 정확히 3개의 교점을 가집니다.
+
+tanπx의 세 증가 가지와 감소 직선을 비교해 마지막 가지의 교점 조건을 구하고 자연수 n=6에서 세 교점을 검증한다. 경계n=20/3는 자연수가 아니므로 최댓값6은 옳다.
+
+설명의 충분성: appropriate
+
+따라서 $n=6$일 때 정확히 3개의 교점을 가집니다.
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. tanπx의 세 증가 가지와 감소 직선을 비교해 마지막 가지의 교점 조건을 구하고 자연수 n=6에서 세 교점을 검증한다. 경계n=20/3는 자연수가 아니므로 최댓값6은 옳다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+따라서 $n=6$일 때 정확히 3개의 교점을 가집니다.
+
+원본 해설의 핵심 유도와 결과를 대조했으며, tanπx의 세 증가 가지와 감소 직선을 비교해 마지막 가지의 교점 조건을 구하고 자연수 n=6에서 세 교점을 검증한다. 경계n=20/3는 자연수가 아니므로 최댓값6은 옳다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_3_034,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_034,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_034,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_035,test,A,success,True,True,c90b1c12a0c70d8380dfd6456f016a0d8db6ea095d3e57234fcff0940550be4a,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_3_035 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+     따라서 총 **3개의 실근**을 갖습니다.
+
+k=3/4에서cosx=1/2의 두 해와cosx=−1의 한 해를 세고 나머지 k범위의 해 개수와 구별하여30을 얻는다.
+
+설명의 충분성: appropriate
+
+     따라서 총 **3개의 실근**을 갖습니다.
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. k=3/4에서cosx=1/2의 두 해와cosx=−1의 한 해를 세고 나머지 k범위의 해 개수와 구별하여30을 얻는다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+     따라서 총 **3개의 실근**을 갖습니다.
+
+원본 해설의 핵심 유도와 결과를 대조했으며, k=3/4에서cosx=1/2의 두 해와cosx=−1의 한 해를 세고 나머지 k범위의 해 개수와 구별하여30을 얻는다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_3_035,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_035,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_035,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_039,test,A,success,True,True,53a855bf61239d09b9a9f5d332af79cf0345cf973f5a44a2d1c79f917b846e9b,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_3_039 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$$2\sin^2\theta + 3\sin\theta - 2 > 0$$
+
+판별식D<0을sinθ에 대한 이차부등식으로 정확히 변환하고 sinθ>1/2에서 α=π/6,β=5π/6을 얻는다.
+
+설명의 충분성: appropriate
+
+$$2\sin^2\theta + 3\sin\theta - 2 > 0$$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. 판별식D<0을sinθ에 대한 이차부등식으로 정확히 변환하고 sinθ>1/2에서 α=π/6,β=5π/6을 얻는다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$$2\sin^2\theta + 3\sin\theta - 2 > 0$$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, 판별식D<0을sinθ에 대한 이차부등식으로 정확히 변환하고 sinθ>1/2에서 α=π/6,β=5π/6을 얻는다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_3_039,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_039,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_039,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_040,test,A,success,True,True,94184c5f9a0806e74951edb5fd80097124091468c1985cd6440e3fc1bce3763f,deferred,appropriate,historical_AI_assisted_exact_response,False,"기존 동일 응답에 대한 AI 보조 검토를 연결했다. 이번의 사람 확정 판정이 아니다.
+
+trig_3_040 / baseline
+
+수학적 적절성(논리·설명·일관성): appropriate / 교과 범위: uncertain / 네 기준 종합: uncertain
+
+논리적 타당성: appropriate
+
+$f(1) = 1^2 - 4(1) + 5 = 1 - 4 + 5 = 2$
+
+t=sinx의 전 범위[−1,1]에서(t−2)²+1의 최소2를 이용해5k≤2, k최대2/5를 얻는다.
+
+설명의 충분성: appropriate
+
+$f(1) = 1^2 - 4(1) + 5 = 1 - 4 + 5 = 2$
+
+필요한 식의 변형, 조건 또는 범위 선택, 결론 계산이 제시되어 있다. t=sinx의 전 범위[−1,1]에서(t−2)²+1의 최소2를 이용해5k≤2, k최대2/5를 얻는다.
+
+교과 범위 적합성: uncertain
+
+
+
+공식 교육과정의 허용 개념·공식 목록을 제공받지 않았으므로 단원 라벨만으로 교과 범위를 확정하지 않는다. 제시된 수학적 타당성과는 별도 판정이다.
+
+문제·원본 정답과의 일관성: appropriate
+
+$f(1) = 1^2 - 4(1) + 5 = 1 - 4 + 5 = 2$
+
+원본 해설의 핵심 유도와 결과를 대조했으며, t=sinx의 전 범위[−1,1]에서(t−2)²+1의 최소2를 이용해5k≤2, k최대2/5를 얻는다.
+
+검토자: {'id': 'independent_last40_reasoning_reviewer', 'kind': 'ai_suggestion', 'provenance': 'AI-assisted independent reading of problem, reference derivation, and generated solution; not a human-verified ground truth'}",,[],../../model_comparison_2026-11-07/03_Gemini%EB%B9%84%EA%B5%90/AI%EB%B3%B4%EC%A1%B0_%ED%92%80%EC%9D%B4%EA%B2%80%ED%86%A0.html
+trig_3_040,test,B,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_040,test,C,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],
+trig_3_040,test,D,not_run,,,,not_generated,uncertain,not_reviewed,False,성공한 생성 풀이가 없어 검토 대상이 아니다.,,[],

@@ -1,0 +1,162 @@
+{
+  "signature": "c0071230bcdc05442257c47fe8d4dcf0980bfaaeb8c4ab0ab63ef883f19de43e",
+  "improvements": [
+    {
+      "candidate_id": "M0",
+      "seed": 42,
+      "validation_precision_at_20": 0.577027027027027,
+      "validation_mse": 1.3153375387191772,
+      "observed_at": "2026-11-10T19:01:27.121747+00:00"
+    },
+    {
+      "candidate_id": "M1",
+      "seed": 42,
+      "validation_precision_at_20": 0.5783783783783785,
+      "validation_mse": 1.2482337951660156,
+      "observed_at": "2026-11-10T19:01:27.741350+00:00"
+    },
+    {
+      "candidate_id": "M2",
+      "seed": 42,
+      "validation_precision_at_20": 0.5824324324324325,
+      "validation_mse": 1.4019546508789062,
+      "observed_at": "2026-11-10T19:01:28.057887+00:00"
+    },
+    {
+      "candidate_id": "M5",
+      "seed": 42,
+      "validation_precision_at_20": 0.5986486486486486,
+      "validation_mse": 1.2758251428604126,
+      "observed_at": "2026-11-10T19:01:29.590804+00:00"
+    }
+  ],
+  "completed_trials": [
+    "M0_seed42",
+    "M1_seed42",
+    "M2_seed42",
+    "M3_seed42",
+    "M4_seed42",
+    "M5_seed42",
+    "M6_seed42",
+    "M7_seed42",
+    "M5_seed43",
+    "M5_seed44",
+    "M7_seed43",
+    "M7_seed44"
+  ],
+  "configurations": [
+    {
+      "candidate_id": "M0",
+      "family": "sequential_mlp",
+      "hidden_dims": [
+        32
+      ],
+      "dropout": 0.0,
+      "weight_decay": 0.0,
+      "learning_rate": 0.003,
+      "loss": "mse",
+      "max_epochs": 1000,
+      "stage": "initial"
+    },
+    {
+      "candidate_id": "M1",
+      "family": "sequential_mlp",
+      "hidden_dims": [
+        32
+      ],
+      "dropout": 0.1,
+      "weight_decay": 0.001,
+      "learning_rate": 0.003,
+      "loss": "mse",
+      "max_epochs": 1000,
+      "stage": "initial"
+    },
+    {
+      "candidate_id": "M2",
+      "family": "sequential_mlp",
+      "hidden_dims": [
+        64
+      ],
+      "dropout": 0.1,
+      "weight_decay": 0.001,
+      "learning_rate": 0.003,
+      "loss": "mse",
+      "max_epochs": 1000,
+      "stage": "initial"
+    },
+    {
+      "candidate_id": "M3",
+      "family": "sequential_mlp",
+      "hidden_dims": [
+        64
+      ],
+      "dropout": 0.2,
+      "weight_decay": 0.01,
+      "learning_rate": 0.001,
+      "loss": "mse",
+      "max_epochs": 1000,
+      "stage": "initial"
+    },
+    {
+      "candidate_id": "M4",
+      "family": "sequential_mlp",
+      "hidden_dims": [
+        32,
+        16
+      ],
+      "dropout": 0.1,
+      "weight_decay": 0.001,
+      "learning_rate": 0.003,
+      "loss": "mse",
+      "max_epochs": 1000,
+      "stage": "initial"
+    },
+    {
+      "candidate_id": "M5",
+      "family": "sequential_mlp",
+      "hidden_dims": [
+        32
+      ],
+      "dropout": 0.1,
+      "weight_decay": 0.001,
+      "learning_rate": 0.003,
+      "loss": "smooth_l1",
+      "max_epochs": 1000,
+      "stage": "initial"
+    },
+    {
+      "candidate_id": "M6",
+      "family": "sequential_mlp",
+      "hidden_dims": [
+        32
+      ],
+      "dropout": 0.2,
+      "weight_decay": 0.003,
+      "learning_rate": 0.003,
+      "loss": "smooth_l1",
+      "max_epochs": 1000,
+      "stage": "refinement"
+    },
+    {
+      "candidate_id": "M7",
+      "family": "sequential_mlp",
+      "hidden_dims": [
+        32
+      ],
+      "dropout": 0.1,
+      "weight_decay": 0.001,
+      "learning_rate": 0.0015,
+      "loss": "smooth_l1",
+      "max_epochs": 1000,
+      "stage": "refinement"
+    }
+  ],
+  "refinement_reason": {
+    "coarse_best": "M5",
+    "fit_mse": 0.43438953161239624,
+    "validation_mse": 1.2758251428604126,
+    "missing_actual_top20_mean": 6.540540540540539,
+    "decision": "test stronger regularization against fit/validation gap and a smaller learning rate; no test80 inspected",
+    "unmatched_top20_slots_mean": 8.027027027027026
+  }
+}

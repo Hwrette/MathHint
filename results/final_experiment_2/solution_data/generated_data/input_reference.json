@@ -1,0 +1,8 @@
+{
+  "problem_vectors_path": "results/final_experiment_2/cluster_improvement/00_dataset/generated_data/filtered/problems/all_vectors.json",
+  "problem_vocabulary_path": "results/final_experiment_2/cluster_improvement/00_dataset/generated_data/filtered/problems/vocabulary.json",
+  "problem_vectors_sha256": "df55323c82c22ab03cbe4bdb5e079f13be58de1623cad27a5ef20248423630dd",
+  "problem_vocabulary_sha256": "629d16f8625389520c06f9348b48a909f98c10e89f8bb703bb57c8c2688be7fc",
+  "dimension": 270,
+  "policy": "read_only_reuse; no new problem tokenization"
+}

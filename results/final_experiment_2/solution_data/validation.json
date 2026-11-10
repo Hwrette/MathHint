@@ -1,0 +1,3933 @@
+{
+  "verified_at": "2026-11-10T19:12:51.397816+00:00",
+  "dataset_id": "1e1e467b301406d6a2df2775ad506474aaa915b342d315cdca8dc39fdf3e7345",
+  "passed": 977,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "all_original_data_models_responses_token_analysis_and_cluster_results_preserved",
+      "passed": true
+    },
+    {
+      "check": "dataset_identifier_is_source_definition_digest",
+      "passed": true
+    },
+    {
+      "check": "all_prepared_artifact_hashes_match",
+      "passed": true
+    },
+    {
+      "check": "all_source_hashes_match",
+      "passed": true
+    },
+    {
+      "check": "original265_ids_and_185_80_order_preserved",
+      "passed": true
+    },
+    {
+      "check": "inner_split_is_148_37_subset_of_original_train_only",
+      "passed": true
+    },
+    {
+      "check": "internal_split_reproduces_preregistered_seed42_stratification",
+      "passed": true
+    },
+    {
+      "check": "selection_policy_precision20_before_test",
+      "passed": true
+    },
+    {
+      "check": "problem_counts_reused_without_new_tokenization_or_normalization",
+      "passed": true
+    },
+    {
+      "check": "raw_solution_ids_and_integer_coordinates",
+      "passed": true
+    },
+    {
+      "check": "filtered_solution_ids_and_integer_coordinates",
+      "passed": true
+    },
+    {
+      "check": "only_approved103_solution_stopwords_removed",
+      "passed": true
+    },
+    {
+      "check": "raw_vocabulary_and_matrix_reproduce_source_identity",
+      "passed": true
+    },
+    {
+      "check": "every_original_solution_coordinate_and_document_count_preserved",
+      "passed": true
+    },
+    {
+      "check": "restored_solution_tokens_equal_original_oov_inventory",
+      "passed": true
+    },
+    {
+      "check": "restored_latex:22",
+      "passed": true
+    },
+    {
+      "check": "restored_latex:29",
+      "passed": true
+    },
+    {
+      "check": "restored_latex:\\log",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:느",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:다항식",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:단",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:닫힌구간",
+      "passed": true
+    },
+    {
+      "check": "restored_latex:62",
+      "passed": true
+    },
+    {
+      "check": "restored_latex:80",
+      "passed": true
+    },
+    {
+      "check": "restored_latex:\\circ",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:같아지",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:길이",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:반복",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:반지름",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:부분",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:삼각함수",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:아래",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:얻",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:음",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:음수",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:이차함수",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:인수",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:중심",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:차례",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:치역",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:크",
+      "passed": true
+    },
+    {
+      "check": "restored_kiwi:함숫값",
+      "passed": true
+    },
+    {
+      "check": "restored_latex:44",
+      "passed": true
+    },
+    {
+      "check": "restored_latex:96",
+      "passed": true
+    },
+    {
+      "check": "restored_latex:\\div",
+      "passed": true
+    },
+    {
+      "check": "restored_latex:\\mid",
+      "passed": true
+    },
+    {
+      "check": "complete_raw_and_active_token_mapping",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_0_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_0_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_1_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_1_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_2_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_2_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_3_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_3_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_4_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_4_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_5_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_5_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_6_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_6_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_7_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_7_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_8_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_8_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_9_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_9_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_10_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_10_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_11_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_11_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_12_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_12_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_13_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_13_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_14_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_14_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_15_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_15_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_16_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_16_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_17_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_17_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_18_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_18_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_19_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_19_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_20_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_20_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_21_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_21_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_22_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_22_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_23_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_23_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_24_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_24_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_25_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_25_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_26_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_26_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_27_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_27_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_28_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_28_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_29_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_29_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_30_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_30_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_31_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_31_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_32_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_32_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_33_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_33_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_34_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_34_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_35_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_35_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_36_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_36_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_37_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_37_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_38_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_38_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_39_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_39_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_40_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_40_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_41_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_41_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_42_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_42_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_43_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_43_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_44_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_44_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_45_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_45_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_46_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_46_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_47_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_47_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_48_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_48_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_49_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_49_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_50_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_50_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_51_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_51_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_52_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_52_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_53_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_53_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_54_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_54_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_55_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_55_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_56_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_56_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_57_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_57_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_58_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_58_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_59_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_59_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_60_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_60_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_61_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_61_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_62_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_62_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_63_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_63_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_64_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_64_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_65_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_65_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_66_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_66_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_67_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_67_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_68_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_68_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_69_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_69_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_70_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_70_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_71_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_71_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_72_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_72_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_73_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_73_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_74_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_74_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_75_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_75_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_76_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_76_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_77_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_77_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_78_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_78_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_79_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_79_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_80_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_80_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_81_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_81_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_82_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_82_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_83_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_83_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_84_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_84_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_85_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_85_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_86_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_86_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_87_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_87_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_88_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_88_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_89_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_89_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_90_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_90_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_91_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_91_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_92_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_92_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_93_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_93_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_94_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_94_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_95_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_95_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_96_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_96_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_97_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_97_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_98_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_98_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_99_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_99_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_100_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_100_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_101_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_101_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_102_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_102_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_103_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_103_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_104_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_104_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_105_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_105_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_106_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_106_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_107_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_107_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_108_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_108_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_109_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_109_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_110_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_110_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_111_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_111_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_112_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_112_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_113_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_113_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_114_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_114_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_115_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_115_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_116_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_116_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_117_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_117_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_118_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_118_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_119_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_119_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_120_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_120_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_121_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_121_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_122_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_122_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_123_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_123_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_124_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_124_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_125_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_125_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_126_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_126_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_127_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_127_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_128_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_128_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_129_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_129_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_130_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_130_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_131_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_131_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_132_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_132_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_133_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_133_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_134_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_134_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_135_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_135_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_136_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_136_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_137_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_137_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_138_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_138_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_139_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_139_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_140_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_140_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_141_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_141_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_142_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_142_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_143_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_143_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_144_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_144_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_145_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_145_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_146_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_146_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_147_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_147_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_148_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_148_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_149_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_149_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_150_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_150_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_151_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_151_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_152_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_152_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_153_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_153_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_154_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_154_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_155_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_155_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_156_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_156_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_157_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_157_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_158_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_158_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_159_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_159_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_160_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_160_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_161_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_161_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_162_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_162_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_163_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_163_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_164_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_164_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_165_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_165_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_166_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_166_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_167_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_167_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_168_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_168_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_169_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_169_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_170_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_170_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_171_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_171_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_172_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_172_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_173_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_173_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_174_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_174_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_175_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_175_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_176_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_176_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_177_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_177_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_178_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_178_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_179_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_179_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_180_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_180_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_181_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_181_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_182_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_182_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_183_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_183_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_184_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_184_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_185_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_185_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_186_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_186_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_187_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_187_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_188_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_188_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_189_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_189_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_190_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_190_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_191_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_191_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_192_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_192_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_193_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_193_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_194_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_194_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_195_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_195_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_196_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_196_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_197_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_197_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_198_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_198_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_199_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_199_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_200_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_200_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_201_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_201_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_202_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_202_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_203_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_203_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_204_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_204_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_205_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_205_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_206_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_206_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_207_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_207_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_208_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_208_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_209_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_209_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_210_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_210_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_211_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_211_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_212_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_212_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_213_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_213_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_214_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_214_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_215_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_215_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_216_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_216_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_217_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_217_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_218_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_218_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_219_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_219_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_220_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_220_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_221_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_221_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_222_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_222_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_223_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_223_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_224_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_224_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_225_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_225_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_226_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_226_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_227_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_227_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_228_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_228_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_229_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_229_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_230_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_230_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_231_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_231_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_232_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_232_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_233_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_233_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_234_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_234_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_235_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_235_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_236_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_236_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_237_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_237_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_238_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_238_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_239_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_239_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_240_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_240_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_241_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_241_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_242_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_242_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_243_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_243_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_244_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_244_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_245_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_245_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_246_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_246_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_247_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_247_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_248_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_248_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_249_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_249_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_250_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_250_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_251_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_251_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_252_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_252_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_253_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_253_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_254_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_254_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_255_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_255_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_256_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_256_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_257_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_257_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_258_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_258_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_259_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_259_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_260_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_260_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_261_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_261_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_262_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_262_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_263_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_263_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_264_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_264_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_265_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_265_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_266_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_266_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_267_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_267_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_268_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_268_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_269_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_269_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_270_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_270_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_271_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_271_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_272_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_272_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_273_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_273_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_274_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_274_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_275_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_275_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_276_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_276_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_277_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_277_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_278_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_278_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_279_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_279_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_280_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_280_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_281_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_281_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_282_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_282_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_283_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_283_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_284_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_284_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_285_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_285_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_286_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_286_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_287_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_287_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_288_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_288_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_289_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_289_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_290_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_290_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_291_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_291_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_292_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_292_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_293_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_293_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_294_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_294_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_295_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_295_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_296_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_296_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_297_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_297_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_298_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_298_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_299_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_299_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_300_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_300_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_301_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_301_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_302_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_302_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_303_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_303_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_304_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_304_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_305_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_305_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_306_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_306_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_307_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_307_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_308_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_308_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_309_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_309_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_310_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_310_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_311_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_311_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_312_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_312_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_313_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_313_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_314_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_314_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_315_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_315_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_316_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_316_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_317_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_317_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_318_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_318_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_319_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_319_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_320_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_320_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_321_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_321_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_322_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_322_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_323_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_323_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_324_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_324_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_325_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_325_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_326_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_326_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_327_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_327_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_328_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_328_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_329_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_329_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_330_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_330_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_331_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_331_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_332_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_332_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_333_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_333_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_334_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_334_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_335_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_335_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_336_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_336_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_337_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_337_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_338_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_338_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_339_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_339_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_340_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_340_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_341_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_341_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_342_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_342_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_343_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_343_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_344_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_344_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_345_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_345_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_346_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_346_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_347_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_347_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_348_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_348_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_349_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_349_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_350_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_350_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_351_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_351_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_352_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_352_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_353_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_353_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_354_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_354_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_355_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_355_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_356_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_356_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_357_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_357_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_358_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_358_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_359_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_359_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_360_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_360_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_361_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_361_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_362_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_362_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_363_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_363_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_364_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_364_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_365_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_365_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_366_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_366_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_367_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_367_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_368_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_368_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_369_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_369_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_370_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_370_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_371_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_371_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_372_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_372_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_373_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_373_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_374_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_374_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_375_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_375_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_376_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_376_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_377_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_377_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_378_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_378_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_379_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_379_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_380_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_380_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_381_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_381_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_382_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_382_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_383_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_383_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_384_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_384_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_385_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_385_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_386_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_386_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_387_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_387_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_388_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_388_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_389_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_389_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_390_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_390_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_391_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_391_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_392_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_392_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_393_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_393_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_394_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_394_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_395_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_395_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_396_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_396_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_397_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_397_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_398_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_398_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_399_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_399_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_400_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_400_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_401_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_401_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_402_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_402_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_403_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_403_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_404_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_404_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_405_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_405_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_406_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_406_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_407_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_407_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_408_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_408_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_409_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_409_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_410_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_410_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_411_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_411_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_412_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_412_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_413_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_413_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_414_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_414_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_415_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_415_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_416_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_416_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_417_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_417_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_418_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_418_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_419_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_419_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_420_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_420_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_421_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_421_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_422_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_422_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_423_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_423_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_424_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_424_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_425_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_425_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_426_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_426_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_427_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_427_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_428_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_428_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_429_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_429_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_430_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_430_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_431_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_431_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_432_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_432_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_433_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_433_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_434_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_434_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_435_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_435_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_436_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_436_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_437_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_437_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_438_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_438_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_439_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_439_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_440_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_440_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_441_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_441_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_442_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_442_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_443_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_443_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_444_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_444_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_445_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_445_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_446_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_446_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_447_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_447_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_448_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_448_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_449_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_449_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_450_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_450_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_451_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_451_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_452_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_452_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_453_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_453_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_454_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_454_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_455_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_455_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_456_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_456_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_457_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_457_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_458_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_458_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_459_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_459_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_460_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_460_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_461_mapping_tf_df",
+      "passed": true
+    },
+    {
+      "check": "solution_coordinate_461_frequency_and_removal",
+      "passed": true
+    },
+    {
+      "check": "stopword_audit_preserves_user_order_and_counts",
+      "passed": true
+    },
+    {
+      "check": "all265_per_document_before_after_counts",
+      "passed": true
+    },
+    {
+      "check": "all265_fresh_solution_recount_records_match",
+      "passed": true
+    },
+    {
+      "check": "summary_matches_actual_vectors_and_policy",
+      "passed": true
+    },
+    {
+      "check": "selection_loader_exposes_only_train_fit_validation_tensors",
+      "passed": true
+    },
+    {
+      "check": "validation_does_not_modify_saved_data_or_originals",
+      "passed": true
+    }
+  ],
+  "protected_original_files": 2884,
+  "changed_original_files": [],
+  "input_dimension": 270,
+  "raw_solution_dimension": 462,
+  "output_dimension": 359,
+  "n": 265,
+  "inner_fit": 148,
+  "validation": 37,
+  "test_only_active_solution_tokens": 25,
+  "training_performed": false,
+  "api_calls": 0,
+  "tokenizer_calls": 0,
+  "limitations": [
+    "원문 새 토큰화는 prepare 단계에서 수행했고 이 검증은 저장된 계수·원문 SHA·원래 좌표와 OOV 근거를 대조한다.",
+    "전체265 어휘는 테스트 표현도 포함하며, 모델 학습·선택에 테스트 타깃을 사용하는 것을 허용하지 않는다."
+  ],
+  "complete": true
+}
