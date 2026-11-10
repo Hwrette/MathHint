@@ -1,20 +1,20 @@
 # MathHint 작업 진행 상태
 
-STATUS: COMPLETE_FINAL2_CLUSTERING_VALIDATED_PENDING_PUSH_CONFIRMATION
-EXECUTION_ALLOWED: false  # Experiments complete; only commit/push verification remains
-LAST_CONFIRMED_PUBLISHED_COMMIT: 7243d20
+STATUS: COMPLETE_FINAL2_PROBLEM_ONLY_FULL265_CLUSTERING_PUBLISHED
+EXECUTION_ALLOWED: false  # Completed; wait for a new explicit user request
+LAST_CONFIRMED_PUBLISHED_COMMIT: fc903c9280da74a0cf3178b37c14f5113de8859d
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
 AUTOMATION_STATUS: PAUSED_AFTER_READER_WORKFLOW_COMPLETION_VERIFIED_BY_PEEK
 FIRST_RUN_FROM_SAVED_RULE: 2026-11-09T05:58:50+09:00
 RECURRENCE: EVERY_5_HOURS
 NEXT_RUN_TIME_SERVER_FIELD: NOT_RETURNED
 ENVIRONMENT: MathHint / inherited / current_environment_id_confirmed
-REMOTE_CHECKPOINT_STATUS: FINAL2_FULL265_CLUSTERING_READY_FOR_COMMIT_PUSH_VERIFY
+REMOTE_CHECKPOINT_STATUS: FINAL2_RESULTS_PUBLISHED_MAIN_VERIFIED_FC903C9
 GITHUB_PREAUTHORIZATION_SETTING: RESTORED_TO_ORIGINAL_INHERIT_VERIFIED
 TIMEZONE: Asia/Seoul
 USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 
-## 현재 상태: 2차 문제 전체265 K0/K1 군집화 완료 · 게시 확인 대기
+## 현재 상태: 2차 문제 전체265 K0/K1 군집화 완료 · GitHub 게시 확인 · 다음 요청 대기
 
 최신 사용자 정정에 따라 회귀 구현·학습·평가/풀이 BoW 모델/185·80 분리 재실험은 제외한다. 현재 승인 범위는 문제 원문265개 재토큰화, 문제 불용어96 적용 전후 어휘/벡터, 전체265 학습·평가16군집 실험과 보고·검증·게시다. Gemini·신경망은 실행하지 않는다. 기존 자료는 해시로 보호한다. 초기 확대 작업은 코드를 작성하기 전 중단했고 최신 범위로 모든 담당 작업을 정정했다.
 
@@ -24,7 +24,7 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 |문제265 새 BoW와 사용자 필터|완료|기존함수265회 새계수·346→366→270·96개만 제거·OOV20복원|
 |전체265 K0/K1 군집화16개|완료|16모델·80초기화·학습목적함수선택·기존알고리즘불변|
 |표·그림·보고서|완료|16CM·교차표·분포·86PNG·종합보고서와README|
-|검증·보존·커밋/푸시|검증 완료·게시 대기|482/482·26tests·독립790/790·기존2579SHA 불변|
+|검증·보존·커밋/푸시|완료|482/482·26tests·독립790/790·원격main=fc903c9 확인|
 
 ## 이전 상태: 토큰 분석 완료, 사용자 승인 불용어 등록 완료
 
@@ -514,3 +514,11 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 확인된 한계도 기록했다: K1은8조건ARI/AMI/NMI상승이나 유클리드세부단원MacroF1 .314665→.314530 소폭하락; 어휘복원 K0의 기존대비ARI는5동일/2상승/1하락; 과목유클리드시드SD .00388→.19919; 숫자/변수정보제거로 같은유형 diff_1_007·diff_1_011이 같은벡터가됨(고유265→264). 유형오분류발생이라고 해석하지 않는다. 모두동일265 탐색이며 미관측 일반화/LLM풀이 효과나 통계적유의성을 주장하지 않는다.
 - 시작2691추적파일 중 허용3개(명세/진행/results상위목차)만변경,나머지2688바이트불변이다. 새실행모듈9개와핵심test1개,새결과전용297파일 및상위목차만추가했다. 기존final/token_analysis/data/알고리즘·모델·응답/목록은변경0,삭제0이다. 이외 감사/검사 임시자료는/tmp에만두었다.
 - 시작문서체크포인트7243d20은원격게시되었다. 지금 관련신규코드·데이터·모델·그림·보고서·진행기록만커밋하고일반push후 실제원격main==HEAD를확인한다. 성공확인전 원격완료로 표시하지 않는다. 이후 작업은게시상태기록만이며 추가학습/실험은없고기존자동화는중지상태유지다.
+
+
+## GitHub 게시 확인 및 작업 종료 — 2026-11-10T16:44:36.647587+00:00
+
+- 결과 커밋 fc903c9280da74a0cf3178b37c14f5113de8859d를 원격 main에 일반push했다. GitHub 커넥터에서 main의 실제커밋SHA와제목을 다시조회해 결과 커밋의 로컬SHA와일치함을확인했다. native Git 재조회는 아래 인증 오류가 있어 원격 확인 근거로 사용하지 않았다. 결과 URL: https://github.com/Hwrette/MathHint/blob/main/results/final_experiment_2/cluster_improvement/README.md .
+- 첫 ls-remote는 기존 local core.askpass가 사라진/tmp도우미를참조해실패했다. 환경변수GH_TOKEN을읽는 일회성도우미를 명령단위로지정한 재시도도 GitHub 인증 거부로 실패했다. 따라서 게시 확인은 정상 응답한 GitHub 커넥터의 main 커밋 조회에 근거한다. 비밀값은코드/결과/커밋/로그에기록하지않았다. Git전역설정·연결권한변경이나강제push는없다.
+- 이 마지막변경은 게시확인상태를남기는 WORK_PROGRESS 문서뿐이다. 마지막 정상 검증과 실제 데이터/모델/결과가 포함된 커밋은 위fc903c9이며, 완료기록커밋을추가로일반push한후원격일치를확인하고중단한다. 데이터/모델을다시실행할필요가없다.
+- 미완료필수항목0. 사용자의추가명시적요청전 회귀/풀이BoW/신경망/Gemini/185·80분리연구를시작하지않는다. 기존자동화는중지상태를그대로유지한다.
