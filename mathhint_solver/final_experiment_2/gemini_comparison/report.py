@@ -333,6 +333,10 @@ def _readme(output, config, state, summary, tokens, pairs, cases, reviews, quest
     lines = ["# Gemini A/B/C/D · 문제 풀이 성능과 토큰 사용량", "",
              "A 문제만 · B 선형회귀 예측 상위20 · C 딥러닝 예측 상위20 · D 실제 해설 상위20. 이전 실험의 C 오라클이 이번 D다.", "",
              "먼저 [수식이 표시되는 문항 화면](report.html), [모든 문항 비교](question_comparison.csv), [풀이·오류 사례](case_reports/README.md)를 본다.", ""]
+    if state.get("pending_count", 0):
+        lines += ["**부분 결과:** 완료 문항은 기존 ID 순서로 실행한 집합이며 무작위 하위표본이 아니다. "
+                  "조건별 완료 수가 다르면 전체 평균을 직접 비교하지 말고 공통 완료 문항의 대응 비교를 확인한다. "
+                  "미완료가 남아 있는 동안 테스트80 전체에 대한 효과를 결론내리지 않는다.", ""]
     for split in ("test", "train"):
         rows = [row for row in summary if row["split"] == split]
         if not rows:

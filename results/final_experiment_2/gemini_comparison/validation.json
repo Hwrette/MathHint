@@ -1,5 +1,5 @@
 {
-  "verified_at": "2026-11-10T20:10:20.326423+00:00",
+  "verified_at": "2026-11-10T20:28:24.373143+00:00",
   "config_id": "cc67f503605a3acd86112e8734b755f1c1da6e86d5cea9a3c8da1de43c3708e9",
   "dataset_id": "1e1e467b301406d6a2df2775ad506474aaa915b342d315cdca8dc39fdf3e7345",
   "split": "test",
@@ -1850,6 +1850,130 @@
     },
     {
       "check": "sdk_capture_461",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_462",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_463",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_464",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_465",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_466",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_467",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_468",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_469",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_470",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_471",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_472",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_473",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_474",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_475",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_476",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_477",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_478",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_479",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_480",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_481",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_482",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_483",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_484",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_485",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_486",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_487",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_488",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_489",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_490",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_491",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_492",
       "passed": true
     },
     {
@@ -5953,6 +6077,458 @@
       "passed": true
     },
     {
+      "check": "response_identity_diff_3_049_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_diff_3_049_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_diff_3_049_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_diff_3_049_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_diff_3_049_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_004_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_004_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_004_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_004_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_004_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_004_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_004_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_004_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_004_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_004_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_004_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_004_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_004_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_004_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_004_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_007_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_007_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_007_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_007_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_007_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_007_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_007_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_007_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_007_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_007_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_007_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_007_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_007_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_007_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_007_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_009_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_009_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_009_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_009_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_009_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_009_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_009_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_009_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_009_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_009_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_009_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_009_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_009_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_009_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_009_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_010_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_010_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_010_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_010_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_010_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_010_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_010_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_010_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_010_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_010_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_010_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_010_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_010_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_010_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_010_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_011_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_011_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_011_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_011_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_011_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_011_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_011_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_011_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_011_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_011_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_011_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_011_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_011_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_011_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_011_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_013_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_013_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_013_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_013_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_013_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_013_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_013_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_013_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_013_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_013_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_013_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_013_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_013_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_013_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_013_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_018_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_018_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_018_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_018_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_018_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_018_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_018_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_018_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_018_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_020_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_020_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_020_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_020_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_020_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_020_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_020_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_020_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_020_C",
+      "passed": true
+    },
+    {
       "check": "successful_exact_requests_never_saved_twice",
       "passed": true
     },
@@ -5969,13 +6545,13 @@
       "passed": true
     }
   ],
-  "passed": 1491,
+  "passed": 1635,
   "failed": 0,
   "complete": true,
   "experiment_complete": false,
-  "successful_requests": 205,
+  "successful_requests": 226,
   "expected_requests": 320,
-  "pending_requests": 115,
+  "pending_requests": 94,
   "live_api_calls_during_verification": 0,
   "model_training_during_verification": false,
   "actual_browser_validation": {

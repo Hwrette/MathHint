@@ -313,6 +313,7 @@ def report(root=ROOT):
         "BoW는 수식의 순서·분자/분모·변수 역할·논리 연결을 보존하지 못한다. 층을 늘리는 것만으로 소실된 수식 구조가 복원되지 않는다.",
         "원본 답 정오답과 풀이 과정 타당성을 분리했다. 구체적 오류 단계·근거로 충분히 확인하지 못한 생성 풀이는 검토 보류로 남기며 사람의 확정 판정으로 표시하지 않는다.",
         "API 원문·사용량·미완료 상태·실제 요청을 보존한다. 과거의 정확히 같은 요청 재사용과 새 응답의 실행 시점 차이도 구분한다.",
+        "API가 미완료라면 완료된 ID 순서의 집합은 무작위 하위표본이 아니다. 공통 완료 문항끼리의 대응 비교도 테스트80 전체의 효과를 대신하지 않는다.",
         "예측 모델의 연산 비용을 측정하지 않았으므로 Gemini 토큰 절감만으로 시스템 전체 계산 효율성이 개선됐다고 주장하지 않는다.",
     ]
     readme = ["# MathHint Final Experiment 2", "", "## 결과를 읽는 순서", "", *links, "",
@@ -364,6 +365,8 @@ def report(root=ROOT):
 
 def verify(root=ROOT):
     from .solution_data.validation import validate_dataset, validate_model
+    from .cluster_improvement.verify import scan_links
+    from PIL import Image
     root = Path(root).resolve()
     base = root / "results/final_experiment_2"
     dataset = validate_dataset(root, save=True)
@@ -371,6 +374,28 @@ def verify(root=ROOT):
     from mathhint_solver.final_experiment_2.gemini_comparison.verify import run as verify_api
     api = verify_api(root, base / "gemini_comparison")
     details = {"solution_data": dataset, **models, "gemini_comparison": api}
+    link_count, broken = scan_links(base)
+    images = list((base / "figures").glob("*.png"))
+    for folder in ("regression", "deep_learning", "gemini_comparison"):
+        images.extend((base / folder).rglob("*.png"))
+    invalid_images = []
+    for path in images:
+        try:
+            with Image.open(path) as image:
+                size = image.size
+                image.verify()
+            if size[0] < 500 or size[1] < 300:
+                invalid_images.append(str(path.relative_to(base)))
+        except (OSError, ValueError):
+            invalid_images.append(str(path.relative_to(base)))
+    presentation = {"markdown_file_links_checked": link_count, "broken_links": broken,
+                    "decoded_png_count": len(images), "invalid_images": invalid_images,
+                    "checks": [{"check": "all_result_markdown_links_exist", "passed": not broken},
+                               {"check": "new_png_files_decode_at_readable_resolution", "passed": bool(images) and not invalid_images}],
+                    "manual_visual_check": "실제 브라우저 검사는 API 검증의 actual_browser_validation 및 진행 기록과 구분해 확인한다."}
+    presentation["passed"] = sum(row["passed"] for row in presentation["checks"])
+    presentation["failed"] = sum(not row["passed"] for row in presentation["checks"])
+    details["presentation"] = presentation
     passed = sum(int(v.get("passed", 0)) for v in details.values())
     failed = sum(int(v.get("failed", 0)) for v in details.values())
     result = {"passed": passed, "failed": failed,

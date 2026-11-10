@@ -1,175 +1,23 @@
 {
-  "status": "partial_complete",
-  "reason": "이번 실행의 신규 요청 예산에 도달했습니다.",
-  "updated_at": "2026-11-10T20:08:26.254668+00:00",
+  "status": "interrupted",
+  "reason": "중단 파일을 확인하여 새 요청을 보내지 않았습니다.",
+  "updated_at": "2026-11-10T20:27:09.425953+00:00",
   "config_id": "cc67f503605a3acd86112e8734b755f1c1da6e86d5cea9a3c8da1de43c3708e9",
   "split": "test",
   "expected_requests": 320,
-  "successful_requests": 205,
-  "failed_requests": 0,
-  "saved_responses": 205,
-  "response_log_entries": 210,
-  "pending_count": 115,
+  "successful_requests": 226,
+  "failed_requests": 4,
+  "saved_responses": 230,
+  "response_log_entries": 235,
+  "pending_count": 94,
   "pending_requests": [
-    {
-      "id": "diff_3_049",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "test",
-      "request_sha256": "4519a3f9da60ba050e379384e4d6c61168f9dfee7099a0fb58c45a4b1ca8def5",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_1_004",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "test",
-      "request_sha256": "7a3a64effdaefe20b77341df20a3bd949e31273c33b5cae7800a9131fa8952b0",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_1_004",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "test",
-      "request_sha256": "b5d4d8145ba6273fc05976865f7005d1e970ddf446f17e0ddbd10ce37f56f92f",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_1_004",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "test",
-      "request_sha256": "cf1cec26a2a0433b6f4ab8dd5a8b4ace97d9265e195de22dc24e815be953d000",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_1_007",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "test",
-      "request_sha256": "e320bc475b4e0db83ea6bc61b636986beb313153cebe8d2f091a33ae46878f14",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_1_007",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "test",
-      "request_sha256": "7f315fc3df4b385389f445f3ed9cdd5fa010ac02bfc0b995fe437d9c0cc2f035",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_1_007",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "test",
-      "request_sha256": "fc603c034f7f22e257b44f2e25e4679d8a716ad59f78323d9d955463fcf1be9e",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_1_009",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "test",
-      "request_sha256": "1e2b83a04f813923d570d626a92000bfa7b415f5421ded6c684fb326c4203a5a",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_1_009",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "test",
-      "request_sha256": "97eee888afae5d1a3587445336bff5cf5e5dc091da47ae8cbe10bad1c2d2dc63",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_1_009",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "test",
-      "request_sha256": "b324fb6adffd4828e686a9265596d7ce8eb46268dd9ea3fe0531ebaa39d62b74",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_1_010",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "test",
-      "request_sha256": "d61403cd85dd8fd74f2f4db5e40532e7d03ccac0f0d448e98c53dbcdb370173a",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_1_010",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "test",
-      "request_sha256": "b41d2ca157ce41e71222aa62371345cc99ea2b815efddb6df5db4ba374379882",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_1_010",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "test",
-      "request_sha256": "8f88d261394e315af88f940be17b60162fc8ef7a624bf7f7b1a27d49e290d89d",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_1_011",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "test",
-      "request_sha256": "b0021b9f129850c0e5115a81c47d241aa506b86150ad256837c947c4985ccc2d",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_1_011",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "test",
-      "request_sha256": "7e0c99cc9fc19c75c5f87788396a99c0078931610cdfd07a1e833d2a8e140f0b",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_1_011",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "test",
-      "request_sha256": "865219b5dff8c9aae514fe78a8a8a232b0f1af7be80712442d1936c3d09f30bc",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_1_013",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "test",
-      "request_sha256": "5cd1a97dbef04d7e787ed652a44817c14ce70090c5ab39c93ec0f7ff185aba9b",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_1_013",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "test",
-      "request_sha256": "7a6bc1a25d0f0f73dd382394c8536b23403a43e7a4f0fb22c7a5fdabcc4856cf",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_1_013",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "test",
-      "request_sha256": "fd678204a42848ec6ebd62fed7db5d6681e5f761fa18dfb9de83512faf7385d1",
-      "last_status": "not_executed"
-    },
     {
       "id": "trig_1_018",
       "condition": "B",
       "method": "regression_hint",
       "split": "test",
       "request_sha256": "13cf051e32fad64877d73bc2ab30061990ba759af1cdb522dfec662f8b5f239e",
-      "last_status": "not_executed"
+      "last_status": "api_error"
     },
     {
       "id": "trig_1_018",
@@ -177,23 +25,7 @@
       "method": "deep_learning_hint",
       "split": "test",
       "request_sha256": "8809da1964b613450bbd29d7eb35c689ac09c50374454e6b95d20bbbaa42ccdf",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_1_018",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "test",
-      "request_sha256": "7426ad9f4fd94d8d9bb0a29620115556e32cac3649f11c7afe0e922dfa642aa5",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_1_020",
-      "condition": "B",
-      "method": "regression_hint",
-      "split": "test",
-      "request_sha256": "060fa99a225e18c8ef2cc268469e792713f8cbfc9902a2555a7337391e6fbf71",
-      "last_status": "not_executed"
+      "last_status": "api_error"
     },
     {
       "id": "trig_1_020",
@@ -201,7 +33,7 @@
       "method": "oracle_hint",
       "split": "test",
       "request_sha256": "ad00d5aa2767d8b7797845038a6cdc2fe54de6030239e19eaf7048a2afc6378b",
-      "last_status": "not_executed"
+      "last_status": "api_error"
     },
     {
       "id": "trig_1_020",
@@ -209,7 +41,7 @@
       "method": "deep_learning_hint",
       "split": "test",
       "request_sha256": "372590db68efbd1405f42ca9844f5f59b2223a3ae2c160c2769fc42136cf01f8",
-      "last_status": "not_executed"
+      "last_status": "stopped_after_attempt"
     },
     {
       "id": "trig_1_021",
@@ -933,9 +765,9 @@
     }
   ],
   "reused_successes": 80,
-  "new_successes": 125,
+  "new_successes": 146,
   "safe_to_resume": true,
-  "resume_command": "python -m mathhint_solver.final_experiment_2.gemini_comparison generate",
+  "resume_command": "python -m mathhint_solver.final_experiment_2.gemini_comparison generate --clear-stop",
   "resume_prerequisites": "기록된 재시도 대기 및 실행 제한을 확인한 후 미완료 요청만 재실행",
   "provider_daily_reset_time": null,
   "resume_note": "설정·입력·성공 응답 해시를 다시 확인하고 미완료 요청만 실행한다. 환경 종료 후 자동 예약은 설정하지 않았다.",
@@ -946,15 +778,15 @@
     "reason": "test80 검증 후 현재 호출 예산이 확인된 경우에만 별도 확장한다. 현재 공급자 잔여 예산 미확인."
   },
   "limiter": {
-    "new_request_starts": 40,
-    "rolling_minute_starts": 6,
-    "rolling_hour_starts": 138,
-    "rolling_24h_starts": 138,
-    "status": "partial_complete",
-    "reason": "이번 실행의 신규 요청 예산에 도달했습니다.",
+    "new_request_starts": 31,
+    "rolling_minute_starts": 1,
+    "rolling_hour_starts": 151,
+    "rolling_24h_starts": 169,
+    "status": "interrupted",
+    "reason": "중단 파일을 확인하여 새 요청을 보내지 않았습니다.",
     "daily_quota_reported": false,
     "cooldown_remaining_seconds": 0,
-    "service_cooldown_remaining_seconds": 0,
+    "service_cooldown_remaining_seconds": 68.82873334200121,
     "resume_cooldown_note": "absolute recorded delays restored; legacy events preserve only recorded backoff, not unrecorded provider timing; daily reset remains unconfirmed",
     "policy": {
       "interval_seconds": 10.0,

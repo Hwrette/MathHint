@@ -1,5 +1,5 @@
 ﻿split,condition,label,expected_count,success_count,graded_count,correct_count,incorrect_count,ungradable_count,failed_count,pending_count,accuracy_graded,correct_count_ai_supplemental,accuracy_ai_supplemental,reused_count,new_success_count,prompt_token_count_mean,prompt_token_count_sum,candidates_token_count_mean,candidates_token_count_sum,thoughts_token_count_mean,thoughts_token_count_sum,cached_content_token_count_mean,cached_content_token_count_sum,total_token_count_mean,total_token_count_sum
 test,A,A 문제만,80,80,80,78,2,0,0,0,0.975,79,0.9875,80,0,150.6375,12051,497.1125,39769,,,,,647.75,51820
-test,B,B 선형회귀 예측 토큰,80,41,41,41,0,0,0,39,1.0,41,1.0,0,41,403.9024390243902,16560,450.2439024390244,18460,,,,,854.1463414634146,35020
-test,C,C 딥러닝 예측 토큰,80,42,42,42,0,0,0,38,1.0,42,1.0,0,42,404.8809523809524,17005,442.04761904761904,18566,,,,,846.9285714285714,35571
-test,D,D 실제 해설 토큰,80,42,42,42,0,0,0,38,1.0,42,1.0,0,42,363.23809523809524,15256,427.0,17934,,,,,790.2380952380952,33190
+test,B,B 선형회귀 예측 토큰,80,49,49,48,1,0,1,30,0.9795918367346939,49,1.0,0,49,402.48979591836735,19722,459.3061224489796,22506,,,,,861.795918367347,42228
+test,C,C 딥러닝 예측 토큰,80,48,48,47,1,0,2,30,0.9791666666666666,48,1.0,0,48,403.8541666666667,19385,445.1041666666667,21365,,,,,848.9583333333334,40750
+test,D,D 실제 해설 토큰,80,49,49,48,1,0,1,30,0.9795918367346939,49,1.0,0,49,360.8775510204082,17683,435.16326530612247,21323,,,,,796.0408163265306,39006
