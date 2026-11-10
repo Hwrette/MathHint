@@ -1,8 +1,8 @@
 # MathHint 작업 진행 상태
 
-STATUS: COMPLETE_APPROVED_SIX_STOPWORDS_FULL265_SCOPE_AWAITING_REQUEST
-EXECUTION_ALLOWED: false
-LAST_CONFIRMED_PUBLISHED_COMMIT: 01a3c3affe62a377aa00aad601bab072c59297b6
+STATUS: IN_PROGRESS_FINAL2_PROBLEM_ONLY_FULL265_CLUSTERING
+EXECUTION_ALLOWED: true  # ONLY problem Full265 K0/K1 K-means; no regression/solution/holdout/API
+LAST_CONFIRMED_PUBLISHED_COMMIT: 7c5038a05dd3bc3261e61031b99cb2b8f0cc84a8
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
 AUTOMATION_STATUS: PAUSED_AFTER_READER_WORKFLOW_COMPLETION_VERIFIED_BY_PEEK
 FIRST_RUN_FROM_SAVED_RULE: 2026-11-09T05:58:50+09:00
@@ -14,7 +14,19 @@ GITHUB_PREAUTHORIZATION_SETTING: RESTORED_TO_ORIGINAL_INHERIT_VERIFIED
 TIMEZONE: Asia/Seoul
 USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 
-## 현재 상태: 토큰 분석 완료, 사용자 승인 불용어 등록 완료
+## 현재 상태: 2차 실험 · 문제 전체265 K0/K1 군집화만 진행
+
+최신 사용자 정정에 따라 회귀 구현·학습·평가/풀이 BoW 모델/185·80 분리 재실험은 제외한다. 현재 승인 범위는 문제 원문265개 재토큰화, 문제 불용어96 적용 전후 어휘/벡터, 전체265 학습·평가16군집 실험과 보고·검증·게시다. Gemini·신경망은 실행하지 않는다. 기존 자료는 해시로 보호한다. 초기 확대 작업은 코드를 작성하기 전 중단했고 최신 범위로 모든 담당 작업을 정정했다.
+
+|단계|상태|근거/다음 작업|
+|---|---|---|
+|원본/기존설정/불용어 조사|완료|main clean·HEAD7c5038a·96개·seed42~46/max100/tol1e-4 확인|
+|문제265 새 BoW와 사용자 필터|진행 중|00_dataset에 별도 저장; 원본265만 재토큰화|
+|전체265 K0/K1 군집화16개|미시작|공통 TorchKMeans 재사용, 실제 라벨 평가만|
+|표·그림·보고서|미시작|01_clustering·02_evaluation·주README|
+|검증·보존·커밋/푸시|미시작|16CM×265·지표·링크·기존SHA·원격확인|
+
+## 이전 상태: 토큰 분석 완료, 사용자 승인 불용어 등록 완료
 
 - 초기 분석은 통계·분산분해·중복·OOV·기존 B/C 전송 구성과 읽기 자료다. 이후 사용자가 불용어를 승인하여 목록만 등록했다. 벡터에 적용하지 않았고 K-means/회귀/신경망/새 API/성능평가/순열 기능을 구현하지 않았다.
 - 문제346·해설431, TF/DF/전체265 분산, 학습185의4수준η²·거리기여, OOV29/48, 실제전송160요청/3200좌표를 분석했다. 토큰 인덱스·어휘·원본 벡터는 불변이다.
@@ -464,3 +476,11 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - fit2종·assign2종·회귀학습·체크포인트로드·Linear.forward·Gemini SDK·원래토큰화2종은 guard로 차단했고 전부0call이다. 새 모델/벡터/OOV 재토큰화/API 호출 없이 기존 검증된 OOV 근거를 재사용했다. 새 결과나 백업 파일은 저장소에 추가하지 않았다.
 - 독립 감사 PASS: 시작2691 추적파일 중 허용9개만 변경·2682개 바이트동일, 삭제0·새 파일0. data 전체/final_experiment/기존 통계CSV·PNG·모델·API 원문·기존 감사JSON 불변이다. parent manifest42개 키 보존, 문서2개의 SHA만 갱신했고 실제42해시 전부 일치한다. 검증 중 README 상대링크도 통과했다. 근거는 /tmp/mathhint_add_six_independent_audit.json 및 /tmp/mathhint_stopword_guarded_verify.json이다.
 - 필수 수정·검증 미완료0. 관련9파일만 커밋·일반push하고 원격main==HEAD를 확인한 뒤 중단한다. 위 LAST_CONFIRMED_PUBLISHED_COMMIT은 게시전 확인 기준01a3c3a다. 이번 최종 게시SHA는 실제 Git과 완료 보고로 확인하며 게시 성공을 미리 단정하지 않는다. 미래 불용어 목록 변경은 대상전체 공개 후 별도 명시확인을 받고, 새로운 데이터 가공/학습은 별도 사용자 요청 대기다.
+
+
+## 2차 최종 범위 기록 및 초기 체크포인트 — 2026-11-10T16:16:45.385886+00:00
+
+- 현재 main·HEAD7c5038a·시작Git clean. 기존2691 추적파일 SHA를 /tmp/mathhint_final2_problem_baseline.json에 확보했고 독립 감사도 별도 baseline을 확보했다. 보호 대상 원본·모델·final_experiment·token_analysis는 변경하지 않는다.
+- 최신 정정 전의 확대 계획을 즉시 취소했다. 회귀 담당을 중단했고 회귀·풀이 새 파일 작성/실행이 없음을 확인한다. 군집화는 전체265만16조건이며 분리 재실험 코드를 만들지 않는다.
+- 실제 기존 full265 설정/알고리즘/CM과 본문 파일·원래 분할·96개 목록을 확인했다. 공통 알고리즘 소스와 기존 검증은 유지하며 새 전용 로더로 full265어휘 정책을 명시한다.
+- 다음은 새 문제 전용 데이터 준비, K0/K1 전체26516실험, 저장자료만으로 보고서 생성, 독립 검증·이미지 확인, 커밋/푸시 순서다. 완료한 단계는 재실행하지 않고 입력·설정 해시를 대조해 재사용한다. 기존 복구 자동화는 중지 상태이며 새 예약은 만들지 않았다.
