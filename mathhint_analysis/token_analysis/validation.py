@@ -30,7 +30,13 @@ def verify_sources(root, config):
 
 
 def validate_user_stopwords(output, vocabularies):
-    """사용자 목록을 검증한다. 목록을 수정하거나 벡터에 적용하지 않는다."""
+    """전체265 원문 어휘로 등록을 검증한다. 목록이나 기존 벡터는 바꾸지 않는다."""
+    allowed = {region: set(tokens) for region, tokens in vocabularies.items()}
+    # 고정 학습 어휘 밖의 토큰도 원문 재계수로 검증한 같은 영역의 OOV만 인정한다.
+    inventory = Path(output) / "03_oov_analysis/excluded_tokens.csv"
+    if inventory.is_file():
+        for row in read_csv(inventory):
+            allowed[row["region"]].add(row["token"])
     choices = {}
     for singular, region in (("problem", "problems"), ("solution", "solutions")):
         path = Path(output) / f"stopwords/{singular}_stopwords.json"
@@ -39,9 +45,9 @@ def validate_user_stopwords(output, vocabularies):
             raise ValueError(f"사용자 불용어는 문자열 배열이어야 합니다: {path}")
         if len(values) != len(set(values)):
             raise ValueError(f"사용자 불용어에 중복이 있습니다: {path}")
-        unknown = sorted(set(values) - set(vocabularies[region]))
+        unknown = sorted(set(values) - allowed[region])
         if unknown:
-            raise ValueError(f"{path}: 해당 영역 어휘에 없는 불용어: {unknown}")
+            raise ValueError(f"{path}: 해당 영역에서 확인된 원문 어휘에 없는 불용어: {unknown}")
         choices[singular] = values
     return choices
 

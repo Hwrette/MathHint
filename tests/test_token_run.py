@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from mathhint_analysis.token_analysis.common import dump_json, read_json, review_files, sha256
+from mathhint_analysis.token_analysis.common import dump_csv, dump_json, read_json, review_files, sha256
 from mathhint_analysis.token_analysis.run import run, save_manifest, verify_saved_tables
 from mathhint_analysis.token_analysis.validation import scan_report_links, validate_user_stopwords, verify_sources
 
@@ -39,6 +39,25 @@ class TokenRunTests(unittest.TestCase):
                 dump_json(paths[0], invalid)
                 with self.subTest(invalid=invalid), self.assertRaises(ValueError):
                     validate_user_stopwords(output, vocabulary)
+
+    def test_reviewed_test_only_tokens_are_allowed_only_in_their_original_region(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            output = Path(temporary)
+            paths = review_files(output)
+            vocabulary = {"problems": ["latex:x"], "solutions": ["latex:y"]}
+            inventory = output / "03_oov_analysis/excluded_tokens.csv"
+            dump_csv(inventory, [{"region": "solutions", "token": "latex:80"}])
+            dump_json(paths[1], ["latex:80"])
+            original = {p: p.read_bytes() for p in (*paths, inventory)}
+            self.assertEqual(validate_user_stopwords(output, vocabulary)["solution"], ["latex:80"])
+            self.assertEqual({p: p.read_bytes() for p in original}, original)
+            dump_json(paths[0], ["latex:80"])
+            with self.assertRaisesRegex(ValueError, "problem_stopwords.json"):
+                validate_user_stopwords(output, vocabulary)
+            dump_json(paths[0], [])
+            dump_json(paths[1], ["latex:99999"])
+            with self.assertRaisesRegex(ValueError, "solution_stopwords.json"):
+                validate_user_stopwords(output, vocabulary)
 
     def test_verifying_does_not_rewrite_historical_validation_or_manifest(self):
         with tempfile.TemporaryDirectory() as temporary:
