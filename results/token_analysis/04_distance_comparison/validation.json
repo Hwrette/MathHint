@@ -1,0 +1,1543 @@
+{
+  "passed": 381,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "fixed_training_185_by_346",
+      "passed": true
+    },
+    {
+      "check": "all_17020_unique_nonself_pairs",
+      "passed": true
+    },
+    {
+      "check": "cosine_coordinate_dot_identity",
+      "passed": true
+    },
+    {
+      "check": "two_contribution_sums_100_percent",
+      "passed": true
+    },
+    {
+      "check": "token_indices_and_order",
+      "passed": true
+    },
+    {
+      "check": "token_0_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_1_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_2_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_3_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_4_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_5_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_6_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_7_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_8_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_9_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_10_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_11_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_12_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_13_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_14_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_15_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_16_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_17_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_18_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_19_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_20_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_21_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_22_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_23_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_24_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_25_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_26_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_27_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_28_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_29_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_30_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_31_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_32_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_33_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_34_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_35_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_36_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_37_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_38_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_39_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_40_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_41_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_42_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_43_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_44_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_45_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_46_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_47_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_48_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_49_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_50_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_51_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_52_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_53_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_54_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_55_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_56_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_57_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_58_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_59_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_60_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_61_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_62_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_63_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_64_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_65_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_66_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_67_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_68_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_69_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_70_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_71_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_72_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_73_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_74_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_75_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_76_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_77_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_78_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_79_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_80_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_81_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_82_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_83_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_84_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_85_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_86_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_87_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_88_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_89_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_90_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_91_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_92_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_93_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_94_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_95_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_96_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_97_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_98_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_99_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_100_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_101_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_102_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_103_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_104_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_105_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_106_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_107_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_108_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_109_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_110_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_111_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_112_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_113_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_114_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_115_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_116_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_117_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_118_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_119_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_120_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_121_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_122_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_123_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_124_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_125_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_126_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_127_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_128_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_129_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_130_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_131_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_132_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_133_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_134_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_135_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_136_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_137_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_138_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_139_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_140_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_141_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_142_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_143_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_144_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_145_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_146_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_147_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_148_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_149_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_150_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_151_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_152_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_153_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_154_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_155_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_156_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_157_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_158_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_159_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_160_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_161_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_162_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_163_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_164_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_165_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_166_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_167_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_168_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_169_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_170_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_171_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_172_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_173_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_174_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_175_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_176_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_177_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_178_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_179_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_180_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_181_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_182_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_183_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_184_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_185_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_186_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_187_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_188_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_189_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_190_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_191_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_192_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_193_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_194_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_195_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_196_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_197_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_198_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_199_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_200_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_201_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_202_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_203_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_204_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_205_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_206_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_207_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_208_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_209_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_210_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_211_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_212_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_213_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_214_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_215_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_216_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_217_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_218_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_219_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_220_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_221_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_222_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_223_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_224_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_225_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_226_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_227_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_228_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_229_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_230_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_231_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_232_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_233_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_234_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_235_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_236_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_237_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_238_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_239_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_240_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_241_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_242_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_243_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_244_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_245_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_246_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_247_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_248_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_249_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_250_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_251_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_252_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_253_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_254_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_255_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_256_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_257_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_258_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_259_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_260_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_261_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_262_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_263_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_264_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_265_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_266_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_267_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_268_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_269_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_270_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_271_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_272_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_273_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_274_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_275_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_276_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_277_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_278_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_279_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_280_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_281_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_282_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_283_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_284_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_285_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_286_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_287_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_288_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_289_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_290_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_291_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_292_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_293_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_294_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_295_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_296_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_297_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_298_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_299_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_300_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_301_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_302_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_303_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_304_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_305_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_306_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_307_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_308_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_309_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_310_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_311_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_312_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_313_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_314_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_315_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_316_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_317_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_318_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_319_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_320_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_321_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_322_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_323_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_324_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_325_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_326_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_327_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_328_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_329_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_330_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_331_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_332_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_333_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_334_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_335_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_336_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_337_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_338_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_339_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_340_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_341_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_342_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_343_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_344_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "token_345_contributions_variances_and_ranks",
+      "passed": true
+    },
+    {
+      "check": "all_pair_rows_once",
+      "passed": true
+    },
+    {
+      "check": "all_pair_values_and_hierarchy_flags",
+      "passed": true
+    },
+    {
+      "check": "four_levels_eta_rows",
+      "passed": true
+    },
+    {
+      "check": "four_levels_two_metrics",
+      "passed": true
+    },
+    {
+      "check": "curriculum_original_independent_variance_projection",
+      "passed": true
+    },
+    {
+      "check": "curriculum_normalized_independent_variance_projection",
+      "passed": true
+    },
+    {
+      "check": "curriculum_eta_changes",
+      "passed": true
+    },
+    {
+      "check": "curriculumeuclidean_within_between",
+      "passed": true
+    },
+    {
+      "check": "curriculumcosine_within_between",
+      "passed": true
+    },
+    {
+      "check": "unit_original_independent_variance_projection",
+      "passed": true
+    },
+    {
+      "check": "unit_normalized_independent_variance_projection",
+      "passed": true
+    },
+    {
+      "check": "unit_eta_changes",
+      "passed": true
+    },
+    {
+      "check": "uniteuclidean_within_between",
+      "passed": true
+    },
+    {
+      "check": "unitcosine_within_between",
+      "passed": true
+    },
+    {
+      "check": "subunit_original_independent_variance_projection",
+      "passed": true
+    },
+    {
+      "check": "subunit_normalized_independent_variance_projection",
+      "passed": true
+    },
+    {
+      "check": "subunit_eta_changes",
+      "passed": true
+    },
+    {
+      "check": "subuniteuclidean_within_between",
+      "passed": true
+    },
+    {
+      "check": "subunitcosine_within_between",
+      "passed": true
+    },
+    {
+      "check": "type_original_independent_variance_projection",
+      "passed": true
+    },
+    {
+      "check": "type_normalized_independent_variance_projection",
+      "passed": true
+    },
+    {
+      "check": "type_eta_changes",
+      "passed": true
+    },
+    {
+      "check": "typeeuclidean_within_between",
+      "passed": true
+    },
+    {
+      "check": "typecosine_within_between",
+      "passed": true
+    },
+    {
+      "check": "old_test_metrics_read_not_recomputed",
+      "passed": true
+    },
+    {
+      "check": "problem_selection_file_unchanged_and_empty",
+      "passed": true
+    },
+    {
+      "check": "solution_selection_file_unchanged_and_empty",
+      "passed": true
+    },
+    {
+      "check": "all_new_report_links",
+      "passed": true
+    },
+    {
+      "check": "new_reading_documents",
+      "passed": true
+    },
+    {
+      "check": "new_figures_present",
+      "passed": true
+    }
+  ],
+  "n": 185,
+  "dimensions": 346,
+  "pair_count": 17020,
+  "zero_vectors": 0,
+  "protected_original_files": 2510,
+  "all_original_source_hashes_unchanged": true,
+  "relative_links_checked": 27,
+  "missing_links": [],
+  "models_trained": 0,
+  "new_cluster_assignments": 0,
+  "model_checkpoint_loads": 0,
+  "new_gemini_calls": 0,
+  "limits": "Descriptive fixed-training statistics; no causal attribution, token-removal or new clustering experiment."
+}

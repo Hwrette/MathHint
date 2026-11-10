@@ -1,0 +1,32 @@
+{
+  "files_sha256": {
+    "summary.json": "ba6b9a9df9e968527b284fd168691d6091263f0f0f850168b260c2b3618158dd",
+    "class_norm_summary.csv": "16d95a8c1b4b705695bb5e370f223f890f50423d6b433a61ca670a074eb5c37d",
+    "within_between_distances.csv": "1a36cf692d2eaf160be13f0492c09e6842e5c1b2a6c8807556258ea100508104",
+    "README.md": "79fed9f08138bc342e6bcb83b55b5106072679503126b3545e1bc2d63a94fa20",
+    "category_contributions.csv": "41ac33fda73012042b8f4826a4c94dfb457890d7455cd9beb48a76889fa05ddc",
+    "verification_details.json": "6f3782761b6fd2c5682b43529d552ffd38502fcb321cabed549589c6064772cf",
+    "document_pair_distances.csv": "c010b07536f24bdb5875c0c987627608b553a0a3ad37bf2cbe6e6a70e0775940",
+    "test_results.txt": "c4177a2a3a9703ce3a43b7d0071e3c5d655def24e5a1cbd5457c82a57ddcdf77",
+    "cluster_norm_summary.csv": "90e744566266b7750ec7ce01411b8cfce34734e9961ddb8c6d32029ecc5294d8",
+    "normalized_eta_comparison.csv": "86207a348f3f7ae87b3dc5b4d328d7610c1b0a4e3f9a3d42c77d6ead09d20256",
+    "requested_token_groups.csv": "3e35253a54f1d950f4bda4d00580a293ad4c3324fdd1cd529cdaca5cb1737bfb",
+    "validation.json": "54ef77621f441628cf83762cb60587af9be384b0fcbd7bd9790b592c534551da",
+    "cluster_norm_association.csv": "536c479f3eeb1d3083be6727be5a53cf41c899991e503ac4672b5bee879dff69",
+    "token_distance_contributions.csv": "8cbbd034e5b835f26c93c60a1778d6a2ba6139a062aeb2a5c2a4b63e382439c6",
+    "class_pair_distances.csv": "2a456342fc45a786ec3d452fbbf650d8b9abb51c699f36bbe0e55365288f10a3",
+    "old_clustering_metrics.csv": "35ff7236de42d587e70b5d8adc74eb0430388264128faf525239afaddb398381",
+    "clustering_context.md": "d55295b36b126d1036b48f7a92aeed327ac0792442a48cf1efe4e25115139d80",
+    "length_distance_association.csv": "40cc5460a3157d8166d7fd11e18ad92f0bced37fa280654ba0a34e508852fd29",
+    "config.json": "6a1f557c380977c25174f41880f6ffcd5101feb2f9d3097ee8eb00f5819edc07",
+    "figures/selected_eta_comparison.png": "ebebd642f4fa0e2bc160d2fd899f5fd70e657d38a74f5f494eb38eb72ca4c950",
+    "figures/eta_change_extremes.png": "b38e331558cd793491780d8778fe6f3b7333aeafb4020ca08e955538fd9c1e7e",
+    "figures/within_between_distances.png": "90ae1acc42729511e2d92129537344ba46cd94c1fac62c74be042fbc7444a0c1",
+    "figures/selected_token_contributions.png": "f59bf3f8849b27f8de7bb1c469d24ee388f70b8c16a191403362d4b10ca85c93",
+    "figures/old_test_ari_comparison.png": "4304f37cd6068674e0dabb576a276f08f11135d7872db2e145918b4b8d3460e5",
+    "figures/cluster_norm_association.png": "f2ed603efb7a121ecd2d04eab30abd6f7cd1be232b7c0509722aea28485c8d7f",
+    "figures/normalized_eta_scatter.png": "f622fd9b6353627d72b2cc46c18fe72c9c5832b2432c7bd02884f5497b994120",
+    "figures/contribution_top20.png": "069de3ef63f8844447c0d555a142e59d7a90fa406da372de9a77f1962a6086cc",
+    "figures/duplicate_group_contributions.png": "c9c713897ed27d5d752f5903471f6a7063d0749983af476f15960651343be362"
+  }
+}

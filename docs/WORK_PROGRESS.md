@@ -1,15 +1,15 @@
 # MathHint 작업 진행 상태
 
-STATUS: IN_PROGRESS_DISTANCE_TOKEN_ANALYSIS
+STATUS: COMPLETE_DISTANCE_TOKEN_ANALYSIS_AWAITING_USER_SELECTION
 EXECUTION_ALLOWED: false
-LAST_CONFIRMED_PUBLISHED_COMMIT: 3a4e762df9135953505b4575246ad6f5002d136a
+LAST_CONFIRMED_PUBLISHED_COMMIT: eb120c86cd06c12c5d547666aa9d0377c659b162
 AUTOMATION_ID: Automation_f0cb7c558034819182338a7e87790700
 AUTOMATION_STATUS: PAUSED_AFTER_READER_WORKFLOW_COMPLETION_VERIFIED_BY_PEEK
 FIRST_RUN_FROM_SAVED_RULE: 2026-11-09T05:58:50+09:00
 RECURRENCE: EVERY_5_HOURS
 NEXT_RUN_TIME_SERVER_FIELD: NOT_RETURNED
 ENVIRONMENT: MathHint / inherited / current_environment_id_confirmed
-REMOTE_CHECKPOINT_STATUS: TOKEN_ANALYSIS_PUBLISHED_RENAME_VERIFIED_READY_FOR_PUSH
+REMOTE_CHECKPOINT_STATUS: DISTANCE_ANALYSIS_VALIDATED_READY_FOR_FINAL_PUSH_VERIFY_GIT
 GITHUB_PREAUTHORIZATION_SETTING: RESTORED_TO_ORIGINAL_INHERIT_VERIFIED
 TIMEZONE: Asia/Seoul
 USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
@@ -363,3 +363,19 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 구현분담:geometry(기여/η²),context(쌍거리·길이·기존배정통계),report(새문서그림),독립수치감사,root실행기/보존/링크/검증. 기존CSVPNG·01~03근거·stopword두[]는쓰기금지다.
 - 출력기여율은%합100,차이C−E %p,rank_change=E순위−C순위로정의. pair pooled거리에는일반Euclidean,토큰분해에는squaredEuclidean을구분한다. 영벡터는정의불가cos통계를임의계산하지않고중단하는정책으로실제존재여부확인예정.
 - 단계:보존기준확보완료→새코드구현→실제통계→독립대조/그림/링크→필수기록/manifest→최종커밋푸시/원격확인후중단. 아직미완료이며후속모델실험은구현하지않는다.
+
+## 거리 통계 보완 최종 검증·게시 준비 — 2026-11-10T12:04:46.179366+00:00
+
+- 학습185×문제346·i<j 17020쌍만분석했다. 새distance_comparison패키지는공통I/O·분산분해를재사용하며analyze/report/verify만제공한다. 원시벡터/어휘/분할/토큰화/학습알고리즘/기존모델/배정/지표/회귀/Gemini는쓰기없음이다.
+- 기여CSV346행·정규화η²1384행·거리전체쌍17020행·4수준2거리요약8행·분류별거리210/노름105·기존군집별노름210/연관8·범주10/묶음4를저장했다. UTF-8 BOM과원래좌표순·계층경로를유지했다. 영벡터0,각기여율합100%,코사인좌표식과내적식최대차4.44e-16이다.
+- 6좌표49.00%→27.76%(−21.24%p). 감소는중괄호37.96→14.60%가주도했고left/right5.71→7.01%,소괄호5.33→6.15%는증가했다. 기여비율증가와순위상승은다르며수학개념만선택적으로강조됐다고주장하지않는다.
+- 과목중괄호η² .088536→.180901처럼기여감소와라벨연관성증가는공존했다. DF/조정η²/집단수·singleton을CSV에함께보존했다. 유형70중43singletons/53개n<=2로η²과대해석을경계한다.
+- 같은/다른분류의평균거리(E,C):과목17.8443/20.0839와.3585/.4589,단원16.4973/19.5828와.3213/.4307,세부14.9075/19.3453와.2747/.4213,유형12.1812/19.2047와.1990/.4162. 내부쌍8494/3401/1454/578이며모두합17020. macro와singleton정의불가를분리했다.
+- 기존test80 ARI/NMI8행은그대로읽었다. 구면ARI는과목에서높고단원/세부차이는작으며유형은유클리드가높다. 거리비율은비선형변환불변이아니므로큰코사인비율을우월성으로해석하지않는다. 거리와L2차이상관E .788359/C .110355,노름차이항의E²비중30.27%는기술적/대수적값이며인과율이아니다. 중심갱신차이와train185/test80차이를명시했다.
+- 새README/clustering_context와PNG9종완료. agent가9종을실제로열고root도대표3종을열어한글·백슬래시·축/범례·수치·잘림을확인했다. 전체token_analysis상대링크82개누락0,9PNG전부정상decode이다. 별도웹/외부렌더링/HTML은필요없었다.
+- 영구verify381/381 PASS,독립원본직접계산으로추가기여묶음/범주·class/macro·norm표도전수일치했다. 새/기존token테스트51개(23+28) PASS,skip0. toy모델학습이있는전체기존suite는실행하지않았다. analyze/report/verify에서fit2종·assign2종·회귀train·torch.load·Linear.forward·genai.Client·원본tokenizer2종을금지하여모두0call확인했다.
+- verify는전체manifest를대조하고validation/manifest를재작성하지않는다. 손상된PNG를verify만으로새정상해시로등록하는경로를막았고검사2개를추가했다. report는수치CSV/summary를검증한뒤표시만재생성한다.
+- 기존보호2510파일SHA불변. 시작추적2625중허용8개만변경:명세/진행2·old표시helper/테스트2·기존MD링크3·그3해시의oldmanifest1. 기존MD본문은추가내비블록외바이트동일,oldmanifest37키/다른해시전부동일. 기존CSV15/PNG11·oldconfig/validation·two[]·data/final/archive모두동일이다. 미추적사용자파일을삭제하지않았다.
+- 근거: results/token_analysis/04_distance_comparison/{validation.json,verification_details.json,test_results.txt,config.json,manifest.json}. 새manifest는04만관리하고기존manifest에새분석전체를중복등록하지않았다. 전체변경은이번통계·표시연결·검증·작업기록에한정한다.
+- automations_peek로기존복구예약is_enabled=false/next_run_time=null을확인했다. 후속불용어/정규화군집/회귀/신경망/API실험은구현/실행/예약하지않았다. EXECUTION_ALLOWED=false는새통계가완료된후사용자선정대기라는뜻이다.
+- 이제최종관련커밋을일반push하고실제원격main SHA와로컬HEAD를대조한뒤중단한다. 위LAST_CONFIRMED_PUBLISHED_COMMIT은게시직전원격eb120c8을정직하게기록한것이며,이번게시성공은실제Git/완료보고SHA로확인한다. 마지막정상기준커밋1548223이후이번작업트리전체를검증했다. 미완료필수분석0,다음은사용자의불용어선정및별도명시적승인이다.

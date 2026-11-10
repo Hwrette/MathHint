@@ -1,0 +1,9 @@
+﻿experiment,level,level_name,method,method_name,k,n,ari,nmi,train_majority_accuracy,selected_seed,train_n,source_csv
+curriculum_euclidean,curriculum,과목,euclidean,유클리드,2,80,0.09674104802935198,0.10391804184415976,0.6625,42,185,results/final_experiment/01_clustering/summary.csv
+curriculum_spherical,curriculum,과목,spherical,코사인(구면),2,80,0.24040896125124195,0.18949631252336155,0.75,42,185,results/final_experiment/01_clustering/summary.csv
+unit_euclidean,unit,단원,euclidean,유클리드,8,80,0.1479411620700991,0.40100694984519425,0.525,42,185,results/final_experiment/01_clustering/summary.csv
+unit_spherical,unit,단원,spherical,코사인(구면),8,80,0.14697430080976098,0.42319546376927536,0.5,45,185,results/final_experiment/01_clustering/summary.csv
+subunit_euclidean,subunit,세부단원,euclidean,유클리드,25,80,0.1932470981426988,0.5933653306865151,0.5,42,185,results/final_experiment/01_clustering/summary.csv
+subunit_spherical,subunit,세부단원,spherical,코사인(구면),25,80,0.19715067075066317,0.6364667143422094,0.5125,42,185,results/final_experiment/01_clustering/summary.csv
+type_euclidean,type,문제 유형,euclidean,유클리드,70,80,0.16702660128560176,0.7803884557809391,0.3125,42,185,results/final_experiment/01_clustering/summary.csv
+type_spherical,type,문제 유형,spherical,코사인(구면),70,80,0.15073115860517436,0.7899546039321568,0.3875,42,185,results/final_experiment/01_clustering/summary.csv

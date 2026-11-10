@@ -1,0 +1,3 @@
+﻿metric,pair_count,pearson_distance_vs_abs_l2_difference,pearson_distance_vs_abs_l1_difference,independent_sample_size_claim
+euclidean,17020,0.7883593183589589,0.6432604072294145,False
+cosine,17020,0.11035461424290925,0.014066728349901721,False

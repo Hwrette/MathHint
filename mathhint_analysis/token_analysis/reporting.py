@@ -43,8 +43,16 @@ def _token(value):
 
 
 def _write(path, lines):
-    Path(path).parent.mkdir(parents=True, exist_ok=True)
-    Path(path).write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    generated = "\n".join(lines).rstrip() + "\n"
+    start, end = "<!-- distance-comparison:start -->", "<!-- distance-comparison:end -->"
+    existing = path.read_text(encoding="utf-8") if path.exists() else ""
+    if start in existing and end in existing:
+        block = start + existing.split(start, 1)[1].split(end, 1)[0] + end
+        heading, body = generated.split("\n", 1)
+        generated = heading + "\n\n" + block + "\n" + body
+    path.write_text(generated, encoding="utf-8")
 
 
 def _plots():

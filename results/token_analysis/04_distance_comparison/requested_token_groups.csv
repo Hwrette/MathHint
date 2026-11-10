@@ -1,0 +1,5 @@
+﻿group,group_name,tokens,token_count,euclidean_contribution,cosine_contribution,contribution_difference,raw_pair_equal_all,normalized_pair_equal_all
+braces_pair,중괄호 두 좌표,latex:{;latex:},2,37.964292330492775,14.597010530557547,-23.367281799935228,True,True
+left_right_pair,좌우 크기 표시 두 좌표,latex:\left;latex:\right,2,5.7075537236013325,7.014947074912818,1.307393351311486,True,True
+parentheses_pair,소괄호 두 좌표,latex:(;latex:),2,5.326046683957021,6.148192214431765,0.822145530474744,True,True
+duplicate_six,중괄호·좌우 표시·소괄호 6좌표,latex:{;latex:};latex:\left;latex:\right;latex:(;latex:),6,48.99789273805113,27.760149819902132,-21.237742918148996,True,True

@@ -1,11 +1,24 @@
 """보고서가 통계 범위와 실제 전송 좌표 분모를 섞지 않는지 확인한다."""
 
 import unittest
+from pathlib import Path
+import tempfile
 
-from mathhint_analysis.token_analysis.reporting import _mixture, _stat_tables, _token
+from mathhint_analysis.token_analysis.reporting import _mixture, _stat_tables, _token, _write
 
 
 class TokenReportingTests(unittest.TestCase):
+    def test_distance_analysis_link_is_preserved_on_report_rebuild(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary) / "README.md"
+            block = "<!-- distance-comparison:start -->\n[거리 비교](04_distance_comparison/README.md)\n<!-- distance-comparison:end -->"
+            path.write_text("# 이전 제목\n\n" + block + "\n\n이전 본문\n")
+            _write(path, ["# 새 제목", "", "기존 수치표"])
+            text = path.read_text()
+            self.assertIn(block, text)
+            self.assertIn("기존 수치표", text)
+            self.assertNotIn("이전 본문", text)
+
     def test_key_table_uses_training_variance_with_training_eta(self):
         problem = [{"token": "latex:x", "index": "0", "variance": "999", "train_variance": "2",
                     "meaning": "변수"}]
