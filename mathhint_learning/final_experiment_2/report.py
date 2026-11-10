@@ -212,6 +212,9 @@ def _case_findings(base, limit=6):
     for correct in (True, False):
         choose(lambda r: any(_saved_bool(v.get("final_answer_correct_original")) is correct
                              for v in review_by_id.get(r["id"], [])))
+    maximum_errors = max((len(items) for items in review_by_id.values()), default=0)
+    if maximum_errors >= 3:
+        choose(lambda r: len(review_by_id.get(r["id"], [])) == maximum_errors)
     choose(lambda r: r in changed)
     for q in chosen:
         identifier = q["id"]
@@ -233,6 +236,7 @@ def _case_findings(base, limit=6):
                          "보조 기준에서 " + ", ".join(supplemental) + ". 이 충돌을 힌트에 의한 정답 개선으로 세지 않는다.")
         evidence = review_by_id.get(identifier, [])
         if evidence:
+            lines.append("  풀이 오류 의심으로 기록된 조건: " + ", ".join(r["condition"] for r in evidence) + ".")
             review = next((r for r in evidence if r.get("error_step")), evidence[0])
             lines.append(f"  {review['condition']}의 AI 보조 검토 상태 `{review['review_status']}`: "
                          + " ".join((review.get("reason") or review.get("error_step") or "근거 설명 미제공").split())

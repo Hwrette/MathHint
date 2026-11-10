@@ -1,5 +1,5 @@
 {
-  "verified_at": "2026-11-10T20:28:24.373143+00:00",
+  "verified_at": "2026-11-10T20:46:01.460304+00:00",
   "config_id": "cc67f503605a3acd86112e8734b755f1c1da6e86d5cea9a3c8da1de43c3708e9",
   "dataset_id": "1e1e467b301406d6a2df2775ad506474aaa915b342d315cdca8dc39fdf3e7345",
   "split": "test",
@@ -1974,6 +1974,182 @@
     },
     {
       "check": "sdk_capture_492",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_493",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_494",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_495",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_496",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_497",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_498",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_499",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_500",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_501",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_502",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_503",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_504",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_505",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_506",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_507",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_508",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_509",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_510",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_511",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_512",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_513",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_514",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_515",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_516",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_517",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_518",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_519",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_520",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_521",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_522",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_523",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_524",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_525",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_526",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_527",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_528",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_529",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_530",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_531",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_532",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_533",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_534",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_535",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_536",
       "passed": true
     },
     {
@@ -6465,11 +6641,35 @@
       "passed": true
     },
     {
+      "check": "usage_matches_api_fields_trig_1_018_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_018_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_018_B",
+      "passed": true
+    },
+    {
       "check": "response_identity_trig_1_018_C",
       "passed": true
     },
     {
       "check": "usage_values_trig_1_018_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_018_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_018_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_018_C",
       "passed": true
     },
     {
@@ -6521,11 +6721,795 @@
       "passed": true
     },
     {
+      "check": "usage_matches_api_fields_trig_1_020_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_020_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_020_D",
+      "passed": true
+    },
+    {
       "check": "response_identity_trig_1_020_C",
       "passed": true
     },
     {
       "check": "usage_values_trig_1_020_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_020_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_020_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_020_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_021_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_021_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_021_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_021_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_021_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_021_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_021_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_021_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_021_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_021_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_021_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_021_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_021_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_021_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_021_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_028_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_028_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_028_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_028_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_028_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_028_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_028_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_028_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_028_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_028_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_028_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_028_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_028_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_028_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_028_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_032_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_032_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_032_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_032_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_032_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_032_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_032_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_032_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_032_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_032_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_032_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_032_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_032_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_032_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_032_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_035_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_035_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_035_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_035_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_035_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_035_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_035_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_035_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_035_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_035_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_035_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_035_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_035_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_035_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_035_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_039_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_039_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_039_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_039_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_039_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_039_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_039_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_039_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_039_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_039_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_039_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_039_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_039_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_039_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_039_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_042_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_042_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_042_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_042_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_042_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_042_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_042_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_042_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_042_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_042_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_042_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_042_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_042_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_042_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_042_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_043_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_043_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_043_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_043_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_043_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_043_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_043_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_043_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_043_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_043_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_043_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_043_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_043_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_043_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_043_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_046_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_046_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_046_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_046_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_046_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_046_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_046_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_046_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_046_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_046_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_046_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_1_046_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_1_046_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_1_046_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_1_046_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_003_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_2_003_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_2_003_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_2_003_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_2_003_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_003_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_2_003_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_2_003_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_2_003_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_2_003_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_003_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_2_003_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_2_003_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_2_003_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_2_003_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_007_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_2_007_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_2_007_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_2_007_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_2_007_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_007_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_2_007_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_2_007_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_2_007_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_2_007_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_007_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_2_007_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_2_007_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_2_007_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_2_007_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_014_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_2_014_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_2_014_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_2_014_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_2_014_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_014_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_2_014_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_2_014_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_2_014_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_2_014_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_014_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_2_014_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_2_014_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_2_014_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_2_014_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_016_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_2_016_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_2_016_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_2_016_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_2_016_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_016_D",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_2_016_D",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_2_016_D",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_2_016_D",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_2_016_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_016_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_2_016_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_2_016_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_2_016_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_2_016_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_017_C",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_2_017_C",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_2_017_C",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_2_017_C",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_2_017_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_017_B",
+      "passed": true
+    },
+    {
+      "check": "usage_values_trig_2_017_B",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_api_fields_trig_2_017_B",
+      "passed": true
+    },
+    {
+      "check": "independent_final_answer_grade_trig_2_017_B",
+      "passed": true
+    },
+    {
+      "check": "successful_response_has_exact_live_sdk_capture_trig_2_017_B",
       "passed": true
     },
     {
@@ -6545,13 +7529,13 @@
       "passed": true
     }
   ],
-  "passed": 1635,
+  "passed": 1881,
   "failed": 0,
   "complete": true,
   "experiment_complete": false,
-  "successful_requests": 226,
+  "successful_requests": 268,
   "expected_requests": 320,
-  "pending_requests": 94,
+  "pending_requests": 52,
   "live_api_calls_during_verification": 0,
   "model_training_during_verification": false,
   "actual_browser_validation": {

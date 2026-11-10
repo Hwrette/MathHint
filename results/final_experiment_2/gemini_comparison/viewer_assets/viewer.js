@@ -198,7 +198,7 @@
   }
   function qualifies(q, value) {
     var rows=methods.map(function(m){return(q.conditions||{})[m.key];});
-    if(value==='train')return q.split==='train';if(value==='test')return q.split==='test';if(value==='answers')return q.changed_answers;if(value==='review')return q.reasoning_suspected||q.review_pending;if(['A_correct_B_wrong','A_correct_C_wrong','B_only_correct','C_only_correct','D_only_correct','all_wrong','D_wrong','answer_key_conflict','reasoning_suspected','large_token_change','incomplete'].includes(value))return(q.case_tags||[]).includes(value);
+    if(value==='train')return q.split==='train';if(value==='test')return q.split==='test';if(value==='answers')return q.changed_answers;if(value==='review')return q.reasoning_suspected||q.review_pending;if(['A_correct_B_wrong','A_correct_C_wrong','B_only_correct','C_only_correct','D_only_correct','all_wrong','D_wrong','answer_key_conflict','reasoning_suspected','possible_alternative','large_token_change','incomplete'].includes(value))return(q.case_tags||[]).includes(value);
     if(value==='changed')return q.expected_generation&&q.changed_correctness===true;
     if(value==='api_error')return q.expected_generation&&rows.some(function(r){return r&&r.status!=='success'&&r.status!=='not_run';});
     if(value==='not_run')return q.expected_generation&&rows.some(function(r){return !r||r.status==='not_run';});

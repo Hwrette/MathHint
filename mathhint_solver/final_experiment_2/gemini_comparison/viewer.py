@@ -68,7 +68,7 @@ def _adapt_script(source):
          "if(value==='answers')return q.changed_answers;"
          "if(value==='review')return q.reasoning_suspected||q.review_pending;"
          "if(['A_correct_B_wrong','A_correct_C_wrong','B_only_correct','C_only_correct','D_only_correct',"
-         "'all_wrong','D_wrong','answer_key_conflict','reasoning_suspected','large_token_change','incomplete'].includes(value))"
+         "'all_wrong','D_wrong','answer_key_conflict','reasoning_suspected','possible_alternative','large_token_change','incomplete'].includes(value))"
          "return(q.case_tags||[]).includes(value);"),
         ("var filter = document.getElementById('filter');",
          "var filter = document.getElementById('filter');"
@@ -139,6 +139,7 @@ def build(output, payload):
                ("B_only_correct", "B만 정답"), ("C_only_correct", "C만 정답"), ("D_only_correct", "D만 정답"),
                ("all_wrong", "네 조건 모두 오답"), ("D_wrong", "D에서도 오답"),
                ("reasoning_suspected", "풀이 오류 의심"), ("answer_key_conflict", "정답표 충돌 의심"),
+               ("possible_alternative", "타당한 대안 풀이"),
                ("review_pending", "풀이 검토 보류"), ("large_token_change", "토큰 사용량 큰 변화"),
                ("incomplete", "불완전·장황한 응답 의심"), ("ungraded", "채점 불가"),
                ("api_error", "API 실패"), ("not_run", "API 미실행·미완료"), ("train", "학습 문항"), ("all", "전체 문항")]
