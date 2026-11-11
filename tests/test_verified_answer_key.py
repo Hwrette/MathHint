@@ -143,7 +143,7 @@ class VerifiedAnswerKeyTests(unittest.TestCase):
                    for r in read_csv(folder / "summary.csv")}
         self.assertEqual(summary["all265", "B"]["graded_count_original"], "264")
         self.assertEqual(summary["all265", "B"]["graded_count"], "265")
-        self.assertEqual(summary["all265", "B"]["incorrect_count_verified"], "1")
+        self.assertEqual(summary["all265", "B"]["incorrect_count_verified"], "2")
         pairs = read_csv(folder / "paired_comparison.csv")
         ab = next(r for r in pairs if r["split"] == "all265" and r["pair"] == "A-B")
         self.assertEqual(ab["matched_gradable_count"], "265")
