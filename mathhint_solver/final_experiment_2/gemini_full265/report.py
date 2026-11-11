@@ -231,6 +231,14 @@ def _readme(output, config, state, summary, review_rows, cases, questions):
         "## 화면을 여는 방법", "",
         "GitHub의 HTML 파일 페이지는 실행 화면이 아니다. 저장소 ZIP 전체를 압축 해제한 뒤 `results/final_experiment_2/gemini_full265/report.html`을 브라우저로 연다. 같은 폴더의 viewer_assets와 기존 mathhint_analysis/viewer_assets/vendor의 로컬 수식·Markdown·폰트가 함께 필요하다. HTML 하나만 내려받으면 충분하지 않다. 외부 렌더링 서버·로그인·추가 API 없이 읽는다.", "",
         "[2차 연구 목차](../README.md) · [변경하지 않은 기존80 결과](../gemini_comparison/README.md)", ""]
+    if (Path(output).parents[2] / "data/curation/answer_key_corrections.json").is_file():
+        lines += ["", "## 원본 정답표 보존과 검증된 정정 점수", "",
+                  "원본 정답표 기준 수치는 역사적 기록으로 보존한다. "
+                  "trig_1_010의 확인된 오류(④→②)를 반영한 [정정 점수표](key_corrected/README.md)를 "
+                  "문항별·전체265/학습185/테스트80별로 별도 제공한다. "
+                  "미완료를 오답 처리하지 않으며 API 호출 없이 재생성된다.",
+                  "[정정 규칙](../../../data/curation/answer_key_corrections.json) · "
+                  "[검토 기록](../../../docs/answer_key_audit_2026-11-11.md)", ""]
     (Path(output) / "README.md").write_text("\n".join(lines), encoding="utf-8")
 
 
