@@ -1,8 +1,12 @@
 """명시적으로 승인한 전체265 확장. 공통 Gemini 호출·제한·저장은 기존 구현을 사용한다."""
 
-from datetime import datetime, timezone
+import ast
+from datetime import datetime, timedelta, timezone
+import json
+import math
 import os
 from pathlib import Path
+import re
 
 from ... import CompareGeneration as comparison
 from ..gemini_comparison.budget import BudgetRateLimiter
@@ -10,6 +14,99 @@ from ..gemini_comparison.run import transport_request, load_data
 from .common import (ROOT, OUTPUT, METHODS, DEFAULT_POLICY, append_jsonl, read_json,
     read_jsonl, write_json, safe_output, source_output, all_request_events, execution_lock, verify_preservation)
 from .plan import prepare_plan, initialize, dry_run, reuse_existing, MODEL
+
+
+def provider_quota_observation(records, events):
+    """저장된 마지막429의 관측 근거만 구조화한다. 현재 잔여량·일일 초기화는 추정하지 않는다."""
+    for row in reversed(records):
+        attempts = row.get("attempts", [])
+        matching = [(index, attempt) for index, attempt in enumerate(attempts, 1)
+                    if attempt.get("code") == 429 or (attempt.get("error") or {}).get("code") == 429]
+        if matching:
+            attempt_index, attempt = matching[-1]
+            error = attempt.get("error") or attempt
+        elif (row.get("error") or {}).get("code") == 429:
+            attempt_index, attempt, error = None, None, row["error"]
+        else:
+            continue
+        message = error.get("message", "")
+        payload = {}
+        if isinstance(message, str) and "{" in message:
+            # google-genai가 보존한 Python dict repr 또는 JSON만 읽는다. eval을 사용하지 않는다.
+            fragment = message[message.index("{"):]
+            for parse in (ast.literal_eval, json.loads):
+                try:
+                    value = parse(fragment)
+                except (ValueError, SyntaxError, TypeError, RecursionError):
+                    continue
+                if isinstance(value, dict):
+                    payload = value.get("error", value)
+                    break
+        details = payload.get("details", []) if isinstance(payload, dict) else []
+        violations, delays = [], []
+        for detail in details if isinstance(details, list) else []:
+            if not isinstance(detail, dict):
+                continue
+            if str(detail.get("@type", "")).endswith("google.rpc.QuotaFailure"):
+                for violation in detail.get("violations", []):
+                    if not isinstance(violation, dict):
+                        continue
+                    value = violation.get("quotaValue")
+                    value = int(value) if str(value).isdigit() else value
+                    violations.append({"quota_id": violation.get("quotaId"),
+                        "quota_metric": violation.get("quotaMetric"), "quota_value": value,
+                        "quota_dimensions": violation.get("quotaDimensions", {}),
+                        "description": violation.get("description")})
+            elif str(detail.get("@type", "")).endswith("google.rpc.RetryInfo"):
+                delay = re.fullmatch(r"(\d+(?:\.\d+)?)s", str(detail.get("retryDelay", "")))
+                if delay and math.isfinite(float(delay[1])):
+                    delays.append(float(delay[1]))
+        context = {name: row.get(name) for name in ("execution_id", "id", "condition")}
+        related = [event for event in events if all(event.get(name) == value for name, value in context.items())]
+        quota = next((event for event in reversed(related) if event.get("event") == "quota_error"), None)
+        cooldown = next((event for event in reversed(related)
+                         if event.get("event") == "cooldown_updated" and event.get("code") == 429), None)
+        observed_at = quota.get("time") if quota else (row.get("completed_at") or (attempt or {}).get("started_at"))
+        retry_delay = max(delays) if delays else None
+        earliest = None
+        if retry_delay is not None and observed_at:
+            try:
+                observed = datetime.fromisoformat(observed_at.replace("Z", "+00:00"))
+                if observed.tzinfo is not None:
+                    earliest = (observed + timedelta(seconds=retry_delay)).isoformat()
+            except (ValueError, TypeError, OverflowError):
+                pass
+        daily = bool((quota or {}).get("daily_quota")) or any(re.search(
+            r"per[ _-]*day|requests\s*/\s*day|\bdaily\b|\brpd\b",
+            str(violation.get("quota_id")) + " " + str(violation.get("description")), re.I)
+            for violation in violations)
+        dimensions_model = next((item["quota_dimensions"].get("model") for item in violations
+                                 if isinstance(item["quota_dimensions"], dict) and item["quota_dimensions"].get("model")), None)
+        return {"status_code": 429, "daily_quota": daily, "model": dimensions_model or row.get("model"),
+            "quota_violations": violations, "retry_info_delay_seconds": retry_delay,
+            "observed_at": observed_at, "observed_at_source": "quota_error event" if quota else "saved response timestamp",
+            "earliest_retry_from_response": earliest,
+            "recorded_cooldown_until": (cooldown or {}).get("cooldown_until"),
+            "confirmed_daily_reset": False, "provider_full_limits_confirmed": False,
+            "note": "과거429의 관측값이다. RetryInfo 만료는 재시도 가능 최저 시각이며 일일 초기화 보장이 아니다. 기록된 제한기 대기에는 별도 안전 여유가 있다. 전체 공급자 한도·현재 잔여량은 미확인이다.",
+            "source": {**context, "response_log": "responses.jsonl", "response_record_sha256": comparison.digest(row),
+                "request_sha256": row.get("request_sha256"), "attempt_index": attempt_index,
+                "attempt_sha256": comparison.digest(attempt) if attempt is not None else None,
+                "event_log": "execution_runs/request_events.jsonl",
+                "quota_event_sha256": comparison.digest(quota) if quota else None,
+                "cooldown_event_sha256": comparison.digest(cooldown) if cooldown else None}}
+    return None
+
+
+def refresh_quota_observation(root=ROOT, output=OUTPUT):
+    """API/prepare 없이 state의 관측 메타데이터만 보완하며 기존 상태·제한기 스냅샷은 유지한다."""
+    output = safe_output(root, output)
+    with execution_lock(root, output):
+        state = read_json(output / "state.json")
+        state["provider_quota_observation"] = provider_quota_observation(
+            read_jsonl(output / "responses.jsonl"), read_jsonl(output / "execution_runs/request_events.jsonl"))
+        write_json(output / "state.json", state)
+    return state
 
 
 def _load_policy(output, supplied=None):
@@ -29,6 +126,7 @@ def _load_policy(output, supplied=None):
 
 def state_record(output, config, plan, *, status, reason=None, limiter=None):
     output = Path(output)
+    response_history = read_jsonl(output / "responses.jsonl")
     records = comparison.load_completed(output, comparison.digest(config))
     expected = {(row["id"], row["method"]) for row in plan}
     if set(records) - expected:
@@ -50,7 +148,7 @@ def state_record(output, config, plan, *, status, reason=None, limiter=None):
         "config_id": comparison.digest(config), "split": "all", "experiment_scope": "full265",
         "expected_requests": len(plan), "successful_requests": len(successes),
         "failed_requests": len(failures), "saved_responses": len(records),
-        "response_log_entries": len(read_jsonl(output / "responses.jsonl")),
+        "response_log_entries": len(response_history),
         "pending_count": len(pending), "pending_requests": pending, "by_split": by_split,
         "reused_successes": sum(row.get("response_origin") == "reused_exact_request" for row in successes),
         "new_successes": sum(row.get("response_origin") == "new_api_call" for row in successes),
@@ -61,6 +159,8 @@ def state_record(output, config, plan, *, status, reason=None, limiter=None):
             "인증·접근 권한/요청 모델 지원을 복구" if status in ("missing_api_key", "permission_denied") else
             "기록된 대기시간과 실행 예산을 확인하고 미완료만 실행",
         "provider_daily_reset_time": None,
+        "provider_quota_observation": provider_quota_observation(response_history,
+            read_jsonl(output / "execution_runs/request_events.jsonl")),
         "resume_note": "성공 요청은 해시를 검증해 재사용한다. 환경 종료 후 자동 예약은 설정하지 않았다.",
         "user_authorized_additional_train185": True,
         "training_scope_note": "train185는 모델 가중치 학습에 사용된 문항의 예측이다. 전체265 혼합값은 독립 테스트 성능이 아니다."}

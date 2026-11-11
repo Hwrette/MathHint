@@ -6,7 +6,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from mathhint_solver.final_experiment_2.gemini_full265.report import all_scope_metrics, build_full_viewer, key_comparison
+from mathhint_solver.final_experiment_2.gemini_full265.report import all_scope_metrics, build_full_viewer, key_comparison, execution_notice
 from mathhint_solver.final_experiment_2.gemini_full265.verify import preservation_check, reused_scientific_fields_equal, _same_csv_value, saved_metric_checks
 from mathhint_solver.final_experiment_2.gemini_comparison.report import summaries, paired_tests, TOKEN_FIELDS
 from mathhint_solver.final_experiment_2.gemini_comparison.viewer import METHODS
@@ -34,6 +34,42 @@ def saved_rows(questions):
 
 
 class Full265ReportTests(unittest.TestCase):
+    def test_execution_notice_preserves_partial_counts_failure_and_resume(self):
+        state = {"status": "daily_quota_exhausted", "expected_requests": 1060,
+                 "successful_requests": 515, "reused_successes": 320, "new_successes": 195,
+                 "pending_count": 545, "failed_requests": 1,
+                 "pending_requests": [{"id": "diff_2_022", "condition": "D", "last_status": "stopped_after_attempt"},
+                                      {"id": "unattempted", "condition": "A", "last_status": "not_executed"}],
+                 "resume_command": "python -m package generate --clear-stop",
+                 "provider_quota_observation": {"daily_quota": True, "model": "gemini-3.1-flash-lite",
+                    "quota_violations": [{"quota_id": "GenerateRequestsPerDayPerProjectPerModel-FreeTier", "quota_value": 500}],
+                    "retry_info_delay_seconds": 26943,
+                    "earliest_retry_from_response": "2026-11-11T08:00:00+00:00",
+                    "recorded_cooldown_until": "2026-11-11T08:00:00.861426+00:00",
+                    "confirmed_daily_reset": False, "provider_full_limits_confirmed": False}}
+        before = deepcopy(state)
+        text = "\n".join(execution_notice(state))
+        self.assertIn("성공 **515/1060**", text)
+        self.assertIn("기존80 재사용 320 + 신규 195", text)
+        self.assertIn("미완료 **545**(마지막 실패 1 + 미실행 544)", text)
+        self.assertIn("일일 할당량 제한으로 중단", text)
+        self.assertIn("`D/diff_2_022`", text)
+        self.assertNotIn("`A/unattempted`", text)
+        self.assertIn(state["resume_command"], text)
+        self.assertIn("성공 응답은 재호출하지 않으며", text)
+        self.assertIn("자동 재개 예약은 설정하지 않았다", text)
+        self.assertIn("전체265의 효과를 확정하지 않는다", text)
+        self.assertIn("|무료 일일 요청 한도|500 · 모델 `gemini-3.1-flash-lite`", text)
+        self.assertIn("|RetryInfo 대기|26943초|", text)
+        self.assertIn("2026-11-11T08:00:00.861426+00:00", text)
+        self.assertIn("공급자가 확정한 일일 한도 초기화 시각이 아니다", text)
+        self.assertIn("공급자의 전체 호출·토큰 한도나 남은 예산을 확인한 것은 아니다", text)
+        self.assertEqual(state, before)
+        missing_evidence = {key: value for key, value in state.items() if key != "provider_quota_observation"}
+        self.assertNotIn("|무료 일일 요청 한도|", "\n".join(execution_notice(missing_evidence)))
+        self.assertNotIn("2026-11-11T08:00", "\n".join(execution_notice(missing_evidence)))
+        self.assertEqual(execution_notice({"pending_count": 0}), [])
+
     def test_key_comparison_uses_paired_changes_and_weighted_token_ratio(self):
         questions = [question("train", "train", 100, (False, True, False, True)),
                      question("test", "test", 300, (True, False, True, True))]

@@ -154,18 +154,54 @@ def key_comparison(questions, state):
     return lines + [""]
 
 
+def execution_notice(state):
+    """저장된 실행 상태를 먼저 보여 준다. 대기시각을 공급자 초기화시각으로 바꾸지 않는다."""
+    pending = state.get("pending_count", 1060)
+    if not pending:
+        return []
+    failures = state.get("failed_requests", 0)
+    quota_blocked = state.get("status") == "daily_quota_exhausted"
+    lines = ["## 현재 실행 상태", "",
+             "**일일 할당량 제한으로 중단 · 전체 실험 미완료**" if quota_blocked else "**부분 완료 · 전체 실험 미완료**", "",
+             f"성공 **{state.get('successful_requests', 0)}/{state.get('expected_requests', 1060)}** "
+             f"(기존80 재사용 {state.get('reused_successes', 0)} + 신규 {state.get('new_successes', 0)}), "
+             f"미완료 **{pending}**(마지막 실패 {failures} + 미실행 {pending-failures})다. "
+             "기존80 결과는 그대로 보존했으며, 아래 수치는 실제 성공 응답의 부분 참고값으로 전체265의 효과를 확정하지 않는다.", ""]
+    failed = [r for r in state.get("pending_requests", []) if r.get("last_status") not in (None, "not_executed")]
+    if failed:
+        lines += ["재시도할 마지막 실패: " + ", ".join(f"`{r['condition']}/{r['id']}`" for r in failed) + ".", ""]
+    if quota_blocked:
+        observation = state.get("provider_quota_observation") or {}
+        violations = observation.get("quota_violations", [])
+        if violations:
+            lines += ["실제429 응답에서 관측한 제한은 다음과 같다. 공급자의 전체 호출·토큰 한도나 남은 예산을 확인한 것은 아니다.", "",
+                      "|관측 항목|저장된 값|", "|---|---|"]
+            for violation in violations:
+                identifier = violation.get("quota_id") or violation.get("quota_metric") or "미제공"
+                label = "무료 일일 요청 한도" if "free" in identifier.lower() and "day" in identifier.lower() else "관측 할당량"
+                value = violation.get("quota_value")
+                lines.append(f"|{label}|{value if value is not None else '미제공'} · 모델 `{observation.get('model') or '미제공'}` · `{identifier}`|")
+            delay = observation.get("retry_info_delay_seconds")
+            lines += [f"|RetryInfo 대기|{str(delay)+'초' if delay is not None else '미제공'}|",
+                      f"|응답에서 계산한 이른 재시도 시각|`{observation.get('earliest_retry_from_response') or '미제공'}`|",
+                      f"|기록된 안전 대기 시각|`{observation.get('recorded_cooldown_until') or '미제공'}`|", "",
+                      "위 시각은 응답의 재시도 지시와 로컬 안전 여유를 보존한 값이며, **공급자가 확정한 일일 한도 초기화 시각이 아니다.** "
+                      "로컬 RPD 설정은 공급자 실제 한도와 구분한다. [429 원문·근거 해시 및 재개 상태](state.json)를 확인한다.", ""]
+        lines += ["공급자 일일 제한과 기록된 재시도 대기를 확인한 뒤 아래 명령으로 미완료 요청만 재개한다. 성공 응답은 재호출하지 않으며, 자동 재개 예약은 설정하지 않았다.", "",
+                  "```bash", state["resume_command"], "```", ""]
+    return lines
+
+
 def _readme(output, config, state, summary, review_rows, cases, questions):
     scopes = {scope: [row for row in summary if row["split"] == scope] for scope in ("all265", "train", "test")}
     execution_link = "[실행 이력](execution_runs/)" if (Path(output) / "execution_runs").is_dir() else "실제 실행 기록은 아직 없음"
     lines = ["# 전체265문항 Gemini A/B/C/D 비교", "",
-        "A 문제만 · B 확정 선형회귀 예측 토큰 · C 확정 MLP 예측 토큰 · D 실제 원본 해설 토큰(오라클).", "",
+        "A 문제만 · B 확정 선형회귀 예측 토큰 · C 확정 MLP 예측 토큰 · D 실제 원본 해설 토큰(오라클).", ""]
+    lines += execution_notice(state)
+    lines += [
         "기존 [테스트80 결과](../gemini_comparison/README.md)는 보존했다. 동일한320개 요청의 성공 응답·사용량·검토 기록을 출처 해시로 재사용하고 학습185×4조건을 추가한다. 모델 재학습·어휘 변경·문제 원문 변경은 없다.", "",
         "**전체265는 학습185와 테스트80의 혼합 참고 결과다. 학습185의 B/C는 해당 모델이 학습했던 문항의 인샘플 예측이며 새로운 문제의 일반화 성능이 아니다.** 테스트80은 기존 평가로 별도 표시한다. D는 정답 해설 정보가 있는 진단 조건이다.", "",
         "먼저 [수식 비교 화면](report.html), [문항265개 비교 CSV](question_comparison.csv), [풀이·오류 사례](case_reports/README.md)를 연다.", ""]
-    if state.get("pending_count", 1060):
-        lines += [f"**진행 중:** 현재 성공 {state.get('successful_requests', 0)}/1060, 미완료 {state.get('pending_count', 1060)}다. "
-                  "아래 정답률은 실제 채점 가능한 성공 응답만의 부분 결과이며 전체265의 성능으로 확정할 수 없다. "
-                  "초기에는 재사용한 테스트80만 반영될 수 있고 학습185 미실행을 오답으로 채우지 않는다.", ""]
     lines += key_comparison(questions, state)
     lines += ["## 전체265 · 혼합 참고 결과", "", *_table(scopes["all265"]), "",
         "![전체265 정답률](figures/accuracy_all265.png)", "", "![전체265 사용량](figures/tokens_all265.png)", ""]
@@ -174,7 +210,7 @@ def _readme(output, config, state, summary, review_rows, cases, questions):
             f"![{title} 정답률](figures/accuracy_{scope}.png)", "", f"![{title} 사용량](figures/tokens_{scope}.png)", "",
             f"[이 범위의 문항별 CSV](question_comparison_{scope}.csv) · [토큰 차이 그림](figures/token_differences_{scope}.png)", ""]
     lines += ["## 실행·재사용·재개", "", f"상태: **{state.get('status', 'unknown')}** · 성공 {state.get('successful_requests', 0)}/1060 · 미완료 {state.get('pending_count', 1060)}. " + (state.get("reason") or ""), "",
-        "무료 API라도 공급자 요청·토큰 한도는 존재한다. 사용자의 전체265 실행 지시에 따라 추가185를 요청하지만, 공급자 한도가 확인됐다고 간주하지 않는다. 로컬 실행 상한과 실제429/503·Retry-After/RetryInfo를 구분하여 기록한다.", "",
+        "무료 API라도 공급자 요청·토큰 한도는 존재한다. 상단의 실제429 관측값은 공급자 할당량 전체를 확인했다는 뜻은 아니다. 로컬 실행 상한(예: RPD1400)은 공급자 한도가 아니며, 실제429/503·Retry-After/RetryInfo와 구분해 기록한다.", "",
         "모델은 `gemini-3.1-flash-lite`, temperature0, thinking minimal, max output8192이며 A/B/C/D 문제 원문과 기본 시스템 지시가 동일하다. B/C/D는 동일한 양수·음수보정·상위20·반올림전순위·어휘순동점·소수3자리 규칙을 사용한다.", "",
         "[설정](config.json) · [실제 요청 감사](prompt_audit/) · [응답 원문](responses.jsonl) · [실행 상태/미완료 목록](state.json) · " + execution_link + " · [기존 자료 보존 해시](preservation_manifest.json) · [검증](validation.json)", "",
         "```bash", "python -m mathhint_solver.final_experiment_2.gemini_full265 preflight",
