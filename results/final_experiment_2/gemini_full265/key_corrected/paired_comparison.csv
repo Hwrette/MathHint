@@ -1,11 +1,11 @@
 ﻿split,pair,matched_gradable_count,excluded_count,both_correct,first_correct_second_wrong,first_wrong_second_correct,both_wrong,p_exact_mcnemar,p_holm_within_split
-all265,A-B,149,116,146,1,2,0,1.0,1.0
+all265,A-B,228,37,222,2,2,2,1.0,1.0
 all265,A-C,129,136,127,1,1,0,1.0,1.0
 all265,A-D,128,137,126,1,1,0,1.0,1.0
 all265,B-C,129,136,128,0,0,1,1.0,1.0
 all265,B-D,128,137,127,0,0,1,1.0,1.0
 all265,C-D,128,137,127,0,0,1,1.0,1.0
-train,A-B,69,116,68,0,1,0,1.0,1.0
+train,A-B,148,37,144,1,1,2,1.0,1.0
 train,A-C,49,136,49,0,0,0,1.0,1.0
 train,A-D,48,137,48,0,0,0,1.0,1.0
 train,B-C,49,136,49,0,0,0,1.0,1.0

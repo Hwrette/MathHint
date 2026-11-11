@@ -7,11 +7,11 @@ Other rows retain the existing original key; this is not independent proof for e
 |Split|Condition|Gradable|Original correct|Corrected correct|Corrected accuracy|
 |---|---|---:|---:|---:|---:|
 |all265|A|265|258|259|97.74%|
-|all265|B|149|147|148|99.33%|
+|all265|B|228|223|224|98.25%|
 |all265|C|129|127|128|99.22%|
 |all265|D|128|126|127|99.22%|
 |train|A|185|180|180|97.30%|
-|train|B|69|69|69|100.00%|
+|train|B|148|145|145|97.97%|
 |train|C|49|49|49|100.00%|
 |train|D|48|48|48|100.00%|
 |test|A|80|78|79|98.75%|
