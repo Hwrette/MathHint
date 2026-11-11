@@ -6,7 +6,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from mathhint_solver.final_experiment_2.gemini_full265.report import all_scope_metrics, build_full_viewer, key_comparison, execution_notice
+from mathhint_solver.final_experiment_2.gemini_full265.report import all_scope_metrics, build_full_viewer, key_comparison, execution_notice, ungradable_notice
 from mathhint_solver.final_experiment_2.gemini_full265.verify import preservation_check, reused_scientific_fields_equal, _same_csv_value, saved_metric_checks
 from mathhint_solver.final_experiment_2.gemini_comparison.report import summaries, paired_tests, TOKEN_FIELDS
 from mathhint_solver.final_experiment_2.gemini_comparison.viewer import METHODS
@@ -34,6 +34,23 @@ def saved_rows(questions):
 
 
 class Full265ReportTests(unittest.TestCase):
+    def test_ungradable_notice_separates_success_and_grade_denominators(self):
+        questions = [question("grade_pending", "train", 100, (True, None, None, True)),
+                     question("graded", "test", 200)]
+        questions[0]["conditions"]["deep_learning_hint"]["status"] = "not_run"
+        before = deepcopy(questions)
+        text = "\n".join(ungradable_notice(questions))
+        self.assertIn("|B 선형회귀 예측 토큰|2|1|1|", text)
+        self.assertIn("[grade_pending](report.html#grade_pending)", text)
+        self.assertIn("[사례](case_reports/grade_pending.md)", text)
+        self.assertNotIn("|A 문제만|", text)
+        self.assertNotIn("|C 딥러닝 예측 토큰|", text)
+        self.assertIn("분모가 다르면 조건별 정답률을 단순 비교해 개선이라고 판정하지 않는다", text)
+        self.assertIn("채점 불가를 오답으로 바꾸거나", text)
+        self.assertIn("풀이의 수학적 타당성은 별도 검토", text)
+        self.assertEqual(questions, before)
+        self.assertEqual(ungradable_notice([question("fully_graded", "test", None)]), [])
+
     def test_execution_notice_preserves_partial_counts_failure_and_resume(self):
         state = {"status": "daily_quota_exhausted", "expected_requests": 1060,
                  "successful_requests": 515, "reused_successes": 320, "new_successes": 195,

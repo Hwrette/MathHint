@@ -211,6 +211,27 @@ def execution_notice(state, questions=()):
     return lines
 
 
+def ungradable_notice(questions):
+    """성공했지만 저장된 정오 판정이 없는 응답과 서로 다른 채점 분모를 표시한다."""
+    selected = [q for q in questions if q["expected_generation"]]
+    rows = []
+    for method in METHODS:
+        successes = [(q, q["conditions"].get(method["key"]) or {}) for q in selected
+                     if (q["conditions"].get(method["key"]) or {}).get("status") == "success"]
+        ungradable = [q for q, response in successes if response.get("evaluation", {}).get("correct") is None]
+        if not ungradable:
+            continue
+        graded = sum(type(response.get("evaluation", {}).get("correct")) is bool for _, response in successes)
+        links = ", ".join(f"[{q['id']}](report.html#{q['id']}) ([사례](case_reports/{q['id']}.md))" for q in ungradable)
+        rows.append(f"|{method['label']}|{len(successes)}|{graded}|{len(ungradable)}|{links}|")
+    if not rows:
+        return []
+    return ["## API 성공과 채점 가능 응답의 차이", "",
+            "아래는 API 성공 응답이지만 저장된 정오 판정이 없는 항목이다. **채점 가능한 응답의 분모가 다르면 조건별 정답률을 단순 비교해 개선이라고 판정하지 않는다.** "
+            "기존 정오 판정과 정정 점수는 그대로 보존하며, 채점 불가를 오답으로 바꾸거나 값이 없는 항목을0으로 채우지 않는다. 풀이의 수학적 타당성은 별도 검토한다.", "",
+            "|조건|API 성공|채점 가능|채점 불가|직접 확인할 문항|", "|---|---:|---:|---:|---|", *rows, ""]
+
+
 def _readme(output, config, state, summary, review_rows, cases, questions):
     scopes = {scope: [row for row in summary if row["split"] == scope] for scope in ("all265", "train", "test")}
     execution_link = "[실행 이력](execution_runs/)" if (Path(output) / "execution_runs").is_dir() else "실제 실행 기록은 아직 없음"
@@ -222,6 +243,7 @@ def _readme(output, config, state, summary, review_rows, cases, questions):
         "**전체265는 학습185와 테스트80의 혼합 참고 결과다. 학습185의 B/C는 해당 모델이 학습했던 문항의 인샘플 예측이며 새로운 문제의 일반화 성능이 아니다.** 테스트80은 기존 평가로 별도 표시한다. D는 정답 해설 정보가 있는 진단 조건이다.", "",
         "먼저 [수식 비교 화면](report.html), [문항265개 비교 CSV](question_comparison.csv), [풀이·오류 사례](case_reports/README.md)를 연다.", ""]
     lines += key_comparison(questions, state)
+    lines += ungradable_notice(questions)
     lines += ["## 전체265 · 혼합 참고 결과", "", *_table(scopes["all265"]), "",
         "![전체265 정답률](figures/accuracy_all265.png)", "", "![전체265 사용량](figures/tokens_all265.png)", ""]
     for scope, title in (("train", "학습185 · 인샘플 예측"), ("test", "기존 테스트80 · 저장 성공 응답 재사용")):

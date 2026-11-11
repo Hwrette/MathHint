@@ -1,9 +1,9 @@
 {
   "planned_response_count": 1060,
   "review_status_counts": {
-    "AI_assisted_reviewed": 710,
-    "suspected_error": 41,
-    "not_generated": 309
+    "AI_assisted_reviewed": 782,
+    "suspected_error": 49,
+    "not_generated": 229
   },
   "human_confirmed_count": 0,
   "additional_review_api_calls": 0,
