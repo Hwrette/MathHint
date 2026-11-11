@@ -285,10 +285,6 @@ def _model_plot(base, values):
 def report(root=ROOT):
     root = Path(root).resolve()
     base = root / "results/final_experiment_2"
-    has_verified_keys = (root / "data/curation/answer_key_corrections.json").is_file()
-    if has_verified_keys:
-        from mathhint_analysis.VerifiedAnswerKey import run as refresh_corrected_scores
-        refresh_corrected_scores(root)  # stored CSV only; no Gemini calls or model training
     data = read_json(base / "solution_data/summary.json")
     values = model_rows(base)
     if values:
@@ -321,10 +317,6 @@ def report(root=ROOT):
              "|nn.Sequential 비선형 모델|[MLP 결과](deep_learning/README.md) · [문항별 예측](deep_learning/question_comparison.csv)|",
              "|Gemini A/B/C/D|[정답·사용량](gemini_comparison/README.md) · [네 풀이 비교 HTML](gemini_comparison/report.html)|",
              "|모든 연구 해석과 한계|[종합 보고서](final_report.md) · [전체 검증](validation.json)|"]
-    if has_verified_keys:
-        links.insert(-1, "|검증된 정답표 기준 성적|[테스트80 정정 결과](gemini_comparison/key_corrected/README.md) · "
-                    "[전체265 부분 정정 결과](gemini_full265/key_corrected/README.md) · "
-                    "[265문항 정답 검토 근거](../../docs/answer_key_audit_2026-11-11.md)|")
     api_section = ["## Gemini 네 조건의 실제 풀이", "", f"현재 실행 상태: **{scope}**. "
                    "완료하지 않은 응답을 오답이나0토큰으로 집계하지 않는다.", ""]
     if api:
@@ -388,14 +380,6 @@ def report(root=ROOT):
               "어텐션 기반 표현이나 출력 제약·형식 검증은 향후 방향이며 새로운 미관측 문제에서 재검증해야 한다.", "",
               "[공통 데이터](solution_data/README.md) · [선형 결과](regression/README.md) · "
               "[비선형 결과](deep_learning/README.md) · [API 결과](gemini_comparison/README.md) · [전체 검증](validation.json)", ""]
-    if has_verified_keys:
-        final += ["", "## 8. 정답표 검증과 정정 기준 성적", "",
-                  "원본 정답표를 보존하면서 수학적으로 검산된 trig_1_010 답안 오류(④→②)를 "
-                  "별도 정정표로 반영했다. 본 보고서의 기존 원본 정답 기준 수치는 과거 기록이며, "
-                  "결론에는 [검증된 정정 테스트80 점수](gemini_comparison/key_corrected/README.md)와 "
-                  "[부분 완료 전체265 점수](gemini_full265/key_corrected/README.md)를 구별하여 사용한다. "
-                  "새 API 응답을 만들거나 기존 응답·해시를 변경하지 않았다.",
-                  "[전체265문항 정답표 검토 및 수정 근거](../../docs/answer_key_audit_2026-11-11.md)", ""]
     (base / "final_report.md").write_text("\n".join(final), encoding="utf-8")
     return {"models_frozen": len(manifests), "api_status": scope, "training_performed": False, "api_calls": 0}
 
