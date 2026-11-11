@@ -1,15 +1,25 @@
 {
   "schema_version": 1,
   "source_csv": "results/final_experiment_2/gemini_full265/question_comparison.csv",
-  "source_csv_sha256": "bb13ccfae4a2f1637fc35002df716fa4d394a1bf712d22b855ac654362ae6312",
+  "source_csv_blob_sha": "ec3e56d861a95d9564208919e574d1227dd551a8",
   "correction_registry": "data/curation/answer_key_corrections.json",
-  "correction_registry_sha256": "aff51759a2b8311dbcdecaa9a839a43f94c664cd0a34c1b465903ddb4d58213a",
+  "correction_registry_blob_sha": "b97896b90ea0be0b791ea5a79bc655d5cf89e62c",
+  "reviewed_response_registry": "data/curation/answer_response_reviews.json",
+  "reviewed_response_registry_blob_sha": "2671fcb458cf717768bc418c3cbaed24bb9344f6",
   "verified_correction_ids": [
     "trig_1_010"
+  ],
+  "reviewed_incorrect_final_answers": [
+    {
+      "experiment": "gemini_full265",
+      "id": "trig_1_044",
+      "condition": "B",
+      "corrected_grade": false
+    }
   ],
   "question_count": 265,
   "source_mutated": false,
   "api_requests_made": 0,
-  "grading_rule": "Regrade only verified key-conflict IDs from saved explicit answer; retain original score alongside corrected score",
-  "caution": "Other source keys have not been independently mathematically proved. Unfinished requests are excluded."
+  "grading_rule": "Independent verified correction of incorrect source key and of ungradable-but-confirmed-wrong final answer; preserve original flags and raw outputs",
+  "caution": "API pending is not wrong. Future parser abstentions require checking actual output before assigning a mathematical grade."
 }
