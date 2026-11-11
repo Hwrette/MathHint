@@ -9502,6 +9502,24 @@
       ],
       "alternative_solution": false,
       "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_2_022",
+      "condition": "C",
+      "response_sha256": "8819b6d193ea98d00034c7dc24e718a723ef18a61b7f0128efd9dfedf615d974",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "접점 a에서 도함수 8a³−4가 직선 기울기 4와 같으므로 a=1이고, 두 식의 함숫값을 일치시켜 k−2=9, k=11을 얻는다. 미분과 대입 계산이 타당하며 최종답과 원본 정답이 일치한다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(a) = 8a^3 - 4 = 4$",
+        "$-2 + k = 9$",
+        "$k = 11$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
     }
   ]
 }

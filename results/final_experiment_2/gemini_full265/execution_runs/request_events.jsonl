@@ -216,3 +216,7 @@
 {"event":"request_start","time":"2026-11-11T00:28:34.987414+00:00","execution_id":"2026-11-11T001324_732591+0000","id":"diff_2_021","condition":"A","split":"train"}
 {"event":"request_start","time":"2026-11-11T00:28:44.987821+00:00","execution_id":"2026-11-11T001324_732591+0000","id":"diff_2_022","condition":"A","split":"train"}
 {"event":"request_start","time":"2026-11-11T00:28:54.988144+00:00","execution_id":"2026-11-11T001324_732591+0000","id":"diff_2_022","condition":"B","split":"train"}
+{"event":"request_start","time":"2026-11-11T00:30:46.194911+00:00","execution_id":"2026-11-11T003046_149177+0000","id":"diff_2_022","condition":"C","split":"train"}
+{"event":"request_start","time":"2026-11-11T00:30:56.195239+00:00","execution_id":"2026-11-11T003046_149177+0000","id":"diff_2_022","condition":"D","split":"train"}
+{"event":"quota_error","time":"2026-11-11T00:30:56.860528+00:00","daily_quota":true,"retry_after_seconds":26943.0,"execution_id":"2026-11-11T003046_149177+0000","id":"diff_2_022","condition":"D","split":"train"}
+{"event":"cooldown_updated","code":429,"cooldown_until":"2026-11-11T08:00:00.861426+00:00","source":"recorded Retry-After/RetryInfo or fallback backoff; provider reset not inferred","time":"2026-11-11T00:30:56.861436+00:00","execution_id":"2026-11-11T003046_149177+0000","id":"diff_2_022","condition":"D","split":"train"}

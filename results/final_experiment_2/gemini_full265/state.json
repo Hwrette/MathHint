@@ -1,32 +1,24 @@
 {
-  "status": "partial_complete",
-  "reason": "이번 실행의 신규 요청 예산에 도달했습니다.",
-  "updated_at": "2026-11-11T00:28:58.763867+00:00",
+  "status": "daily_quota_exhausted",
+  "reason": "API가 일일 할당량 소진을 보고했습니다. 장시간 대기하지 않습니다.",
+  "updated_at": "2026-11-11T00:30:58.015071+00:00",
   "config_id": "054e3feed73f033e910825c35d9a7332fb90a161d453525bb63edccce42a7cbe",
   "split": "all",
   "experiment_scope": "full265",
   "expected_requests": 1060,
-  "successful_requests": 514,
-  "failed_requests": 0,
-  "saved_responses": 514,
-  "response_log_entries": 514,
-  "pending_count": 546,
+  "successful_requests": 515,
+  "failed_requests": 1,
+  "saved_responses": 516,
+  "response_log_entries": 516,
+  "pending_count": 545,
   "pending_requests": [
-    {
-      "id": "diff_2_022",
-      "condition": "C",
-      "method": "deep_learning_hint",
-      "split": "train",
-      "request_sha256": "29c6044ac2b13ec34234448a55d477a2dade616ff7d20fb3337f204cf5a5ea70",
-      "last_status": "not_executed"
-    },
     {
       "id": "diff_2_022",
       "condition": "D",
       "method": "oracle_hint",
       "split": "train",
       "request_sha256": "35e988dd74851f8d184dac257b0d01bc9dcfe72be04bbba65246b024f0439b48",
-      "last_status": "not_executed"
+      "last_status": "stopped_after_attempt"
     },
     {
       "id": "diff_2_025",
@@ -4389,28 +4381,28 @@
     },
     "train": {
       "expected_requests": 740,
-      "successful_requests": 194,
-      "pending_requests": 546
+      "successful_requests": 195,
+      "pending_requests": 545
     }
   },
   "reused_successes": 320,
-  "new_successes": 194,
+  "new_successes": 195,
   "safe_to_resume": true,
   "resume_command": "python -m mathhint_solver.final_experiment_2.gemini_full265 generate",
-  "resume_prerequisites": "기록된 대기시간과 실행 예산을 확인하고 미완료만 실행",
+  "resume_prerequisites": "공급자 실제 일일 제한/초기화 또는 로컬rolling24h 상한을 확인",
   "provider_daily_reset_time": null,
   "resume_note": "성공 요청은 해시를 검증해 재사용한다. 환경 종료 후 자동 예약은 설정하지 않았다.",
   "user_authorized_additional_train185": true,
   "training_scope_note": "train185는 모델 가중치 학습에 사용된 문항의 예측이다. 전체265 혼합값은 독립 테스트 성능이 아니다.",
   "limiter": {
-    "new_request_starts": 80,
-    "rolling_minute_starts": 5,
-    "rolling_hour_starts": 200,
-    "rolling_24h_starts": 476,
-    "status": "partial_complete",
-    "reason": "이번 실행의 신규 요청 예산에 도달했습니다.",
-    "daily_quota_reported": false,
-    "cooldown_remaining_seconds": 0,
+    "new_request_starts": 2,
+    "rolling_minute_starts": 2,
+    "rolling_hour_starts": 202,
+    "rolling_24h_starts": 478,
+    "status": "daily_quota_exhausted",
+    "reason": "API가 일일 할당량 소진을 보고했습니다. 장시간 대기하지 않습니다.",
+    "daily_quota_reported": true,
+    "cooldown_remaining_seconds": 26942.801821471003,
     "service_cooldown_remaining_seconds": 0,
     "resume_cooldown_note": "absolute recorded delays restored; legacy events preserve only recorded backoff, not unrecorded provider timing; daily reset remains unconfirmed",
     "policy": {
