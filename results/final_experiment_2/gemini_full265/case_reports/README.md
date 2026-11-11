@@ -12,26 +12,12 @@
 |diff_1_023|다른 타당 풀이 가능성 검토|[사례](diff_1_023.md) · [수식 화면](../report.html#diff_1_023)|
 |diff_1_033|다른 타당 풀이 가능성 검토|[사례](diff_1_033.md) · [수식 화면](../report.html#diff_1_033)|
 |diff_1_034|토큰 사용량 큰 증가|[사례](diff_1_034.md) · [수식 화면](../report.html#diff_1_034)|
-|diff_1_043|API 실패·미완료|[사례](diff_1_043.md) · [수식 화면](../report.html#diff_1_043)|
-|diff_1_044|API 실패·미완료|[사례](diff_1_044.md) · [수식 화면](../report.html#diff_1_044)|
-|diff_1_045|API 실패·미완료|[사례](diff_1_045.md) · [수식 화면](../report.html#diff_1_045)|
-|diff_1_046|API 실패·미완료|[사례](diff_1_046.md) · [수식 화면](../report.html#diff_1_046)|
-|diff_1_047|API 실패·미완료|[사례](diff_1_047.md) · [수식 화면](../report.html#diff_1_047)|
-|diff_1_048|API 실패·미완료|[사례](diff_1_048.md) · [수식 화면](../report.html#diff_1_048)|
-|diff_1_049|API 실패·미완료|[사례](diff_1_049.md) · [수식 화면](../report.html#diff_1_049)|
-|diff_2_001|API 실패·미완료|[사례](diff_2_001.md) · [수식 화면](../report.html#diff_2_001)|
-|diff_2_002|API 실패·미완료|[사례](diff_2_002.md) · [수식 화면](../report.html#diff_2_002)|
-|diff_2_003|API 실패·미완료|[사례](diff_2_003.md) · [수식 화면](../report.html#diff_2_003)|
-|diff_2_005|API 실패·미완료|[사례](diff_2_005.md) · [수식 화면](../report.html#diff_2_005)|
-|diff_2_008|API 실패·미완료|[사례](diff_2_008.md) · [수식 화면](../report.html#diff_2_008)|
-|diff_2_009|API 실패·미완료|[사례](diff_2_009.md) · [수식 화면](../report.html#diff_2_009)|
-|diff_2_011|API 실패·미완료|[사례](diff_2_011.md) · [수식 화면](../report.html#diff_2_011)|
-|diff_2_012|API 실패·미완료|[사례](diff_2_012.md) · [수식 화면](../report.html#diff_2_012)|
-|diff_2_015|API 실패·미완료|[사례](diff_2_015.md) · [수식 화면](../report.html#diff_2_015)|
-|diff_2_017|API 실패·미완료|[사례](diff_2_017.md) · [수식 화면](../report.html#diff_2_017)|
-|diff_2_019|API 실패·미완료|[사례](diff_2_019.md) · [수식 화면](../report.html#diff_2_019)|
-|diff_2_021|API 실패·미완료|[사례](diff_2_021.md) · [수식 화면](../report.html#diff_2_021)|
-|diff_2_022|API 실패·미완료|[사례](diff_2_022.md) · [수식 화면](../report.html#diff_2_022)|
+|diff_1_044|토큰 사용량 큰 증가|[사례](diff_1_044.md) · [수식 화면](../report.html#diff_1_044)|
+|diff_1_048|풀이 오류 의심, 답은 맞지만 풀이 오류 의심, 다른 타당 풀이 가능성 검토|[사례](diff_1_048.md) · [수식 화면](../report.html#diff_1_048)|
+|diff_2_001|토큰 사용량 큰 증가|[사례](diff_2_001.md) · [수식 화면](../report.html#diff_2_001)|
+|diff_2_002|토큰 사용량 큰 증가|[사례](diff_2_002.md) · [수식 화면](../report.html#diff_2_002)|
+|diff_2_012|토큰 사용량 큰 증가|[사례](diff_2_012.md) · [수식 화면](../report.html#diff_2_012)|
+|diff_2_022|토큰 사용량 큰 증가, API 실패·미완료|[사례](diff_2_022.md) · [수식 화면](../report.html#diff_2_022)|
 |diff_2_025|API 실패·미완료|[사례](diff_2_025.md) · [수식 화면](../report.html#diff_2_025)|
 |diff_2_026|API 실패·미완료|[사례](diff_2_026.md) · [수식 화면](../report.html#diff_2_026)|
 |diff_2_027|API 실패·미완료|[사례](diff_2_027.md) · [수식 화면](../report.html#diff_2_027)|

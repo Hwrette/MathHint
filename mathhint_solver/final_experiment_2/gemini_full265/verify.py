@@ -1,7 +1,9 @@
 """전체265 요청·응답·재사용·표시·기존 자료 보존 검증. 학습·API 호출은 없다."""
 
 from collections import Counter
+from bisect import bisect_left, bisect_right
 import csv
+from datetime import datetime
 from itertools import combinations
 import math
 from pathlib import Path
@@ -9,6 +11,83 @@ from pathlib import Path
 from ... import CompareGeneration as comparison
 from ...AnswerEvaluation import evaluate_answer
 from ..gemini_comparison.run import load_data
+
+
+def saved_request_rate_checks(shared_events, new_events, policy, *, tolerance_seconds=.01):
+    """새 생성 시작 시점에서만 공유 로그와 로컬 정책을 대조한다. 공급자 한도 검증은 아니다."""
+    interval = float(policy["interval_seconds"])
+    caps = {60: int(policy["rpm"]), 3600: int(policy["rph"]), 86400: int(policy["rpd"])}
+    if interval <= 0 or any(cap <= 0 for cap in caps.values()) or tolerance_seconds < 0:
+        raise ValueError("양수 로컬 제한과 음이 아닌 시각 오차 허용값이 필요합니다.")
+    malformed = []
+    observed_counts = {"shared": 0, "new": 0}
+
+    def starts(events, source):
+        values = []
+        for index, event in enumerate(events):
+            if event.get("event") != "request_start":
+                continue
+            observed_counts[source] += 1
+            try:
+                timestamp = datetime.fromisoformat(event["time"].replace("Z", "+00:00"))
+                if timestamp.tzinfo is None:
+                    raise ValueError("UTC offset missing")
+                seconds = timestamp.timestamp()
+                if not math.isfinite(seconds):
+                    raise ValueError("nonfinite timestamp")
+            except (KeyError, TypeError, AttributeError, ValueError, OverflowError):
+                malformed.append({"source": source, "event_index": index})
+                continue
+            values.append((seconds, comparison.digest(event)))
+        return values
+
+    shared = starts(shared_events, "shared")
+    new = starts(new_events, "new")
+    shared_unique = sorted(set(shared))
+    shared_keys = {key for _, key in shared_unique}
+    new_unique = sorted(set(new))
+    new_keys = {key for _, key in new_unique}
+    times = [seconds for seconds, _ in shared_unique]
+    gaps, violations = [], []
+    maxima = {window: 0 for window in caps}
+    for position, (when, key) in enumerate(shared_unique):
+        if key not in new_keys:
+            continue
+        upper = bisect_right(times, when)
+        simultaneous = upper-bisect_left(times, when) > 1
+        if position or simultaneous:
+            gap = 0.0 if simultaneous else when-times[position-1]
+            gaps.append(gap)
+            if gap+tolerance_seconds < interval:
+                violations.append({"kind": "interval", "event_sha256": key,
+                                   "gap_seconds": gap, "required_seconds": interval})
+        # 제한기와 같이 (t-window, t]를 센다. t-window의 시작은 이미 창 밖이다.
+        for window, cap in caps.items():
+            count = upper-bisect_right(times, when-window)
+            maxima[window] = max(maxima[window], count)
+            if count > cap:
+                violations.append({"kind": "rolling_window", "event_sha256": key,
+                                   "window_seconds": window, "start_count": count, "limit": cap})
+    checks = [
+        {"check": "rate_log_request_start_timestamps_are_valid", "passed": not malformed},
+        {"check": "new_generation_start_records_are_unique", "passed": len(new) == len(new_unique)},
+        {"check": "new_generation_starts_exist_in_shared_history", "passed": new_keys <= shared_keys},
+        {"check": "new_starts_obey_shared_local_interval", "passed": not any(v["kind"] == "interval" for v in violations)},
+        *[{"check": f"new_starts_obey_shared_rolling_{window}_second_cap", "passed": maxima[window] <= cap}
+          for window, cap in caps.items()],
+    ]
+    return {"checks": checks, "passed": all(check["passed"] for check in checks),
+        "new_request_start_count": observed_counts["new"], "valid_new_request_start_count": len(new),
+        "new_unique_request_start_count": len(new_unique),
+        "shared_request_start_log_count": observed_counts["shared"],
+        "shared_request_start_count": len(shared_unique),
+        "minimum_new_start_interval_seconds": min(gaps) if gaps else None,
+        "maximum_rolling_start_counts_at_new_attempts": {str(window): value for window, value in maxima.items()},
+        "local_policy": {"interval_seconds": interval, "rpm": caps[60], "rph": caps[3600], "rpd": caps[86400]},
+        "timestamp_tolerance_seconds": tolerance_seconds, "violations": violations,
+        "malformed_request_start_events": malformed, "provider_limits_confirmed": False,
+        "scope_note": "새 생성 request_start 시점에서만 기존+신규 공유 이력과 저장 로컬 정책을 비교했다. 과거5초 정책 구간 자체를 현재10초 정책으로 판정하지 않는다. 공급자 실제 할당량은 확인하지 못했다.",
+        "model_get_note": "비생성 models.get 조회는 별도 로그이며 생성 request_start 속도 집계에 포함하지 않는다."}
 
 
 def _csv(path):
@@ -124,7 +203,7 @@ def saved_metric_checks(plan, records, summary_rows, token_rows, paired_rows, *,
 
 
 def run(root=None, output=None, *, save=True):
-    from .common import ROOT, OUTPUT, load_saved, read_json, read_jsonl, safe_output, write_json
+    from .common import ROOT, OUTPUT, all_request_events, load_saved, read_json, read_jsonl, safe_output, write_json
     from .plan import prepare_plan
     from mathhint_learning.final_experiment_2.cluster_improvement.verify import scan_links
     from PIL import Image
@@ -205,6 +284,9 @@ def run(root=None, output=None, *, save=True):
           and state.get("expected_requests") == len(plan) and state.get("pending_count") == len(pending)
           and {(r["id"], r["condition"]) for r in state.get("pending_requests", [])} == pending)
     check("completed_requires1060_successes", (state.get("status") == "completed") == (not pending))
+    rate_audit = saved_request_rate_checks(all_request_events(root, output),
+        read_jsonl(output / "execution_runs/request_events.jsonl"), read_json(output / "policy.json"))
+    checks.extend(rate_audit["checks"])
     history_successes = [r for r in read_jsonl(output / "responses.jsonl") if r.get("status") == "success"]
     check("successful_requests_never_saved_twice", len(history_successes) == len({(r["id"], r["condition"]) for r in history_successes}))
     preservation = preservation_check(root, read_json(output / "preservation_manifest.json"))
@@ -259,6 +341,7 @@ def run(root=None, output=None, *, save=True):
         "experiment_complete": not pending, "successful_requests": len(successful), "expected_requests": len(plan),
         "pending_requests": len(pending), "split_counts": {s: sum(r["status"] == "success" and r["split"] == s for r in records) for s in ("train", "test")},
         "preservation": preservation, "markdown_links_checked": links, "broken_links": broken,
+        "actual_generation_rate_audit": rate_audit,
         "decoded_png_count": len(images), "invalid_images": image_errors, "actual_browser_validation": browser,
         "live_api_calls_during_verification": 0, "model_training_during_verification": False,
         "limits": ["전체265는학습185와테스트80의혼합참고자료이며새미관측일반화평가가아니다。",
