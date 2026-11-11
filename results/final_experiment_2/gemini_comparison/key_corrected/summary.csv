@@ -1,0 +1,5 @@
+﻿split,condition,expected_count,success_count,graded_count,correct_count_original,correct_count_verified,incorrect_count_verified,accuracy_original,accuracy_verified,correction_delta,pending_or_failed
+test,A,80,80,80,78,79,1,0.975,0.9875,1,0
+test,B,80,80,80,78,79,1,0.975,0.9875,1,0
+test,C,80,80,80,78,79,1,0.975,0.9875,1,0
+test,D,80,80,80,78,79,1,0.975,0.9875,1,0
