@@ -727,3 +727,12 @@
 {"event":"request_start","time":"2026-11-11T10:17:38.463608+00:00","execution_id":"2026-11-11T100124_999962+0000","id":"trig_1_041","condition":"C","split":"train"}
 {"event":"request_start","time":"2026-11-11T10:17:48.464027+00:00","execution_id":"2026-11-11T100124_999962+0000","id":"trig_1_044","condition":"C","split":"train"}
 {"event":"request_start","time":"2026-11-11T10:17:58.464521+00:00","execution_id":"2026-11-11T100124_999962+0000","id":"trig_1_045","condition":"C","split":"train"}
+{"event":"request_start","time":"2026-11-11T10:21:36.244158+00:00","execution_id":"2026-11-11T102136_136562+0000","id":"trig_1_047","condition":"C","split":"train"}
+{"event":"request_start","time":"2026-11-11T10:21:46.244545+00:00","execution_id":"2026-11-11T102136_136562+0000","id":"trig_1_048","condition":"C","split":"train"}
+{"event":"request_start","time":"2026-11-11T10:21:56.245268+00:00","execution_id":"2026-11-11T102136_136562+0000","id":"trig_2_001","condition":"C","split":"train"}
+{"event":"request_start","time":"2026-11-11T10:22:06.245810+00:00","execution_id":"2026-11-11T102136_136562+0000","id":"trig_2_002","condition":"C","split":"train"}
+{"event":"request_start","time":"2026-11-11T10:22:16.246245+00:00","execution_id":"2026-11-11T102136_136562+0000","id":"trig_2_004","condition":"C","split":"train"}
+{"event":"request_start","time":"2026-11-11T10:22:26.246564+00:00","execution_id":"2026-11-11T102136_136562+0000","id":"trig_2_005","condition":"C","split":"train"}
+{"event":"request_start","time":"2026-11-11T10:22:36.246984+00:00","execution_id":"2026-11-11T102136_136562+0000","id":"trig_2_006","condition":"C","split":"train"}
+{"event":"quota_error","time":"2026-11-11T10:22:37.121238+00:00","daily_quota":true,"retry_after_seconds":77843.0,"execution_id":"2026-11-11T102136_136562+0000","id":"trig_2_006","condition":"C","split":"train"}
+{"event":"cooldown_updated","code":429,"cooldown_until":"2026-11-12T08:00:01.122136+00:00","source":"recorded Retry-After/RetryInfo or fallback backoff; provider reset not inferred","time":"2026-11-11T10:22:37.122146+00:00","execution_id":"2026-11-11T102136_136562+0000","id":"trig_2_006","condition":"C","split":"train"}

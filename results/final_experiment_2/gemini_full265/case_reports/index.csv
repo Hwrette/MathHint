@@ -40,12 +40,7 @@ trig_1_038,train,possible_alternative,trig_1_038.md,../report.html#trig_1_038,Tr
 trig_1_040,train,"A_correct_B_wrong,changed_answers,reasoning_suspected",trig_1_040.md,../report.html#trig_1_040,True
 trig_1_041,train,possible_alternative,trig_1_041.md,../report.html#trig_1_041,True
 trig_1_044,train,"D_wrong,changed_answers,reasoning_suspected,possible_alternative,ungraded",trig_1_044.md,../report.html#trig_1_044,True
-trig_1_047,train,"D_wrong,changed_answers,reasoning_suspected,api_incomplete",trig_1_047.md,../report.html#trig_1_047,True
-trig_1_048,train,api_incomplete,trig_1_048.md,../report.html#trig_1_048,True
-trig_2_001,train,api_incomplete,trig_2_001.md,../report.html#trig_2_001,True
-trig_2_002,train,api_incomplete,trig_2_002.md,../report.html#trig_2_002,True
-trig_2_004,train,api_incomplete,trig_2_004.md,../report.html#trig_2_004,True
-trig_2_005,train,api_incomplete,trig_2_005.md,../report.html#trig_2_005,True
+trig_1_047,train,"learned_hint_improvement,C_only_correct,D_wrong,changed_answers,reasoning_suspected",trig_1_047.md,../report.html#trig_1_047,True
 trig_2_006,train,api_incomplete,trig_2_006.md,../report.html#trig_2_006,True
 trig_2_008,train,api_incomplete,trig_2_008.md,../report.html#trig_2_008,True
 trig_2_009,train,api_incomplete,trig_2_009.md,../report.html#trig_2_009,True

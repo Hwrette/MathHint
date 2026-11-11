@@ -1,8 +1,679 @@
 {
   "schema_version": 1,
-  "performed": false,
-  "passed": null,
-  "reason": "ABD우선실제재개에따라새응답보고서의브라우저검사는다음완료/차단스냅샷에서실행한다. 이전515검증은아래원문으로보존한다.",
+  "performed": true,
+  "passed": true,
+  "checked_at": "2026-11-11T10:26:52.926080+00:00",
+  "report_path": "results/final_experiment_2/gemini_full265/report.html",
+  "report_sha256": "abf9928e6b1464784f1b1c3da4886c54761e649e7435599e05114c617d4d543c",
+  "assets_sha256": {
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_AMS-Regular.woff2": "0cdd387c9590a1a9f9794560022dbb59654a7d86f187aa0c81495ad42d3a7308",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Bold.woff2": "0f60d1b897938ec918c8ce073092411baf9438f6739465693ff18b0f9d20b021",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Regular.woff2": "c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Math-Italic.woff2": "7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size1-Regular.woff2": "6b47c40166b6dbe21a5dfca7718413f2147fd2399be1ba605d8ad39cedf25dfe",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size2-Regular.woff2": "d04c54219f9eaec6d4d4fd42dfb28785975a4794d6b2fc71e566b9cd6db842dd",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size3-Regular.woff2": "73d591271b1604960cb10bb90fee021670af7297017e0e98480b332d11f51995",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size4-Regular.woff2": "a4af7d414440a1c1790825cfb700cf9cf43b0f2c4b04f0ebc523011ad9853ec0",
+    "mathhint_analysis/viewer_assets/vendor/katex.min.css": "b075123b50e51a0a7819b49efa2a62bb05bc7dac04b0d65a9a3799c2211ea48f",
+    "mathhint_analysis/viewer_assets/vendor/katex.min.js": "e8d885505949f3a5f4abdd5dd0d53696bd1371ad26ffbf4f310dcd77c8cdae89",
+    "mathhint_analysis/viewer_assets/vendor/markdown-it.min.js": "38c70a1e7ca91ab40e2d9e6e60129851a717ed1c7d4acbbdd41bf9503791cf68",
+    "results/final_experiment_2/gemini_full265/report.html": "abf9928e6b1464784f1b1c3da4886c54761e649e7435599e05114c617d4d543c",
+    "results/final_experiment_2/gemini_full265/viewer_assets/viewer.css": "156268a9bdb2164cf76d59f7ddf2c915447cce7250a6fcfb9ad75b2f0e4c1c84",
+    "results/final_experiment_2/gemini_full265/viewer_assets/viewer.js": "d59b7924012bd8028b25db0e323abd1b571fab1065a11c76c377a04c00cbbbce"
+  },
+  "viewports": [
+    {
+      "label": "desktop",
+      "width": 1600,
+      "height": 1000,
+      "card_count": 4,
+      "document_width": 1600,
+      "grid_columns": "554.438px 554.453px",
+      "comparison_columns": "395.109px 1128.89px",
+      "card_rectangles": [
+        {
+          "method": "baseline",
+          "x": 443.109375,
+          "width": 554.4375
+        },
+        {
+          "method": "regression_hint",
+          "x": 1017.546875,
+          "width": 554.453125
+        },
+        {
+          "method": "deep_learning_hint",
+          "x": 443.109375,
+          "width": 554.4375
+        },
+        {
+          "method": "oracle_hint",
+          "x": 1017.546875,
+          "width": 554.453125
+        }
+      ]
+    },
+    {
+      "label": "mobile390",
+      "width": 390,
+      "height": 844,
+      "card_count": 4,
+      "document_width": 390,
+      "grid_columns": "366px",
+      "comparison_columns": "366px",
+      "card_rectangles": [
+        {
+          "method": "baseline",
+          "x": 12,
+          "width": 366
+        },
+        {
+          "method": "regression_hint",
+          "x": 12,
+          "width": 366
+        },
+        {
+          "method": "deep_learning_hint",
+          "x": 12,
+          "width": 366
+        },
+        {
+          "method": "oracle_hint",
+          "x": 12,
+          "width": 366
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "265_unique_questions": true,
+    "four_ABCD_methods": true,
+    "all265_expected_generation": true,
+    "all265_default": true,
+    "first_default_is_first_train_ID": true,
+    "all1060_condition_rows": true,
+    "train185_test80_split_partition": true,
+    "status_counts_match_saved_state": true,
+    "old320_fullraw_semantic_fields_exact": true,
+    "all_review_states_equal_saved_review_CSV": true,
+    "verified_corrected_key_separate_from_original": true,
+    "local_math_markdown_loaded": true,
+    "asset_warning_hidden": true,
+    "in_sample_generalization_scope_notice": true,
+    "desktop_responsive_four_cards": true,
+    "desktop_untouched_pending_saved_status_distinct": true,
+    "desktop_failed_or_stopped_saved_status_distinct": true,
+    "desktop_new_correct_answer_reasoning_suspect_saved_status_distinct": true,
+    "desktop_reused_correct_answer_reasoning_suspect_saved_status_distinct": true,
+    "desktop_ungraded_success_saved_status_distinct": true,
+    "desktop_ungraded_success_not_correct_or_wrong": true,
+    "desktop_C_only_correct_saved_status_distinct": true,
+    "desktop_answer_key_conflict_saved_status_distinct": true,
+    "desktop_original_key_AI_supplemental_source_distinct": true,
+    "desktop_all21_known_filter_options": true,
+    "desktop_ID_search": true,
+    "desktop_taxonomy_unit_filter": true,
+    "desktop_next_navigation": true,
+    "desktop_previous_navigation": true,
+    "mobile390_responsive_four_cards": true,
+    "mobile390_untouched_pending_saved_status_distinct": true,
+    "mobile390_failed_or_stopped_saved_status_distinct": true,
+    "mobile390_new_correct_answer_reasoning_suspect_saved_status_distinct": true,
+    "mobile390_reused_correct_answer_reasoning_suspect_saved_status_distinct": true,
+    "mobile390_ungraded_success_saved_status_distinct": true,
+    "mobile390_ungraded_success_not_correct_or_wrong": true,
+    "mobile390_C_only_correct_saved_status_distinct": true,
+    "mobile390_answer_key_conflict_saved_status_distinct": true,
+    "mobile390_original_key_AI_supplemental_source_distinct": true,
+    "mobile390_all21_known_filter_options": true,
+    "mobile390_ID_search": true,
+    "mobile390_taxonomy_unit_filter": true,
+    "mobile390_next_navigation": true,
+    "mobile390_previous_navigation": true,
+    "HTML_and_all_assets_unchanged": true,
+    "all_compared_saved_inputs_unchanged": true,
+    "all_loaded_assets_repo_local_and_HTTP200": true,
+    "exactly14_loaded_local_assets": true,
+    "no_external_or_browser_errors": true
+  },
+  "desktop_all265": {
+    "questions_scanned": 265,
+    "cards_scanned": 1060,
+    "math_nodes_rendered_total": 30478,
+    "question_card_counts": [],
+    "math_render_errors": [],
+    "horizontal_overflow_ids": [],
+    "status_mismatches": [],
+    "answer_mismatches": [],
+    "review_mismatches": [],
+    "usage_mismatches": [],
+    "hint_label_mismatches": [],
+    "raw_output_mismatches": [],
+    "raw_system_mismatches": [],
+    "raw_input_mismatches": [],
+    "raw_usage_mismatches": [],
+    "raw_hint_mismatches": [],
+    "raw_problem_mismatches": [],
+    "raw_reference_solution_mismatches": [],
+    "raw_identifier_mismatches": [],
+    "raw_generation_settings_mismatches": [],
+    "non_success_boolean_grade_errors": [],
+    "supplemental_notice_mismatches": []
+  },
+  "mobile390_all265": {
+    "questions_scanned": 265,
+    "cards_scanned": 1060,
+    "math_nodes_rendered_total": 30478,
+    "question_card_counts": [],
+    "math_render_errors": [],
+    "horizontal_overflow_ids": [],
+    "status_mismatches": [],
+    "answer_mismatches": [],
+    "review_mismatches": [],
+    "usage_mismatches": [],
+    "hint_label_mismatches": [],
+    "raw_output_mismatches": [],
+    "raw_system_mismatches": [],
+    "raw_input_mismatches": [],
+    "raw_usage_mismatches": [],
+    "raw_hint_mismatches": [],
+    "raw_problem_mismatches": [],
+    "raw_reference_solution_mismatches": [],
+    "raw_identifier_mismatches": [],
+    "raw_generation_settings_mismatches": [],
+    "non_success_boolean_grade_errors": [],
+    "supplemental_notice_mismatches": []
+  },
+  "filter_results": {
+    "desktop": {
+      "test": {
+        "expected_count": 80,
+        "actual_count": 80,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "changed": {
+        "expected_count": 8,
+        "actual_count": 8,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "answers": {
+        "expected_count": 10,
+        "actual_count": 10,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "A_correct_B_wrong": {
+        "expected_count": 2,
+        "actual_count": 2,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "A_correct_C_wrong": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "B_only_correct": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "C_only_correct": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "D_only_correct": {
+        "expected_count": 0,
+        "actual_count": 0,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "all_wrong": {
+        "expected_count": 2,
+        "actual_count": 2,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "D_wrong": {
+        "expected_count": 8,
+        "actual_count": 8,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "reasoning_suspected": {
+        "expected_count": 32,
+        "actual_count": 32,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "answer_key_conflict": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "possible_alternative": {
+        "expected_count": 47,
+        "actual_count": 47,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "review_pending": {
+        "expected_count": 0,
+        "actual_count": 0,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "large_token_change": {
+        "expected_count": 44,
+        "actual_count": 44,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "incomplete": {
+        "expected_count": 0,
+        "actual_count": 0,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "ungraded": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "api_error": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "not_run": {
+        "expected_count": 50,
+        "actual_count": 50,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "train": {
+        "expected_count": 185,
+        "actual_count": 185,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "all": {
+        "expected_count": 265,
+        "actual_count": 265,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      }
+    },
+    "mobile390": {
+      "test": {
+        "expected_count": 80,
+        "actual_count": 80,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "changed": {
+        "expected_count": 8,
+        "actual_count": 8,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "answers": {
+        "expected_count": 10,
+        "actual_count": 10,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "A_correct_B_wrong": {
+        "expected_count": 2,
+        "actual_count": 2,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "A_correct_C_wrong": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "B_only_correct": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "C_only_correct": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "D_only_correct": {
+        "expected_count": 0,
+        "actual_count": 0,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "all_wrong": {
+        "expected_count": 2,
+        "actual_count": 2,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "D_wrong": {
+        "expected_count": 8,
+        "actual_count": 8,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "reasoning_suspected": {
+        "expected_count": 32,
+        "actual_count": 32,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "answer_key_conflict": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "possible_alternative": {
+        "expected_count": 47,
+        "actual_count": 47,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "review_pending": {
+        "expected_count": 0,
+        "actual_count": 0,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "large_token_change": {
+        "expected_count": 44,
+        "actual_count": 44,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "incomplete": {
+        "expected_count": 0,
+        "actual_count": 0,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "ungraded": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "api_error": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "not_run": {
+        "expected_count": 50,
+        "actual_count": 50,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "train": {
+        "expected_count": 185,
+        "actual_count": 185,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "all": {
+        "expected_count": 265,
+        "actual_count": 265,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      }
+    }
+  },
+  "saved_data_statuses": {
+    "success": 1009,
+    "stopped_after_attempt": 1,
+    "not_run": 50
+  },
+  "saved_split_counts": {
+    "train": 185,
+    "test": 80
+  },
+  "saved_success_review_statuses": {
+    "appropriate": 947,
+    "inappropriate": 62
+  },
+  "condition_status_counts": {
+    "A": {
+      "success": 265
+    },
+    "B": {
+      "success": 265
+    },
+    "C": {
+      "success": 214,
+      "stopped_after_attempt": 1,
+      "not_run": 50
+    },
+    "D": {
+      "success": 265
+    }
+  },
+  "saved_state_status": "daily_quota_exhausted",
+  "reused_old_test_value_mismatches": [],
+  "review_CSV_payload_mismatches": [],
+  "separate_corrected_key_mismatches": [],
+  "representative_case_selection": {
+    "untouched_pending": {
+      "id": "trig_2_008",
+      "method": "deep_learning_hint",
+      "condition": "C",
+      "status": "not_run"
+    },
+    "failed_or_stopped": {
+      "id": "trig_2_006",
+      "method": "deep_learning_hint",
+      "condition": "C",
+      "status": "stopped_after_attempt"
+    },
+    "new_correct_answer_reasoning_suspect": {
+      "id": "diff_1_006",
+      "method": "oracle_hint",
+      "condition": "D",
+      "status": "success"
+    },
+    "reused_correct_answer_reasoning_suspect": {
+      "id": "diff_1_005",
+      "method": "regression_hint",
+      "condition": "B",
+      "status": "success"
+    },
+    "ungraded_success": {
+      "id": "trig_1_044",
+      "method": "regression_hint",
+      "condition": "B",
+      "status": "success"
+    },
+    "C_only_correct": {
+      "id": "trig_1_047",
+      "method": "deep_learning_hint",
+      "condition": "C",
+      "status": "success"
+    },
+    "answer_key_conflict": {
+      "id": "trig_1_010",
+      "method": "baseline",
+      "condition": "A",
+      "status": "success"
+    }
+  },
+  "local_assets": [
+    {
+      "repo_relative_path": "results/final_experiment_2/gemini_full265/report.html",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/katex.min.css",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "results/final_experiment_2/gemini_full265/viewer_assets/viewer.css",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/markdown-it.min.js",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "results/final_experiment_2/gemini_full265/viewer_assets/viewer.js",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/katex.min.js",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Math-Italic.woff2",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size3-Regular.woff2",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Regular.woff2",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size2-Regular.woff2",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size1-Regular.woff2",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size4-Regular.woff2",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_AMS-Regular.woff2",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Bold.woff2",
+      "status": 200
+    }
+  ],
+  "external_requests": [],
+  "pageerrors": [],
+  "consoleerrors": [],
+  "request_failures": [],
+  "temporary_server_shutdown": true,
+  "execution_scope": "Read-only frozen saved HTML/assets/data; temporary loopback server; external requests intercepted/blocked. No report, verify, generation, API, model, repository writes, or imports that trigger experiment code.",
+  "visual_inspection": {
+    "performed": true,
+    "screenshots_opened": [
+      "/tmp/mathhint_full265_abd_final_desktop_default_all_top.png",
+      "/tmp/mathhint_full265_abd_final_desktop_untouched_pending_card_top.png",
+      "/tmp/mathhint_full265_abd_final_desktop_failed_or_stopped_card_top.png",
+      "/tmp/mathhint_full265_abd_final_desktop_new_correct_answer_reasoning_suspect_card_top.png",
+      "/tmp/mathhint_full265_abd_final_desktop_new_correct_answer_reasoning_suspect_review.png",
+      "/tmp/mathhint_full265_abd_final_desktop_reused_correct_answer_reasoning_suspect_card_top.png",
+      "/tmp/mathhint_full265_abd_final_desktop_reused_correct_answer_reasoning_suspect_review.png",
+      "/tmp/mathhint_full265_abd_final_desktop_ungraded_success_card_top.png",
+      "/tmp/mathhint_full265_abd_final_desktop_C_only_correct_card_top.png",
+      "/tmp/mathhint_full265_abd_final_desktop_answer_key_conflict_card_top.png",
+      "/tmp/mathhint_full265_abd_final_desktop_key_conflict_original_and_AI_notice.png",
+      "/tmp/mathhint_full265_abd_final_mobile390_default_all_top.png",
+      "/tmp/mathhint_full265_abd_final_mobile390_untouched_pending_card_top.png",
+      "/tmp/mathhint_full265_abd_final_mobile390_failed_or_stopped_card_top.png",
+      "/tmp/mathhint_full265_abd_final_mobile390_new_correct_answer_reasoning_suspect_card_top.png",
+      "/tmp/mathhint_full265_abd_final_mobile390_new_correct_answer_reasoning_suspect_review.png",
+      "/tmp/mathhint_full265_abd_final_mobile390_reused_correct_answer_reasoning_suspect_card_top.png",
+      "/tmp/mathhint_full265_abd_final_mobile390_reused_correct_answer_reasoning_suspect_review.png",
+      "/tmp/mathhint_full265_abd_final_mobile390_ungraded_success_card_top.png",
+      "/tmp/mathhint_full265_abd_final_mobile390_C_only_correct_card_top.png",
+      "/tmp/mathhint_full265_abd_final_mobile390_answer_key_conflict_card_top.png",
+      "/tmp/mathhint_full265_abd_final_mobile390_key_conflict_original_and_AI_notice.png"
+    ],
+    "screenshot_count": 22,
+    "findings": [],
+    "scope": "All22 representative screenshots actually opened by this browser QA agent (18) and its read-only visual reviewer (4). Desktop/mobile default first train question, C-only pending, C quota failure, original/AI key conflict, new and reused correct-final/reasoning-error distinctions, successful-ungraded B answer, and C-only-correct case were inspected. Korean labels, badges, final answers, equations, review reasons and missing values were readable without visible overlap or document-wide horizontal clipping. Automated DOM scans cover all265 questions; no claim that a human mathematically verified all expressions.",
+    "independent_visual_reviewer": {
+      "screenshots_opened": [
+        "/tmp/mathhint_full265_abd_final_desktop_ungraded_success_card_top.png",
+        "/tmp/mathhint_full265_abd_final_desktop_C_only_correct_card_top.png",
+        "/tmp/mathhint_full265_abd_final_mobile390_ungraded_success_card_top.png",
+        "/tmp/mathhint_full265_abd_final_mobile390_C_only_correct_card_top.png"
+      ],
+      "findings": [],
+      "observations": "Both viewports distinguish B/trig_1_044 ungraded badge from verbatim numeric12 answer. C/trig_1_047 shows correct69; desktop also shows D wrong42. A44/B56 are verified by the saved payload and full DOM scan; these screenshots do not visually show those two cards."
+    },
+    "source_bindings_rechecked_after_visual_review": true
+  },
+  "limitations": [
+    "Actual browser rendering/data fidelity and representative screenshots do not constitute human mathematical confirmation of every generated solution.",
+    "Loopback HTTP testing uses actual repository files and blocks external requests; it does not guarantee browser file:// policy on other environments."
+  ],
+  "visual_screenshots_reviewed": 22,
+  "filter_check_count": 42,
+  "evidence_json_sha256": "81a7f4050a32849c12c6ef73a0b971e26748857cd87ce86ddf2215e399f0023d",
+  "check_script_sha256": "81ba9c9d4ab43f464ca24d44fd52040c7680774e0b7a3e4f158e8734a0a309a1",
   "previous_completed_validation": {
     "schema_version": 1,
     "performed": true,
@@ -547,5 +1218,6 @@
     "visual_screenshots_reviewed": 15,
     "filter_check_count": 42,
     "final_evidence_confirmed_at": "2026-11-11T00:40:24.564482+00:00"
-  }
+  },
+  "snapshot_scope_note": "ABD각265성공/C214성공,실패C1/미실행C50의부분실험을검사했다. 사람이모든수학풀이를확정한것은아니다. 임시스크린샷/실행스크립트중복보관대신정적HTML/자산/검사해시를보존했다."
 }

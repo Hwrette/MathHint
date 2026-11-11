@@ -47,12 +47,7 @@
 |trig_1_040|A 정답 → B 오답, 조건별 최종 답 변화, 풀이 오류 의심|[사례](trig_1_040.md) · [수식 화면](../report.html#trig_1_040)|
 |trig_1_041|다른 타당 풀이 가능성 검토|[사례](trig_1_041.md) · [수식 화면](../report.html#trig_1_041)|
 |trig_1_044|D에서도 오답, 조건별 최종 답 변화, 풀이 오류 의심, 다른 타당 풀이 가능성 검토, 채점 불가|[사례](trig_1_044.md) · [수식 화면](../report.html#trig_1_044)|
-|trig_1_047|D에서도 오답, 조건별 최종 답 변화, 풀이 오류 의심, API 실패·미완료|[사례](trig_1_047.md) · [수식 화면](../report.html#trig_1_047)|
-|trig_1_048|API 실패·미완료|[사례](trig_1_048.md) · [수식 화면](../report.html#trig_1_048)|
-|trig_2_001|API 실패·미완료|[사례](trig_2_001.md) · [수식 화면](../report.html#trig_2_001)|
-|trig_2_002|API 실패·미완료|[사례](trig_2_002.md) · [수식 화면](../report.html#trig_2_002)|
-|trig_2_004|API 실패·미완료|[사례](trig_2_004.md) · [수식 화면](../report.html#trig_2_004)|
-|trig_2_005|API 실패·미완료|[사례](trig_2_005.md) · [수식 화면](../report.html#trig_2_005)|
+|trig_1_047|B 또는 C에서 정답으로 변화, C만 정답, D에서도 오답, 조건별 최종 답 변화, 풀이 오류 의심|[사례](trig_1_047.md) · [수식 화면](../report.html#trig_1_047)|
 |trig_2_006|API 실패·미완료|[사례](trig_2_006.md) · [수식 화면](../report.html#trig_2_006)|
 |trig_2_008|API 실패·미완료|[사례](trig_2_008.md) · [수식 화면](../report.html#trig_2_008)|
 |trig_2_009|API 실패·미완료|[사례](trig_2_009.md) · [수식 화면](../report.html#trig_2_009)|

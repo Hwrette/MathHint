@@ -1,0 +1,493 @@
+{
+  "execution_id": "2026-11-11T102136_136562+0000",
+  "config_id": "054e3feed73f033e910825c35d9a7332fb90a161d453525bb63edccce42a7cbe",
+  "started_at": "2026-11-11T10:21:36.136656+00:00",
+  "status": "daily_quota_exhausted",
+  "experiment_scope": "full265",
+  "policy": {
+    "interval_seconds": 10.0,
+    "workers": 1,
+    "rpm": 6,
+    "rph": 360,
+    "rpd": 1400,
+    "max_new_requests": 80,
+    "max_run_seconds": 3600.0,
+    "max_wait_seconds": 120.0,
+    "max_attempts": 2,
+    "http_timeout_ms": 180000,
+    "provider_limits_confirmed": false,
+    "limits_note": "user-authorized local safety cap for full265 extension; not a confirmed provider quota; old and new request starts share rolling windows",
+    "user_authorized_additional_requests": 740,
+    "condition_order": "ABDC"
+  },
+  "condition_order": "ABDC",
+  "pending_by_condition_at_start": {
+    "A": 0,
+    "B": 0,
+    "C": 57,
+    "D": 0
+  },
+  "transport": {
+    "http_timeout_ms": 180000,
+    "sdk_attempts": 1
+  },
+  "preexisting_successes": 1003,
+  "runner_sha256": "2fc01c1bbdfdf66d57e0b8209dd0ee432b387aea4675e812752be92c2a03f6d8",
+  "shared_transport_sha256": "4a43de1f15d00490fbff885742c19f605b9602fea3711bb9d4b6471c82a3bdd0",
+  "prior_request_events": {
+    "path": "results/final_experiment_2/gemini_comparison/execution_runs/request_events.jsonl",
+    "sha256": "4d709e8dab9b2a2a5694e15877078ce378a7fad90cbb38c183ac5fe218a6a783"
+  },
+  "sdk_request_capture": "immediately before generate_content",
+  "completed_at": "2026-11-11T10:22:38.747550+00:00",
+  "successful_requests": 1009,
+  "failed_requests": 1,
+  "pending_count": 51,
+  "pending_requests": [
+    {
+      "id": "trig_2_006",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "a258a0bfc31f445fce7498c642535106569f8a863b72a3d737468862206a1cdb",
+      "last_status": "stopped_after_attempt"
+    },
+    {
+      "id": "trig_2_008",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "a4da590797be43de514641a84f015038e066ddd2f88e24a960fe58ce0eb7f905",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_2_009",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "cf287fc081d3acbc9f3ed4b2fb60a1305a5d2142feb90690ed9f05bf9f0d42d3",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_2_010",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "bea97a44a29c081e00e8af44d4e44486b3d342fb5a7f5e3fc172f896ba76c4dd",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_2_011",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "fc76e12e72e47934f334f4fc1979dd0b09a8c428326985d973a9741166a0a0cd",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_2_012",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "1fa2a57bcbfc5ba6d220e8c38b9597a00247f86e7a51587c62d1c520f038a723",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_2_013",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "25f060a1e74fd61ed01b15f801d4fcb9f59f133b9b67d2e370da36324489c19a",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_2_015",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "12d6e54898edd6d025d6435a65c28662f378b2fd896eb87ae2e7c7fd89c89859",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_2_018",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "5242dc19ed74e00fa807952e5f923a2576361d809ec68676aba6295cbfdd7115",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_2_019",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "a3cc25e1eb5c4039cb83edb4cb727c770cb979349259cb4a964a11a547af262d",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_2_020",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "c2ce5dc2b812cd5f04464e6eac5dc210c3e8d93dc68381996bf59cb998c7cd82",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_2_021",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "31f6f69b44a40688c6d6b916cd148d600c75b13fea7597ed36d626a5f3a147e1",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_2_023",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "57f58d3efea2945d2dfb7dc482dd3d0435e91fa5a625fc8f9d22904c6086d1c4",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_2_026",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "47a0c99fde663241c4850a52c828217597c2b5212b0a326cf21e5e877b969a83",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_2_027",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "d690adb39293fb6aafb18d7fab3ac2d3630d52ea31bf6142b0ee530b3fcc0905",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_2_028",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "43b5a2e9c70a8fd799385929140688f3345d5f0e1561a6bbb2d38f4436870ca3",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_2_029",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "b97f5ee559f81aae85a5b51acf6826b8a71b1d191a659a8d8a0eb05dc088e28e",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_2_031",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "13c97c0383450024383c8d7281c3d5fedbb6ca447825e83bbbbbdb8fb6096dd6",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_2_032",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "1217aaf98bcf84b283141ed68197c8bbc0775989becd748f17ea6c5d99601a45",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_2_033",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "8e421ee862416875385ca490db0c904696151ee2736ee31f2d1a5f6e80e8552a",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_2_034",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "5c4db64da063b19fee811cf98903ebab0b20a9961ab63886b5858b0afadcc151",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_2_036",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "666b01ee52826a8364adf3dfdaaae3c95a0f0727a080217a6f37071f290bcb71",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_2_037",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "8d3f03f9571185034e59465788d050eb76e1cd98aeba2b661d5375838ae01841",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_001",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "0f1f9bf4d8cad1bb26fc4f0553e3e9f43cf2570805e32b92f7981785992217c9",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_003",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "02e33dd18c1ad58ea0477a5bd8d2005dcd1cc78ea7cf49e304a2af81a0937636",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_004",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "2868a3d3d4ffe1051aa22f7288e112d9f710e69c93cdc1c71acef3f2307f6c70",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_005",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "ed71db185aa34806c160044ec73089c0569e6ff828c6d2a6857fa8c7cc96ed4b",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_006",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "21e1625837e8774c946977effe5724b11adc1bd55f5f835cb1d4272b6e799ce5",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_007",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "4534459762acaebd6e0e14d3d2a0953d8056de282f5b8c54c242bd0d0e3b94e7",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_008",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "a8f671afaad6167b273223e83d3748b953ca9ecaed525edc105876773394a496",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_009",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "461aa141c1ae3aad143c8e75a4c4cbdfef088802498aa52fc3125ae02821579b",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_012",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "a813674bd3136a5281739011001ca783a58d9eee3737d9867e08ce1751a40e08",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_013",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "c920ef33ee98d03ea449708c6d26973eb894c0188fad5390ccd7a0f770f023f4",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_016",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "fa0801c22adc67d3e5360b72eef6252a3087a127273dafd8780467eb8d5a0bec",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_018",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "491556c377446f99b1179fd3b1722ca7eb77923b537e54ac827f01cf82177454",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_019",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "25f7dc76d72edb29232ebd9b914025b75595c0ef1d12e6f467898f48402baf73",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_020",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "f366b558e4b9066207115056adf475ae98fcecc3806b9a31aa80d01b9597c246",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_022",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "eb4b309a37cf452716cfa6cd4674d09fb8ab2ee562c9898c2bb6492cc107460b",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_023",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "c300284e39176c7c4fa3e6894b6db186bfd95831e17d331acb328c69e34493dc",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_024",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "1209524040e15603b30d3611ec75ab198c2fb2caed1118d13cd355bb63400c59",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_025",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "3e9b7750a99443da6a0a23560e51824e3b7541739f335a07005fa7284d1b1301",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_027",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "a5fa0ba241ce3faa0acbd9ed02c4fef017cce87bc1a28138e21fc214bbbd6fcd",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_028",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "c1f806b14c3ae3386b1f93b622c398dcd8751327f0830e2b48cf7522c5331e28",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_029",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "70bac7ebe4c9d20b85d76bddb59f443661a5613c91ba01d7cc45316d6d236dd5",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_030",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "661ada63409def7460d2cb79e11fb0471cece0e0e50e06811db58201fc2dae04",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_031",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "35cf4185bbb9263e87caff89d7bcf419b5095feea0d471bd0b6492d20c40d10c",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_032",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "bd95a49ab5e89c3ae1b0ea412b120f9a44b5da9435b4f4f92760b01691ceaf35",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_033",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "9cacb7c8463412eb6b4dc7a3aae3791ede6e6d23ad60242b02853e0ff0a55dc4",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_036",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "5af6e9d2db91e5f59384808e112f2ecc922fb4e2447d28a33408638d229734d6",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_037",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "bd7824e3b79c2cea95890a339d49c4a80611c1cf925f0a136f1d6bc6de0a412d",
+      "last_status": "not_executed"
+    },
+    {
+      "id": "trig_3_038",
+      "condition": "C",
+      "method": "deep_learning_hint",
+      "split": "train",
+      "request_sha256": "4ad0ecf1fe543bcecc0532284978cf83a5d5bc2ade03300bf85d6072b1dae1e2",
+      "last_status": "not_executed"
+    }
+  ],
+  "new_request_starts": 7,
+  "limiter": {
+    "new_request_starts": 7,
+    "rolling_minute_starts": 6,
+    "rolling_hour_starts": 236,
+    "rolling_24h_starts": 978,
+    "status": "daily_quota_exhausted",
+    "reason": "API가 일일 할당량 소진을 보고했습니다. 장시간 대기하지 않습니다.",
+    "daily_quota_reported": true,
+    "cooldown_remaining_seconds": 77842.374385342,
+    "service_cooldown_remaining_seconds": 0,
+    "resume_cooldown_note": "absolute recorded delays restored; legacy events preserve only recorded backoff, not unrecorded provider timing; daily reset remains unconfirmed",
+    "policy": {
+      "interval_seconds": 10.0,
+      "workers": 1,
+      "rpm": 6,
+      "rph": 360,
+      "rpd": 1400,
+      "max_new_requests": 80,
+      "max_run_seconds": 3600.0,
+      "max_wait_seconds": 120.0,
+      "max_attempts": 2,
+      "http_timeout_ms": 180000,
+      "provider_limits_confirmed": false,
+      "limits_note": "user-authorized local safety cap for full265 extension; not a confirmed provider quota; old and new request starts share rolling windows",
+      "user_authorized_additional_requests": 740,
+      "condition_order": "ABDC"
+    },
+    "provider_quota_confirmation": "not inferred from local caps"
+  },
+  "reason": "API가 일일 할당량 소진을 보고했습니다. 장시간 대기하지 않습니다.",
+  "pending_by_condition": {
+    "A": 0,
+    "B": 0,
+    "C": 51,
+    "D": 0
+  }
+}
