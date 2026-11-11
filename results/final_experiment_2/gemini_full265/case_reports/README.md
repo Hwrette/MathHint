@@ -64,7 +64,7 @@
 |diff_3_041|API 실패·미완료|[사례](diff_3_041.md) · [수식 화면](../report.html#diff_3_041)|
 |diff_3_042|API 실패·미완료|[사례](diff_3_042.md) · [수식 화면](../report.html#diff_3_042)|
 |diff_3_043|API 실패·미완료|[사례](diff_3_043.md) · [수식 화면](../report.html#diff_3_043)|
-|diff_3_045|조건별 최종 답 변화, 풀이 오류 의심, API 실패·미완료|[사례](diff_3_045.md) · [수식 화면](../report.html#diff_3_045)|
+|diff_3_045|D에서도 오답, 조건별 최종 답 변화, 풀이 오류 의심, API 실패·미완료|[사례](diff_3_045.md) · [수식 화면](../report.html#diff_3_045)|
 |diff_3_046|API 실패·미완료|[사례](diff_3_046.md) · [수식 화면](../report.html#diff_3_046)|
 |diff_3_047|API 실패·미완료|[사례](diff_3_047.md) · [수식 화면](../report.html#diff_3_047)|
 |trig_1_001|풀이 오류 의심, 답은 맞지만 풀이 오류 의심, API 실패·미완료|[사례](trig_1_001.md) · [수식 화면](../report.html#trig_1_001)|
@@ -86,18 +86,18 @@
 |trig_1_026|API 실패·미완료|[사례](trig_1_026.md) · [수식 화면](../report.html#trig_1_026)|
 |trig_1_027|API 실패·미완료|[사례](trig_1_027.md) · [수식 화면](../report.html#trig_1_027)|
 |trig_1_029|API 실패·미완료|[사례](trig_1_029.md) · [수식 화면](../report.html#trig_1_029)|
-|trig_1_030|API 실패·미완료|[사례](trig_1_030.md) · [수식 화면](../report.html#trig_1_030)|
+|trig_1_030|다른 타당 풀이 가능성 검토, API 실패·미완료|[사례](trig_1_030.md) · [수식 화면](../report.html#trig_1_030)|
 |trig_1_031|API 실패·미완료|[사례](trig_1_031.md) · [수식 화면](../report.html#trig_1_031)|
 |trig_1_033|다른 타당 풀이 가능성 검토, API 실패·미완료|[사례](trig_1_033.md) · [수식 화면](../report.html#trig_1_033)|
 |trig_1_034|API 실패·미완료|[사례](trig_1_034.md) · [수식 화면](../report.html#trig_1_034)|
 |trig_1_036|다른 타당 풀이 가능성 검토, API 실패·미완료|[사례](trig_1_036.md) · [수식 화면](../report.html#trig_1_036)|
 |trig_1_037|API 실패·미완료|[사례](trig_1_037.md) · [수식 화면](../report.html#trig_1_037)|
-|trig_1_038|API 실패·미완료|[사례](trig_1_038.md) · [수식 화면](../report.html#trig_1_038)|
+|trig_1_038|다른 타당 풀이 가능성 검토, API 실패·미완료|[사례](trig_1_038.md) · [수식 화면](../report.html#trig_1_038)|
 |trig_1_040|A 정답 → B 오답, 조건별 최종 답 변화, 풀이 오류 의심, API 실패·미완료|[사례](trig_1_040.md) · [수식 화면](../report.html#trig_1_040)|
 |trig_1_041|다른 타당 풀이 가능성 검토, API 실패·미완료|[사례](trig_1_041.md) · [수식 화면](../report.html#trig_1_041)|
-|trig_1_044|조건별 최종 답 변화, 풀이 오류 의심, 다른 타당 풀이 가능성 검토, 채점 불가, API 실패·미완료|[사례](trig_1_044.md) · [수식 화면](../report.html#trig_1_044)|
+|trig_1_044|D에서도 오답, 조건별 최종 답 변화, 풀이 오류 의심, 다른 타당 풀이 가능성 검토, 채점 불가, API 실패·미완료|[사례](trig_1_044.md) · [수식 화면](../report.html#trig_1_044)|
 |trig_1_045|API 실패·미완료|[사례](trig_1_045.md) · [수식 화면](../report.html#trig_1_045)|
-|trig_1_047|조건별 최종 답 변화, 풀이 오류 의심, API 실패·미완료|[사례](trig_1_047.md) · [수식 화면](../report.html#trig_1_047)|
+|trig_1_047|D에서도 오답, 조건별 최종 답 변화, 풀이 오류 의심, API 실패·미완료|[사례](trig_1_047.md) · [수식 화면](../report.html#trig_1_047)|
 |trig_1_048|API 실패·미완료|[사례](trig_1_048.md) · [수식 화면](../report.html#trig_1_048)|
 |trig_2_001|API 실패·미완료|[사례](trig_2_001.md) · [수식 화면](../report.html#trig_2_001)|
 |trig_2_002|API 실패·미완료|[사례](trig_2_002.md) · [수식 화면](../report.html#trig_2_002)|
@@ -113,9 +113,9 @@
 |trig_2_015|API 실패·미완료|[사례](trig_2_015.md) · [수식 화면](../report.html#trig_2_015)|
 |trig_2_018|토큰 사용량 큰 증가, API 실패·미완료|[사례](trig_2_018.md) · [수식 화면](../report.html#trig_2_018)|
 |trig_2_019|API 실패·미완료|[사례](trig_2_019.md) · [수식 화면](../report.html#trig_2_019)|
-|trig_2_020|다른 타당 풀이 가능성 검토, API 실패·미완료|[사례](trig_2_020.md) · [수식 화면](../report.html#trig_2_020)|
+|trig_2_020|D에서도 오답, 조건별 최종 답 변화, 풀이 오류 의심, 다른 타당 풀이 가능성 검토, API 실패·미완료|[사례](trig_2_020.md) · [수식 화면](../report.html#trig_2_020)|
 |trig_2_021|API 실패·미완료|[사례](trig_2_021.md) · [수식 화면](../report.html#trig_2_021)|
-|trig_2_023|API 실패·미완료|[사례](trig_2_023.md) · [수식 화면](../report.html#trig_2_023)|
+|trig_2_023|다른 타당 풀이 가능성 검토, API 실패·미완료|[사례](trig_2_023.md) · [수식 화면](../report.html#trig_2_023)|
 |trig_2_026|API 실패·미완료|[사례](trig_2_026.md) · [수식 화면](../report.html#trig_2_026)|
 |trig_2_027|API 실패·미완료|[사례](trig_2_027.md) · [수식 화면](../report.html#trig_2_027)|
 |trig_2_028|다른 타당 풀이 가능성 검토, API 실패·미완료|[사례](trig_2_028.md) · [수식 화면](../report.html#trig_2_028)|
@@ -132,7 +132,7 @@
 |trig_3_005|API 실패·미완료|[사례](trig_3_005.md) · [수식 화면](../report.html#trig_3_005)|
 |trig_3_006|토큰 사용량 큰 증가, API 실패·미완료|[사례](trig_3_006.md) · [수식 화면](../report.html#trig_3_006)|
 |trig_3_007|API 실패·미완료|[사례](trig_3_007.md) · [수식 화면](../report.html#trig_3_007)|
-|trig_3_008|풀이 오류 의심, 답은 맞지만 풀이 오류 의심, API 실패·미완료|[사례](trig_3_008.md) · [수식 화면](../report.html#trig_3_008)|
+|trig_3_008|D에서도 오답, 조건별 최종 답 변화, 풀이 오류 의심, 답은 맞지만 풀이 오류 의심, API 실패·미완료|[사례](trig_3_008.md) · [수식 화면](../report.html#trig_3_008)|
 |trig_3_009|API 실패·미완료|[사례](trig_3_009.md) · [수식 화면](../report.html#trig_3_009)|
 |trig_3_012|API 실패·미완료|[사례](trig_3_012.md) · [수식 화면](../report.html#trig_3_012)|
 |trig_3_013|다른 타당 풀이 가능성 검토, API 실패·미완료|[사례](trig_3_013.md) · [수식 화면](../report.html#trig_3_013)|
