@@ -411,4 +411,11 @@ def _readme(output, config, state, summary, tokens, pairs, cases, reviews, quest
     lines += traces
     if (output / "extension_train185/README.md").is_file():
         lines += ["", "[별도 보관한 학습185문항 확장 결과](extension_train185/README.md)"]
+    if (output.parents[2] / "data/curation/answer_key_corrections.json").is_file():
+        lines += ["", "## 원본 정답표 보존과 검증된 정정 점수", "",
+                  "원본 정답표 기준 지표는 역사적 채점 결과로 보존한다. "
+                  "검증된 정답 오류(현재 trig_1_010: ④→②)는 [정정 기준 결과](key_corrected/README.md)에서 "
+                  "문항별·집계별·대응검정까지 확인한다. 별도 생성되므로 API 재호출은 없다.",
+                  "[정정 규칙](../../../data/curation/answer_key_corrections.json) · "
+                  "[전체 정답표 검토 기록](../../../docs/answer_key_audit_2026-11-11.md)", ""]
     (output / "README.md").write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
