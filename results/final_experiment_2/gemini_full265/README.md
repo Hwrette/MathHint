@@ -99,7 +99,7 @@ report/verify는 저장 자료만 읽어 학습이나 API 호출을 시작하지
 
 trig_1_010의 원본④와 해설 계산9/5·②의 기존 충돌을 보존한다. 원본 기준 점수를 주 결과로 표시하고 AI 보조 대안 기준은 CSV 별도 열에 둔다. 원본 정답을 자동 수정하지 않는다.
 
-총 1060개 조건의 검토 상태를 [검토 CSV](review/status.csv)에 기록했다. 상태 개수: `{'AI_assisted_reviewed': 413, 'suspected_error': 23, 'deferred': 3, 'not_generated': 621}`. 과거320개 검토는 응답SHA와 실제 인용이 일치하는 경우에만 재사용했다. 새185의 생성 풀이를 직접 검증하지 않았다면 검토 보류이며, 정답이 맞았다는 이유로 풀이 타당성을 확정하지 않는다. 별도 외부 검토 API 호출은 없다.
+총 1060개 조건의 검토 상태를 [검토 CSV](review/status.csv)에 기록했다. 상태 개수: `{'AI_assisted_reviewed': 416, 'suspected_error': 23, 'not_generated': 621}`. 과거320개 검토는 응답SHA와 실제 인용이 일치하는 경우에만 재사용했다. 새185의 생성 풀이를 직접 검증하지 않았다면 검토 보류이며, 정답이 맞았다는 이유로 풀이 타당성을 확정하지 않는다. 별도 외부 검토 API 호출은 없다.
 
 [선별 사례 199문항](case_reports/README.md) · [모든 응답 검토 상태](review/status.csv)
 

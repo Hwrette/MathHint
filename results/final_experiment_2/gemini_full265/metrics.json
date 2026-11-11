@@ -1196,9 +1196,8 @@
   "question_count": 265,
   "case_count": 199,
   "review_status_counts": {
-    "AI_assisted_reviewed": 413,
+    "AI_assisted_reviewed": 416,
     "suspected_error": 23,
-    "deferred": 3,
     "not_generated": 621
   },
   "state": {

@@ -12,7 +12,7 @@
 |diff_1_023|다른 타당 풀이 가능성 검토|[사례](diff_1_023.md) · [수식 화면](../report.html#diff_1_023)|
 |diff_1_033|다른 타당 풀이 가능성 검토|[사례](diff_1_033.md) · [수식 화면](../report.html#diff_1_033)|
 |diff_1_034|토큰 사용량 큰 증가|[사례](diff_1_034.md) · [수식 화면](../report.html#diff_1_034)|
-|diff_1_043|API 실패·미완료, 풀이 검토 보류|[사례](diff_1_043.md) · [수식 화면](../report.html#diff_1_043)|
+|diff_1_043|API 실패·미완료|[사례](diff_1_043.md) · [수식 화면](../report.html#diff_1_043)|
 |diff_1_044|API 실패·미완료|[사례](diff_1_044.md) · [수식 화면](../report.html#diff_1_044)|
 |diff_1_045|API 실패·미완료|[사례](diff_1_045.md) · [수식 화면](../report.html#diff_1_045)|
 |diff_1_046|API 실패·미완료|[사례](diff_1_046.md) · [수식 화면](../report.html#diff_1_046)|
