@@ -61,7 +61,7 @@ t가 제2사분면이므로 sin t = 3/5, cos t = -4/5, tan t = -3/4.
 
 각 정정 폴더에는 question_comparison.csv(기존·정정 판정 병기), summary.csv, paired_comparison.csv, README.md, audit.json이 있다.
 
-기존 실험 폴더의 원본 결과, config.json, plan.jsonl, responses.jsonl, prompt_audit/, 모델 체크포인트·해시·토큰 사용량을 수정하지 않았다. Python 보고서 생성 코드에도 보정 결과를 함께 새로 생성하는 단계를 연결했다. 저장소 루트에서 새 API 호출 없이 실행할 수 있다.
+기존 실험 폴더의 원본 결과, config.json, plan.jsonl, responses.jsonl, prompt_audit/, 모델 체크포인트·해시·토큰 사용량을 수정하지 않았다. 전체265 보고서 생성 코드는 새 정정 결과를 재계산하도록 연결했다. 기존 테스트80과 종합 보고서 생성 코드는 보존 검증 대상이므로 변경하지 않았다. 두 실험의 정정 결과는 아래 독립 명령으로 함께 재생성한다. 저장소 루트에서 새 API 호출 없이 실행할 수 있다.
 
 ~~~bash
 python -m mathhint_analysis.VerifiedAnswerKey
@@ -81,6 +81,7 @@ python -m mathhint_solver.final_experiment_2.gemini_full265 verify
 6. 자동 숫자 비교는 모든 풀이의 정확성 증명이 아니다. 특히 원본 해설에 중간 논리 오류가 있거나 비수치형 판단인 경우 별도 확인이 필요하다.
 7. 테스트80 풀이 오류 의심 22건(이 중 최종 답은 맞은 것 18건)은 **정답표 오류와 별도**로 관리한다. 오류 의심은 검증 완료가 아니다.
 8. 정정 로직을 바꾼다면 테스트를 실행하고 원본 결과 SHA·사용량·응답 출처가 바뀌지 않았는지 점검하며, 수정 및 검증 결과를 기록한다.
+9. gemini_full265/preservation_manifest.json은 약 3,500개의 과거 파일 해시를 고정한다. 보호 파일(루트 AGENTS.md, data/README.md, 과거 모델·Gemini 보고서 코드 및 결과 등)은 이 실험의 검증을 깨뜨리지 않도록 원본을 유지한다. 새 정정 파일과 문서는 별도 경로에 쓴다.
 
 ## 해석의 한계
 
