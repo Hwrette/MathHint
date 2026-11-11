@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "purpose": "Record a reviewed final-answer correctness decision for an API-successful answer that the automatic grader marked ungradable. Preserve raw grading and responses.",
+  "records": [
+    {
+      "id": "trig_1_044",
+      "condition": "B",
+      "split": "train",
+      "source_experiment": "gemini_full265",
+      "source_status": "success",
+      "source_grade": null,
+      "source_answer": "12 (선택지 오류로 판단되나, 계산상 12개임)",
+      "reference_answer": "③",
+      "reference_value": 13,
+      "corrected_grade": false,
+      "review_status": "verified_incorrect_final_answer",
+      "justification": "The explicit Gemini final answer is 12, while the correct total is 13 (6 points for x in [0,1), 7 for x in [1,2)). Gemini omitted x=1/2 where f(x)=3 sin(pi x)+4=7. The correct option is ③ (13); 12 is not a listed option. It is therefore a wrong submitted final answer rather than an unanswered or intrinsically ungradable problem.",
+      "evidence_path": "results/final_experiment_2/gemini_full265/case_reports/trig_1_044.md",
+      "keep_original_evaluation": true
+    }
+  ]
+}
