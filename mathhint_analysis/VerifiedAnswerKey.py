@@ -66,6 +66,24 @@ def get_registry(root):
     return path, changes
 
 
+def get_response_reviews(root):
+    """Independently checked wrong final answers previously marked ungradable by a parser."""
+    path = root / "data/curation/answer_response_reviews.json"
+    if not path.is_file():
+        return path, {}
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    reviews = {}
+    for item in payload["records"]:
+        key = (item["source_experiment"], item["id"], item["condition"])
+        if (key in reviews or item.get("review_status") != "verified_incorrect_final_answer"
+                or item.get("source_grade") is not None or item.get("corrected_grade") is not False):
+            raise ValueError("Invalid or duplicate response review: " + str(key))
+        if not item.get("evidence_path") or not (root / item["evidence_path"]).is_file():
+            raise ValueError("Missing reviewed-response evidence: " + str(key))
+        reviews[key] = item
+    return path, reviews
+
+
 def exact_mcnemar(b, c):
     d = b + c
     return min(1.0, 2.0 * sum(math.comb(d, i) for i in range(min(b, c) + 1)) / 2**d) if d else 1.0
@@ -76,14 +94,16 @@ def summarize(rows, scope):
     for arm in ARMS:
         success = [r for r in rows if r[arm + "_status"] == "success"]
         gradable = [r for r in success if grade_bool(r[arm + "_correct_verified"]) is not None]
-        old = sum(grade_bool(r[arm + "_correct_original"]) is True for r in gradable)
+        original_gradable = [r for r in success if grade_bool(r[arm + "_correct_original"]) is not None]
+        old = sum(grade_bool(r[arm + "_correct_original"]) is True for r in original_gradable)
         new = sum(grade_bool(r[arm + "_correct_verified"]) is True for r in gradable)
         summary.append({
             "split": scope, "condition": arm, "expected_count": len(rows),
             "success_count": len(success), "graded_count": len(gradable),
+            "graded_count_original": len(original_gradable),
             "correct_count_original": old, "correct_count_verified": new,
             "incorrect_count_verified": len(gradable) - new,
-            "accuracy_original": old / len(gradable) if gradable else "",
+            "accuracy_original": old / len(original_gradable) if original_gradable else "",
             "accuracy_verified": new / len(gradable) if gradable else "",
             "correction_delta": new - old, "pending_or_failed": len(rows) - len(success),
         })
@@ -115,6 +135,7 @@ def summarize(rows, scope):
 
 
 def regrade(root, experiment, registry_path, corrections):
+    response_review_path, response_reviews = get_response_reviews(root)
     folder = root / "results/final_experiment_2" / experiment
     source = folder / "question_comparison.csv"
     if not source.is_file():
@@ -124,6 +145,7 @@ def regrade(root, experiment, registry_path, corrections):
     if len(rows) != expected or len(set(row["id"] for row in rows)) != expected:
         raise ValueError("Unexpected source question count or duplicate IDs: " + str(source))
     matched = set()
+    applied_response_reviews = set()
     for row in rows:
         correction = corrections.get(row["id"])
         row["answer_for_scoring"] = correction["corrected_answer"] if correction else row["original_answer"]
@@ -142,11 +164,28 @@ def regrade(root, experiment, registry_path, corrections):
                 revised = observed == correction["corrected_answer"]
             else:
                 revised = current
+            review_key = (experiment, row["id"], arm)
+            review = response_reviews.get(review_key)
+            if review is not None:
+                if (row[arm + "_status"] != review["source_status"]
+                        or current is not review["source_grade"]
+                        or row[arm + "_answer"] != review["source_answer"]
+                        or row["original_answer"] != review["reference_answer"]
+                        or row["split"] != review["split"] or correction is not None):
+                    raise ValueError("Saved answer does not match reviewed wrong answer: " + str(review_key))
+                revised = review["corrected_grade"]
+                applied_response_reviews.add(review_key)
+            row[arm + "_grade_source"] = (
+                "reviewed_incorrect_final_answer" if review is not None else
+                "verified_key_correction" if correction and current is not None else "source_grader")
             if row[arm + "_status"] != "success" and current is not None:
                 raise ValueError("Non-success has original boolean grade: " + row["id"] + "/" + arm)
             row[arm + "_correct_verified"] = str(revised) if revised is not None else ""
     if matched != set(corrections):
         raise ValueError("Correction ID missing from experiment: " + str(set(corrections) - matched))
+    required_reviews = {key for key in response_reviews if key[0] == experiment}
+    if applied_response_reviews != required_reviews:
+        raise ValueError("Reviewed response missing: " + str(required_reviews - applied_response_reviews))
     scopes = [("test", rows)]
     if experiment == "gemini_full265":
         scopes = [("all265", rows), ("train", [r for r in rows if r["split"] == "train"]),
@@ -169,22 +208,28 @@ def regrade(root, experiment, registry_path, corrections):
         "source_csv_sha256": sha256(source),
         "correction_registry": str(registry_path.relative_to(root)),
         "correction_registry_sha256": sha256(registry_path),
-        "verified_correction_ids": sorted(matched), "question_count": len(rows),
+        "verified_correction_ids": sorted(matched),
+        "reviewed_incorrect_final_answers": [dict(experiment=k[0], id=k[1], condition=k[2])
+                                              for k in sorted(applied_response_reviews)],
+        "response_review_registry": str(response_review_path.relative_to(root)) if response_review_path.is_file() else None,
+        "response_review_registry_sha256": sha256(response_review_path) if response_review_path.is_file() else None,
+        "question_count": len(rows),
         "source_mutated": False, "api_requests_made": 0,
-        "grading_rule": "Regrade only verified key-conflict IDs from saved explicit answer; retain original score alongside corrected score",
-        "caution": "Other source keys have not been independently mathematically proved. Unfinished requests are excluded.",
+        "grading_rule": "Regrade confirmed key conflicts and independently reviewed wrong final answers; preserve original parser abstentions and original scores",
+        "caution": "Do not classify other parser abstentions as wrong without examining actual output. Unfinished API requests are excluded.",
     }
     (out / "audit.json").write_text(json.dumps(audit, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     lines = ["# Reviewed-key corrected Gemini scores", "",
         "Source data, original saved scores, response logs and prompt hashes remain immutable.",
-        "Verified correction: trig_1_010 changes from ④ to ② (9/5).",
+        "Verified key correction: trig_1_010 changes from ④ to ② (9/5).",
+        "Independently verified wrong final answer: full265/trig_1_044/B produced 12, correct 13/③; original parser abstained, corrected score is wrong.",
         "Other rows retain the existing original key; this is not independent proof for every solution.",
-        "", "|Split|Condition|Gradable|Original correct|Corrected correct|Corrected accuracy|",
-        "|---|---|---:|---:|---:|---:|"]
+        "", "|Split|Condition|Original graded|Corrected graded|Original correct|Corrected correct|Corrected accuracy|",
+        "|---|---|---:|---:|---:|---:|---:|"]
     for r in summary:
         value = r["accuracy_verified"]
         accuracy = f"{value:.2%}" if isinstance(value, float) else "—"
-        lines.append(f"|{r['split']}|{r['condition']}|{r['graded_count']}|"
+        lines.append(f"|{r['split']}|{r['condition']}|{r['graded_count_original']}|{r['graded_count']}|"
                      f"{r['correct_count_original']}|{r['correct_count_verified']}|{accuracy}|")
     lines.extend(["", "The full265 run includes 185 training (in-sample) and 80 test questions.",
                   "Pending requests are not counted as wrong. Partial completion is nonrandom.",
