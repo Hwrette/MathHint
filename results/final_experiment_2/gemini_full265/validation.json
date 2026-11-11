@@ -1,5 +1,5 @@
 {
-  "verified_at": "2026-11-11T08:38:42.821088+00:00",
+  "verified_at": "2026-11-11T08:59:35.155489+00:00",
   "checks": [
     {
       "check": "frozen_models_data_and_full265_plan_match",
@@ -5383,6 +5383,326 @@
     },
     {
       "check": "sdk_capture_281",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_282",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_283",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_284",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_285",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_286",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_287",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_288",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_289",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_290",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_291",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_292",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_293",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_294",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_295",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_296",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_297",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_298",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_299",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_300",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_301",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_302",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_303",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_304",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_305",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_306",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_307",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_308",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_309",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_310",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_311",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_312",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_313",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_314",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_315",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_316",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_317",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_318",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_319",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_320",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_321",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_322",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_323",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_324",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_325",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_326",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_327",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_328",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_329",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_330",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_331",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_332",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_333",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_334",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_335",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_336",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_337",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_338",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_339",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_340",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_341",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_342",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_343",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_344",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_345",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_346",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_347",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_348",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_349",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_350",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_351",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_352",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_353",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_354",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_355",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_356",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_357",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_358",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_359",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_360",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_361",
       "passed": true
     },
     {
@@ -21650,6 +21970,18 @@
       "passed": true
     },
     {
+      "check": "usage_raw_trig_1_012_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_1_012_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_1_012_A",
+      "passed": true
+    },
+    {
       "check": "response_identity_trig_1_014_A",
       "passed": true
     },
@@ -22175,6 +22507,1878 @@
     },
     {
       "check": "live_sdk_boundary_trig_1_044_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_045_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_1_045_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_1_045_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_1_045_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_1_045_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_1_045_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_047_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_1_047_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_1_047_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_1_047_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_1_047_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_1_047_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_048_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_1_048_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_1_048_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_1_048_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_1_048_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_1_048_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_001_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_001_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_001_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_001_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_001_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_001_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_002_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_002_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_002_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_002_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_002_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_002_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_004_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_004_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_004_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_004_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_004_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_004_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_005_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_005_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_005_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_005_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_005_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_005_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_006_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_006_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_006_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_006_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_006_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_006_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_008_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_008_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_008_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_008_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_008_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_008_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_009_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_009_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_009_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_009_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_009_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_009_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_010_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_010_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_010_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_010_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_010_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_010_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_011_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_011_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_011_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_011_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_011_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_011_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_012_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_012_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_012_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_012_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_012_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_012_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_013_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_013_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_013_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_013_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_013_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_013_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_015_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_015_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_015_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_015_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_015_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_015_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_018_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_018_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_018_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_018_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_018_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_018_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_019_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_019_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_019_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_019_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_019_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_019_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_020_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_020_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_020_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_020_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_020_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_020_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_021_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_021_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_021_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_021_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_021_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_021_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_023_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_023_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_023_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_023_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_023_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_023_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_026_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_026_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_026_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_026_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_026_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_026_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_027_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_027_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_027_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_027_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_027_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_027_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_028_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_028_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_028_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_028_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_028_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_028_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_029_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_029_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_029_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_029_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_029_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_029_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_031_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_031_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_031_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_031_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_031_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_031_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_032_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_032_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_032_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_032_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_032_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_032_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_033_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_033_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_033_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_033_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_033_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_033_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_034_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_034_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_034_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_034_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_034_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_034_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_036_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_036_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_036_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_036_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_036_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_036_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_037_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_2_037_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_2_037_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_2_037_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_2_037_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_2_037_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_001_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_001_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_001_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_001_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_001_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_001_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_003_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_003_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_003_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_003_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_003_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_003_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_004_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_004_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_004_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_004_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_004_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_004_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_005_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_005_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_005_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_005_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_005_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_005_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_006_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_006_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_006_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_006_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_006_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_006_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_007_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_007_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_007_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_007_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_007_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_007_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_008_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_008_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_008_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_008_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_008_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_008_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_009_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_009_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_009_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_009_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_009_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_009_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_012_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_012_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_012_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_012_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_012_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_012_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_013_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_013_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_013_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_013_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_013_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_013_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_016_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_016_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_016_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_016_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_016_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_016_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_018_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_018_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_018_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_018_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_018_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_018_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_019_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_019_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_019_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_019_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_019_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_019_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_020_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_020_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_020_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_020_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_020_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_020_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_022_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_022_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_022_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_022_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_022_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_022_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_023_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_023_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_023_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_023_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_023_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_023_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_024_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_024_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_024_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_024_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_024_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_024_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_025_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_025_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_025_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_025_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_025_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_025_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_027_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_027_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_027_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_027_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_027_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_027_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_028_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_028_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_028_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_028_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_028_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_028_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_029_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_029_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_029_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_029_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_029_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_029_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_030_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_030_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_030_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_030_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_030_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_030_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_031_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_031_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_031_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_031_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_031_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_031_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_032_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_032_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_032_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_032_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_032_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_032_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_033_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_033_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_033_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_033_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_033_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_033_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_036_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_036_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_036_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_036_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_036_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_036_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_037_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_037_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_037_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_037_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_037_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_037_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_038_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_038_A",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_038_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_038_A",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_038_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_038_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_025_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_2_025_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_2_025_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_2_025_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_2_025_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_2_025_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_026_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_2_026_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_2_026_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_2_026_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_2_026_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_2_026_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_027_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_2_027_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_2_027_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_2_027_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_2_027_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_2_027_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_028_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_2_028_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_2_028_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_2_028_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_2_028_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_2_028_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_032_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_2_032_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_2_032_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_2_032_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_2_032_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_2_032_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_033_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_2_033_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_2_033_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_2_033_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_2_033_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_2_033_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_034_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_2_034_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_2_034_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_2_034_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_2_034_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_2_034_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_035_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_2_035_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_2_035_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_2_035_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_2_035_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_2_035_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_038_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_2_038_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_2_038_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_2_038_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_2_038_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_2_038_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_039_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_2_039_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_2_039_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_2_039_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_2_039_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_2_039_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_042_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_2_042_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_2_042_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_2_042_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_2_042_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_2_042_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_043_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_2_043_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_2_043_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_2_043_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_2_043_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_2_043_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_3_002_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_3_002_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_3_002_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_3_002_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_3_002_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_3_002_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_3_003_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_3_003_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_3_003_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_3_003_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_3_003_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_3_003_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_3_006_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_3_006_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_3_006_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_3_006_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_3_006_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_3_006_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_3_007_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_3_007_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_3_007_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_3_007_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_3_007_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_3_007_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_3_009_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_3_009_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_3_009_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_3_009_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_3_009_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_3_009_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_3_010_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_3_010_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_3_010_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_3_010_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_3_010_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_3_010_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_3_011_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_3_011_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_3_011_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_3_011_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_3_011_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_3_011_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_3_013_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_3_013_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_3_013_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_3_013_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_3_013_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_3_013_B",
       "passed": true
     },
     {
@@ -25202,15 +27406,15 @@
       "passed": true
     }
   ],
-  "passed": 6300,
+  "passed": 6851,
   "failed": 0,
   "complete": true,
   "experiment_complete": false,
-  "successful_requests": 592,
+  "successful_requests": 671,
   "expected_requests": 1060,
-  "pending_requests": 468,
+  "pending_requests": 389,
   "split_counts": {
-    "train": 272,
+    "train": 351,
     "test": 320
   },
   "preservation": {
@@ -25253,16 +27457,16 @@
       }
     ],
     "passed": true,
-    "new_request_start_count": 282,
-    "valid_new_request_start_count": 282,
-    "new_unique_request_start_count": 282,
-    "shared_request_start_log_count": 558,
-    "shared_request_start_count": 558,
+    "new_request_start_count": 362,
+    "valid_new_request_start_count": 362,
+    "new_unique_request_start_count": 362,
+    "shared_request_start_log_count": 638,
+    "shared_request_start_count": 638,
     "minimum_new_start_interval_seconds": 9.998885154724121,
     "maximum_rolling_start_counts_at_new_attempts": {
       "60": 6,
       "3600": 202,
-      "86400": 558
+      "86400": 638
     },
     "local_policy": {
       "interval_seconds": 10.0,
