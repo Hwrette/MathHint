@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "policy": "Immutable source data/processed and saved Gemini API outputs remain unchanged. This registry defines a reviewed corrected answer used only in derived grading reports. Never alter historical request/response hashes.",
+  "review_date": "2026-11-11",
+  "corrections": [
+    {
+      "id": "trig_1_010",
+      "split": "test",
+      "original_answer": "④",
+      "corrected_answer": "②",
+      "answer_value_latex": "\\frac{9}{5}",
+      "review_status": "independent_algebra_verified",
+      "source_problem": "data/processed/problems/trig_1_010.txt",
+      "source_solution": "data/processed/solutions/trig_1_010.txt",
+      "source_solution_blob_sha": "432ffedf47bcca34b605cd50d483756a4b7025b0",
+      "evidence": [
+        "The original answer label is ④ (12/5), while the same source solution ends with k tan(t) = 9/5.",
+        "The printed choice ② is 9/5.",
+        "Vieta gives sin(t)+cos(t)=-1/5 and sin(t)cos(t)=k/5. Thus k=-12/5.",
+        "Since pi/2<t<pi, sin(t)=3/5 and cos(t)=-4/5, so tan(t)=-3/4 and k tan(t)=9/5."
+      ],
+      "scope": "Grade existing and future responses with the corrected key; preserve original grading and all raw API/plan/model/response records for audit. This is an arithmetic/answer-key correction, not a re-run of Gemini."
+    }
+  ]
+}
