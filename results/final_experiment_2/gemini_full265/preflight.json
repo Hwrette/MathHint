@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-11-11T00:13:23.969534+00:00",
+  "checked_at": "2026-11-11T08:16:19.714754+00:00",
   "config_id": "054e3feed73f033e910825c35d9a7332fb90a161d453525bb63edccce42a7cbe",
   "requested_model": "gemini-3.1-flash-lite",
   "generation_calls": 0,
   "non_generation_network_calls": 1,
   "expected_requests": 1060,
-  "successful_saved": 439,
-  "new_requests_needed": 621,
+  "successful_saved": 515,
+  "new_requests_needed": 545,
   "preparation": {
     "dry_run": {
       "mocked_sdk_calls": 1060,
@@ -20,639 +20,31 @@
     "reuse": {
       "imported": 0,
       "requests": [],
-      "review_records": 439,
+      "review_records": 515,
       "source_path": "results/final_experiment_2/gemini_comparison",
       "note": "Only exact successful SDK requests reused; original outputs/usage/times/grades and separately hash-bound AI reviews preserved."
     },
     "state": {
       "status": "partial_complete",
       "reason": "전체265 요청 감사·정확 재사용 완료. 실제 API 환경은 별도 확인합니다.",
-      "updated_at": "2026-11-11T00:13:23.924027+00:00",
+      "updated_at": "2026-11-11T08:16:19.700594+00:00",
       "config_id": "054e3feed73f033e910825c35d9a7332fb90a161d453525bb63edccce42a7cbe",
       "split": "all",
       "experiment_scope": "full265",
       "expected_requests": 1060,
-      "successful_requests": 439,
-      "failed_requests": 0,
-      "saved_responses": 439,
-      "response_log_entries": 439,
-      "pending_count": 621,
+      "successful_requests": 515,
+      "failed_requests": 1,
+      "saved_responses": 516,
+      "response_log_entries": 516,
+      "pending_count": 545,
       "pending_requests": [
-        {
-          "id": "diff_1_043",
-          "condition": "B",
-          "method": "regression_hint",
-          "split": "train",
-          "request_sha256": "0fc135ea0f55cfb8326742244c0c71edb9ab1d5734dd619bd717c2fd8eef4568",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_044",
-          "condition": "B",
-          "method": "regression_hint",
-          "split": "train",
-          "request_sha256": "ec926e1058c49c91667068cc6f2e1b9170a1b5ce450329f5e78b1aed8c4e228a",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_044",
-          "condition": "A",
-          "method": "baseline",
-          "split": "train",
-          "request_sha256": "e83f1ce87af4f9944f8c465299bb348bb84d3210d174714b167c8de3de498542",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_044",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "1daff5b66d29a82868c1ae8b4eb5bbbe34e744364d817a1eb9792945dd7a646e",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_044",
-          "condition": "D",
-          "method": "oracle_hint",
-          "split": "train",
-          "request_sha256": "3c1ff172a86ef772c8858860425828caa708433c0e9fd2d1e18f072324f2387a",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_045",
-          "condition": "B",
-          "method": "regression_hint",
-          "split": "train",
-          "request_sha256": "4577334bb85d881b05f945b8a28247def84eb3a6499f7c9ddcb2e4dc6b8ad107",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_045",
-          "condition": "A",
-          "method": "baseline",
-          "split": "train",
-          "request_sha256": "c2aa7f4d380cb5be751c60a7bafc2b163ec3eaadc25a2868f3aa580a45732027",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_045",
-          "condition": "D",
-          "method": "oracle_hint",
-          "split": "train",
-          "request_sha256": "5eaac63e855705d58ab19c34de697ca5958649381eed9a50849526278226f409",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_045",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "34d203ca0435fb1de417578bc8d0e08e7d8b57043eaf6ddf69db25d2f7b36f3d",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_046",
-          "condition": "B",
-          "method": "regression_hint",
-          "split": "train",
-          "request_sha256": "301f5c008751b2ad36721aae970ae8b698aad2f0f5a29ce35c8103e31c231e88",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_046",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "f433c14e6920f23a10b9dda43678230c199267ec24ce190eb8b94d64ab2fc510",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_046",
-          "condition": "A",
-          "method": "baseline",
-          "split": "train",
-          "request_sha256": "8f3782828aea185d244102ad88f95d5148d5208bfd2b2e664c96151cc37b6eac",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_046",
-          "condition": "D",
-          "method": "oracle_hint",
-          "split": "train",
-          "request_sha256": "3a11ebe3d22ce692864a807967ce58ebdb0a5809e0b57973d5adaa59148d5278",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_047",
-          "condition": "B",
-          "method": "regression_hint",
-          "split": "train",
-          "request_sha256": "0c77b99248cfa87280210c43cff16e8eb5adfc0dd0b17c10b87e8ccdf05ea472",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_047",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "a214ac9652de28398e9f4d769fe6e05c808430de4f604f445fa231db994bc5e7",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_047",
-          "condition": "D",
-          "method": "oracle_hint",
-          "split": "train",
-          "request_sha256": "fa697cecf4c1c39c6329145669ffdfc1b943ab289549218a0d21dcf6d1143f9c",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_047",
-          "condition": "A",
-          "method": "baseline",
-          "split": "train",
-          "request_sha256": "669a79ccede5f20f235bf6d8d94d68edeed3f600039daa5f1922ff63f8d44635",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_048",
-          "condition": "B",
-          "method": "regression_hint",
-          "split": "train",
-          "request_sha256": "4e3cfad6c12d193a77b4f0ff94f053e4952103ac7b695adecd1b7426e02ff95b",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_048",
-          "condition": "D",
-          "method": "oracle_hint",
-          "split": "train",
-          "request_sha256": "d8c4e2fc360bff4197d1aa5616489eb0925b50fb13ae169a6fcbd95120709772",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_048",
-          "condition": "A",
-          "method": "baseline",
-          "split": "train",
-          "request_sha256": "b98e919fbe7ddc507108048e0dcdd39e1ae616a5015b7ba1dd0793797f625ed9",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_048",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "9dfcba4f44440cd0a3861218a5e40ad0f85ca10674c3bce73ca5bf566fafb4b9",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_049",
-          "condition": "B",
-          "method": "regression_hint",
-          "split": "train",
-          "request_sha256": "1dee10a9af240e57bb25d54eb005e25c1517275bd0d9206e4fceb1210c438650",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_049",
-          "condition": "D",
-          "method": "oracle_hint",
-          "split": "train",
-          "request_sha256": "05e9c4fc8d51fdaa4279d724792856784736749893042808b1c6857705630868",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_049",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "c88ed3fd255f40b56d744f58b60331b1edb615025a8033d85c28dc282dcb6ef5",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_1_049",
-          "condition": "A",
-          "method": "baseline",
-          "split": "train",
-          "request_sha256": "e81efb6406cf9d6458284473205bbf09228494240fb065ca0447aa05fe3a78f7",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_001",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "dec5739300614f14186e47bf66d844cd93ddec34b5167f8f455ab29e9898b08e",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_001",
-          "condition": "A",
-          "method": "baseline",
-          "split": "train",
-          "request_sha256": "f6d45e2f41c650ba7bc560c118b839a4aefcca492d89a620fb59f394baec9dd6",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_001",
-          "condition": "B",
-          "method": "regression_hint",
-          "split": "train",
-          "request_sha256": "1f9fe5a0b20cf8d28f9ee344a9f73b566e14021f4408f2337ab9a70ea2d66cd6",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_001",
-          "condition": "D",
-          "method": "oracle_hint",
-          "split": "train",
-          "request_sha256": "3aa3fddcfbef8fce1c9c37fa8acb2ef7f60b66c856f12b035ec869a6b01ad6ac",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_002",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "1c1825b568bc5c5f5eeacda557e737176a81a5dfbcfd8abb37bf0d3d9d08648f",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_002",
-          "condition": "A",
-          "method": "baseline",
-          "split": "train",
-          "request_sha256": "ea311ae13eabc148093daf062db9b2e81398ab73cfd3388ca5731cd63a215f37",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_002",
-          "condition": "D",
-          "method": "oracle_hint",
-          "split": "train",
-          "request_sha256": "db07d9757d432515f794af64ba74342b6e4ca32c8387e74c8b5a9645e39229a0",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_002",
-          "condition": "B",
-          "method": "regression_hint",
-          "split": "train",
-          "request_sha256": "26b98911a6e992a626985de1f2ad49b6a4e8803b1f74919f69ef7b17ade1409c",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_003",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "d129559ec88137db27c059f773752986057ded4f9722c88f9aa7a0c82800eb26",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_003",
-          "condition": "B",
-          "method": "regression_hint",
-          "split": "train",
-          "request_sha256": "036651bdcb9f239d2914b483386581898149a54c04e77a641f403c76018c9061",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_003",
-          "condition": "A",
-          "method": "baseline",
-          "split": "train",
-          "request_sha256": "3c91d2dafc163e7149a45fd2479b2a0206fcba3ed0de46dcc6443ff126ac9352",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_003",
-          "condition": "D",
-          "method": "oracle_hint",
-          "split": "train",
-          "request_sha256": "c638c7e679a554092245c0f92d7e52739fe1ef85aea4e1c75481207b03b6aae7",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_005",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "cd5608269b3ec9a2b0a61ee9917b0c987fbb1a67350337d2f716c6a9dec5357f",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_005",
-          "condition": "B",
-          "method": "regression_hint",
-          "split": "train",
-          "request_sha256": "f07a5930b69191b9a7119918c19f29de2b5e7fbc1c1125352fc1c549497e70bb",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_005",
-          "condition": "D",
-          "method": "oracle_hint",
-          "split": "train",
-          "request_sha256": "f7b73d632e06b99992c447c0edba2c90e05b774e1f2436167ce71333dd5e96c9",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_005",
-          "condition": "A",
-          "method": "baseline",
-          "split": "train",
-          "request_sha256": "0b245cfe7b1aad50ae58825deb3febc00886d35a4bed82cc6f8dc566a8666419",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_008",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "88d3b83793e7e025c0d425072a4928ca46c479a208400d8ed2bad6a0573b433c",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_008",
-          "condition": "D",
-          "method": "oracle_hint",
-          "split": "train",
-          "request_sha256": "65caf93e9e611cab7a71fc13110d5e7b1bc93499352b1fcd041f27825a02e6f0",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_008",
-          "condition": "A",
-          "method": "baseline",
-          "split": "train",
-          "request_sha256": "fc29c5a506e4f1051d05a6d0bd647d9b13a2f9621d64aee58787b412283a3b85",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_008",
-          "condition": "B",
-          "method": "regression_hint",
-          "split": "train",
-          "request_sha256": "20fb951cbd92df84de2362500e56659e46b40749f7a72cae42e1a6dd3ec507d9",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_009",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "8f24dd51156cb261a19ad5915156acc5bf2dcdbbf455744d6828ca00bdb15fbc",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_009",
-          "condition": "D",
-          "method": "oracle_hint",
-          "split": "train",
-          "request_sha256": "8ae1870bf3d645d9096d362569a93bc6efe10b3723687551d7ab45164467b302",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_009",
-          "condition": "B",
-          "method": "regression_hint",
-          "split": "train",
-          "request_sha256": "0cfa600ae4997c8279febc2bf3af9c79250ffbb4a831611b0a48da22406ff534",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_009",
-          "condition": "A",
-          "method": "baseline",
-          "split": "train",
-          "request_sha256": "1f564e682b40f794efb09dc82b35ebe8873da10a04c27e46e675b74eb241888c",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_011",
-          "condition": "D",
-          "method": "oracle_hint",
-          "split": "train",
-          "request_sha256": "25be714d3d0d41735fb8ed66df2b3a7ddc667dcc88a4fd686589f925f2e8c5b0",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_011",
-          "condition": "A",
-          "method": "baseline",
-          "split": "train",
-          "request_sha256": "b59aeb472e26bc8fb60ee390a591d82c4377fbaf7150ce1ca4473ef4868c6e74",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_011",
-          "condition": "B",
-          "method": "regression_hint",
-          "split": "train",
-          "request_sha256": "ef82864702e580526a361ed63b20cb18937edff6c5e940fbd59abde98ed6cf17",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_011",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "8a3a10e6d5b63d3e58ecf32af1ae9617a5a8ffdf5a443e05b73b98029dbf6f91",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_012",
-          "condition": "D",
-          "method": "oracle_hint",
-          "split": "train",
-          "request_sha256": "5fc7f40e8ac1922d42f8e3e9e9494710e3d5d99825ee615e945ee29b1621f781",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_012",
-          "condition": "A",
-          "method": "baseline",
-          "split": "train",
-          "request_sha256": "11ed1c34775e925a85f8acc79d092b8d118364de5e0c77430b04d7106e87575a",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_012",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "0b007a25e1b02e67b4951ef3ab0e1bff6c3f4b92860e45cf2c550a2d89e8908c",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_012",
-          "condition": "B",
-          "method": "regression_hint",
-          "split": "train",
-          "request_sha256": "4846e1e23618d198eb60b89cf90f483840c12fe7a7f32b18fb0e40aacd025fb8",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_015",
-          "condition": "D",
-          "method": "oracle_hint",
-          "split": "train",
-          "request_sha256": "a279861bb1af540275a0e81c6566939e23d1a99217690c6915d522abbff07df3",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_015",
-          "condition": "B",
-          "method": "regression_hint",
-          "split": "train",
-          "request_sha256": "3bcf4e1921914b47cfa36ca07370f97676e0f74fcccd44b0e3c2ee6f28029696",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_015",
-          "condition": "A",
-          "method": "baseline",
-          "split": "train",
-          "request_sha256": "718013ec990ebead1435bd74394d85db01a246f26af22693ece4cc2ddc40ba2f",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_015",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "4e8d3ea20dcaaf5efac8625b3c56d50d29918f61f573e4d6fb64a9ed09b4d544",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_017",
-          "condition": "D",
-          "method": "oracle_hint",
-          "split": "train",
-          "request_sha256": "79b3352b8f2ac1c3c5f4db05d71e1ff714f17fea49be3a3a3ee09c83481191ce",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_017",
-          "condition": "B",
-          "method": "regression_hint",
-          "split": "train",
-          "request_sha256": "9e0664af9eabef8ee7362b970413ba2b80ca7e6f3fe5bdafa92a5ff365dc9d1b",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_017",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "cf1fa5471bcc27c9c0f3b4025e5dc5344d7a24015158802e98b1d81ee45f8efd",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_017",
-          "condition": "A",
-          "method": "baseline",
-          "split": "train",
-          "request_sha256": "2a8904b2ef3a9ca81d3cff6ecfb75c5ea4832429f7a533c3e3606978cde861c9",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_019",
-          "condition": "D",
-          "method": "oracle_hint",
-          "split": "train",
-          "request_sha256": "83c0d5923b5272478d88621f70872d2a8df70ae2906326a81278e905e44721bb",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_019",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "13e72ede95c236582f5c6a1d45a5328e126ea26b314ce1528ac47091119bf894",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_019",
-          "condition": "A",
-          "method": "baseline",
-          "split": "train",
-          "request_sha256": "306c74554cc90488a253d59ec2cedcb94627917867e4b53c342bb191009a5f07",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_019",
-          "condition": "B",
-          "method": "regression_hint",
-          "split": "train",
-          "request_sha256": "a139460a31531beec989f302fc6c68ffc7978416a224ee2b4c98ed43884f26c2",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_021",
-          "condition": "D",
-          "method": "oracle_hint",
-          "split": "train",
-          "request_sha256": "16a215c2a4d1ee51030c0a7200e991fc6607a8f69c97f05c8e374acc48a9b873",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_021",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "0d9228cbfc95ed8add48b2876e796b36b105f75999f560696c70c7d8a3a0d26c",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_021",
-          "condition": "B",
-          "method": "regression_hint",
-          "split": "train",
-          "request_sha256": "8b7bccbaa67700011c0ade466ae7c53ac6ddc421ae5fcefe0e00ab48689b1b55",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_021",
-          "condition": "A",
-          "method": "baseline",
-          "split": "train",
-          "request_sha256": "8f812229c54742ef63a19db21403095822736ce6789a75f065304bafb6bee19c",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_022",
-          "condition": "A",
-          "method": "baseline",
-          "split": "train",
-          "request_sha256": "beed08b82b44388eabebb5495a88591ca543bb94df58f9ea7452f45a7406d612",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_022",
-          "condition": "B",
-          "method": "regression_hint",
-          "split": "train",
-          "request_sha256": "9047ef02512c9a4b80f060be2b0f56740711b93004691d5e7c30c726ca34da1e",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "diff_2_022",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "29c6044ac2b13ec34234448a55d477a2dade616ff7d20fb3337f204cf5a5ea70",
-          "last_status": "not_executed"
-        },
         {
           "id": "diff_2_022",
           "condition": "D",
           "method": "oracle_hint",
           "split": "train",
           "request_sha256": "35e988dd74851f8d184dac257b0d01bc9dcfe72be04bbba65246b024f0439b48",
-          "last_status": "not_executed"
+          "last_status": "stopped_after_attempt"
         },
         {
           "id": "diff_2_025",
@@ -5015,16 +4407,62 @@
         },
         "train": {
           "expected_requests": 740,
-          "successful_requests": 119,
-          "pending_requests": 621
+          "successful_requests": 195,
+          "pending_requests": 545
         }
       },
+      "condition_order": null,
+      "execution_order_note": "기존 요청 계획 순서 유지",
+      "pending_by_condition": {
+        "A": 136,
+        "B": 136,
+        "C": 136,
+        "D": 137
+      },
       "reused_successes": 320,
-      "new_successes": 119,
+      "new_successes": 195,
       "safe_to_resume": true,
       "resume_command": "python -m mathhint_solver.final_experiment_2.gemini_full265 generate",
       "resume_prerequisites": "기록된 대기시간과 실행 예산을 확인하고 미완료만 실행",
       "provider_daily_reset_time": null,
+      "provider_quota_observation": {
+        "status_code": 429,
+        "daily_quota": true,
+        "model": "gemini-3.1-flash-lite",
+        "quota_violations": [
+          {
+            "quota_id": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+            "quota_metric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quota_value": 500,
+            "quota_dimensions": {
+              "location": "global",
+              "model": "gemini-3.1-flash-lite"
+            },
+            "description": "Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits."
+          }
+        ],
+        "retry_info_delay_seconds": 26943.0,
+        "observed_at": "2026-11-11T00:30:56.860528+00:00",
+        "observed_at_source": "quota_error event",
+        "earliest_retry_from_response": "2026-11-11T07:59:59.860528+00:00",
+        "recorded_cooldown_until": "2026-11-11T08:00:00.861426+00:00",
+        "confirmed_daily_reset": false,
+        "provider_full_limits_confirmed": false,
+        "note": "과거429의 관측값이다. RetryInfo 만료는 재시도 가능 최저 시각이며 일일 초기화 보장이 아니다. 기록된 제한기 대기에는 별도 안전 여유가 있다. 전체 공급자 한도·현재 잔여량은 미확인이다.",
+        "source": {
+          "execution_id": "2026-11-11T003046_149177+0000",
+          "id": "diff_2_022",
+          "condition": "D",
+          "response_log": "responses.jsonl",
+          "response_record_sha256": "4b456e5875c3e58257592db56a68211c8044b3142336fcd1c9b65adbbae8df88",
+          "request_sha256": "35e988dd74851f8d184dac257b0d01bc9dcfe72be04bbba65246b024f0439b48",
+          "attempt_index": 1,
+          "attempt_sha256": "523121b96d1a2cb2a8ebd371504a8c6e188b1c7521b7cc649113f3a4dd43ca0b",
+          "event_log": "execution_runs/request_events.jsonl",
+          "quota_event_sha256": "bd737a8b440e5bb377b83118f2c002ef76b06ebd529b20398b92ae25f9eefd7f",
+          "cooldown_event_sha256": "da4da96c096d86e2fc75e2eababbc4193650f6614457d8b412015073371d407a"
+        }
+      },
       "resume_note": "성공 요청은 해시를 검증해 재사용한다. 환경 종료 후 자동 예약은 설정하지 않았다.",
       "user_authorized_additional_train185": true,
       "training_scope_note": "train185는 모델 가중치 학습에 사용된 문항의 예측이다. 전체265 혼합값은 독립 테스트 성능이 아니다."

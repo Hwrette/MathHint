@@ -12,7 +12,8 @@ from ... import CompareGeneration as comparison
 from ..gemini_comparison.budget import BudgetRateLimiter
 from ..gemini_comparison.run import transport_request, load_data
 from .common import (ROOT, OUTPUT, METHODS, DEFAULT_POLICY, append_jsonl, read_json,
-    read_jsonl, write_json, safe_output, source_output, all_request_events, execution_lock, verify_preservation)
+    read_jsonl, write_json, safe_output, source_output, all_request_events, execution_lock, verify_preservation,
+    validate_condition_order)
 from .plan import prepare_plan, initialize, dry_run, reuse_existing, MODEL
 
 
@@ -116,6 +117,8 @@ def _load_policy(output, supplied=None):
         raise ValueError("공급자 한도가 미확인이므로10초/6RPM/1작업자를 유지합니다.")
     if policy.get("provider_limits_confirmed"):
         raise ValueError("이번 사용자의 전체265 승인은 공급자 한도 확인으로 취급하지 않습니다.")
+    if "condition_order" in policy:
+        validate_condition_order(policy["condition_order"])
     for field in ("rpd", "rph", "rpm", "max_new_requests", "max_run_seconds", "max_wait_seconds", "http_timeout_ms"):
         if policy[field] <= 0:
             raise ValueError(f"양수 실행 제한이 필요합니다: {field}")
@@ -124,8 +127,23 @@ def _load_policy(output, supplied=None):
     return policy
 
 
-def state_record(output, config, plan, *, status, reason=None, limiter=None):
+def execution_plan(plan, condition_order=None):
+    """원본 계획·요청을 수정하지 않고 조건별 전체 그룹의 안정 정렬 사본만 만든다."""
+    if condition_order is None:
+        return list(plan)
+    order = validate_condition_order(condition_order)
+    priority = {condition: index for index, condition in enumerate(order)}
+    return sorted(plan, key=lambda row: priority[row["condition"]])
+
+
+def state_record(output, config, plan, *, status, reason=None, limiter=None, condition_order=None):
     output = Path(output)
+    if condition_order is None:
+        policy = limiter.policy if limiter is not None else (read_json(output / "policy.json")
+            if (output / "policy.json").exists() else {})
+        condition_order = policy.get("condition_order")
+    if condition_order is not None:
+        validate_condition_order(condition_order)
     response_history = read_jsonl(output / "responses.jsonl")
     records = comparison.load_completed(output, comparison.digest(config))
     expected = {(row["id"], row["method"]) for row in plan}
@@ -137,6 +155,7 @@ def state_record(output, config, plan, *, status, reason=None, limiter=None):
                 "split": row["split"], "request_sha256": row["request_sha256"],
                 "last_status": records.get((row["id"], row["method"]), {}).get("status", "not_executed")}
                for row in plan if records.get((row["id"], row["method"]), {}).get("status") != "success"]
+    pending = execution_plan(pending, condition_order)
     if not pending:
         status, reason = "completed", "전체265문항 네 조건의 성공 응답이 저장되었습니다."
     elif status == "completed":
@@ -150,10 +169,14 @@ def state_record(output, config, plan, *, status, reason=None, limiter=None):
         "failed_requests": len(failures), "saved_responses": len(records),
         "response_log_entries": len(response_history),
         "pending_count": len(pending), "pending_requests": pending, "by_split": by_split,
+        "condition_order": condition_order,
+        "execution_order_note": "조건별 전체 그룹 우선; 그룹 내 원래 계획 ID 순서 유지" if condition_order else "기존 요청 계획 순서 유지",
+        "pending_by_condition": {condition: sum(row["condition"] == condition for row in pending) for condition in "ABCD"},
         "reused_successes": sum(row.get("response_origin") == "reused_exact_request" for row in successes),
         "new_successes": sum(row.get("response_origin") == "new_api_call" for row in successes),
         "safe_to_resume": bool(pending) and status not in ("missing_api_key", "permission_denied"),
         "resume_command": "python -m mathhint_solver.final_experiment_2.gemini_full265 generate"
+                          + (f" --condition-order {condition_order}" if condition_order else "")
                           + (" --clear-stop" if (output / "stop_requested").exists() else ""),
         "resume_prerequisites": "공급자 실제 일일 제한/초기화 또는 로컬rolling24h 상한을 확인" if status == "daily_quota_exhausted" else
             "인증·접근 권한/요청 모델 지원을 복구" if status in ("missing_api_key", "permission_denied") else
@@ -180,7 +203,8 @@ def prepare(root=ROOT, output=OUTPUT, *, data=None):
     initialize(output, config, plan)
     audit = dry_run(root, output, config, plan)
     reuse = reuse_existing(root, output, config, plan)
-    state = state_record(output, config, plan, status="partial_complete", reason="전체265 요청 감사·정확 재사용 완료. 실제 API 환경은 별도 확인합니다.")
+    state = state_record(output, config, plan, status="partial_complete", reason="전체265 요청 감사·정확 재사용 완료. 실제 API 환경은 별도 확인합니다.",
+                         condition_order=policy.get("condition_order"))
     return config, plan, {"dry_run": audit, "reuse": reuse, "state": state, "preservation": preservation}, output, policy
 
 
@@ -250,16 +274,18 @@ def _generate(root=ROOT, output=OUTPUT, *, policy=None, request_function=None, a
     root = Path(root).resolve()
     config, plan, preparation, output, saved_policy = prepare(root, output, data=data)
     policy = _load_policy(output, {**saved_policy, **(policy or {})})
+    condition_order = policy.get("condition_order")
     key = api_key if api_key is not None else os.environ.get("GEMINI_API_KEY")
     if not preparation["state"]["pending_requests"]:
-        return state_record(output, config, plan, status="completed")
+        return state_record(output, config, plan, status="completed", condition_order=condition_order)
     if request_function is None:
         if not _preflight_fresh(output, config):
             info = _preflight(root, output, data=data, api_key=key)
             if info["api_readiness"] != "ready":
-                return read_json(output / "state.json")
+                state = read_json(output / "state.json")
+                return state_record(output, config, plan, status=state["status"], reason=state.get("reason"), condition_order=condition_order)
         if not key:
-            return state_record(output, config, plan, status="missing_api_key", reason="GEMINI_API_KEY가 없습니다.")
+            return state_record(output, config, plan, status="missing_api_key", reason="GEMINI_API_KEY가 없습니다.", condition_order=condition_order)
     config_id = comparison.digest(config)
     execution_id = comparison.utc_now().replace(":", "").replace(".", "_")
     path = output / "execution_runs" / (execution_id + ".json")
@@ -268,6 +294,9 @@ def _generate(root=ROOT, output=OUTPUT, *, policy=None, request_function=None, a
     prior_events_path = source_output(root) / "execution_runs/request_events.jsonl"
     execution = {"execution_id": execution_id, "config_id": config_id, "started_at": comparison.utc_now(),
         "status": "running", "experiment_scope": "full265", "policy": policy,
+        "condition_order": condition_order,
+        "pending_by_condition_at_start": {condition: sum(row["condition"] == condition
+            for row in preparation["state"]["pending_requests"]) for condition in "ABCD"},
         "transport": {"http_timeout_ms": policy["http_timeout_ms"], "sdk_attempts": 1},
         "preexisting_successes": preparation["state"]["successful_requests"],
         "runner_sha256": comparison.file_hash(Path(__file__)),
@@ -282,7 +311,7 @@ def _generate(root=ROOT, output=OUTPUT, *, policy=None, request_function=None, a
     final_status, reason, consecutive_failures = "partial_complete", "미완료 요청이 남아 있습니다.", 0
     try:
         completed = comparison.load_completed(output, config_id)
-        for item in plan:
+        for item in execution_plan(plan, condition_order):
             key_tuple = item["id"], item["method"]
             if completed.get(key_tuple, {}).get("status") == "success":
                 continue
@@ -346,6 +375,7 @@ def _generate(root=ROOT, output=OUTPUT, *, policy=None, request_function=None, a
             successful_requests=state["successful_requests"], failed_requests=state["failed_requests"],
             pending_count=state["pending_count"], pending_requests=state["pending_requests"],
             new_request_starts=limiter.new_starts, limiter=limiter.snapshot(), reason=reason)
+        execution["pending_by_condition"] = state["pending_by_condition"]
         write_json(path, execution)
     return state
 

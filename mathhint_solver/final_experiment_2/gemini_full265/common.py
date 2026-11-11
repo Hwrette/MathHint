@@ -19,6 +19,13 @@ DEFAULT_POLICY = {**ORIGINAL_POLICY, "rpd": 1400, "max_new_requests": 40,
     "limits_note": "user-authorized local safety cap for full265 extension; not a confirmed provider quota; old and new request starts share rolling windows"}
 
 
+def validate_condition_order(value):
+    """실행 우선순위만 허용한다. 누락·중복·소문자 조건은 조용히 보정하지 않는다."""
+    if not isinstance(value, str) or len(value) != 4 or set(value) != set("ABCD"):
+        raise ValueError("condition-order는 A/B/C/D를 한 번씩 포함한 순열이어야 합니다(예: ABDC).")
+    return value
+
+
 def safe_output(root=ROOT, output=None):
     expected = Path(root).resolve() / "results/final_experiment_2/gemini_full265"
     selected = Path(output).resolve() if output is not None else expected

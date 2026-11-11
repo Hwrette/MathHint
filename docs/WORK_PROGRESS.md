@@ -788,3 +788,7 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 시작HEAD a4d6a2d9e83d409e4e4a24c920c42220e0442141,작업트리clean을확인했다.사용자재개지시를명세에저장했다.현재UTC08:12로기록안전대기08:00:00.861426가경과했으며이는실제잔여쿼터확인을뜻하지않는다.인증binding ready/network enforced를새로확인했다.
 - 실제현재성공515/1060(재사용320+신규195),미완료 A136/B136/D137/C136 총545다.A/B/D409개를먼저호출하고남은예산이면C를진행한다.이전515성공전체record digest/검토515문서·순서/설정/요청plan baseline은 /tmp/mathhint_full265_resume_515_snapshot.json 에저장했고기존보호3518 SHA불일치0이다.
 - 현재새API호출0,실행용리스트순서옵션만최소구현중이다.기존config/SDK/프롬프트/모델/데이터/해시를바꾸지않고policy/state/실행이력에우선순위를명시한다. 다음은새순서옵션단위검사→원격체크포인트→livepreflight/ABD우선80시도단위실제재개다. 이전일일500한도와새실제응답을따르며안전한중단/즉시저장/성공skip을유지한다.
+
+- 재개전push는원격추가25커밋으로non-fast-forward거절됐다. 강제push하지않고origin/main8762639db02498972aa10fb338508e84e1c997fb를fetch하여사용자/다른세션의VerifiedAnswerKey·정정레지스트리·파생key_corrected결과/테스트/문서를읽었다. WIP를5348804stash로보존→로컬명세커밋rebase→stashpop자동통합(충돌0)했고원격의재채점hook을유지한다. 원본key/응답은그대로,검증된trig_1_010④→②의정정은별도key_corrected에재생성한다. 추가원격불변9파일SHA는 /tmp/mathhint_full265_remote_added_8762639_snapshot.json 에보존했다.
+- 실제모델GETpreflight ready,새생성0이다.우선순위/기존실행/쿼터/속도/정정채점fixture26/26PASS다. policy.condition_order=ABDC를저장했고모든동일요청hash/config는그대로다. 이전515보존독립사전2587/2587PASS도확인했다.
+- 보고서표시보완은원격hook과통합중이므로첫실제구간은coregenerate(policy condition_orderABDC/max_new_requests80/max_run3600/max_wait120)를호출하고자동report콜백은생략한다. 해당80시도구간후완료된최신표시코드로root가명시적report→verify/감사→커밋·push한다. 실제생성동작/저장/제한기는기존함수와동일하다.

@@ -2,7 +2,7 @@
 
 import argparse
 
-from .common import ROOT, OUTPUT, execution_lock
+from .common import ROOT, OUTPUT, execution_lock, validate_condition_order
 
 
 def main():
@@ -12,6 +12,8 @@ def main():
     parser.add_argument("--max-new-requests", type=int, default=None)
     parser.add_argument("--max-run-seconds", type=float, default=None)
     parser.add_argument("--max-wait-seconds", type=float, default=None)
+    parser.add_argument("--condition-order", type=validate_condition_order, default=None,
+                        help="조건 전체를 그룹으로 실행할 순서(예: ABDC). 생략하면 저장 정책 또는 기존 계획 순서")
     parser.add_argument("--clear-stop", action="store_true")
     args = parser.parse_args()
     if args.action == "prepare":
@@ -27,7 +29,8 @@ def main():
         from .run import generate
         from .report import run as report
         policy = {name: value for name, value in (("max_new_requests", args.max_new_requests),
-            ("max_run_seconds", args.max_run_seconds), ("max_wait_seconds", args.max_wait_seconds)) if value is not None}
+            ("max_run_seconds", args.max_run_seconds), ("max_wait_seconds", args.max_wait_seconds),
+            ("condition_order", args.condition_order)) if value is not None}
         result = generate(ROOT, OUTPUT, policy=policy, clear_stop=args.clear_stop, render_callback=report)
         print(f"상태 {result['status']} · 성공 {result['successful_requests']}/{result['expected_requests']} · 미완료 {result['pending_count']}")
     elif args.action == "report":
