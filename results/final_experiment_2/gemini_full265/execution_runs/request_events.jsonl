@@ -631,3 +631,16 @@
 {"event":"request_start","time":"2026-11-11T09:51:57.250509+00:00","execution_id":"2026-11-11T093815_602592+0000","id":"trig_3_019","condition":"D","split":"train"}
 {"event":"request_start","time":"2026-11-11T09:52:07.250929+00:00","execution_id":"2026-11-11T093815_602592+0000","id":"trig_3_020","condition":"D","split":"train"}
 {"event":"request_start","time":"2026-11-11T09:52:17.253497+00:00","execution_id":"2026-11-11T093815_602592+0000","id":"trig_3_022","condition":"D","split":"train"}
+{"event":"request_start","time":"2026-11-11T09:55:02.597279+00:00","execution_id":"2026-11-11T095502_406002+0000","id":"trig_3_023","condition":"D","split":"train"}
+{"event":"request_start","time":"2026-11-11T09:55:12.597660+00:00","execution_id":"2026-11-11T095502_406002+0000","id":"trig_3_024","condition":"D","split":"train"}
+{"event":"request_start","time":"2026-11-11T09:55:22.597959+00:00","execution_id":"2026-11-11T095502_406002+0000","id":"trig_3_025","condition":"D","split":"train"}
+{"event":"request_start","time":"2026-11-11T09:55:32.598323+00:00","execution_id":"2026-11-11T095502_406002+0000","id":"trig_3_027","condition":"D","split":"train"}
+{"event":"request_start","time":"2026-11-11T09:55:42.598696+00:00","execution_id":"2026-11-11T095502_406002+0000","id":"trig_3_028","condition":"D","split":"train"}
+{"event":"request_start","time":"2026-11-11T09:55:52.599061+00:00","execution_id":"2026-11-11T095502_406002+0000","id":"trig_3_029","condition":"D","split":"train"}
+{"event":"request_start","time":"2026-11-11T09:56:02.602270+00:00","execution_id":"2026-11-11T095502_406002+0000","id":"trig_3_030","condition":"D","split":"train"}
+{"event":"request_start","time":"2026-11-11T09:56:12.602496+00:00","execution_id":"2026-11-11T095502_406002+0000","id":"trig_3_031","condition":"D","split":"train"}
+{"event":"request_start","time":"2026-11-11T09:56:22.603059+00:00","execution_id":"2026-11-11T095502_406002+0000","id":"trig_3_032","condition":"D","split":"train"}
+{"event":"request_start","time":"2026-11-11T09:56:32.603458+00:00","execution_id":"2026-11-11T095502_406002+0000","id":"trig_3_033","condition":"D","split":"train"}
+{"event":"request_start","time":"2026-11-11T09:56:42.603844+00:00","execution_id":"2026-11-11T095502_406002+0000","id":"trig_3_036","condition":"D","split":"train"}
+{"event":"request_start","time":"2026-11-11T09:56:52.604475+00:00","execution_id":"2026-11-11T095502_406002+0000","id":"trig_3_037","condition":"D","split":"train"}
+{"event":"request_start","time":"2026-11-11T09:57:02.604811+00:00","execution_id":"2026-11-11T095502_406002+0000","id":"trig_3_038","condition":"D","split":"train"}

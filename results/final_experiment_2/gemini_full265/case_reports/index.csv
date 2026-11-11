@@ -143,7 +143,7 @@ trig_3_029,train,"possible_alternative,api_incomplete",trig_3_029.md,../report.h
 trig_3_030,train,api_incomplete,trig_3_030.md,../report.html#trig_3_030,True
 trig_3_031,train,"reasoning_suspected,correct_but_reasoning_suspected,possible_alternative,large_token_change,api_incomplete",trig_3_031.md,../report.html#trig_3_031,True
 trig_3_032,train,api_incomplete,trig_3_032.md,../report.html#trig_3_032,True
-trig_3_033,train,"reasoning_suspected,api_incomplete",trig_3_033.md,../report.html#trig_3_033,True
+trig_3_033,train,"changed_answers,reasoning_suspected,correct_but_reasoning_suspected,api_incomplete",trig_3_033.md,../report.html#trig_3_033,True
 trig_3_036,train,"possible_alternative,api_incomplete",trig_3_036.md,../report.html#trig_3_036,True
 trig_3_037,train,api_incomplete,trig_3_037.md,../report.html#trig_3_037,True
 trig_3_038,train,api_incomplete,trig_3_038.md,../report.html#trig_3_038,True

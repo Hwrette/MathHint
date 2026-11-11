@@ -16384,6 +16384,234 @@
       ],
       "alternative_solution": false,
       "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_023",
+      "condition": "D",
+      "response_sha256": "3205f77224615103d030528eea815801134f3a33ba1ded0275491af73719c16d",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "sin(x+π/3)=7√3/16으로 정리하고 t의 범위를 [π/3,7π/3]으로 옮겼다. 7√3/16<sin(π/3)이므로 기본 역삼각값은 범위 밖이고 실제 두 해는 π−arcsinα와2π+arcsinα이다. 두 t의 합3π에서 이동량2π/3을 빼 x의 합7π/3, 서로소 p=3,q=7로 p+q=10을 구한 과정이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$t_2 = \\pi - \\arcsin \\alpha$와 $t_3 = 2\\pi + \\arcsin \\alpha$",
+        "$x_1 + x_2 = 3\\pi - \\frac{2\\pi}{3} = \\frac{7\\pi}{3}$",
+        "$p+q = 3+7 = 10$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_024",
+      "condition": "D",
+      "response_sha256": "3365de9945b2f466dd12d09b8e8adfd639afdc2ece468202d6e6d1daa252f62a",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "제곱합을 이용해 (2cosx−1)(cosx−1)=0으로 정확히 인수분해했다. [0,2π)에서 cosx=1의 해0을 포함하고 2π는 제외한 채 나머지π/3,5π/3을 더하여 합2π를 얻은 풀이가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$(2 \\cos x - 1)(\\cos x - 1) = 0$",
+        "$0 + \\frac{\\pi}{3} + \\frac{5\\pi}{3} = \\frac{6\\pi}{3} = 2\\pi$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_025",
+      "condition": "D",
+      "response_sha256": "d32c44f31192c6a183810c2a6866a145612516dddafdca100046d6fd5b94d080",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "cos²x=1−sin²x를 적용해 (2sinx+1)(sinx−1)=0을 얻고 [0,2π]에서 해π/2,7π/6,11π/6을 정확히 구했다. 합7π/2와 선택지④가 맞으며 풀이가 타당하다. 원해설이 한 줄에서 x<2π로 표기한 것은 문제의 닫힌 끝점과 다르지만 2π는 원식의 해가 아니어서 최종합에 영향은 없다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$(2 \\sin x + 1)(\\sin x - 1) = 0$",
+        "$\\frac{3\\pi}{6} + \\frac{7\\pi}{6} + \\frac{11\\pi}{6} = \\frac{21\\pi}{6} = \\frac{7}{2} \\pi$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_027",
+      "condition": "D",
+      "response_sha256": "c99dcd8061b308f1c396e25773bf69e4331fe8a488caca5d6dddc3a237bc0190",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "제곱합 항등식으로 사인에 대한 이차식으로 바꾼 뒤 (2sinx−√3)(sinx−1)=0을 정확히 인수분해했다. [0,π]의 세 해π/3,2π/3,π/2를 모두 구하고 합3π/2를 계산한 타당한 풀이이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$(2 \\sin x - \\sqrt{3})(\\sin x - 1) = 0$",
+        "$\\frac{\\pi}{2} + \\frac{\\pi}{3} + \\frac{2}{3}\\pi = \\frac{\\pi}{2} + \\pi = \\frac{3}{2}\\pi$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_028",
+      "condition": "D",
+      "response_sha256": "aa4d9b02833a1e3cd2c7eead95d872937894c830a0f7991e7bf673edb770eb7e",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "cos²3x를 1−sin²3x로 바꾸어 (sin3x+2)(sin3x−1)=0을 얻고 가능한 값 sin3x=1만 골랐다. 3x∈[0,6π)에서 세 각π/2,5π/2,9π/2를 빠짐없이 구해 x의 합5π/2를 계산한 타당한 풀이이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$(\\sin 3x + 2)(\\sin 3x - 1) = 0$",
+        "$3x = \\frac{\\pi}{2}, \\frac{5\\pi}{2}, \\frac{9\\pi}{2}$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_029",
+      "condition": "D",
+      "response_sha256": "36196242abdaf4594623d6cb63df19aac180738df95752296799ac4a7e3e507d",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "절댓값 방정식을 sin2x=±1/2의 두 경우로 나누었다. 2x∈[0,4π)에서 각각네 해, 총여덟 x를 정확히 열거하여 분자계수 합96을12로나눈8π를 얻었으므로 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$x = \\frac{\\pi}{12}, \\frac{5\\pi}{12}, \\frac{13\\pi}{12}, \\frac{17\\pi}{12}$",
+        "$x = \\frac{7\\pi}{12}, \\frac{11\\pi}{12}, \\frac{19\\pi}{12}, \\frac{23\\pi}{12}$",
+        "\\frac{96\\pi}{12} = 8\\pi$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_030",
+      "condition": "D",
+      "response_sha256": "f740e1b9a7a3e45d00dd4df042cb05276802b7a4e78150bfb188d91cde8bc07e",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "0<k<1의 두 사인 해가 β=π−α임을 이용해 sin((β−α)/2)=cosα=5/7을 얻었다. 제곱합으로 sin²α=24/49를 구하고 k>0인 부호를 적용해2√6/7을 얻은 풀이가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\beta = \\pi - \\alpha$",
+        "$\\sin^2 \\alpha = 1 - \\cos^2 \\alpha = 1 - \\left( \\frac{5}{7} \\right)^2 = 1 - \\frac{25}{49} = \\frac{24}{49}$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_031",
+      "condition": "D",
+      "response_sha256": "d166a21b64a287f3612fb119d7fc3c9d7608a3972896c6189817b73bd90a97ca",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "cos(x−π/2)=sinx로 바꾼 뒤 합차공식으로 sin4x−sinx=2cos(5x/2)sin(3x/2)를 정확히 인수분해했다. [0,2π)에서 첫 인수영점5개와 둘째3개를 구하고 두 집합이 겹치지 않음을 확인해8개를 얻었다. 원해설의 그래프관찰과 다른 타당한 대수풀이이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$2 \\cos \\frac{5x}{2} \\sin \\frac{3x}{2} = 0$",
+        "$x = 0, \\frac{2\\pi}{3}, \\frac{4\\pi}{3}$",
+        "중복되는 값은 없습니다."
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_032",
+      "condition": "D",
+      "response_sha256": "8ef25141cdfb92f51dab8ab076fdecbb4046ad436618a190b82ecac48abdf949",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "절댓값 방정식을 sin2x=1/2 또는−1/2로 나누고 변환범위0≤2x<4π에서 각각네 해를 정확히 열거했다. 서로 겹치지 않는 두 준위의 총실근8개를 구한 풀이가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$\\sin 2x = \\frac{1}{2}$ 또는 $\\sin 2x = -\\frac{1}{2}$",
+        "$4 + 4 = 8$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_033",
+      "condition": "D",
+      "response_sha256": "80f3dd9b7262b1df1f1d2e0f013c7b7a53250f40b7c8febb32d0dac48f8aad08",
+      "review_status": "suspected_error",
+      "math_status": "inappropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "최종14는 맞지만 교점수 설명에 구체적 오류가 남았다. y=2가 최솟값−a+b와 같으면 세 주기의 최저점에서만3개를 만나며, 그보다 위의 다른 점까지 더해9개가 될 수 없다. 동일한 세 주기 중 일부만 접하고 나머지는 교차한다는 설명도 불가능하다. 뒤에서 중앙선의 끝점을 이용해 b=2를 얻은 부분은 맞지만 바로 앞에서 엄격히2<b여야 한다고 한 주장과 잘못된9개를 교정하지 않았다. 실제로 중앙선 y=b일 때만 x=jπ/3(j=0,…,6)의7개이므로 b=2이고, 양수a에 대해9는 최댓값이라 a=7이다. 답 정오와 분리하여 풀이를 부적절로 판단했다.",
+      "error_step": "최솟값 준위 교점수를9개로 잘못 세고7개조건에서2<b와b=2의 모순을 남김",
+      "evidence_quotes": [
+        "최솟값에서 3번, 그보다 위에서 6번 만나 총 9번이 됩니다.",
+        "$y=2$가 최솟값 $-a+b$보다 크고 $b$보다 작아야 합니다.",
+        "$b=2$입니다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_036",
+      "condition": "D",
+      "response_sha256": "43703b1744c4f81002f9ca5bfd2829639b9463592106c9199d3ee80eaa91dfd1",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "sin(nx)=sinx의 두 일반해를 정확히 세웠다. n=3에서 구간 밖 후보를 명시적으로 제외하여0,π,π/4,3π/4의4개를 얻고 n=5에서는 두 해집합의 공통값π/2를 한 번 빼5개를 얻었다. 원해설의 그래프관찰과 다른 타당한 일반해 풀이이며 합9가 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$a_3 = 2 + 2 = 4$",
+        "$3 + 3 - 1 = 5$",
+        "$a_3 + a_5 = 4 + 5 = 9$"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_037",
+      "condition": "D",
+      "response_sha256": "9690e25973c9a0a66fff1a8b3b776fb3f87381a33ec66cae268a0b3ec61df3a7",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "제곱합으로 (2cosx−1)(cosx+1)=0을 얻어 후보π/3,5π/3,π를 정확히 구했다. 각 후보에서 sinx>cosx를 직접 비교하여5π/3만 제외하고 나머지 두 해의 합4π/3을 계산한 타당한 풀이이다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$(2\\cos x - 1)(\\cos x + 1) = 0$",
+        "$0 > -1$ (참)",
+        "$\\frac{\\pi}{3} + \\pi = \\frac{4}{3}\\pi$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "trig_3_038",
+      "condition": "D",
+      "response_sha256": "bac28a484c3842dc7f131a1b7b3deb08a513122d12862dd95015d64699cef650",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "열린구간(0,π)에서 인수의 영점π/3과3을 순서에 맞게 구하고 두 인수의 부호가 반대인 구간(0,π/3)과(3,π)를 정확히 골랐다. 경계는 엄격부등식에 맞게 제외했고 길이합π/3+π−3=4π/3−3의 계산이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$0 < x < \\frac{\\pi}{3}$",
+        "$3 < x < \\pi$",
+        "$(b - a) + (d - c) = \\frac{\\pi}{3} + (\\pi - 3) = \\frac{4\\pi}{3} - 3$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
     }
   ]
 }

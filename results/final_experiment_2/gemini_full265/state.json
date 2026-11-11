@@ -1,121 +1,17 @@
 {
   "status": "partial_complete",
   "reason": "이번 실행의 신규 요청 예산에 도달했습니다.",
-  "updated_at": "2026-11-11T09:52:19.637053+00:00",
+  "updated_at": "2026-11-11T09:57:05.326505+00:00",
   "config_id": "054e3feed73f033e910825c35d9a7332fb90a161d453525bb63edccce42a7cbe",
   "split": "all",
   "experiment_scope": "full265",
   "expected_requests": 1060,
-  "successful_requests": 911,
+  "successful_requests": 924,
   "failed_requests": 0,
-  "saved_responses": 911,
-  "response_log_entries": 913,
-  "pending_count": 149,
+  "saved_responses": 924,
+  "response_log_entries": 926,
+  "pending_count": 136,
   "pending_requests": [
-    {
-      "id": "trig_3_023",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "train",
-      "request_sha256": "1390c44f8b76e5a01f86fd258a5c29afb7eaf9d2cf26808519d76ee76e1e85e3",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_024",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "train",
-      "request_sha256": "123d85da7e465519539a7029ff00c1d687c7994a2bcd0dea790904962e757ce6",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_025",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "train",
-      "request_sha256": "815edd76a4afb6463455b5c20f2f7eedade21775464c0b0bcda603c7d0ece364",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_027",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "train",
-      "request_sha256": "0e643394eab1949bc10058923787670f59c8b2cd17f07c4cc70f3ab303aba1d8",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_028",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "train",
-      "request_sha256": "5c11f0af828c33a5fda5d556434553f5a138a929633eab407f0bac11ced7cce1",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_029",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "train",
-      "request_sha256": "b8f58a42d38ad0948074fc5af8280904e7ceb64169de0d228360db7ae4f3e18c",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_030",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "train",
-      "request_sha256": "cd4e8252b74cfaad77281d69920fe93faf61180b493b5f93eada1062f45f2a61",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_031",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "train",
-      "request_sha256": "fb3b8b90a9d18cd8cb773e397eca53c7ce522dceb425746dc7289163157c52d1",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_032",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "train",
-      "request_sha256": "213070b147e3b1312aef1b736322fc736d17abe4ee492ead8f0e0dd154ff530c",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_033",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "train",
-      "request_sha256": "514f735ced69a3082d5df62b03ad5e6d37c97f73bd328cf9fc1fe0cee4d1f492",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_036",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "train",
-      "request_sha256": "0515e04c1bb6bb4c9c97013ff91885d76ee88720621846f629adcfce27e70110",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_037",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "train",
-      "request_sha256": "82dd3dc16e97b0af27e53773069d473d26c407f5bd5128b2baaa5f1f7997074f",
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_3_038",
-      "condition": "D",
-      "method": "oracle_hint",
-      "split": "train",
-      "request_sha256": "fbe18dc5dd1f1021fadc04b50b86a879f050c373ade8c5c3a8c8ad99ec439618",
-      "last_status": "not_executed"
-    },
     {
       "id": "diff_2_025",
       "condition": "C",
@@ -1213,8 +1109,8 @@
     },
     "train": {
       "expected_requests": 740,
-      "successful_requests": 591,
-      "pending_requests": 149
+      "successful_requests": 604,
+      "pending_requests": 136
     }
   },
   "condition_order": "ABDC",
@@ -1223,10 +1119,10 @@
     "A": 0,
     "B": 0,
     "C": 136,
-    "D": 13
+    "D": 0
   },
   "reused_successes": 320,
-  "new_successes": 591,
+  "new_successes": 604,
   "safe_to_resume": true,
   "resume_command": "python -m mathhint_solver.final_experiment_2.gemini_full265 generate --condition-order ABDC",
   "resume_prerequisites": "기록된 대기시간과 실행 예산을 확인하고 미완료만 실행",
@@ -1273,10 +1169,10 @@
   "user_authorized_additional_train185": true,
   "training_scope_note": "train185는 모델 가중치 학습에 사용된 문항의 예측이다. 전체265 혼합값은 독립 테스트 성능이 아니다.",
   "limiter": {
-    "new_request_starts": 80,
+    "new_request_starts": 13,
     "rolling_minute_starts": 6,
-    "rolling_hour_starts": 262,
-    "rolling_24h_starts": 878,
+    "rolling_hour_starts": 254,
+    "rolling_24h_starts": 891,
     "status": "partial_complete",
     "reason": "이번 실행의 신규 요청 예산에 도달했습니다.",
     "daily_quota_reported": false,
@@ -1289,8 +1185,8 @@
       "rpm": 6,
       "rph": 360,
       "rpd": 1400,
-      "max_new_requests": 80,
-      "max_run_seconds": 3600.0,
+      "max_new_requests": 13,
+      "max_run_seconds": 1200.0,
       "max_wait_seconds": 120.0,
       "max_attempts": 2,
       "http_timeout_ms": 180000,

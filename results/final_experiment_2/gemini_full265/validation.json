@@ -1,5 +1,5 @@
 {
-  "verified_at": "2026-11-11T09:54:20.018678+00:00",
+  "verified_at": "2026-11-11T09:59:42.615229+00:00",
   "checks": [
     {
       "check": "frozen_models_data_and_full265_plan_match",
@@ -6663,6 +6663,58 @@
     },
     {
       "check": "sdk_capture_601",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_602",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_603",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_604",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_605",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_606",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_607",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_608",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_609",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_610",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_611",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_612",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_613",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_614",
       "passed": true
     },
     {
@@ -31090,6 +31142,318 @@
       "passed": true
     },
     {
+      "check": "response_identity_trig_3_023_D",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_023_D",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_023_D",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_023_D",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_023_D",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_023_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_024_D",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_024_D",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_024_D",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_024_D",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_024_D",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_024_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_025_D",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_025_D",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_025_D",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_025_D",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_025_D",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_025_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_027_D",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_027_D",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_027_D",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_027_D",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_027_D",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_027_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_028_D",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_028_D",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_028_D",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_028_D",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_028_D",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_028_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_029_D",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_029_D",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_029_D",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_029_D",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_029_D",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_029_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_030_D",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_030_D",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_030_D",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_030_D",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_030_D",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_030_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_031_D",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_031_D",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_031_D",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_031_D",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_031_D",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_031_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_032_D",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_032_D",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_032_D",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_032_D",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_032_D",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_032_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_033_D",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_033_D",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_033_D",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_033_D",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_033_D",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_033_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_036_D",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_036_D",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_036_D",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_036_D",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_036_D",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_036_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_037_D",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_037_D",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_037_D",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_037_D",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_037_D",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_037_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_038_D",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_trig_3_038_D",
+      "passed": true
+    },
+    {
+      "check": "usage_trig_3_038_D",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_trig_3_038_D",
+      "passed": true
+    },
+    {
+      "check": "grade_trig_3_038_D",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_trig_3_038_D",
+      "passed": true
+    },
+    {
       "check": "state_counts_and_remaining_keys_match",
       "passed": true
     },
@@ -34114,15 +34478,15 @@
       "passed": true
     }
   ],
-  "passed": 8528,
+  "passed": 8619,
   "failed": 0,
   "complete": true,
   "experiment_complete": false,
-  "successful_requests": 911,
+  "successful_requests": 924,
   "expected_requests": 1060,
-  "pending_requests": 149,
+  "pending_requests": 136,
   "split_counts": {
-    "train": 591,
+    "train": 604,
     "test": 320
   },
   "preservation": {
@@ -34165,16 +34529,16 @@
       }
     ],
     "passed": true,
-    "new_request_start_count": 602,
-    "valid_new_request_start_count": 602,
-    "new_unique_request_start_count": 602,
-    "shared_request_start_log_count": 878,
-    "shared_request_start_count": 878,
+    "new_request_start_count": 615,
+    "valid_new_request_start_count": 615,
+    "new_unique_request_start_count": 615,
+    "shared_request_start_log_count": 891,
+    "shared_request_start_count": 891,
     "minimum_new_start_interval_seconds": 9.998885154724121,
     "maximum_rolling_start_counts_at_new_attempts": {
       "60": 6,
       "3600": 264,
-      "86400": 878
+      "86400": 891
     },
     "local_policy": {
       "interval_seconds": 10.0,

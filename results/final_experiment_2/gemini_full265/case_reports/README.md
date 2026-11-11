@@ -150,7 +150,7 @@
 |trig_3_030|API 실패·미완료|[사례](trig_3_030.md) · [수식 화면](../report.html#trig_3_030)|
 |trig_3_031|풀이 오류 의심, 답은 맞지만 풀이 오류 의심, 다른 타당 풀이 가능성 검토, 토큰 사용량 큰 증가, API 실패·미완료|[사례](trig_3_031.md) · [수식 화면](../report.html#trig_3_031)|
 |trig_3_032|API 실패·미완료|[사례](trig_3_032.md) · [수식 화면](../report.html#trig_3_032)|
-|trig_3_033|풀이 오류 의심, API 실패·미완료|[사례](trig_3_033.md) · [수식 화면](../report.html#trig_3_033)|
+|trig_3_033|조건별 최종 답 변화, 풀이 오류 의심, 답은 맞지만 풀이 오류 의심, API 실패·미완료|[사례](trig_3_033.md) · [수식 화면](../report.html#trig_3_033)|
 |trig_3_036|다른 타당 풀이 가능성 검토, API 실패·미완료|[사례](trig_3_036.md) · [수식 화면](../report.html#trig_3_036)|
 |trig_3_037|API 실패·미완료|[사례](trig_3_037.md) · [수식 화면](../report.html#trig_3_037)|
 |trig_3_038|API 실패·미완료|[사례](trig_3_038.md) · [수식 화면](../report.html#trig_3_038)|
