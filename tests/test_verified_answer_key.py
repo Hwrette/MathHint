@@ -105,6 +105,49 @@ class VerifiedAnswerKeyTests(unittest.TestCase):
         self.assertEqual(summary["test", "B"]["correct_count_verified"], "79")
         self.assertEqual(summary["all265", "D"]["pending_or_failed"], "137")
 
+    def test_incorrect_ungradable_final_is_scored_wrong_without_mutating_raw(self):
+        # In the actual experiment the final answer explicitly says 12; correct is 13/③.
+        rows = list(self.test80)
+        mistake = choice_row("trig_1_044", "train", (False, False, False, False))
+        mistake["B_answer"] = "12 (선택지 오류로 판단되나, 계산상 12개임)"
+        mistake["B_correct_original"] = ""
+        rows.append(mistake)
+        rows.extend(choice_row("train_%03d" % i, "train") for i in range(184))
+        source = self.root / "results/final_experiment_2/gemini_full265/question_comparison.csv"
+        write_csv(source, rows)
+        before = source.read_bytes()
+
+        evidence = self.root / "results/final_experiment_2/gemini_full265/case_reports/trig_1_044.md"
+        evidence.parent.mkdir(parents=True, exist_ok=True)
+        evidence.write_text("B produced 12. Mathematically correct answer: 13.", encoding="utf-8")
+        review_path = self.root / "data/curation/answer_response_reviews.json"
+        review_path.write_text(json.dumps({"records": [{
+            "id": "trig_1_044", "condition": "B", "split": "train",
+            "source_experiment": "gemini_full265", "source_status": "success",
+            "source_grade": None,
+            "source_answer": mistake["B_answer"], "reference_answer": "③",
+            "corrected_grade": False,
+            "review_status": "verified_incorrect_final_answer",
+            "evidence_path": "results/final_experiment_2/gemini_full265/case_reports/trig_1_044.md",
+        }]}), encoding="utf-8")
+
+        regrade(self.root, "gemini_full265", self.registry, self.corrections)
+        self.assertEqual(source.read_bytes(), before)
+        folder = source.parent / "key_corrected"
+        fixed = next(r for r in read_csv(folder / "question_comparison.csv")
+                     if r["id"] == "trig_1_044")
+        self.assertEqual(fixed["B_correct_original"], "")
+        self.assertEqual(fixed["B_correct_verified"], "False")
+        self.assertEqual(fixed["B_grade_source"], "reviewed_incorrect_final_answer")
+        summary = {(r["split"], r["condition"]): r
+                   for r in read_csv(folder / "summary.csv")}
+        self.assertEqual(summary["all265", "B"]["graded_count_original"], "264")
+        self.assertEqual(summary["all265", "B"]["graded_count"], "265")
+        self.assertEqual(summary["all265", "B"]["incorrect_count_verified"], "1")
+        pairs = read_csv(folder / "paired_comparison.csv")
+        ab = next(r for r in pairs if r["split"] == "all265" and r["pair"] == "A-B")
+        self.assertEqual(ab["matched_gradable_count"], "265")
+
     def test_registry_rejects_changed_original_solution(self):
         source = self.root / "data/processed/solutions/trig_1_010.txt"
         source.write_text("[정답] ②\n", encoding="utf-8")
