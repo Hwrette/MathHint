@@ -1,0 +1,7 @@
+﻿split,pair,matched_gradable_count,excluded_count,both_correct,first_correct_second_wrong,first_wrong_second_correct,both_wrong,p_exact_mcnemar,p_holm_within_split
+test,A-B,80,0,78,1,1,0,1,1
+test,A-C,80,0,78,1,1,0,1,1
+test,A-D,80,0,78,1,1,0,1,1
+test,B-C,80,0,79,0,0,1,1,1
+test,B-D,80,0,79,0,0,1,1,1
+test,C-D,80,0,79,0,0,1,1,1
