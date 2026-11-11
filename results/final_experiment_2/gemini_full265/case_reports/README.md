@@ -10,16 +10,9 @@
 |diff_1_006|풀이 오류 의심, 답은 맞지만 풀이 오류 의심, 다른 타당 풀이 가능성 검토|[사례](diff_1_006.md) · [수식 화면](../report.html#diff_1_006)|
 |diff_1_019|토큰 사용량 큰 증가|[사례](diff_1_019.md) · [수식 화면](../report.html#diff_1_019)|
 |diff_1_023|다른 타당 풀이 가능성 검토|[사례](diff_1_023.md) · [수식 화면](../report.html#diff_1_023)|
-|diff_1_029|API 실패·미완료|[사례](diff_1_029.md) · [수식 화면](../report.html#diff_1_029)|
-|diff_1_031|API 실패·미완료|[사례](diff_1_031.md) · [수식 화면](../report.html#diff_1_031)|
-|diff_1_032|API 실패·미완료|[사례](diff_1_032.md) · [수식 화면](../report.html#diff_1_032)|
-|diff_1_033|API 실패·미완료|[사례](diff_1_033.md) · [수식 화면](../report.html#diff_1_033)|
-|diff_1_034|API 실패·미완료|[사례](diff_1_034.md) · [수식 화면](../report.html#diff_1_034)|
-|diff_1_035|API 실패·미완료|[사례](diff_1_035.md) · [수식 화면](../report.html#diff_1_035)|
-|diff_1_037|API 실패·미완료|[사례](diff_1_037.md) · [수식 화면](../report.html#diff_1_037)|
-|diff_1_040|API 실패·미완료|[사례](diff_1_040.md) · [수식 화면](../report.html#diff_1_040)|
-|diff_1_042|API 실패·미완료|[사례](diff_1_042.md) · [수식 화면](../report.html#diff_1_042)|
-|diff_1_043|API 실패·미완료|[사례](diff_1_043.md) · [수식 화면](../report.html#diff_1_043)|
+|diff_1_033|다른 타당 풀이 가능성 검토|[사례](diff_1_033.md) · [수식 화면](../report.html#diff_1_033)|
+|diff_1_034|토큰 사용량 큰 증가|[사례](diff_1_034.md) · [수식 화면](../report.html#diff_1_034)|
+|diff_1_043|API 실패·미완료, 풀이 검토 보류|[사례](diff_1_043.md) · [수식 화면](../report.html#diff_1_043)|
 |diff_1_044|API 실패·미완료|[사례](diff_1_044.md) · [수식 화면](../report.html#diff_1_044)|
 |diff_1_045|API 실패·미완료|[사례](diff_1_045.md) · [수식 화면](../report.html#diff_1_045)|
 |diff_1_046|API 실패·미완료|[사례](diff_1_046.md) · [수식 화면](../report.html#diff_1_046)|

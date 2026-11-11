@@ -99,7 +99,62 @@ def _table(rows):
     return result
 
 
-def _readme(output, config, state, summary, review_rows, cases):
+def key_comparison(questions, state):
+    """같은 문항의 원시 채점·전체 사용량만 요약한다. 부분 완료면 분모만 표시한다."""
+    selected = [q for q in questions if q["expected_generation"]]
+    if not selected:
+        return ["## 핵심 비교 · A 기준", "", "아직 비교할 저장 문항이 없다.", ""]
+    methods = {method["condition"]: method["key"] for method in METHODS}
+    def response(question, condition):
+        return question["conditions"].get(methods[condition]) or {}
+    complete = not state.get("pending_count", 0) and all(
+        response(q, c).get("status") == "success" for q in selected for c in "ABCD")
+    rows = []
+    for condition in "BCD":
+        successful = [(response(q, "A"), response(q, condition)) for q in selected
+                      if response(q, "A").get("status") == response(q, condition).get("status") == "success"]
+        graded = [(a, b) for a, b in successful
+                  if all(type(r.get("evaluation", {}).get("correct")) is bool for r in (a, b))]
+        provided = [(a["usage"]["total_token_count"], b["usage"]["total_token_count"]) for a, b in successful
+                    if all(r.get("usage", {}).get("total_token_count") is not None for r in (a, b))]
+        values = [condition, f"{len(graded)}/{len(selected)}"]
+        if complete:
+            gain = sum(not a["evaluation"]["correct"] and b["evaluation"]["correct"] for a, b in graded)
+            loss = sum(a["evaluation"]["correct"] and not b["evaluation"]["correct"] for a, b in graded)
+            difference = sum(b-a for a, b in provided)
+            baseline = sum(a for a, _ in provided)
+            values += [f"{gain} / {loss} / {gain-loss:+d}" if graded else "—", f"{len(provided)}/{len(selected)}",
+                       f"{difference/len(provided):+.2f}" if provided else "—",
+                       f"{difference/baseline*100:+.2f}%" if provided and baseline else "—"]
+        else:
+            values.append(f"{len(provided)}/{len(selected)}")
+        rows.append("|" + "|".join(values) + "|")
+    train = sum(q["split"] == "train" for q in selected)
+    test = sum(q["split"] == "test" for q in selected)
+    lines = ["## 핵심 비교 · A 기준", "",
+             f"전체{len(selected)}는 학습{train} + 테스트{test}의 혼합 참고값이며, 학습 문항의 B/C는 인샘플 예측이므로 일반화 성능이 아니다."]
+    if complete:
+        lines += ["정답 변화는 양쪽 성공·채점 가능한 문항, 전체 토큰 차이·변화율은 양쪽 성공·사용량 제공 문항만 대응시켰으며, 비교 쌍이나 A 토큰 분모가 없는 값은 —다.", "",
+                  "|A 대비 조건|공통 채점/전체|개선 / 악화 / 순변화(문항)|사용량 공통/전체|평균 전체토큰 차이|전체토큰 변화율|",
+                  "|---|---:|---:|---:|---:|---:|", *rows, ""]
+    else:
+        lines += ["**부분 결과의 완료 집합은 ID 실행 순서·실패에 영향을 받아 무작위 하위표본이 아니며, 전체 효과를 확정할 수 없어 여기서는 공통 비교 분모만 표시한다.**", "",
+                  "|A 대비 조건|공통 채점/전체|사용량 공통/전체|", "|---|---:|---:|", *rows, ""]
+    conflicts = sum(bool(q.get("answer_key_conflict")) for q in selected)
+    if complete and conflicts:
+        scores = []
+        for condition in "ABCD":
+            graded = [response(q, condition) for q in selected
+                      if type(response(q, condition).get("evaluation", {}).get("correct")) is bool]
+            scores.append(f"{condition} {sum(r.get('correct_ai_supplemental') is True for r in graded)}/{len(graded)}")
+        lines += [f"원본 키 충돌 {conflicts}문항의 주 점수는 원본 그대로 유지하고, AI 보조 대안 기준 점수만 별도로 계산하면 "
+                  + ", ".join(scores) + "이며 사람의 확정 답안표나 주 점수 대체로 취급하지 않는다."]
+    else:
+        lines += ["주 점수는 원본 정답표 기준이며, 원본 키 충돌의 AI 보조 대안 점수는 별도 CSV 열로 분리해 섞지 않는다."]
+    return lines + [""]
+
+
+def _readme(output, config, state, summary, review_rows, cases, questions):
     scopes = {scope: [row for row in summary if row["split"] == scope] for scope in ("all265", "train", "test")}
     execution_link = "[실행 이력](execution_runs/)" if (Path(output) / "execution_runs").is_dir() else "실제 실행 기록은 아직 없음"
     lines = ["# 전체265문항 Gemini A/B/C/D 비교", "",
@@ -111,6 +166,7 @@ def _readme(output, config, state, summary, review_rows, cases):
         lines += [f"**진행 중:** 현재 성공 {state.get('successful_requests', 0)}/1060, 미완료 {state.get('pending_count', 1060)}다. "
                   "아래 정답률은 실제 채점 가능한 성공 응답만의 부분 결과이며 전체265의 성능으로 확정할 수 없다. "
                   "초기에는 재사용한 테스트80만 반영될 수 있고 학습185 미실행을 오답으로 채우지 않는다.", ""]
+    lines += key_comparison(questions, state)
     lines += ["## 전체265 · 혼합 참고 결과", "", *_table(scopes["all265"]), "",
         "![전체265 정답률](figures/accuracy_all265.png)", "", "![전체265 사용량](figures/tokens_all265.png)", ""]
     for scope, title in (("train", "학습185 · 인샘플 예측"), ("test", "기존 테스트80 · 저장 성공 응답 재사용")):
@@ -178,5 +234,5 @@ def run(root=None, output=None):
     write_json(output / "metrics.json", {"summary": summary, "token_summary": tokens, "paired_comparison": pairs,
         "question_count": len(comparisons), "case_count": len(cases), "review_status_counts": dict(Counter(r["review_status"] for r in review_rows)),
         "state": state, "additional_review_api_calls": 0, "report_generation_api_calls": 0, "model_training_performed": False})
-    _readme(output, config, state, summary, review_rows, cases)
+    _readme(output, config, state, summary, review_rows, cases, questions)
     return {"question_count": len(comparisons), "case_count": len(cases), "training_performed": False, "api_calls": 0}

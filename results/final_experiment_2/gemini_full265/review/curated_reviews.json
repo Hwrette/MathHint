@@ -7442,6 +7442,716 @@
       ],
       "alternative_solution": false,
       "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_029",
+      "condition": "D",
+      "response_sha256": "f38a4817e573a63c59a5d34f3af5b8dd27eeed73759e9aa64fb3089691fab4b1",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "두 접선의 기울기를 f′(1)=−2 및 곱의 미분법에 의한 g′(1)=−4로 정확히 구했다. 접선 y=−2x−4, y=−4x+10의 교점 x좌표는 7이고 y축 위 밑변의 길이는 14이므로 삼각형 넓이 49 및 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$y = -2x - 4$",
+        "$y = -4x + 10$",
+        "\\frac{1}{2} \\times 14 \\times 7 = 49"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_029",
+      "condition": "B",
+      "response_sha256": "5274eb17726ac5a43ae3e8d132b1b757770b8e59841e55918f4ee5f14dbd2e84",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "두 접선의 기울기를 f′(1)=−2 및 곱의 미분법에 의한 g′(1)=−4로 정확히 구했다. 접선 y=−2x−4, y=−4x+10의 교점 x좌표는 7이고 y축 위 밑변의 길이는 14이므로 삼각형 넓이 49 및 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$y = -2x - 4$",
+        "$y = -4x + 10$",
+        "\\frac{1}{2} \\times 14 \\times 7 = 49"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_029",
+      "condition": "A",
+      "response_sha256": "c843fc5c1145f6ae981493ed0ae397a9fc63764913e36c2399a1e3f6279d5241",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "접선 l의 기울기 −2와 곱의 미분법으로 구한 접선 m의 기울기 −4가 정확하다. 각 접선의 절편 −4,10과 교점 x좌표 7을 구한 뒤 y축을 밑변으로 한 삼각형 넓이 (1/2)×14×7=49를 계산한 과정이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$y = -2x - 4$",
+        "$y = -4x + 10$",
+        "\\frac{1}{2} \\times 14 \\times 7 = 7 \\times 7 = 49"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_029",
+      "condition": "C",
+      "response_sha256": "6451220eb51fb5da2bdb514f2d8edde834ace7c8a1e8b24df1eea6bbc0a24c03",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "곱의 미분법과 각 접점 조건을 적용해 접선 y=−2x−4, y=−4x+10을 정확히 구했다. 교점의 x좌표 7이 y축 밑변에 대한 높이이고 절편 차 14가 밑변이므로 삼각형 넓이 49 및 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$y = -2x - 4$",
+        "$y = -4x + 10$",
+        "\\frac{1}{2} \\times 14 \\times 7 = 49"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_031",
+      "condition": "D",
+      "response_sha256": "47dcb131c934f3419c00f7e66ab1fb08fb5c6595ed03c34569b0261286b943e2",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "극소점에서의 필요조건 f′(1)=0을 적용해 a=3을 정확히 얻었다. 이때 f′=6(x+2)(x−1)의 부호는 +,−,+이므로 x=−2에서 극대이고, f(−2)=−16+12+24=20 및 선택지 ②가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$a = 3$",
+        "6(x+2)(x-1)",
+        "$f(-2) = 20$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_031",
+      "condition": "B",
+      "response_sha256": "43ef1d738223875e77b764fea0ef8799c0615ab407f6c6e3bbeba42fe866ce84",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "극소점에서의 필요조건 f′(1)=0을 적용해 a=3을 정확히 얻었다. 이때 f′=6(x+2)(x−1)의 부호는 +,−,+이므로 x=−2에서 극대이고, f(−2)=−16+12+24=20 및 선택지 ②가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$a = 3$",
+        "6(x+2)(x-1)",
+        "$f(-2) = 20$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_031",
+      "condition": "C",
+      "response_sha256": "3da9aba7c88d7554e225f2607b5c417f6930a38db6fceb46a5995f82dd548387",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "극소점에서의 도함수 0 조건으로 a=3을 정확히 정했다. 이후 f′=6(x+2)(x−1)이 양의 최고차항 계수를 가지므로 부호가 +,−,+이고 x=−2에서 극대이다. f(−2)=20의 계산과 선택지 ②가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$a = 3$",
+        "6(x+2)(x-1)",
+        "-16 + 12 + 24"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_031",
+      "condition": "A",
+      "response_sha256": "75680a2d61dfdb8bbba1327723d52caf726b59f1b48b1a53c32507bba277c774",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "극소점에서의 도함수 0 조건으로 a=3을 정확히 정했다. 이후 f′=6(x+2)(x−1)이 양의 최고차항 계수를 가지므로 부호가 +,−,+이고 x=−2에서 극대이다. f(−2)=20의 계산과 선택지 ②가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$a = 3$",
+        "6(x+2)(x-1)",
+        "-16 + 12 + 24"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_032",
+      "condition": "D",
+      "response_sha256": "88b5c09f8b33c5ed57bb2603a03549c7ad2d92d9ff22321b8e75877848607acd",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수 3x(x+2a)의 두 근의 순서가 a의 부호에 따라 달라짐을 정확히 나누었다. a>0이면 극솟값 4a가 양수여서 불가능하고, a<0이면 극솟값 4a³+4a=−40이다. 인수분해 후 이차인수 (a−1)²+4가 양수이므로 a=−2가 유일하며 f(2)=−24가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "3x(x + 2a)",
+        "$4a^3 + 4a = -40$",
+        "$(a + 2)(a^2 - 2a + 5) = 0$",
+        "8 - 24 - 8 = -24"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_032",
+      "condition": "C",
+      "response_sha256": "658db602c5acba014a9911876aa0489abecba9ce9d60df1e3f8dde6c5341c2f9",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수 3x(x+2a)의 두 근의 순서가 a의 부호에 따라 달라짐을 정확히 나누었다. a>0이면 극솟값 4a가 양수여서 불가능하고, a<0이면 극솟값 4a³+4a=−40이다. 인수분해 후 이차인수 (a−1)²+4가 양수이므로 a=−2가 유일하며 f(2)=−24가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "3x(x + 2a)",
+        "$4a^3 + 4a = -40$",
+        "$(a + 2)(a^2 - 2a + 5) = 0$",
+        "8 - 24 - 8 = -24"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_032",
+      "condition": "A",
+      "response_sha256": "4417a165f4948f8ef282b246c0704eab4b8ce2837faf1577ffbf74439ad16da1",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "a의 양·음에 따라 도함수의 두 근 순서를 구분하여 극솟값의 위치를 정확히 정했다. a>0인 경우를 모순으로 배제하고 a<0일 때 4a³+4a=−40을 풀면 이차인수의 실근이 없어 a=−2가 유일하다. 원래 함수에 대입한 f(2)=−24 및 선택지 ①가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "3x(x + 2a)",
+        "$4a^3 + 4a = -40$",
+        "$(a + 2)(a^2 - 2a + 5) = 0$",
+        "8 - 24 - 8 = -24"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_032",
+      "condition": "B",
+      "response_sha256": "67413f8c3949b6a7bee658367ebb1cec4f1399ca01fd896c483e94708664386b",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "a의 양·음에 따라 도함수의 두 근 순서를 구분하여 극솟값의 위치를 정확히 정했다. a>0인 경우를 모순으로 배제하고 a<0일 때 4a³+4a=−40을 풀면 이차인수의 실근이 없어 a=−2가 유일하다. 원래 함수에 대입한 f(2)=−24 및 선택지 ①가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "3x(x + 2a)",
+        "$4a^3 + 4a = -40$",
+        "$(a + 2)(a^2 - 2a + 5) = 0$",
+        "8 - 24 - 8 = -24"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_033",
+      "condition": "D",
+      "response_sha256": "ac1934707afd8ff0b576c6d26d38159bc81a9daa195b088bca3bbf3be5c4945e",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "극대점의 필요조건 f′(−2)=0에서 12−4a=0, a=3을 정확히 구했다. f′=3x(x+2)의 부호 변화상 x=0에서 극소이므로 f(0)=b=5이며, 원래 함수에 대입한 f(3)=27+27+5=59가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(-2) = 3(-2)^2 + 2a(-2) = 12 - 4a = 0$",
+        "$b = 5$",
+        "27 + 27 + 5 = 59"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_033",
+      "condition": "C",
+      "response_sha256": "f4db8d73789134ca7a604ba600391c36b3a2c3e59fe650f572b73ef7f411ee29",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "극대점의 필요조건 f′(−2)=0에서 12−4a=0, a=3을 정확히 구했다. f′=3x(x+2)의 부호 변화상 x=0에서 극소이므로 f(0)=b=5이며, 원래 함수에 대입한 f(3)=27+27+5=59가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(-2) = 3(-2)^2 + 2a(-2) = 12 - 4a = 0$",
+        "$b = 5$",
+        "27 + 27 + 5 = 59"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_033",
+      "condition": "B",
+      "response_sha256": "4a814c8e3c11f8f33b9966e3dc267cb19753a7f90ba9eccac24bc0b6dd98529b",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "극대점의 필요조건 f′(−2)=0에서 a=3을 올바르게 정했고, f′=3x(x+2)로부터 x=0이 극소점임을 확인했다. 극솟값 조건으로 b=5를 구하고 f(3)=59를 계산한 과정이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(-2) = 3(-2)^2 + 2a(-2) = 12 - 4a = 0$",
+        "$b = 5$",
+        "27 + 27 + 5 = 59"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_033",
+      "condition": "A",
+      "response_sha256": "d7a6243f3394dee87825b20420a225c3af87f428b6adafd219fa293e31bd32be",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "f′(−2)=0에서 a=3을 정확히 구했다. 참조풀이의 증감표 대신 이계도함수 f″(−2)<0, f″(0)>0으로 극대·극소를 확인했고, f(0)=b=5에서 f(3)=59를 구한 과정이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(-2) = 3(-2)^2 + 2a(-2) = 12 - 4a = 0$",
+        "$b = 5$",
+        "27 + 27 + 5 = 59"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_034",
+      "condition": "A",
+      "response_sha256": "1c028d296d1aefacd82bb9bb1df38fbfbfcc1904a80f28937139461125b0b137",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수 9x(x−2)의 두 근 0,2와 부호 +,−,+에 따라 극대점 0, 극소점 2를 정확히 정했다. 극댓값 f(0)=a=20을 대입하면 극솟값 f(2)=24−36+20=8이므로 풀이가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "9x(x - 2)",
+        "$a = 20$",
+        "최종정답: 8"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_034",
+      "condition": "B",
+      "response_sha256": "2964073b911c91fd14a436b28b415fbadaf775aea62fb59d3f18676c17c65009",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수 9x(x−2)의 두 근 0,2와 부호 +,−,+에 따라 극대점 0, 극소점 2를 정확히 정했다. 극댓값 f(0)=a=20을 대입하면 극솟값 f(2)=24−36+20=8이므로 풀이가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "9x(x - 2)",
+        "$a = 20$",
+        "최종정답: 8"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_034",
+      "condition": "C",
+      "response_sha256": "63454daf46599c4662e8c650130b7802e5083475723f96854f3c71b1ff0ebfe3",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수 9x(x−2)의 부호 +,−,+를 증감표에 정확히 반영했다. 따라서 극대점 0에서 f(0)=a=20이고 극소점 2에서 f(2)=24−36+20=8이라는 추론과 계산이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "9x(x - 2)",
+        "$a = 20$",
+        "$f(2) = 8$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_034",
+      "condition": "D",
+      "response_sha256": "92f569791cfc7f62118f8909d41bacbda8162e69683a7de70a220bc156617d05",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수 9x(x−2)의 부호 +,−,+를 증감표에 정확히 반영했다. 따라서 극대점 0에서 f(0)=a=20이고 극소점 2에서 f(2)=24−36+20=8이라는 추론과 계산이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "9x(x - 2)",
+        "$a = 20$",
+        "$f(2) = 8$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_035",
+      "condition": "A",
+      "response_sha256": "4123fd984f0df2ee0e0aea10f127c5ca0f5b5270075be329c914ef4eea938cea",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수 6x(x−a)에 대해 a의 양·음 및 0을 모두 다루었다. a>0에서 극솟값 −a³+5a=a를 풀어 a=2를 얻었고, a<0인 경우는 5a=a의 모순, a=0인 경우는 극값 부재로 배제했다. 극댓값 f(0)=10이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "6x(x - a)",
+        "$-a^3 + 5a = a$",
+        "$5a = a \\implies 4a = 0 \\implies a = 0$",
+        "$f(0) = 5 \\times 2 = 10$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_035",
+      "condition": "B",
+      "response_sha256": "ed24c8819c3235f392c7f968b52c294bc0b15fc0884c2c7c8d19b09a8e002040",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "a>0, a<0, a=0의 세 경우에서 도함수 6x(x−a)의 극값 위치를 정확히 다루었다. 양수인 경우 −a³+5a=a에서 a=2를 구했고 음수인 경우와 0인 경우를 각각 조건 모순과 극값 부재로 배제했다. 따라서 극댓값 f(0)=10이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "6x(x - a)",
+        "$-a^3 + 5a = a$",
+        "$5a = a$",
+        "$f(0) = 5a = 5(2) = 10$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_035",
+      "condition": "D",
+      "response_sha256": "bb74333bd93ae3cb5a2d29dbd25eca1cd23181d22470d4632a7056c5c1e98a9f",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "a>0, a<0, a=0의 세 경우에서 도함수 6x(x−a)의 극값 위치를 정확히 다루었다. 양수인 경우 −a³+5a=a에서 a=2를 구했고 음수인 경우와 0인 경우를 각각 조건 모순과 극값 부재로 배제했다. 따라서 극댓값 f(0)=10이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "6x(x - a)",
+        "$-a^3 + 5a = a$",
+        "$5a = a$",
+        "$f(0) = 5a = 5(2) = 10$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_035",
+      "condition": "C",
+      "response_sha256": "ed24c8819c3235f392c7f968b52c294bc0b15fc0884c2c7c8d19b09a8e002040",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "a>0, a<0, a=0의 세 경우에서 도함수 6x(x−a)의 극값 위치를 정확히 다루었다. 양수인 경우 −a³+5a=a에서 a=2를 구했고 음수인 경우와 0인 경우를 각각 조건 모순과 극값 부재로 배제했다. 따라서 극댓값 f(0)=10이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "6x(x - a)",
+        "$-a^3 + 5a = a$",
+        "$5a = a$",
+        "$f(0) = 5a = 5(2) = 10$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_037",
+      "condition": "A",
+      "response_sha256": "699b0d2e422261578058bdd60f910d095454bbc1be350d6d0fd3cbeb3b0c959d",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "극대점의 필요조건 f′(1)=0에서 a=9를 정확히 얻었다. 그때 도함수 3(x−1)(x−3)의 부호가 +,−,+이므로 x=3이 극소점이고 f(3)=b=5이다. 따라서 a+b=14가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$a = 9$",
+        "3(x-1)(x-3)",
+        "$a + b = 9 + 5 = 14$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_037",
+      "condition": "C",
+      "response_sha256": "0bfac3243f71453fe4076649d358aa7d657623700b5b466f6fe96d686ec6bc1d",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "f′(1)=0에서 a=9를 구한 계산과 도함수의 인수분해 3(x−1)(x−3)가 정확하다. x=3에서 도함수 부호가 음에서 양으로 바뀌므로 극소이고, f(3)=b=5에서 a+b=14를 도출한 과정이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$a = 9$",
+        "3(x-1)(x-3)",
+        "$a + b = 9 + 5 = 14$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_037",
+      "condition": "B",
+      "response_sha256": "d2706f5f9c976383399ff9fae820f2af44b462e598712de32d061cfebb0acb45",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "f′(1)=0에서 a=9를 구한 계산과 도함수의 인수분해 3(x−1)(x−3)가 정확하다. x=3에서 도함수 부호가 음에서 양으로 바뀌므로 극소이고, f(3)=b=5에서 a+b=14를 도출한 과정이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$a = 9$",
+        "3(x-1)(x-3)",
+        "$a + b = 9 + 5 = 14$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_037",
+      "condition": "D",
+      "response_sha256": "4d17b3217cc24b45e7fdfb4f27b2c3a2c966f2cd636fbff2039b43298063cb9b",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "f′(1)=0에서 a=9를 구한 계산과 도함수의 인수분해 3(x−1)(x−3)가 정확하다. x=3에서 도함수 부호가 음에서 양으로 바뀌므로 극소이고, f(3)=b=5에서 a+b=14를 도출한 과정이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$a = 9$",
+        "3(x-1)(x-3)",
+        "$a + b = 9 + 5 = 14$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_040",
+      "condition": "A",
+      "response_sha256": "409aec8109b626a5a4de41f6c359c5051f1894a14d88cc130dbe2f639fe1f9b4",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "닫힌구간 [0,3] 내부에서 도함수가 0인 점은 2뿐임을 정확히 확인하고 양 끝점도 비교했다. 후보 함수값 k, k−16, k−9 중 최댓값은 k=40이고 최솟값은 k−16=24이므로 풀이가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(2) = 2^3 - 12(2) + k = 8 - 24 + k = k - 16$",
+        "$f(3) = 3^3 - 12(3) + k = 27 - 36 + k = k - 9$",
+        "$k = 40$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_040",
+      "condition": "C",
+      "response_sha256": "2bd9b0e5e813a0a97f8cfe5987d8aef17d581ea07e38483fa61f670aa4f49c56",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수의 구간 내부 영점 2와 두 끝점 0,3의 함수값을 모두 비교했다. 각각 k−16,k,k−9이므로 최댓값 조건으로 k=40을 결정하며, 최솟값 k−16=24를 얻는 추론이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(2) = 2^3 - 12(2) + k = 8 - 24 + k = k - 16$",
+        "$f(3) = 3^3 - 12(3) + k = 27 - 36 + k = k - 9$",
+        "$k = 40$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_040",
+      "condition": "D",
+      "response_sha256": "426b6a51d35c69901b0951e10c44d011042192780c09371063804d04a0ffe427",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수의 구간 내부 영점 2와 두 끝점 0,3의 함수값을 모두 비교했다. 각각 k−16,k,k−9이므로 최댓값 조건으로 k=40을 결정하며, 최솟값 k−16=24를 얻는 추론이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(2) = 2^3 - 12(2) + k = 8 - 24 + k = k - 16$",
+        "$f(3) = 3^3 - 12(3) + k = 27 - 36 + k = k - 9$",
+        "$k = 40$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_040",
+      "condition": "B",
+      "response_sha256": "c487c03c49af7fe845cbfea587d51307c2874b188884b3299efb4ea3fd09f22d",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수의 영점 중 [0,3]에 있는 2와 양 끝점의 함수값을 정확히 비교했다. 최댓값은 f(0)=k=40이고 최솟값은 f(2)=k−16=24이므로 경계점까지 포함한 풀이가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(2) = 2^3 - 12(2) + k = 8 - 24 + k = k - 16$",
+        "$f(3) = 3^3 - 12(3) + k = 27 - 36 + k = k - 9$",
+        "$k = 40$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_042",
+      "condition": "A",
+      "response_sha256": "2db4c0114619ec7f8f6603447efe2e33a00a1d81f81c24cde265aba33c1fc12f",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "a>0에서 f(0)>0과 양의 반직선에서의 감소·증가 구조를 정확히 분석했다. 극솟값 4a²(10−a)의 양·영·음에 따라 서로 다른 양의 근 개수는 각각 0,1,2이므로 a=10이 유일하다. 이때 (x−20)²(x+10)의 인수분해와 근 검증도 정확하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "4a^2(10 - a)",
+        "$f(x) = (x-20)^2(x+10) = 0$",
+        "양의 실근이 2개"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_042",
+      "condition": "D",
+      "response_sha256": "1968f92fd55ce8c8029033dfc2f87cce9e788c201c9b5076c413edf1b162a953",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "초기에는 양의 근 하나를 위해 극솟값>0이어야 한다고 잘못 주장했다. 이후 0<a<10에서는 음수 영역에서만 만나 양의 근이 0개임을 명시하여 그 후보범위를 배제했고, a=10에서 (x−20)²(x+10)을 확인해 양의 근 하나라는 올바른 조건으로 정정했다. 앞선 오류를 수정한 최종 결론 10과 근 계산은 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "즉, $f(2a) > 0$이어야 한다.",
+        "따라서 $0 < a < 10$일 때는 극솟값이 양수이므로 $x$축과 음수 영역에서만 만나 양의 실근이 0개이고, $a=10$일 때 양의 실근이 1개 존재한다.",
+        "(x-20)^2(x+10)"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_042",
+      "condition": "B",
+      "response_sha256": "2e9edab8b450ac7f4727e231f63152d3e9e9cf281c711daa1cf1d760a96238b0",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수와 극값 계산이 정확하며 a<10, a=10, a>10에서 양의 실근 개수를 각각 0,1,2로 구분했다. a=10일 때 (x−20)²(x+10)으로 인수분해하여 서로 다른 양의 근은 20 하나임을 확인했으므로 최종 추론과 정답 10이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(x) = (x-20)^2(x+10) = 0$",
+        "총 2개의 양의 실근을 갖는다.",
+        "양의 실근이 존재하지 않는다. (조건 불만족)"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_042",
+      "condition": "C",
+      "response_sha256": "defa081b15c8ad37c1f1278fb0edf713d9ae125489da314de414150921deb07e",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "초기에 극솟값>0이 필요하다는 주장과 극솟값≤0의 근 개수 분류는 거짓이었다. 그러나 후반에서 0<a<10이면 양의 영역에서 항상 양수여서 근이 없다고 명시하여 앞선 후보범위를 배제했고, a=10에서 (x−20)²(x+10)의 서로 다른 양의 근은 하나라고 경계 분류도 정정했다. 초기 오류를 수정한 뒤의 최종 결론 a=10은 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "(만약 $f(2a) \\le 0$이면 양의 실근이 2개 또는 3개가 됨)",
+        "양의 실근이 존재하지 않는다. 따라서 $f(2a) = 0$인 경우를 확인해야 한다.",
+        "이때 양의 실근은 $x=20$ 하나뿐이다."
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_043",
+      "condition": "A",
+      "response_sha256": "7b230a021c2a4237d29f42349e919ade022f4e78545c6745ec37c1b1339850da",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "주어진 양쪽 부등식을 |f(x)|≤k로 해석하고 [-2,2]의 양 끝점과 도함수의 영점에서 함수값을 정확히 계산했다. f(−2)=12, f(1)=−15, f(2)=−4이므로 최대 절댓값은 15이며, 양수 k의 최솟값도 15라는 추론이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(-2) = 2(-8) + 3(4) - 12(-2) - 8 = -16 + 12 + 24 - 8 = 12$",
+        "$f(1) = 2(1) + 3(1) - 12(1) - 8 = 2 + 3 - 12 - 8 = -15$",
+        "\\max(|12|, |-15|) = 15"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_043",
+      "condition": "D",
+      "response_sha256": "0fd4a8399e79ff43eb57f852ab0c38723309f90ef2e0e08bdaac42fadb4c8e28",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "주어진 양쪽 부등식을 |f(x)|≤k로 해석하고 [-2,2]의 양 끝점과 도함수의 영점에서 함수값을 정확히 계산했다. f(−2)=12, f(1)=−15, f(2)=−4이므로 최대 절댓값은 15이며, 양수 k의 최솟값도 15라는 추론이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(-2) = 2(-8) + 3(4) - 12(-2) - 8 = -16 + 12 + 24 - 8 = 12$",
+        "$f(1) = 2(1) + 3(1) - 12(1) - 8 = 2 + 3 - 12 - 8 = -15$",
+        "\\max(|12|, |-15|) = 15"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_043",
+      "condition": "C",
+      "response_sha256": "5db31a1de7e9140c6f4dc37c216d5dde24af723e2d99a514ffd55a9b31b62321",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "주어진 양쪽 부등식을 |f(x)|≤k로 해석하고 [-2,2]의 양 끝점과 도함수의 영점에서 함수값을 정확히 계산했다. f(−2)=12, f(1)=−15, f(2)=−4이므로 최대 절댓값은 15이며, 양수 k의 최솟값도 15라는 추론이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(-2) = 2(-8) + 3(4) - 12(-2) - 8 = -16 + 12 + 24 - 8 = 12$",
+        "$f(1) = 2(1) + 3(1) - 12(1) - 8 = 2 + 3 - 12 - 8 = -15$",
+        "\\max(|12|, |-15|) = 15"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
     }
   ]
 }

@@ -6,7 +6,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from mathhint_solver.final_experiment_2.gemini_full265.report import all_scope_metrics, build_full_viewer
+from mathhint_solver.final_experiment_2.gemini_full265.report import all_scope_metrics, build_full_viewer, key_comparison
 from mathhint_solver.final_experiment_2.gemini_full265.verify import preservation_check, reused_scientific_fields_equal, _same_csv_value, saved_metric_checks
 from mathhint_solver.final_experiment_2.gemini_comparison.report import summaries, paired_tests, TOKEN_FIELDS
 from mathhint_solver.final_experiment_2.gemini_comparison.viewer import METHODS
@@ -34,6 +34,55 @@ def saved_rows(questions):
 
 
 class Full265ReportTests(unittest.TestCase):
+    def test_key_comparison_uses_paired_changes_and_weighted_token_ratio(self):
+        questions = [question("train", "train", 100, (False, True, False, True)),
+                     question("test", "test", 300, (True, False, True, True))]
+        questions[0]["conditions"]["regression_hint"]["usage"]["total_token_count"] = 150
+        questions[1]["conditions"]["regression_hint"]["usage"]["total_token_count"] = 350
+        questions[0]["answer_key_conflict"] = True
+        questions[0]["conditions"]["baseline"]["correct_ai_supplemental"] = True
+        before = deepcopy(questions)
+        text = "\n".join(key_comparison(questions, {"pending_count": 0}))
+        self.assertIn("|B|2/2|1 / 1 / +0|2/2|+50.00|+25.00%|", text)
+        self.assertIn("|C|2/2|0 / 0 / +0|2/2|+0.00|+0.00%|", text)
+        self.assertIn("|D|2/2|1 / 0 / +1|2/2|+0.00|+0.00%|", text)
+        self.assertIn("학습1 + 테스트1", text)
+        self.assertIn("일반화 성능이 아니다", text)
+        self.assertIn("원본 키 충돌 1문항", text)
+        self.assertIn("AI 보조 대안 기준 점수", text)
+        self.assertIn("A 2/2", text)
+        self.assertIn("사람의 확정 답안표나 주 점수 대체", text)
+        self.assertEqual(questions, before)
+
+    def test_partial_key_comparison_reports_only_pair_denominators_and_bias(self):
+        questions = [question("train", "train", 100), question("test", "test", 200)]
+        questions[0]["conditions"]["regression_hint"]["status"] = "not_run"
+        questions[0]["conditions"]["oracle_hint"]["usage"]["total_token_count"] = None
+        for state in ({"pending_count": 1}, {"pending_count": 0}):
+            with self.subTest(state=state):
+                text = "\n".join(key_comparison(questions, state))
+                self.assertIn("|B|1/2|1/2|", text)
+                self.assertIn("|C|2/2|2/2|", text)
+                self.assertIn("|D|2/2|1/2|", text)
+                self.assertIn("ID 실행 순서", text)
+                self.assertIn("무작위 하위표본이 아니며", text)
+                self.assertIn("전체 효과를 확정할 수 없어", text)
+                self.assertNotIn("개선 / 악화", text)
+                self.assertNotIn("평균 전체토큰 차이", text)
+                self.assertNotIn("전체토큰 변화율", text)
+
+    def test_key_comparison_keeps_missing_pairs_and_zero_token_denominator_undefined(self):
+        questions = [question("train", "train", 0, (True, None, None, True)),
+                     question("test", "test", 100, (True, True, None, True))]
+        questions[0]["conditions"]["regression_hint"]["usage"]["total_token_count"] = 20
+        questions[1]["conditions"]["regression_hint"]["usage"]["total_token_count"] = None
+        questions[0]["conditions"]["deep_learning_hint"]["usage"]["total_token_count"] = None
+        questions[1]["conditions"]["deep_learning_hint"]["usage"]["total_token_count"] = None
+        text = "\n".join(key_comparison(questions, {"pending_count": 0}))
+        self.assertIn("|B|1/2|0 / 0 / +0|1/2|+20.00|—|", text)
+        self.assertIn("|C|0/2|—|0/2|—|—|", text)
+        self.assertIn("A 토큰 분모가 없는 값은 —", text)
+
     def test_independent_summary_check_rejects_unweighted_combined_mean(self):
         args = list(saved_rows([question("one", "train", 0), question("two", "train", 10), question("three", "test", 100)]))
         checks = saved_metric_checks(*args)
