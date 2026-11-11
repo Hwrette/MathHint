@@ -271,4 +271,9 @@ def run(root=None, output=None):
         "question_count": len(comparisons), "case_count": len(cases), "review_status_counts": dict(Counter(r["review_status"] for r in review_rows)),
         "state": state, "additional_review_api_calls": 0, "report_generation_api_calls": 0, "model_training_performed": False})
     _readme(output, config, state, summary, review_rows, cases, questions)
+    # 미완료 실행에서도 성공 응답만 정정 채점한다. 원본 API 이력 및 원래 집계는 보존한다.
+    if (root / "data/curation/answer_key_corrections.json").is_file():
+        from mathhint_analysis.VerifiedAnswerKey import get_registry, regrade
+        registry_path, corrections = get_registry(root)
+        regrade(root, "gemini_full265", registry_path, corrections)
     return {"question_count": len(comparisons), "case_count": len(cases), "training_performed": False, "api_calls": 0}
