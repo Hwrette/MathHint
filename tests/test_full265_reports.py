@@ -58,7 +58,7 @@ class Full265ReportTests(unittest.TestCase):
         self.assertIn(state["resume_command"], text)
         self.assertIn("성공 응답은 재호출하지 않으며", text)
         self.assertIn("자동 재개 예약은 설정하지 않았다", text)
-        self.assertIn("전체265의 효과를 확정하지 않는다", text)
+        self.assertIn("미완료 조건의 전체265 효과를 확정하지 않는다", text)
         self.assertIn("|무료 일일 요청 한도|500 · 모델 `gemini-3.1-flash-lite`", text)
         self.assertIn("|RetryInfo 대기|26943초|", text)
         self.assertIn("2026-11-11T08:00:00.861426+00:00", text)
@@ -69,6 +69,30 @@ class Full265ReportTests(unittest.TestCase):
         self.assertNotIn("|무료 일일 요청 한도|", "\n".join(execution_notice(missing_evidence)))
         self.assertNotIn("2026-11-11T08:00", "\n".join(execution_notice(missing_evidence)))
         self.assertEqual(execution_notice({"pending_count": 0}), [])
+
+    def test_execution_notice_uses_priority_and_separates_old_quota_from_current_run(self):
+        questions = [question("train", "train", 100), question("test", "test", 200)]
+        questions[0]["conditions"]["deep_learning_hint"]["status"] = "not_run"
+        state = {"status": "partial_complete", "expected_requests": 8, "successful_requests": 7,
+                 "pending_count": 1, "failed_requests": 0, "reused_successes": 4, "new_successes": 3,
+                 "condition_order": "ABDC", "pending_by_condition": {"A": 0, "B": 0, "C": 1, "D": 0},
+                 "provider_quota_observation": {"daily_quota": True, "retry_info_delay_seconds": 123,
+                    "recorded_cooldown_until": "past-time",
+                    "quota_violations": [{"quota_id": "FreeTierPerDay", "quota_value": 500}]}}
+        before = deepcopy((state, questions))
+        text = "\n".join(execution_notice(state, questions))
+        self.assertIn("**A → B → D → C**", text)
+        self.assertIn("C 딥러닝(MLP) / D 실제 해설(오라클)", text)
+        self.assertIn("|A 문제만|2/2|0|", text)
+        self.assertIn("|D 실제 해설 토큰|2/2|0|", text)
+        self.assertIn("|C 딥러닝 예측 토큰|1/2|1|", text)
+        self.assertLess(text.index("|D 실제 해설 토큰|"), text.index("|C 딥러닝 예측 토큰|"))
+        self.assertIn("과거429 관측 기록", text)
+        self.assertIn("현재도 할당량에 차단됐다고 판단하지 않으며", text)
+        self.assertNotIn("일일 할당량 제한으로 중단", text)
+        self.assertNotIn("|RetryInfo 대기|", text)
+        self.assertNotIn("past-time", text)
+        self.assertEqual((state, questions), before)
 
     def test_key_comparison_uses_paired_changes_and_weighted_token_ratio(self):
         questions = [question("train", "train", 100, (False, True, False, True)),
@@ -90,7 +114,7 @@ class Full265ReportTests(unittest.TestCase):
         self.assertIn("사람의 확정 답안표나 주 점수 대체", text)
         self.assertEqual(questions, before)
 
-    def test_partial_key_comparison_reports_only_pair_denominators_and_bias(self):
+    def test_partial_key_comparison_shows_only_ready_pair_effects_and_pending_denominators(self):
         questions = [question("train", "train", 100), question("test", "test", 200)]
         questions[0]["conditions"]["regression_hint"]["status"] = "not_run"
         questions[0]["conditions"]["oracle_hint"]["usage"]["total_token_count"] = None
@@ -98,14 +122,13 @@ class Full265ReportTests(unittest.TestCase):
             with self.subTest(state=state):
                 text = "\n".join(key_comparison(questions, state))
                 self.assertIn("|B|1/2|1/2|", text)
-                self.assertIn("|C|2/2|2/2|", text)
+                self.assertIn("|C|2/2|0 / 0 / +0|2/2|+0.00|+0.00%|", text)
                 self.assertIn("|D|2/2|1/2|", text)
                 self.assertIn("ID 실행 순서", text)
                 self.assertIn("무작위 하위표본이 아니며", text)
                 self.assertIn("전체 효과를 확정할 수 없어", text)
-                self.assertNotIn("개선 / 악화", text)
-                self.assertNotIn("평균 전체토큰 차이", text)
-                self.assertNotIn("전체토큰 변화율", text)
+                self.assertNotIn("|B|1/2|0 /", text)
+                self.assertNotIn("|D|2/2|0 /", text)
 
     def test_key_comparison_keeps_missing_pairs_and_zero_token_denominator_undefined(self):
         questions = [question("train", "train", 0, (True, None, None, True)),
@@ -115,9 +138,38 @@ class Full265ReportTests(unittest.TestCase):
         questions[0]["conditions"]["deep_learning_hint"]["usage"]["total_token_count"] = None
         questions[1]["conditions"]["deep_learning_hint"]["usage"]["total_token_count"] = None
         text = "\n".join(key_comparison(questions, {"pending_count": 0}))
-        self.assertIn("|B|1/2|0 / 0 / +0|1/2|+20.00|—|", text)
-        self.assertIn("|C|0/2|—|0/2|—|—|", text)
-        self.assertIn("A 토큰 분모가 없는 값은 —", text)
+        self.assertIn("|B|1/2|1/2|", text)
+        self.assertIn("|C|0/2|0/2|", text)
+        zero_questions = [question("train", "train", 0)]
+        zero_questions[0]["conditions"]["regression_hint"]["usage"]["total_token_count"] = 20
+        zero_text = "\n".join(key_comparison(zero_questions, {"pending_count": 0}))
+        self.assertIn("|B|1/1|0 / 1 / -1|1/1|+20.00|—|", zero_text)
+        self.assertIn("A 토큰 분모가 없는 값은 —", zero_text)
+
+    def test_abd_complete_comparisons_do_not_wait_for_incomplete_c(self):
+        questions = [question("train", "train", 100, (False, True, False, True)),
+                     question("test", "test", 200, (True, False, True, True))]
+        questions[0]["conditions"]["deep_learning_hint"]["status"] = "not_run"
+        before = deepcopy(questions)
+        text = "\n".join(key_comparison(questions, {"pending_count": 1}))
+        self.assertIn("|B|2/2|1 / 1 / +0|2/2|+0.00|+0.00%|", text)
+        self.assertIn("|D|2/2|1 / 0 / +1|2/2|+0.00|+0.00%|", text)
+        self.assertIn("|C|1/2|1/2|", text)
+        self.assertIn("조건 우선순위", text)
+        self.assertIn("일반화 성능이 아니다", text)
+        self.assertEqual(questions, before)
+
+    def test_no_complete_pair_shows_only_denominators(self):
+        questions = [question("train", "train", 100), question("test", "test", 200)]
+        for response in questions[0]["conditions"].values():
+            response["status"] = "not_run"
+        text = "\n".join(key_comparison(questions, {"pending_count": 4}))
+        for condition in "BCD":
+            self.assertIn(f"|{condition}|1/2|1/2|", text)
+        self.assertIn("무작위 하위표본이 아니며", text)
+        self.assertNotIn("개선 / 악화", text)
+        self.assertNotIn("평균 전체토큰 차이", text)
+        self.assertNotIn("전체토큰 변화율", text)
 
     def test_independent_summary_check_rejects_unweighted_combined_mean(self):
         args = list(saved_rows([question("one", "train", 0), question("two", "train", 10), question("three", "test", 100)]))

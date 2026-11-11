@@ -100,7 +100,7 @@ def _table(rows):
 
 
 def key_comparison(questions, state):
-    """같은 문항의 원시 채점·전체 사용량만 요약한다. 부분 완료면 분모만 표시한다."""
+    """문항 전체가 갖춰진 A↔조건 쌍만 효과를 요약하고 나머지는 분모만 표시한다."""
     selected = [q for q in questions if q["expected_generation"]]
     if not selected:
         return ["## 핵심 비교 · A 기준", "", "아직 비교할 저장 문항이 없다.", ""]
@@ -109,7 +109,7 @@ def key_comparison(questions, state):
         return question["conditions"].get(methods[condition]) or {}
     complete = not state.get("pending_count", 0) and all(
         response(q, c).get("status") == "success" for q in selected for c in "ABCD")
-    rows = []
+    rows, pending_rows = [], []
     for condition in "BCD":
         successful = [(response(q, "A"), response(q, condition)) for q in selected
                       if response(q, "A").get("status") == response(q, condition).get("status") == "success"]
@@ -118,7 +118,7 @@ def key_comparison(questions, state):
         provided = [(a["usage"]["total_token_count"], b["usage"]["total_token_count"]) for a, b in successful
                     if all(r.get("usage", {}).get("total_token_count") is not None for r in (a, b))]
         values = [condition, f"{len(graded)}/{len(selected)}"]
-        if complete:
+        if len(successful) == len(graded) == len(provided) == len(selected):
             gain = sum(not a["evaluation"]["correct"] and b["evaluation"]["correct"] for a, b in graded)
             loss = sum(a["evaluation"]["correct"] and not b["evaluation"]["correct"] for a, b in graded)
             difference = sum(b-a for a, b in provided)
@@ -126,20 +126,21 @@ def key_comparison(questions, state):
             values += [f"{gain} / {loss} / {gain-loss:+d}" if graded else "—", f"{len(provided)}/{len(selected)}",
                        f"{difference/len(provided):+.2f}" if provided else "—",
                        f"{difference/baseline*100:+.2f}%" if provided and baseline else "—"]
+            rows.append("|" + "|".join(values) + "|")
         else:
             values.append(f"{len(provided)}/{len(selected)}")
-        rows.append("|" + "|".join(values) + "|")
+            pending_rows.append("|" + "|".join(values) + "|")
     train = sum(q["split"] == "train" for q in selected)
     test = sum(q["split"] == "test" for q in selected)
     lines = ["## 핵심 비교 · A 기준", "",
              f"전체{len(selected)}는 학습{train} + 테스트{test}의 혼합 참고값이며, 학습 문항의 B/C는 인샘플 예측이므로 일반화 성능이 아니다."]
-    if complete:
-        lines += ["정답 변화는 양쪽 성공·채점 가능한 문항, 전체 토큰 차이·변화율은 양쪽 성공·사용량 제공 문항만 대응시켰으며, 비교 쌍이나 A 토큰 분모가 없는 값은 —다.", "",
+    if rows:
+        lines += ["다음은 A와 해당 조건의 전체 문항에 성공·채점·전체 토큰 사용량이 모두 갖춰진 대응 비교이며, 다른 조건의 완료를 기다려 섞지 않는다. A 토큰 분모가 없는 값은 —다.", "",
                   "|A 대비 조건|공통 채점/전체|개선 / 악화 / 순변화(문항)|사용량 공통/전체|평균 전체토큰 차이|전체토큰 변화율|",
                   "|---|---:|---:|---:|---:|---:|", *rows, ""]
-    else:
-        lines += ["**부분 결과의 완료 집합은 ID 실행 순서·실패에 영향을 받아 무작위 하위표본이 아니며, 전체 효과를 확정할 수 없어 여기서는 공통 비교 분모만 표시한다.**", "",
-                  "|A 대비 조건|공통 채점/전체|사용량 공통/전체|", "|---|---:|---:|", *rows, ""]
+    if pending_rows:
+        lines += ["**아래 미완료 비교의 완료 집합은 조건 우선순위·ID 실행 순서·실패에 영향을 받아 무작위 하위표본이 아니며, 해당 조건의 전체 효과를 확정할 수 없어 공통 비교 분모만 표시한다.**", "",
+                  "|미완료 A 대비 조건|공통 채점/전체|사용량 공통/전체|", "|---|---:|---:|", *pending_rows, ""]
     conflicts = sum(bool(q.get("answer_key_conflict")) for q in selected)
     if complete and conflicts:
         scores = []
@@ -154,7 +155,7 @@ def key_comparison(questions, state):
     return lines + [""]
 
 
-def execution_notice(state):
+def execution_notice(state, questions=()):
     """저장된 실행 상태를 먼저 보여 준다. 대기시각을 공급자 초기화시각으로 바꾸지 않는다."""
     pending = state.get("pending_count", 1060)
     if not pending:
@@ -166,12 +167,30 @@ def execution_notice(state):
              f"성공 **{state.get('successful_requests', 0)}/{state.get('expected_requests', 1060)}** "
              f"(기존80 재사용 {state.get('reused_successes', 0)} + 신규 {state.get('new_successes', 0)}), "
              f"미완료 **{pending}**(마지막 실패 {failures} + 미실행 {pending-failures})다. "
-             "기존80 결과는 그대로 보존했으며, 아래 수치는 실제 성공 응답의 부분 참고값으로 전체265의 효과를 확정하지 않는다.", ""]
+             "기존80 결과는 그대로 보존했으며, 미완료 조건의 전체265 효과를 확정하지 않는다.", ""]
+    order = state.get("condition_order")
+    if order:
+        lines += ["현재 요청 우선순서: **" + " → ".join(order) + "**. 각 조건의 미완료 전체 문항을 먼저 실행하고, 같은 조건 안에서는 기존 문항 순서를 유지한다. "
+                  "조건 의미는 A 문제만 / B 선형회귀 / C 딥러닝(MLP) / D 실제 해설(오라클)로 유지한다.", ""]
+    pending_by_condition = state.get("pending_by_condition") or {}
+    selected = [q for q in questions if q["expected_generation"]]
+    if pending_by_condition:
+        expected = len(selected) if selected else state.get("expected_requests", 1060) // len(METHODS)
+        lines += ["|조건|성공/계획|미완료|", "|---|---:|---:|"]
+        for condition in order or "ABCD":
+            method = next(m for m in METHODS if m["condition"] == condition)
+            missing = pending_by_condition.get(condition)
+            success = sum((q["conditions"].get(method["key"]) or {}).get("status") == "success" for q in selected) if selected else (
+                expected-missing if missing is not None else None)
+            lines.append(f"|{method['label']}|{success if success is not None else '—'}/{expected}|{missing if missing is not None else '—'}|")
+        lines.append("")
     failed = [r for r in state.get("pending_requests", []) if r.get("last_status") not in (None, "not_executed")]
     if failed:
         lines += ["재시도할 마지막 실패: " + ", ".join(f"`{r['condition']}/{r['id']}`" for r in failed) + ".", ""]
+    observation = state.get("provider_quota_observation") or {}
+    if observation and not quota_blocked:
+        lines += ["[과거429 관측 기록](state.json)은 보존한다. 이 과거 기록만으로 현재도 할당량에 차단됐다고 판단하지 않으며, 현재 실행 상태와 새 응답을 기준으로 확인한다.", ""]
     if quota_blocked:
-        observation = state.get("provider_quota_observation") or {}
         violations = observation.get("quota_violations", [])
         if violations:
             lines += ["실제429 응답에서 관측한 제한은 다음과 같다. 공급자의 전체 호출·토큰 한도나 남은 예산을 확인한 것은 아니다.", "",
@@ -197,7 +216,7 @@ def _readme(output, config, state, summary, review_rows, cases, questions):
     execution_link = "[실행 이력](execution_runs/)" if (Path(output) / "execution_runs").is_dir() else "실제 실행 기록은 아직 없음"
     lines = ["# 전체265문항 Gemini A/B/C/D 비교", "",
         "A 문제만 · B 확정 선형회귀 예측 토큰 · C 확정 MLP 예측 토큰 · D 실제 원본 해설 토큰(오라클).", ""]
-    lines += execution_notice(state)
+    lines += execution_notice(state, questions)
     lines += [
         "기존 [테스트80 결과](../gemini_comparison/README.md)는 보존했다. 동일한320개 요청의 성공 응답·사용량·검토 기록을 출처 해시로 재사용하고 학습185×4조건을 추가한다. 모델 재학습·어휘 변경·문제 원문 변경은 없다.", "",
         "**전체265는 학습185와 테스트80의 혼합 참고 결과다. 학습185의 B/C는 해당 모델이 학습했던 문항의 인샘플 예측이며 새로운 문제의 일반화 성능이 아니다.** 테스트80은 기존 평가로 별도 표시한다. D는 정답 해설 정보가 있는 진단 조건이다.", "",
@@ -222,7 +241,7 @@ def _readme(output, config, state, summary, review_rows, cases, questions):
         "정답률 분모는 채점 가능한 성공 응답이다. 실패·미완료·채점 불가를 오답으로 대체하지 않는다. 토큰의 평균 분모는 해당 필드가 실제 제공된 성공 응답 수이고 미제공은 null/—다. 추론·캐시 토큰을 전체 토큰에 더하지 않는다. 전체265 평균은 문항·제공 수를 기준으로 합쳐 계산하며185와80의 평균을 단순 평균하지 않는다.", "",
         "[전체/분할 핵심 수치](summary.csv) · [사용량 합계·제공 수](token_summary.csv) · [6쌍 대응 비교](paired_comparison.csv)", "",
         "대응 검정은 각 범위에서 양쪽 성공·채점 가능한 같은 문항만 사용하고 범위별6쌍에 Holm 보정을 적용한다. 세 범위는 서로 겹치는 탐색 요약이며 독립 표본이 아니다. 작은 정오답 변화의 검정력 한계, 과거80 재사용과 새185의 실행 시점 차이를 함께 고려한다.", "",
-        "부분 결과의 완료 집합은 ID 실행 순서·제한에 영향을 받아 무작위 하위표본이 아니다. 미완료 상태에서는 전체265의 효과를 확정하지 않는다. 예측 모델 연산비용과 사용량이 제공되지 않은 실패·재시도 비용을 측정하지 않았으므로 시스템 전체 효율 향상을 주장하지 않는다.", "",
+        "부분 결과의 완료 집합은 조건 우선순위·ID 실행 순서·제한에 영향을 받아 무작위 하위표본이 아니다. 미완료 조건의 전체265 효과를 확정하지 않는다. 예측 모델 연산비용과 사용량이 제공되지 않은 실패·재시도 비용을 측정하지 않았으므로 시스템 전체 효율 향상을 주장하지 않는다.", "",
         "## 정답표·풀이 검토", "",
         "trig_1_010의 원본④와 해설 계산9/5·②의 기존 충돌을 보존한다. 원본 기준 점수를 주 결과로 표시하고 AI 보조 대안 기준은 CSV 별도 열에 둔다. 원본 정답을 자동 수정하지 않는다.", "",
         f"총 {len(review_rows)}개 조건의 검토 상태를 [검토 CSV](review/status.csv)에 기록했다. 상태 개수: `" + str(dict(Counter(row["review_status"] for row in review_rows))) + "`. "
