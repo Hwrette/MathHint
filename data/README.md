@@ -12,7 +12,3 @@
 `diff_3_017`은 삭제 전 원래17번이며 현재 HML16번이다. 삭제한 `diff_3_016`은 결과에 없다. ID는 모든 파일과 JSON에서 동일하다.
 
 생성 명령과 각 단계 설명은 루트 README를 참고한다.
-
-## 정답표 정정 원칙 (2026-11-11)
-
-원본 HML과 `processed/`는 변인 통제·출처 보존을 위해 변경하지 않는다. 검증된 답안 충돌 `trig_1_010` (원본 ④, 실제 ② = 9/5)은 [정정 레지스트리](curation/answer_key_corrections.json)에 기록되어 있다. [265문항 검토 기록](../docs/answer_key_audit_2026-11-11.md)과 `results/final_experiment_2/*/key_corrected/`의 정정 기준 결과를 읽는다.
