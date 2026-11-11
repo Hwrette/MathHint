@@ -1,5 +1,5 @@
 {
-  "verified_at": "2026-11-10T23:54:44.324162+00:00",
+  "verified_at": "2026-11-11T00:02:57.534272+00:00",
   "checks": [
     {
       "check": "frozen_models_data_and_full265_plan_match",
@@ -4415,6 +4415,166 @@
     },
     {
       "check": "sdk_capture_39",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_40",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_41",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_42",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_43",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_44",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_45",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_46",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_47",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_48",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_49",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_50",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_51",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_52",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_53",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_54",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_55",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_56",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_57",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_58",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_59",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_60",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_61",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_62",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_63",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_64",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_65",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_66",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_67",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_68",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_69",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_70",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_71",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_72",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_73",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_74",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_75",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_76",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_77",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_78",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_79",
       "passed": true
     },
     {
@@ -15618,6 +15778,966 @@
       "passed": true
     },
     {
+      "check": "response_identity_diff_1_015_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_015_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_015_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_015_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_015_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_015_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_015_D",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_015_D",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_015_D",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_015_D",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_015_D",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_015_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_015_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_015_A",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_015_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_015_A",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_015_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_015_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_015_C",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_015_C",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_015_C",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_015_C",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_015_C",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_015_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_016_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_016_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_016_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_016_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_016_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_016_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_016_D",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_016_D",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_016_D",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_016_D",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_016_D",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_016_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_016_C",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_016_C",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_016_C",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_016_C",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_016_C",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_016_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_016_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_016_A",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_016_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_016_A",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_016_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_016_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_017_C",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_017_C",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_017_C",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_017_C",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_017_C",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_017_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_017_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_017_A",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_017_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_017_A",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_017_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_017_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_017_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_017_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_017_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_017_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_017_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_017_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_017_D",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_017_D",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_017_D",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_017_D",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_017_D",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_017_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_019_C",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_019_C",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_019_C",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_019_C",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_019_C",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_019_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_019_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_019_A",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_019_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_019_A",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_019_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_019_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_019_D",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_019_D",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_019_D",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_019_D",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_019_D",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_019_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_019_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_019_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_019_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_019_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_019_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_019_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_020_C",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_020_C",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_020_C",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_020_C",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_020_C",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_020_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_020_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_020_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_020_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_020_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_020_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_020_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_020_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_020_A",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_020_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_020_A",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_020_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_020_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_020_D",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_020_D",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_020_D",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_020_D",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_020_D",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_020_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_021_C",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_021_C",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_021_C",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_021_C",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_021_C",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_021_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_021_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_021_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_021_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_021_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_021_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_021_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_021_D",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_021_D",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_021_D",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_021_D",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_021_D",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_021_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_021_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_021_A",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_021_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_021_A",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_021_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_021_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_023_C",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_023_C",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_023_C",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_023_C",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_023_C",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_023_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_023_D",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_023_D",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_023_D",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_023_D",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_023_D",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_023_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_023_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_023_A",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_023_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_023_A",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_023_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_023_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_023_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_023_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_023_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_023_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_023_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_023_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_024_C",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_024_C",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_024_C",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_024_C",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_024_C",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_024_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_024_D",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_024_D",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_024_D",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_024_D",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_024_D",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_024_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_024_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_024_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_024_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_024_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_024_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_024_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_024_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_024_A",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_024_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_024_A",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_024_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_024_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_025_D",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_025_D",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_025_D",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_025_D",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_025_D",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_025_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_025_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_025_A",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_025_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_025_A",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_025_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_025_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_025_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_025_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_025_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_025_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_025_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_025_B",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_025_C",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_025_C",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_025_C",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_025_C",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_025_C",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_025_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_027_D",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_027_D",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_027_D",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_027_D",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_027_D",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_027_D",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_027_A",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_027_A",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_027_A",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_027_A",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_027_A",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_027_A",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_027_C",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_027_C",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_027_C",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_027_C",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_027_C",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_027_C",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_1_027_B",
+      "passed": true
+    },
+    {
+      "check": "response_key_unique_diff_1_027_B",
+      "passed": true
+    },
+    {
+      "check": "usage_diff_1_027_B",
+      "passed": true
+    },
+    {
+      "check": "usage_raw_diff_1_027_B",
+      "passed": true
+    },
+    {
+      "check": "grade_diff_1_027_B",
+      "passed": true
+    },
+    {
+      "check": "live_sdk_boundary_diff_1_027_B",
+      "passed": true
+    },
+    {
       "check": "state_counts_and_remaining_keys_match",
       "passed": true
     },
@@ -18614,15 +19734,15 @@
       "passed": true
     }
   ],
-  "passed": 4653,
+  "passed": 4933,
   "failed": 0,
   "complete": true,
   "experiment_complete": false,
-  "successful_requests": 360,
+  "successful_requests": 400,
   "expected_requests": 1060,
-  "pending_requests": 700,
+  "pending_requests": 660,
   "split_counts": {
-    "train": 40,
+    "train": 80,
     "test": 320
   },
   "preservation": {
@@ -18631,7 +19751,7 @@
     "passed": true,
     "source_commit": "80e0eed33ca62d5811e4daccb738e7879ac56fa7"
   },
-  "markdown_links_checked": 1787,
+  "markdown_links_checked": 1683,
   "broken_links": [],
   "decoded_png_count": 8,
   "invalid_images": [],

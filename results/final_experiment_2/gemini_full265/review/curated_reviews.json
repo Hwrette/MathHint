@@ -6314,6 +6314,1134 @@
       ],
       "alternative_solution": true,
       "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_006",
+      "condition": "D",
+      "response_sha256": "5f5d9ddb3bc402aa1584eb885008ab516ffc0998a7f93f1b45b970773879eb50",
+      "review_status": "suspected_error",
+      "math_status": "inappropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "통분 등식이 잘못되었다. 정확한 분자는 (t−1)√(t+2)+√(t+2)=t√(t+2)여야 한다. 허용되는 t=2를 대입하면 기재한 등식의 좌변은 4, 우변은 6이므로 반례가 명확하다. 뒤의 별도 전개와 최종값 3은 맞지만 앞선 거짓 등식을 명시적으로 철회하거나 수정하지 않아 응답 전체에 실제 식 변형 오류가 남는다. 원본 정답키 ①에는 충돌이 없다.",
+      "error_step": "괄호 안을 통분하면: $\\sqrt{(t + 2)(t - 1)} + \\frac{\\sqrt{t + 2}}{\\sqrt{t - 1}} = \\frac{(t + 2)(t - 1) + \\sqrt{t + 2}}{\\sqrt{t - 1}}$",
+      "evidence_quotes": [
+        "$\\sqrt{(t + 2)(t - 1)} + \\frac{\\sqrt{t + 2}}{\\sqrt{t - 1}} = \\frac{(t + 2)(t - 1) + \\sqrt{t + 2}}{\\sqrt{t - 1}}$ (식 변형)",
+        "또는 직접 전개하면,",
+        "최종정답: ①"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_006",
+      "condition": "B",
+      "response_sha256": "964a718c346f35a5826ed9b09fec13774799b4724e33828c558a2913ec298a65",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "t>1과 x>0을 사용해 교점의 양의 x좌표와 y좌표를 정확히 구했다. 참조풀이의 합을 인수로 묶는 방식과 달리 제곱을 전개하여 fg=t+2를 적용했고, t−1을 곱한 세 항의 극한 0+0+3=3 및 선택지 ①가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$$f(t) = \\sqrt{(t+2)(t-1)}$$",
+        "$$f(t)g(t) = \\sqrt{(t+2)(t-1)} \\cdot \\sqrt{\\frac{t+2}{t-1}} = t+2$$",
+        "$$= 0 + 0 + 3 = 3$$"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_006",
+      "condition": "C",
+      "response_sha256": "3c0cf5c63d999f2a5d5c30de279ece2f75a18bf6f1cc842b34e63c4415835e63",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "연립방정식의 양의 해 f(t)=√((t−1)(t+2))와 g(t)=√((t+2)/(t−1))가 정확하다. 참조풀이와 달리 합의 제곱을 전개하면서 t>1에서 양수인 제곱근의 곱을 t+2로 처리했고, t−1을 곱한 뒤 극한 3을 얻는 과정이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$$x^2 = (t+2)(t-1) = t^2 + t - 2$$",
+        "$$(t-1)(f(t) + g(t))^2 = (t-1)^2(t+2) + (t+2) + 2(t-1)(t+2)$$",
+        "$$(1-1)^2(1+2) + (1+2) + 2(1-1)(1+2) = 0 + 3 + 0 = 3$$"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_007",
+      "condition": "A",
+      "response_sha256": "29bf7730856c6cd6a0db355b2f1b7e02a42691cd924d4ec846099660ac96788f",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계 x=3에서 좌극한 −9+a와 우극한 및 함숫값 15−a를 정확히 계산했다. 두 다항식은 각 구간에서 연속이므로 −9+a=15−a가 전체 연속의 필요충분조건이며, a=12와 선택지 ③가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$-9 + a = 15 - a$",
+        "$2a = 24$",
+        "$a = 12$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_007",
+      "condition": "D",
+      "response_sha256": "687e20ac8553c3d5487f4e832dbde2b17541d596506025d9929044132447a29d",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계 x=3에서 좌극한 −9+a와 우극한 및 함숫값 15−a를 정확히 계산했다. 두 다항식은 각 구간에서 연속이므로 −9+a=15−a가 전체 연속의 필요충분조건이며, a=12와 선택지 ③가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$-9 + a = 15 - a$",
+        "$2a = 24$",
+        "$a = 12$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_007",
+      "condition": "C",
+      "response_sha256": "f3e0147293c71032d7b907e1b9e0478000494af7ed9f7ca02c7242043b77319b",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계 x=3에서 좌극한 −9+a와 우극한 및 함숫값 15−a를 정확히 계산했다. 두 다항식은 각 구간에서 연속이므로 −9+a=15−a가 전체 연속의 필요충분조건이며, a=12와 선택지 ③가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$-9 + a = 15 - a$",
+        "$2a = 24$",
+        "$a = 12$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_007",
+      "condition": "B",
+      "response_sha256": "d5a021a88caa9c6d31c7a018efd96429bcedd7e4b602006f194f29ace4bef926",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계 x=3에서 좌극한 −9+a와 우극한 및 함숫값 15−a를 정확히 계산했다. 두 다항식은 각 구간에서 연속이므로 −9+a=15−a가 전체 연속의 필요충분조건이며, a=12와 선택지 ③가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$-9 + a = 15 - a$",
+        "$2a = 24$",
+        "$a = 12$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_008",
+      "condition": "B",
+      "response_sha256": "aedf33a48a78c2b27191ca6bb17fdf11ddf259b901d61d7d6f6cc7e2c1c9db7f",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계 x=2에서 좌극한 8a−5와 우극한 및 함숫값 2a+1을 정확히 구했다. 각 구간은 다항식이므로 연속 조건 8a−5=2a+1을 풀어 얻은 a=1 및 선택지 ①가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$8a - 5 = 2a + 1$",
+        "$6a = 6$",
+        "$a = 1$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_008",
+      "condition": "A",
+      "response_sha256": "51e8bcfb7e9d202c5f1a988aa61e5ea10733a042d80b2037d4210b1073af065b",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계 x=2에서 좌극한 8a−5와 우극한 및 함숫값 2a+1을 정확히 구했다. 각 구간은 다항식이므로 연속 조건 8a−5=2a+1을 풀어 얻은 a=1 및 선택지 ①가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$8a - 5 = 2a + 1$",
+        "$6a = 6$",
+        "$a = 1$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_008",
+      "condition": "C",
+      "response_sha256": "0f8b4eb865276e6d084e638c2e0bee7e771fcfa43626ad200e7d7fb9cf1013b3",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계 x=2에서 좌극한 8a−5와 우극한 및 함숫값 2a+1을 정확히 구했다. 각 구간은 다항식이므로 연속 조건 8a−5=2a+1을 풀어 얻은 a=1 및 선택지 ①가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$8a - 5 = 2a + 1$",
+        "$6a = 6$",
+        "$a = 1$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_008",
+      "condition": "D",
+      "response_sha256": "c3d19f99d906ec241168e4a745ae37e70c36f3d7600e9999d4f8225b23844f2a",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계 x=2에서 좌극한 8a−5와 우극한 및 함숫값 2a+1을 정확히 구했다. 각 구간은 다항식이므로 연속 조건 8a−5=2a+1을 풀어 얻은 a=1 및 선택지 ①가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$8a - 5 = 2a + 1$",
+        "$6a = 6$",
+        "$a = 1$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_009",
+      "condition": "B",
+      "response_sha256": "d0ea31c2d1c9f589d15ad34ffe60ba9b78400826d2cbc759ccee7ae5ad8b4778",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "x=3에서 좌극한 9+a, 우극한 및 함숫값 3+2a를 정확히 계산하고 연속 조건으로 두 값을 같게 두었다. 9+a=3+2a에서 a=6이며, 구간 내부의 다항식 연속성까지 고려하면 전체 연속 조건을 만족한다. 선택지 ①가 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$9 + a = 3 + 2a$",
+        "$9 - 3 = 2a - a$",
+        "$a = 6$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_009",
+      "condition": "A",
+      "response_sha256": "f042cf996c16fe6f9a16c6440f3aed2036790ae862973e29d979e8e013367d2f",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "x=3에서 좌극한 9+a, 우극한 및 함숫값 3+2a를 정확히 계산하고 연속 조건으로 두 값을 같게 두었다. 9+a=3+2a에서 a=6이며, 구간 내부의 다항식 연속성까지 고려하면 전체 연속 조건을 만족한다. 선택지 ①가 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$9 + a = 3 + 2a$",
+        "$9 - 3 = 2a - a$",
+        "$a = 6$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_009",
+      "condition": "D",
+      "response_sha256": "a23c8d1fa66df327de7533049f1389c4f91cbdcc03270fef71d7dcc3a8dabfe1",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "x=3에서 좌극한 9+a, 우극한 및 함숫값 3+2a를 정확히 계산하고 연속 조건으로 두 값을 같게 두었다. 9+a=3+2a에서 a=6이며, 구간 내부의 다항식 연속성까지 고려하면 전체 연속 조건을 만족한다. 선택지 ①가 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$9 + a = 3 + 2a$",
+        "$9 - 3 = 2a - a$",
+        "$a = 6$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_009",
+      "condition": "C",
+      "response_sha256": "c0a02103faa876b8351d55cf7afa5eefec0723052d830eb31084b63b5181ea87",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "x=3에서 좌극한 9+a, 우극한 및 함숫값 3+2a를 정확히 계산하고 연속 조건으로 두 값을 같게 두었다. 9+a=3+2a에서 a=6이며, 구간 내부의 다항식 연속성까지 고려하면 전체 연속 조건을 만족한다. 선택지 ①가 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$9 + a = 3 + 2a$",
+        "$9 - 3 = 2a - a$",
+        "$a = 6$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_010",
+      "condition": "B",
+      "response_sha256": "29be24080c09919983ed782ac6ddf898479eb325237f8cca20ce726c202d40c9",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계가 상수 a에 따라 바뀌는 점을 x=a로 정확히 적용했다. 좌극한 (a−2a)²=a²와 우극한 및 함숫값 a²−3a+6을 같게 두면 a=2이며, 각 구간의 다항식은 연속이므로 선택지 ②가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$a^2 = a^2 - 3a + 6$",
+        "$0 = -3a + 6$",
+        "$a = 2$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_010",
+      "condition": "C",
+      "response_sha256": "fd037bc058be969889ddf2a518dbf6e2f24c19005ce50cb9d51b982829638049",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계가 상수 a에 따라 바뀌는 점을 x=a로 정확히 적용했다. 좌극한 (a−2a)²=a²와 우극한 및 함숫값 a²−3a+6을 같게 두면 a=2이며, 각 구간의 다항식은 연속이므로 선택지 ②가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$a^2 = a^2 - 3a + 6$",
+        "$0 = -3a + 6$",
+        "$a = 2$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_010",
+      "condition": "A",
+      "response_sha256": "e1c893a03079f7759c8050fbb7b58d3fee3607c312c0fa4f01649ec8c5bd79ad",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계가 상수 a에 따라 바뀌는 점을 x=a로 정확히 적용했다. 좌극한 (a−2a)²=a²와 우극한 및 함숫값 a²−3a+6을 같게 두면 a=2이며, 각 구간의 다항식은 연속이므로 선택지 ②가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$a^2 = a^2 - 3a + 6$",
+        "$0 = -3a + 6$",
+        "$a = 2$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_010",
+      "condition": "D",
+      "response_sha256": "fdfe8d56f3fe345add03b9ba4ef6718b4fdc738d93993122ab793d89289568b1",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계가 상수 a에 따라 바뀌는 점을 x=a로 정확히 적용했다. 좌극한 (a−2a)²=a²와 우극한 및 함숫값 a²−3a+6을 같게 두면 a=2이며, 각 구간의 다항식은 연속이므로 선택지 ②가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$a^2 = a^2 - 3a + 6$",
+        "$0 = -3a + 6$",
+        "$a = 2$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_013",
+      "condition": "B",
+      "response_sha256": "baecb6f111eb1e22bff16c009dd7807f8f4d552980c0f48d1e02d2a547a96429",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계 x=1에서 좌극한 2+a와 우극한 및 함숫값 12−a를 정확히 구했다. 각 구간의 다항식 연속성을 고려해 2+a=12−a를 풀면 a=5이고 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$2 + a = 12 - a$",
+        "$2a = 10$",
+        "$a = 5$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_013",
+      "condition": "C",
+      "response_sha256": "b8cd5c842569ee7ae8ea86925339a64886efd8ccf159b70f7e7e9f3edc92c62f",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계 x=1에서 좌극한 2+a와 우극한 및 함숫값 12−a를 정확히 구했다. 각 구간의 다항식 연속성을 고려해 2+a=12−a를 풀면 a=5이고 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$2 + a = 12 - a$",
+        "$2a = 10$",
+        "$a = 5$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_013",
+      "condition": "D",
+      "response_sha256": "6dcba8fbf71714a943d1c7725002ecc470146f1668a33a6b5dcd2e3d1f509853",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계 x=1에서 좌극한 2+a와 우극한 및 함숫값 12−a를 정확히 구했다. 각 구간의 다항식 연속성을 고려해 2+a=12−a를 풀면 a=5이고 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$2 + a = 12 - a$",
+        "$2a = 10$",
+        "$a = 5$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_013",
+      "condition": "A",
+      "response_sha256": "4f228b9e7571920787a7dca9f8fe2135be6e5471c278cef40877f9f016dee88c",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계 x=1에서 좌극한 2+a와 우극한 및 함숫값 12−a를 정확히 구했다. 각 구간의 다항식 연속성을 고려해 2+a=12−a를 풀면 a=5이고 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$2 + a = 12 - a$",
+        "$2a = 10$",
+        "$a = 5$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_015",
+      "condition": "B",
+      "response_sha256": "b77c3d76faec453a6f8aeefd9eb0a88c71829214447ecd0dbf316d1209187e92",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계 x=a에서 좌극한 a²−3a와 우극한 및 함숫값 a−4를 정확히 계산했다. 다항식의 구간 내부 연속성을 고려하면 a²−3a=a−4가 전체 연속 조건이고, (a−2)²=0에서 a=2 및 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "a^2 - 3a = a - 4",
+        "(a - 2)^2 = 0",
+        "$a = 2$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_015",
+      "condition": "D",
+      "response_sha256": "ba564799a812556421eb89966b04d89a84f28c8760d875180d2e78227dc405f6",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계 x=a에서 좌극한 a²−3a와 우극한 및 함숫값 a−4를 정확히 계산했다. 다항식의 구간 내부 연속성을 고려하면 a²−3a=a−4가 전체 연속 조건이고, (a−2)²=0에서 a=2 및 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "a^2 - 3a = a - 4",
+        "(a - 2)^2 = 0",
+        "$a = 2$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_015",
+      "condition": "A",
+      "response_sha256": "0118591be198f6d4b8af2c7aecc9107f66b41e26966e05981301db249a18b06f",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계 x=a에서 좌극한 a²−3a와 우극한 및 함숫값 a−4를 정확히 계산했다. 다항식의 구간 내부 연속성을 고려하면 a²−3a=a−4가 전체 연속 조건이고, (a−2)²=0에서 a=2 및 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "a^2 - 3a = a - 4",
+        "(a - 2)^2 = 0",
+        "$a = 2$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_015",
+      "condition": "C",
+      "response_sha256": "c4dbb414c20f4417521c9d7c2b5409caefef297c6b0e03fc98ddc0c015027038",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "경계 x=a에서 좌극한 a²−3a와 우극한 및 함숫값 a−4를 정확히 계산했다. 다항식의 구간 내부 연속성을 고려하면 a²−3a=a−4가 전체 연속 조건이고, (a−2)²=0에서 a=2 및 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "a^2 - 3a = a - 4",
+        "(a - 2)^2 = 0",
+        "$a = 2$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_016",
+      "condition": "B",
+      "response_sha256": "3463d264f4e1334425bd4b20cfa065d4d0a13a1947955e2451515f264071f8f7",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "연속을 요구하는 대상이 f 자체가 아닌 f의 제곱임을 정확히 적용했다. x=4에서 제곱의 좌극한 및 함숫값 (4+k)²와 우극한 (8+k)²를 같게 두고 전개한 결과 k=−6 및 선택지 ③가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "16 + 8k + k^2 = 64 + 16k + k^2",
+        "$k = -6$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_016",
+      "condition": "D",
+      "response_sha256": "8589b59fbf17d974c0e3d94cc870b8edbbbdee36da6f1f6de63ca0f010891bf7",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "연속을 요구하는 대상이 f 자체가 아닌 f의 제곱임을 정확히 적용했다. x=4에서 제곱의 좌극한 및 함숫값 (4+k)²와 우극한 (8+k)²를 같게 두고 전개한 결과 k=−6 및 선택지 ③가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "16 + 8k + k^2 = 64 + 16k + k^2",
+        "$k = -6$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_016",
+      "condition": "C",
+      "response_sha256": "0b09d7077c299fb810ad245ba73cc2fbd4cc5d3828d157008e5975d81bf7c73f",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "연속을 요구하는 대상이 f 자체가 아닌 f의 제곱임을 정확히 적용했다. x=4에서 제곱의 좌극한 및 함숫값 (4+k)²와 우극한 (8+k)²를 같게 두고 전개한 결과 k=−6 및 선택지 ③가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "16 + 8k + k^2 = 64 + 16k + k^2",
+        "$k = -6$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_016",
+      "condition": "A",
+      "response_sha256": "fce4a92602c1ecc81f806e8ebe37493ff9c72aafe4107b75856b432ca38bea7e",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "연속을 요구하는 대상이 f 자체가 아닌 f의 제곱임을 정확히 적용했다. x=4에서 제곱의 좌극한 및 함숫값 (4+k)²와 우극한 (8+k)²를 같게 두고 전개한 결과 k=−6 및 선택지 ③가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "16 + 8k + k^2 = 64 + 16k + k^2",
+        "$k = -6$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_017",
+      "condition": "C",
+      "response_sha256": "c8e0f3e6d9adef8d07398b762723a21d1ca1550bb460f34dae54a83d6e96f001",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "연속성과 두 구간 끝점의 부호 변화로 (1,3), (5,7)에 각각 영점이 존재한다. 모든 영점이 서로 다른 두 정수뿐이라는 조건을 적용하면 두 근의 집합은 {2,6}이고, 이름을 이 순서로 정해 곱 12를 구한 과정이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "구간 $(1, 3)$",
+        "구간 $(5, 7)$",
+        "m \\times n = 2 \\times 6 = 12"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_017",
+      "condition": "A",
+      "response_sha256": "05352eee8b61afe9a457515e47fdb4063558ec607019b4f1dbe5728a6d31d91a",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "연속성과 두 구간 끝점의 부호 변화로 (1,3), (5,7)에 각각 영점이 존재한다. 모든 영점이 서로 다른 두 정수뿐이라는 조건을 적용하면 두 근의 집합은 {2,6}이고, 이름을 이 순서로 정해 곱 12를 구한 과정이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "구간 $(1, 3)$",
+        "구간 $(5, 7)$",
+        "m \\times n = 2 \\times 6 = 12"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_017",
+      "condition": "B",
+      "response_sha256": "7a37b7758b94b33b72217bd070735b3cac6846ce4494076454463ae3b836a0c8",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "연속성과 두 구간의 부호 변화를 사용한 사잇값 정리 적용이 타당하다. (1,3), (5,7)에 각각 존재하는 영점은 정수 조건상 2와 6이어야 하므로 두 근의 곱 12와 선택지 ⑤가 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "구간 $(1, 3)$",
+        "구간 $(5, 7)$",
+        "m \\times n = 2 \\times 6 = 12"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_017",
+      "condition": "D",
+      "response_sha256": "827a26629ec5bfff495c4ba4ab0644aaa2c004c3285836c64b52dff54fbe2bf8",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "연속성과 두 구간의 부호 변화를 사용한 사잇값 정리 적용이 타당하다. (1,3), (5,7)에 각각 존재하는 영점은 정수 조건상 2와 6이어야 하므로 두 근의 곱 12와 선택지 ⑤가 맞다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "구간 $(1, 3)$",
+        "구간 $(5, 7)$",
+        "m \\times n = 2 \\times 6 = 12"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_019",
+      "condition": "C",
+      "response_sha256": "e06abcce895d3655d06efdd5eab2cc2af9455e0313e15064d12f3ef1a3384907",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "곱의 미분법으로 (xf(x))′=f(x)+xf′(x)를 정확히 적용했다. x=3에서 30+f(3)+3f′(3)=30+2+3=35이며 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$g'(3) = 10(3) + f(3) + 3f'(3)$",
+        "$g'(3) = 30 + 2 + 3(1)$",
+        "$g'(3) = 35$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_019",
+      "condition": "A",
+      "response_sha256": "43bdda2b22b6fd588eb7e05e52f134f3dbba89ef4765a6e2536a02a82f23be9a",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "곱의 미분법으로 (xf(x))′=f(x)+xf′(x)를 정확히 적용했다. x=3에서 30+f(3)+3f′(3)=30+2+3=35이며 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$g'(3) = 10(3) + f(3) + 3f'(3)$",
+        "$g'(3) = 30 + 2 + 3(1)$",
+        "$g'(3) = 35$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_019",
+      "condition": "D",
+      "response_sha256": "a191f4fd3c45d03a025685f9fbe7e3b3e5e502504c118cf6453ef620a6e3c8a1",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "곱의 미분법으로 (xf(x))′=f(x)+xf′(x)를 정확히 적용했다. x=3에서 30+f(3)+3f′(3)=30+2+3=35이며 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$g'(3) = 10(3) + f(3) + 3f'(3)$",
+        "$g'(3) = 30 + 2 + 3(1)$",
+        "$g'(3) = 35$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_019",
+      "condition": "B",
+      "response_sha256": "00f456c8b822da9448b0899ce8780ddf08b1ec1fc97a0e9b817f29cdbec89332",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "곱의 미분법으로 (xf(x))′=f(x)+xf′(x)를 정확히 적용했다. x=3에서 30+f(3)+3f′(3)=30+2+3=35이며 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$g'(3) = 10(3) + f(3) + 3f'(3)$",
+        "$g'(3) = 30 + 2 + 3(1)$",
+        "$g'(3) = 35$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_020",
+      "condition": "C",
+      "response_sha256": "64289e2d3f6615b57fc9a0131460d88a45acc06759e97840212b6b5c5b646c4f",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "곱의 미분법으로 g′(x)=2xf(x)+(x²−1)f′(x)를 정확히 구했다. 다항함수이므로 f′(1)가 존재하며 x=1에서 그 계수는 0이므로 g′(1)=2f(1)=10이고 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$g'(x) = 2x \\cdot f(x) + (x^2 - 1) \\cdot f'(x)$",
+        "$g'(1) = 2 \\cdot f(1) + 0 \\cdot f'(1)$",
+        "$g'(1) = 2 \\times 5 = 10$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_020",
+      "condition": "B",
+      "response_sha256": "2a87c2f172281d35edaab0bb2ab4710201ae12a6a878e0b00d2dad65ce42a8fa",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "곱의 미분법으로 g′(x)=2xf(x)+(x²−1)f′(x)를 정확히 구했다. 다항함수이므로 f′(1)가 존재하며 x=1에서 그 계수는 0이므로 g′(1)=2f(1)=10이고 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$g'(x) = 2x \\cdot f(x) + (x^2 - 1) \\cdot f'(x)$",
+        "$g'(1) = 2 \\cdot f(1) + 0 \\cdot f'(1)$",
+        "$g'(1) = 2 \\times 5 = 10$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_020",
+      "condition": "A",
+      "response_sha256": "9f0f33e601ecd467a94ee38f461e62c7a06afecd8de02fadf718ea447d977dcc",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "곱의 미분법을 정확히 적용하고 x=1에서 x²−1=0임을 이용했다. f는 다항함수여서 f′(1)가 유한하므로 해당 항이 사라지고, g′(1)=2f(1)=10 및 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$g'(1) = 2 \\cdot f(1) + 0 \\cdot f'(1)$",
+        "$g'(1) = 2 \\times 5 = 10$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_020",
+      "condition": "D",
+      "response_sha256": "2a87c2f172281d35edaab0bb2ab4710201ae12a6a878e0b00d2dad65ce42a8fa",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "곱의 미분법을 정확히 적용하고 x=1에서 x²−1=0임을 이용했다. f는 다항함수여서 f′(1)가 유한하므로 해당 항이 사라지고, g′(1)=2f(1)=10 및 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$g'(1) = 2 \\cdot f(1) + 0 \\cdot f'(1)$",
+        "$g'(1) = 2 \\times 5 = 10$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_021",
+      "condition": "C",
+      "response_sha256": "7b102af45054b72338ed3c59daff24c61ca76d7e2f44e1dafbb6c68a88dc4de5",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "곱의 미분법으로 (x²+2x)′=2x+2를 정확히 적용했다. x=1에서 g′(1)=4f(1)+3f′(1)=4×2+3×1=11이므로 선택지 ④와 일치하며 추론이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$g'(1) = 4 \\times 2 + 3 \\times 1$",
+        "$g'(1) = 11$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_021",
+      "condition": "B",
+      "response_sha256": "b8f8cc6108241e9c619354594eaf72b805b4b3a9df728a99f463471577c34b34",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "곱의 미분법으로 (x²+2x)′=2x+2를 정확히 적용했다. x=1에서 g′(1)=4f(1)+3f′(1)=4×2+3×1=11이므로 선택지 ④와 일치하며 추론이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$g'(1) = 4 \\times 2 + 3 \\times 1$",
+        "$g'(1) = 11$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_021",
+      "condition": "D",
+      "response_sha256": "5ea0478c8b36ca3bf79dafb16411918e75f06de11270fb5d7d2756e530178175",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "곱의 미분법을 정확히 적용하여 g′(1)=4f(1)+3f′(1)를 얻었다. 주어진 값 2와 1을 대입한 8+3=11의 계산 및 선택지 ④가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$g'(1) = 8 + 3$",
+        "$g'(1) = 11$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_021",
+      "condition": "A",
+      "response_sha256": "2d78f825cbd9ef1a2d07aee0718eef8a7efd4f93de857f5126532d1eb1808f34",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "곱의 미분법을 정확히 적용하여 g′(1)=4f(1)+3f′(1)를 얻었다. 주어진 값 2와 1을 대입한 8+3=11의 계산 및 선택지 ④가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$g'(1) = 8 + 3$",
+        "$g'(1) = 11$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_023",
+      "condition": "C",
+      "response_sha256": "07c5d96038034705735534d02c33f33f6515b25d5502db935ebe681c431645e2",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "참조풀이의 차수 비교와 달리 항등식을 미분하는 방법을 사용했다. 다항식 항등식 f′(1−2f″)=0에서 f′(0)=1이므로 f′는 영다항식이 아니고, 따라서 f″=1/2가 항등적으로 성립한다. f′=x/2+1과 원래 항등식을 적용해 f(4)=5를 얻는 계산이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(x) = \\{f'(x)\\}^2 - 4$",
+        "$f''(x) = \\frac{1}{2}$",
+        "$f'(x) = \\frac{1}{2}x + 1$"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_023",
+      "condition": "D",
+      "response_sha256": "b584be873b8152e4449d9721efa363c9fd84f72ba55bbebf24c33b2649112e0c",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "참조풀이의 차수 비교와 달리 항등식을 미분하는 방법을 사용했다. 다항식 항등식 f′(1−2f″)=0에서 f′(0)=1이므로 f′는 영다항식이 아니고, 따라서 f″=1/2가 항등적으로 성립한다. f′=x/2+1과 원래 항등식을 적용해 f(4)=5를 얻는 계산이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f(x) = \\{f'(x)\\}^2 - 4$",
+        "$f''(x) = \\frac{1}{2}$",
+        "$f'(x) = \\frac{1}{2}x + 1$"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_023",
+      "condition": "A",
+      "response_sha256": "602d9a5413e21ae8154657617f9d16714ee37da8ade6d8bb4787187ae99724b8",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "참조풀이의 차수 비교 대신 항등식을 미분했다. 다항식 항등식 f′(1−2f″)=0과 f′(0)=1로부터 f′가 영다항식인 경우를 배제하고 f″=1/2를 얻는 추론은 타당하다. 두 번 적분하고 원래 식으로 상수항 −3을 결정하여 f(4)=5를 정확히 구했다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f''(x) = \\frac{1}{2}$",
+        "$f'(x) = \\frac{1}{2}x + 1$",
+        "$f(4) = 4 + 4 - 3 = 5$"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_023",
+      "condition": "B",
+      "response_sha256": "6fbab1e1d2fbb63df0d6cdde63f5771a9d7f23743e6704292eb0963640df175b",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "참조풀이의 차수 비교 대신 항등식을 미분했다. 다항식 항등식 f′(1−2f″)=0과 f′(0)=1로부터 f′가 영다항식인 경우를 배제하고 f″=1/2를 얻는 추론은 타당하다. 두 번 적분하고 원래 식으로 상수항 −3을 결정하여 f(4)=5를 정확히 구했다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f''(x) = \\frac{1}{2}$",
+        "$f'(x) = \\frac{1}{2}x + 1$",
+        "$f(4) = 4 + 4 - 3 = 5$"
+      ],
+      "alternative_solution": true,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_024",
+      "condition": "C",
+      "response_sha256": "ad95d0e164be651702a3e35b5735b20abf8e1a4f13e364bab068e7e8fb5607f1",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "주어진 점은 원래 곡선 위에 있고, 도함수 3x²−6의 x=1에서의 값 −3이 접선 기울기이다. 점기울기식 y−2=−3(x−1)을 y=−3x+5로 정확히 정리했으므로 y절편 5 및 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 - 6$",
+        "$y - 2 = -3(x - 1)$",
+        "$y = -3x + 5$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_024",
+      "condition": "D",
+      "response_sha256": "38e1b0437a7bf0ccf51f7ae53a1cfcfb46dccd06b8b9c4c3f7dfa5a3bbff714e",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "주어진 점은 원래 곡선 위에 있고, 도함수 3x²−6의 x=1에서의 값 −3이 접선 기울기이다. 점기울기식 y−2=−3(x−1)을 y=−3x+5로 정확히 정리했으므로 y절편 5 및 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 - 6$",
+        "$y - 2 = -3(x - 1)$",
+        "$y = -3x + 5$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_024",
+      "condition": "B",
+      "response_sha256": "02517fe0d7434034238ed3f0f4f0c662bff9bc707151a12c6fee2117de8cca99",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수 f′(x)=3x²−6과 f′(1)=−3의 계산이 정확하다. 곡선 위의 점 (1,2)를 지나는 접선 y−2=−3(x−1)을 정리하면 y=−3x+5이므로 y절편 5 및 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 - 6$",
+        "$y - 2 = -3(x - 1)$",
+        "$y = -3x + 5$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_024",
+      "condition": "A",
+      "response_sha256": "1c17b1533a868b5f510e1bf0ae9329d65fbe15f3b7eaa0a0e895999ba91373ab",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "도함수 f′(x)=3x²−6과 f′(1)=−3의 계산이 정확하다. 곡선 위의 점 (1,2)를 지나는 접선 y−2=−3(x−1)을 정리하면 y=−3x+5이므로 y절편 5 및 선택지 ⑤가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 - 6$",
+        "$y - 2 = -3(x - 1)$",
+        "$y = -3x + 5$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_025",
+      "condition": "D",
+      "response_sha256": "61d75b75f13f04922590f87a5e2e07917c598cc544712e0584630807029e1d3a",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "점 (1,5)가 곡선 위에 있음을 원래 식으로 확인할 수 있고, 도함수 3x²−10x+3의 x=1에서의 값은 −4이다. 점기울기식 y−5=−4(x−1)을 y=−4x+9로 정확히 정리했으므로 y절편 9가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 - 10x + 3$",
+        "$y - 5 = -4(x - 1)$",
+        "$y = -4x + 9$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_025",
+      "condition": "A",
+      "response_sha256": "a2509206d848519ddd0d77208783453ee97f964c7f297be8f5e20ce975150ee5",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "점 (1,5)가 곡선 위에 있음을 원래 식으로 확인할 수 있고, 도함수 3x²−10x+3의 x=1에서의 값은 −4이다. 점기울기식 y−5=−4(x−1)을 y=−4x+9로 정확히 정리했으므로 y절편 9가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 - 10x + 3$",
+        "$y - 5 = -4(x - 1)$",
+        "$y = -4x + 9$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_025",
+      "condition": "B",
+      "response_sha256": "06a73573d79693a2c7ee6fcdc1e98477e9b51ab766f9706261f6dfe4875b7181",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "미분과 x=1 대입으로 접선 기울기 −4를 정확히 계산했다. 점 (1,5)를 지나는 식 y−5=−4(x−1)은 y=−4x+9이므로 x=0에서의 y값 9를 절편으로 구한 과정이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 - 10x + 3$",
+        "$y - 5 = -4(x - 1)$",
+        "$y = -4x + 9$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_025",
+      "condition": "C",
+      "response_sha256": "d40e0e5d635ffb5f1952e464c4ff63c49180252d59ddfaf790a33c67bbdd17c7",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "미분과 x=1 대입으로 접선 기울기 −4를 정확히 계산했다. 점 (1,5)를 지나는 식 y−5=−4(x−1)은 y=−4x+9이므로 x=0에서의 y값 9를 절편으로 구한 과정이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$f'(x) = 3x^2 - 10x + 3$",
+        "$y - 5 = -4(x - 1)$",
+        "$y = -4x + 9$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_027",
+      "condition": "D",
+      "response_sha256": "f3f58e86337b702f67e046cc870c71bd70aeb267774315c29cb50a5e25b3c5d8",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "기울기 조건 f′(a)=8에서 접점 후보 a=−1,3을 빠짐없이 구했다. 두 접선 y=8x+7, y=8x−25 중 양의 y절편 조건으로 첫 직선을 선택했고, x=1에서 k=15를 얻는 과정이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$(a - 3)(a + 1) = 0$",
+        "8x - 25",
+        "y = 8x + 7",
+        "$k = 8(1) + 7 = 15$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_027",
+      "condition": "A",
+      "response_sha256": "3eaaa1e272bd8b8be302cc218082a82dd3343e0e327847e6b76feeae7738bfbf",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "기울기 조건 f′(a)=8에서 접점 후보 a=−1,3을 빠짐없이 구했다. 두 접선 y=8x+7, y=8x−25 중 양의 y절편 조건으로 첫 직선을 선택했고, x=1에서 k=15를 얻는 과정이 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$(a - 3)(a + 1) = 0$",
+        "8x - 25",
+        "y = 8x + 7",
+        "$k = 8(1) + 7 = 15$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_027",
+      "condition": "C",
+      "response_sha256": "16fea7981decf59e4868757237d21d8f95e31fd9c6621550b09e576d50d78d81",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "접선의 기울기 조건을 도함수에 적용한 이차방정식의 두 근 a=−1,3이 정확하다. 두 접점의 함수값은 모두 −1이고 접선 절편은 각각 7,−25이므로 양수 조건으로 y=8x+7을 선택한다. 이 직선의 x=1에서의 값 k=15가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$(a - 3)(a + 1) = 0$",
+        "8x - 25",
+        "y = 8x + 7",
+        "$k = 8(1) + 7 = 15$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
+    },
+    {
+      "id": "diff_1_027",
+      "condition": "B",
+      "response_sha256": "2f3018e83d1280112f9f863b69e2a45cdbf3184d1a170b07d3c743b2a1135238",
+      "review_status": "AI_assisted_reviewed",
+      "math_status": "appropriate",
+      "reviewer_type": "Codex_AI_assisted_math_review",
+      "human_confirmed": false,
+      "reason": "접선의 기울기 조건을 도함수에 적용한 이차방정식의 두 근 a=−1,3이 정확하다. 두 접점의 함수값은 모두 −1이고 접선 절편은 각각 7,−25이므로 양수 조건으로 y=8x+7을 선택한다. 이 직선의 x=1에서의 값 k=15가 타당하다.",
+      "error_step": null,
+      "evidence_quotes": [
+        "$(a - 3)(a + 1) = 0$",
+        "8x - 25",
+        "y = 8x + 7",
+        "$k = 8(1) + 7 = 15$"
+      ],
+      "alternative_solution": false,
+      "review_limit": "Codex AI 보조 검토이며 사람의 확정 판정이나 형식적 증명이 아니다."
     }
   ]
 }
