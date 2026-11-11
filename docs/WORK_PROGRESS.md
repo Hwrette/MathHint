@@ -878,3 +878,11 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 관련42test는임시자료/가짜SDK검사로실제API추가0이다. 마지막비밀값검사는이번차이139파일에서API키노출0이었다. 기존연구원본/모델/원응답/선택목록삭제0,새자동생성미완료사례중trig_1_048,trig_2_001,002,004,005 페이지는모두해소·원자료HTML/로그보존확인후자동정리했다. 새case README/index는현재130사례로정합하며과거페이지는Git이력으로복구가능하다.
 - 첫자료 results/final_experiment_2/gemini_full265/README.md,정정점수 key_corrected/README.md,읽기화면 report.html,전체문항 question_comparison.csv,SDK감사 prompt_audit/,원문 responses.jsonl,미완료 state.json 이다. report/verify는저장자료만읽어API/학습을시작하지않는다.
 - 다음한도안내이후 `python -m mathhint_solver.final_experiment_2.gemini_full265 generate --condition-order ABDC --max-new-requests 80 --max-run-seconds 3600 --max-wait-seconds 120` 으로기존1009성공을skip하고C51부터이어간다. 재개전gitfetch로다른원격변경을대조하고새성공이생기면오래된QA를새화면에재사용하지않는다. 현재자동재개예약없다. 최종게시후이번작업을중단하며ABCD전체완료로표시하지않는다.
+
+
+## ABD우선 결과 최종 원격 확인 · 현재 세션 종료 — 2026-11-11T10:36:23.375523+00:00
+
+- 검증결과커밋e6e1189f68d7bc7dda53b7c054699bbbf2b02146를origin/main에일반push했고GitHub커넥터로main실제SHA가로컬HEAD와같음을확인했다. 직후작업트리clean이다. 마지막정상검증시점Git은e6e1189f68d7bc7dda53b7c054699bbbf2b02146이며이후변경은이게시확인기록뿐이다.
+- 우선요청ABD각265(795응답)는완료했다. 전체ABCD는1009/1060성공·C51미완료(실패C1+미실행C50)이므로완료로표시하지않는다.기존515성공재사용+이번494신규성공이며실제500시도에서5035/일일4291을함께보존했다. 정답·사용량·풀이검토·original/verified key·학습/테스트는각기분리한다.
+- 첫파일 https://github.com/Hwrette/MathHint/blob/main/results/final_experiment_2/gemini_full265/README.md . 정정점수 key_corrected/README.md,비교화면 report.html,원문/실행/미완료/현재검증은같은폴더에서연결한다. 로컬HTML은ZIP전체와로컬vendor자산이필요하며GitHubHTML파일페이지는실행화면이아니다.
+- 다음재시도응답안내는2026-11-12약08:00UTC(한국17:00)이며확정reset/잔여량확인이아니다. 같은ABD우선generate명령은A/B/D와기존C214를모두skip하고남은C51만이어간다.자동실행예약/대기중생성프로세스/새모델훈련/추가API호출없이이기록을별도문서커밋·일반push한뒤종료한다.
