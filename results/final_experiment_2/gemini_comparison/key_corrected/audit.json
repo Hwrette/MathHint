@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "scope": "gemini_comparison",
+  "source_csv": "results/final_experiment_2/gemini_comparison/question_comparison.csv",
+  "source_csv_blob_sha": "0eba7e6b49164a2f59782d7c72e4ceae26e145f7",
+  "correction_registry": "data/curation/answer_key_corrections.json",
+  "correction_registry_blob_sha": "b97896b90ea0be0b791ea5a79bc655d5cf89e62c",
+  "verified_correction_ids": [
+    "trig_1_010"
+  ],
+  "question_count": 80,
+  "source_mutated": false,
+  "api_requests_made": 0,
+  "method": "regrade only reviewed key-conflict IDs from saved explicit answers; original scores retained",
+  "note": "Local regeneration writes source SHA-256 and registry SHA-256; initial snapshot uses exact Git blob IDs."
+}
