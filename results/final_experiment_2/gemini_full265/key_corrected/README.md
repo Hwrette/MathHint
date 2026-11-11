@@ -1,24 +1,26 @@
 # Reviewed-key corrected Gemini scores
 
-원본 문제·해설·채점 결과·Gemini API 응답 로그 및 원래 해시는 그대로 보존했다. 확인된 정답표 오류 trig_1_010(④→②, 9/5)만 새로운 정정 기준으로 채점했다.
+Source data, original saved scores, response logs and prompt hashes remain immutable.
+Verified correction: trig_1_010 changes from ④ to ② (9/5).
+Other rows retain the existing original key; this is not independent proof for every solution.
 
-|범위|조건|채점 가능/계획|기존 정답|정정 정답|정정 정답률|
+|Split|Condition|Gradable|Original correct|Corrected correct|Corrected accuracy|
 |---|---|---:|---:|---:|---:|
-|all265|A|129/265|127|128|99.22%|
-|all265|B|129/265|127|128|99.22%|
-|all265|C|129/265|127|128|99.22%|
-|all265|D|128/265|126|127|99.22%|
-|train|A|49/185|49|49|100.00%|
-|train|B|49/185|49|49|100.00%|
-|train|C|49/185|49|49|100.00%|
-|train|D|48/185|48|48|100.00%|
-|test|A|80/80|78|79|98.75%|
-|test|B|80/80|78|79|98.75%|
-|test|C|80/80|78|79|98.75%|
-|test|D|80/80|78|79|98.75%|
+|all265|A|206|201|202|98.06%|
+|all265|B|129|127|128|99.22%|
+|all265|C|129|127|128|99.22%|
+|all265|D|128|126|127|99.22%|
+|train|A|126|123|123|97.62%|
+|train|B|49|49|49|100.00%|
+|train|C|49|49|49|100.00%|
+|train|D|48|48|48|100.00%|
+|test|A|80|78|79|98.75%|
+|test|B|80|78|79|98.75%|
+|test|C|80|78|79|98.75%|
+|test|D|80|78|79|98.75%|
 
-전체265 확장은 미완료이며 학습185·테스트80을 섞어 보여준다. 학습185의 B/C는 인샘플 예측이고 완료 집합은 무작위 표본이 아니므로 전체 성능으로 단정할 수 없다.
+The full265 run includes 185 training (in-sample) and 80 test questions.
+Pending requests are not counted as wrong. Partial completion is nonrandom.
 
-[문항별 원본·정정 결과](question_comparison.csv) · [정정 집계](summary.csv) · [정정 McNemar 대응분석](paired_comparison.csv) · [출처 기록](audit.json)
-
-재생성(새 API 호출 없음): python -m mathhint_analysis.VerifiedAnswerKey
+Files: question_comparison.csv, summary.csv, paired_comparison.csv, audit.json.
+Rebuild without API calls: python -m mathhint_analysis.VerifiedAnswerKey

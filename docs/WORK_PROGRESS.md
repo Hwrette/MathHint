@@ -793,3 +793,12 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 실제모델GETpreflight ready,새생성0이다.우선순위/기존실행/쿼터/속도/정정채점fixture26/26PASS다. policy.condition_order=ABDC를저장했고모든동일요청hash/config는그대로다. 이전515보존독립사전2587/2587PASS도확인했다.
 - 보고서표시보완은원격hook과통합중이므로첫실제구간은coregenerate(policy condition_orderABDC/max_new_requests80/max_run3600/max_wait120)를호출하고자동report콜백은생략한다. 해당80시도구간후완료된최신표시코드로root가명시적report→verify/감사→커밋·push한다. 실제생성동작/저장/제한기는기존함수와동일하다.
 - 실제시작직전보고서우선표시/쌍별완료비교보완이15/15표시testPASS로끝나자동콜백준비가됐다. 앞선core호출계획은실행하지않았고실제명령은정상CLI generate --condition-orderABDC --max-new-requests80 --max-run-seconds3600 --max-wait-seconds120 으로한다. 이전515브라우저QA는원문이력을보존하고새응답화면은미검사로명확히표시해오래된검사를새화면에재사용하지않는다.
+
+
+## ABD우선 API592응답 체크포인트 — 2026-11-11T08:40:23.406593+00:00
+
+- 66e1e83396ca19773628b94f9da9ecfbf357c118 원격게시확인후정상CLI의ABDC조건그룹순서로80실제시도를실행했다. A만77성공추가하여592/1060성공,미완료468(A59/B136/D137/C136),기존D일일중단1+새A503실패1을구분한다. trig_1_012 A는503두시도후실패로남아다음구간A중먼저재시도한다.전체누적실제SDK282(이번구간80),첫재개구간서버5033시도포함이다.
+- 현재성공592개전부직접AI보조검토(563적절/29오류의심)와SHA/원문인용을연결했다. 이번A77개는72적절/5의심이며원본해설표기오기2개도reason/별도임시summary에기록하고원문은수정하지않았다. final맞음/논리오류를별도표시하고사람확정은0이다.
+- 최신표시로report를명시재생성해검토592를동기화했고검증6300/6300PASS·독립48094/48094PASS를확인했다. 기존515success full-record/순서·curated515/원본raw516행prefix·config/1060plan불변,원본보호3518+원격추가불변9파일SHA일치,정정파생265행/12요약/18대응표도원시답에서독립재계산했다.
+- 독립감사최초18실패는새원격paired CSV에없는discordant_count열을검사기가가정한오류였다. 원격CSV/계산코드는바꾸지않고temp감사만실제두불일치셀의합으로대조하도록수정했다. 두개별셀/누락·malformed실패검사는유지했고재검사전체PASS다.
+- 원본채점·응답·요청/모델은그대로이고 key_corrected/만검증된trig_1_010정정기준으로재생성했다. 다음은현재체크포인트일반커밋·push후남은A59→B→D→C를동일80시도예산으로계속한다. report/verify에는API/학습0이다.새화면브라우저는최종완료/실제한도차단스냅샷에서검사할예정이며이전515QA이력을새응답에재사용하지않는다.

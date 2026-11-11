@@ -1,16 +1,15 @@
 {
   "schema_version": 1,
-  "scope": "gemini_full265",
   "source_csv": "results/final_experiment_2/gemini_full265/question_comparison.csv",
-  "source_csv_blob_sha": "c5566f7f011767898e5d43de42ff2c6ef3dd3f99",
+  "source_csv_sha256": "e2a3e3080d6729886ff0dbb09c8e9391868fd2a15109b798c476639a4992d3b1",
   "correction_registry": "data/curation/answer_key_corrections.json",
-  "correction_registry_blob_sha": "b97896b90ea0be0b791ea5a79bc655d5cf89e62c",
+  "correction_registry_sha256": "aff51759a2b8311dbcdecaa9a839a43f94c664cd0a34c1b465903ddb4d58213a",
   "verified_correction_ids": [
     "trig_1_010"
   ],
   "question_count": 265,
   "source_mutated": false,
   "api_requests_made": 0,
-  "method": "regrade only reviewed key-conflict IDs from saved explicit answers; original scores retained",
-  "note": "Local regeneration writes source and registry SHA-256. Initial live GitHub snapshot keeps the exact Git blob SHA IDs; 515 API responses exist, 545 not yet successful."
+  "grading_rule": "Regrade only verified key-conflict IDs from saved explicit answer; retain original score alongside corrected score",
+  "caution": "Other source keys have not been independently mathematically proved. Unfinished requests are excluded."
 }
