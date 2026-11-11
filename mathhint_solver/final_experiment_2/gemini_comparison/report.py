@@ -316,6 +316,11 @@ def run(root, output):
                "model_training_performed": False, "state": state}
     write_json(output / "metrics.json", metrics)
     _readme(output, config, state, summary, token_rows, pairs, cases, review_rows, questions)
+    # 정정표 기반 점수는 원래 API 응답·해시·역사적 채점을 수정하지 않고 별도 재생성한다.
+    if (root / "data/curation/answer_key_corrections.json").is_file():
+        from mathhint_analysis.VerifiedAnswerKey import get_registry, regrade
+        registry_path, corrections = get_registry(root)
+        regrade(root, "gemini_comparison", registry_path, corrections)
     return {"summary": summary, "question_count": len(comparisons), "case_count": len(cases),
             "review_rows": len(review_rows), "training_performed": False, "api_calls": 0}
 
