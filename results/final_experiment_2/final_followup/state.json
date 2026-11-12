@@ -1,45 +1,24 @@
 {
   "status": "partial_complete",
   "reason": "186개 반복 신원과62개 실제 요청 전문을 동결했습니다. API 환경은 별도 확인합니다.",
-  "updated_at": "2026-11-12T15:56:57.620933+00:00",
+  "updated_at": "2026-11-12T16:22:50.914459+00:00",
   "config_id": "3bdc19c64550579933bf6c3387cae72fb68cd8605a295321706a75e9260bc8be",
   "experiment_id": "final_followup_three_repeats",
   "expected_requests": 186,
-  "successful_requests": 101,
-  "completed_requests": 103,
-  "api_response_count": 103,
+  "successful_requests": 115,
+  "completed_requests": 117,
+  "api_response_count": 117,
   "incomplete_response_count": 2,
   "by_status": {
     "api_error": 5,
-    "stopped_after_attempt": 1,
-    "success": 101,
+    "success": 115,
     "truncated_response": 2
   },
-  "failed_requests": 6,
-  "saved_responses": 109,
-  "response_log_entries": 109,
-  "pending_count": 83,
+  "failed_requests": 5,
+  "saved_responses": 122,
+  "response_log_entries": 128,
+  "pending_count": 69,
   "pending_requests": [
-    {
-      "id": "trig_3_008",
-      "condition": "B",
-      "repeat": 1,
-      "request_id": "trig_3_008__B__r1",
-      "split": "train",
-      "request_sha256": "f7f7904463c1e448894b3e0932a8e99df6384a6abd110021cdfaf018d27992e5",
-      "schedule_position": 44,
-      "last_status": "api_error"
-    },
-    {
-      "id": "trig_1_047",
-      "condition": "C",
-      "repeat": 2,
-      "request_id": "trig_1_047__C__r2",
-      "split": "train",
-      "request_sha256": "ef0b8c82648a2db05f73bd6c3559fdee2aa887ad5ab3f80937e9346e992945bc",
-      "schedule_position": 75,
-      "last_status": "api_error"
-    },
     {
       "id": "trig_1_047",
       "condition": "D",
@@ -51,36 +30,6 @@
       "last_status": "api_error"
     },
     {
-      "id": "trig_2_020",
-      "condition": "A",
-      "repeat": 2,
-      "request_id": "trig_2_020__A__r2",
-      "split": "train",
-      "request_sha256": "4d418681cbc3380eaaf61d3d953bb2811b6fac4b274eb56ac77a587007a92577",
-      "schedule_position": 80,
-      "last_status": "api_error"
-    },
-    {
-      "id": "trig_1_044",
-      "condition": "E",
-      "repeat": 2,
-      "request_id": "trig_1_044__E__r2",
-      "split": "train",
-      "request_sha256": "311aa67643573f28ec45d3876a1b14c0aad9b92eab53009aea39f90521019923",
-      "schedule_position": 108,
-      "last_status": "api_error"
-    },
-    {
-      "id": "trig_1_044",
-      "condition": "F",
-      "repeat": 2,
-      "request_id": "trig_1_044__F__r2",
-      "split": "train",
-      "request_sha256": "eb3b7c6e9e4d5b059fb451738e2165dbbf7321a6ff6e9bb2a5d14b906a629961",
-      "schedule_position": 109,
-      "last_status": "stopped_after_attempt"
-    },
-    {
       "id": "trig_1_044",
       "condition": "A",
       "repeat": 2,
@@ -88,7 +37,7 @@
       "split": "train",
       "request_sha256": "0598920160a53175bdf79d094721c9f581ff971cda4d11af957e4b156e671bbd",
       "schedule_position": 110,
-      "last_status": "not_executed"
+      "last_status": "api_error"
     },
     {
       "id": "trig_1_044",
@@ -98,87 +47,7 @@
       "split": "train",
       "request_sha256": "3eb61e7e1254b8360763f03daee02e9107695be532b8b71f8524f6a03e8071ce",
       "schedule_position": 111,
-      "last_status": "not_executed"
-    },
-    {
-      "id": "trig_1_044",
-      "condition": "C",
-      "repeat": 2,
-      "request_id": "trig_1_044__C__r2",
-      "split": "train",
-      "request_sha256": "ac61ebf898563aef0a7ca472c04ff8b102cc0095fefddf3c2da6897bc2673ea9",
-      "schedule_position": 112,
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_2_039",
-      "condition": "E",
-      "repeat": 2,
-      "request_id": "diff_2_039__E__r2",
-      "split": "train",
-      "request_sha256": "02f9d8fe448fca572f6edc97a099cf50c881f915191ee93f624c52a2768c8cd1",
-      "schedule_position": 113,
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_2_039",
-      "condition": "F",
-      "repeat": 2,
-      "request_id": "diff_2_039__F__r2",
-      "split": "train",
-      "request_sha256": "0a1d3ff5b1ad0659cff3d2e03406f4afb2451cb9d23ebd79757a9f1c9e72f72e",
-      "schedule_position": 114,
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_2_039",
-      "condition": "A",
-      "repeat": 2,
-      "request_id": "diff_2_039__A__r2",
-      "split": "train",
-      "request_sha256": "afa1b44308d3ecf5cc728cf50585cb125973842a27c648b1094f81cf01516e7d",
-      "schedule_position": 115,
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_2_039",
-      "condition": "B",
-      "repeat": 2,
-      "request_id": "diff_2_039__B__r2",
-      "split": "train",
-      "request_sha256": "26862e18a6f2f39d72746b008a72058f2dc8aad87ad58fa35142aebeecee2017",
-      "schedule_position": 116,
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_2_039",
-      "condition": "C",
-      "repeat": 2,
-      "request_id": "diff_2_039__C__r2",
-      "split": "train",
-      "request_sha256": "967859c54fd25e95869475858c547f637b2bd3c5a445957cc9bcefa7c3a007b5",
-      "schedule_position": 117,
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_2_039",
-      "condition": "D",
-      "repeat": 2,
-      "request_id": "diff_2_039__D__r2",
-      "split": "train",
-      "request_sha256": "b1410ab4d521fa0033df1591ed20049c5c3d5f1bcf1557fd0a12d356433f6f77",
-      "schedule_position": 118,
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_2_004",
-      "condition": "F",
-      "repeat": 2,
-      "request_id": "diff_2_004__F__r2",
-      "split": "test",
-      "request_sha256": "567e788866a2317d4d6861794948bc1c528050882bd16d7d89681008780d235d",
-      "schedule_position": 119,
-      "last_status": "not_executed"
+      "last_status": "api_error"
     },
     {
       "id": "diff_2_004",
@@ -188,17 +57,7 @@
       "split": "test",
       "request_sha256": "ccd03cc1affbe8828cc0d55ea5285ec59129a6a05611a84bb6ddd3ac8612b3b0",
       "schedule_position": 120,
-      "last_status": "not_executed"
-    },
-    {
-      "id": "diff_2_004",
-      "condition": "B",
-      "repeat": 2,
-      "request_id": "diff_2_004__B__r2",
-      "split": "test",
-      "request_sha256": "67bd45dc6dfa287035b9bd5a49ef21cda34a0f0a3435da32f5f9d11d344de8fa",
-      "schedule_position": 121,
-      "last_status": "not_executed"
+      "last_status": "api_error"
     },
     {
       "id": "diff_2_004",
@@ -208,7 +67,7 @@
       "split": "test",
       "request_sha256": "5555c70c3a52ca297e8b7cd212acce1781fe07915b21b8d1f6afbeb2e7811f2a",
       "schedule_position": 122,
-      "last_status": "not_executed"
+      "last_status": "api_error"
     },
     {
       "id": "diff_2_004",
@@ -852,45 +711,45 @@
     }
   ],
   "pending_by_condition": {
-    "A": 17,
-    "B": 17,
-    "C": 17,
-    "D": 16,
-    "E": 8,
-    "F": 8
-  },
-  "successful_by_condition": {
-    "A": 22,
-    "B": 22,
-    "C": 22,
-    "D": 23,
-    "E": 7,
+    "A": 15,
+    "B": 14,
+    "C": 14,
+    "D": 15,
+    "E": 6,
     "F": 5
   },
+  "successful_by_condition": {
+    "A": 24,
+    "B": 25,
+    "C": 25,
+    "D": 24,
+    "E": 9,
+    "F": 8
+  },
   "completed_by_condition": {
-    "A": 22,
-    "B": 22,
-    "C": 22,
-    "D": 23,
-    "E": 7,
-    "F": 7
+    "A": 24,
+    "B": 25,
+    "C": 25,
+    "D": 24,
+    "E": 9,
+    "F": 10
   },
   "by_repeat": {
     "1": {
       "expected": 62,
-      "success": 60,
-      "completed": 61,
+      "success": 61,
+      "completed": 62,
       "incomplete": 1,
-      "failed": 1,
-      "pending": 1
+      "failed": 0,
+      "pending": 0
     },
     "2": {
       "expected": 62,
-      "success": 41,
-      "completed": 42,
+      "success": 54,
+      "completed": 55,
       "incomplete": 1,
       "failed": 5,
-      "pending": 20
+      "pending": 7
     },
     "3": {
       "expected": 62,
@@ -901,8 +760,8 @@
       "pending": 62
     }
   },
-  "new_successes": 101,
-  "new_completed_requests": 103,
+  "new_successes": 115,
+  "new_completed_requests": 117,
   "historical_reused_successes": 0,
   "reused_successes": 0,
   "safe_to_resume": true,

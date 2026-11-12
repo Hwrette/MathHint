@@ -1010,3 +1010,18 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 실제모델GET재점검ready(이연구메타데이터조회누적2)이며일일한도소진근거는없다. 일부503과ReadTimeout은실제로그로보존했다. models.get은남은프로젝트할당량을제공하지않으므로안다고주장하지않는다.
 - 새보고서에는출력감소쌍의정답/논증개선·악화·동일·미평가를분리한설명표와겹치지않는출력제한주석을반영했다. 문항별A-D/B-C비교해석은12개실제ABCD관측(각3회)이모일때만동결응답SHA와연결한case_findings로작성하며현재모두3회미완료여서검토보류다. 전체프로젝트마무리/후속학습은하지않는다.
 - 다음은이부분결과를일반커밋·push후83미수신만재개한다. 정확한명령: python -m mathhint_solver.final_experiment_2.final_followup generate --max-new-requests 120 --max-run-seconds 3600 --max-wait-seconds 120. 이시점마지막정상게시데이터커밋은33b7b5e이며새체크포인트는아래Git이력으로확인한다.
+
+
+### 117개 수신·HTTP504 전달 대기 상한 보완 — 2026-11-12T16:22:48.799200+00:00
+
+- 실제전달응답117개(정상115/출력제한2)를확보했고69개가미수신이다. 새원시자료와117AI검토는모두보존했다. 검토math45적절/72부적절,최종답65정답/50오답/2보류이며curated SHA930956db851b0d25b99726d775eea7f60d2a9848cf0bbe62bd3feb7d0fb4ee8b. 앞103검토값/순서도불변이다.
+- 일부미수신에HTTP504 DEADLINE_EXCEEDED/180초ReadTimeout이반복됐다. 설치된SDK google/genai/_api_client.py의populate_server_timeout_header가HttpOptions.timeout을X-Server-Timeout헤더에도반영함을실제소스로확인했다. 네트워크만기다리는것이아니라서버처리상한도180초였으므로수신실패를줄이기위해요청경계에서제어중단후전달대기상한만300초로늘렸다.
+- 변경은새policy.json의http_timeout_ms180000→300000및그실제관측/판단기록뿐이다. 생성SDK본문/동결config·planSHA/모델·temperature0·MINIMAL·8192/힌트/문제는그대로이며이전응답과출력제한반복은재호출하지않는다. 속도10초/6RPM/1worker,과부하재시도대기한도120초는유지한다. 이네트워크/실행시점차이를보고서한계에도표시하고각SDK캡처/응답/실행policy에실제상한을남긴다.
+- 논리적186반복과통신실패재시도의SDK총시도수는분리기록한다. 다음은117관측스냅샷/새정책/근거를검증·게시하고미수신69개만5분상한으로재개한다. 이는모델성능튜닝이나추가실험조건이아니다.
+
+
+### 117개 스냅샷 검증·새 전달 상한 게시 — 2026-11-12T16:26:32.041756+00:00
+
+- 새저장검증7053/7053PASS·독립11067/11067PASS·신규24자동testPASS다. SDK153캡처/128원시로그행/3실행을각실행의실제상한180000ms와대조했다. 새policy의미래300000ms로과거SDK/응답/실행값을고쳐쓰지않았다. 아직새300초생성호출은없다.
+- SDK google-genai3.0.0의populate_server_timeout_header를로컬AST로도확인해180000ms→X-Server-Timeout180,300000ms→300임을검증했다(네트워크/API추가0). 해당_api_client.py SHAfd8427fd79f6740eac6da047351217c66f1f06566ab0f3db82f8697be5d0a3e3. 이번전달변경/한계는각README·보고서에도명시했다.
+- 기존4773파일·동결요청/모델·입력SHA·새103검토값/순서불변,117새응답/검토모두보존했다. 모델GET재점검ready이며네트워크대기와생성하이퍼파라미터를구분한다. 새실행부터미수신69개만300초전달상한/기존생성본문/최대120SDK시도·1시간·재시도대기120초로이어간다. 마지막정상원격데이터커밋은e604612이며이117스냅샷을일반push후재개한다.

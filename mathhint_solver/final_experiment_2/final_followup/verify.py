@@ -136,6 +136,39 @@ def preservation_result(root, manifest):
             "changed_files": changed, "source_commit": manifest.get("source_commit")}
 
 
+def transport_consistency_checks(executions, captures, response_history):
+    """각 실행의 실제 전송 제한을 그 실행의 기록끼리 대조한다.
+
+    전송 대기 한도는 생성 SDK 본문과 별개다. 180초·300초 등 하나의 값을
+    과거/미래 시행 전체에 소급 강제하지 않고 실행 당시 정책을 보존한다.
+    """
+    checks = []
+    def check(name, value):
+        checks.append({"check": name, "passed": bool(value)})
+    runs = {row["execution_id"]: row for row in executions}
+    check("transport_execution_ids_are_unique", len(runs) == len(executions))
+    capture_counts = Counter((row.get("execution_id"), _key(row)) for row in captures)
+    fields = ("http_timeout_ms", "sdk_attempts")
+    for execution_id, row in runs.items():
+        transport = row.get("transport") or {}
+        timeout = transport.get("http_timeout_ms")
+        check("transport_policy_matches_execution_" + execution_id,
+              type(timeout) is int and timeout > 0 and transport.get("sdk_attempts") == 1
+              and row.get("policy", {}).get("http_timeout_ms") == timeout)
+    for index, capture in enumerate(captures):
+        run = runs.get(capture.get("execution_id"))
+        check("capture_transport_matches_its_execution_" + str(index), run is not None
+              and all(capture.get("transport", {}).get(field) == run.get("transport", {}).get(field) for field in fields))
+    for index, row in enumerate(response_history):
+        run = runs.get(row.get("execution_id"))
+        check("response_transport_matches_its_execution_" + str(index), run is not None
+              and all(row.get("transport", {}).get(field) == run.get("transport", {}).get(field) for field in fields))
+        if row.get("sdk_boundary_capture_expected", True):
+            check("response_attempt_capture_count_" + str(index),
+                  row.get("sdk_boundary_captured_attempts") == capture_counts[row.get("execution_id"), _key(row)])
+    return checks
+
+
 def _link_checks(output):
     count, broken = 0, []
     for path in Path(output).rglob("*.md"):
@@ -158,6 +191,41 @@ def _review_lookup(output):
     payload = _read(path)
     records = payload.get("records", []) if isinstance(payload, dict) else payload
     return {_key(row): row for row in records}, records
+
+
+def case_findings_checks(findings, records, *, require_complete=False):
+    """11개 A/D·B/C 종합 분석을 새 12응답에 독립 연결한다.
+
+    부분 실행에서는 이미 완성된 문항의 올바른 부분집합을 허용한다. 전체 API
+    시행이 끝나면 11문항의 실제 3회 분석이 모두 있어야 최종 검증을 통과한다.
+    보고서 생성기의 검사 함수나 과거 응답 해시는 사용하지 않는다.
+    """
+    checks = []
+    def check(name, value):
+        checks.append({"check": name, "passed": bool(value)})
+    check("case_findings_are_a_dictionary", isinstance(findings, dict))
+    if not isinstance(findings, dict):
+        return checks
+    check("case_findings_only_select_requested_error11", set(findings) <= set(ERROR_IDS))
+    if require_complete:
+        check("all186_receipts_require_all11_case_findings", set(findings) == set(ERROR_IDS))
+    received = {_key(row): row for row in records if is_received(row)}
+    for identifier, finding in findings.items():
+        name = str(identifier)
+        check("case_finding_object_" + name, isinstance(finding, dict))
+        if not isinstance(finding, dict):
+            continue
+        keys = [(identifier, condition, repeat) for condition in "ABCD" for repeat in (1, 2, 3)]
+        expected = {f"{identifier}__{condition}__r{repeat}": hashlib.sha256(
+            received[identifier, condition, repeat].get("output_text", "").encode()).hexdigest()
+                    for _, condition, repeat in keys if (identifier, condition, repeat) in received}
+        check("case_finding_12_new_response_hashes_" + name,
+              len(expected) == 12 and isinstance(finding.get("response_sha256s"), dict)
+              and finding["response_sha256s"] == expected)
+        check("case_finding_AD_BC_nonempty_" + name,
+              all(isinstance(finding.get(field), str) and finding[field].strip() for field in ("AD", "BC")))
+        check("case_finding_AI_not_human_confirmed_" + name, finding.get("human_confirmed") is False)
+    return checks
 
 
 def _scored_grade(row, review):
@@ -321,9 +389,18 @@ def run(root=None, output=None, *, save=True):
               and capture.get("request_sha256") == item.get("request_sha256")
               and capture.get("matches_frozen_prompt") is True)
         capture_keys.add(key)
+    executions = [_read(path) for path in sorted((output / "execution_runs").glob("*.json"))]
+    executions = [row for row in executions if isinstance(row, dict) and row.get("execution_id")]
+    transport_checks = transport_consistency_checks(executions, captures, history)
+    checks.extend(transport_checks)
     reviews, review_records = _review_lookup(output)
     check("unique_new_review_keys", len(reviews) == len(review_records))
     check("reviews_only_reference_new_API_received_repeats", set(reviews) <= {_key(row) for row in received})
+    review_path = output / "review/curated_reviews.json"
+    review_payload = _read(review_path) if review_path.is_file() else {}
+    findings = review_payload.get("case_findings", {}) if isinstance(review_payload, dict) else {}
+    findings_checks = case_findings_checks(findings, records, require_complete=len(received) == 186)
+    checks.extend(findings_checks)
     for row in records:
         key = _key(row)
         name = "_".join(map(str, key))
@@ -423,10 +500,18 @@ def run(root=None, output=None, *, save=True):
               "failed": sum(not c["passed"] for c in checks), "complete": all(c["passed"] for c in checks),
               "experiment_complete": len(received) == 186 and not pending,
               "review_complete": len(reviews) == len(received) and set(reviews) <= {key for key, row in latest.items() if is_received(row)},
+              "case_findings_count": len(findings) if isinstance(findings, dict) else 0,
+              "case_analysis_complete": len(received) == 186 and all(item["passed"] for item in findings_checks),
               "checks": checks, "expected_requests": 186, "successful_requests": len(successes), "pending_requests": len(pending),
               "completed_requests": len(received), "api_response_count": len(received),
               "incomplete_response_count": len(received) - len(successes),
               "preservation": preservation, "rate_audit": rate,
+              "transport_audit": {"execution_count": len(executions), "captured_attempt_count": len(captures),
+                  "response_history_count": len(history),
+                  "recorded_http_timeouts_ms": sorted({row.get("transport", {}).get("http_timeout_ms") for row in executions
+                                                        if type(row.get("transport", {}).get("http_timeout_ms")) is int}),
+                  "passed": all(item["passed"] for item in transport_checks),
+                  "scope": "Per-execution policy, actual SDK-boundary capture and response metadata agree; timeouts are not generation-body settings and old values are not rewritten."},
               "markdown_links_checked": links, "broken_links": broken_links,
               "decoded_png_count": len(images), "invalid_images": image_errors,
               "actual_browser_validation": browser, "model_training_performed": False,

@@ -10,7 +10,7 @@ import unittest
 from mathhint_solver.final_experiment_2.final_followup.verify import (
     CONTROL_IDS, ERROR_IDS, OLD_HEADER, NEUTRAL_HEADER, USAGE_FIELDS,
     _scored_grade, _summary_checks, expected_message, plan_checks,
-    preservation_result, token_statistics,
+    preservation_result, token_statistics, case_findings_checks, transport_consistency_checks,
 )
 
 
@@ -28,6 +28,46 @@ def fixture_plan():
 
 
 class FollowupValidationTests(unittest.TestCase):
+    def test_transport_timeouts_bind_per_execution_without_rewriting_old_attempts(self):
+        runs = [{"execution_id": name, "policy": {"http_timeout_ms": timeout},
+                 "transport": {"http_timeout_ms": timeout, "sdk_attempts": 1}}
+                for name, timeout in (("old180s", 180000), ("new300s", 300000))]
+        captures, responses = [], []
+        for run in runs:
+            row = {"id": "q", "condition": "A", "repeat": 1,
+                   "execution_id": run["execution_id"], "transport": dict(run["transport"])}
+            captures.append(dict(row))
+            responses.append({**row, "status": "api_error" if run["execution_id"] == "old180s" else "success",
+                              "sdk_boundary_captured_attempts": 1, "sdk_boundary_capture_expected": True})
+        self.assertTrue(all(check["passed"] for check in transport_consistency_checks(runs, captures, responses)))
+        # 새 대기 한도를 과거 SDK 시도에 소급하면 그 시도만의 증거 불일치를 잡는다.
+        captures[0]["transport"] = dict(runs[1]["transport"])
+        failures = [check for check in transport_consistency_checks(runs, captures, responses) if not check["passed"]]
+        self.assertEqual(len(failures), 1)
+        self.assertIn("capture_transport_matches", failures[0]["check"])
+
+    def test_final186_requires11_fresh_hash_bound_AD_BC_analyses(self):
+        _, plan = fixture_plan()
+        records = [{**row, "status": "success", "output_text": row["request_id"] + " 실제 새 풀이"} for row in plan]
+        received = {(row["id"], row["condition"], row["repeat"]): row for row in records}
+        findings = {identifier: {
+            "AD": "A와 D의 세 번 새 풀이를 실제 오류 단계와 자기수정 여부로 비교했다.",
+            "BC": "B와 C의 세 번 새 풀이와 예측 토큰의 차이를 비교했다.",
+            "human_confirmed": False,
+            "response_sha256s": {f"{identifier}__{condition}__r{repeat}": hashlib.sha256(
+                received[identifier, condition, repeat]["output_text"].encode()).hexdigest()
+                for condition in "ABCD" for repeat in (1, 2, 3)}} for identifier in ERROR_IDS}
+        self.assertTrue(all(check["passed"] for check in case_findings_checks(findings, records, require_complete=True)))
+        subset = {ERROR_IDS[0]: findings[ERROR_IDS[0]]}
+        self.assertTrue(all(check["passed"] for check in case_findings_checks(subset, records, require_complete=False)))
+        self.assertFalse(all(check["passed"] for check in case_findings_checks(subset, records, require_complete=True)))
+        self.assertFalse(all(check["passed"] for check in case_findings_checks({}, records, require_complete=True)))
+        # 새 응답 한 개라도 달라지면 이전 종합문을 그대로 재사용할 수 없다.
+        received[ERROR_IDS[0], "A", 1]["output_text"] += " 변경됨"
+        failures = [check for check in case_findings_checks(findings, records, require_complete=True) if not check["passed"]]
+        self.assertEqual(len(failures), 1)
+        self.assertIn("12_new_response_hashes", failures[0]["check"])
+
     def test_repeated_identical_prompt_is186_distinct_calls(self):
         config, plan = fixture_plan()
         self.assertEqual(len({r["request_sha256"] for r in plan}), 62)

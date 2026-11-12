@@ -8,8 +8,19 @@
   "max_run_seconds": 3600,
   "max_wait_seconds": 120,
   "max_attempts": 2,
-  "http_timeout_ms": 180000,
+  "http_timeout_ms": 300000,
   "provider_limits_confirmed": false,
   "limits_note": "conservative local caps shared with old80/full265 attempts; provider quotas/remaining budget not inferred",
-  "user_authorized_additional_requests": 186
+  "user_authorized_additional_requests": 186,
+  "transport_policy_revisions": [
+    {
+      "recorded_at": "2026-11-12T16:22:48.796887+00:00",
+      "after_received_trials": 117,
+      "previous_http_timeout_ms": 180000,
+      "http_timeout_ms": 300000,
+      "reason": "Observed HTTP504 DEADLINE_EXCEEDED and 180s ReadTimeout. Installed Google SDK also sets X-Server-Timeout from HttpOptions.timeout. Increase bounded delivery deadline only; no model/prompt/temperature/thinking/output setting change and no reroll of any received trial.",
+      "max_rate_limit_wait_seconds": 120,
+      "frozen_generation_inputs_changed": false
+    }
+  ]
 }

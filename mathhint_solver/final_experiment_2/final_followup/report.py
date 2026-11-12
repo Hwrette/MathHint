@@ -604,6 +604,16 @@ def _write_readmes(output, config, state, rows, control, error, differences, fig
     protocol_note = ("동결된 config.json의 cache_policy에는 관측 전의 ‘success’ 표현이 해시 보존을 위해 남아 있다. "
         "첫 잘림 응답을 관측한 뒤 반복 슬롯을 다시 뽑는 선택 편향을 막도록 **실제 API 응답을 받은 슬롯은 정상 종료 여부와 관계없이 한 번의 관측으로 종료**하는 정책을 명시했다. "
         "현재 완료 수와 미수신 목록은 state.json의 completed_requests/api_response_count를 기준으로 읽는다. 모델·프롬프트·출력 상한·토큰은 바꾸지 않았다.")
+    policy_path = Path(output) / "policy.json"
+    transport_revisions = json.loads(policy_path.read_text(encoding="utf-8")).get("transport_policy_revisions", []) if policy_path.is_file() else []
+    if transport_revisions:
+        change = transport_revisions[-1]
+        protocol_note += ("\n\n통신 정책 변경: "
+            f"{change['after_received_trials']}개 응답을 보존한 뒤 HTTP/서버 응답 대기 상한을 "
+            f"{change['previous_http_timeout_ms']/1000:g}초에서 {change['http_timeout_ms']/1000:g}초로 늘렸다. "
+            "실제 HTTP504 및 읽기 타임아웃에 따른 전달 대기 변경이며, SDK의 X-Server-Timeout에도 반영된다. "
+            "문제·힌트·모델·temperature·thinking·최대 출력8192는 그대로이고 이미 받은 정상·출력 제한 관측을 다시 뽑지 않았다. "
+            "요청별 대기 상한은 SDK 캡처·응답·실행 이력에 따로 남긴다. 이 실행 시점/통신 정책 차이도 작은 반복 실험의 한계로 고려한다.")
     common = ["3회 표본 SD는 **ddof=1**이다. 사용량이 제공된 API 수신 응답이0개면 평균·최소·최대·SD는 —, 1개면 SD는 —다. 미제공은 null/—이며0으로 채우지 않는다.",
               "**출력 제한(MAX_TOKENS)·차단·빈 응답도 API 응답을 받은 한 번의 반복이다. 같은 반복을 다시 뽑지 않는다.** 잘린 응답의 실제 토큰은 사용량 평균에 포함하지만, 최종 답이 완성되지 않았다면 채점 보류로 남긴다. 설정된 토큰 상한을 실제 사용량 대신 넣지 않는다.",
               "정답 횟수와 풀이 타당 가능 횟수는 별개다. 검토 보류를 오류로 간주하지 않으며 AI 보조 검토는 사람의 확정이나 형식적 증명이 아니다. 자기 수정 횟수는 일부 중간 오류의 명시적 수정을 뜻하며, 다른 오류가 남아 최종 오답·풀이 부적절과 함께 나타날 수도 있다.",
