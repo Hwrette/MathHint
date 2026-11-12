@@ -1,12 +1,12 @@
 {
-  "verified_at": "2026-11-12T16:23:54.395364+00:00",
-  "passed": 7053,
+  "verified_at": "2026-11-12T17:16:47.862515+00:00",
+  "passed": 8028,
   "failed": 0,
   "complete": true,
-  "experiment_complete": false,
+  "experiment_complete": true,
   "review_complete": true,
-  "case_findings_count": 0,
-  "case_analysis_complete": false,
+  "case_findings_count": 11,
+  "case_analysis_complete": true,
   "checks": [
     {
       "check": "186_unique_id_condition_repeat_keys",
@@ -4417,6 +4417,346 @@
       "passed": true
     },
     {
+      "check": "sdk_capture_153",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_154",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_155",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_156",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_157",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_158",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_159",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_160",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_161",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_162",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_163",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_164",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_165",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_166",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_167",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_168",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_169",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_170",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_171",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_172",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_173",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_174",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_175",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_176",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_177",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_178",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_179",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_180",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_181",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_182",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_183",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_184",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_185",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_186",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_187",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_188",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_189",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_190",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_191",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_192",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_193",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_194",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_195",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_196",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_197",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_198",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_199",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_200",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_201",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_202",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_203",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_204",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_205",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_206",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_207",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_208",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_209",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_210",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_211",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_212",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_213",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_214",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_215",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_216",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_217",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_218",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_219",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_220",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_221",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_222",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_223",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_224",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_225",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_226",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_227",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_228",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_229",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_230",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_231",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_232",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_233",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_234",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_235",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_236",
+      "passed": true
+    },
+    {
+      "check": "sdk_capture_237",
+      "passed": true
+    },
+    {
       "check": "transport_execution_ids_are_unique",
       "passed": true
     },
@@ -4430,6 +4770,14 @@
     },
     {
       "check": "transport_policy_matches_execution_2026-11-12T160009_465125+0000",
+      "passed": true
+    },
+    {
+      "check": "transport_policy_matches_execution_2026-11-12T162643_532222+0000",
+      "passed": true
+    },
+    {
+      "check": "transport_policy_matches_execution_2026-11-12T170801_357914+0000",
       "passed": true
     },
     {
@@ -5042,6 +5390,346 @@
     },
     {
       "check": "capture_transport_matches_its_execution_152",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_153",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_154",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_155",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_156",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_157",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_158",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_159",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_160",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_161",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_162",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_163",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_164",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_165",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_166",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_167",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_168",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_169",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_170",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_171",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_172",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_173",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_174",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_175",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_176",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_177",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_178",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_179",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_180",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_181",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_182",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_183",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_184",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_185",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_186",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_187",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_188",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_189",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_190",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_191",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_192",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_193",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_194",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_195",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_196",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_197",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_198",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_199",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_200",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_201",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_202",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_203",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_204",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_205",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_206",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_207",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_208",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_209",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_210",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_211",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_212",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_213",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_214",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_215",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_216",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_217",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_218",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_219",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_220",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_221",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_222",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_223",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_224",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_225",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_226",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_227",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_228",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_229",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_230",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_231",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_232",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_233",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_234",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_235",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_236",
+      "passed": true
+    },
+    {
+      "check": "capture_transport_matches_its_execution_237",
       "passed": true
     },
     {
@@ -6069,6 +6757,582 @@
       "passed": true
     },
     {
+      "check": "response_transport_matches_its_execution_128",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_128",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_129",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_129",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_130",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_130",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_131",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_131",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_132",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_132",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_133",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_133",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_134",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_134",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_135",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_135",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_136",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_136",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_137",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_137",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_138",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_138",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_139",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_139",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_140",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_140",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_141",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_141",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_142",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_142",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_143",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_143",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_144",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_144",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_145",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_145",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_146",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_146",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_147",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_147",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_148",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_148",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_149",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_149",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_150",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_150",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_151",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_151",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_152",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_152",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_153",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_153",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_154",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_154",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_155",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_155",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_156",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_156",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_157",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_157",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_158",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_158",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_159",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_159",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_160",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_160",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_161",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_161",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_162",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_162",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_163",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_163",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_164",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_164",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_165",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_165",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_166",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_166",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_167",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_167",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_168",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_168",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_169",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_169",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_170",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_170",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_171",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_171",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_172",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_172",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_173",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_173",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_174",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_174",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_175",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_175",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_176",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_176",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_177",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_177",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_178",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_178",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_179",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_179",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_180",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_180",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_181",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_181",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_182",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_182",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_183",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_183",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_184",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_184",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_185",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_185",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_186",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_186",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_187",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_187",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_188",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_188",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_189",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_189",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_190",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_190",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_191",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_191",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_192",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_192",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_193",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_193",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_194",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_194",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_195",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_195",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_196",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_196",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_197",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_197",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_198",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_198",
+      "passed": true
+    },
+    {
+      "check": "response_transport_matches_its_execution_199",
+      "passed": true
+    },
+    {
+      "check": "response_attempt_capture_count_199",
+      "passed": true
+    },
+    {
       "check": "unique_new_review_keys",
       "passed": true
     },
@@ -6082,6 +7346,186 @@
     },
     {
       "check": "case_findings_only_select_requested_error11",
+      "passed": true
+    },
+    {
+      "check": "all186_receipts_require_all11_case_findings",
+      "passed": true
+    },
+    {
+      "check": "case_finding_object_trig_3_008",
+      "passed": true
+    },
+    {
+      "check": "case_finding_12_new_response_hashes_trig_3_008",
+      "passed": true
+    },
+    {
+      "check": "case_finding_AD_BC_nonempty_trig_3_008",
+      "passed": true
+    },
+    {
+      "check": "case_finding_AI_not_human_confirmed_trig_3_008",
+      "passed": true
+    },
+    {
+      "check": "case_finding_object_trig_3_033",
+      "passed": true
+    },
+    {
+      "check": "case_finding_12_new_response_hashes_trig_3_033",
+      "passed": true
+    },
+    {
+      "check": "case_finding_AD_BC_nonempty_trig_3_033",
+      "passed": true
+    },
+    {
+      "check": "case_finding_AI_not_human_confirmed_trig_3_033",
+      "passed": true
+    },
+    {
+      "check": "case_finding_object_trig_3_036",
+      "passed": true
+    },
+    {
+      "check": "case_finding_12_new_response_hashes_trig_3_036",
+      "passed": true
+    },
+    {
+      "check": "case_finding_AD_BC_nonempty_trig_3_036",
+      "passed": true
+    },
+    {
+      "check": "case_finding_AI_not_human_confirmed_trig_3_036",
+      "passed": true
+    },
+    {
+      "check": "case_finding_object_trig_2_022",
+      "passed": true
+    },
+    {
+      "check": "case_finding_12_new_response_hashes_trig_2_022",
+      "passed": true
+    },
+    {
+      "check": "case_finding_AD_BC_nonempty_trig_2_022",
+      "passed": true
+    },
+    {
+      "check": "case_finding_AI_not_human_confirmed_trig_2_022",
+      "passed": true
+    },
+    {
+      "check": "case_finding_object_trig_3_034",
+      "passed": true
+    },
+    {
+      "check": "case_finding_12_new_response_hashes_trig_3_034",
+      "passed": true
+    },
+    {
+      "check": "case_finding_AD_BC_nonempty_trig_3_034",
+      "passed": true
+    },
+    {
+      "check": "case_finding_AI_not_human_confirmed_trig_3_034",
+      "passed": true
+    },
+    {
+      "check": "case_finding_object_trig_1_040",
+      "passed": true
+    },
+    {
+      "check": "case_finding_12_new_response_hashes_trig_1_040",
+      "passed": true
+    },
+    {
+      "check": "case_finding_AD_BC_nonempty_trig_1_040",
+      "passed": true
+    },
+    {
+      "check": "case_finding_AI_not_human_confirmed_trig_1_040",
+      "passed": true
+    },
+    {
+      "check": "case_finding_object_trig_1_044",
+      "passed": true
+    },
+    {
+      "check": "case_finding_12_new_response_hashes_trig_1_044",
+      "passed": true
+    },
+    {
+      "check": "case_finding_AD_BC_nonempty_trig_1_044",
+      "passed": true
+    },
+    {
+      "check": "case_finding_AI_not_human_confirmed_trig_1_044",
+      "passed": true
+    },
+    {
+      "check": "case_finding_object_trig_1_047",
+      "passed": true
+    },
+    {
+      "check": "case_finding_12_new_response_hashes_trig_1_047",
+      "passed": true
+    },
+    {
+      "check": "case_finding_AD_BC_nonempty_trig_1_047",
+      "passed": true
+    },
+    {
+      "check": "case_finding_AI_not_human_confirmed_trig_1_047",
+      "passed": true
+    },
+    {
+      "check": "case_finding_object_trig_2_020",
+      "passed": true
+    },
+    {
+      "check": "case_finding_12_new_response_hashes_trig_2_020",
+      "passed": true
+    },
+    {
+      "check": "case_finding_AD_BC_nonempty_trig_2_020",
+      "passed": true
+    },
+    {
+      "check": "case_finding_AI_not_human_confirmed_trig_2_020",
+      "passed": true
+    },
+    {
+      "check": "case_finding_object_diff_2_039",
+      "passed": true
+    },
+    {
+      "check": "case_finding_12_new_response_hashes_diff_2_039",
+      "passed": true
+    },
+    {
+      "check": "case_finding_AD_BC_nonempty_diff_2_039",
+      "passed": true
+    },
+    {
+      "check": "case_finding_AI_not_human_confirmed_diff_2_039",
+      "passed": true
+    },
+    {
+      "check": "case_finding_object_diff_3_045",
+      "passed": true
+    },
+    {
+      "check": "case_finding_12_new_response_hashes_diff_3_045",
+      "passed": true
+    },
+    {
+      "check": "case_finding_AD_BC_nonempty_diff_3_045",
+      "passed": true
+    },
+    {
+      "check": "case_finding_AI_not_human_confirmed_diff_3_045",
       "passed": true
     },
     {
@@ -8797,6 +10241,34 @@
       "passed": true
     },
     {
+      "check": "usage_matches_API_trig_1_047_D_2",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_047_D_2",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_047_D_2",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_047_D_2",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_047_D_2",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_047_D_2",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_047_D_2",
+      "passed": true
+    },
+    {
       "check": "response_identity_trig_2_020_B_2",
       "passed": true
     },
@@ -9993,11 +11465,71 @@
       "passed": true
     },
     {
+      "check": "usage_matches_API_trig_1_044_A_2",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_044_A_2",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_044_A_2",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_044_A_2",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_044_A_2",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_044_A_2",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_044_A_2",
+      "passed": true
+    },
+    {
       "check": "response_identity_trig_1_044_B_2",
       "passed": true
     },
     {
       "check": "usage_types_trig_1_044_B_2",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_1_044_B_2",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_044_B_2",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_044_B_2",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_044_B_2",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_044_B_2",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_044_B_2",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_044_B_2",
+      "passed": true
+    },
+    {
+      "check": "parser_abstention_review_has_reason_trig_1_044_B_2",
       "passed": true
     },
     {
@@ -10297,6 +11829,34 @@
       "passed": true
     },
     {
+      "check": "usage_matches_API_diff_2_004_A_2",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_diff_2_004_A_2",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_diff_2_004_A_2",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_diff_2_004_A_2",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_diff_2_004_A_2",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_diff_2_004_A_2",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_diff_2_004_A_2",
+      "passed": true
+    },
+    {
       "check": "response_identity_diff_2_004_B_2",
       "passed": true
     },
@@ -10338,6 +11898,2342 @@
     },
     {
       "check": "usage_types_diff_2_004_C_2",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_diff_2_004_C_2",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_diff_2_004_C_2",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_diff_2_004_C_2",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_diff_2_004_C_2",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_diff_2_004_C_2",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_diff_2_004_C_2",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_diff_2_004_C_2",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_004_D_2",
+      "passed": true
+    },
+    {
+      "check": "usage_types_diff_2_004_D_2",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_diff_2_004_D_2",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_diff_2_004_D_2",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_diff_2_004_D_2",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_diff_2_004_D_2",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_diff_2_004_D_2",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_diff_2_004_D_2",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_diff_2_004_D_2",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_004_E_2",
+      "passed": true
+    },
+    {
+      "check": "usage_types_diff_2_004_E_2",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_diff_2_004_E_2",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_diff_2_004_E_2",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_diff_2_004_E_2",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_diff_2_004_E_2",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_diff_2_004_E_2",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_diff_2_004_E_2",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_diff_2_004_E_2",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_008_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_3_008_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_3_008_A_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_3_008_A_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_3_008_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_3_008_A_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_3_008_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_3_008_A_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_3_008_A_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_008_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_3_008_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_3_008_B_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_3_008_B_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_3_008_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_3_008_B_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_3_008_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_3_008_B_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_3_008_B_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_008_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_3_008_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_3_008_C_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_3_008_C_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_3_008_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_3_008_C_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_3_008_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_3_008_C_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_3_008_C_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_008_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_3_008_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_3_008_D_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_3_008_D_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_3_008_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_3_008_D_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_3_008_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_3_008_D_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_3_008_D_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_033_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_3_033_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_3_033_B_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_3_033_B_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_3_033_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_3_033_B_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_3_033_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_3_033_B_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_3_033_B_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_033_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_3_033_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_3_033_C_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_3_033_C_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_3_033_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_3_033_C_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_3_033_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_3_033_C_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_3_033_C_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_033_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_3_033_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_3_033_D_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_3_033_D_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_3_033_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_3_033_D_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_3_033_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_3_033_D_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_3_033_D_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_033_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_3_033_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_3_033_A_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_3_033_A_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_3_033_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_3_033_A_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_3_033_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_3_033_A_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_3_033_A_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_036_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_3_036_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_3_036_C_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_3_036_C_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_3_036_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_3_036_C_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_3_036_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_3_036_C_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_3_036_C_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_036_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_3_036_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_3_036_D_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_3_036_D_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_3_036_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_3_036_D_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_3_036_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_3_036_D_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_3_036_D_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_036_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_3_036_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_3_036_A_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_3_036_A_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_3_036_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_3_036_A_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_3_036_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_3_036_A_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_3_036_A_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_036_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_3_036_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_3_036_B_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_3_036_B_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_3_036_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_3_036_B_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_3_036_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_3_036_B_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_3_036_B_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_022_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_2_022_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_2_022_D_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_2_022_D_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_2_022_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_2_022_D_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_2_022_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_2_022_D_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_2_022_D_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_022_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_2_022_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_2_022_A_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_2_022_A_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_2_022_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_2_022_A_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_2_022_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_2_022_A_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_2_022_A_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_022_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_2_022_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_2_022_B_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_2_022_B_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_2_022_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_2_022_B_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_2_022_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_2_022_B_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_2_022_B_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_022_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_2_022_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_2_022_C_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_2_022_C_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_2_022_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_2_022_C_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_2_022_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_2_022_C_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_2_022_C_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_034_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_3_034_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_3_034_A_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_3_034_A_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_3_034_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_3_034_A_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_3_034_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_3_034_A_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_3_034_A_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_034_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_3_034_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_3_034_B_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_3_034_B_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_3_034_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_3_034_B_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_3_034_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_3_034_B_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_3_034_B_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_034_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_3_034_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_3_034_C_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_3_034_C_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_3_034_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_3_034_C_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_3_034_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_3_034_C_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_3_034_C_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_3_034_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_3_034_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_3_034_D_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_3_034_D_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_3_034_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_3_034_D_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_3_034_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_3_034_D_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_3_034_D_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_040_E_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_1_040_E_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_1_040_E_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_040_E_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_040_E_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_040_E_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_040_E_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_040_E_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_040_E_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_040_F_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_1_040_F_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_1_040_F_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_040_F_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_040_F_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_040_F_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_040_F_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_040_F_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_040_F_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_040_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_1_040_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_1_040_A_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_040_A_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_040_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_040_A_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_040_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_040_A_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_040_A_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_040_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_1_040_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_1_040_B_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_040_B_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_040_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_040_B_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_040_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_040_B_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_040_B_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_040_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_1_040_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_1_040_C_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_040_C_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_040_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_040_C_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_040_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_040_C_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_040_C_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_040_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_1_040_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_1_040_D_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_040_D_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_040_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_040_D_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_040_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_040_D_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_040_D_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_044_F_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_1_044_F_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_1_044_F_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_044_F_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_044_F_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_044_F_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_044_F_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_044_F_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_044_F_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_044_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_1_044_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_1_044_A_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_044_A_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_044_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_044_A_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_044_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_044_A_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_044_A_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_044_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_1_044_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_1_044_B_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_044_B_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_044_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_044_B_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_044_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_044_B_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_044_B_3",
+      "passed": true
+    },
+    {
+      "check": "parser_abstention_review_has_reason_trig_1_044_B_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_044_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_1_044_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_1_044_C_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_044_C_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_044_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_044_C_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_044_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_044_C_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_044_C_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_044_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_1_044_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_1_044_D_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_044_D_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_044_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_044_D_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_044_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_044_D_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_044_D_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_044_E_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_1_044_E_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_1_044_E_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_044_E_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_044_E_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_044_E_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_044_E_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_044_E_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_044_E_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_039_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_diff_2_039_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_diff_2_039_A_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_diff_2_039_A_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_diff_2_039_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_diff_2_039_A_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_diff_2_039_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_diff_2_039_A_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_diff_2_039_A_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_039_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_diff_2_039_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_diff_2_039_B_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_diff_2_039_B_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_diff_2_039_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_diff_2_039_B_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_diff_2_039_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_diff_2_039_B_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_diff_2_039_B_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_039_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_diff_2_039_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_diff_2_039_C_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_diff_2_039_C_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_diff_2_039_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_diff_2_039_C_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_diff_2_039_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_diff_2_039_C_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_diff_2_039_C_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_039_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_diff_2_039_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_diff_2_039_D_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_diff_2_039_D_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_diff_2_039_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_diff_2_039_D_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_diff_2_039_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_diff_2_039_D_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_diff_2_039_D_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_039_E_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_diff_2_039_E_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_diff_2_039_E_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_diff_2_039_E_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_diff_2_039_E_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_diff_2_039_E_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_diff_2_039_E_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_diff_2_039_E_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_diff_2_039_E_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_039_F_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_diff_2_039_F_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_diff_2_039_F_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_diff_2_039_F_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_diff_2_039_F_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_diff_2_039_F_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_diff_2_039_F_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_diff_2_039_F_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_diff_2_039_F_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_004_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_diff_2_004_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_diff_2_004_B_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_diff_2_004_B_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_diff_2_004_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_diff_2_004_B_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_diff_2_004_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_diff_2_004_B_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_diff_2_004_B_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_004_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_diff_2_004_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_diff_2_004_C_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_diff_2_004_C_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_diff_2_004_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_diff_2_004_C_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_diff_2_004_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_diff_2_004_C_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_diff_2_004_C_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_004_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_diff_2_004_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_diff_2_004_D_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_diff_2_004_D_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_diff_2_004_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_diff_2_004_D_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_diff_2_004_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_diff_2_004_D_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_diff_2_004_D_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_004_E_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_diff_2_004_E_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_diff_2_004_E_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_diff_2_004_E_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_diff_2_004_E_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_diff_2_004_E_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_diff_2_004_E_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_diff_2_004_E_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_diff_2_004_E_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_004_F_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_diff_2_004_F_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_diff_2_004_F_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_diff_2_004_F_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_diff_2_004_F_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_diff_2_004_F_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_diff_2_004_F_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_diff_2_004_F_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_diff_2_004_F_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_2_004_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_diff_2_004_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_diff_2_004_A_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_diff_2_004_A_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_diff_2_004_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_diff_2_004_A_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_diff_2_004_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_diff_2_004_A_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_diff_2_004_A_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_043_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_1_043_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_1_043_C_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_043_C_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_043_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_043_C_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_043_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_043_C_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_043_C_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_043_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_1_043_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_1_043_D_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_043_D_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_043_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_043_D_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_043_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_043_D_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_043_D_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_043_E_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_1_043_E_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_1_043_E_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_043_E_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_043_E_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_043_E_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_043_E_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_043_E_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_043_E_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_043_F_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_1_043_F_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_1_043_F_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_043_F_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_043_F_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_043_F_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_043_F_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_043_F_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_043_F_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_043_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_1_043_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_1_043_A_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_043_A_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_043_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_043_A_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_043_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_043_A_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_043_A_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_043_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_1_043_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_1_043_B_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_043_B_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_043_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_043_B_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_043_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_043_B_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_043_B_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_3_045_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_diff_3_045_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_diff_3_045_B_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_diff_3_045_B_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_diff_3_045_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_diff_3_045_B_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_diff_3_045_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_diff_3_045_B_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_diff_3_045_B_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_3_045_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_diff_3_045_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_diff_3_045_C_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_diff_3_045_C_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_diff_3_045_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_diff_3_045_C_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_diff_3_045_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_diff_3_045_C_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_diff_3_045_C_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_3_045_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_diff_3_045_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_diff_3_045_D_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_diff_3_045_D_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_diff_3_045_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_diff_3_045_D_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_diff_3_045_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_diff_3_045_D_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_diff_3_045_D_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_diff_3_045_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_diff_3_045_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_diff_3_045_A_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_diff_3_045_A_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_diff_3_045_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_diff_3_045_A_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_diff_3_045_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_diff_3_045_A_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_diff_3_045_A_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_047_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_1_047_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_1_047_C_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_047_C_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_047_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_047_C_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_047_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_047_C_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_047_C_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_047_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_1_047_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_1_047_D_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_047_D_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_047_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_047_D_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_047_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_047_D_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_047_D_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_047_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_1_047_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_1_047_A_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_047_A_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_047_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_047_A_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_047_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_047_A_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_047_A_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_1_047_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_1_047_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_1_047_B_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_1_047_B_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_1_047_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_1_047_B_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_1_047_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_1_047_B_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_1_047_B_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_020_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_2_020_D_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_2_020_D_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_2_020_D_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_2_020_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_2_020_D_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_2_020_D_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_2_020_D_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_2_020_D_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_020_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_2_020_A_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_2_020_A_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_2_020_A_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_2_020_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_2_020_A_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_2_020_A_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_2_020_A_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_2_020_A_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_020_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_2_020_B_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_2_020_B_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_2_020_B_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_2_020_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_2_020_B_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_2_020_B_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_2_020_B_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_2_020_B_3",
+      "passed": true
+    },
+    {
+      "check": "response_identity_trig_2_020_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_types_trig_2_020_C_3",
+      "passed": true
+    },
+    {
+      "check": "usage_matches_API_trig_2_020_C_3",
+      "passed": true
+    },
+    {
+      "check": "new_actual_call_trig_2_020_C_3",
+      "passed": true
+    },
+    {
+      "check": "saved_automatic_grade_trig_2_020_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_hash_quotes_trig_2_020_C_3",
+      "passed": true
+    },
+    {
+      "check": "AI_review_not_human_confirmed_trig_2_020_C_3",
+      "passed": true
+    },
+    {
+      "check": "review_outcomes_have_explicit_types_trig_2_020_C_3",
+      "passed": true
+    },
+    {
+      "check": "math_error_has_concrete_evidence_trig_2_020_C_3",
       "passed": true
     },
     {
@@ -28217,16 +32113,20 @@
       "passed": true
     },
     {
+      "check": "browser_evidence_matches_frozen_HTML_assets",
+      "passed": true
+    },
+    {
       "check": "verify_does_not_mutate_inputs_responses_or_reports",
       "passed": true
     }
   ],
   "expected_requests": 186,
-  "successful_requests": 115,
-  "pending_requests": 69,
-  "completed_requests": 117,
-  "api_response_count": 117,
-  "incomplete_response_count": 2,
+  "successful_requests": 183,
+  "pending_requests": 0,
+  "completed_requests": 186,
+  "api_response_count": 186,
+  "incomplete_response_count": 3,
   "preservation": {
     "passed": true,
     "protected_files": 4773,
@@ -28265,16 +32165,16 @@
       }
     ],
     "passed": true,
-    "new_request_start_count": 153,
-    "valid_new_request_start_count": 153,
-    "new_unique_request_start_count": 153,
-    "shared_request_start_log_count": 1184,
-    "shared_request_start_count": 1184,
+    "new_request_start_count": 238,
+    "valid_new_request_start_count": 238,
+    "new_unique_request_start_count": 238,
+    "shared_request_start_log_count": 1269,
+    "shared_request_start_count": 1269,
     "minimum_new_start_interval_seconds": 9.999627828598022,
     "maximum_rolling_start_counts_at_new_attempts": {
       "60": 6,
-      "3600": 101,
-      "86400": 206
+      "3600": 102,
+      "86400": 291
     },
     "local_policy": {
       "interval_seconds": 10.0,
@@ -28290,11 +32190,12 @@
     "model_get_note": "비생성 models.get 조회는 별도 로그이며 생성 request_start 속도 집계에 포함하지 않는다."
   },
   "transport_audit": {
-    "execution_count": 3,
-    "captured_attempt_count": 153,
-    "response_history_count": 128,
+    "execution_count": 5,
+    "captured_attempt_count": 238,
+    "response_history_count": 200,
     "recorded_http_timeouts_ms": [
-      180000
+      180000,
+      300000
     ],
     "passed": true,
     "scope": "Per-execution policy, actual SDK-boundary capture and response metadata agree; timeouts are not generation-body settings and old values are not rewritten."
@@ -28304,7 +32205,1473 @@
   "decoded_png_count": 6,
   "invalid_images": [],
   "actual_browser_validation": {
-    "performed": false
+    "schema_version": 1,
+    "performed": true,
+    "passed": true,
+    "fixture_only": false,
+    "checked_at": "2026-11-12T17:12:32.838100+00:00",
+    "report_path": "results/final_experiment_2/final_followup/report.html",
+    "report_sha256": "e20302e8b79c7a1e17891d16569430afabeec732f3ad572c94d0ed54f93deb0c",
+    "execution_scope": "Read-only HTML/assets and saved inputs; temporary loopback server; external requests blocked; no API/model calls or repository/report writes.",
+    "checks": {
+      "all3_known_F_received_truncations_preserved": true,
+      "186_unique_repeat_request_ids": true,
+      "new_calls_without_historical_reuse": true,
+      "13_unique_questions": true,
+      "5_controls_11_errors_overlap3": true,
+      "all_target_ids_exact": true,
+      "available_conditions_exact_for_scope": true,
+      "six_arm_labels_ABCDEF": true,
+      "186_unique_request_cells": true,
+      "three_repeats_each_condition": true,
+      "control_and_error_scope_labels_match": true,
+      "payload_config_matches_saved_config": true,
+      "saved_rows_match_report": true,
+      "new_reviews_match_saved_curated_reviews": true,
+      "frozen_SDK_and_inputs_match": true,
+      "raw_vs_displayed_grading_independently_derived": true,
+      "saved_state_success_count_matches": true,
+      "saved_state_received_count_matches": true,
+      "desktop_untrusted_HTML_inert": true,
+      "desktop_long_math_and_table_local_scroll": true,
+      "desktop_assets_loaded": true,
+      "desktop_13_default_questions": true,
+      "desktop_round_selector_123": true,
+      "desktop_study_scope_notice": true,
+      "desktop_repeat1_control_event": true,
+      "desktop_repeat2_control_event": true,
+      "desktop_repeat3_control_event": true,
+      "desktop_ID_search": true,
+      "desktop_taxonomy_curriculum": true,
+      "desktop_taxonomy_unit": true,
+      "desktop_taxonomy_subunit": true,
+      "desktop_taxonomy_type": true,
+      "desktop_next": true,
+      "desktop_previous": true,
+      "desktop_all_39_question_repeats_186_cards": true,
+      "desktop_exact_known3_truncated_math_fallbacks": true,
+      "desktop_responsive_layout": true,
+      "mobile390_untrusted_HTML_inert": true,
+      "mobile390_long_math_and_table_local_scroll": true,
+      "mobile390_assets_loaded": true,
+      "mobile390_13_default_questions": true,
+      "mobile390_round_selector_123": true,
+      "mobile390_study_scope_notice": true,
+      "mobile390_repeat1_control_event": true,
+      "mobile390_repeat2_control_event": true,
+      "mobile390_repeat3_control_event": true,
+      "mobile390_ID_search": true,
+      "mobile390_taxonomy_curriculum": true,
+      "mobile390_taxonomy_unit": true,
+      "mobile390_taxonomy_subunit": true,
+      "mobile390_taxonomy_type": true,
+      "mobile390_next": true,
+      "mobile390_previous": true,
+      "mobile390_all_39_question_repeats_186_cards": true,
+      "mobile390_exact_known3_truncated_math_fallbacks": true,
+      "mobile390_responsive_layout": true,
+      "complete_asset_manifest_portable": true,
+      "no_external_or_browser_errors": true,
+      "all_local_assets_HTTP200": true,
+      "HTML_source_assets_unchanged": true,
+      "compared_saved_inputs_unchanged": true,
+      "old_full265_inputs_unchanged": true,
+      "temporary_server_shutdown": true,
+      "actual26_screenshots_visually_inspected": true,
+      "final_asset_and_input_hashes_rechecked_after_visual_inspection": true
+    },
+    "saved_input_mismatches": [],
+    "new_review_mismatches": [],
+    "derived_grade_mismatches": [],
+    "frozen_SDK_mismatches": [],
+    "saved_status_counts": {
+      "success": 183,
+      "truncated_response": 3
+    },
+    "saved_math_status_counts": {
+      "appropriate": 72,
+      "inappropriate": 114
+    },
+    "raw_vs_displayed_adjudications": [
+      {
+        "id": "trig_1_044",
+        "condition": "B",
+        "repeat": 1,
+        "raw_correct": null,
+        "display_correct": false,
+        "grade_source": "independent_new_AI_answer_review"
+      },
+      {
+        "id": "trig_1_044",
+        "condition": "B",
+        "repeat": 2,
+        "raw_correct": null,
+        "display_correct": false,
+        "grade_source": "independent_new_AI_answer_review"
+      },
+      {
+        "id": "trig_1_044",
+        "condition": "B",
+        "repeat": 3,
+        "raw_correct": null,
+        "display_correct": false,
+        "grade_source": "independent_new_AI_answer_review"
+      }
+    ],
+    "saved_state_status": "completed",
+    "source_assets_sha256": {
+      "results/final_experiment_2/final_followup/report.html": "e20302e8b79c7a1e17891d16569430afabeec732f3ad572c94d0ed54f93deb0c",
+      "results/final_experiment_2/final_followup/viewer_assets/viewer.js": "763e99619ef427817d29781c565af2756e008486add4ee8af66d58c31e17c9f0",
+      "results/final_experiment_2/final_followup/viewer_assets/source.json": "a1372ece08a59188296c18fead494376479d74c55e195b4b111d50a9955d57d0",
+      "results/final_experiment_2/final_followup/viewer_assets/viewer.css": "74e269f0f401a42b442fe4c3be23b12ab1a3e31c1962462de591474fbb89d207",
+      "mathhint_analysis/viewer_assets/vendor/markdown-it.min.js": "38c70a1e7ca91ab40e2d9e6e60129851a717ed1c7d4acbbdd41bf9503791cf68",
+      "mathhint_analysis/viewer_assets/vendor/katex.min.js": "e8d885505949f3a5f4abdd5dd0d53696bd1371ad26ffbf4f310dcd77c8cdae89",
+      "mathhint_analysis/viewer_assets/vendor/MARKDOWN_IT_LICENSE": "792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473",
+      "mathhint_analysis/viewer_assets/vendor/katex.min.css": "b075123b50e51a0a7819b49efa2a62bb05bc7dac04b0d65a9a3799c2211ea48f",
+      "mathhint_analysis/viewer_assets/vendor/KATEX_LICENSE": "766ccc1f306c885aa45542a9846bbd0a505b27a0374f146778171c2254ce18e3",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_SansSerif-Bold.woff2": "e99ae51144bf1232efcc1bfe5add36262c6866b0faab24fa75740e1b98577a62",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Typewriter-Regular.woff2": "71d517d67827787cfabdf186914cc3358eda539e37931941f2b2fd4a21f68c0b",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Caligraphic-Bold.woff2": "de7701e42cf1f4cf0b766c03fb27977207eee2f4fd5d76fa82188406da43ea4c",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_AMS-Regular.woff2": "0cdd387c9590a1a9f9794560022dbb59654a7d86f187aa0c81495ad42d3a7308",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Math-Italic.woff2": "7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Regular.woff2": "c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size3-Regular.woff2": "73d591271b1604960cb10bb90fee021670af7297017e0e98480b332d11f51995",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size2-Regular.woff2": "d04c54219f9eaec6d4d4fd42dfb28785975a4794d6b2fc71e566b9cd6db842dd",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size4-Regular.woff2": "a4af7d414440a1c1790825cfb700cf9cf43b0f2c4b04f0ebc523011ad9853ec0",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Bold.woff2": "0f60d1b897938ec918c8ce073092411baf9438f6739465693ff18b0f9d20b021",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_SansSerif-Italic.woff2": "00b26ac825e2095056396e0553b8ac26d3f8ad158c3826e28b4c45b385c4714a",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Italic.woff2": "97479ca6cce906abc961ecac96faa5f9ca2e61b8e7670d475826bcdee9a7c267",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Fraktur-Bold.woff2": "74444efd593c005e3f4573b44524704c0af0a937fe911cca9e94068d0d140d3f",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Script-Regular.woff2": "036d4e95149b69ff9bcc0cd55771efeb25ffa3947293e69acd78d5ac328c684b",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Fraktur-Regular.woff2": "51814d270d06ff0255dba0799994fa4d8c84d11f09951d47595f4abb1f3602dc",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_SansSerif-Regular.woff2": "68e8c73ef42afd3ccec58bf0fba302cce448938e7fc020a5e31f8a952eee1342",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-BoldItalic.woff2": "99cd42a3c072d918f2f44984a807cf7aa16e13545fd0875fc07c6c65f99e715b",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Caligraphic-Regular.woff2": "5d53e70ad607c2352162dec9e0923fb54ecdafaccbf604cd8dcf7d00facb989b",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Math-BoldItalic.woff2": "dc47344dbb6cb5b655c8460d561f4df5f501b90c804ad3c6cec65fe322351ab1",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size1-Regular.woff2": "6b47c40166b6dbe21a5dfca7718413f2147fd2399be1ba605d8ad39cedf25dfe"
+    },
+    "saved_inputs_sha256": {
+      "results/final_experiment_2/final_followup/responses.jsonl": "f2a60f3c88fd16f9b2d070c65477d9145780b0023cc8e05b7d97f2fc99ebbda8",
+      "results/final_experiment_2/final_followup/plan.jsonl": "f11d8ffb3b72a7712ae47b772ab01aaec2c0260a2f666b4f5200bc93a52eb2d2",
+      "results/final_experiment_2/final_followup/config.json": "91cd043b66b0fb316a570b82712eae8fdb5f38023c0a9c42009ebf6edb00463a",
+      "results/final_experiment_2/final_followup/state.json": "15ce95e5990fdcd456fd292eb095ccf20e95935207173cd3519a3d4712c2b7ce",
+      "results/final_experiment_2/final_followup/question_comparison.csv": "c7648e73c2b52c1e762f20c5ea6620547779ddf47ac62f9212b807205f7fd75e",
+      "results/final_experiment_2/final_followup/review/status.csv": "c7648e73c2b52c1e762f20c5ea6620547779ddf47ac62f9212b807205f7fd75e",
+      "results/final_experiment_2/final_followup/review/curated_reviews.json": "77dc41e17b46b9e31e954b327f10bd047bb6c86900d4dc77f8db260445225156",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_1_047/C.json": "f3357d42dcc0f4a9c9fee844761b3c8035e8b4b3a67bda24ba31b88c6eef7006",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_1_047/B.json": "bea64ca0e876f68c806355a1cef6cd2211915bb212deff8ab579e5c3487b1a7e",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_1_047/D.json": "9643ff78efa9278c870b71f7838ca30cae159b51145d215ff2d29d277f026821",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_1_047/A.json": "a71e85a00a365e7e8c6a5e76ddca11a8fc191270c57c2ed5d6d592db829c3edd",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_2_022/C.json": "b7e5a4cdef37d7f6d74a89a07338340aa15e4ec596aad04edf16c1e8d3356090",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_2_022/B.json": "b6d3c36ea2c66d1a06a314a241b75df9153a4f4dfc85aa03b8b02181847c80c0",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_2_022/D.json": "29f9eb6dc7e0a533a9745c5eb3ec684fd6f31eb2741a4c5f651647f554bbb6f3",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_2_022/A.json": "02f43af742c69374df142e77788ff272f286072abe8be10e8257852bfdc2b072",
+      "results/final_experiment_2/final_followup/frozen_prompts/diff_2_039/C.json": "8d34db48d1d9d0c80019712c7c434c307ab81c5461b42dc924ae63710a4f9b99",
+      "results/final_experiment_2/final_followup/frozen_prompts/diff_2_039/F.json": "d75d87650ab37c2bba0231f149d37ae1698d0da946f90549e96a45c0c18e375e",
+      "results/final_experiment_2/final_followup/frozen_prompts/diff_2_039/B.json": "49990c9747379d25484dabf3e344acca3a938fe7f9a39663298de3d48fd9537c",
+      "results/final_experiment_2/final_followup/frozen_prompts/diff_2_039/D.json": "7c8fb22731e73da9558064f14de806ce811e6e276530ff0a5de1469ba1a19441",
+      "results/final_experiment_2/final_followup/frozen_prompts/diff_2_039/E.json": "84a415fb701cf175d22f08f9f6614f5cd4b9887bef2c222690685dd80897101b",
+      "results/final_experiment_2/final_followup/frozen_prompts/diff_2_039/A.json": "9d014ae3005a9cd7195f0fe3e869cfb2fd0313eacd54960f7c7b248565b33c25",
+      "results/final_experiment_2/final_followup/frozen_prompts/diff_2_004/C.json": "0e4891cb9509cd59b7a68b79c0916ab49d49724a977b65592c27c8ea0ad07434",
+      "results/final_experiment_2/final_followup/frozen_prompts/diff_2_004/F.json": "adacc482bc81bf813ab1fcb27a0a1931351336e578c95b738cdd5f454bc577af",
+      "results/final_experiment_2/final_followup/frozen_prompts/diff_2_004/B.json": "cd24bc5d6ab4fa1993ab83f547b6527d074ec5b70d9b45a02a40df29f4edd48d",
+      "results/final_experiment_2/final_followup/frozen_prompts/diff_2_004/D.json": "6c7a322b65523e443499c425f0e1f8d1f12ae6977cca441db8178857d62d6445",
+      "results/final_experiment_2/final_followup/frozen_prompts/diff_2_004/E.json": "093f63ec13c72ef3435df23c3052c1c4b4a8910de64cbbbcbc655d833429910e",
+      "results/final_experiment_2/final_followup/frozen_prompts/diff_2_004/A.json": "5828a2b85b20dce2c40683cbb86077613f8a7d1a4c549b63b1e1cbe9739d7314",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_3_036/C.json": "aba7bdfd6d6d9e4b0076ab98318ce80c599ae61e7ddad743325f0a52edf49d02",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_3_036/B.json": "0ff88766d831b3fc358272d9e6e5adfcd8fb4558c78f1462a0a7b93901d2db42",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_3_036/D.json": "ef64e47b5417984f4924aacbcfb1e9cf3e1576ef6a25e5c506d1bc09fefbe2b0",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_3_036/A.json": "05f131747b4286f66bbd8fc796953e1e2bcc6b84f2b59845e4d0683747e50d12",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_1_043/C.json": "480f4c374900addb5bf7f21531dcd39119badb9058e394e2d2b6bb07b8de3507",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_1_043/F.json": "a5c66f41ef33afbc9b142053f541e9f3815854787cb951a23f633287b408e1b5",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_1_043/B.json": "adb8dd7ac8c8a1513859032c9f84be13e9aa4b712982bce305fd7d3b2f7733cf",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_1_043/D.json": "5c93630e0f50c6d572f13c2d6f8b9aa1943f170a0e98781773c2d4da98df2f7e",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_1_043/E.json": "919a6461396ac6b54d0aba4b656e0c0ca155fe3ceac5e4b453d59b4677ece539",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_1_043/A.json": "8ed0eb44f3cde48b2d0d2dd5c3d94532e6750e1f2541c49da79bc09160744dd4",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_3_033/C.json": "a22ae4d283db3b22ab137430a65cdf169dd79c4d8b4dc7bbcdb223eae81c7b5c",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_3_033/B.json": "11718c31c8698cd222ab8307a0a9b7d6926b33bb983406c8995af8b00e7877cf",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_3_033/D.json": "366641e411f10e6e8165d12a981f7f3f3f16721a98308067790557e2321d3d02",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_3_033/A.json": "b57265aa4d0f6e901acaabbd238bb0cf1138cfe78a7d91dc398a25beab6619f6",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_1_044/C.json": "1296e78515ea4a8c2596cdd3f63a598749c9c9e03e2c7572fb5c42a9f38d5eb1",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_1_044/F.json": "5645bd4916314e1224ccb127411529aa7a7ea7c9d01daa3acf6a2bba133d7532",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_1_044/B.json": "b2aaad1685f105bcd7c491610d6881c3bfba5da9c1ccfc8fdf2aa345eaa001bd",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_1_044/D.json": "9c18986f7121388496a82ba3a636ca8c80c180e7b21898336d6c8c534f574634",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_1_044/E.json": "c873c5156ae3bba03722e2f6da0c72d96babbd22dcb1a96438b35c00825a8f9e",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_1_044/A.json": "8a67a512397ee1329579206e1ed7eb4bab7fdf7a0f685bd8ca1649709c31fce3",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_3_008/C.json": "748c419c60d969bae6b9a7bf1632c71ba4f761817f4e3ff632464c33273417bb",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_3_008/B.json": "22ffd93b8ce258086c8691f5394597daf3aab76c956991928c29bcd3ab65e057",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_3_008/D.json": "0cf86a9e5489b17bf0826889f0be0f3a5185a0ae92ebbb04e2c2773111ff2d70",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_3_008/A.json": "8bd6ddb0b1042cfbda6d540d4c84af6918c228c2a7fcb349d4f61364a44c8a96",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_3_034/C.json": "d5e878a3eff686004b462be1b68da3b66c76628bff286cac90f155695002a7f8",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_3_034/B.json": "b029e5a66e498a2d8abd68f189593835b8402d1f0bed8bedb8a7dd2ca03c0ddb",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_3_034/D.json": "53aa6fcbcae57ad09e460e024379bdb6085d8430a89b925e05dfc87e5d0990ec",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_3_034/A.json": "af97379f280a239d9b0f183b3f99cd759f544e3bf8e5f03b9e9304bb5bc0878b",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_2_020/C.json": "f926405a3eb00ebe9c9ff33a4dfb7dec4a246b1e1efa5b31e2b866c0bcc12144",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_2_020/B.json": "0497e3e9081fd2d926fbfb62cedef4bf4980857674272a2bf1e6005610f72d7d",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_2_020/D.json": "30370ad3ab1bebf8ec04bf099607936868d6c53ba4dbe19f43ec14d5f8b2f475",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_2_020/A.json": "4f81ecdc47bbcbd6abee98792622e5d7780edca4dc6ed4bc4ddc7eaec542045c",
+      "results/final_experiment_2/final_followup/frozen_prompts/diff_3_045/C.json": "de5abb308ac9ecb15f2310905c2905fc759a5c425c375893e589f41382c87a87",
+      "results/final_experiment_2/final_followup/frozen_prompts/diff_3_045/B.json": "3eb51cd8ccb6846fe465280c6ad5ab865103bc7fc8d5aa15d851875233f25528",
+      "results/final_experiment_2/final_followup/frozen_prompts/diff_3_045/D.json": "a4ebde734cd0bc4286b54f03c1ffc511affe70d51d92b3ce6fab37b393708f67",
+      "results/final_experiment_2/final_followup/frozen_prompts/diff_3_045/A.json": "69a476b81ce7c4c3b96a8064deccf51a2559e8a260693936717d096ab2b536c6",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_1_040/C.json": "e049f78365a28f20fd46a9f717f3998218b70a7110e7c80e8d8fa32cdaed510e",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_1_040/F.json": "9ba663239f2b10aea05103ca658aeabea9519366a8179e72bc7959c1e7e7e229",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_1_040/B.json": "bc0ea51d9226c1e6d30b8bf35031fbe3e8effeb8b02dd3f42bbf2599a0aceaed",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_1_040/D.json": "a7a0dc65e192d1c017d0305895b8aa3d07a7d31e2bd17e5a55d6e8297e8c503b",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_1_040/E.json": "aba723c8303b616fd45134595d28c4a615ff03ad13006fc86b22f6aa5fbbf522",
+      "results/final_experiment_2/final_followup/frozen_prompts/trig_1_040/A.json": "6ac70b730ae5383119ecc8c6f6753c65fd9a4c0f3541822d9e147a68f4cc2ca4"
+    },
+    "protected_old_inputs_sha256": {
+      "results/final_experiment_2/gemini_full265/report.html": "08d9b90b4af1d3d50698863968cc621e5644def283814a735cdb5f2ba738664d",
+      "results/final_experiment_2/gemini_full265/responses.jsonl": "20f3f612bd1f968a30c72c9f4ae8ff1d1f09ed5d7dc3278ceeee1d3669f09495",
+      "results/final_experiment_2/gemini_full265/review/curated_reviews.json": "245572409eb6856ea5c137042de0016192cc14669b049a74345b6f270445122c",
+      "results/final_experiment_2/gemini_full265/config.json": "740ab47a13738ab73a07f393c81bf177401fcf00787352341dd2c16cf04645a9",
+      "results/final_experiment_2/gemini_full265/plan.jsonl": "675f2e574a3100f358779cc775333035b2db66696df9356548f9e321d5686c7c"
+    },
+    "viewports": [
+      {
+        "document_width": 1600,
+        "condition_columns": "565.844px 565.859px",
+        "comparison_columns": "374.297px 1151.7px",
+        "cards": [
+          {
+            "condition": "A",
+            "width": 565.84375,
+            "x": 420.296875
+          },
+          {
+            "condition": "B",
+            "width": 565.859375,
+            "x": 1006.140625
+          },
+          {
+            "condition": "C",
+            "width": 565.84375,
+            "x": 420.296875
+          },
+          {
+            "condition": "D",
+            "width": 565.859375,
+            "x": 1006.140625
+          },
+          {
+            "condition": "E",
+            "width": 565.84375,
+            "x": 420.296875
+          },
+          {
+            "condition": "F",
+            "width": 565.859375,
+            "x": 1006.140625
+          }
+        ],
+        "label": "desktop",
+        "width": 1600,
+        "height": 1000
+      },
+      {
+        "document_width": 390,
+        "condition_columns": "366px",
+        "comparison_columns": "366px",
+        "cards": [
+          {
+            "condition": "A",
+            "width": 366,
+            "x": 12
+          },
+          {
+            "condition": "B",
+            "width": 366,
+            "x": 12
+          },
+          {
+            "condition": "C",
+            "width": 366,
+            "x": 12
+          },
+          {
+            "condition": "D",
+            "width": 366,
+            "x": 12
+          },
+          {
+            "condition": "E",
+            "width": 366,
+            "x": 12
+          },
+          {
+            "condition": "F",
+            "width": 366,
+            "x": 12
+          }
+        ],
+        "label": "mobile390",
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "filter_results": {
+      "desktop": {
+        "1": {
+          "all": {
+            "expected_count": 13,
+            "actual_count": 13,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "control_scope": {
+            "expected_count": 5,
+            "actual_count": 5,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "error_scope": {
+            "expected_count": 11,
+            "actual_count": 11,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "changed": {
+            "expected_count": 11,
+            "actual_count": 11,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "reasoning_suspected": {
+            "expected_count": 13,
+            "actual_count": 13,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "review_pending": {
+            "expected_count": 0,
+            "actual_count": 0,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "ungraded": {
+            "expected_count": 1,
+            "actual_count": 1,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "api_error": {
+            "expected_count": 1,
+            "actual_count": 1,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "not_run": {
+            "expected_count": 0,
+            "actual_count": 0,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "train": {
+            "expected_count": 9,
+            "actual_count": 9,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "test": {
+            "expected_count": 4,
+            "actual_count": 4,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          }
+        },
+        "2": {
+          "all": {
+            "expected_count": 13,
+            "actual_count": 13,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "control_scope": {
+            "expected_count": 5,
+            "actual_count": 5,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "error_scope": {
+            "expected_count": 11,
+            "actual_count": 11,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "changed": {
+            "expected_count": 11,
+            "actual_count": 11,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "reasoning_suspected": {
+            "expected_count": 13,
+            "actual_count": 13,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "review_pending": {
+            "expected_count": 0,
+            "actual_count": 0,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "ungraded": {
+            "expected_count": 1,
+            "actual_count": 1,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "api_error": {
+            "expected_count": 1,
+            "actual_count": 1,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "not_run": {
+            "expected_count": 0,
+            "actual_count": 0,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "train": {
+            "expected_count": 9,
+            "actual_count": 9,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "test": {
+            "expected_count": 4,
+            "actual_count": 4,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          }
+        },
+        "3": {
+          "all": {
+            "expected_count": 13,
+            "actual_count": 13,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "control_scope": {
+            "expected_count": 5,
+            "actual_count": 5,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "error_scope": {
+            "expected_count": 11,
+            "actual_count": 11,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "changed": {
+            "expected_count": 11,
+            "actual_count": 11,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "reasoning_suspected": {
+            "expected_count": 13,
+            "actual_count": 13,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "review_pending": {
+            "expected_count": 0,
+            "actual_count": 0,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "ungraded": {
+            "expected_count": 1,
+            "actual_count": 1,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "api_error": {
+            "expected_count": 1,
+            "actual_count": 1,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "not_run": {
+            "expected_count": 0,
+            "actual_count": 0,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "train": {
+            "expected_count": 9,
+            "actual_count": 9,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "test": {
+            "expected_count": 4,
+            "actual_count": 4,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          }
+        }
+      },
+      "mobile390": {
+        "1": {
+          "all": {
+            "expected_count": 13,
+            "actual_count": 13,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "control_scope": {
+            "expected_count": 5,
+            "actual_count": 5,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "error_scope": {
+            "expected_count": 11,
+            "actual_count": 11,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "changed": {
+            "expected_count": 11,
+            "actual_count": 11,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "reasoning_suspected": {
+            "expected_count": 13,
+            "actual_count": 13,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "review_pending": {
+            "expected_count": 0,
+            "actual_count": 0,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "ungraded": {
+            "expected_count": 1,
+            "actual_count": 1,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "api_error": {
+            "expected_count": 1,
+            "actual_count": 1,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "not_run": {
+            "expected_count": 0,
+            "actual_count": 0,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "train": {
+            "expected_count": 9,
+            "actual_count": 9,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "test": {
+            "expected_count": 4,
+            "actual_count": 4,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          }
+        },
+        "2": {
+          "all": {
+            "expected_count": 13,
+            "actual_count": 13,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "control_scope": {
+            "expected_count": 5,
+            "actual_count": 5,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "error_scope": {
+            "expected_count": 11,
+            "actual_count": 11,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "changed": {
+            "expected_count": 11,
+            "actual_count": 11,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "reasoning_suspected": {
+            "expected_count": 13,
+            "actual_count": 13,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "review_pending": {
+            "expected_count": 0,
+            "actual_count": 0,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "ungraded": {
+            "expected_count": 1,
+            "actual_count": 1,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "api_error": {
+            "expected_count": 1,
+            "actual_count": 1,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "not_run": {
+            "expected_count": 0,
+            "actual_count": 0,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "train": {
+            "expected_count": 9,
+            "actual_count": 9,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "test": {
+            "expected_count": 4,
+            "actual_count": 4,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          }
+        },
+        "3": {
+          "all": {
+            "expected_count": 13,
+            "actual_count": 13,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "control_scope": {
+            "expected_count": 5,
+            "actual_count": 5,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "error_scope": {
+            "expected_count": 11,
+            "actual_count": 11,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "changed": {
+            "expected_count": 11,
+            "actual_count": 11,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "reasoning_suspected": {
+            "expected_count": 13,
+            "actual_count": 13,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "review_pending": {
+            "expected_count": 0,
+            "actual_count": 0,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "ungraded": {
+            "expected_count": 1,
+            "actual_count": 1,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "api_error": {
+            "expected_count": 1,
+            "actual_count": 1,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "not_run": {
+            "expected_count": 0,
+            "actual_count": 0,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "train": {
+            "expected_count": 9,
+            "actual_count": 9,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "test": {
+            "expected_count": 4,
+            "actual_count": 4,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          }
+        }
+      }
+    },
+    "screenshots": [
+      {
+        "viewport": "desktop",
+        "case": "overview_problem_source",
+        "id": "trig_1_044",
+        "repeat": 1,
+        "path": "/tmp/mathhint_followup_browser_final/desktop_overview_problem_source.png"
+      },
+      {
+        "viewport": "desktop",
+        "case": "control_A",
+        "id": "trig_1_044",
+        "condition": "A",
+        "repeat": 1,
+        "path": "/tmp/mathhint_followup_browser_final/desktop_control_A_trig_1_044_A_r1.png"
+      },
+      {
+        "viewport": "desktop",
+        "case": "control_B",
+        "id": "trig_1_044",
+        "condition": "B",
+        "repeat": 2,
+        "path": "/tmp/mathhint_followup_browser_final/desktop_control_B_trig_1_044_B_r2.png"
+      },
+      {
+        "viewport": "desktop",
+        "case": "control_C",
+        "id": "trig_1_044",
+        "condition": "C",
+        "repeat": 3,
+        "path": "/tmp/mathhint_followup_browser_final/desktop_control_C_trig_1_044_C_r3.png"
+      },
+      {
+        "viewport": "desktop",
+        "case": "control_D",
+        "id": "diff_2_039",
+        "condition": "D",
+        "repeat": 1,
+        "path": "/tmp/mathhint_followup_browser_final/desktop_control_D_diff_2_039_D_r1.png"
+      },
+      {
+        "viewport": "desktop",
+        "case": "control_E",
+        "id": "trig_1_040",
+        "condition": "E",
+        "repeat": 2,
+        "path": "/tmp/mathhint_followup_browser_final/desktop_control_E_trig_1_040_E_r2.png"
+      },
+      {
+        "viewport": "desktop",
+        "case": "control_F",
+        "id": "trig_1_040",
+        "condition": "F",
+        "repeat": 3,
+        "path": "/tmp/mathhint_followup_browser_final/desktop_control_F_trig_1_040_F_r3.png"
+      },
+      {
+        "viewport": "desktop",
+        "case": "four_arm_errors",
+        "id": "diff_3_045",
+        "condition": "A",
+        "repeat": 1,
+        "path": "/tmp/mathhint_followup_browser_final/desktop_four_arm_errors_diff_3_045_A_r1.png"
+      },
+      {
+        "viewport": "desktop",
+        "case": "new_repeat_final",
+        "id": "trig_3_034",
+        "condition": "D",
+        "repeat": 3,
+        "path": "/tmp/mathhint_followup_browser_final/desktop_new_repeat_final_trig_3_034_D_r3.png"
+      },
+      {
+        "viewport": "desktop",
+        "case": "actual_truncated_F",
+        "id": "trig_1_040",
+        "condition": "F",
+        "repeat": 1,
+        "path": "/tmp/mathhint_followup_browser_final/desktop_actual_truncated_F_trig_1_040_F_r1.png"
+      },
+      {
+        "viewport": "desktop",
+        "case": "new_answer_adjudication",
+        "id": "trig_1_044",
+        "condition": "B",
+        "repeat": 1,
+        "path": "/tmp/mathhint_followup_browser_final/desktop_new_answer_adjudication_trig_1_044_B_r1.png"
+      },
+      {
+        "viewport": "desktop",
+        "case": "raw_repeat_grade_SDK",
+        "id": "trig_1_044",
+        "condition": "B",
+        "repeat": 2,
+        "path": "/tmp/mathhint_followup_browser_final/desktop_raw_repeat_grade_SDK.png"
+      },
+      {
+        "viewport": "desktop",
+        "case": "truncated_tail_source_review",
+        "id": "trig_1_040",
+        "condition": "F",
+        "repeat": 1,
+        "path": "/tmp/mathhint_followup_browser_final/desktop_truncated_F_tail_source_review.png"
+      },
+      {
+        "viewport": "mobile390",
+        "case": "overview_problem_source",
+        "id": "trig_1_044",
+        "repeat": 1,
+        "path": "/tmp/mathhint_followup_browser_final/mobile390_overview_problem_source.png"
+      },
+      {
+        "viewport": "mobile390",
+        "case": "control_A",
+        "id": "trig_1_044",
+        "condition": "A",
+        "repeat": 1,
+        "path": "/tmp/mathhint_followup_browser_final/mobile390_control_A_trig_1_044_A_r1.png"
+      },
+      {
+        "viewport": "mobile390",
+        "case": "control_B",
+        "id": "trig_1_044",
+        "condition": "B",
+        "repeat": 2,
+        "path": "/tmp/mathhint_followup_browser_final/mobile390_control_B_trig_1_044_B_r2.png"
+      },
+      {
+        "viewport": "mobile390",
+        "case": "control_C",
+        "id": "trig_1_044",
+        "condition": "C",
+        "repeat": 3,
+        "path": "/tmp/mathhint_followup_browser_final/mobile390_control_C_trig_1_044_C_r3.png"
+      },
+      {
+        "viewport": "mobile390",
+        "case": "control_D",
+        "id": "diff_2_039",
+        "condition": "D",
+        "repeat": 1,
+        "path": "/tmp/mathhint_followup_browser_final/mobile390_control_D_diff_2_039_D_r1.png"
+      },
+      {
+        "viewport": "mobile390",
+        "case": "control_E",
+        "id": "trig_1_040",
+        "condition": "E",
+        "repeat": 2,
+        "path": "/tmp/mathhint_followup_browser_final/mobile390_control_E_trig_1_040_E_r2.png"
+      },
+      {
+        "viewport": "mobile390",
+        "case": "control_F",
+        "id": "trig_1_040",
+        "condition": "F",
+        "repeat": 3,
+        "path": "/tmp/mathhint_followup_browser_final/mobile390_control_F_trig_1_040_F_r3.png"
+      },
+      {
+        "viewport": "mobile390",
+        "case": "four_arm_errors",
+        "id": "diff_3_045",
+        "condition": "A",
+        "repeat": 1,
+        "path": "/tmp/mathhint_followup_browser_final/mobile390_four_arm_errors_diff_3_045_A_r1.png"
+      },
+      {
+        "viewport": "mobile390",
+        "case": "new_repeat_final",
+        "id": "trig_3_034",
+        "condition": "D",
+        "repeat": 3,
+        "path": "/tmp/mathhint_followup_browser_final/mobile390_new_repeat_final_trig_3_034_D_r3.png"
+      },
+      {
+        "viewport": "mobile390",
+        "case": "actual_truncated_F",
+        "id": "trig_1_040",
+        "condition": "F",
+        "repeat": 1,
+        "path": "/tmp/mathhint_followup_browser_final/mobile390_actual_truncated_F_trig_1_040_F_r1.png"
+      },
+      {
+        "viewport": "mobile390",
+        "case": "new_answer_adjudication",
+        "id": "trig_1_044",
+        "condition": "B",
+        "repeat": 1,
+        "path": "/tmp/mathhint_followup_browser_final/mobile390_new_answer_adjudication_trig_1_044_B_r1.png"
+      },
+      {
+        "viewport": "mobile390",
+        "case": "raw_repeat_grade_SDK",
+        "id": "trig_1_044",
+        "condition": "B",
+        "repeat": 2,
+        "path": "/tmp/mathhint_followup_browser_final/mobile390_raw_repeat_grade_SDK.png"
+      },
+      {
+        "viewport": "mobile390",
+        "case": "truncated_tail_source_review",
+        "id": "trig_1_040",
+        "condition": "F",
+        "repeat": 1,
+        "path": "/tmp/mathhint_followup_browser_final/mobile390_truncated_F_tail_source_review.png"
+      }
+    ],
+    "browser_version": "154.0.8037.57",
+    "desktop_renderer_safety_and_overflow_stress": {
+      "scope": "Temporary in-memory renderer checks on frozen actual reader; saved data and DOM restored after checks.",
+      "safety": {
+        "script_executed": false,
+        "dangerous_tags": [],
+        "dangerous_attributes": [],
+        "raw_html_visible_as_text": true,
+        "external_image_replaced_by_text": true
+      },
+      "safety_passed": true,
+      "scroll_stress": [
+        {
+          "selector": ".math-expression",
+          "client_width": 266,
+          "scroll_width": 3109,
+          "scroll_left": 2843,
+          "overflow_x": "auto",
+          "scroll_works": true
+        },
+        {
+          "selector": ".table-scroll",
+          "client_width": 266,
+          "scroll_width": 1037,
+          "scroll_left": 771,
+          "overflow_x": "auto",
+          "scroll_works": true
+        }
+      ],
+      "no_page_overflow": true,
+      "overflow_passed": true
+    },
+    "desktop_all_repeats": {
+      "questions_scanned": 13,
+      "repetition_questions_scanned": 39,
+      "cards_scanned": 186,
+      "math_nodes_rendered_total": 9534,
+      "repetition_totals": {
+        "1": {
+          "question_count": 13,
+          "card_count": 62
+        },
+        "2": {
+          "question_count": 13,
+          "card_count": 62
+        },
+        "3": {
+          "question_count": 13,
+          "card_count": 62
+        }
+      },
+      "expected_incomplete_math_fallbacks": [
+        {
+          "id": "trig_1_040",
+          "condition": "F",
+          "repeat": 1,
+          "original": "$x_",
+          "reason": "닫히지 않은 수식 구분자"
+        },
+        {
+          "id": "trig_1_040",
+          "condition": "F",
+          "repeat": 2,
+          "original": "$x_",
+          "reason": "닫히지 않은 수식 구분자"
+        },
+        {
+          "id": "trig_1_040",
+          "condition": "F",
+          "repeat": 3,
+          "original": "$x_",
+          "reason": "닫히지 않은 수식 구분자"
+        }
+      ],
+      "actual_overflow_examples": [],
+      "actual_markdown_table_count": 0,
+      "actual_math_scroll_count": 0,
+      "card_count_or_order_errors": [],
+      "math_errors": [],
+      "horizontal_overflow": [],
+      "status_errors": [],
+      "answer_errors": [],
+      "usage_errors": [],
+      "review_errors": [],
+      "hint_errors": [],
+      "raw_errors": [],
+      "reference_errors": [],
+      "rendered_output_errors": [],
+      "source_errors": [],
+      "repeat_errors": [],
+      "rendered_reference_errors": [],
+      "unsafe_DOM_errors": [],
+      "local_scroll_errors": []
+    },
+    "mobile390_renderer_safety_and_overflow_stress": {
+      "scope": "Temporary in-memory renderer checks on frozen actual reader; saved data and DOM restored after checks.",
+      "safety": {
+        "script_executed": false,
+        "dangerous_tags": [],
+        "dangerous_attributes": [],
+        "raw_html_visible_as_text": true,
+        "external_image_replaced_by_text": true
+      },
+      "safety_passed": true,
+      "scroll_stress": [
+        {
+          "selector": ".math-expression",
+          "client_width": 274,
+          "scroll_width": 2913,
+          "scroll_left": 2639,
+          "overflow_x": "auto",
+          "scroll_works": true
+        },
+        {
+          "selector": ".table-scroll",
+          "client_width": 274,
+          "scroll_width": 1037,
+          "scroll_left": 763,
+          "overflow_x": "auto",
+          "scroll_works": true
+        }
+      ],
+      "no_page_overflow": true,
+      "overflow_passed": true
+    },
+    "mobile390_all_repeats": {
+      "questions_scanned": 13,
+      "repetition_questions_scanned": 39,
+      "cards_scanned": 186,
+      "math_nodes_rendered_total": 9534,
+      "repetition_totals": {
+        "1": {
+          "question_count": 13,
+          "card_count": 62
+        },
+        "2": {
+          "question_count": 13,
+          "card_count": 62
+        },
+        "3": {
+          "question_count": 13,
+          "card_count": 62
+        }
+      },
+      "expected_incomplete_math_fallbacks": [
+        {
+          "id": "trig_1_040",
+          "condition": "F",
+          "repeat": 1,
+          "original": "$x_",
+          "reason": "닫히지 않은 수식 구분자"
+        },
+        {
+          "id": "trig_1_040",
+          "condition": "F",
+          "repeat": 2,
+          "original": "$x_",
+          "reason": "닫히지 않은 수식 구분자"
+        },
+        {
+          "id": "trig_1_040",
+          "condition": "F",
+          "repeat": 3,
+          "original": "$x_",
+          "reason": "닫히지 않은 수식 구분자"
+        }
+      ],
+      "actual_overflow_examples": [],
+      "actual_markdown_table_count": 0,
+      "actual_math_scroll_count": 0,
+      "card_count_or_order_errors": [],
+      "math_errors": [],
+      "horizontal_overflow": [],
+      "status_errors": [],
+      "answer_errors": [],
+      "usage_errors": [],
+      "review_errors": [],
+      "hint_errors": [],
+      "raw_errors": [],
+      "reference_errors": [],
+      "rendered_output_errors": [],
+      "source_errors": [],
+      "repeat_errors": [],
+      "rendered_reference_errors": [],
+      "unsafe_DOM_errors": [],
+      "local_scroll_errors": []
+    },
+    "loaded_assets_sha256": {
+      "results/final_experiment_2/final_followup/report.html": "e20302e8b79c7a1e17891d16569430afabeec732f3ad572c94d0ed54f93deb0c",
+      "results/final_experiment_2/final_followup/viewer_assets/viewer.css": "74e269f0f401a42b442fe4c3be23b12ab1a3e31c1962462de591474fbb89d207",
+      "mathhint_analysis/viewer_assets/vendor/katex.min.css": "b075123b50e51a0a7819b49efa2a62bb05bc7dac04b0d65a9a3799c2211ea48f",
+      "mathhint_analysis/viewer_assets/vendor/katex.min.js": "e8d885505949f3a5f4abdd5dd0d53696bd1371ad26ffbf4f310dcd77c8cdae89",
+      "results/final_experiment_2/final_followup/viewer_assets/viewer.js": "763e99619ef427817d29781c565af2756e008486add4ee8af66d58c31e17c9f0",
+      "mathhint_analysis/viewer_assets/vendor/markdown-it.min.js": "38c70a1e7ca91ab40e2d9e6e60129851a717ed1c7d4acbbdd41bf9503791cf68",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Regular.woff2": "c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Math-Italic.woff2": "7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size1-Regular.woff2": "6b47c40166b6dbe21a5dfca7718413f2147fd2399be1ba605d8ad39cedf25dfe",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_AMS-Regular.woff2": "0cdd387c9590a1a9f9794560022dbb59654a7d86f187aa0c81495ad42d3a7308",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size3-Regular.woff2": "73d591271b1604960cb10bb90fee021670af7297017e0e98480b332d11f51995",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Bold.woff2": "0f60d1b897938ec918c8ce073092411baf9438f6739465693ff18b0f9d20b021"
+    },
+    "assets_sha256": {
+      "results/final_experiment_2/final_followup/report.html": "e20302e8b79c7a1e17891d16569430afabeec732f3ad572c94d0ed54f93deb0c",
+      "results/final_experiment_2/final_followup/viewer_assets/viewer.js": "763e99619ef427817d29781c565af2756e008486add4ee8af66d58c31e17c9f0",
+      "results/final_experiment_2/final_followup/viewer_assets/source.json": "a1372ece08a59188296c18fead494376479d74c55e195b4b111d50a9955d57d0",
+      "results/final_experiment_2/final_followup/viewer_assets/viewer.css": "74e269f0f401a42b442fe4c3be23b12ab1a3e31c1962462de591474fbb89d207",
+      "mathhint_analysis/viewer_assets/vendor/markdown-it.min.js": "38c70a1e7ca91ab40e2d9e6e60129851a717ed1c7d4acbbdd41bf9503791cf68",
+      "mathhint_analysis/viewer_assets/vendor/katex.min.js": "e8d885505949f3a5f4abdd5dd0d53696bd1371ad26ffbf4f310dcd77c8cdae89",
+      "mathhint_analysis/viewer_assets/vendor/MARKDOWN_IT_LICENSE": "792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473",
+      "mathhint_analysis/viewer_assets/vendor/katex.min.css": "b075123b50e51a0a7819b49efa2a62bb05bc7dac04b0d65a9a3799c2211ea48f",
+      "mathhint_analysis/viewer_assets/vendor/KATEX_LICENSE": "766ccc1f306c885aa45542a9846bbd0a505b27a0374f146778171c2254ce18e3",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_SansSerif-Bold.woff2": "e99ae51144bf1232efcc1bfe5add36262c6866b0faab24fa75740e1b98577a62",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Typewriter-Regular.woff2": "71d517d67827787cfabdf186914cc3358eda539e37931941f2b2fd4a21f68c0b",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Caligraphic-Bold.woff2": "de7701e42cf1f4cf0b766c03fb27977207eee2f4fd5d76fa82188406da43ea4c",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_AMS-Regular.woff2": "0cdd387c9590a1a9f9794560022dbb59654a7d86f187aa0c81495ad42d3a7308",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Math-Italic.woff2": "7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Regular.woff2": "c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size3-Regular.woff2": "73d591271b1604960cb10bb90fee021670af7297017e0e98480b332d11f51995",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size2-Regular.woff2": "d04c54219f9eaec6d4d4fd42dfb28785975a4794d6b2fc71e566b9cd6db842dd",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size4-Regular.woff2": "a4af7d414440a1c1790825cfb700cf9cf43b0f2c4b04f0ebc523011ad9853ec0",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Bold.woff2": "0f60d1b897938ec918c8ce073092411baf9438f6739465693ff18b0f9d20b021",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_SansSerif-Italic.woff2": "00b26ac825e2095056396e0553b8ac26d3f8ad158c3826e28b4c45b385c4714a",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Italic.woff2": "97479ca6cce906abc961ecac96faa5f9ca2e61b8e7670d475826bcdee9a7c267",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Fraktur-Bold.woff2": "74444efd593c005e3f4573b44524704c0af0a937fe911cca9e94068d0d140d3f",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Script-Regular.woff2": "036d4e95149b69ff9bcc0cd55771efeb25ffa3947293e69acd78d5ac328c684b",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Fraktur-Regular.woff2": "51814d270d06ff0255dba0799994fa4d8c84d11f09951d47595f4abb1f3602dc",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_SansSerif-Regular.woff2": "68e8c73ef42afd3ccec58bf0fba302cce448938e7fc020a5e31f8a952eee1342",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-BoldItalic.woff2": "99cd42a3c072d918f2f44984a807cf7aa16e13545fd0875fc07c6c65f99e715b",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Caligraphic-Regular.woff2": "5d53e70ad607c2352162dec9e0923fb54ecdafaccbf604cd8dcf7d00facb989b",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Math-BoldItalic.woff2": "dc47344dbb6cb5b655c8460d561f4df5f501b90c804ad3c6cec65fe322351ab1",
+      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size1-Regular.woff2": "6b47c40166b6dbe21a5dfca7718413f2147fd2399be1ba605d8ad39cedf25dfe"
+    },
+    "temporary_server_shutdown": true,
+    "local_assets": [
+      {
+        "path": "/results/final_experiment_2/final_followup/report.html",
+        "status": 200
+      },
+      {
+        "path": "/results/final_experiment_2/final_followup/viewer_assets/viewer.css",
+        "status": 200
+      },
+      {
+        "path": "/mathhint_analysis/viewer_assets/vendor/katex.min.css",
+        "status": 200
+      },
+      {
+        "path": "/mathhint_analysis/viewer_assets/vendor/katex.min.js",
+        "status": 200
+      },
+      {
+        "path": "/results/final_experiment_2/final_followup/viewer_assets/viewer.js",
+        "status": 200
+      },
+      {
+        "path": "/mathhint_analysis/viewer_assets/vendor/markdown-it.min.js",
+        "status": 200
+      },
+      {
+        "path": "/mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Regular.woff2",
+        "status": 200
+      },
+      {
+        "path": "/mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Math-Italic.woff2",
+        "status": 200
+      },
+      {
+        "path": "/mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size1-Regular.woff2",
+        "status": 200
+      },
+      {
+        "path": "/mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_AMS-Regular.woff2",
+        "status": 200
+      },
+      {
+        "path": "/mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size3-Regular.woff2",
+        "status": 200
+      },
+      {
+        "path": "/mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Bold.woff2",
+        "status": 200
+      }
+    ],
+    "external_requests": [],
+    "pageerrors": [],
+    "consoleerrors": [],
+    "request_failures": [],
+    "filter_check_count": 66,
+    "check_script_sha256": "6369c00d6185521495421b710fb838f8c72c1c7d77d68577878aed467f5eba0a",
+    "visual_screenshots_reviewed": 26,
+    "awaiting_visual_inspection": false,
+    "automated_passed": true,
+    "completed_at": "2026-11-12T17:15:38.923704+00:00",
+    "screenshots_sha256": {
+      "/tmp/mathhint_followup_browser_final/desktop_overview_problem_source.png": "bea18e0e46e27e3a960bdece6a0b66a5f2db5500c91c0cb7004ac9d01c00385d",
+      "/tmp/mathhint_followup_browser_final/desktop_control_A_trig_1_044_A_r1.png": "f5c7cfc11d97f1376ab240d760c512000421cf7e95afcc6dc6c40237ddb70263",
+      "/tmp/mathhint_followup_browser_final/desktop_control_B_trig_1_044_B_r2.png": "64c7948c35d499f68a5fdf25ef0a1e0a1bb2fb6148b92b55f07f18d4c70ac84f",
+      "/tmp/mathhint_followup_browser_final/desktop_control_C_trig_1_044_C_r3.png": "bac98f2754ebad15a967f00feb5ba71808c10f8bfb314a765af527d57caa4ece",
+      "/tmp/mathhint_followup_browser_final/desktop_control_D_diff_2_039_D_r1.png": "8365d07e30943c92682084f82ac5f141a3e58fe9da434e2e19a7faf6c158370e",
+      "/tmp/mathhint_followup_browser_final/desktop_control_E_trig_1_040_E_r2.png": "92c5da17fc4cd73144588c4a665e6696c0e1fe4d28773a1f3f587a6c38e12060",
+      "/tmp/mathhint_followup_browser_final/desktop_control_F_trig_1_040_F_r3.png": "cda3374a79f3c4c9b19c590bc8e291e0d626ef670ba49164f35bb1409582bee1",
+      "/tmp/mathhint_followup_browser_final/desktop_four_arm_errors_diff_3_045_A_r1.png": "1dafdc51e9954f7bd8387ceef2e32d5123b00012a19002fc5b63a1e9bfb125ba",
+      "/tmp/mathhint_followup_browser_final/desktop_new_repeat_final_trig_3_034_D_r3.png": "20af262eae5402366ff3a9b07c41984c9a0b8126e132ac6acedf15ef8f10cdf0",
+      "/tmp/mathhint_followup_browser_final/desktop_actual_truncated_F_trig_1_040_F_r1.png": "3ddfbfec6fb9b8d77a4114019401df81e549cca9053f5d51e85c66c99cbe2d05",
+      "/tmp/mathhint_followup_browser_final/desktop_new_answer_adjudication_trig_1_044_B_r1.png": "f5c7cfc11d97f1376ab240d760c512000421cf7e95afcc6dc6c40237ddb70263",
+      "/tmp/mathhint_followup_browser_final/desktop_raw_repeat_grade_SDK.png": "9836a8268f9c9e082c5db8c30d381727663b74b3166a28a3b0c44f1ccfdc9269",
+      "/tmp/mathhint_followup_browser_final/desktop_truncated_F_tail_source_review.png": "702c96ed37c69400e6d7837f1d38d9ceea5335090042a6d782a802fc9fe548c8",
+      "/tmp/mathhint_followup_browser_final/mobile390_overview_problem_source.png": "80926a756c324df99ff08e7dd5b4cdd787851e769125cfdb8abdc1f36cab1a83",
+      "/tmp/mathhint_followup_browser_final/mobile390_control_A_trig_1_044_A_r1.png": "8f660f774d25ed478887a1d2839c41c1219e8cd39f04b27b24341f5692e314c8",
+      "/tmp/mathhint_followup_browser_final/mobile390_control_B_trig_1_044_B_r2.png": "8f7dbb6d62d40d74a30a725f7d6cee14c7332254594e900f102072316898206f",
+      "/tmp/mathhint_followup_browser_final/mobile390_control_C_trig_1_044_C_r3.png": "2428e4f8ba8c4123e7f0a508a1ae27993d59035f6f43477a3df03acc4aad3a23",
+      "/tmp/mathhint_followup_browser_final/mobile390_control_D_diff_2_039_D_r1.png": "f0797c08eb6652962a3b8bc6bacdb862b1ac467dc3d6acd38991d8538005e9e8",
+      "/tmp/mathhint_followup_browser_final/mobile390_control_E_trig_1_040_E_r2.png": "404eb0cd4c288f12df09f885aef4a15f7abac47455a8b2913fbe9de44fd04647",
+      "/tmp/mathhint_followup_browser_final/mobile390_control_F_trig_1_040_F_r3.png": "2ee7679bbfc13859201fbc6a2fde9bcc40ab00a0be3ad2757587823910098504",
+      "/tmp/mathhint_followup_browser_final/mobile390_four_arm_errors_diff_3_045_A_r1.png": "27fea3dfd47c4ca36b4ae3f5fe03a138fd480f2de7cfaa1ac705ae92b6411da8",
+      "/tmp/mathhint_followup_browser_final/mobile390_new_repeat_final_trig_3_034_D_r3.png": "6718c2b459f30467dd1fb49121b232aa5cb8ba5f6aac744782ff565e18bd3dfe",
+      "/tmp/mathhint_followup_browser_final/mobile390_actual_truncated_F_trig_1_040_F_r1.png": "0768e21de8003c1b892da4d7e51dd398bb868321ed29237960bc4965b4c1e68b",
+      "/tmp/mathhint_followup_browser_final/mobile390_new_answer_adjudication_trig_1_044_B_r1.png": "6d8f3f05a0a6af96879f1374d6812660c6a2bd858fddaaac41d2a1e7b7eea9cf",
+      "/tmp/mathhint_followup_browser_final/mobile390_raw_repeat_grade_SDK.png": "25afb7560a05f0028826b33c0aef5dce4d47c3416cfc3113bca371bbed44e39e",
+      "/tmp/mathhint_followup_browser_final/mobile390_truncated_F_tail_source_review.png": "a9d262e0ea6af8d17bf689876654cb00e01f89d142fcbef6fc769b9b82d1b44e"
+    },
+    "limitations": [
+      "Final browser checks verify saved display and input consistency; mathematical correctness is tracked separately through new AI-assisted reviews, not human final confirmation.",
+      "Loopback HTTP uses actual local files with external requests blocked; it does not guarantee file:// policy in other browsers.",
+      "The actual saved responses contain no Markdown tables; wide table and long-formula horizontal scrolling were exercised through temporary in-memory renderer stress cases on the frozen reader, separate from actual response coverage.",
+      "Visual inspection covers26 representative viewport captures; automated DOM/source/raw audits cover all186 cards in each viewport."
+    ],
+    "visual_passed": true,
+    "visual_inspection": {
+      "performed": true,
+      "tool": "view_image",
+      "screenshots_reviewed": 26,
+      "reviewed_at": "2026-11-12T17:15:38.923668+00:00",
+      "findings": [
+        "Desktop reference and two condition columns remain readable; mobile controls/reference/cards form one column within390px.",
+        "All six arm labels and repetition labels are readable in representative actual captures; normal answer badges are separate from AI-assisted mathematical review.",
+        "B/trig_1_044 raw automatic correct:null remains in audit JSON while displayed incorrect grade is explicitly attributed to independent new-answer review.",
+        "F/trig_1_040 renders supplied8188 output tokens and missing reasoning usage as 미제공; the actual truncated $x_ tail is visibly retained in a labeled original-source fallback.",
+        "Raw repeat/grading/SDK JSON panels wrap within each viewport and retain original JSON values.",
+        "No overlapping controls, clipped page content, unrelated math error, or horizontal page overflow found in reviewed captures."
+      ],
+      "screenshots": [
+        {
+          "path": "/tmp/mathhint_followup_browser_final/desktop_overview_problem_source.png",
+          "sha256": "bea18e0e46e27e3a960bdece6a0b66a5f2db5500c91c0cb7004ac9d01c00385d",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/desktop_control_A_trig_1_044_A_r1.png",
+          "sha256": "f5c7cfc11d97f1376ab240d760c512000421cf7e95afcc6dc6c40237ddb70263",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/desktop_control_B_trig_1_044_B_r2.png",
+          "sha256": "64c7948c35d499f68a5fdf25ef0a1e0a1bb2fb6148b92b55f07f18d4c70ac84f",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/desktop_control_C_trig_1_044_C_r3.png",
+          "sha256": "bac98f2754ebad15a967f00feb5ba71808c10f8bfb314a765af527d57caa4ece",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/desktop_control_D_diff_2_039_D_r1.png",
+          "sha256": "8365d07e30943c92682084f82ac5f141a3e58fe9da434e2e19a7faf6c158370e",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/desktop_control_E_trig_1_040_E_r2.png",
+          "sha256": "92c5da17fc4cd73144588c4a665e6696c0e1fe4d28773a1f3f587a6c38e12060",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/desktop_control_F_trig_1_040_F_r3.png",
+          "sha256": "cda3374a79f3c4c9b19c590bc8e291e0d626ef670ba49164f35bb1409582bee1",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/desktop_four_arm_errors_diff_3_045_A_r1.png",
+          "sha256": "1dafdc51e9954f7bd8387ceef2e32d5123b00012a19002fc5b63a1e9bfb125ba",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/desktop_new_repeat_final_trig_3_034_D_r3.png",
+          "sha256": "20af262eae5402366ff3a9b07c41984c9a0b8126e132ac6acedf15ef8f10cdf0",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/desktop_actual_truncated_F_trig_1_040_F_r1.png",
+          "sha256": "3ddfbfec6fb9b8d77a4114019401df81e549cca9053f5d51e85c66c99cbe2d05",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/desktop_new_answer_adjudication_trig_1_044_B_r1.png",
+          "sha256": "f5c7cfc11d97f1376ab240d760c512000421cf7e95afcc6dc6c40237ddb70263",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/desktop_raw_repeat_grade_SDK.png",
+          "sha256": "9836a8268f9c9e082c5db8c30d381727663b74b3166a28a3b0c44f1ccfdc9269",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/desktop_truncated_F_tail_source_review.png",
+          "sha256": "702c96ed37c69400e6d7837f1d38d9ceea5335090042a6d782a802fc9fe548c8",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/mobile390_overview_problem_source.png",
+          "sha256": "80926a756c324df99ff08e7dd5b4cdd787851e769125cfdb8abdc1f36cab1a83",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/mobile390_control_A_trig_1_044_A_r1.png",
+          "sha256": "8f660f774d25ed478887a1d2839c41c1219e8cd39f04b27b24341f5692e314c8",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/mobile390_control_B_trig_1_044_B_r2.png",
+          "sha256": "8f7dbb6d62d40d74a30a725f7d6cee14c7332254594e900f102072316898206f",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/mobile390_control_C_trig_1_044_C_r3.png",
+          "sha256": "2428e4f8ba8c4123e7f0a508a1ae27993d59035f6f43477a3df03acc4aad3a23",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/mobile390_control_D_diff_2_039_D_r1.png",
+          "sha256": "f0797c08eb6652962a3b8bc6bacdb862b1ac467dc3d6acd38991d8538005e9e8",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/mobile390_control_E_trig_1_040_E_r2.png",
+          "sha256": "404eb0cd4c288f12df09f885aef4a15f7abac47455a8b2913fbe9de44fd04647",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/mobile390_control_F_trig_1_040_F_r3.png",
+          "sha256": "2ee7679bbfc13859201fbc6a2fde9bcc40ab00a0be3ad2757587823910098504",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/mobile390_four_arm_errors_diff_3_045_A_r1.png",
+          "sha256": "27fea3dfd47c4ca36b4ae3f5fe03a138fd480f2de7cfaa1ac705ae92b6411da8",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/mobile390_new_repeat_final_trig_3_034_D_r3.png",
+          "sha256": "6718c2b459f30467dd1fb49121b232aa5cb8ba5f6aac744782ff565e18bd3dfe",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/mobile390_actual_truncated_F_trig_1_040_F_r1.png",
+          "sha256": "0768e21de8003c1b892da4d7e51dd398bb868321ed29237960bc4965b4c1e68b",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/mobile390_new_answer_adjudication_trig_1_044_B_r1.png",
+          "sha256": "6d8f3f05a0a6af96879f1374d6812660c6a2bd858fddaaac41d2a1e7b7eea9cf",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/mobile390_raw_repeat_grade_SDK.png",
+          "sha256": "25afb7560a05f0028826b33c0aef5dce4d47c3416cfc3113bca371bbed44e39e",
+          "viewed": true
+        },
+        {
+          "path": "/tmp/mathhint_followup_browser_final/mobile390_truncated_F_tail_source_review.png",
+          "sha256": "a9d262e0ea6af8d17bf689876654cb00e01f89d142fcbef6fc769b9b82d1b44e",
+          "viewed": true
+        }
+      ]
+    }
   },
   "model_training_performed": false,
   "generation_API_calls": 0,

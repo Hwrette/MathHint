@@ -537,7 +537,7 @@ def _plots(output, control, error, differences, request_rows):
                         ha="right", va="top", fontsize=8,
                         bbox={"boxstyle": "round,pad=.2", "facecolor": "white", "edgecolor": ".7", "alpha": .94},
                         arrowprops={"arrowstyle": "-", "color": ".4", "linewidth": .7})
-        ax.legend(loc="upper left", ncol=3, fontsize=7)
+        ax.legend(loc="upper left", bbox_to_anchor=(1.005, 1), fontsize=7)
         ax.set(xticks=range(6), xticklabels=list("ABCDEF"), title=identifier, ylabel="출력 토큰 · 평균±SD / 각 반복 점")
         ax.margins(y=.18)
     fig.suptitle("대조군 5문항 · 신규 반복 각3회 · 문항별 독립 축\n잘림 포함 실제 수신 토큰, 회색막대=평균±표본SD, 색점=각반복; 큰값도 제외하지 않음")
@@ -562,7 +562,8 @@ def _plots(output, control, error, differences, request_rows):
                 r = next(r for r in error if r["id"] == identifier and r["condition"] == condition)
                 if r[denom]:
                     matrix[y, x] = r[field]
-                ax.text(x, y, f"{r[field]}/{r[denom]}\n계획3", ha="center", va="center", fontsize=9, color="black")
+                ax.text(x, y, f"{r[field]}/{r[denom]}\n계획3", ha="center", va="center", fontsize=9,
+                        color="white" if r[denom] and r[field] >= 2 else "black")
         cmap = plt.get_cmap("Blues").copy(); cmap.set_bad(".9")
         image = ax.imshow(matrix, vmin=0, vmax=3, cmap=cmap, aspect="auto")
         ax.set(xticks=range(4), xticklabels=list("ABCD"), yticks=range(11), yticklabels=[i + (" · 테스트" if next(r for r in error if r['id']==i)['split']=='test' else " · 학습") for i in ERROR_IDS], title="오답 관련11문항 · 신규 각3회\n" + title)
@@ -601,6 +602,22 @@ def _write_readmes(output, config, state, rows, control, error, differences, fig
     split_by_id = {r["id"]: r["split"] for r in rows}
     unique_split_counts = Counter(split_by_id.values())
     request_split_counts = Counter(r["split"] for r in rows)
+    complete_cells = [cell for cell in {(r["id"], r["condition"]): r for r in control + error}.values()
+                      if cell["received_count"] == 3]
+    identical_texts = sum(cell["unique_output_count"] == 1 for cell in complete_cells)
+    constant_output_usage = sum(cell["candidates_token_count_provided_count"] == 3
+                               and cell["candidates_token_count_std"] == 0 for cell in complete_cells)
+    repeat_note = (f"**반복 간 관찰:** 3회를 모두 수신한 {len(complete_cells)}개 문항·조건 중 "
+        f"{identical_texts}개에서 세 응답 본문이 바이트까지 같았고, {constant_output_usage}개에서 출력 토큰의 표본 SD가0이었다. "
+        "응답을 복사한 것이 아니라 반복마다 신규 호출했다. temperature0에서 관측한 반복 안정성이며, "
+        "서로 독립인 세 무작위 표본의 성공이나 오류 확률 추정으로 해석하지 않는다.")
+    capture_path = output / "prompt_audit/sdk_calls.jsonl"
+    metadata_path = output / "execution_runs/preflight_network_calls.jsonl"
+    sdk_attempts = len(read_jsonl(capture_path)) if capture_path.is_file() else 0
+    metadata_calls = sum(row.get("network_calls", 0) for row in read_jsonl(metadata_path)) if metadata_path.is_file() else 0
+    network_note = (f"실행 기록상 SDK 생성 시도는 **{sdk_attempts}회**(통신실패 재시도 포함), "
+        f"모델 메타데이터 조회는 {metadata_calls}회다. 이는 고유 반복 관측 {received}개와 구분한다. "
+        "응답을 이미 받은 반복을 추가로 생성하지 않았으며, 전송 실패 재시도도 실행 이력에서 삭제하지 않았다.")
     protocol_note = ("동결된 config.json의 cache_policy에는 관측 전의 ‘success’ 표현이 해시 보존을 위해 남아 있다. "
         "첫 잘림 응답을 관측한 뒤 반복 슬롯을 다시 뽑는 선택 편향을 막도록 **실제 API 응답을 받은 슬롯은 정상 종료 여부와 관계없이 한 번의 관측으로 종료**하는 정책을 명시했다. "
         "현재 완료 수와 미수신 목록은 state.json의 completed_requests/api_response_count를 기준으로 읽는다. 모델·프롬프트·출력 상한·토큰은 바꾸지 않았다.")
@@ -616,25 +633,27 @@ def _write_readmes(output, config, state, rows, control, error, differences, fig
             "요청별 대기 상한은 SDK 캡처·응답·실행 이력에 따로 남긴다. 이 실행 시점/통신 정책 차이도 작은 반복 실험의 한계로 고려한다.")
     common = ["3회 표본 SD는 **ddof=1**이다. 사용량이 제공된 API 수신 응답이0개면 평균·최소·최대·SD는 —, 1개면 SD는 —다. 미제공은 null/—이며0으로 채우지 않는다.",
               "**출력 제한(MAX_TOKENS)·차단·빈 응답도 API 응답을 받은 한 번의 반복이다. 같은 반복을 다시 뽑지 않는다.** 잘린 응답의 실제 토큰은 사용량 평균에 포함하지만, 최종 답이 완성되지 않았다면 채점 보류로 남긴다. 설정된 토큰 상한을 실제 사용량 대신 넣지 않는다.",
-              "정답 횟수와 풀이 타당 가능 횟수는 별개다. 검토 보류를 오류로 간주하지 않으며 AI 보조 검토는 사람의 확정이나 형식적 증명이 아니다. 자기 수정 횟수는 일부 중간 오류의 명시적 수정을 뜻하며, 다른 오류가 남아 최종 오답·풀이 부적절과 함께 나타날 수도 있다.",
+              "정답 횟수와 풀이 타당 가능 횟수는 별개다. 검토 보류를 오류로 간주하지 않으며 AI 보조 검토는 사람의 확정이나 형식적 증명이 아니다. 자기 수정 횟수는 일부 중간 오류의 명시적 수정을 뜻하며, 다른 오류가 남아 최종 오답·풀이 부적절과 함께 나타날 수도 있다. 기존 오류 재발은 해당 잘못된 단계가 새 풀이에 다시 등장했는지를 뜻하므로, 이후 고친 경우에도 예로 기록될 수 있다. 최종 논증의 타당성과 자기 수정 여부를 함께 읽는다.",
               "같은 문항·같은 반복 번호를 대응시켰지만 조건 순서가 섞인 탐색적 비교다. 3회 모두 정답이어도 오류 가능성이 사라졌다고 주장하지 않는다."]
     control_lines = ["# 출력 토큰 감소 대조군 · 5문항 ×6조건 ×신규3회", "",
         "A 문제만 / B Ridge / C MLP / D 실제 해설 토큰 / E 지시문만 / F D와 같은 토큰+중립 출처 제목이다. E/F만으로 토큰의 순수 효과를 완전히 분리하지 못한다.", "",
         "[첫 안내](../README.md) · [수식·반복 비교](../report.html) · [문항·조건 통계 CSV](summary.csv) · [반복별 대응 차이 CSV](paired_differences.csv)", "",
-        *common, "", *_scope_table(control, "ABCDEF"), "", *_control_observations(control, differences, rows), "![출력 토큰 평균과 표본SD](../figures/control_output_tokens.png)", "",
+        *common, "", repeat_note, "", *_scope_table(control, "ABCDEF"), "", *_control_observations(control, differences, rows), "![출력 토큰 평균과 표본SD](../figures/control_output_tokens.png)", "",
         "![대응 출력 차이](../figures/control_output_differences.png)", "", "![정답 횟수](../figures/control_correct_counts.png)", "", "## 문항별 전체 통계", "", *_summary_table(control)]
     (output / "control_top5/README.md").write_text("\n".join(control_lines) + "\n", encoding="utf-8")
     error_lines = ["# 기존 오답 관련11문항 · A/B/C/D 신규 각3회", "",
         "기존 정정표에서 A/B/C/D 중 적어도 하나가 오답인11문항을 다시 확인한 사후선별 집합이다. 이 집합 정답률을 전체265의 일반화 정확도로 해석하지 않는다.", "",
         "[A와 D 상세](AD_detailed_analysis.md) · [B와 C 상세](BC_detailed_analysis.md) · [신규 통계 CSV](summary.csv) · [과거1회와 비교 CSV](prior_comparison.csv)", "",
         "[원문·새3회 풀이 전문](../case_reports/README.md) · [수식 화면](../report.html) · [기존11문항 분석](../../gemini_full265/error_analysis_11/README.md)", "",
-        *common, "", *_scope_table(error, "ABCD"), "", *_error_observations(rows), "![정답 횟수](../figures/error_correct_counts.png)", "",
+        *common, "", repeat_note, "", *_scope_table(error, "ABCD"), "", *_error_observations(rows), "![정답 횟수](../figures/error_correct_counts.png)", "",
         "![풀이 검토](../figures/error_math_counts.png)", "", "![사용량](../figures/error_token_usage.png)", "", "## 문항별 전체 통계", "", *_summary_table(error)]
     (output / "error_repeat_11/README.md").write_text("\n".join(error_lines) + "\n", encoding="utf-8")
     lines = ["# MathHint · 신규3회 반복 결과", "", "이번 범위는 **출력 토큰 대조군과 기존 오답의 3회 반복 결과 정리**다. 프로젝트 전체의 최종 마무리나 모델 개선 실험이 아니다.", "",
         f"동결 설정: 모델 `{config.get('model')}`, temperature `{config.get('temperature')}`, thinking `{config.get('thinking_level')}`, 최대 출력 토큰 `{config.get('max_output_tokens')}`. 이 상한은 응답별 실제 사용량과 다르다.", "",
         f"**상태: {state.get('status','unknown')} · 신규 API 응답 수신 {received}/186 · 정상 완료 {success} · 불완전 수신 {received-success} · 미수신 {pending}.** 기존265실험의 응답은 신규 반복 횟수에 포함하지 않았다.", "",
         "두 실험은 대조군90회 + 오답반복132회 − 공유36회 = **186개 고유 요청**이다. 공유3문항의 A/B/C/D×3을 한 번만 호출해 두 분석에 연결한다. 같은 프롬프트 해시라도 반복 번호1/2/3은 서로 다른 실제 신규 호출이다.", "",
+        network_note, "",
+        repeat_note, "",
         "|먼저 볼 자료|내용|", "|---|---|", "|[출력 감소 대조군](control_top5/README.md)|A-E, A-B/C/D, D-F의 출력 토큰 차이·3회 평균/범위/표본SD·정답 횟수|",
         "|[오답11문항 반복](error_repeat_11/README.md)|새 정답/풀이 타당 횟수·기존 오류 재발과 새 오류|", "|[A↔D 상세](error_repeat_11/AD_detailed_analysis.md)|실제 오류 단계·반례·새 풀이 비교|",
         "|[B↔C 상세](error_repeat_11/BC_detailed_analysis.md)|Ridge/MLP 힌트 조건의 관찰 차이|", "|[13문항 수식·반복 비교 HTML](report.html)|원문·실제 해설·힌트·반복1/2/3의 모든 새 풀이·원문 감사|",
@@ -663,7 +682,9 @@ def _write_readmes(output, config, state, rows, control, error, differences, fig
         pairs.append(f"|{key}|{len(values)}/15|{_fmt(stats['mean'])}|{_fmt(stats['min'])}~{_fmt(stats['max'])}|")
     report = ["# 신규3회 반복 연구 보고서", "", "## 목적과 실제 실행 범위", "",
         f"출력 토큰 대조군 5문항과 기존 오답 관련 11문항을 합쳐 13개 고유 문항의 186요청을 계획했다. 현재 신규 API 응답 수신 {received}/186(정상 완료 {success}, 불완전 {received-success}), 미수신 {pending}이다. 이전 265문항의 응답은 비교 기준으로만 읽고 신규 3회로 세지 않았다.", "",
+        network_note, "",
         "A는 기존 문제만, B/C는 동결된 Ridge/MLP 예측 힌트, D는 실제 해설 토큰, E는 문제 뒤 ‘풀이를 작성해줘.’만 추가한 조건이다. F는 D의 동일한 토큰·빈도·JSON에서 출처 제목만 ‘해설에 등장한 토큰과 빈도: 상위20개’로 바꾼 조건이다. 가짜 토큰·새 예측·새 학습은 없다.", "",
+        repeat_note, "",
         "## 관찰1: 출력 토큰 대조군", "", *_scope_table(control, "ABCDEF"), "", *_control_observations(control, differences, rows),
         "같은 문항·같은 반복 번호에서 뒤 조건−앞 조건으로 계산한 출력 토큰 차이는 다음과 같다. 최대 15쌍은 5문항×3반복이며 15개의 독립된 문제를 뜻하지 않는다.", "",
         "|대응 차이|제공쌍/계획|평균 출력토큰 차이|최소~최대|", "|---|---:|---:|---:|", *pairs, "",
