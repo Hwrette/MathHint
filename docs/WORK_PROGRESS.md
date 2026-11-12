@@ -921,3 +921,11 @@ USAGE_RESET_AT: UNKNOWN_NOT_EXPOSED_BY_AVAILABLE_TOOLS
 - 최종 browser_validation.json은 실제 검사한 HTML/로컬자산 SHA에 연결하고 이전 완료 QA 전체를중첩보존했다. 페이지/콘솔/외부요청/요청실패/수식/overflow/원시입출력·사용량·검토 불일치0,로컬14자산HTTP200,추가29소스해시불변과임시서버종료를확인했다. root도대표 PC분수·극한/모바일경우나누기 및 전체정답률/토큰그림을직접열람했다. 검토의수학적판단은AI보조이며사람의최종확정/형식증명은아니다.
 - 현재 변경은 docs/FINAL_TASK_SPEC.md,docs/WORK_PROGRESS.md 및 gemini_full265전용결과뿐이다. 소스코드/모델/과거결과/사용자불용어/기존320테스트응답은변경하지않았다. 저장자료 report/verify 재실행에서 생성API/학습은0회이며새로남은API요청은없다.
 - 새run은 2026-11-12T124813_751881+0000.json에보존했다. 최종보고서/CLIverify/원시로그에서누구나현재완료상태를확인할수있고,추가모델학습/추가생성/예약실행은수행하지않는다.
+
+
+## 전체265 네 조건 API·검증·GitHub 게시 완료 — 2026-11-12T13:10:09.155275+00:00
+
+- 결과 커밋 **5109c7f2b8457dcd1a4a1f38da5ef7b3c0c7d4ef**을 main에 일반push했고, git ls-remote와 GitHub fetch_commit(main) 양쪽에서 같은 원격 SHA를확인했다. 강제push/미포함 사용자변경/비밀값노출은없고 이결과커밋 직후작업트리는깨끗했다. 최종게시단계는완료다.
+- 마지막정상검증결과가포함된Git커밋은위5109c7f다. API1060/1060완료, 검증9576/9576·독립104994/104994·관련43testPASS, 실제2뷰포트43체크42필터/22스크린샷PASS,원본3518+추가22파일및기존1009응답/검토보존을확인했다. 이문서후속커밋은게시확인기록만추가한다.
+- 처음열자료: `results/final_experiment_2/gemini_full265/README.md`; 정정점수 `key_corrected/README.md`; 수식화면 `report.html`; 모든265문항CSV `question_comparison.csv`;100선별사례 `case_reports/README.md`;1060검토 `review/status.csv`;원문요청/응답/사용량/실행기록과validation.json은동일폴더에보존했다.
+- 남은API요청0·추가실험없음·자동실행예약없음. 사용자후속요청전새모델/불용어/생성실험은수행하지않는다. report/verify는기존안내명령으로저장자료만읽어재생성/검증하며학습과API호출은없다.
