@@ -269,6 +269,15 @@ def run(root=None, output=None, *, save=True):
     for field in ("model", "temperature", "thinking_level", "max_output_tokens", "system_instruction"):
         check("frozen_generation_setting_" + field, config.get(field) == old_config.get(field))
     check("requested_model_exact", config.get("model") == "gemini-3.1-flash-lite")
+    check("frozen_models_vocab_and_data_identity", all(config.get(field) == old_config.get(field)
+          for field in ("models", "dataset_id", "solution_vocabulary_sha256", "data_identity_sha256")))
+    check("all_source_hash_bindings_match", bool(config.get("sources_sha256")) and all(
+        (root / path).is_file() and _hash(root / path) == sha for path, sha in config.get("sources_sha256", {}).items()))
+    check("config_inputs_match_frozen_repeat_plan", config.get("inputs") == [
+        {name: row[name] for name in ("id", "condition", "repeat", "request_id", "request_sha256", "schedule_position")}
+        for row in plan])
+    corrected_lookup = {row["id"]: row for row in corrected}
+    old_plan = {(row["id"], row["condition"]): row for row in _jsonl(source / "plan.jsonl")}
     lookup = {_key(row): row for row in plan}
     for row in plan:
         identifier, condition, repeat = _key(row)
@@ -284,6 +293,18 @@ def run(root=None, output=None, *, save=True):
               and frozen.get("sdk_request") == sdk and frozen.get("request_sha256") == row.get("request_sha256"))
         check(f"problem_unchanged_{identifier}_{condition}_r{repeat}", row.get("problem_text") == source_audit["problem_text"]
               and row.get("system_instruction") == source_audit["system_instruction"])
+        source_condition = condition if condition in "ABCD" else "A" if condition == "E" else "D"
+        source_item = old_plan[identifier, source_condition]
+        source_audit_path = source / f"prompt_audit/requests/{identifier}/{source_condition}.json"
+        check(f"frozen_source_provenance_{identifier}_{condition}_r{repeat}",
+              frozen.get("source_prompt_audit") == str(source_audit_path.relative_to(root))
+              and frozen.get("source_prompt_audit_sha256") == _hash(source_audit_path)
+              and frozen.get("source_request_sha256") == source_audit["request_sha256"]
+              and frozen.get("full_request_text") == "[SYSTEM]\n" + row["system_instruction"] + "\n[USER]\n" + message)
+        check(f"source_split_labels_reference_{identifier}_{condition}_r{repeat}",
+              all(row.get(field) == source_item.get(field) for field in
+                  ("split", "subject", "curriculum", "unit", "subunit", "type", "reference_solution"))
+              and row.get("reference_answer_text") == corrected_lookup[identifier]["answer_for_scoring"])
         check(f"hint_unchanged_{identifier}_{condition}_r{repeat}",
               row.get("hint") == source_audit.get("hint") if condition != "E" else not (row.get("hint") or {}).get("mapping"))
     history = _jsonl(output / "responses.jsonl")

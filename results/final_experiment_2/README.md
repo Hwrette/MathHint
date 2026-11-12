@@ -1,5 +1,11 @@
 # MathHint Final Experiment 2
 
+<!-- final-followup:start -->
+
+**3회 반복 후속 실험:** [프롬프트 대조군·기존 오답 반복 결과](final_followup/README.md). 신규186개 요청 설계의 실행 상태·문항별3회 결과·수식 비교 화면을 별도로 제공한다. 기존 전체265 실험과 구분하며 이번 범위는 반복 실험 결과 정리까지다.
+
+<!-- final-followup:end -->
+
 <!-- gemini-full265:start -->
 
 **전체265문항 API 확장:** [새 비교 결과](gemini_full265/README.md) · [문항265개 CSV](gemini_full265/question_comparison.csv) · [수식 비교 화면](gemini_full265/report.html). 학습185와 테스트80을 구분해 읽는다.

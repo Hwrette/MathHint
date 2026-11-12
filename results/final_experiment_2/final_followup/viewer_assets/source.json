@@ -1,0 +1,8 @@
+{
+  "renderer_source": "mathhint_analysis/viewer_assets/viewer.js",
+  "renderer_source_sha256": "ed5fe3a23f9e0dfad9eea19390d419beb4e49dbfd49593241742ca36aefb85b6",
+  "adaptation": "3 repetitions, A-F applicable-condition navigation and raw grading/SDK panels only",
+  "external_network_required": false,
+  "vendor_source": "mathhint_analysis/viewer_assets/vendor",
+  "audit_payload_mutated": false
+}

@@ -1,0 +1,17 @@
+{
+  "planned_count": 186,
+  "success_count": 42,
+  "api_response_count": 43,
+  "completed_count": 43,
+  "incomplete_response_count": 1,
+  "math_status_counts": {
+    "appropriate": 13,
+    "inappropriate": 30
+  },
+  "review_status_counts": {
+    "AI_assisted_reviewed": 13,
+    "suspected_error": 30
+  },
+  "human_confirmed": 0,
+  "additional_review_api_calls": 0
+}
