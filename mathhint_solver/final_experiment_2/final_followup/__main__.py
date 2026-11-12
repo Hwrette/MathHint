@@ -18,18 +18,18 @@ def main():
         from .run import prepare
         with execution_lock(ROOT, OUTPUT):
             _, _, result, _, _ = prepare(ROOT, OUTPUT)
-        print(f"186개 신규 반복 준비 · 성공 {result['state']['successful_requests']} · 미완료 {result['state']['pending_count']}")
+        print(f"186개 신규 반복 준비 · API응답 {result['state']['completed_requests']} · 정상 STOP {result['state']['successful_requests']} · 미완료 {result['state']['pending_count']}")
     elif args.action == "preflight":
         from .run import preflight
         result = preflight(ROOT, OUTPUT, offline=args.offline)
-        print(f"신규 계획186 · 성공 {result['successful_saved']} · 미완료 {result['new_requests_needed']} · 환경 {result['api_readiness']}")
+        print(f"신규 계획186 · API응답 {result['completed_saved']} · 정상 STOP {result['successful_saved']} · 미완료 {result['new_requests_needed']} · 환경 {result['api_readiness']}")
     elif args.action == "generate":
         from .run import generate
         from .report import run as report
         policy = {name: value for name, value in (("max_new_requests", args.max_new_requests),
             ("max_run_seconds", args.max_run_seconds), ("max_wait_seconds", args.max_wait_seconds)) if value is not None}
         result = generate(ROOT, OUTPUT, policy=policy, clear_stop=args.clear_stop, render_callback=report)
-        print(f"상태 {result['status']} · 신규 성공 {result['successful_requests']}/186 · 미완료 {result['pending_count']}")
+        print(f"상태 {result['status']} · 신규 API응답 {result['completed_requests']}/186 · 정상 STOP {result['successful_requests']} · 비정상 응답 {result['incomplete_response_count']} · 미완료 {result['pending_count']}")
     elif args.action == "report":
         from .report import run as report
         with execution_lock(ROOT, OUTPUT):

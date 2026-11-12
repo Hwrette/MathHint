@@ -14,6 +14,7 @@ from urllib.parse import unquote, urlsplit
 from ... import CompareGeneration as comparison
 from ...AnswerEvaluation import evaluate_answer
 from ..gemini_full265.verify import saved_request_rate_checks
+from .common import API_RECEIVED_STATUSES, is_received
 
 
 CONTROL_IDS = ("trig_1_040", "trig_1_044", "diff_2_039", "diff_2_004", "trig_1_043")
@@ -161,6 +162,8 @@ def _review_lookup(output):
 
 def _scored_grade(row, review):
     """원본 파서 결과와 새 응답을 직접 검토한 판정을 분리한다."""
+    if row.get("status", "success") != "success":
+        return None
     grade = row.get("evaluation", {}).get("correct")
     decision = review.get("final_answer_correct")
     if type(decision) is bool:
@@ -189,22 +192,35 @@ def _summary_checks(output, plan, records, reviews):
                 actual = index.get((identifier, condition), {})
                 selected = [latest.get((identifier, condition, repeat), {"status": "not_run"}) for repeat in range(1, 4)]
                 successes = [r for r in selected if r.get("status") == "success"]
-                grades = [_scored_grade(r, reviews.get((identifier, condition, r["repeat"]), {})) for r in successes]
+                received = [r for r in selected if is_received(r)]
+                grades = [_scored_grade(r, reviews.get((identifier, condition, r["repeat"]), {})) for r in received]
                 graded = [g for g in grades if type(g) is bool]
-                math_statuses = [reviews.get((identifier, condition, r["repeat"]), {}).get("math_status", "uncertain") for r in successes]
+                received_reviews = [reviews.get((identifier, condition, r["repeat"]), {}) for r in received]
+                math_statuses = [review.get("math_status", "uncertain") for review in received_reviews]
                 expected = {"expected_count": 3, "success_count": len(successes), "graded_count": len(graded),
+                            "received_count": len(received), "completed_count": len(received), "api_response_count": len(received),
+                            "incomplete_count": len(received) - len(successes),
+                            "truncated_count": sum(r.get("status") == "truncated_response" for r in received),
+                            "blocked_count": sum(r.get("status") == "blocked_or_incomplete_response" for r in received),
+                            "empty_count": sum(r.get("status") == "empty_response" for r in received),
                             "correct_count": sum(g is True for g in graded), "incorrect_count": sum(g is False for g in graded),
-                            "ungradable_count": len(successes) - len(graded),
+                            "ungradable_count": len(received) - len(graded),
                             "pending_count": sum(r.get("status") == "not_run" for r in selected),
-                            "failed_count": sum(r.get("status") not in ("success", "not_run") for r in selected),
+                            "failed_count": sum(r.get("status") != "not_run" and not is_received(r) for r in selected),
                             "math_appropriate_count": math_statuses.count("appropriate"),
                             "math_inappropriate_count": math_statuses.count("inappropriate"),
                             "math_uncertain_count": math_statuses.count("uncertain"),
-                            "reviewed_math_count": sum(status in ("appropriate", "inappropriate") for status in math_statuses)}
+                            "reviewed_math_count": sum(status in ("appropriate", "inappropriate") for status in math_statuses),
+                            "correct_but_math_inappropriate_count": sum(grade is True and status == "inappropriate"
+                                                                         for grade, status in zip(grades, math_statuses)),
+                            "prior_error_recurred_count": sum(review.get("prior_error_recurred") is True for review in received_reviews),
+                            "prior_error_assessed_count": sum(type(review.get("prior_error_recurred")) is bool for review in received_reviews),
+                            "self_corrected_count": sum(review.get("self_corrected") is True for review in received_reviews),
+                            "self_correction_assessed_count": sum(type(review.get("self_corrected")) is bool for review in received_reviews)}
                 for field, value in expected.items():
                     check(f"{folder}_{identifier}_{condition}_{field}", field in actual and _same(actual[field], value))
                 for field in USAGE_FIELDS:
-                    stats = token_statistics([r.get("usage", {}).get(field) for r in successes])
+                    stats = token_statistics([r.get("usage", {}).get(field) for r in received])
                     for statistic, value in stats.items():
                         name = field + "_" + statistic
                         check(f"{folder}_{identifier}_{condition}_{name}", name in actual and _same(actual[name], value))
@@ -224,7 +240,7 @@ def _summary_checks(output, plan, records, reviews):
             first, second = (latest.get((row["id"], c, repeat), {}) for c in contrasts[pair])
             for field in USAGE_FIELDS:
                 a, b = first.get("usage", {}).get(field), second.get("usage", {}).get(field)
-                expected = a - b if first.get("status") == second.get("status") == "success" and a is not None and b is not None else None
+                expected = a - b if is_received(first) and is_received(second) and a is not None and b is not None else None
                 name = field + "_difference"
                 if name in row:
                     check(f"paired_{index}_{field}", _same(row[name], expected))
@@ -272,7 +288,8 @@ def run(root=None, output=None, *, save=True):
               row.get("hint") == source_audit.get("hint") if condition != "E" else not (row.get("hint") or {}).get("mapping"))
     history = _jsonl(output / "responses.jsonl")
     successes = [r for r in history if r.get("status") == "success"]
-    check("successful_repeat_keys_are_saved_once", len(successes) == len({_key(row) for row in successes}))
+    received = [r for r in history if is_received(r)]
+    check("received_repeat_keys_are_saved_once", len(received) == len({_key(row) for row in received}))
     captures = _jsonl(output / "prompt_audit/sdk_calls.jsonl")
     capture_keys = set()
     for index, capture in enumerate(captures):
@@ -285,6 +302,7 @@ def run(root=None, output=None, *, save=True):
         capture_keys.add(key)
     reviews, review_records = _review_lookup(output)
     check("unique_new_review_keys", len(reviews) == len(review_records))
+    check("reviews_only_reference_new_API_received_repeats", set(reviews) <= {_key(row) for row in received})
     for row in records:
         key = _key(row)
         name = "_".join(map(str, key))
@@ -295,26 +313,56 @@ def run(root=None, output=None, *, save=True):
         check("usage_types_" + name, all(usage.get(f) is None or type(usage[f]) is int and usage[f] >= 0 for f in comparison.USAGE_FIELDS))
         if isinstance(usage.get("raw"), dict):
             check("usage_matches_API_" + name, all(usage.get(f) == usage["raw"].get(f) for f in comparison.USAGE_FIELDS))
-        if row.get("status") != "success":
+        if not is_received(row):
             continue
         check("new_actual_call_" + name, key in capture_keys and row.get("response_origin", row.get("source_origin")) == "new_api_call")
-        check("saved_automatic_grade_" + name, row.get("evaluation") == evaluate_answer(row.get("output_text", ""), item["reference"], item["problem_text"]))
+        automatic_grade = (evaluate_answer(row.get("output_text", ""), item["reference"], item["problem_text"])
+                           if row.get("status") == "success" else
+                           {"predicted_answer": None, "correct": None, "status": "ungradable",
+                            "reason": row["status"], "extraction_method": None})
+        check("saved_automatic_grade_" + name, row.get("evaluation") == automatic_grade)
         review = reviews.get(key)
         if review:
             text = row.get("output_text", "")
             quotes = review.get("evidence_quotes") or []
             check("review_hash_quotes_" + name, review.get("response_sha256") == hashlib.sha256(text.encode()).hexdigest()
-                  and quotes and all(quote in text for quote in quotes))
+                  and isinstance(quotes, list)
+                  and (bool(quotes) if text else not quotes and review.get("math_status") == "uncertain")
+                  and all(isinstance(quote, str) and quote and quote in text for quote in quotes))
             check("AI_review_not_human_confirmed_" + name, review.get("human_confirmed") is False)
+            check("review_outcomes_have_explicit_types_" + name,
+                  review.get("math_status") in ("appropriate", "inappropriate", "uncertain")
+                  and all(review.get(field) is None or type(review.get(field)) is bool
+                          for field in ("final_answer_correct", "prior_error_recurred", "self_corrected")))
             check("math_error_has_concrete_evidence_" + name, review.get("math_status") != "inappropriate"
                   or bool(review.get("reason") and review.get("error_step") and quotes))
             if type(review.get("final_answer_correct")) is bool and row.get("evaluation", {}).get("correct") is None:
                 check("parser_abstention_review_has_reason_" + name, bool(review.get("reason") and quotes))
     latest = {_key(row): row for row in records}
-    pending = set(lookup) - {key for key, row in latest.items() if row.get("status") == "success"}
+    pending = set(lookup) - {key for key, row in latest.items() if is_received(row)}
     check("state_success_pending_counts", state.get("successful_requests") == len(successes)
-          and state.get("pending_count") == len(pending))
-    check("completed_requires186_successes", (state.get("status") == "completed") == (len(successes) == 186 and not pending))
+          and state.get("pending_count") == len(pending) and state.get("completed_requests") == len(received)
+          and state.get("api_response_count") == len(received)
+          and state.get("incomplete_response_count") == len(received) - len(successes))
+    check("state_failed_saved_response_counts", state.get("failed_requests") == sum(not is_received(row) for row in records)
+          and state.get("saved_responses") == len(records)
+          and state.get("response_log_entries") == len(history))
+    check("state_pending_keys_are_exact", {_key(row) for row in state.get("pending_requests", [])} == pending)
+    check("state_per_condition_pending_counts", state.get("pending_by_condition") == {
+        condition: sum(key[1] == condition for key in pending) for condition in "ABCDEF"})
+    check("state_per_repeat_counts", state.get("by_repeat") == {
+        str(repeat): {"expected": 62, "success": sum(row["repeat"] == repeat for row in successes),
+                      "completed": sum(row["repeat"] == repeat for row in received),
+                      "incomplete": sum(row["repeat"] == repeat and row["status"] != "success" for row in received),
+                      "failed": sum(row["repeat"] == repeat and not is_received(row) for row in records),
+                      "pending": sum(key[2] == repeat for key in pending)} for repeat in (1, 2, 3)})
+    check("historical_success_reuse_count_is_zero", state.get("historical_reused_successes") == 0
+          and state.get("new_successes") == len(successes) and state.get("new_completed_requests") == len(received))
+    check("resume_command_targets_only_this_study", state.get("resume_command", "").startswith(
+        "python -m mathhint_solver.final_experiment_2.final_followup generate"))
+    check("completed_requires186_API_receipts", (state.get("status") == "completed") == (len(received) == 186 and not pending))
+    check("abnormal_received_trials_are_not_pending_rerolls", not ({_key(row) for row in received if row["status"] != "success"} & pending)
+          and state.get("api_received_terminal_statuses") == list(API_RECEIVED_STATUSES))
     manifest = _read(output / "preservation_manifest.json")
     preservation = preservation_result(root, manifest)
     check("all_old_tracked_files_preserved", preservation["passed"])
@@ -352,9 +400,11 @@ def run(root=None, output=None, *, save=True):
     check("verify_does_not_mutate_inputs_responses_or_reports", before == after)
     result = {"verified_at": comparison.utc_now(), "passed": sum(c["passed"] for c in checks),
               "failed": sum(not c["passed"] for c in checks), "complete": all(c["passed"] for c in checks),
-              "experiment_complete": len(successes) == 186 and not pending,
-              "review_complete": len(reviews) == len(successes) and set(reviews) <= {key for key, row in latest.items() if row.get("status") == "success"},
+              "experiment_complete": len(received) == 186 and not pending,
+              "review_complete": len(reviews) == len(received) and set(reviews) <= {key for key, row in latest.items() if is_received(row)},
               "checks": checks, "expected_requests": 186, "successful_requests": len(successes), "pending_requests": len(pending),
+              "completed_requests": len(received), "api_response_count": len(received),
+              "incomplete_response_count": len(received) - len(successes),
               "preservation": preservation, "rate_audit": rate,
               "markdown_links_checked": links, "broken_links": broken_links,
               "decoded_png_count": len(images), "invalid_images": image_errors,

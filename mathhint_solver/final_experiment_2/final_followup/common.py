@@ -14,9 +14,18 @@ OUTPUT = ROOT / "results/final_experiment_2/final_followup"
 METHODS = {"A": "baseline", "B": "regression_hint", "C": "deep_learning_hint",
            "D": "oracle_hint", "E": "instruction_only", "F": "neutral_reference_hint"}
 CONDITIONS = {value: key for key, value in METHODS.items()}
+# 새 반복은 전달받은 API 응답 한 개가 한 시행이다. 길이 제한/차단/빈 응답을
+# 다시 뽑으면 출력 길이와 오류 재현율을 선택 편향시키므로 정상 STOP과 구별해
+# 보존하되 같은 반복 번호를 재호출하지 않는다. 전송 오류만 미완료로 남긴다.
+API_RECEIVED_STATUSES = ("success", "truncated_response", "blocked_or_incomplete_response", "empty_response")
+API_RECEIVED = API_RECEIVED_STATUSES
 DEFAULT_POLICY = {**BASE_POLICY, "max_new_requests": 60,
     "user_authorized_additional_requests": 186,
     "limits_note": "conservative local caps shared with old80/full265 attempts; provider quotas/remaining budget not inferred"}
+
+
+def is_received(row):
+    return row.get("status") in API_RECEIVED_STATUSES
 
 
 def safe_output(root=ROOT, output=None):
@@ -47,17 +56,17 @@ def request_id(identifier, condition, repeat):
 
 def load_latest(output=OUTPUT, config_id=None):
     latest = {}
-    successful = set()
+    delivered = set()
     for row in read_jsonl(Path(output) / "responses.jsonl"):
         key = request_key(row)
         if config_id is not None and row.get("config_id") != config_id:
             raise ValueError("반복 응답의 config_id가 다릅니다.")
         if row.get("request_id") != request_id(*key):
             raise ValueError("반복 요청 ID가 문항·조건·반복과 다릅니다.")
-        if key in successful:
-            raise ValueError("성공한 반복 요청의 중복 실행 기록이 있습니다.")
-        if row.get("status") == "success":
-            successful.add(key)
+        if key in delivered:
+            raise ValueError("API 응답을 이미 받은 반복의 중복 실행 기록이 있습니다.")
+        if is_received(row):
+            delivered.add(key)
         latest[key] = row
     return latest
 

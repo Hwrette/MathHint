@@ -25,21 +25,21 @@ class Clock:
         self.value += value
 
 
-def fake_preparation(root, repeats=3):
+def fake_preparation(root, repeats=3, condition="A"):
     output = common.safe_output(root)
     config = {**SETTINGS, "experiment_id": "synthetic-followup", "max_attempts": 1, "compact_storage": True}
     text = "1+0의 값은?"
     snapshot = comparison.request_snapshot(comparison.sdk_request_arguments(config, text))
-    rows = [{"id": "q", "condition": "A", "method": "baseline", "repeat": repeat,
-        "request_id": common.request_id("q", "A", repeat), "schedule_position": repeat,
-        "split": "test", "frozen_prompt_path": "frozen_prompts/q/A.json",
+    rows = [{"id": "q", "condition": condition, "method": common.METHODS[condition], "repeat": repeat,
+        "request_id": common.request_id("q", condition, repeat), "schedule_position": repeat,
+        "split": "test", "frozen_prompt_path": f"frozen_prompts/q/{condition}.json",
         "problem_text": text, "input_text": text, "input_sha256": comparison.digest(text),
         "request_sha256": comparison.digest(snapshot), "sdk_request_sha256": comparison.digest(snapshot),
         "reference_solution": "원본 해설", "reference_answer_text": "1",
         "reference": extract_reference({"answer_text": "1"}, text), "hint": None,
         "system_instruction": config["system_instruction"], "compact_storage": True} for repeat in range(1, repeats + 1)]
     comparison.initialize_run(output, config, rows)
-    common.write_json(output / "frozen_prompts/q/A.json", {"sdk_request": snapshot})
+    common.write_json(output / f"frozen_prompts/q/{condition}.json", {"sdk_request": snapshot})
     policy = {**common.DEFAULT_POLICY, "max_new_requests": 1}
     def prepare(*_, **__):
         state = run.state_record(output, config, rows, status="partial_complete")
@@ -124,6 +124,47 @@ class FinalFollowupExecutionTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 run.state_record(output, config, rows, status="partial_complete")
             common.append_jsonl(output / "responses.jsonl", saved)
+            with self.assertRaises(ValueError):
+                common.load_latest(output, comparison.digest(config))
+
+    def test_delivered_F_truncation_is_one_trial_and_is_not_rerolled(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            output, config, rows, preparation = fake_preparation(root, condition="F")
+            clock, calls = Clock(), []
+            def limiter(policy, **kwargs):
+                return BudgetRateLimiter(policy, **kwargs, clock=clock.monotonic,
+                                         wall_clock=clock.wall, sleeper=clock.sleep)
+            def request(text):
+                calls.append(text)
+                return SimpleNamespace(text="중간 풀이만 생성됨" if len(calls) == 1 else "최종정답: 1",
+                    candidates=[SimpleNamespace(finish_reason="MAX_TOKENS" if len(calls) == 1 else "STOP")],
+                    usage_metadata=SimpleNamespace(prompt_token_count=10,
+                        candidates_token_count=8192 if len(calls) == 1 else 20,
+                        total_token_count=8202 if len(calls) == 1 else 30))
+            with patch.object(run, "prepare", side_effect=preparation), patch.object(run, "BudgetRateLimiter", side_effect=limiter):
+                first = run.generate(root, output, request_function=request, api_key="fake")
+                self.assertEqual(first["successful_requests"], 0)
+                self.assertEqual(first["completed_requests"], 1)
+                self.assertEqual(first["api_response_count"], 1)
+                self.assertEqual(first["incomplete_response_count"], 1)
+                self.assertEqual(first["failed_requests"], 0)
+                self.assertEqual([r["repeat"] for r in first["pending_requests"]], [2, 3])
+                second = run.generate(root, output, request_function=request, api_key="fake",
+                                      policy={"max_new_requests": 5})
+                self.assertEqual(second["status"], "completed")
+                self.assertEqual(second["completed_requests"], 3)
+                self.assertEqual(second["successful_requests"], 2)
+                self.assertEqual(second["incomplete_response_count"], 1)
+                self.assertEqual(second["pending_count"], 0)
+                run.generate(root, output, request_function=request, api_key="fake")
+            self.assertEqual(len(calls), 3)
+            saved = common.read_jsonl(output / "responses.jsonl")
+            self.assertEqual(saved[0]["status"], "truncated_response")
+            self.assertEqual(saved[0]["usage"]["candidates_token_count"], 8192)
+            self.assertIsNone(saved[0]["evaluation"]["correct"])
+            # 정상 STOP뿐 아니라 이미 전달된 비정상 응답도 같은 반복 재추첨을 거부한다.
+            common.append_jsonl(output / "responses.jsonl", saved[0])
             with self.assertRaises(ValueError):
                 common.load_latest(output, comparison.digest(config))
 

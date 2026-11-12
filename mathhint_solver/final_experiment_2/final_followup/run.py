@@ -10,7 +10,7 @@ from ..gemini_comparison.run import transport_request
 from ..gemini_full265.run import provider_quota_observation
 from .common import (ROOT, OUTPUT, METHODS, DEFAULT_POLICY, append_jsonl, read_json,
     read_jsonl, write_json, safe_output, source_output, all_request_events, execution_lock,
-    verify_preservation, request_key, load_latest)
+    verify_preservation, request_key, load_latest, is_received, API_RECEIVED_STATUSES)
 from .plan import prepare_plan, initialize, MODEL
 
 
@@ -40,26 +40,38 @@ def state_record(output, config, plan, *, status, reason=None, limiter=None):
                ("request_id", "request_sha256", "input_sha256", "input_text", "problem_text", "system_instruction", "hint")):
             raise ValueError("저장 응답과 동결 요청이 다릅니다: " + str(key))
     successes = [row for row in records.values() if row["status"] == "success"]
-    failed = [row for row in records.values() if row["status"] != "success"]
+    received = [row for row in records.values() if is_received(row)]
+    incomplete = [row for row in received if row["status"] != "success"]
+    failed = [row for row in records.values() if not is_received(row)]
     pending = [{**{name: row[name] for name in ("id", "condition", "repeat", "request_id", "split", "request_sha256", "schedule_position")},
                 "last_status": records.get(request_key(row), {}).get("status", "not_executed")}
-               for row in plan if records.get(request_key(row), {}).get("status") != "success"]
+               for row in plan if not is_received(records.get(request_key(row), {}))]
     if not pending:
-        status, reason = "completed", "186개 신규 반복 요청의 성공 응답이 모두 저장되었습니다."
+        status, reason = "completed", (f"계획된 {len(plan)}개 반복의 API 응답을 모두 저장했습니다. "
+            f"정상 STOP {len(successes)}개, 길이 제한·차단·빈 응답 {len(incomplete)}개이며 비정상 응답도 재추첨하지 않습니다.")
     elif status == "completed":
         status, reason = "partial_complete", "실패·미완료 반복이 남아 있습니다."
     result = {"status": status, "reason": reason, "updated_at": comparison.utc_now(),
         "config_id": comparison.digest(config), "experiment_id": config["experiment_id"],
         "expected_requests": len(plan), "successful_requests": len(successes),
+        "completed_requests": len(received), "api_response_count": len(received),
+        "incomplete_response_count": len(incomplete),
+        "by_status": {status: sum(row["status"] == status for row in records.values())
+                      for status in sorted({row["status"] for row in records.values()})},
         "failed_requests": len(failed), "saved_responses": len(records),
         "response_log_entries": len(read_jsonl(output / "responses.jsonl")),
         "pending_count": len(pending), "pending_requests": pending,
         "pending_by_condition": {c: sum(row["condition"] == c for row in pending) for c in METHODS},
         "successful_by_condition": {c: sum(row["condition"] == c for row in successes) for c in METHODS},
+        "completed_by_condition": {c: sum(row["condition"] == c for row in received) for c in METHODS},
         "by_repeat": {str(repeat): {"expected": sum(row["repeat"] == repeat for row in plan),
             "success": sum(row["repeat"] == repeat for row in successes),
+            "completed": sum(row["repeat"] == repeat for row in received),
+            "incomplete": sum(row["repeat"] == repeat for row in incomplete),
+            "failed": sum(row["repeat"] == repeat for row in failed),
             "pending": sum(row["repeat"] == repeat for row in pending)} for repeat in (1, 2, 3)},
-        "new_successes": len(successes), "historical_reused_successes": 0, "reused_successes": 0,
+        "new_successes": len(successes), "new_completed_requests": len(received),
+        "historical_reused_successes": 0, "reused_successes": 0,
         "safe_to_resume": bool(pending) and status not in ("missing_api_key", "permission_denied"),
         "resume_command": "python -m mathhint_solver.final_experiment_2.final_followup generate"
                           + (" --clear-stop" if (output / "stop_requested").exists() else ""),
@@ -67,7 +79,8 @@ def state_record(output, config, plan, *, status, reason=None, limiter=None):
         "provider_daily_reset_time": None,
         "provider_quota_observation": provider_quota_observation(read_jsonl(output / "responses.jsonl"),
             read_jsonl(output / "execution_runs/request_events.jsonl")),
-        "resume_note": "과거 응답을 반복으로 세지 않는다. 같은 성공(id,condition,repeat)은 재호출하지 않으며 다른 repeat은 같은 프롬프트도 신규 호출한다. 자동 재개 예약은 설정하지 않았다.",
+        "api_received_terminal_statuses": list(API_RECEIVED_STATUSES),
+        "resume_note": "과거 응답을 반복으로 세지 않는다. 같은 API수신(id,condition,repeat)은 정상 STOP/길이제한/차단/빈응답 모두 재호출하지 않으며 다른 repeat은 같은 프롬프트도 신규 호출한다. 전송실패만 재개한다. 자동 재개 예약은 설정하지 않았다.",
         "study_status": "three-repeat follow-up only; no project-final closure"}
     if limiter is not None:
         result["limiter"] = limiter.snapshot()
@@ -94,6 +107,8 @@ def _preflight(root=ROOT, output=OUTPUT, *, offline=False, client_factory=None, 
     info = {"checked_at": comparison.utc_now(), "config_id": comparison.digest(config),
         "requested_model": MODEL, "generation_calls": 0, "non_generation_network_calls": 0,
         "expected_requests": len(plan), "successful_saved": preparation["state"]["successful_requests"],
+        "completed_saved": preparation["state"]["completed_requests"],
+        "incomplete_saved": preparation["state"]["incomplete_response_count"],
         "new_requests_needed": preparation["state"]["pending_count"],
         "preservation": preparation["preservation"], "frozen_prompt_count": preparation["frozen_prompt_count"],
         "provider_rate_limits": {"requests_per_minute": None, "requests_per_hour": None,
@@ -186,7 +201,7 @@ def _generate(root=ROOT, output=OUTPUT, *, policy=None, request_function=None, a
         completed = load_latest(output, config_id)
         for item in plan:
             key_tuple = request_key(item)
-            if completed.get(key_tuple, {}).get("status") == "success":
+            if is_received(completed.get(key_tuple, {})):
                 continue
             context.update({name: item[name] for name in context})
             expected = read_json(output / item["frozen_prompt_path"])
@@ -222,10 +237,12 @@ def _generate(root=ROOT, output=OUTPUT, *, policy=None, request_function=None, a
                     for field in ("status", "started_at", "completed_at", "error", "response_id")}]
             comparison.save_result(output, row)
             completed[key_tuple] = row
-            consecutive_failures = 0 if row["status"] == "success" else consecutive_failures + 1
+            consecutive_failures = 0 if is_received(row) else consecutive_failures + 1
             state_record(output, config, plan, status="partial_complete",
                          reason="새 반복 성공을 즉시 저장하고 남은 요청을 진행합니다.", limiter=limiter)
-            print(f"{item['id']} {item['condition']} 반복{item['repeat']}: {row['status']} · 저장 성공 {sum(r['status']=='success' for r in completed.values())}/{len(plan)}", flush=True)
+            print(f"{item['id']} {item['condition']} 반복{item['repeat']}: {row['status']} · "
+                  f"저장 응답 {sum(is_received(r) for r in completed.values())}/{len(plan)} · "
+                  f"정상 STOP {sum(r['status']=='success' for r in completed.values())}", flush=True)
             if limiter.daily_exhausted or limiter.stop_status:
                 final_status = "daily_quota_exhausted" if limiter.daily_exhausted else limiter.stop_status
                 reason = limiter.stop_reason or "공급자 일일 할당량 소진을 확인했습니다."
@@ -234,7 +251,7 @@ def _generate(root=ROOT, output=OUTPUT, *, policy=None, request_function=None, a
                 final_status, reason = "partial_complete", "세 요청 연속 실패로 무한 재시도 없이 중단했습니다."
                 break
         else:
-            final_status, reason = "completed", "186개 신규 반복 요청의 성공 응답을 모두 저장했습니다."
+            final_status, reason = "completed", "계획된 반복 API 응답을 모두 저장했습니다. 비정상 수신 응답도 한 시행으로 보존합니다."
     except KeyboardInterrupt:
         final_status, reason = "interrupted", "실행 중단 신호를 확인했습니다."
     except comparison.RequestedStop as error:
@@ -247,6 +264,8 @@ def _generate(root=ROOT, output=OUTPUT, *, policy=None, request_function=None, a
         state = state_record(output, config, plan, status=final_status, reason=reason, limiter=limiter)
         execution.update(completed_at=comparison.utc_now(), status=state["status"],
             successful_requests=state["successful_requests"], failed_requests=state["failed_requests"],
+            completed_requests=state["completed_requests"], api_response_count=state["api_response_count"],
+            incomplete_response_count=state["incomplete_response_count"], by_status=state["by_status"],
             pending_count=state["pending_count"], pending_requests=state["pending_requests"],
             new_request_starts=limiter.new_starts, limiter=limiter.snapshot(), reason=reason)
         write_json(path, execution)

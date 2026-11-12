@@ -67,6 +67,8 @@ class FollowupValidationTests(unittest.TestCase):
         self.assertIsNone(_scored_grade(row, {}))
         self.assertIsNone(_scored_grade(row, {"math_status": "inappropriate"}))
         self.assertIs(_scored_grade(row, {"final_answer_correct": False}), False)
+        self.assertIsNone(_scored_grade({"status": "truncated_response", "evaluation": {"correct": None}},
+                                       {"final_answer_correct": False}))
 
     def test_preservation_hash_rejects_changed_original(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -93,9 +95,13 @@ class FollowupValidationTests(unittest.TestCase):
             for identifier in identifiers:
                 for condition in conditions:
                     row = {"id": identifier, "condition": condition, "expected_count": 3, "success_count": 3,
+                           "received_count": 3, "completed_count": 3, "api_response_count": 3,
+                           "incomplete_count": 0, "truncated_count": 0, "blocked_count": 0, "empty_count": 0,
                            "graded_count": 3, "correct_count": 2, "incorrect_count": 1, "ungradable_count": 0,
                            "pending_count": 0, "failed_count": 0, "math_appropriate_count": 1,
-                           "math_inappropriate_count": 1, "math_uncertain_count": 1, "reviewed_math_count": 2}
+                           "math_inappropriate_count": 1, "math_uncertain_count": 1, "reviewed_math_count": 2,
+                           "correct_but_math_inappropriate_count": 0, "prior_error_recurred_count": 0,
+                           "prior_error_assessed_count": 0, "self_corrected_count": 0, "self_correction_assessed_count": 0}
                     for field in USAGE_FIELDS:
                         values = ({"provided_count": 0, "sum": None, "mean": None, "min": None, "max": None, "std": None}
                                   if field == "thoughts_token_count" else
@@ -122,6 +128,29 @@ class FollowupValidationTests(unittest.TestCase):
             failures = [row for row in _summary_checks(output, plan, records, reviews) if not row["passed"]]
             self.assertEqual(len(failures), 1)
             self.assertIn("candidates_token_count_std", failures[0]["check"])
+            summaries["control_top5"][0]["candidates_token_count_std"] = 1
+            # MAX_TOKENS도 고정된 3회 시행 중 하나다. 8192를 버려 평균을 줄이거나
+            # 정상 STOP만의 토큰 평균을 전체 평균이라고 표시하면 독립 검증이 실패한다.
+            target = next(row for row in records if row["id"] == CONTROL_IDS[0]
+                          and row["condition"] == "F" and row["repeat"] == 1)
+            target["status"] = "truncated_response"
+            target["evaluation"]["correct"] = None
+            target["usage"]["candidates_token_count"] = 8192
+            reviews[CONTROL_IDS[0], "F", 1]["math_status"] = "uncertain"
+            cell = next(row for row in summaries["control_top5"] if row["id"] == CONTROL_IDS[0] and row["condition"] == "F")
+            cell.update(success_count=2, graded_count=2, correct_count=1, ungradable_count=1,
+                        incomplete_count=1, truncated_count=1, math_appropriate_count=0,
+                        math_uncertain_count=2, reviewed_math_count=1)
+            vals = (8192, 2, 3)
+            avg = sum(vals) / 3
+            cell.update(candidates_token_count_sum=sum(vals), candidates_token_count_mean=avg,
+                        candidates_token_count_min=2, candidates_token_count_max=8192,
+                        candidates_token_count_std=math.sqrt(sum((x - avg) ** 2 for x in vals) / 2))
+            pair = next(row for row in paired if row["id"] == CONTROL_IDS[0] and row["repeat"] == 1 and row["pair"] == "F-D")
+            pair["candidates_token_count_difference"] = 8191
+            write(output / "control_top5/summary.csv", summaries["control_top5"])
+            write(output / "control_top5/paired_differences.csv", paired)
+            self.assertTrue(all(row["passed"] for row in _summary_checks(output, plan, records, reviews)))
 
 
 if __name__ == "__main__":
