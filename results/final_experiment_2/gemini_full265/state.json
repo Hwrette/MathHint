@@ -1,7 +1,7 @@
 {
-  "status": "daily_quota_exhausted",
-  "reason": "API가 일일 할당량 소진을 보고했습니다. 장시간 대기하지 않습니다.",
-  "updated_at": "2026-11-11T10:22:38.726417+00:00",
+  "status": "partial_complete",
+  "reason": "전체265 요청 감사·정확 재사용 완료. 실제 API 환경은 별도 확인합니다.",
+  "updated_at": "2026-11-12T12:47:26.300006+00:00",
   "config_id": "054e3feed73f033e910825c35d9a7332fb90a161d453525bb63edccce42a7cbe",
   "split": "all",
   "experiment_scope": "full265",
@@ -445,7 +445,7 @@
   "new_successes": 689,
   "safe_to_resume": true,
   "resume_command": "python -m mathhint_solver.final_experiment_2.gemini_full265 generate --condition-order ABDC",
-  "resume_prerequisites": "공급자 실제 일일 제한/초기화 또는 로컬rolling24h 상한을 확인",
+  "resume_prerequisites": "기록된 대기시간과 실행 예산을 확인하고 미완료만 실행",
   "provider_daily_reset_time": null,
   "provider_quota_observation": {
     "status_code": 429,
@@ -487,34 +487,5 @@
   },
   "resume_note": "성공 요청은 해시를 검증해 재사용한다. 환경 종료 후 자동 예약은 설정하지 않았다.",
   "user_authorized_additional_train185": true,
-  "training_scope_note": "train185는 모델 가중치 학습에 사용된 문항의 예측이다. 전체265 혼합값은 독립 테스트 성능이 아니다.",
-  "limiter": {
-    "new_request_starts": 7,
-    "rolling_minute_starts": 6,
-    "rolling_hour_starts": 236,
-    "rolling_24h_starts": 978,
-    "status": "daily_quota_exhausted",
-    "reason": "API가 일일 할당량 소진을 보고했습니다. 장시간 대기하지 않습니다.",
-    "daily_quota_reported": true,
-    "cooldown_remaining_seconds": 77842.39195661101,
-    "service_cooldown_remaining_seconds": 0,
-    "resume_cooldown_note": "absolute recorded delays restored; legacy events preserve only recorded backoff, not unrecorded provider timing; daily reset remains unconfirmed",
-    "policy": {
-      "interval_seconds": 10.0,
-      "workers": 1,
-      "rpm": 6,
-      "rph": 360,
-      "rpd": 1400,
-      "max_new_requests": 80,
-      "max_run_seconds": 3600.0,
-      "max_wait_seconds": 120.0,
-      "max_attempts": 2,
-      "http_timeout_ms": 180000,
-      "provider_limits_confirmed": false,
-      "limits_note": "user-authorized local safety cap for full265 extension; not a confirmed provider quota; old and new request starts share rolling windows",
-      "user_authorized_additional_requests": 740,
-      "condition_order": "ABDC"
-    },
-    "provider_quota_confirmation": "not inferred from local caps"
-  }
+  "training_scope_note": "train185는 모델 가중치 학습에 사용된 문항의 예측이다. 전체265 혼합값은 독립 테스트 성능이 아니다."
 }

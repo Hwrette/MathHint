@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-11-11T10:21:35.417363+00:00",
+  "checked_at": "2026-11-12T12:47:26.325116+00:00",
   "config_id": "054e3feed73f033e910825c35d9a7332fb90a161d453525bb63edccce42a7cbe",
   "requested_model": "gemini-3.1-flash-lite",
   "generation_calls": 0,
   "non_generation_network_calls": 1,
   "expected_requests": 1060,
-  "successful_saved": 1003,
-  "new_requests_needed": 57,
+  "successful_saved": 1009,
+  "new_requests_needed": 51,
   "preparation": {
     "dry_run": {
       "mocked_sdk_calls": 1060,
@@ -20,79 +20,31 @@
     "reuse": {
       "imported": 0,
       "requests": [],
-      "review_records": 1003,
+      "review_records": 1009,
       "source_path": "results/final_experiment_2/gemini_comparison",
       "note": "Only exact successful SDK requests reused; original outputs/usage/times/grades and separately hash-bound AI reviews preserved."
     },
     "state": {
       "status": "partial_complete",
       "reason": "전체265 요청 감사·정확 재사용 완료. 실제 API 환경은 별도 확인합니다.",
-      "updated_at": "2026-11-11T10:21:35.395406+00:00",
+      "updated_at": "2026-11-12T12:47:26.300006+00:00",
       "config_id": "054e3feed73f033e910825c35d9a7332fb90a161d453525bb63edccce42a7cbe",
       "split": "all",
       "experiment_scope": "full265",
       "expected_requests": 1060,
-      "successful_requests": 1003,
-      "failed_requests": 0,
-      "saved_responses": 1003,
-      "response_log_entries": 1005,
-      "pending_count": 57,
+      "successful_requests": 1009,
+      "failed_requests": 1,
+      "saved_responses": 1010,
+      "response_log_entries": 1012,
+      "pending_count": 51,
       "pending_requests": [
-        {
-          "id": "trig_1_047",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "ef0b8c82648a2db05f73bd6c3559fdee2aa887ad5ab3f80937e9346e992945bc",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "trig_1_048",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "0d9c588ef5706c8e632e40b165b03db11f43901f6d5a6edef230d98404302497",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "trig_2_001",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "ca680440ce7f3ab78ab590fcfdd8e2fc9932f8e6be170d8558b2e31146fcc531",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "trig_2_002",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "e107f352811f025f1b126e214a09bfb2a03f0319fef8413f5ae44e054d83ec4d",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "trig_2_004",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "129d4a57f3f88ed94b0470dc488c38ea85f45f10909cb2888e401a3beb3ca39c",
-          "last_status": "not_executed"
-        },
-        {
-          "id": "trig_2_005",
-          "condition": "C",
-          "method": "deep_learning_hint",
-          "split": "train",
-          "request_sha256": "19586c37af625afaab32fbc220300a9795b40e292b311d0b6e9324f3215d9bb0",
-          "last_status": "not_executed"
-        },
         {
           "id": "trig_2_006",
           "condition": "C",
           "method": "deep_learning_hint",
           "split": "train",
           "request_sha256": "a258a0bfc31f445fce7498c642535106569f8a863b72a3d737468862206a1cdb",
-          "last_status": "not_executed"
+          "last_status": "stopped_after_attempt"
         },
         {
           "id": "trig_2_008",
@@ -503,8 +455,8 @@
         },
         "train": {
           "expected_requests": 740,
-          "successful_requests": 683,
-          "pending_requests": 57
+          "successful_requests": 689,
+          "pending_requests": 51
         }
       },
       "condition_order": "ABDC",
@@ -512,11 +464,11 @@
       "pending_by_condition": {
         "A": 0,
         "B": 0,
-        "C": 57,
+        "C": 51,
         "D": 0
       },
       "reused_successes": 320,
-      "new_successes": 683,
+      "new_successes": 689,
       "safe_to_resume": true,
       "resume_command": "python -m mathhint_solver.final_experiment_2.gemini_full265 generate --condition-order ABDC",
       "resume_prerequisites": "기록된 대기시간과 실행 예산을 확인하고 미완료만 실행",
@@ -531,32 +483,32 @@
             "quota_metric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
             "quota_value": 500,
             "quota_dimensions": {
-              "location": "global",
-              "model": "gemini-3.1-flash-lite"
+              "model": "gemini-3.1-flash-lite",
+              "location": "global"
             },
             "description": "Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits."
           }
         ],
-        "retry_info_delay_seconds": 26943.0,
-        "observed_at": "2026-11-11T00:30:56.860528+00:00",
+        "retry_info_delay_seconds": 77843.0,
+        "observed_at": "2026-11-11T10:22:37.121238+00:00",
         "observed_at_source": "quota_error event",
-        "earliest_retry_from_response": "2026-11-11T07:59:59.860528+00:00",
-        "recorded_cooldown_until": "2026-11-11T08:00:00.861426+00:00",
+        "earliest_retry_from_response": "2026-11-12T08:00:00.121238+00:00",
+        "recorded_cooldown_until": "2026-11-12T08:00:01.122136+00:00",
         "confirmed_daily_reset": false,
         "provider_full_limits_confirmed": false,
         "note": "과거429의 관측값이다. RetryInfo 만료는 재시도 가능 최저 시각이며 일일 초기화 보장이 아니다. 기록된 제한기 대기에는 별도 안전 여유가 있다. 전체 공급자 한도·현재 잔여량은 미확인이다.",
         "source": {
-          "execution_id": "2026-11-11T003046_149177+0000",
-          "id": "diff_2_022",
-          "condition": "D",
+          "execution_id": "2026-11-11T102136_136562+0000",
+          "id": "trig_2_006",
+          "condition": "C",
           "response_log": "responses.jsonl",
-          "response_record_sha256": "4b456e5875c3e58257592db56a68211c8044b3142336fcd1c9b65adbbae8df88",
-          "request_sha256": "35e988dd74851f8d184dac257b0d01bc9dcfe72be04bbba65246b024f0439b48",
+          "response_record_sha256": "3891e7d10ffb47333eb0ae8879a1dd566e66e55130e105687b426a148892f8cf",
+          "request_sha256": "a258a0bfc31f445fce7498c642535106569f8a863b72a3d737468862206a1cdb",
           "attempt_index": 1,
-          "attempt_sha256": "523121b96d1a2cb2a8ebd371504a8c6e188b1c7521b7cc649113f3a4dd43ca0b",
+          "attempt_sha256": "1a69cc1bc8ba811d35b443eae6e07550e420c8a7d3cf3bf933db5ec58653e426",
           "event_log": "execution_runs/request_events.jsonl",
-          "quota_event_sha256": "bd737a8b440e5bb377b83118f2c002ef76b06ebd529b20398b92ae25f9eefd7f",
-          "cooldown_event_sha256": "da4da96c096d86e2fc75e2eababbc4193650f6614457d8b412015073371d407a"
+          "quota_event_sha256": "e4731e5978b93bcb941ef1eaf39e0381eaeaa02740641842a61367924bc043d4",
+          "cooldown_event_sha256": "0c2a1d1bca1f1ac1fa72655e08222f6ac808b1da6100e81e0cc42386ab41a48e"
         }
       },
       "resume_note": "성공 요청은 해시를 검증해 재사용한다. 환경 종료 후 자동 예약은 설정하지 않았다.",
