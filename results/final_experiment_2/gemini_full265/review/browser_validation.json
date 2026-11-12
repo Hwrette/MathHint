@@ -1,692 +1,24 @@
 {
   "schema_version": 1,
-  "performed": false,
-  "passed": null,
-  "checked_at": "2026-11-12T12:47:42.196723+00:00",
-  "reason": "남은 C 응답 생성 후 바뀔 보고서는 최종 동결본에서 다시 실제 브라우저 검사한다. 이전 완료 QA는 아래 보존.",
+  "performed": true,
+  "passed": true,
+  "checked_at": "2026-11-12T13:04:16.731951+00:00",
+  "report_path": "results/final_experiment_2/gemini_full265/report.html",
+  "report_sha256": "08d9b90b4af1d3d50698863968cc621e5644def283814a735cdb5f2ba738664d",
+  "execution_scope": "Read-only saved HTML/assets; temporary loopback server; external requests intercepted and blocked; no report generation, API, training, or repository writes.",
   "previous_completed_validation": {
     "schema_version": 1,
-    "performed": true,
-    "passed": true,
-    "checked_at": "2026-11-11T10:26:52.926080+00:00",
-    "report_path": "results/final_experiment_2/gemini_full265/report.html",
-    "report_sha256": "abf9928e6b1464784f1b1c3da4886c54761e649e7435599e05114c617d4d543c",
-    "assets_sha256": {
-      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_AMS-Regular.woff2": "0cdd387c9590a1a9f9794560022dbb59654a7d86f187aa0c81495ad42d3a7308",
-      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Bold.woff2": "0f60d1b897938ec918c8ce073092411baf9438f6739465693ff18b0f9d20b021",
-      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Regular.woff2": "c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866",
-      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Math-Italic.woff2": "7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264",
-      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size1-Regular.woff2": "6b47c40166b6dbe21a5dfca7718413f2147fd2399be1ba605d8ad39cedf25dfe",
-      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size2-Regular.woff2": "d04c54219f9eaec6d4d4fd42dfb28785975a4794d6b2fc71e566b9cd6db842dd",
-      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size3-Regular.woff2": "73d591271b1604960cb10bb90fee021670af7297017e0e98480b332d11f51995",
-      "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size4-Regular.woff2": "a4af7d414440a1c1790825cfb700cf9cf43b0f2c4b04f0ebc523011ad9853ec0",
-      "mathhint_analysis/viewer_assets/vendor/katex.min.css": "b075123b50e51a0a7819b49efa2a62bb05bc7dac04b0d65a9a3799c2211ea48f",
-      "mathhint_analysis/viewer_assets/vendor/katex.min.js": "e8d885505949f3a5f4abdd5dd0d53696bd1371ad26ffbf4f310dcd77c8cdae89",
-      "mathhint_analysis/viewer_assets/vendor/markdown-it.min.js": "38c70a1e7ca91ab40e2d9e6e60129851a717ed1c7d4acbbdd41bf9503791cf68",
-      "results/final_experiment_2/gemini_full265/report.html": "abf9928e6b1464784f1b1c3da4886c54761e649e7435599e05114c617d4d543c",
-      "results/final_experiment_2/gemini_full265/viewer_assets/viewer.css": "156268a9bdb2164cf76d59f7ddf2c915447cce7250a6fcfb9ad75b2f0e4c1c84",
-      "results/final_experiment_2/gemini_full265/viewer_assets/viewer.js": "d59b7924012bd8028b25db0e323abd1b571fab1065a11c76c377a04c00cbbbce"
-    },
-    "viewports": [
-      {
-        "label": "desktop",
-        "width": 1600,
-        "height": 1000,
-        "card_count": 4,
-        "document_width": 1600,
-        "grid_columns": "554.438px 554.453px",
-        "comparison_columns": "395.109px 1128.89px",
-        "card_rectangles": [
-          {
-            "method": "baseline",
-            "x": 443.109375,
-            "width": 554.4375
-          },
-          {
-            "method": "regression_hint",
-            "x": 1017.546875,
-            "width": 554.453125
-          },
-          {
-            "method": "deep_learning_hint",
-            "x": 443.109375,
-            "width": 554.4375
-          },
-          {
-            "method": "oracle_hint",
-            "x": 1017.546875,
-            "width": 554.453125
-          }
-        ]
-      },
-      {
-        "label": "mobile390",
-        "width": 390,
-        "height": 844,
-        "card_count": 4,
-        "document_width": 390,
-        "grid_columns": "366px",
-        "comparison_columns": "366px",
-        "card_rectangles": [
-          {
-            "method": "baseline",
-            "x": 12,
-            "width": 366
-          },
-          {
-            "method": "regression_hint",
-            "x": 12,
-            "width": 366
-          },
-          {
-            "method": "deep_learning_hint",
-            "x": 12,
-            "width": 366
-          },
-          {
-            "method": "oracle_hint",
-            "x": 12,
-            "width": 366
-          }
-        ]
-      }
-    ],
-    "checks": {
-      "265_unique_questions": true,
-      "four_ABCD_methods": true,
-      "all265_expected_generation": true,
-      "all265_default": true,
-      "first_default_is_first_train_ID": true,
-      "all1060_condition_rows": true,
-      "train185_test80_split_partition": true,
-      "status_counts_match_saved_state": true,
-      "old320_fullraw_semantic_fields_exact": true,
-      "all_review_states_equal_saved_review_CSV": true,
-      "verified_corrected_key_separate_from_original": true,
-      "local_math_markdown_loaded": true,
-      "asset_warning_hidden": true,
-      "in_sample_generalization_scope_notice": true,
-      "desktop_responsive_four_cards": true,
-      "desktop_untouched_pending_saved_status_distinct": true,
-      "desktop_failed_or_stopped_saved_status_distinct": true,
-      "desktop_new_correct_answer_reasoning_suspect_saved_status_distinct": true,
-      "desktop_reused_correct_answer_reasoning_suspect_saved_status_distinct": true,
-      "desktop_ungraded_success_saved_status_distinct": true,
-      "desktop_ungraded_success_not_correct_or_wrong": true,
-      "desktop_C_only_correct_saved_status_distinct": true,
-      "desktop_answer_key_conflict_saved_status_distinct": true,
-      "desktop_original_key_AI_supplemental_source_distinct": true,
-      "desktop_all21_known_filter_options": true,
-      "desktop_ID_search": true,
-      "desktop_taxonomy_unit_filter": true,
-      "desktop_next_navigation": true,
-      "desktop_previous_navigation": true,
-      "mobile390_responsive_four_cards": true,
-      "mobile390_untouched_pending_saved_status_distinct": true,
-      "mobile390_failed_or_stopped_saved_status_distinct": true,
-      "mobile390_new_correct_answer_reasoning_suspect_saved_status_distinct": true,
-      "mobile390_reused_correct_answer_reasoning_suspect_saved_status_distinct": true,
-      "mobile390_ungraded_success_saved_status_distinct": true,
-      "mobile390_ungraded_success_not_correct_or_wrong": true,
-      "mobile390_C_only_correct_saved_status_distinct": true,
-      "mobile390_answer_key_conflict_saved_status_distinct": true,
-      "mobile390_original_key_AI_supplemental_source_distinct": true,
-      "mobile390_all21_known_filter_options": true,
-      "mobile390_ID_search": true,
-      "mobile390_taxonomy_unit_filter": true,
-      "mobile390_next_navigation": true,
-      "mobile390_previous_navigation": true,
-      "HTML_and_all_assets_unchanged": true,
-      "all_compared_saved_inputs_unchanged": true,
-      "all_loaded_assets_repo_local_and_HTTP200": true,
-      "exactly14_loaded_local_assets": true,
-      "no_external_or_browser_errors": true
-    },
-    "desktop_all265": {
-      "questions_scanned": 265,
-      "cards_scanned": 1060,
-      "math_nodes_rendered_total": 30478,
-      "question_card_counts": [],
-      "math_render_errors": [],
-      "horizontal_overflow_ids": [],
-      "status_mismatches": [],
-      "answer_mismatches": [],
-      "review_mismatches": [],
-      "usage_mismatches": [],
-      "hint_label_mismatches": [],
-      "raw_output_mismatches": [],
-      "raw_system_mismatches": [],
-      "raw_input_mismatches": [],
-      "raw_usage_mismatches": [],
-      "raw_hint_mismatches": [],
-      "raw_problem_mismatches": [],
-      "raw_reference_solution_mismatches": [],
-      "raw_identifier_mismatches": [],
-      "raw_generation_settings_mismatches": [],
-      "non_success_boolean_grade_errors": [],
-      "supplemental_notice_mismatches": []
-    },
-    "mobile390_all265": {
-      "questions_scanned": 265,
-      "cards_scanned": 1060,
-      "math_nodes_rendered_total": 30478,
-      "question_card_counts": [],
-      "math_render_errors": [],
-      "horizontal_overflow_ids": [],
-      "status_mismatches": [],
-      "answer_mismatches": [],
-      "review_mismatches": [],
-      "usage_mismatches": [],
-      "hint_label_mismatches": [],
-      "raw_output_mismatches": [],
-      "raw_system_mismatches": [],
-      "raw_input_mismatches": [],
-      "raw_usage_mismatches": [],
-      "raw_hint_mismatches": [],
-      "raw_problem_mismatches": [],
-      "raw_reference_solution_mismatches": [],
-      "raw_identifier_mismatches": [],
-      "raw_generation_settings_mismatches": [],
-      "non_success_boolean_grade_errors": [],
-      "supplemental_notice_mismatches": []
-    },
-    "filter_results": {
-      "desktop": {
-        "test": {
-          "expected_count": 80,
-          "actual_count": 80,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "changed": {
-          "expected_count": 8,
-          "actual_count": 8,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "answers": {
-          "expected_count": 10,
-          "actual_count": 10,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "A_correct_B_wrong": {
-          "expected_count": 2,
-          "actual_count": 2,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "A_correct_C_wrong": {
-          "expected_count": 1,
-          "actual_count": 1,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "B_only_correct": {
-          "expected_count": 1,
-          "actual_count": 1,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "C_only_correct": {
-          "expected_count": 1,
-          "actual_count": 1,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "D_only_correct": {
-          "expected_count": 0,
-          "actual_count": 0,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "all_wrong": {
-          "expected_count": 2,
-          "actual_count": 2,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "D_wrong": {
-          "expected_count": 8,
-          "actual_count": 8,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "reasoning_suspected": {
-          "expected_count": 32,
-          "actual_count": 32,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "answer_key_conflict": {
-          "expected_count": 1,
-          "actual_count": 1,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "possible_alternative": {
-          "expected_count": 47,
-          "actual_count": 47,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "review_pending": {
-          "expected_count": 0,
-          "actual_count": 0,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "large_token_change": {
-          "expected_count": 44,
-          "actual_count": 44,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "incomplete": {
-          "expected_count": 0,
-          "actual_count": 0,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "ungraded": {
-          "expected_count": 1,
-          "actual_count": 1,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "api_error": {
-          "expected_count": 1,
-          "actual_count": 1,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "not_run": {
-          "expected_count": 50,
-          "actual_count": 50,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "train": {
-          "expected_count": 185,
-          "actual_count": 185,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "all": {
-          "expected_count": 265,
-          "actual_count": 265,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        }
-      },
-      "mobile390": {
-        "test": {
-          "expected_count": 80,
-          "actual_count": 80,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "changed": {
-          "expected_count": 8,
-          "actual_count": 8,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "answers": {
-          "expected_count": 10,
-          "actual_count": 10,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "A_correct_B_wrong": {
-          "expected_count": 2,
-          "actual_count": 2,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "A_correct_C_wrong": {
-          "expected_count": 1,
-          "actual_count": 1,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "B_only_correct": {
-          "expected_count": 1,
-          "actual_count": 1,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "C_only_correct": {
-          "expected_count": 1,
-          "actual_count": 1,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "D_only_correct": {
-          "expected_count": 0,
-          "actual_count": 0,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "all_wrong": {
-          "expected_count": 2,
-          "actual_count": 2,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "D_wrong": {
-          "expected_count": 8,
-          "actual_count": 8,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "reasoning_suspected": {
-          "expected_count": 32,
-          "actual_count": 32,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "answer_key_conflict": {
-          "expected_count": 1,
-          "actual_count": 1,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "possible_alternative": {
-          "expected_count": 47,
-          "actual_count": 47,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "review_pending": {
-          "expected_count": 0,
-          "actual_count": 0,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "large_token_change": {
-          "expected_count": 44,
-          "actual_count": 44,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "incomplete": {
-          "expected_count": 0,
-          "actual_count": 0,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "ungraded": {
-          "expected_count": 1,
-          "actual_count": 1,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "api_error": {
-          "expected_count": 1,
-          "actual_count": 1,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "not_run": {
-          "expected_count": 50,
-          "actual_count": 50,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "train": {
-          "expected_count": 185,
-          "actual_count": 185,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        },
-        "all": {
-          "expected_count": 265,
-          "actual_count": 265,
-          "missing_ids": [],
-          "extra_ids": [],
-          "passed": true
-        }
-      }
-    },
-    "saved_data_statuses": {
-      "success": 1009,
-      "stopped_after_attempt": 1,
-      "not_run": 50
-    },
-    "saved_split_counts": {
-      "train": 185,
-      "test": 80
-    },
-    "saved_success_review_statuses": {
-      "appropriate": 947,
-      "inappropriate": 62
-    },
-    "condition_status_counts": {
-      "A": {
-        "success": 265
-      },
-      "B": {
-        "success": 265
-      },
-      "C": {
-        "success": 214,
-        "stopped_after_attempt": 1,
-        "not_run": 50
-      },
-      "D": {
-        "success": 265
-      }
-    },
-    "saved_state_status": "daily_quota_exhausted",
-    "reused_old_test_value_mismatches": [],
-    "review_CSV_payload_mismatches": [],
-    "separate_corrected_key_mismatches": [],
-    "representative_case_selection": {
-      "untouched_pending": {
-        "id": "trig_2_008",
-        "method": "deep_learning_hint",
-        "condition": "C",
-        "status": "not_run"
-      },
-      "failed_or_stopped": {
-        "id": "trig_2_006",
-        "method": "deep_learning_hint",
-        "condition": "C",
-        "status": "stopped_after_attempt"
-      },
-      "new_correct_answer_reasoning_suspect": {
-        "id": "diff_1_006",
-        "method": "oracle_hint",
-        "condition": "D",
-        "status": "success"
-      },
-      "reused_correct_answer_reasoning_suspect": {
-        "id": "diff_1_005",
-        "method": "regression_hint",
-        "condition": "B",
-        "status": "success"
-      },
-      "ungraded_success": {
-        "id": "trig_1_044",
-        "method": "regression_hint",
-        "condition": "B",
-        "status": "success"
-      },
-      "C_only_correct": {
-        "id": "trig_1_047",
-        "method": "deep_learning_hint",
-        "condition": "C",
-        "status": "success"
-      },
-      "answer_key_conflict": {
-        "id": "trig_1_010",
-        "method": "baseline",
-        "condition": "A",
-        "status": "success"
-      }
-    },
-    "local_assets": [
-      {
-        "repo_relative_path": "results/final_experiment_2/gemini_full265/report.html",
-        "status": 200
-      },
-      {
-        "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/katex.min.css",
-        "status": 200
-      },
-      {
-        "repo_relative_path": "results/final_experiment_2/gemini_full265/viewer_assets/viewer.css",
-        "status": 200
-      },
-      {
-        "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/markdown-it.min.js",
-        "status": 200
-      },
-      {
-        "repo_relative_path": "results/final_experiment_2/gemini_full265/viewer_assets/viewer.js",
-        "status": 200
-      },
-      {
-        "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/katex.min.js",
-        "status": 200
-      },
-      {
-        "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Math-Italic.woff2",
-        "status": 200
-      },
-      {
-        "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size3-Regular.woff2",
-        "status": 200
-      },
-      {
-        "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Regular.woff2",
-        "status": 200
-      },
-      {
-        "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size2-Regular.woff2",
-        "status": 200
-      },
-      {
-        "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size1-Regular.woff2",
-        "status": 200
-      },
-      {
-        "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size4-Regular.woff2",
-        "status": 200
-      },
-      {
-        "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_AMS-Regular.woff2",
-        "status": 200
-      },
-      {
-        "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Bold.woff2",
-        "status": 200
-      }
-    ],
-    "external_requests": [],
-    "pageerrors": [],
-    "consoleerrors": [],
-    "request_failures": [],
-    "temporary_server_shutdown": true,
-    "execution_scope": "Read-only frozen saved HTML/assets/data; temporary loopback server; external requests intercepted/blocked. No report, verify, generation, API, model, repository writes, or imports that trigger experiment code.",
-    "visual_inspection": {
-      "performed": true,
-      "screenshots_opened": [
-        "/tmp/mathhint_full265_abd_final_desktop_default_all_top.png",
-        "/tmp/mathhint_full265_abd_final_desktop_untouched_pending_card_top.png",
-        "/tmp/mathhint_full265_abd_final_desktop_failed_or_stopped_card_top.png",
-        "/tmp/mathhint_full265_abd_final_desktop_new_correct_answer_reasoning_suspect_card_top.png",
-        "/tmp/mathhint_full265_abd_final_desktop_new_correct_answer_reasoning_suspect_review.png",
-        "/tmp/mathhint_full265_abd_final_desktop_reused_correct_answer_reasoning_suspect_card_top.png",
-        "/tmp/mathhint_full265_abd_final_desktop_reused_correct_answer_reasoning_suspect_review.png",
-        "/tmp/mathhint_full265_abd_final_desktop_ungraded_success_card_top.png",
-        "/tmp/mathhint_full265_abd_final_desktop_C_only_correct_card_top.png",
-        "/tmp/mathhint_full265_abd_final_desktop_answer_key_conflict_card_top.png",
-        "/tmp/mathhint_full265_abd_final_desktop_key_conflict_original_and_AI_notice.png",
-        "/tmp/mathhint_full265_abd_final_mobile390_default_all_top.png",
-        "/tmp/mathhint_full265_abd_final_mobile390_untouched_pending_card_top.png",
-        "/tmp/mathhint_full265_abd_final_mobile390_failed_or_stopped_card_top.png",
-        "/tmp/mathhint_full265_abd_final_mobile390_new_correct_answer_reasoning_suspect_card_top.png",
-        "/tmp/mathhint_full265_abd_final_mobile390_new_correct_answer_reasoning_suspect_review.png",
-        "/tmp/mathhint_full265_abd_final_mobile390_reused_correct_answer_reasoning_suspect_card_top.png",
-        "/tmp/mathhint_full265_abd_final_mobile390_reused_correct_answer_reasoning_suspect_review.png",
-        "/tmp/mathhint_full265_abd_final_mobile390_ungraded_success_card_top.png",
-        "/tmp/mathhint_full265_abd_final_mobile390_C_only_correct_card_top.png",
-        "/tmp/mathhint_full265_abd_final_mobile390_answer_key_conflict_card_top.png",
-        "/tmp/mathhint_full265_abd_final_mobile390_key_conflict_original_and_AI_notice.png"
-      ],
-      "screenshot_count": 22,
-      "findings": [],
-      "scope": "All22 representative screenshots actually opened by this browser QA agent (18) and its read-only visual reviewer (4). Desktop/mobile default first train question, C-only pending, C quota failure, original/AI key conflict, new and reused correct-final/reasoning-error distinctions, successful-ungraded B answer, and C-only-correct case were inspected. Korean labels, badges, final answers, equations, review reasons and missing values were readable without visible overlap or document-wide horizontal clipping. Automated DOM scans cover all265 questions; no claim that a human mathematically verified all expressions.",
-      "independent_visual_reviewer": {
-        "screenshots_opened": [
-          "/tmp/mathhint_full265_abd_final_desktop_ungraded_success_card_top.png",
-          "/tmp/mathhint_full265_abd_final_desktop_C_only_correct_card_top.png",
-          "/tmp/mathhint_full265_abd_final_mobile390_ungraded_success_card_top.png",
-          "/tmp/mathhint_full265_abd_final_mobile390_C_only_correct_card_top.png"
-        ],
-        "findings": [],
-        "observations": "Both viewports distinguish B/trig_1_044 ungraded badge from verbatim numeric12 answer. C/trig_1_047 shows correct69; desktop also shows D wrong42. A44/B56 are verified by the saved payload and full DOM scan; these screenshots do not visually show those two cards."
-      },
-      "source_bindings_rechecked_after_visual_review": true
-    },
-    "limitations": [
-      "Actual browser rendering/data fidelity and representative screenshots do not constitute human mathematical confirmation of every generated solution.",
-      "Loopback HTTP testing uses actual repository files and blocks external requests; it does not guarantee browser file:// policy on other environments."
-    ],
-    "visual_screenshots_reviewed": 22,
-    "filter_check_count": 42,
-    "evidence_json_sha256": "81a7f4050a32849c12c6ef73a0b971e26748857cd87ce86ddf2215e399f0023d",
-    "check_script_sha256": "81ba9c9d4ab43f464ca24d44fd52040c7680774e0b7a3e4f158e8734a0a309a1",
+    "performed": false,
+    "passed": null,
+    "checked_at": "2026-11-12T12:47:42.196723+00:00",
+    "reason": "남은 C 응답 생성 후 바뀔 보고서는 최종 동결본에서 다시 실제 브라우저 검사한다. 이전 완료 QA는 아래 보존.",
     "previous_completed_validation": {
       "schema_version": 1,
       "performed": true,
       "passed": true,
-      "checked_at": "2026-11-11T00:40:24.564482+00:00",
+      "checked_at": "2026-11-11T10:26:52.926080+00:00",
       "report_path": "results/final_experiment_2/gemini_full265/report.html",
-      "report_sha256": "968e869a68d9bfc1334842f427263c4f6b931de9a9af6362f1941df6a094a3d4",
+      "report_sha256": "abf9928e6b1464784f1b1c3da4886c54761e649e7435599e05114c617d4d543c",
       "assets_sha256": {
         "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_AMS-Regular.woff2": "0cdd387c9590a1a9f9794560022dbb59654a7d86f187aa0c81495ad42d3a7308",
         "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Bold.woff2": "0f60d1b897938ec918c8ce073092411baf9438f6739465693ff18b0f9d20b021",
@@ -699,7 +31,7 @@
         "mathhint_analysis/viewer_assets/vendor/katex.min.css": "b075123b50e51a0a7819b49efa2a62bb05bc7dac04b0d65a9a3799c2211ea48f",
         "mathhint_analysis/viewer_assets/vendor/katex.min.js": "e8d885505949f3a5f4abdd5dd0d53696bd1371ad26ffbf4f310dcd77c8cdae89",
         "mathhint_analysis/viewer_assets/vendor/markdown-it.min.js": "38c70a1e7ca91ab40e2d9e6e60129851a717ed1c7d4acbbdd41bf9503791cf68",
-        "results/final_experiment_2/gemini_full265/report.html": "968e869a68d9bfc1334842f427263c4f6b931de9a9af6362f1941df6a094a3d4",
+        "results/final_experiment_2/gemini_full265/report.html": "abf9928e6b1464784f1b1c3da4886c54761e649e7435599e05114c617d4d543c",
         "results/final_experiment_2/gemini_full265/viewer_assets/viewer.css": "156268a9bdb2164cf76d59f7ddf2c915447cce7250a6fcfb9ad75b2f0e4c1c84",
         "results/final_experiment_2/gemini_full265/viewer_assets/viewer.js": "d59b7924012bd8028b25db0e323abd1b571fab1065a11c76c377a04c00cbbbce"
       },
@@ -769,37 +101,51 @@
       ],
       "checks": {
         "265_unique_questions": true,
+        "four_ABCD_methods": true,
         "all265_expected_generation": true,
         "all265_default": true,
         "first_default_is_first_train_ID": true,
         "all1060_condition_rows": true,
-        "all515_success_AI_reviewed_491_appropriate_24_suspected": true,
-        "515_success_1_stopped_failure_544_not_run": true,
-        "reused_test320_answer_review_usage_and_input_equal_old80": true,
+        "train185_test80_split_partition": true,
+        "status_counts_match_saved_state": true,
+        "old320_fullraw_semantic_fields_exact": true,
+        "all_review_states_equal_saved_review_CSV": true,
+        "verified_corrected_key_separate_from_original": true,
         "local_math_markdown_loaded": true,
         "asset_warning_hidden": true,
         "in_sample_generalization_scope_notice": true,
         "desktop_responsive_four_cards": true,
-        "desktop_pending_train_is_in_scope": true,
-        "desktop_correct_answer_reasoning_suspect_distinct": true,
-        "desktop_key_conflict_all4_distinct": true,
-        "desktop_new048_D_correct_answer_arithmetic_error_separate": true,
-        "desktop_quota022_D_failure_unknown_answer_and_usage": true,
+        "desktop_untouched_pending_saved_status_distinct": true,
+        "desktop_failed_or_stopped_saved_status_distinct": true,
+        "desktop_new_correct_answer_reasoning_suspect_saved_status_distinct": true,
+        "desktop_reused_correct_answer_reasoning_suspect_saved_status_distinct": true,
+        "desktop_ungraded_success_saved_status_distinct": true,
+        "desktop_ungraded_success_not_correct_or_wrong": true,
+        "desktop_C_only_correct_saved_status_distinct": true,
+        "desktop_answer_key_conflict_saved_status_distinct": true,
+        "desktop_original_key_AI_supplemental_source_distinct": true,
+        "desktop_all21_known_filter_options": true,
         "desktop_ID_search": true,
         "desktop_taxonomy_unit_filter": true,
         "desktop_next_navigation": true,
         "desktop_previous_navigation": true,
         "mobile390_responsive_four_cards": true,
-        "mobile390_pending_train_is_in_scope": true,
-        "mobile390_correct_answer_reasoning_suspect_distinct": true,
-        "mobile390_key_conflict_all4_distinct": true,
-        "mobile390_new048_D_correct_answer_arithmetic_error_separate": true,
-        "mobile390_quota022_D_failure_unknown_answer_and_usage": true,
+        "mobile390_untouched_pending_saved_status_distinct": true,
+        "mobile390_failed_or_stopped_saved_status_distinct": true,
+        "mobile390_new_correct_answer_reasoning_suspect_saved_status_distinct": true,
+        "mobile390_reused_correct_answer_reasoning_suspect_saved_status_distinct": true,
+        "mobile390_ungraded_success_saved_status_distinct": true,
+        "mobile390_ungraded_success_not_correct_or_wrong": true,
+        "mobile390_C_only_correct_saved_status_distinct": true,
+        "mobile390_answer_key_conflict_saved_status_distinct": true,
+        "mobile390_original_key_AI_supplemental_source_distinct": true,
+        "mobile390_all21_known_filter_options": true,
         "mobile390_ID_search": true,
         "mobile390_taxonomy_unit_filter": true,
         "mobile390_next_navigation": true,
         "mobile390_previous_navigation": true,
         "HTML_and_all_assets_unchanged": true,
+        "all_compared_saved_inputs_unchanged": true,
         "all_loaded_assets_repo_local_and_HTTP200": true,
         "exactly14_loaded_local_assets": true,
         "no_external_or_browser_errors": true
@@ -807,7 +153,7 @@
       "desktop_all265": {
         "questions_scanned": 265,
         "cards_scanned": 1060,
-        "math_nodes_rendered_total": 18888,
+        "math_nodes_rendered_total": 30478,
         "question_card_counts": [],
         "math_render_errors": [],
         "horizontal_overflow_ids": [],
@@ -820,12 +166,18 @@
         "raw_system_mismatches": [],
         "raw_input_mismatches": [],
         "raw_usage_mismatches": [],
-        "raw_hint_mismatches": []
+        "raw_hint_mismatches": [],
+        "raw_problem_mismatches": [],
+        "raw_reference_solution_mismatches": [],
+        "raw_identifier_mismatches": [],
+        "raw_generation_settings_mismatches": [],
+        "non_success_boolean_grade_errors": [],
+        "supplemental_notice_mismatches": []
       },
       "mobile390_all265": {
         "questions_scanned": 265,
         "cards_scanned": 1060,
-        "math_nodes_rendered_total": 18888,
+        "math_nodes_rendered_total": 30478,
         "question_card_counts": [],
         "math_render_errors": [],
         "horizontal_overflow_ids": [],
@@ -838,24 +190,16 @@
         "raw_system_mismatches": [],
         "raw_input_mismatches": [],
         "raw_usage_mismatches": [],
-        "raw_hint_mismatches": []
+        "raw_hint_mismatches": [],
+        "raw_problem_mismatches": [],
+        "raw_reference_solution_mismatches": [],
+        "raw_identifier_mismatches": [],
+        "raw_generation_settings_mismatches": [],
+        "non_success_boolean_grade_errors": [],
+        "supplemental_notice_mismatches": []
       },
       "filter_results": {
         "desktop": {
-          "all": {
-            "expected_count": 265,
-            "actual_count": 265,
-            "missing_ids": [],
-            "extra_ids": [],
-            "passed": true
-          },
-          "train": {
-            "expected_count": 185,
-            "actual_count": 185,
-            "missing_ids": [],
-            "extra_ids": [],
-            "passed": true
-          },
           "test": {
             "expected_count": 80,
             "actual_count": 80,
@@ -863,72 +207,23 @@
             "extra_ids": [],
             "passed": true
           },
-          "api_error": {
-            "expected_count": 1,
-            "actual_count": 1,
-            "missing_ids": [],
-            "extra_ids": [],
-            "passed": true
-          },
-          "not_run": {
-            "expected_count": 136,
-            "actual_count": 136,
-            "missing_ids": [],
-            "extra_ids": [],
-            "passed": true
-          },
-          "ungraded": {
-            "expected_count": 0,
-            "actual_count": 0,
-            "missing_ids": [],
-            "extra_ids": [],
-            "passed": true
-          },
-          "review_pending": {
-            "expected_count": 0,
-            "actual_count": 0,
-            "missing_ids": [],
-            "extra_ids": [],
-            "passed": true
-          },
-          "answer_key_conflict": {
-            "expected_count": 1,
-            "actual_count": 1,
-            "missing_ids": [],
-            "extra_ids": [],
-            "passed": true
-          },
-          "reasoning_suspected": {
-            "expected_count": 15,
-            "actual_count": 15,
-            "missing_ids": [],
-            "extra_ids": [],
-            "passed": true
-          },
-          "possible_alternative": {
-            "expected_count": 23,
-            "actual_count": 23,
-            "missing_ids": [],
-            "extra_ids": [],
-            "passed": true
-          },
           "changed": {
-            "expected_count": 2,
-            "actual_count": 2,
+            "expected_count": 8,
+            "actual_count": 8,
             "missing_ids": [],
             "extra_ids": [],
             "passed": true
           },
           "answers": {
-            "expected_count": 2,
-            "actual_count": 2,
+            "expected_count": 10,
+            "actual_count": 10,
             "missing_ids": [],
             "extra_ids": [],
             "passed": true
           },
           "A_correct_B_wrong": {
-            "expected_count": 1,
-            "actual_count": 1,
+            "expected_count": 2,
+            "actual_count": 2,
             "missing_ids": [],
             "extra_ids": [],
             "passed": true
@@ -941,15 +236,15 @@
             "passed": true
           },
           "B_only_correct": {
-            "expected_count": 0,
-            "actual_count": 0,
+            "expected_count": 1,
+            "actual_count": 1,
             "missing_ids": [],
             "extra_ids": [],
             "passed": true
           },
           "C_only_correct": {
-            "expected_count": 0,
-            "actual_count": 0,
+            "expected_count": 1,
+            "actual_count": 1,
             "missing_ids": [],
             "extra_ids": [],
             "passed": true
@@ -962,22 +257,50 @@
             "passed": true
           },
           "all_wrong": {
-            "expected_count": 1,
-            "actual_count": 1,
-            "missing_ids": [],
-            "extra_ids": [],
-            "passed": true
-          },
-          "D_wrong": {
             "expected_count": 2,
             "actual_count": 2,
             "missing_ids": [],
             "extra_ids": [],
             "passed": true
           },
+          "D_wrong": {
+            "expected_count": 8,
+            "actual_count": 8,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "reasoning_suspected": {
+            "expected_count": 32,
+            "actual_count": 32,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "answer_key_conflict": {
+            "expected_count": 1,
+            "actual_count": 1,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "possible_alternative": {
+            "expected_count": 47,
+            "actual_count": 47,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "review_pending": {
+            "expected_count": 0,
+            "actual_count": 0,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
           "large_token_change": {
-            "expected_count": 25,
-            "actual_count": 25,
+            "expected_count": 44,
+            "actual_count": 44,
             "missing_ids": [],
             "extra_ids": [],
             "passed": true
@@ -985,26 +308,47 @@
           "incomplete": {
             "expected_count": 0,
             "actual_count": 0,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "ungraded": {
+            "expected_count": 1,
+            "actual_count": 1,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "api_error": {
+            "expected_count": 1,
+            "actual_count": 1,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "not_run": {
+            "expected_count": 50,
+            "actual_count": 50,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "train": {
+            "expected_count": 185,
+            "actual_count": 185,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "all": {
+            "expected_count": 265,
+            "actual_count": 265,
             "missing_ids": [],
             "extra_ids": [],
             "passed": true
           }
         },
         "mobile390": {
-          "all": {
-            "expected_count": 265,
-            "actual_count": 265,
-            "missing_ids": [],
-            "extra_ids": [],
-            "passed": true
-          },
-          "train": {
-            "expected_count": 185,
-            "actual_count": 185,
-            "missing_ids": [],
-            "extra_ids": [],
-            "passed": true
-          },
           "test": {
             "expected_count": 80,
             "actual_count": 80,
@@ -1012,72 +356,23 @@
             "extra_ids": [],
             "passed": true
           },
-          "api_error": {
-            "expected_count": 1,
-            "actual_count": 1,
-            "missing_ids": [],
-            "extra_ids": [],
-            "passed": true
-          },
-          "not_run": {
-            "expected_count": 136,
-            "actual_count": 136,
-            "missing_ids": [],
-            "extra_ids": [],
-            "passed": true
-          },
-          "ungraded": {
-            "expected_count": 0,
-            "actual_count": 0,
-            "missing_ids": [],
-            "extra_ids": [],
-            "passed": true
-          },
-          "review_pending": {
-            "expected_count": 0,
-            "actual_count": 0,
-            "missing_ids": [],
-            "extra_ids": [],
-            "passed": true
-          },
-          "answer_key_conflict": {
-            "expected_count": 1,
-            "actual_count": 1,
-            "missing_ids": [],
-            "extra_ids": [],
-            "passed": true
-          },
-          "reasoning_suspected": {
-            "expected_count": 15,
-            "actual_count": 15,
-            "missing_ids": [],
-            "extra_ids": [],
-            "passed": true
-          },
-          "possible_alternative": {
-            "expected_count": 23,
-            "actual_count": 23,
-            "missing_ids": [],
-            "extra_ids": [],
-            "passed": true
-          },
           "changed": {
-            "expected_count": 2,
-            "actual_count": 2,
+            "expected_count": 8,
+            "actual_count": 8,
             "missing_ids": [],
             "extra_ids": [],
             "passed": true
           },
           "answers": {
-            "expected_count": 2,
-            "actual_count": 2,
+            "expected_count": 10,
+            "actual_count": 10,
             "missing_ids": [],
             "extra_ids": [],
             "passed": true
           },
           "A_correct_B_wrong": {
-            "expected_count": 1,
-            "actual_count": 1,
+            "expected_count": 2,
+            "actual_count": 2,
             "missing_ids": [],
             "extra_ids": [],
             "passed": true
@@ -1090,15 +385,15 @@
             "passed": true
           },
           "B_only_correct": {
-            "expected_count": 0,
-            "actual_count": 0,
+            "expected_count": 1,
+            "actual_count": 1,
             "missing_ids": [],
             "extra_ids": [],
             "passed": true
           },
           "C_only_correct": {
-            "expected_count": 0,
-            "actual_count": 0,
+            "expected_count": 1,
+            "actual_count": 1,
             "missing_ids": [],
             "extra_ids": [],
             "passed": true
@@ -1111,22 +406,50 @@
             "passed": true
           },
           "all_wrong": {
-            "expected_count": 1,
-            "actual_count": 1,
-            "missing_ids": [],
-            "extra_ids": [],
-            "passed": true
-          },
-          "D_wrong": {
             "expected_count": 2,
             "actual_count": 2,
             "missing_ids": [],
             "extra_ids": [],
             "passed": true
           },
+          "D_wrong": {
+            "expected_count": 8,
+            "actual_count": 8,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "reasoning_suspected": {
+            "expected_count": 32,
+            "actual_count": 32,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "answer_key_conflict": {
+            "expected_count": 1,
+            "actual_count": 1,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "possible_alternative": {
+            "expected_count": 47,
+            "actual_count": 47,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "review_pending": {
+            "expected_count": 0,
+            "actual_count": 0,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
           "large_token_change": {
-            "expected_count": 25,
-            "actual_count": 25,
+            "expected_count": 44,
+            "actual_count": 44,
             "missing_ids": [],
             "extra_ids": [],
             "passed": true
@@ -1134,6 +457,41 @@
           "incomplete": {
             "expected_count": 0,
             "actual_count": 0,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "ungraded": {
+            "expected_count": 1,
+            "actual_count": 1,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "api_error": {
+            "expected_count": 1,
+            "actual_count": 1,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "not_run": {
+            "expected_count": 50,
+            "actual_count": 50,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "train": {
+            "expected_count": 185,
+            "actual_count": 185,
+            "missing_ids": [],
+            "extra_ids": [],
+            "passed": true
+          },
+          "all": {
+            "expected_count": 265,
+            "actual_count": 265,
             "missing_ids": [],
             "extra_ids": [],
             "passed": true
@@ -1141,15 +499,82 @@
         }
       },
       "saved_data_statuses": {
-        "success": 515,
+        "success": 1009,
         "stopped_after_attempt": 1,
-        "not_run": 544
+        "not_run": 50
       },
       "saved_split_counts": {
         "train": 185,
         "test": 80
       },
-      "reused_test320_value_mismatches": [],
+      "saved_success_review_statuses": {
+        "appropriate": 947,
+        "inappropriate": 62
+      },
+      "condition_status_counts": {
+        "A": {
+          "success": 265
+        },
+        "B": {
+          "success": 265
+        },
+        "C": {
+          "success": 214,
+          "stopped_after_attempt": 1,
+          "not_run": 50
+        },
+        "D": {
+          "success": 265
+        }
+      },
+      "saved_state_status": "daily_quota_exhausted",
+      "reused_old_test_value_mismatches": [],
+      "review_CSV_payload_mismatches": [],
+      "separate_corrected_key_mismatches": [],
+      "representative_case_selection": {
+        "untouched_pending": {
+          "id": "trig_2_008",
+          "method": "deep_learning_hint",
+          "condition": "C",
+          "status": "not_run"
+        },
+        "failed_or_stopped": {
+          "id": "trig_2_006",
+          "method": "deep_learning_hint",
+          "condition": "C",
+          "status": "stopped_after_attempt"
+        },
+        "new_correct_answer_reasoning_suspect": {
+          "id": "diff_1_006",
+          "method": "oracle_hint",
+          "condition": "D",
+          "status": "success"
+        },
+        "reused_correct_answer_reasoning_suspect": {
+          "id": "diff_1_005",
+          "method": "regression_hint",
+          "condition": "B",
+          "status": "success"
+        },
+        "ungraded_success": {
+          "id": "trig_1_044",
+          "method": "regression_hint",
+          "condition": "B",
+          "status": "success"
+        },
+        "C_only_correct": {
+          "id": "trig_1_047",
+          "method": "deep_learning_hint",
+          "condition": "C",
+          "status": "success"
+        },
+        "answer_key_conflict": {
+          "id": "trig_1_010",
+          "method": "baseline",
+          "condition": "A",
+          "status": "success"
+        }
+      },
       "local_assets": [
         {
           "repo_relative_path": "results/final_experiment_2/gemini_full265/report.html",
@@ -1164,11 +589,11 @@
           "status": 200
         },
         {
-          "repo_relative_path": "results/final_experiment_2/gemini_full265/viewer_assets/viewer.js",
+          "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/markdown-it.min.js",
           "status": 200
         },
         {
-          "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/markdown-it.min.js",
+          "repo_relative_path": "results/final_experiment_2/gemini_full265/viewer_assets/viewer.js",
           "status": 200
         },
         {
@@ -1188,7 +613,7 @@
           "status": 200
         },
         {
-          "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_AMS-Regular.woff2",
+          "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size2-Regular.woff2",
           "status": 200
         },
         {
@@ -1196,11 +621,11 @@
           "status": 200
         },
         {
-          "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size2-Regular.woff2",
+          "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size4-Regular.woff2",
           "status": 200
         },
         {
-          "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size4-Regular.woff2",
+          "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_AMS-Regular.woff2",
           "status": 200
         },
         {
@@ -1213,18 +638,1517 @@
       "consoleerrors": [],
       "request_failures": [],
       "temporary_server_shutdown": true,
-      "execution_scope": "Read-only saved HTML/assets; temporary loopback server; external requests intercepted and blocked; no report generation, API, training, or repository writes.",
-      "evidence_json_sha256": "8b1b010a5325fcddf3172890ed4fc8c2300021be795244f299291eb088c84ca3",
-      "check_script_sha256": "fedbf97ba12f097fe9fe9de1d43b935188d01e2a48bd9811ff9176df5956729c",
-      "limits": [
-        "file://는실행환경정책으로차단되어같은파일을임시loopback서버로검사한뒤서버를종료했다.",
-        "스크린샷과실행스크립트는세션임시산출물이며저장소에중복복사하지않았다. 실제HTML/로컬자산해시와전수검사결과를보존한다.",
-        "515성공+1실패+544미실행의부분실험을검사했다. 전체API완료검증이아니다."
+      "execution_scope": "Read-only frozen saved HTML/assets/data; temporary loopback server; external requests intercepted/blocked. No report, verify, generation, API, model, repository writes, or imports that trigger experiment code.",
+      "visual_inspection": {
+        "performed": true,
+        "screenshots_opened": [
+          "/tmp/mathhint_full265_abd_final_desktop_default_all_top.png",
+          "/tmp/mathhint_full265_abd_final_desktop_untouched_pending_card_top.png",
+          "/tmp/mathhint_full265_abd_final_desktop_failed_or_stopped_card_top.png",
+          "/tmp/mathhint_full265_abd_final_desktop_new_correct_answer_reasoning_suspect_card_top.png",
+          "/tmp/mathhint_full265_abd_final_desktop_new_correct_answer_reasoning_suspect_review.png",
+          "/tmp/mathhint_full265_abd_final_desktop_reused_correct_answer_reasoning_suspect_card_top.png",
+          "/tmp/mathhint_full265_abd_final_desktop_reused_correct_answer_reasoning_suspect_review.png",
+          "/tmp/mathhint_full265_abd_final_desktop_ungraded_success_card_top.png",
+          "/tmp/mathhint_full265_abd_final_desktop_C_only_correct_card_top.png",
+          "/tmp/mathhint_full265_abd_final_desktop_answer_key_conflict_card_top.png",
+          "/tmp/mathhint_full265_abd_final_desktop_key_conflict_original_and_AI_notice.png",
+          "/tmp/mathhint_full265_abd_final_mobile390_default_all_top.png",
+          "/tmp/mathhint_full265_abd_final_mobile390_untouched_pending_card_top.png",
+          "/tmp/mathhint_full265_abd_final_mobile390_failed_or_stopped_card_top.png",
+          "/tmp/mathhint_full265_abd_final_mobile390_new_correct_answer_reasoning_suspect_card_top.png",
+          "/tmp/mathhint_full265_abd_final_mobile390_new_correct_answer_reasoning_suspect_review.png",
+          "/tmp/mathhint_full265_abd_final_mobile390_reused_correct_answer_reasoning_suspect_card_top.png",
+          "/tmp/mathhint_full265_abd_final_mobile390_reused_correct_answer_reasoning_suspect_review.png",
+          "/tmp/mathhint_full265_abd_final_mobile390_ungraded_success_card_top.png",
+          "/tmp/mathhint_full265_abd_final_mobile390_C_only_correct_card_top.png",
+          "/tmp/mathhint_full265_abd_final_mobile390_answer_key_conflict_card_top.png",
+          "/tmp/mathhint_full265_abd_final_mobile390_key_conflict_original_and_AI_notice.png"
+        ],
+        "screenshot_count": 22,
+        "findings": [],
+        "scope": "All22 representative screenshots actually opened by this browser QA agent (18) and its read-only visual reviewer (4). Desktop/mobile default first train question, C-only pending, C quota failure, original/AI key conflict, new and reused correct-final/reasoning-error distinctions, successful-ungraded B answer, and C-only-correct case were inspected. Korean labels, badges, final answers, equations, review reasons and missing values were readable without visible overlap or document-wide horizontal clipping. Automated DOM scans cover all265 questions; no claim that a human mathematically verified all expressions.",
+        "independent_visual_reviewer": {
+          "screenshots_opened": [
+            "/tmp/mathhint_full265_abd_final_desktop_ungraded_success_card_top.png",
+            "/tmp/mathhint_full265_abd_final_desktop_C_only_correct_card_top.png",
+            "/tmp/mathhint_full265_abd_final_mobile390_ungraded_success_card_top.png",
+            "/tmp/mathhint_full265_abd_final_mobile390_C_only_correct_card_top.png"
+          ],
+          "findings": [],
+          "observations": "Both viewports distinguish B/trig_1_044 ungraded badge from verbatim numeric12 answer. C/trig_1_047 shows correct69; desktop also shows D wrong42. A44/B56 are verified by the saved payload and full DOM scan; these screenshots do not visually show those two cards."
+        },
+        "source_bindings_rechecked_after_visual_review": true
+      },
+      "limitations": [
+        "Actual browser rendering/data fidelity and representative screenshots do not constitute human mathematical confirmation of every generated solution.",
+        "Loopback HTTP testing uses actual repository files and blocks external requests; it does not guarantee browser file:// policy on other environments."
       ],
-      "visual_screenshots_reviewed": 15,
+      "visual_screenshots_reviewed": 22,
       "filter_check_count": 42,
-      "final_evidence_confirmed_at": "2026-11-11T00:40:24.564482+00:00"
+      "evidence_json_sha256": "81a7f4050a32849c12c6ef73a0b971e26748857cd87ce86ddf2215e399f0023d",
+      "check_script_sha256": "81ba9c9d4ab43f464ca24d44fd52040c7680774e0b7a3e4f158e8734a0a309a1",
+      "previous_completed_validation": {
+        "schema_version": 1,
+        "performed": true,
+        "passed": true,
+        "checked_at": "2026-11-11T00:40:24.564482+00:00",
+        "report_path": "results/final_experiment_2/gemini_full265/report.html",
+        "report_sha256": "968e869a68d9bfc1334842f427263c4f6b931de9a9af6362f1941df6a094a3d4",
+        "assets_sha256": {
+          "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_AMS-Regular.woff2": "0cdd387c9590a1a9f9794560022dbb59654a7d86f187aa0c81495ad42d3a7308",
+          "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Bold.woff2": "0f60d1b897938ec918c8ce073092411baf9438f6739465693ff18b0f9d20b021",
+          "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Regular.woff2": "c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866",
+          "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Math-Italic.woff2": "7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264",
+          "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size1-Regular.woff2": "6b47c40166b6dbe21a5dfca7718413f2147fd2399be1ba605d8ad39cedf25dfe",
+          "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size2-Regular.woff2": "d04c54219f9eaec6d4d4fd42dfb28785975a4794d6b2fc71e566b9cd6db842dd",
+          "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size3-Regular.woff2": "73d591271b1604960cb10bb90fee021670af7297017e0e98480b332d11f51995",
+          "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size4-Regular.woff2": "a4af7d414440a1c1790825cfb700cf9cf43b0f2c4b04f0ebc523011ad9853ec0",
+          "mathhint_analysis/viewer_assets/vendor/katex.min.css": "b075123b50e51a0a7819b49efa2a62bb05bc7dac04b0d65a9a3799c2211ea48f",
+          "mathhint_analysis/viewer_assets/vendor/katex.min.js": "e8d885505949f3a5f4abdd5dd0d53696bd1371ad26ffbf4f310dcd77c8cdae89",
+          "mathhint_analysis/viewer_assets/vendor/markdown-it.min.js": "38c70a1e7ca91ab40e2d9e6e60129851a717ed1c7d4acbbdd41bf9503791cf68",
+          "results/final_experiment_2/gemini_full265/report.html": "968e869a68d9bfc1334842f427263c4f6b931de9a9af6362f1941df6a094a3d4",
+          "results/final_experiment_2/gemini_full265/viewer_assets/viewer.css": "156268a9bdb2164cf76d59f7ddf2c915447cce7250a6fcfb9ad75b2f0e4c1c84",
+          "results/final_experiment_2/gemini_full265/viewer_assets/viewer.js": "d59b7924012bd8028b25db0e323abd1b571fab1065a11c76c377a04c00cbbbce"
+        },
+        "viewports": [
+          {
+            "label": "desktop",
+            "width": 1600,
+            "height": 1000,
+            "card_count": 4,
+            "document_width": 1600,
+            "grid_columns": "554.438px 554.453px",
+            "comparison_columns": "395.109px 1128.89px",
+            "card_rectangles": [
+              {
+                "method": "baseline",
+                "x": 443.109375,
+                "width": 554.4375
+              },
+              {
+                "method": "regression_hint",
+                "x": 1017.546875,
+                "width": 554.453125
+              },
+              {
+                "method": "deep_learning_hint",
+                "x": 443.109375,
+                "width": 554.4375
+              },
+              {
+                "method": "oracle_hint",
+                "x": 1017.546875,
+                "width": 554.453125
+              }
+            ]
+          },
+          {
+            "label": "mobile390",
+            "width": 390,
+            "height": 844,
+            "card_count": 4,
+            "document_width": 390,
+            "grid_columns": "366px",
+            "comparison_columns": "366px",
+            "card_rectangles": [
+              {
+                "method": "baseline",
+                "x": 12,
+                "width": 366
+              },
+              {
+                "method": "regression_hint",
+                "x": 12,
+                "width": 366
+              },
+              {
+                "method": "deep_learning_hint",
+                "x": 12,
+                "width": 366
+              },
+              {
+                "method": "oracle_hint",
+                "x": 12,
+                "width": 366
+              }
+            ]
+          }
+        ],
+        "checks": {
+          "265_unique_questions": true,
+          "all265_expected_generation": true,
+          "all265_default": true,
+          "first_default_is_first_train_ID": true,
+          "all1060_condition_rows": true,
+          "all515_success_AI_reviewed_491_appropriate_24_suspected": true,
+          "515_success_1_stopped_failure_544_not_run": true,
+          "reused_test320_answer_review_usage_and_input_equal_old80": true,
+          "local_math_markdown_loaded": true,
+          "asset_warning_hidden": true,
+          "in_sample_generalization_scope_notice": true,
+          "desktop_responsive_four_cards": true,
+          "desktop_pending_train_is_in_scope": true,
+          "desktop_correct_answer_reasoning_suspect_distinct": true,
+          "desktop_key_conflict_all4_distinct": true,
+          "desktop_new048_D_correct_answer_arithmetic_error_separate": true,
+          "desktop_quota022_D_failure_unknown_answer_and_usage": true,
+          "desktop_ID_search": true,
+          "desktop_taxonomy_unit_filter": true,
+          "desktop_next_navigation": true,
+          "desktop_previous_navigation": true,
+          "mobile390_responsive_four_cards": true,
+          "mobile390_pending_train_is_in_scope": true,
+          "mobile390_correct_answer_reasoning_suspect_distinct": true,
+          "mobile390_key_conflict_all4_distinct": true,
+          "mobile390_new048_D_correct_answer_arithmetic_error_separate": true,
+          "mobile390_quota022_D_failure_unknown_answer_and_usage": true,
+          "mobile390_ID_search": true,
+          "mobile390_taxonomy_unit_filter": true,
+          "mobile390_next_navigation": true,
+          "mobile390_previous_navigation": true,
+          "HTML_and_all_assets_unchanged": true,
+          "all_loaded_assets_repo_local_and_HTTP200": true,
+          "exactly14_loaded_local_assets": true,
+          "no_external_or_browser_errors": true
+        },
+        "desktop_all265": {
+          "questions_scanned": 265,
+          "cards_scanned": 1060,
+          "math_nodes_rendered_total": 18888,
+          "question_card_counts": [],
+          "math_render_errors": [],
+          "horizontal_overflow_ids": [],
+          "status_mismatches": [],
+          "answer_mismatches": [],
+          "review_mismatches": [],
+          "usage_mismatches": [],
+          "hint_label_mismatches": [],
+          "raw_output_mismatches": [],
+          "raw_system_mismatches": [],
+          "raw_input_mismatches": [],
+          "raw_usage_mismatches": [],
+          "raw_hint_mismatches": []
+        },
+        "mobile390_all265": {
+          "questions_scanned": 265,
+          "cards_scanned": 1060,
+          "math_nodes_rendered_total": 18888,
+          "question_card_counts": [],
+          "math_render_errors": [],
+          "horizontal_overflow_ids": [],
+          "status_mismatches": [],
+          "answer_mismatches": [],
+          "review_mismatches": [],
+          "usage_mismatches": [],
+          "hint_label_mismatches": [],
+          "raw_output_mismatches": [],
+          "raw_system_mismatches": [],
+          "raw_input_mismatches": [],
+          "raw_usage_mismatches": [],
+          "raw_hint_mismatches": []
+        },
+        "filter_results": {
+          "desktop": {
+            "all": {
+              "expected_count": 265,
+              "actual_count": 265,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "train": {
+              "expected_count": 185,
+              "actual_count": 185,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "test": {
+              "expected_count": 80,
+              "actual_count": 80,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "api_error": {
+              "expected_count": 1,
+              "actual_count": 1,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "not_run": {
+              "expected_count": 136,
+              "actual_count": 136,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "ungraded": {
+              "expected_count": 0,
+              "actual_count": 0,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "review_pending": {
+              "expected_count": 0,
+              "actual_count": 0,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "answer_key_conflict": {
+              "expected_count": 1,
+              "actual_count": 1,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "reasoning_suspected": {
+              "expected_count": 15,
+              "actual_count": 15,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "possible_alternative": {
+              "expected_count": 23,
+              "actual_count": 23,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "changed": {
+              "expected_count": 2,
+              "actual_count": 2,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "answers": {
+              "expected_count": 2,
+              "actual_count": 2,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "A_correct_B_wrong": {
+              "expected_count": 1,
+              "actual_count": 1,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "A_correct_C_wrong": {
+              "expected_count": 1,
+              "actual_count": 1,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "B_only_correct": {
+              "expected_count": 0,
+              "actual_count": 0,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "C_only_correct": {
+              "expected_count": 0,
+              "actual_count": 0,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "D_only_correct": {
+              "expected_count": 0,
+              "actual_count": 0,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "all_wrong": {
+              "expected_count": 1,
+              "actual_count": 1,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "D_wrong": {
+              "expected_count": 2,
+              "actual_count": 2,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "large_token_change": {
+              "expected_count": 25,
+              "actual_count": 25,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "incomplete": {
+              "expected_count": 0,
+              "actual_count": 0,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            }
+          },
+          "mobile390": {
+            "all": {
+              "expected_count": 265,
+              "actual_count": 265,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "train": {
+              "expected_count": 185,
+              "actual_count": 185,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "test": {
+              "expected_count": 80,
+              "actual_count": 80,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "api_error": {
+              "expected_count": 1,
+              "actual_count": 1,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "not_run": {
+              "expected_count": 136,
+              "actual_count": 136,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "ungraded": {
+              "expected_count": 0,
+              "actual_count": 0,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "review_pending": {
+              "expected_count": 0,
+              "actual_count": 0,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "answer_key_conflict": {
+              "expected_count": 1,
+              "actual_count": 1,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "reasoning_suspected": {
+              "expected_count": 15,
+              "actual_count": 15,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "possible_alternative": {
+              "expected_count": 23,
+              "actual_count": 23,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "changed": {
+              "expected_count": 2,
+              "actual_count": 2,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "answers": {
+              "expected_count": 2,
+              "actual_count": 2,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "A_correct_B_wrong": {
+              "expected_count": 1,
+              "actual_count": 1,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "A_correct_C_wrong": {
+              "expected_count": 1,
+              "actual_count": 1,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "B_only_correct": {
+              "expected_count": 0,
+              "actual_count": 0,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "C_only_correct": {
+              "expected_count": 0,
+              "actual_count": 0,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "D_only_correct": {
+              "expected_count": 0,
+              "actual_count": 0,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "all_wrong": {
+              "expected_count": 1,
+              "actual_count": 1,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "D_wrong": {
+              "expected_count": 2,
+              "actual_count": 2,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "large_token_change": {
+              "expected_count": 25,
+              "actual_count": 25,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            },
+            "incomplete": {
+              "expected_count": 0,
+              "actual_count": 0,
+              "missing_ids": [],
+              "extra_ids": [],
+              "passed": true
+            }
+          }
+        },
+        "saved_data_statuses": {
+          "success": 515,
+          "stopped_after_attempt": 1,
+          "not_run": 544
+        },
+        "saved_split_counts": {
+          "train": 185,
+          "test": 80
+        },
+        "reused_test320_value_mismatches": [],
+        "local_assets": [
+          {
+            "repo_relative_path": "results/final_experiment_2/gemini_full265/report.html",
+            "status": 200
+          },
+          {
+            "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/katex.min.css",
+            "status": 200
+          },
+          {
+            "repo_relative_path": "results/final_experiment_2/gemini_full265/viewer_assets/viewer.css",
+            "status": 200
+          },
+          {
+            "repo_relative_path": "results/final_experiment_2/gemini_full265/viewer_assets/viewer.js",
+            "status": 200
+          },
+          {
+            "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/markdown-it.min.js",
+            "status": 200
+          },
+          {
+            "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/katex.min.js",
+            "status": 200
+          },
+          {
+            "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Math-Italic.woff2",
+            "status": 200
+          },
+          {
+            "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size3-Regular.woff2",
+            "status": 200
+          },
+          {
+            "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Regular.woff2",
+            "status": 200
+          },
+          {
+            "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_AMS-Regular.woff2",
+            "status": 200
+          },
+          {
+            "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size1-Regular.woff2",
+            "status": 200
+          },
+          {
+            "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size2-Regular.woff2",
+            "status": 200
+          },
+          {
+            "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size4-Regular.woff2",
+            "status": 200
+          },
+          {
+            "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Bold.woff2",
+            "status": 200
+          }
+        ],
+        "external_requests": [],
+        "pageerrors": [],
+        "consoleerrors": [],
+        "request_failures": [],
+        "temporary_server_shutdown": true,
+        "execution_scope": "Read-only saved HTML/assets; temporary loopback server; external requests intercepted and blocked; no report generation, API, training, or repository writes.",
+        "evidence_json_sha256": "8b1b010a5325fcddf3172890ed4fc8c2300021be795244f299291eb088c84ca3",
+        "check_script_sha256": "fedbf97ba12f097fe9fe9de1d43b935188d01e2a48bd9811ff9176df5956729c",
+        "limits": [
+          "file://는실행환경정책으로차단되어같은파일을임시loopback서버로검사한뒤서버를종료했다.",
+          "스크린샷과실행스크립트는세션임시산출물이며저장소에중복복사하지않았다. 실제HTML/로컬자산해시와전수검사결과를보존한다.",
+          "515성공+1실패+544미실행의부분실험을검사했다. 전체API완료검증이아니다."
+        ],
+        "visual_screenshots_reviewed": 15,
+        "filter_check_count": 42,
+        "final_evidence_confirmed_at": "2026-11-11T00:40:24.564482+00:00"
+      },
+      "snapshot_scope_note": "ABD각265성공/C214성공,실패C1/미실행C50의부분실험을검사했다. 사람이모든수학풀이를확정한것은아니다. 임시스크린샷/실행스크립트중복보관대신정적HTML/자산/검사해시를보존했다."
+    }
+  },
+  "preparation_sample_only": false,
+  "checks": {
+    "payload_config_matches_saved_config": true,
+    "265_unique_questions": true,
+    "four_ABCD_methods": true,
+    "all265_expected_generation": true,
+    "all1060_condition_rows": true,
+    "train185_test80_split_partition": true,
+    "saved_state_counts_match_report": true,
+    "saved_rows_match_report": true,
+    "all_review_states_equal_saved_review_CSV": true,
+    "desktop_local_math_markdown_loaded": true,
+    "desktop_asset_warning_hidden": true,
+    "desktop_all265_default": true,
+    "desktop_first_default_is_first_train_ID": true,
+    "desktop_in_sample_generalization_scope_notice": true,
+    "desktop_responsive_four_cards": true,
+    "desktop_ID_search": true,
+    "desktop_taxonomy_curriculum_filter": true,
+    "desktop_taxonomy_unit_filter": true,
+    "desktop_taxonomy_subunit_filter": true,
+    "desktop_taxonomy_type_filter": true,
+    "desktop_next_navigation": true,
+    "desktop_previous_navigation": true,
+    "desktop_all21_known_filter_options": true,
+    "mobile390_local_math_markdown_loaded": true,
+    "mobile390_asset_warning_hidden": true,
+    "mobile390_all265_default": true,
+    "mobile390_first_default_is_first_train_ID": true,
+    "mobile390_in_sample_generalization_scope_notice": true,
+    "mobile390_responsive_four_cards": true,
+    "mobile390_ID_search": true,
+    "mobile390_taxonomy_curriculum_filter": true,
+    "mobile390_taxonomy_unit_filter": true,
+    "mobile390_taxonomy_subunit_filter": true,
+    "mobile390_taxonomy_type_filter": true,
+    "mobile390_next_navigation": true,
+    "mobile390_previous_navigation": true,
+    "mobile390_all21_known_filter_options": true,
+    "HTML_and_all_assets_unchanged": true,
+    "all_compared_saved_inputs_unchanged": true,
+    "all_loaded_assets_repo_local_and_HTTP200": true,
+    "all_loaded_assets_matched_initial_source_hashes": true,
+    "no_external_or_browser_errors": true,
+    "temporary_server_shutdown": true
+  },
+  "saved_input_comparison_skipped_for_preparation": false,
+  "saved_input_mismatches": [],
+  "review_CSV_payload_mismatches": [],
+  "saved_data_statuses": {
+    "success": 1060
+  },
+  "saved_split_counts": {
+    "train": 185,
+    "test": 80
+  },
+  "saved_success_review_statuses": {
+    "appropriate": 996,
+    "inappropriate": 64
+  },
+  "condition_status_counts": {
+    "A": {
+      "success": 265
     },
-    "snapshot_scope_note": "ABD각265성공/C214성공,실패C1/미실행C50의부분실험을검사했다. 사람이모든수학풀이를확정한것은아니다. 임시스크린샷/실행스크립트중복보관대신정적HTML/자산/검사해시를보존했다."
-  }
+    "B": {
+      "success": 265
+    },
+    "C": {
+      "success": 265
+    },
+    "D": {
+      "success": 265
+    }
+  },
+  "saved_state_status": "completed",
+  "saved_inputs_sha256": {
+    "results/final_experiment_2/gemini_full265/responses.jsonl": "20f3f612bd1f968a30c72c9f4ae8ff1d1f09ed5d7dc3278ceeee1d3669f09495",
+    "results/final_experiment_2/gemini_full265/plan.jsonl": "675f2e574a3100f358779cc775333035b2db66696df9356548f9e321d5686c7c",
+    "results/final_experiment_2/gemini_full265/config.json": "740ab47a13738ab73a07f393c81bf177401fcf00787352341dd2c16cf04645a9",
+    "results/final_experiment_2/gemini_full265/review/status.csv": "4820ae7abe62da1cecaeed922f67d62a4fd2df4e2702d69c2852c33c658553f7",
+    "results/final_experiment_2/gemini_full265/review/curated_reviews.json": "245572409eb6856ea5c137042de0016192cc14669b049a74345b6f270445122c",
+    "results/final_experiment_2/gemini_full265/state.json": "ce1fc43b790f335592a28e2935910443dc28b2d3a42475eb558cb815916492cf"
+  },
+  "viewports": [
+    {
+      "card_count": 4,
+      "document_width": 1600,
+      "grid_columns": "554.438px 554.453px",
+      "comparison_columns": "395.109px 1128.89px",
+      "card_rectangles": [
+        {
+          "method": "baseline",
+          "x": 443.109375,
+          "width": 554.4375
+        },
+        {
+          "method": "regression_hint",
+          "x": 1017.546875,
+          "width": 554.453125
+        },
+        {
+          "method": "deep_learning_hint",
+          "x": 443.109375,
+          "width": 554.4375
+        },
+        {
+          "method": "oracle_hint",
+          "x": 1017.546875,
+          "width": 554.453125
+        }
+      ],
+      "label": "desktop",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "card_count": 4,
+      "document_width": 390,
+      "grid_columns": "366px",
+      "comparison_columns": "366px",
+      "card_rectangles": [
+        {
+          "method": "baseline",
+          "x": 12,
+          "width": 366
+        },
+        {
+          "method": "regression_hint",
+          "x": 12,
+          "width": 366
+        },
+        {
+          "method": "deep_learning_hint",
+          "x": 12,
+          "width": 366
+        },
+        {
+          "method": "oracle_hint",
+          "x": 12,
+          "width": 366
+        }
+      ],
+      "label": "mobile390",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "filter_results": {
+    "desktop": {
+      "test": {
+        "expected_count": 80,
+        "actual_count": 80,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "changed": {
+        "expected_count": 9,
+        "actual_count": 9,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "answers": {
+        "expected_count": 11,
+        "actual_count": 11,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "A_correct_B_wrong": {
+        "expected_count": 2,
+        "actual_count": 2,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "A_correct_C_wrong": {
+        "expected_count": 2,
+        "actual_count": 2,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "B_only_correct": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "C_only_correct": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "D_only_correct": {
+        "expected_count": 0,
+        "actual_count": 0,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "all_wrong": {
+        "expected_count": 2,
+        "actual_count": 2,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "D_wrong": {
+        "expected_count": 8,
+        "actual_count": 8,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "reasoning_suspected": {
+        "expected_count": 33,
+        "actual_count": 33,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "answer_key_conflict": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "possible_alternative": {
+        "expected_count": 53,
+        "actual_count": 53,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "review_pending": {
+        "expected_count": 0,
+        "actual_count": 0,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "large_token_change": {
+        "expected_count": 45,
+        "actual_count": 45,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "incomplete": {
+        "expected_count": 0,
+        "actual_count": 0,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "ungraded": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "api_error": {
+        "expected_count": 0,
+        "actual_count": 0,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "not_run": {
+        "expected_count": 0,
+        "actual_count": 0,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "train": {
+        "expected_count": 185,
+        "actual_count": 185,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "all": {
+        "expected_count": 265,
+        "actual_count": 265,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      }
+    },
+    "mobile390": {
+      "test": {
+        "expected_count": 80,
+        "actual_count": 80,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "changed": {
+        "expected_count": 9,
+        "actual_count": 9,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "answers": {
+        "expected_count": 11,
+        "actual_count": 11,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "A_correct_B_wrong": {
+        "expected_count": 2,
+        "actual_count": 2,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "A_correct_C_wrong": {
+        "expected_count": 2,
+        "actual_count": 2,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "B_only_correct": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "C_only_correct": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "D_only_correct": {
+        "expected_count": 0,
+        "actual_count": 0,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "all_wrong": {
+        "expected_count": 2,
+        "actual_count": 2,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "D_wrong": {
+        "expected_count": 8,
+        "actual_count": 8,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "reasoning_suspected": {
+        "expected_count": 33,
+        "actual_count": 33,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "answer_key_conflict": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "possible_alternative": {
+        "expected_count": 53,
+        "actual_count": 53,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "review_pending": {
+        "expected_count": 0,
+        "actual_count": 0,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "large_token_change": {
+        "expected_count": 45,
+        "actual_count": 45,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "incomplete": {
+        "expected_count": 0,
+        "actual_count": 0,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "ungraded": {
+        "expected_count": 1,
+        "actual_count": 1,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "api_error": {
+        "expected_count": 0,
+        "actual_count": 0,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "not_run": {
+        "expected_count": 0,
+        "actual_count": 0,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "train": {
+        "expected_count": 185,
+        "actual_count": 185,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      },
+      "all": {
+        "expected_count": 265,
+        "actual_count": 265,
+        "missing_ids": [],
+        "extra_ids": [],
+        "passed": true
+      }
+    }
+  },
+  "visual_inspection": [
+    {
+      "viewports": [
+        "desktop1600x1000",
+        "mobile390x844"
+      ],
+      "case": "fractions_limits_cases",
+      "ids": [
+        "diff_1_001",
+        "diff_2_017",
+        "diff_3_029"
+      ],
+      "passed": true,
+      "notes": "Fractions, limit notation, piecewise braces, Korean text and Markdown lists render clearly; desktop comparisons use two condition columns and mobile uses one."
+    },
+    {
+      "viewports": [
+        "desktop1600x1000",
+        "mobile390x844"
+      ],
+      "case": "grading_review_and_key_sources",
+      "ids": [
+        "diff_1_006",
+        "diff_1_005",
+        "trig_1_044",
+        "trig_1_047",
+        "trig_1_010"
+      ],
+      "passed": true,
+      "notes": "Original grading badges, parsed final answers, token usage and hints remain separate. The ungraded B success remains 채점 불가; original④ versus AI supplemental② for the key-conflict case are separately labeled."
+    },
+    {
+      "viewports": [
+        "desktop1600x1000",
+        "mobile390x844"
+      ],
+      "case": "new_C_and_raw_audit",
+      "ids": [
+        "trig_2_006",
+        "trig_3_038"
+      ],
+      "passed": true,
+      "notes": "New C responses render as successful saved solutions with actual usage; raw usage preserves null thoughts/cache counts and identifier/model/status fields. Full automated checks also matched all raw input/output/system/hint/provenance panels and all saved review labels."
+    }
+  ],
+  "desktop_all265": {
+    "questions_scanned": 265,
+    "cards_scanned": 1060,
+    "math_nodes_rendered_total": 31726,
+    "question_card_counts": [],
+    "math_render_errors": [],
+    "horizontal_overflow_ids": [],
+    "status_mismatches": [],
+    "answer_mismatches": [],
+    "review_mismatches": [],
+    "usage_mismatches": [],
+    "hint_label_mismatches": [],
+    "raw_output_mismatches": [],
+    "raw_system_mismatches": [],
+    "raw_input_mismatches": [],
+    "raw_usage_mismatches": [],
+    "raw_hint_mismatches": [],
+    "raw_problem_mismatches": [],
+    "raw_reference_solution_mismatches": [],
+    "raw_identifier_mismatches": [],
+    "raw_generation_settings_mismatches": [],
+    "raw_provenance_mismatches": [],
+    "rendered_output_mismatches": [],
+    "non_success_boolean_grade_errors": [],
+    "supplemental_notice_mismatches": [],
+    "markdown_render_errors": []
+  },
+  "mobile390_all265": {
+    "questions_scanned": 265,
+    "cards_scanned": 1060,
+    "math_nodes_rendered_total": 31726,
+    "question_card_counts": [],
+    "math_render_errors": [],
+    "horizontal_overflow_ids": [],
+    "status_mismatches": [],
+    "answer_mismatches": [],
+    "review_mismatches": [],
+    "usage_mismatches": [],
+    "hint_label_mismatches": [],
+    "raw_output_mismatches": [],
+    "raw_system_mismatches": [],
+    "raw_input_mismatches": [],
+    "raw_usage_mismatches": [],
+    "raw_hint_mismatches": [],
+    "raw_problem_mismatches": [],
+    "raw_reference_solution_mismatches": [],
+    "raw_identifier_mismatches": [],
+    "raw_generation_settings_mismatches": [],
+    "raw_provenance_mismatches": [],
+    "rendered_output_mismatches": [],
+    "non_success_boolean_grade_errors": [],
+    "supplemental_notice_mismatches": [],
+    "markdown_render_errors": []
+  },
+  "temporary_server_shutdown": true,
+  "local_assets": [
+    {
+      "repo_relative_path": "results/final_experiment_2/gemini_full265/report.html",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/katex.min.css",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "results/final_experiment_2/gemini_full265/viewer_assets/viewer.css",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/markdown-it.min.js",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "results/final_experiment_2/gemini_full265/viewer_assets/viewer.js",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/katex.min.js",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Math-Italic.woff2",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size3-Regular.woff2",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Regular.woff2",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size1-Regular.woff2",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_AMS-Regular.woff2",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size2-Regular.woff2",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Bold.woff2",
+      "status": 200
+    },
+    {
+      "repo_relative_path": "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size4-Regular.woff2",
+      "status": 200
+    }
+  ],
+  "external_requests": [],
+  "pageerrors": [],
+  "consoleerrors": [],
+  "request_failures": [],
+  "screenshots": [
+    {
+      "viewport": "desktop",
+      "case": "limits_fractions",
+      "id": "diff_1_001",
+      "method": "problem",
+      "path": "/tmp/mathhint_finish51_browser_final/desktop_limits_fractions_diff_1_001.png",
+      "sha256": "0395e4eca3b5f4c1e911bea81efd95086c807b2cca8985a06dc30e23b8893b96",
+      "visually_reviewed": true
+    },
+    {
+      "viewport": "desktop",
+      "case": "piecewise_cases",
+      "id": "diff_2_017",
+      "method": "baseline",
+      "path": "/tmp/mathhint_finish51_browser_final/desktop_piecewise_cases_diff_2_017.png",
+      "sha256": "1584137e037c73c3510bdb993da573c896e4262bd7f36f0e1a4f93bb260f8954",
+      "visually_reviewed": true
+    },
+    {
+      "viewport": "desktop",
+      "case": "piecewise_cases_C",
+      "id": "diff_3_029",
+      "method": "deep_learning_hint",
+      "path": "/tmp/mathhint_finish51_browser_final/desktop_piecewise_cases_C_diff_3_029.png",
+      "sha256": "7ce52ae52ad19e286667b1ae5f2bdcca2c25e755dc571d4f0dfaee46515f2edf",
+      "visually_reviewed": true
+    },
+    {
+      "viewport": "desktop",
+      "case": "reasoning_suspect",
+      "id": "diff_1_006",
+      "method": "oracle_hint",
+      "path": "/tmp/mathhint_finish51_browser_final/desktop_reasoning_suspect_diff_1_006.png",
+      "sha256": "8b9e83bbf30703eb1f34a0808037c047840fbba6d9f796dd3dfaf875475aff24",
+      "visually_reviewed": true
+    },
+    {
+      "viewport": "desktop",
+      "case": "reused_suspect",
+      "id": "diff_1_005",
+      "method": "regression_hint",
+      "path": "/tmp/mathhint_finish51_browser_final/desktop_reused_suspect_diff_1_005.png",
+      "sha256": "e206022a1dbbdab4765bb0ff9d87ca9f6ca337918b6f81b309848f7f1c608458",
+      "visually_reviewed": true
+    },
+    {
+      "viewport": "desktop",
+      "case": "ungraded_success",
+      "id": "trig_1_044",
+      "method": "regression_hint",
+      "path": "/tmp/mathhint_finish51_browser_final/desktop_ungraded_success_trig_1_044.png",
+      "sha256": "4302ace6c467cbec2269fc683a7e71c6ad53b84b1b0c5c915fe0128cf987328b",
+      "visually_reviewed": true
+    },
+    {
+      "viewport": "desktop",
+      "case": "C_only_correct",
+      "id": "trig_1_047",
+      "method": "deep_learning_hint",
+      "path": "/tmp/mathhint_finish51_browser_final/desktop_C_only_correct_trig_1_047.png",
+      "sha256": "e9d638c406015d0d9aae8219679f1e88aecd7854c35e7712c97cdb9ac406968c",
+      "visually_reviewed": true
+    },
+    {
+      "viewport": "desktop",
+      "case": "answer_key_conflict",
+      "id": "trig_1_010",
+      "method": "baseline",
+      "path": "/tmp/mathhint_finish51_browser_final/desktop_answer_key_conflict_trig_1_010.png",
+      "sha256": "b9c02ee32634ba2f253e3b75f5de38c208ed12ac57be218a93391923e77066ce",
+      "visually_reviewed": true
+    },
+    {
+      "viewport": "desktop",
+      "case": "new_C_resumed",
+      "id": "trig_2_006",
+      "method": "deep_learning_hint",
+      "path": "/tmp/mathhint_finish51_browser_final/desktop_new_C_resumed_trig_2_006.png",
+      "sha256": "b14b9904744e3d465fc187e2246080791b04a6c3988338e0e49f5672a1dedd8f",
+      "visually_reviewed": true
+    },
+    {
+      "viewport": "desktop",
+      "case": "new_C_final",
+      "id": "trig_3_038",
+      "method": "deep_learning_hint",
+      "path": "/tmp/mathhint_finish51_browser_final/desktop_new_C_final_trig_3_038.png",
+      "sha256": "4ae43abae4e9051e356439908199f63acd09d35563514318cd4b2b71c14c03f4",
+      "visually_reviewed": true
+    },
+    {
+      "viewport": "desktop",
+      "case": "raw_audit",
+      "id": "trig_2_006",
+      "method": "deep_learning_hint",
+      "path": "/tmp/mathhint_finish51_browser_final/desktop_raw_audit_trig_2_006.png",
+      "sha256": "328220b0c2dd85e68e28104bace0a59acb7ac0d441180e940d2d642916f83bba",
+      "visually_reviewed": true
+    },
+    {
+      "viewport": "mobile390",
+      "case": "limits_fractions",
+      "id": "diff_1_001",
+      "method": "problem",
+      "path": "/tmp/mathhint_finish51_browser_final/mobile390_limits_fractions_diff_1_001.png",
+      "sha256": "0551e5a40ec10317f9207c17d1578fcbcc67572d30d34bc43e5c4eb31c18b492",
+      "visually_reviewed": true
+    },
+    {
+      "viewport": "mobile390",
+      "case": "piecewise_cases",
+      "id": "diff_2_017",
+      "method": "baseline",
+      "path": "/tmp/mathhint_finish51_browser_final/mobile390_piecewise_cases_diff_2_017.png",
+      "sha256": "e87660e031afd149fa7b801980b5fd843c239c3ff2787ac4a0f1751628130db4",
+      "visually_reviewed": true
+    },
+    {
+      "viewport": "mobile390",
+      "case": "piecewise_cases_C",
+      "id": "diff_3_029",
+      "method": "deep_learning_hint",
+      "path": "/tmp/mathhint_finish51_browser_final/mobile390_piecewise_cases_C_diff_3_029.png",
+      "sha256": "6d20462feffd923256ce3bd811764b2a16fcb5bdc56cf1563e059b321af83f84",
+      "visually_reviewed": true
+    },
+    {
+      "viewport": "mobile390",
+      "case": "reasoning_suspect",
+      "id": "diff_1_006",
+      "method": "oracle_hint",
+      "path": "/tmp/mathhint_finish51_browser_final/mobile390_reasoning_suspect_diff_1_006.png",
+      "sha256": "ffdb371efafbf21ca91b2c30a6a32dc83c8c96426695b88fb9dbd3fcb323975e",
+      "visually_reviewed": true
+    },
+    {
+      "viewport": "mobile390",
+      "case": "reused_suspect",
+      "id": "diff_1_005",
+      "method": "regression_hint",
+      "path": "/tmp/mathhint_finish51_browser_final/mobile390_reused_suspect_diff_1_005.png",
+      "sha256": "039171534186382e8b710aa4dcd54614ea634c9b6b739559ebd802fab0f4f310",
+      "visually_reviewed": true
+    },
+    {
+      "viewport": "mobile390",
+      "case": "ungraded_success",
+      "id": "trig_1_044",
+      "method": "regression_hint",
+      "path": "/tmp/mathhint_finish51_browser_final/mobile390_ungraded_success_trig_1_044.png",
+      "sha256": "e94f33dc41b229794dac83d8f223d505c05d26d725d46698d9d2acabd101cc9c",
+      "visually_reviewed": true
+    },
+    {
+      "viewport": "mobile390",
+      "case": "C_only_correct",
+      "id": "trig_1_047",
+      "method": "deep_learning_hint",
+      "path": "/tmp/mathhint_finish51_browser_final/mobile390_C_only_correct_trig_1_047.png",
+      "sha256": "d224c8a93d71f5c47e60ee9e97e9463348f917594f2127a6fdaae1406794f53c",
+      "visually_reviewed": true
+    },
+    {
+      "viewport": "mobile390",
+      "case": "answer_key_conflict",
+      "id": "trig_1_010",
+      "method": "baseline",
+      "path": "/tmp/mathhint_finish51_browser_final/mobile390_answer_key_conflict_trig_1_010.png",
+      "sha256": "772411262c5a71dcd7af40f69920d4d60dcb7348672ac9adac514f2f3ec377f6",
+      "visually_reviewed": true
+    },
+    {
+      "viewport": "mobile390",
+      "case": "new_C_resumed",
+      "id": "trig_2_006",
+      "method": "deep_learning_hint",
+      "path": "/tmp/mathhint_finish51_browser_final/mobile390_new_C_resumed_trig_2_006.png",
+      "sha256": "e11c795c54c3797b711121687b37a854621c1302b26015c9458a708c90459633",
+      "visually_reviewed": true
+    },
+    {
+      "viewport": "mobile390",
+      "case": "new_C_final",
+      "id": "trig_3_038",
+      "method": "deep_learning_hint",
+      "path": "/tmp/mathhint_finish51_browser_final/mobile390_new_C_final_trig_3_038.png",
+      "sha256": "e54baecf71a3451ff45ba5bc347c6f6685cee9db2964849fec17520b4fd6d2c3",
+      "visually_reviewed": true
+    },
+    {
+      "viewport": "mobile390",
+      "case": "raw_audit",
+      "id": "trig_2_006",
+      "method": "deep_learning_hint",
+      "path": "/tmp/mathhint_finish51_browser_final/mobile390_raw_audit_trig_2_006.png",
+      "sha256": "d31aa71aa4a58d04c08b6ac9bfe5f954fcf335d041530fbf69b5564c88b15018",
+      "visually_reviewed": true
+    }
+  ],
+  "assets_sha256": {
+    "results/final_experiment_2/gemini_full265/report.html": "08d9b90b4af1d3d50698863968cc621e5644def283814a735cdb5f2ba738664d",
+    "mathhint_analysis/viewer_assets/vendor/katex.min.css": "b075123b50e51a0a7819b49efa2a62bb05bc7dac04b0d65a9a3799c2211ea48f",
+    "results/final_experiment_2/gemini_full265/viewer_assets/viewer.css": "156268a9bdb2164cf76d59f7ddf2c915447cce7250a6fcfb9ad75b2f0e4c1c84",
+    "mathhint_analysis/viewer_assets/vendor/markdown-it.min.js": "38c70a1e7ca91ab40e2d9e6e60129851a717ed1c7d4acbbdd41bf9503791cf68",
+    "results/final_experiment_2/gemini_full265/viewer_assets/viewer.js": "d59b7924012bd8028b25db0e323abd1b571fab1065a11c76c377a04c00cbbbce",
+    "mathhint_analysis/viewer_assets/vendor/katex.min.js": "e8d885505949f3a5f4abdd5dd0d53696bd1371ad26ffbf4f310dcd77c8cdae89",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Math-Italic.woff2": "7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size3-Regular.woff2": "73d591271b1604960cb10bb90fee021670af7297017e0e98480b332d11f51995",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Regular.woff2": "c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size1-Regular.woff2": "6b47c40166b6dbe21a5dfca7718413f2147fd2399be1ba605d8ad39cedf25dfe",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_AMS-Regular.woff2": "0cdd387c9590a1a9f9794560022dbb59654a7d86f187aa0c81495ad42d3a7308",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size2-Regular.woff2": "d04c54219f9eaec6d4d4fd42dfb28785975a4794d6b2fc71e566b9cd6db842dd",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Bold.woff2": "0f60d1b897938ec918c8ce073092411baf9438f6739465693ff18b0f9d20b021",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size4-Regular.woff2": "a4af7d414440a1c1790825cfb700cf9cf43b0f2c4b04f0ebc523011ad9853ec0"
+  },
+  "source_assets_sha256": {
+    "results/final_experiment_2/gemini_full265/report.html": "08d9b90b4af1d3d50698863968cc621e5644def283814a735cdb5f2ba738664d",
+    "results/final_experiment_2/gemini_full265/viewer_assets/viewer.js": "d59b7924012bd8028b25db0e323abd1b571fab1065a11c76c377a04c00cbbbce",
+    "results/final_experiment_2/gemini_full265/viewer_assets/source.json": "bc22af3f84a5255facb1355b7cda074f798d5b209e285fe14bacea606ce0c4d7",
+    "results/final_experiment_2/gemini_full265/viewer_assets/viewer.css": "156268a9bdb2164cf76d59f7ddf2c915447cce7250a6fcfb9ad75b2f0e4c1c84",
+    "mathhint_analysis/viewer_assets/vendor/markdown-it.min.js": "38c70a1e7ca91ab40e2d9e6e60129851a717ed1c7d4acbbdd41bf9503791cf68",
+    "mathhint_analysis/viewer_assets/vendor/katex.min.js": "e8d885505949f3a5f4abdd5dd0d53696bd1371ad26ffbf4f310dcd77c8cdae89",
+    "mathhint_analysis/viewer_assets/vendor/MARKDOWN_IT_LICENSE": "792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473",
+    "mathhint_analysis/viewer_assets/vendor/katex.min.css": "b075123b50e51a0a7819b49efa2a62bb05bc7dac04b0d65a9a3799c2211ea48f",
+    "mathhint_analysis/viewer_assets/vendor/KATEX_LICENSE": "766ccc1f306c885aa45542a9846bbd0a505b27a0374f146778171c2254ce18e3",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_SansSerif-Bold.woff2": "e99ae51144bf1232efcc1bfe5add36262c6866b0faab24fa75740e1b98577a62",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Typewriter-Regular.woff2": "71d517d67827787cfabdf186914cc3358eda539e37931941f2b2fd4a21f68c0b",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Caligraphic-Bold.woff2": "de7701e42cf1f4cf0b766c03fb27977207eee2f4fd5d76fa82188406da43ea4c",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_AMS-Regular.woff2": "0cdd387c9590a1a9f9794560022dbb59654a7d86f187aa0c81495ad42d3a7308",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Math-Italic.woff2": "7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Regular.woff2": "c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size3-Regular.woff2": "73d591271b1604960cb10bb90fee021670af7297017e0e98480b332d11f51995",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size2-Regular.woff2": "d04c54219f9eaec6d4d4fd42dfb28785975a4794d6b2fc71e566b9cd6db842dd",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size4-Regular.woff2": "a4af7d414440a1c1790825cfb700cf9cf43b0f2c4b04f0ebc523011ad9853ec0",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Bold.woff2": "0f60d1b897938ec918c8ce073092411baf9438f6739465693ff18b0f9d20b021",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_SansSerif-Italic.woff2": "00b26ac825e2095056396e0553b8ac26d3f8ad158c3826e28b4c45b385c4714a",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-Italic.woff2": "97479ca6cce906abc961ecac96faa5f9ca2e61b8e7670d475826bcdee9a7c267",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Fraktur-Bold.woff2": "74444efd593c005e3f4573b44524704c0af0a937fe911cca9e94068d0d140d3f",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Script-Regular.woff2": "036d4e95149b69ff9bcc0cd55771efeb25ffa3947293e69acd78d5ac328c684b",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Fraktur-Regular.woff2": "51814d270d06ff0255dba0799994fa4d8c84d11f09951d47595f4abb1f3602dc",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_SansSerif-Regular.woff2": "68e8c73ef42afd3ccec58bf0fba302cce448938e7fc020a5e31f8a952eee1342",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Main-BoldItalic.woff2": "99cd42a3c072d918f2f44984a807cf7aa16e13545fd0875fc07c6c65f99e715b",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Caligraphic-Regular.woff2": "5d53e70ad607c2352162dec9e0923fb54ecdafaccbf604cd8dcf7d00facb989b",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Math-BoldItalic.woff2": "dc47344dbb6cb5b655c8460d561f4df5f501b90c804ad3c6cec65fe322351ab1",
+    "mathhint_analysis/viewer_assets/vendor/fonts/KaTeX_Size1-Regular.woff2": "6b47c40166b6dbe21a5dfca7718413f2147fd2399be1ba605d8ad39cedf25dfe"
+  },
+  "filter_check_count": 42,
+  "check_script_sha256": "ffd173c2849a67540f8121304a9a85ef8931a9784a7756bc7e6ccdf6975663dc",
+  "visual_screenshots_reviewed": 22,
+  "limitations": [
+    "Browser checks verify saved display and input consistency; mathematical correctness is tracked separately through AI-assisted reviews, with no human final confirmation.",
+    "Loopback HTTP testing uses actual repository files and blocks external requests; it does not guarantee browser file:// policy on other environments.",
+    "Screenshots and execution helper remain temporary session artifacts; final report/assets and helper hashes bind this evidence."
+  ],
+  "automated_passed": true,
+  "awaiting_visual_inspection": false,
+  "completed_at": "2026-11-12T13:05:22.196174+00:00",
+  "representative_case_selection": {
+    "limits_fractions": {
+      "id": "diff_1_001",
+      "method": "problem"
+    },
+    "piecewise_cases": {
+      "id": "diff_2_017",
+      "method": "baseline"
+    },
+    "piecewise_cases_C": {
+      "id": "diff_3_029",
+      "method": "deep_learning_hint"
+    },
+    "reasoning_suspect": {
+      "id": "diff_1_006",
+      "method": "oracle_hint"
+    },
+    "reused_suspect": {
+      "id": "diff_1_005",
+      "method": "regression_hint"
+    },
+    "ungraded_success": {
+      "id": "trig_1_044",
+      "method": "regression_hint"
+    },
+    "C_only_correct": {
+      "id": "trig_1_047",
+      "method": "deep_learning_hint"
+    },
+    "answer_key_conflict": {
+      "id": "trig_1_010",
+      "method": "baseline"
+    },
+    "new_C_resumed": {
+      "id": "trig_2_006",
+      "method": "deep_learning_hint"
+    },
+    "new_C_final": {
+      "id": "trig_3_038",
+      "method": "deep_learning_hint"
+    },
+    "raw_audit": {
+      "id": "trig_2_006",
+      "method": "deep_learning_hint"
+    }
+  },
+  "visual_review_completed_at": "2026-11-12T13:08:00.062560+00:00",
+  "snapshot_scope_note": "Final all265 A/B/C/D snapshot:1060 API successes,1060 AI-assisted reviews(996 appropriate/64 inappropriate),zero pending/API errors. Original parser grading and separate supplemental-key labels are preserved. This is browser/display verification, not human mathematical confirmation."
 }

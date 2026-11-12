@@ -1,28 +1,27 @@
-# Reviewed-key and reviewed-response corrected Gemini scores
+# Reviewed-key corrected Gemini scores
 
-원본 응답, API 성공 여부, 원본 자동채점, 원본 문제·해설은 그대로 보존하고 검증된 정정만 별도 적용했다.
+Source data, original saved scores, response logs and prompt hashes remain immutable.
+Verified key correction: trig_1_010 changes from ④ to ② (9/5).
+Independently verified wrong final answer: full265/trig_1_044/B produced 12, correct 13/③; original parser abstained, corrected score is wrong.
+Other rows retain the existing original key; this is not independent proof for every solution.
 
-- **정답표 오류:** `trig_1_010` 원본 ④를 수학적으로 올바른 ②(9/5)로 정정
-- **실제 오답이지만 기존 채점기가 판독하지 못한 응답:** `trig_1_044/B`가 12를 최종 답으로 출력했으나 실제 정답은 13(③). 따라서 정정 기준에서는 오답으로 계산
-- 무조건 모든 채점 불가를 오답으로 간주하는 대신 실제 응답을 점검하여 파서 실패와 실제 출력 실패를 구별한다.
-
-|범위|조건|기존 채점 대상|정정 채점 대상|기존 정답|정정 정답|정정 정답률|
+|Split|Condition|Original graded|Corrected graded|Original correct|Corrected correct|Corrected accuracy|
 |---|---|---:|---:|---:|---:|---:|
 |all265|A|265|265|258|259|97.74%|
 |all265|B|264|265|258|259|97.74%|
-|all265|C|214|214|209|210|98.13%|
+|all265|C|265|265|259|260|98.11%|
 |all265|D|265|265|257|258|97.36%|
 |train|A|185|185|180|180|97.30%|
 |train|B|184|185|180|180|97.30%|
-|train|C|134|134|131|131|97.76%|
+|train|C|185|185|181|181|97.84%|
 |train|D|185|185|179|179|96.76%|
 |test|A|80|80|78|79|98.75%|
 |test|B|80|80|78|79|98.75%|
 |test|C|80|80|78|79|98.75%|
 |test|D|80|80|78|79|98.75%|
 
-전체265는 API 성공이 아직 1,009/1,060개이며, C 조건의 남은 51개는 오답이 아니라 미완료야. 학습185의 B/C 예측은 인샘플이고, 완료 문항은 무작위 부분 표본이 아니므로 최종 비교로 단정하지 않는다.
+The full265 run includes 185 training (in-sample) and 80 test questions.
+Pending requests are not counted as wrong. Partial completion is nonrandom.
 
-**재현:** `python -m mathhint_analysis.VerifiedAnswerKey` (추가 Gemini API 호출·재학습 없음).
-
-원본·정정 판정: `question_comparison.csv` · 집계: `summary.csv` · McNemar 대응비교: `paired_comparison.csv` · 검증 출처: `audit.json`.
+Files: question_comparison.csv, summary.csv, paired_comparison.csv, audit.json.
+Rebuild without API calls: python -m mathhint_analysis.VerifiedAnswerKey
