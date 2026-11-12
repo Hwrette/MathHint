@@ -22,6 +22,32 @@ class RepeatReportingTests(unittest.TestCase):
         self.assertEqual(values["mean"], 4)
         self.assertAlmostEqual(values["std"], math.sqrt(8))
 
+    def test_output_reduction_quality_keeps_unknown_answers_and_validity_separate(self):
+        def pair(delta, first, second, math_first, math_second, received=True):
+            return {"contrast": "E-A", "both_received": received,
+                    "candidates_token_count_difference": delta,
+                    "first_correct": first, "second_correct": second,
+                    "first_math_status": math_first, "second_math_status": math_second}
+        pairs = [pair(-10, False, True, "inappropriate", "appropriate"),
+                 pair(-5, True, False, "appropriate", "inappropriate"),
+                 pair(-3, True, True, "appropriate", "appropriate"),
+                 pair(-1, None, False, "uncertain", "inappropriate"),
+                 pair(7, False, True, "inappropriate", "appropriate"),
+                 pair(0, True, True, "appropriate", "appropriate"),
+                 pair(-9, False, True, "inappropriate", "appropriate", received=False),
+                 pair(None, False, True, "inappropriate", "appropriate")]
+        rows = report.output_reduction_quality(pairs)
+        self.assertEqual(len(rows), 5)
+        selected = next(r for r in rows if r["contrast"] == "E-A")
+        self.assertEqual(selected["provided_pairs"], 6)
+        self.assertEqual(selected["shorter_pairs"], 4)
+        for prefix in ("answer", "math"):
+            self.assertEqual([selected[prefix + "_" + name] for name in ("gains", "losses", "same", "unknown")],
+                             [1, 1, 1, 1])
+            self.assertEqual(sum(selected[prefix + "_" + name] for name in ("gains", "losses", "same", "unknown")),
+                             selected["shorter_pairs"])
+        self.assertTrue(all(r["shorter_pairs"] == 0 for r in rows if r["contrast"] != "E-A"))
+
     def _fixture(self, repeat=1, grade=None):
         item = {"id": "trig_1_044", "condition": "B", "repeat": repeat,
                 "request_id": f"trig_1_044__B__r{repeat}", "split": "train", "input_text": "problem+hint",
@@ -50,6 +76,24 @@ class RepeatReportingTests(unittest.TestCase):
             self.assertEqual(rows[0]["grade_source"], "independent_new_AI_answer_review")
             self.assertIsNone(objects[item["id"], "B", 1]["evaluation_raw"]["correct"])
             self.assertIsNone(saved["evaluation"]["correct"])
+
+    def test_comparative_case_prose_rejects_stale_new_response_hash(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory)
+            (output / "review").mkdir()
+            self.assertEqual(report.case_findings(output, []), {})
+            records = [{"request_id": f"trig_1_044__{condition}__r{repeat}", "status": "success",
+                        "output_text": f"NEW {condition} repeat {repeat}"}
+                       for condition in "ABCD" for repeat in (1, 2, 3)]
+            finding = {"AD": "A와 D의 실제 새 식을 대조한 요약.", "BC": "B와 C의 새 응답 비교.",
+                       "human_confirmed": False,
+                       "response_sha256s": {r["request_id"]: hashlib.sha256(r["output_text"].encode()).hexdigest() for r in records}}
+            path = output / "review/curated_reviews.json"
+            path.write_text(json.dumps({"records": [], "case_findings": {"trig_1_044": finding}}, ensure_ascii=False))
+            self.assertEqual(report.case_findings(output, records)["trig_1_044"]["AD"], finding["AD"])
+            records[-1]["output_text"] += " CHANGED"
+            with self.assertRaisesRegex(ValueError, "Stale or missing new response"):
+                report.case_findings(output, records)
 
     def test_review_cannot_be_transferred_to_different_repeat_output(self):
         with tempfile.TemporaryDirectory() as directory:

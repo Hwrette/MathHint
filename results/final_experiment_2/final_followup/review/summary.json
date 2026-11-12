@@ -1,16 +1,16 @@
 {
   "planned_count": 186,
-  "success_count": 42,
-  "api_response_count": 43,
-  "completed_count": 43,
-  "incomplete_response_count": 1,
+  "success_count": 101,
+  "api_response_count": 103,
+  "completed_count": 103,
+  "incomplete_response_count": 2,
   "math_status_counts": {
-    "appropriate": 13,
-    "inappropriate": 30
+    "appropriate": 41,
+    "inappropriate": 62
   },
   "review_status_counts": {
-    "AI_assisted_reviewed": 13,
-    "suspected_error": 30
+    "AI_assisted_reviewed": 41,
+    "suspected_error": 62
   },
   "human_confirmed": 0,
   "additional_review_api_calls": 0

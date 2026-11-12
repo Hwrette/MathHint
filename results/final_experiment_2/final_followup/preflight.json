@@ -1,12 +1,14 @@
 {
-  "checked_at": "2026-11-12T14:37:36.419789+00:00",
+  "checked_at": "2026-11-12T15:56:57.653545+00:00",
   "config_id": "3bdc19c64550579933bf6c3387cae72fb68cd8605a295321706a75e9260bc8be",
   "requested_model": "gemini-3.1-flash-lite",
   "generation_calls": 0,
   "non_generation_network_calls": 1,
   "expected_requests": 186,
-  "successful_saved": 0,
-  "new_requests_needed": 186,
+  "successful_saved": 101,
+  "completed_saved": 103,
+  "incomplete_saved": 2,
+  "new_requests_needed": 83,
   "preservation": {
     "passed": true,
     "checked_files": 4773,

@@ -90,6 +90,36 @@ def _new_reviews(output, records):
     return result
 
 
+def case_findings(output, records):
+    """Load optional new comparative prose only when all12 referenced outputs match."""
+    path = Path(output) / "review/curated_reviews.json"
+    if not path.is_file():
+        return {}
+    findings = read_json(path).get("case_findings", {})
+    if not isinstance(findings, dict):
+        raise ValueError("case_findings must be a dictionary keyed by selected error-case ID.")
+    actual = {row.get("request_id"): row for row in records}
+    result = {}
+    for identifier, finding in findings.items():
+        if identifier not in ERROR_IDS or not isinstance(finding, dict):
+            raise ValueError("Comparative finding is outside the selected11 cases: " + str(identifier))
+        if finding.get("human_confirmed") is not False:
+            raise ValueError("New comparative findings must remain explicitly AI assisted: " + identifier)
+        if any(not isinstance(finding.get(pair), str) or not finding[pair].strip() for pair in ("AD", "BC")):
+            raise ValueError("Comparative finding needs both AD and BC analysis: " + identifier)
+        expected = {f"{identifier}__{condition}__r{repeat}" for condition in "ABCD" for repeat in (1, 2, 3)}
+        hashes = finding.get("response_sha256s")
+        if not isinstance(hashes, dict) or set(hashes) != expected:
+            raise ValueError("Comparative finding must reference exactly12 new ABCD response IDs: " + identifier)
+        for request_id, expected_hash in hashes.items():
+            row = actual.get(request_id)
+            if (row is None or row.get("status") not in API_RECEIVED
+                    or expected_hash != hashlib.sha256((row.get("output_text") or "").encode()).hexdigest()):
+                raise ValueError("Stale or missing new response in comparative finding: " + request_id)
+        result[identifier] = finding
+    return result
+
+
 def build_rows(root, output, config, plan, records):
     """Keep immutable response grading intact; only derived views may resolve abstentions."""
     root, output = Path(root), Path(output)
@@ -318,7 +348,7 @@ def write_cases(output, questions, historical, old_reviews):
     (folder / "README.md").write_text("\n".join(index) + "\n", encoding="utf-8")
 
 
-def detailed_comparison(output, questions, summary, historical, old_reviews, first, second):
+def detailed_comparison(output, questions, summary, historical, old_reviews, first, second, findings=None):
     output = Path(output)
     index = {(r["id"], r["condition"]): r for r in summary}
     labels = "A 기본 조건과 D 실제 해설 토큰" if (first, second) == ("A", "D") else "B Ridge와 C MLP 예측 힌트"
@@ -331,6 +361,16 @@ def detailed_comparison(output, questions, summary, historical, old_reviews, fir
         identifier = q["id"]
         lines += ["## " + identifier, "", f"기존 분할: {q['split']} · 정답: {_cell(q['reference_answer'])}.", "",
                   f"[원문·새 풀이 전문](../case_reports/{identifier}.md) · [수식 화면](../report.html#{identifier})", "",
+                  "### 문항별 새3회 비교 요약", ""]
+        finding = (findings or {}).get(identifier)
+        if finding:
+            lines += ["AI 보조 비교 분석이며 사람의 최종 확정이 아니다. 아래 요약은 새 A/B/C/D×3의12개 응답 해시와 일치하는 경우에만 표시한다.", "",
+                      finding[first + second], "",
+                      "<details><summary>비교 요약이 참조한12개 새 응답 SHA-256</summary>", "", "```json",
+                      json.dumps(finding["response_sha256s"], ensure_ascii=False, indent=2), "```", "", "</details>", ""]
+        else:
+            lines += ["**문항별 비교 요약 검토 보류:** 새 A/B/C/D의3회 응답 전체를 직접 대조한 요약이 아직 등록되지 않았다. 아래의 개별 판정·식·인용은 그대로 확인할 수 있다.", ""]
+        lines += [
                   "|조건|과거 정정 판정|이번 정답/채점 가능/계획|이번 타당 가능/검토/계획|기존 오류 재발/평가|",
                   "|---|---|---|---|---|"]
         for condition in (first, second):
@@ -396,6 +436,16 @@ def _control_observations(control, differences, rows):
             lines.append(f"- **{purposes[contrast]}({contrast})**: 제공된 대응 {n}/15쌍에서 문항별 평균 출력 차이가 감소한 문항 {decreased}개, 증가 {increased}개, 동일 {equal}개다. 문항별 평균 차이 범위는 {_fmt(min(per_question))}~{_fmt(max(per_question))}토큰이다.")
         else:
             lines.append(f"- **{purposes[contrast]}({contrast})**: 아직 제공된 대응 사용량이 없어 방향을 판단하지 않는다.")
+    lines += ["", "### 출력이 줄어든 대응에서 정답·풀이 판정은 어떻게 달라졌는가?", "",
+        "같은 문항·같은 반복 번호의 두 API 수신 응답 중 출력 토큰 차이가 음수인 쌍만 살펴본다. 사용량 미제공 쌍은 제외하며, 잘린 응답 등 최종 답이 없는 경우는 오답이 아니라 미판정으로 남긴다.", "",
+        "|대응(뒤−앞)|출력 감소/사용량 제공쌍|최종 답: 개선/악화/동일/미판정|풀이: 개선/악화/동일/보류|",
+        "|---|---:|---:|---:|"]
+    for quality in output_reduction_quality(differences):
+        answer = "/".join(str(quality["answer_" + name]) for name in ("gains", "losses", "same", "unknown"))
+        validity = "/".join(str(quality["math_" + name]) for name in ("gains", "losses", "same", "unknown"))
+        lines.append(f"|{quality['contrast']}|{quality['shorter_pairs']}/{quality['provided_pairs']}|{answer}|{validity}|")
+    lines += ["", "최종 답의 개선/악화는 오답→정답/정답→오답, 풀이의 개선/악화는 오류 의심→타당 가능/타당 가능→오류 의심을 뜻한다. ‘동일’은 판정 상태가 같다는 뜻이며 답 문자열·풀이·오류 단계가 동일하다는 뜻은 아니다. 각 행의 네 판정 횟수 합은 출력 감소 쌍 수와 같다.",
+        "같은 5문항을 조건당3회 반복한 설명 통계다. 출력이 짧아진 쌍만 사후 선택한 이 표로 토큰 감소가 정답이나 수학적 타당성을 바꾼 인과효과를 추정하지 않는다.", ""]
     partial = [r for r in rows if r["id"] in CONTROL_IDS and r["status"] in API_RECEIVED and r["status"] != "success"]
     if partial:
         lines += ["", "**출력 제한·불완전 응답도 연구 결과에 포함했다.**"]
@@ -404,6 +454,31 @@ def _control_observations(control, differences, rows):
         lines += ["", "큰 사용량을 가진 응답은 평균·SD를 크게 바꿀 수 있다. 이를 제외하거나 같은 반복을 다시 생성하지 않았으며 문항별 그림의 개별 반복 점과 최소~최대에서 직접 확인할 수 있다."]
     lines += ["", "E-A의 변화가 관측되어도 모든 차이를 지시문으로 설명할 수 없고, F-D의 변화가 관측되어도 출처 강조의 인과효과라고 확정할 수 없다. D/F는 동일한 토큰·빈도 JSON을 유지했지만 제목이 바뀌며, 표본은 조건당3회뿐이다.", ""]
     return lines
+
+
+def output_reduction_quality(differences):
+    """Describe answer/validity changes among shorter paired API receipts only."""
+    result = []
+    for first, second in CONTRASTS:
+        contrast = second + "-" + first
+        provided = [r for r in differences if r["contrast"] == contrast and r.get("both_received") is True
+                    and r.get("candidates_token_count_difference") is not None]
+        shorter = [r for r in provided if r["candidates_token_count_difference"] < 0]
+        row = {"contrast": contrast, "provided_pairs": len(provided), "shorter_pairs": len(shorter)}
+        for prefix in ("answer", "math"):
+            counts = {name: 0 for name in ("gains", "losses", "same", "unknown")}
+            for pair in shorter:
+                if prefix == "answer":
+                    a, b = pair.get("first_correct"), pair.get("second_correct")
+                else:
+                    values = {"appropriate": True, "inappropriate": False}
+                    a, b = values.get(pair.get("first_math_status")), values.get(pair.get("second_math_status"))
+                category = ("unknown" if type(a) is not bool or type(b) is not bool else
+                            "same" if a == b else "gains" if b else "losses")
+                counts[category] += 1
+            row.update({prefix + "_" + name: value for name, value in counts.items()})
+        result.append(row)
+    return result
 
 
 def _error_observations(rows):
@@ -456,8 +531,12 @@ def _plots(output, control, error, differences, request_rows):
                     color=repeat_colors[trial["repeat"]], marker="o", s=24, zorder=4,
                     label="반복 " + str(trial["repeat"]) if i == 0 else None)
                 if trial["status"] != "success":
-                    ax.annotate(f"R{trial['repeat']} {trial['candidates_token_count']} · 불완전", (i, trial["candidates_token_count"]),
-                        xytext=(0, 9), textcoords="offset points", ha="center", fontsize=8)
+                    ax.annotate(f"R{trial['repeat']} {trial['candidates_token_count']} · 불완전",
+                        (i + (trial["repeat"] - 2) * .13, trial["candidates_token_count"]),
+                        xytext=(-12, -24 - (trial["repeat"] - 1) * 20), textcoords="offset points",
+                        ha="right", va="top", fontsize=8,
+                        bbox={"boxstyle": "round,pad=.2", "facecolor": "white", "edgecolor": ".7", "alpha": .94},
+                        arrowprops={"arrowstyle": "-", "color": ".4", "linewidth": .7})
         ax.legend(loc="upper left", ncol=3, fontsize=7)
         ax.set(xticks=range(6), xticklabels=list("ABCDEF"), title=identifier, ylabel="출력 토큰 · 평균±SD / 각 반복 점")
         ax.margins(y=.18)
@@ -612,8 +691,9 @@ def run(root=None, output=None):
     write_csv(output / "error_repeat_11/prior_comparison.csv", old_comparison)
     questions = _questions(root, output, config, plan, objects)
     write_cases(output, questions, historical, old_reviews)
+    findings = case_findings(output, records)
     for pair in (("A", "D"), ("B", "C")):
-        detailed_comparison(output, questions, error, historical, old_reviews, *pair)
+        detailed_comparison(output, questions, error, historical, old_reviews, *pair, findings=findings)
     figures = _plots(output, control, error, differences, rows)
     _write_readmes(output, config, state, rows, control, error, differences, figures)
     payload = {"schema_version": 1, "experiment_name": "최종 후속실험 · 신규3회 반복(프로젝트 최종마무리 아님)",
