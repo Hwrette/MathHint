@@ -1,0 +1,98 @@
+{
+  "id": "trig_1_040",
+  "condition": "C",
+  "repeat_numbers": [
+    1,
+    2,
+    3
+  ],
+  "requested_model": "gemini-3.1-flash-lite",
+  "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+  "problem_text": "$0 \\le x < 2 \\pi$일 때, 방정식\n$\\left| \\cos \\left( x + \\frac{\\pi}{3} \\right) + \\frac{1}{6} \\right| = \\frac{5}{6}$\n를 만족시키는 모든 실수 $x$의 값의 합은?\n① $3 \\pi$\t\t② $\\frac{10}{3} \\pi$\t\t③ $\\frac{11}{3} \\pi$\n④ $4 \\pi$\t\t⑤ $\\frac{13}{3} \\pi$\n",
+  "user_message": "$0 \\le x < 2 \\pi$일 때, 방정식\n$\\left| \\cos \\left( x + \\frac{\\pi}{3} \\right) + \\frac{1}{6} \\right| = \\frac{5}{6}$\n를 만족시키는 모든 실수 $x$의 값의 합은?\n① $3 \\pi$\t\t② $\\frac{10}{3} \\pi$\t\t③ $\\frac{11}{3} \\pi$\n④ $4 \\pi$\t\t⑤ $\\frac{13}{3} \\pi$\n\n\n[학습 데이터로 학습한 딥러닝이 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:=\":9.518,\"latex:\\\\frac\":8.143,\"latex:-\":5.892,\"kiwi:이\":5.723,\"latex:\\\\pi\":5.082,\"latex:)\":4.141,\"latex:\\\\sin\":3.779,\"latex:(\":3.65,\"latex:+\":3.408,\"latex:\\\\cos\":2.188,\"latex:^\":2.147,\"kiwi:므로\":1.952,\"kiwi:에서\":1.266,\"latex:<\":1.213,\"latex:\\\\leq\":0.973,\"latex:\\\\theta\":0.885,\"kiwi:따라서\":0.715,\"kiwi:함수\":0.663,\"kiwi:면\":0.621,\"kiwi:또는\":0.615}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "hint": {
+    "transform": "clip_min_0_round_3_decimal_places_omit_zeros",
+    "mode": "top_tokens",
+    "top_k": 20,
+    "selection": "descending_unrounded_positive_frequency_ties_vocabulary_order",
+    "vocabulary_size": 359,
+    "transmitted_coordinates": 20,
+    "mapping": {
+      "latex:=": 9.518,
+      "latex:\\frac": 8.143,
+      "latex:-": 5.892,
+      "kiwi:이": 5.723,
+      "latex:\\pi": 5.082,
+      "latex:)": 4.141,
+      "latex:\\sin": 3.779,
+      "latex:(": 3.65,
+      "latex:+": 3.408,
+      "latex:\\cos": 2.188,
+      "latex:^": 2.147,
+      "kiwi:므로": 1.952,
+      "kiwi:에서": 1.266,
+      "latex:<": 1.213,
+      "latex:\\leq": 0.973,
+      "latex:\\theta": 0.885,
+      "kiwi:따라서": 0.715,
+      "kiwi:함수": 0.663,
+      "kiwi:면": 0.621,
+      "kiwi:또는": 0.615
+    },
+    "source": "deep_learning_prediction"
+  },
+  "sdk_request": {
+    "model": "gemini-3.1-flash-lite",
+    "contents": "$0 \\le x < 2 \\pi$일 때, 방정식\n$\\left| \\cos \\left( x + \\frac{\\pi}{3} \\right) + \\frac{1}{6} \\right| = \\frac{5}{6}$\n를 만족시키는 모든 실수 $x$의 값의 합은?\n① $3 \\pi$\t\t② $\\frac{10}{3} \\pi$\t\t③ $\\frac{11}{3} \\pi$\n④ $4 \\pi$\t\t⑤ $\\frac{13}{3} \\pi$\n\n\n[학습 데이터로 학습한 딥러닝이 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:=\":9.518,\"latex:\\\\frac\":8.143,\"latex:-\":5.892,\"kiwi:이\":5.723,\"latex:\\\\pi\":5.082,\"latex:)\":4.141,\"latex:\\\\sin\":3.779,\"latex:(\":3.65,\"latex:+\":3.408,\"latex:\\\\cos\":2.188,\"latex:^\":2.147,\"kiwi:므로\":1.952,\"kiwi:에서\":1.266,\"latex:<\":1.213,\"latex:\\\\leq\":0.973,\"latex:\\\\theta\":0.885,\"kiwi:따라서\":0.715,\"kiwi:함수\":0.663,\"kiwi:면\":0.621,\"kiwi:또는\":0.615}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+    "config": {
+      "system_instruction": "이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.",
+      "temperature": 0.0,
+      "max_output_tokens": 8192,
+      "thinking_config": {
+        "thinking_level": "MINIMAL"
+      }
+    }
+  },
+  "full_request_text": "[SYSTEM]\n이 문제 풀어줘. 마지막 줄에 최종정답: ... 형식으로 정답을 적어줘. 객관식은 선택지 번호(①~⑤)를 적어줘.\n[USER]\n$0 \\le x < 2 \\pi$일 때, 방정식\n$\\left| \\cos \\left( x + \\frac{\\pi}{3} \\right) + \\frac{1}{6} \\right| = \\frac{5}{6}$\n를 만족시키는 모든 실수 $x$의 값의 합은?\n① $3 \\pi$\t\t② $\\frac{10}{3} \\pi$\t\t③ $\\frac{11}{3} \\pi$\n④ $4 \\pi$\t\t⑤ $\\frac{13}{3} \\pi$\n\n\n[학습 데이터로 학습한 딥러닝이 예측한 해설 주요 토큰: 예측 빈도순 상위20개]\n{\"latex:=\":9.518,\"latex:\\\\frac\":8.143,\"latex:-\":5.892,\"kiwi:이\":5.723,\"latex:\\\\pi\":5.082,\"latex:)\":4.141,\"latex:\\\\sin\":3.779,\"latex:(\":3.65,\"latex:+\":3.408,\"latex:\\\\cos\":2.188,\"latex:^\":2.147,\"kiwi:므로\":1.952,\"kiwi:에서\":1.266,\"latex:<\":1.213,\"latex:\\\\leq\":0.973,\"latex:\\\\theta\":0.885,\"kiwi:따라서\":0.715,\"kiwi:함수\":0.663,\"kiwi:면\":0.621,\"kiwi:또는\":0.615}\n위 주요 토큰을 참고하여 풀이를 작성해줘.",
+  "input_sha256": "3d4c525525d331a4532781e4a219c04d31a062aeb4bcac7ae0ba4c470735c166",
+  "request_sha256": "b9a0e5ab047b7a7103a1ccdfeeb72cdf7b60ea51b9cb9fe070dee7db85c0ae34",
+  "sdk_request_sha256": "b9a0e5ab047b7a7103a1ccdfeeb72cdf7b60ea51b9cb9fe070dee7db85c0ae34",
+  "source_condition": "C",
+  "source_prompt_audit": "results/final_experiment_2/gemini_full265/prompt_audit/requests/trig_1_040/C.json",
+  "source_prompt_audit_sha256": "6357234ff2191c972483a8e5b2054395e92e9426e5faef2219a26a0c9e6023bf",
+  "source_request_sha256": "b9a0e5ab047b7a7103a1ccdfeeb72cdf7b60ea51b9cb9fe070dee7db85c0ae34",
+  "models": {
+    "regression": {
+      "manifest_path": "results/final_experiment_2/regression/model_manifest.json",
+      "manifest_sha256": "9ef1f4064e17d8a11388f177de627cd422799435ea22224a8e4093b0f212fdce",
+      "checkpoint": {
+        "path": "results/final_experiment_2/regression/checkpoints/final.pt",
+        "sha256": "a92db2cadfa16cd19af842030af79f61878f96d47c2043fb877415b92427fa24"
+      },
+      "predictions": {
+        "path": "results/final_experiment_2/regression/predictions/all_predictions.json",
+        "sha256": "5b9d3a7e906b6b9a07878f023d898225b39043f4fd42af889e48a1f267b4bc77"
+      },
+      "architecture": "Linear(in_features=270, out_features=359, bias=True)",
+      "frozen_before_test": true
+    },
+    "deep_learning": {
+      "manifest_path": "results/final_experiment_2/deep_learning/model_manifest.json",
+      "manifest_sha256": "bc28db72208c97d3ef2f0237859cd38a80383d22460ad3a90aa073aa97e30590",
+      "checkpoint": {
+        "path": "results/final_experiment_2/deep_learning/checkpoints/final.pt",
+        "sha256": "b6410ac910d8cc737b24561c5a094c45ed307ec1ba983ff5a15c0418e93dd13c"
+      },
+      "predictions": {
+        "path": "results/final_experiment_2/deep_learning/predictions/all_predictions.json",
+        "sha256": "894edae73c5d9c74736c27010a7f25deea53062b880825f5dd30f065e9ad8560"
+      },
+      "architecture": "Sequential(\n  (0): Linear(in_features=270, out_features=32, bias=True)\n  (1): ReLU()\n  (2): Dropout(p=0.1, inplace=False)\n  (3): Linear(in_features=32, out_features=359, bias=True)\n)",
+      "frozen_before_test": true
+    }
+  },
+  "dataset_id": "1e1e467b301406d6a2df2775ad506474aaa915b342d315cdca8dc39fdf3e7345",
+  "solution_vocabulary_sha256": "e857072c08e72344631c662e634ab511e2fe061f1382fb2d95cfdaa4813fb8a6",
+  "data_identity_sha256": "2ee1ebe5bf2380022d6dd277446f87caa0afca55b1ca92bdff03cbdcbcaa9bce",
+  "transformation": "original SDK request unchanged"
+}

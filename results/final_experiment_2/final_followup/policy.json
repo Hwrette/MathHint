@@ -1,0 +1,15 @@
+{
+  "interval_seconds": 10.0,
+  "workers": 1,
+  "rpm": 6,
+  "rph": 360,
+  "rpd": 1400,
+  "max_new_requests": 60,
+  "max_run_seconds": 3600,
+  "max_wait_seconds": 120,
+  "max_attempts": 2,
+  "http_timeout_ms": 180000,
+  "provider_limits_confirmed": false,
+  "limits_note": "conservative local caps shared with old80/full265 attempts; provider quotas/remaining budget not inferred",
+  "user_authorized_additional_requests": 186
+}

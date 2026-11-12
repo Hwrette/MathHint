@@ -1,0 +1,70 @@
+{
+  "checked_at": "2026-11-12T14:37:36.419789+00:00",
+  "config_id": "3bdc19c64550579933bf6c3387cae72fb68cd8605a295321706a75e9260bc8be",
+  "requested_model": "gemini-3.1-flash-lite",
+  "generation_calls": 0,
+  "non_generation_network_calls": 1,
+  "expected_requests": 186,
+  "successful_saved": 0,
+  "new_requests_needed": 186,
+  "preservation": {
+    "passed": true,
+    "checked_files": 4773,
+    "source_commit": "12e55c24c948e687de360d270d0fab3c5ea52a08"
+  },
+  "frozen_prompt_count": 62,
+  "provider_rate_limits": {
+    "requests_per_minute": null,
+    "requests_per_hour": null,
+    "requests_per_day": null,
+    "tokens_per_minute": null,
+    "remaining_daily_requests": null
+  },
+  "quota_observability": "models.get verifies capabilities, not project quota or current remaining budget; local limits are not provider confirmation",
+  "local_execution_policy": {
+    "interval_seconds": 10.0,
+    "workers": 1,
+    "rpm": 6,
+    "rph": 360,
+    "rpd": 1400,
+    "max_new_requests": 60,
+    "max_run_seconds": 3600,
+    "max_wait_seconds": 120,
+    "max_attempts": 2,
+    "http_timeout_ms": 180000,
+    "provider_limits_confirmed": false,
+    "limits_note": "conservative local caps shared with old80/full265 attempts; provider quotas/remaining budget not inferred",
+    "user_authorized_additional_requests": 186
+  },
+  "api_key_present": true,
+  "api_readiness": "ready",
+  "model_metadata": {
+    "name": "models/gemini-3.1-flash-lite",
+    "display_name": "Gemini 3.1 Flash Lite",
+    "description": "Gemini 3.1 Flash Lite",
+    "version": "3.1-flash-lite-05-2026",
+    "endpoints": null,
+    "labels": null,
+    "tuned_model_info": {
+      "base_model": null,
+      "create_time": null,
+      "update_time": null
+    },
+    "input_token_limit": 1048576,
+    "output_token_limit": 65536,
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "createCachedContent",
+      "batchGenerateContent"
+    ],
+    "default_checkpoint_id": null,
+    "checkpoints": null,
+    "temperature": 1.0,
+    "max_temperature": 2.0,
+    "top_p": 0.95,
+    "top_k": 64,
+    "thinking": true
+  },
+  "reported_model_name": "models/gemini-3.1-flash-lite"
+}
