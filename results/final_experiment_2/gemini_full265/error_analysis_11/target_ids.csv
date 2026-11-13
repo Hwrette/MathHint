@@ -1,0 +1,12 @@
+id,split,verified_answer,A_correct,B_correct,C_correct,D_correct
+diff_2_039,train,31,0,1,0,0
+diff_3_045,train,4,0,0,0,0
+trig_1_040,train,④,1,0,1,1
+trig_1_044,train,③,0,0,0,0
+trig_1_047,train,69,0,0,1,0
+trig_2_020,train,④,1,1,1,0
+trig_3_008,train,5,1,1,1,0
+trig_3_033,train,14,0,0,1,1
+trig_3_036,train,9,1,1,0,1
+trig_2_022,test,③,0,1,1,1
+trig_3_034,test,⑤,1,0,0,0
